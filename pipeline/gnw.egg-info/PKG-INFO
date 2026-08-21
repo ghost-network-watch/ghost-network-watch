@@ -1,9 +1,0 @@
-Metadata-Version: 2.4
-Name: gnw
-Version: 0.1.0
-Summary: Ghost Network Watch pipeline: crawl, parse, flag, score CMS QHP provider directories
-Requires-Python: >=3.11
-Requires-Dist: requests>=2.31
-Requires-Dist: ijson>=3.2
-Provides-Extra: dev
-Requires-Dist: pytest>=8; extra == "dev"
