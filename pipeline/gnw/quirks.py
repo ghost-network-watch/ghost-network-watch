@@ -33,8 +33,16 @@ class HostQuirks:
 
 
 _HOST_OVERRIDES: dict[str, dict] = {
-    # Dropped a transfer mid-stream during scoping; give it more retries.
-    "www22.elevancehealth.com": {"max_retries": 5},
+    # Dropped transfers mid-stream in scoping; 403'd part of its file series
+    # mid-crawl in the 2026-08 run (rate-based WAF) — go slow and retry hard.
+    "www22.elevancehealth.com": {"max_retries": 5, "rate_limit_seconds": 5.0},
+    # Single provider JSONs >1GB decompressed observed in the 2026-08 crawl.
+    "providersearch.medmutual.com": {"max_bytes": 4_000_000_000, "read_timeout": 600.0},
+    "www.mclaren.org": {"max_bytes": 4_000_000_000, "read_timeout": 600.0},
+    "tools.sanfordhealthplan.com": {"max_bytes": 4_000_000_000, "read_timeout": 600.0},
+    # ESB gateway answers 202 (async generation) on first request; a later
+    # request returns 200. Crawler retries via resume on re-run.
+    "esbgatewaypub.medica.com:443": {"rate_limit_seconds": 2.0},
     # 302-redirects, ignores Range, exposes no freshness headers — nothing to
     # tune, listed so the behavior is documented where an operator will look.
     "fm.formularynavigator.com": {},
