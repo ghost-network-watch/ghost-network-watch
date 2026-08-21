@@ -68,7 +68,98 @@ def _con(data_root: Path, snapshot: str) -> duckdb.DuckDBPyConnection:
         "CREATE VIEW providers AS SELECT * FROM read_parquet("
         f"'{data_root / 'parquet' / snapshot / 'providers' / '*.parquet'}')"
     )
+    con.execute(
+        "CREATE VIEW addresses AS SELECT * FROM read_parquet("
+        f"'{data_root / 'parquet' / snapshot / 'provider_addresses' / '*.parquet'}')"
+    )
     return con
+
+
+# Classic 11-column US tile cartogram (state -> row, col).
+TILE_GRID = {
+    "AK": (1, 1), "ME": (1, 11),
+    "VT": (2, 10), "NH": (2, 11),
+    "WA": (3, 1), "ID": (3, 2), "MT": (3, 3), "ND": (3, 4), "MN": (3, 5),
+    "WI": (3, 6), "MI": (3, 8), "NY": (3, 9), "MA": (3, 10), "RI": (3, 11),
+    "OR": (4, 1), "NV": (4, 2), "WY": (4, 3), "SD": (4, 4), "IA": (4, 5),
+    "IL": (4, 6), "IN": (4, 7), "OH": (4, 8), "PA": (4, 9), "NJ": (4, 10), "CT": (4, 11),
+    "CA": (5, 1), "UT": (5, 2), "CO": (5, 3), "NE": (5, 4), "MO": (5, 5),
+    "KY": (5, 6), "WV": (5, 7), "VA": (5, 8), "MD": (5, 9), "DE": (5, 10),
+    "AZ": (6, 2), "NM": (6, 3), "KS": (6, 4), "AR": (6, 5), "TN": (6, 6),
+    "NC": (6, 7), "SC": (6, 8), "DC": (6, 9),
+    "OK": (7, 4), "LA": (7, 5), "MS": (7, 6), "AL": (7, 7), "GA": (7, 8),
+    "HI": (8, 1), "TX": (8, 4), "FL": (8, 9),
+}
+
+
+def _band(score: float | None) -> str | None:
+    if score is None:
+        return None
+    if score >= 90:
+        return "A"
+    if score >= 80:
+        return "B"
+    if score >= 70:
+        return "C"
+    if score >= 55:
+        return "D"
+    return "F"
+
+
+def _state_map(con) -> list[dict]:
+    agg = {
+        st: {"avg": avg, "cells": cells, "thin": thin, "counties": counties}
+        for st, avg, cells, thin, counties in con.execute("""
+            SELECT state, round(avg(score) FILTER (grade IS NOT NULL), 1),
+                   count(*) FILTER (grade IS NOT NULL),
+                   count(*) FILTER (thin_roster),
+                   count(DISTINCT county_fips)
+            FROM scores WHERE scope='bh' GROUP BY 1
+        """).fetchall()
+    }
+    tiles = []
+    for st, (row, col) in TILE_GRID.items():
+        a = agg.get(st)
+        tiles.append(
+            {
+                "code": st, "row": row, "col": col,
+                "covered": a is not None,
+                "avg": a["avg"] if a else None,
+                "band": _band(a["avg"]) if a else None,
+                "counties": a["counties"] if a else 0,
+                "thin": a["thin"] if a else 0,
+            }
+        )
+    return tiles
+
+
+def _receipt(con) -> dict | None:
+    """One verbatim record from a mandated file for the hero exhibit.
+    Name and NPI are never selected; the aggregate page shows values only."""
+    row = con.execute("""
+        SELECT p.specialties, p.accepting, p.last_updated_on,
+               a.address, a.city, a.state, a.zip, a.phone, p.source_sha256
+        FROM providers p
+        JOIN addresses a USING (source_sha256, record_idx)
+        WHERE a.phone IN ('999999999', '9999999999', '0000000000')
+          AND p.last_updated_on < '2014-01-01'
+          AND lower(coalesce(p.accepting, '')) = 'accepting'
+          AND p.specialties ILIKE '%psych%'
+        ORDER BY p.source_sha256, p.record_idx LIMIT 1
+    """).fetchone()
+    if row is None:
+        return None
+    sha = row[8]
+    meta = con.execute(
+        "SELECT any_value(url), any_value(fetched_at) FROM manifest WHERE sha256 = ?", [sha]
+    ).fetchone()
+    return {
+        "specialty": row[0], "accepting": row[1], "last_updated_on": row[2],
+        "address": row[3], "city": row[4], "state": row[5], "zip": row[6],
+        "phone": row[7], "sha_short": sha[:12],
+        "host": (meta[0] or "").split("/")[2] if meta and meta[0] else "",
+        "fetched": str(meta[1] or "")[:10] if meta else "",
+    }
 
 
 def _national(con) -> dict:
@@ -340,10 +431,21 @@ def build_site(
         GROUP BY 1 HAVING count(*) >= 50 ORDER BY avg_score ASC LIMIT 15
     """).fetchall()
 
+    # Content-hashed stylesheet name: rebuilds bust browser and CDN caches.
+    import hashlib
+
+    css_src = (repo_root / "site" / "assets" / "brand.css").read_bytes()
+    css_file = f"brand.{hashlib.sha256(css_src).hexdigest()[:10]}.css"
+    (out_dir / css_file).write_bytes(css_src)
+    for old in out_dir.glob("brand.*.css"):
+        if old.name != css_file:
+            old.unlink()
+
     base_ctx = {
         "snapshot": snapshot,
         "site_name": "Ghost Network Watch",
         "contact": "contact@ghostnetworkwatch.org",
+        "css_file": css_file,
     }
 
     def render(template: str, dest: Path, **ctx) -> None:
@@ -353,17 +455,7 @@ def build_site(
     render(
         "index.html", out_dir / "index.html",
         national=national, league=league,
-        states=sorted(
-            (
-                {
-                    "code": code, "counties": len(s["counties"]),
-                    "issuers": len(s["issuers"]),
-                    "thin": sum(c["thin"] for c in s["counties"]),
-                }
-                for code, s in states.items()
-            ),
-            key=lambda x: x["code"],
-        ),
+        tiles=_state_map(con), receipt=_receipt(con),
         depth="",
     )
     for code, s in states.items():
@@ -387,7 +479,6 @@ def build_site(
     exports = _write_exports(con, out_dir / "data" / "files", snapshot)
     render("data.html", out_dir / "data" / "index.html", exports=exports, depth="../")
 
-    shutil.copy(repo_root / "site" / "assets" / "brand.css", out_dir / "brand.css")
     if not (out_dir / "webawesome").exists():
         shutil.copytree(wa_kit, out_dir / "webawesome")
     log.info(

@@ -59,7 +59,8 @@
   <h2>What the file shows</h2>
   {% if issuer.metrics %}
   <table>
-    <thead><tr><th>Finding</th><th class="num">Records</th><th class="num">Share of file</th></tr></thead>
+    <thead><tr><th>Finding</th><th class="num">Records</th><th class="num">Share of file</th>
+      <th class="bar-col"></th></tr></thead>
     <tbody>
     {% for m in issuer.metrics %}
       <tr>
@@ -67,6 +68,9 @@
           title="This issuer's records are published in a file shared with other issuers on the same platform; counts include the shared file.">shared platform file</span>{% endif %}</td>
         <td class="num">{{ "{:,}".format(m.records) }}</td>
         <td class="num">{{ m.pct }}%</td>
+        <td class="bar-col"><div class="scorebar">
+          <div class="fill band-{{ 'F' if m.pct >= 25 else 'D' if m.pct >= 5 else 'C' }}"
+               style="width: {{ [m.pct, 100] | min }}%"></div></div></td>
       </tr>
     {% endfor %}
     </tbody>
