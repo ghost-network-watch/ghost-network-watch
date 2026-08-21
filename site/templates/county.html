@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block title %}{{ county.name }}, {{ county.state }} · {{ site_name }}{% endblock %}
+{% block description %}Mental health directory grades for {{ county.plans | length }} marketplace plans in {{ county.name }}, {{ county.state }}.{% endblock %}
 {% block content %}
 <section>
   <h1>{{ county.name or county.fips }}, {{ county.state }}</h1>
   <p class="lede">{{ county.plans | length }} marketplace plans. For each plan, compare the mental health grade and the provider count together.</p>
-  <table style="margin-top: var(--wa-space-l)">
+  <table class="sortable" style="margin-top: var(--wa-space-l)">
     <thead><tr>
-      <th>Plan</th><th>Insurer</th><th>Metal</th>
+      <th>Plan</th><th>Insurer</th><th title="Coverage level: Bronze, Silver, Gold, or Platinum">Level</th>
       <th>Mental health grade</th><th class="num">MH providers</th>
       <th>All grade</th><th class="num">All providers</th>
       <th class="num">Out-of-area</th>
@@ -14,12 +15,14 @@
     <tbody>
     {% for p in county.plans %}
       <tr>
-        <td><a href="{{ depth }}plans/{{ p.scid }}/index.html">{{ p.plan }}</a></td>
+        <td>{% if p.unauditable is defined and p.unauditable %}{{ p.plan }} <a href="{{ depth }}issuers/{{ p.issuer_id }}/index.html" class="meta">why unauditable</a>{% else %}<a href="{{ depth }}plans/{{ p.scid }}/index.html">{{ p.plan }}</a>{% endif %}</td>
         <td><a href="{{ depth }}issuers/{{ p.issuer_id }}/index.html">{{ p.issuer }}</a></td>
         <td>{{ p.metal or '' }}</td>
         <td>
-          {% if p.bh_thin %}
-            <span class="grade grade-thin" title="Fewer than 10 behavioral-health providers listed; reported as a roster fact, not graded.">n={{ p.bh_n }}</span>
+          {% if p.unauditable is defined and p.unauditable %}
+            <span class="grade grade-X" title="This insurer's mandated directory file could not be retrieved or read; nothing to grade.">X</span>
+          {% elif p.bh_thin %}
+            <span class="grade grade-thin" title="Fewer than 10 mental health providers listed; the small count is the finding, not a grade.">n={{ p.bh_n }}</span>
           {% elif p.bh_grade %}
             <span class="grade grade-{{ p.bh_grade }}">{{ p.bh_grade }}</span>
             {% if p.bh_low %}<span class="meta" title="10 to 29 roster records">low sample</span>{% endif %}
@@ -28,15 +31,17 @@
         <td class="num">{{ "{:,}".format(p.bh_n) if p.bh_n is not none else '' }}</td>
         <td>{% if p.all_grade %}<span class="grade grade-{{ p.all_grade }}">{{ p.all_grade }}</span>{% endif %}</td>
         <td class="num">{{ "{:,}".format(p.all_n) if p.all_n is not none else '' }}</td>
-        <td class="num">{{ p.ooa_pct }}%</td>
+        <td class="num">{% if p.ooa_pct is not none %}{{ p.ooa_pct }}%{% endif %}</td>
       </tr>
     {% endfor %}
     </tbody>
   </table>
   <p class="note" style="margin-top: var(--wa-space-l)">A cell marked <span class="grade grade-thin">n=…</span>
   means the plan lists fewer than 10 mental health providers with an address
-  in this county. The small count is the finding. "Out-of-area" is the share of all records the
-  issuer attaches to the plan that have no address inside the plan's CMS-filed service area
-  or any adjacent county; those records never enter county rosters.</p>
+  in this county. The small count is the finding. Out-of-area is the share of the plan's listed providers
+  with no office in or near any county the plan covers. Those listings are left out of the
+  county counts on this page. A grade of <span class="grade grade-X">X</span> means the
+  insurer's mandated file could not be retrieved or read, so there was nothing to grade.
+  <a href="{{ depth }}methodology/index.html">How these grades are computed.</a></p>
 </section>
 {% endblock %}

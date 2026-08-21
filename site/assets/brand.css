@@ -192,6 +192,13 @@ p { max-width: 65ch; }
   color: var(--wa-color-text-quiet);
   font-weight: var(--wa-font-weight-normal);
 }
+.grade-X, .band-X {
+  background: repeating-linear-gradient(45deg,
+    var(--wa-color-surface-raised) 0 4px,
+    var(--wa-color-surface-default) 4px 8px);
+  border: 1px solid var(--wa-color-surface-border);
+  color: var(--wa-color-text-quiet);
+}
 
 /* Grade distribution bar */
 .dist { display: flex; height: var(--wa-space-l); border-radius: var(--wa-border-radius-s); overflow: hidden; margin-top: var(--wa-space-s); }

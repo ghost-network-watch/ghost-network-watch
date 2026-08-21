@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}Data · {{ site_name }}{% endblock %}
+{% block description %}Every score and every evidence row as free CC0 downloads, plus how to verify or rebuild the entire dataset from public sources.{% endblock %}
 {% block content %}
 <section>
   <h1>Download the data</h1>
@@ -44,9 +45,31 @@
     {% endfor %}
     </tbody>
   </table>
-  <p>Three of the finding types produce hundreds of millions of rows. For those we publish
-  per-plan totals plus a 250,000-row random sample, because files that size do not belong
-  on a website. The complete sets are yours anyway; see the next section.</p>
+  <p>One finding type, out-of-area listings, produces hundreds of millions of rows; for it
+  we publish per-plan totals plus a 250,000-row random sample. Two other finding types
+  exceed 250,000 rows and are also published as random samples of that size. Complete sets
+  are reproducible; see below.</p>
+  <p>Prefer to explore without downloading? Open the scores file in
+  <a href="https://lite.datasette.io/?csv=https://ghostnetworkwatch.org/data/files/plan_county_scores.csv.gz">Datasette
+  Lite</a>, a free tool that runs entirely in your browser: sort, filter, and query
+  without installing anything.</p>
+
+  <h2>What the columns mean</h2>
+  <p>The two files above share a small vocabulary. In plan_county_scores: one row is one
+  plan in one county in one scope (mental health or all providers). "score" is the final
+  0 to 100 number and "grade" its letter. "n" is how many providers the plan lists in
+  that county. "thin_roster" marks lists under 10 providers, which get no grade.
+  "out_of_area_rate" is the share of the plan's listings with no office in or near its
+  counties. "score_uniform" recomputes the score with all penalty weights equal, as a
+  sensitivity check. In the evidence files: "metric" names the check, "source_sha256" is
+  the fingerprint of the archived insurer file, "record_idx" is the entry's position in
+  it, and "observed" holds the values exactly as published.</p>
+
+  <h2>Cite this data</h2>
+  <p>Suggested citation: Ghost Network Watch, Directory Integrity Scores,
+  {{ snapshot_label }} snapshot, ghostnetworkwatch.org. Scores and evidence exports are
+  CC0; site text and charts are CC BY 4.0, credit "Ghost Network Watch". For interview
+  requests or custom data cuts, email <a href="mailto:{{ contact }}">{{ contact }}</a>.</p>
 
   <h2>Check our work, or rebuild everything</h2>
   <p>This site is produced by open-source software from public government data. The code

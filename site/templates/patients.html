@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}For patients · {{ site_name }}{% endblock %}
+{% block description %}How to use directory grades when choosing a plan, and the exact steps to demand care when you cannot reach an in-network therapist.{% endblock %}
 {% block content %}
 <section>
   <h1>A patient's guide to this site</h1>
@@ -14,11 +15,11 @@
     the list is internally consistent and current. Most entries have real contact
     information and identifiers the federal registry recognizes.</li>
     <li><span class="grade grade-C">C</span> or <span class="grade grade-D">D</span>:
-    a meaningful share of entries have problems: fake-looking phone numbers, years-old
-    update dates, or identifiers the federal registry has retired.</li>
+    a meaningful share of entries have problems: placeholder phone numbers like
+    999-999-9999, years-old update dates, or identifiers the federal registry has retired.</li>
     <li><span class="grade grade-F">F</span>: much of the list is unusable exactly as
     published. In the worst files, most entries have no working contact information at all.</li>
-    <li><span class="grade grade-thin">n=4</span>: the plan lists fewer than 10 mental-health
+    <li><span class="grade grade-thin">n=4</span>: the plan lists fewer than 10 mental health
     providers in that county. We do not grade a list that small. The small number is the
     finding.</li>
   </ul>
@@ -30,7 +31,7 @@
   <ol>
     <li>Find your county with the search box on the <a href="{{ depth }}index.html">home
     page</a>, or through your state's page.</li>
-    <li>For each plan you are considering, look at two things together: the mental-health
+    <li>For each plan you are considering, look at two things together: the mental health
     grade and the provider count. A plan with grade B and 400 listed providers gives you
     far better odds than a plan with grade B and 12.</li>
     <li>Click the plan's name to see its whole footprint. A plan that grades F in every
@@ -45,7 +46,7 @@
     documented failures is a strong record.</li>
     <li><strong>Ask your plan, in writing, for an in-network appointment.</strong> Call the
     member services number on your card, then follow up in writing. Ask them to name a
-    mental-health provider who is in network, accepting new patients, and reachable, with
+    mental health provider who is in network, accepting new patients, and reachable, with
     an appointment within a reasonable time.</li>
     <li><strong>If they cannot, request a network exception.</strong> Ask, in writing, for
     out-of-network care at in-network cost sharing because the plan has no accessible
@@ -61,32 +62,40 @@
     the insurer's own published file. Three concrete steps:
     <ol style="margin-top: var(--wa-space-xs)">
       <li>Find your plan's page on this site (search your ZIP on the home page, then
-      click your plan's name). Every plan page has a section called "Using this page in
-      a complaint" with a paragraph you can copy, already filled in with your plan's
+      click your plan's name). The page has a section called "Using this page in a
+      complaint" with a paragraph you can copy, already filled in with your plan's
       numbers.</li>
       <li>Save that page as a PDF (Print, then Save as PDF) and attach it.</li>
       <li>Download the insurer's evidence file, linked in that same section. It is a
       spreadsheet listing every broken record we found in the insurer's published
-      directory: the fake phone numbers, the retired provider IDs, the years-old dates.
+      directory: the placeholder phone numbers like 999-999-9999, the retired provider IDs, the years-old dates.
       Attach it too.</li>
     </ol></li>
   </ol>
   <p>This is general information, not legal advice. Marketplace coverage questions can also
   go to the federal help line at <a href="https://www.healthcare.gov/contact-us/">HealthCare.gov</a>.</p>
 
+  <h2>If your state runs its own exchange</h2>
+  <p>This site covers the states that use HealthCare.gov. California, New York, and about
+  18 other states run their own exchanges, and we do not have their data yet. The
+  complaint steps above still work exactly the same way: document your attempts, put your
+  requests in writing, and complain to your state insurance department through the
+  <a href="https://content.naic.org/consumer">NAIC state map</a>.</p>
+
   <h2>Words this site uses</h2>
   <table>
     <tbody>
-    <tr><td><strong>Cell</strong></td><td>One plan in one county. The unit every grade
-      attaches to.</td></tr>
+    <tr><td><strong>Plan-county pair</strong></td><td>One plan in one county. The unit every
+      grade attaches to. The methodology page calls it a cell.</td></tr>
     <tr><td><strong>Attestation date</strong></td><td>The date a plan's file claims a
       provider entry was last updated. Federal rules require monthly updates.</td></tr>
-    <tr><td><strong>NPI</strong></td><td>A provider's federal identifier. When the registry
-      retires one and a plan still lists it, the entry is usually a retired, relocated, or
-      deceased provider.</td></tr>
-    <tr><td><strong>Out-of-area listing</strong></td><td>A provider attached to a plan whose
-      service area contains none of that provider's addresses. It pads the list without
-      adding anyone you can see.</td></tr>
+    <tr><td><strong>NPI</strong></td><td>A provider's federal ID number. The registry
+      retires NPIs for many reasons: retirement, death, or practice and entity changes. When
+      a plan still lists a retired NPI, its directory carries an identifier the federal
+      registry no longer recognizes. The retirement alone does not tell us why.</td></tr>
+    <tr><td><strong>Out-of-area listing</strong></td><td>A provider attached to a plan even
+      though none of the provider's offices fall inside any county the plan covers. It
+      inflates the count of providers without adding anyone you can reach.</td></tr>
     <tr><td><strong>Plan ID</strong></td><td>The 14-character code (like 12345TX0010001)
       that identifies a plan in federal filings. Your plan documents carry it.</td></tr>
     </tbody>

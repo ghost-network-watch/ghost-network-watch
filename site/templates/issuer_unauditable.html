@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}{{ issuer.name }} · {{ site_name }}{% endblock %}
+{% block description %}{{ issuer.name }}'s mandated provider directory could not be retrieved or read; its plans are marked X, unauditable.{% endblock %}
+{% block content %}
+<section>
+  <h1>{{ issuer.name }}</h1>
+  <p class="lede">{{ issuer.name }} is the insurer CMS lists as issuer {{ issuer.id }}
+  in {{ issuer.states | join(', ') }}. Its plans carry the grade
+  <span class="grade grade-X">X</span>, unauditable.</p>
+
+  <div class="note caution" style="margin-top: var(--wa-space-l)">
+    <p>The machine-readable directory file this insurer is required to publish
+    ({{ issuer.url }}) could not be retrieved or could not be read during the
+    {{ snapshot_label }} crawl. We cannot audit a file we cannot fetch.</p>
+    <p>An X is not an F. An F says the published content is bad. An X says there was
+    nothing to check. Both facts belong in public: this insurer's directory data was
+    unavailable to automated tools during the snapshot, which is itself a compliance
+    problem under the federal machine-readable requirement.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Plans affected</h2>
+  <table>
+    <thead><tr><th>Plan</th><th>Level</th><th class="num">Counties in service area</th></tr></thead>
+    <tbody>
+    {% for p in issuer.plans %}
+      <tr>
+        <td>{{ p.name }}</td>
+        <td>{{ p.metal or '' }}</td>
+        <td class="num">{{ p.counties | length }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="note" style="margin-top: var(--wa-space-l)">If you are a member of one of
+  these plans and cannot reach an in-network provider, the
+  <a href="{{ depth }}patients/index.html">guide for patients</a> still applies. The
+  unavailability of this insurer's mandated directory file is a fact you can cite.</p>
+</section>
+
+<section>
+  <h2>Corrections</h2>
+  <p>If this insurer restores its file, the next monthly crawl will pick it up and this
+  page will be replaced with graded results. Questions and corrections:
+  <a href="mailto:{{ contact }}">{{ contact }}</a>.</p>
+</section>
+{% endblock %}

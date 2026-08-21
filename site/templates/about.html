@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}About · {{ site_name }}{% endblock %}
+{% block description %}Who runs Ghost Network Watch, why it exists, and how insurers can dispute findings.{% endblock %}
 {% block content %}
 <section>
   <h1>About this project</h1>
@@ -25,11 +26,20 @@
   insurer, or any vendor, and takes no money from payers. The pipeline is open source and
   every published number is reproducible from public data.</p>
 
+  <h2>For journalists and researchers</h2>
+  <p>Cite this work as: Ghost Network Watch, Directory Integrity Scores,
+  {{ snapshot_label }} snapshot, ghostnetworkwatch.org. Every number is reproducible from
+  public data with the open-source pipeline, and every claim decomposes to archived
+  evidence. Data updates monthly, aligned to the federal registry's release; the next
+  snapshot is expected {{ next_update }}. Questions, interviews, and custom data cuts:
+  <a href="mailto:{{ contact }}">{{ contact }}</a>.</p>
+
   <h2>Corrections</h2>
   <p>Before anything is published, each issuer's technical contact on file with CMS receives
   the complete machine-readable export of its flags. Disputes sent to
-  <a href="mailto:{{ contact }}">{{ contact }}</a> are published verbatim alongside the flags
-  they dispute. Flags cleared by a subsequent crawl are marked resolved with the date;
+  <a href="mailto:{{ contact }}">{{ contact }}</a> or filed on the
+  <a href="{{ repo_url }}/issues">public correction tracker</a> are published verbatim
+  alongside the flags they dispute. Flags cleared by a subsequent crawl are marked resolved with the date;
   history is retained, not deleted.</p>
 
   <h2>What this is not</h2>

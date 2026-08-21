@@ -1,16 +1,57 @@
 {% extends "base.html" %}
 {% block title %}{{ code }} · {{ site_name }}{% endblock %}
+{% block description %}Mental health directory grades for every marketplace plan in {{ code }}, county by county.{% endblock %}
 {% block content %}
 <section>
   <h1>{{ code }}: directory integrity by county</h1>
-  <p class="lede">{{ state.counties | length }} counties. Issuers operating here:
+  <p class="lede">{{ state.counties | length }} counties. Insurers here:
   {{ state.issuers | join(', ') }}.</p>
-  <div class="link-grid" style="margin-top: var(--wa-space-xl)">
+
+  {% if stats.avg is defined and stats.avg is not none %}
+  <div class="stats">
+    <div class="stat"><div class="num"><span class="grade grade-{{ stats.band }}">{{ stats.band }}</span> {{ stats.avg }}</div>
+      <div class="lbl">average mental health score across graded plan-county pairs</div></div>
+    <div class="stat"><div class="num">{{ "{:,}".format(stats.df) }}</div>
+      <div class="lbl">pairs graded D or F</div></div>
+    <div class="stat"><div class="num">{{ "{:,}".format(stats.thin) }}</div>
+      <div class="lbl">pairs where a plan lists fewer than 10 mental health providers</div></div>
+    <div class="stat"><div class="num">{{ (stats.grades.values() | sum) }}</div>
+      <div class="lbl">plan-county pairs in this state</div></div>
+  </div>
+  {% set total = stats.grades.values() | sum %}
+  {% if total %}
+  <div class="dist" role="img" aria-label="Grade distribution across this state's plan-county pairs" style="margin-top: var(--wa-space-l)">
+    {% for k in ['A','B','C','D','F','thin'] %}
+    <div class="dist-{{ k }}" style="width: {{ (100 * stats.grades.get(k, 0) / total) | round(2) }}%"></div>
+    {% endfor %}
+  </div>
+  <div class="dist-legend">
+    {% for k in ['A','B','C','D','F'] %}
+    <span><span class="grade grade-{{ k }}">{{ k }}</span> {{ "{:,}".format(stats.grades.get(k, 0)) }}</span>
+    {% endfor %}
+    <span><span class="grade grade-thin">n&lt;10</span> {{ "{:,}".format(stats.grades.get('thin', 0)) }}</span>
+  </div>
+  {% endif %}
+  {% endif %}
+
+  {% if stats.unauditable %}
+  <div class="note caution" style="margin-top: var(--wa-space-l)">
+    {% for u in stats.unauditable %}
+    <p>The mandated directory file for
+    <a href="{{ depth }}issuers/{{ u.id }}/index.html">{{ u.name }}</a> could not be
+    retrieved or read this month. Its plans appear on county pages with the grade
+    <span class="grade grade-X">X</span>, unauditable.</p>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <h2 style="margin-top: var(--wa-space-2xl)">Counties</h2>
+  <div class="link-grid">
     {% for c in state.counties %}
     <a href="{{ depth }}counties/{{ c.fips }}/index.html">{{ c.name or c.fips }}
       <span class="meta">{{ c.plans }} plans{% if worst_grade_name[c.worst] %},
         worst {{ worst_grade_name[c.worst] }}{% endif %}{% if c.thin %},
-        {{ c.thin }} thin BH rosters{% endif %}</span></a>
+        {{ c.thin }} plans list fewer than 10 MH providers{% endif %}</span></a>
     {% endfor %}
   </div>
 </section>

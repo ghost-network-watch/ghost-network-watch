@@ -184,7 +184,7 @@ def build_scores(data_root: Path, snapshot: str) -> Path:
     # Cell scores per scope.
     con.execute(f"""
         CREATE TEMP TABLE cell_scores AS
-        WITH per_scope AS (
+        WITH per_scope_present AS (
           SELECT scid_id, county, state, scope, count(*) AS n,
                  avg(pen) AS mean_pen, avg(pen_a) AS mean_pen_a, avg(pen_u) AS mean_pen_u,
                  avg(flagged) AS flag_rate
@@ -199,6 +199,18 @@ def build_scores(data_root: Path, snapshot: str) -> Path:
             WHERE s.scope = 'all' OR r.is_bh
           )
           GROUP BY 1, 2, 3, 4
+        ),
+        -- Zero-BH cells: the plan's file has providers in the county but not one
+        -- of them is behavioral health. The rubric treats the thin-roster fact as
+        -- first-class; n=0 is its most extreme case and must not be invisible.
+        per_scope AS (
+          SELECT * FROM per_scope_present
+          UNION ALL
+          SELECT a.scid_id, a.county, a.state, 'bh', 0, 0, 0, 0, 0
+          FROM (SELECT DISTINCT scid_id, county, state
+                FROM per_scope_present WHERE scope = 'all') a
+          ANTI JOIN (SELECT scid_id, county FROM per_scope_present WHERE scope = 'bh') b
+            ON b.scid_id = a.scid_id AND b.county = a.county
         ),
         scored AS (
           SELECT ps.*,

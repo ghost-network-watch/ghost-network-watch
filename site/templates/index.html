@@ -33,7 +33,7 @@
   }]
 }</pre>
     <p class="receipt-note">A psychiatric provider a patient cannot contact: no address,
-    no working phone, attested in 1900, listed as accepting new patients. Name and NPI
+    no working phone, last updated in the year 1900, listed as accepting new patients. Name and NPI
     withheld here; the full record is in the evidence files.</p>
   </figure>
   {% endif %}
@@ -41,9 +41,9 @@
     <div class="stat"><div class="num">{{ "{:,}".format(national.records) }}</div>
       <div class="lbl">provider records parsed from mandated directory files</div></div>
     <div class="stat"><div class="num">{{ "{:,}".format(national.plans) }}</div>
-      <div class="lbl">marketplace plans scored across {{ "{:,}".format(national.counties) }} counties in {{ national.states }} states</div></div>
+      <div class="lbl">marketplace plans audited across {{ "{:,}".format(national.counties) }} counties in {{ national.states }} states</div></div>
     <div class="stat"><div class="num">{{ national.thin_bh_pct }}%</div>
-      <div class="lbl">of plan-county combinations list fewer than 10 mental health providers</div></div>
+      <div class="lbl">of plan-county pairs list fewer than 10 mental health providers</div></div>
     <div class="stat"><div class="num">{{ "{:,}".format(national.deactivated) }}</div>
       <div class="lbl">listed providers carry IDs the federal registry has retired</div></div>
   </div>
@@ -84,12 +84,12 @@
     {% endfor %}
   </div>
   <div class="dist-legend" style="margin-top: var(--wa-space-m)">
-    <span><span class="grade grade-A">A</span> 90 and up</span>
-    <span><span class="grade grade-B">B</span> 80</span>
-    <span><span class="grade grade-C">C</span> 70</span>
-    <span><span class="grade grade-D">D</span> 55</span>
+    <span><span class="grade grade-A">A</span> 90 to 100</span>
+    <span><span class="grade grade-B">B</span> 80 to 89</span>
+    <span><span class="grade grade-C">C</span> 70 to 79</span>
+    <span><span class="grade grade-D">D</span> 55 to 69</span>
     <span><span class="grade grade-F">F</span> below 55</span>
-    <span><span class="grade grade-thin">SBM</span> not covered</span>
+    <span><span class="grade grade-thin">SBM</span> runs its own exchange, not covered</span>
   </div>
 </section>
 
@@ -104,22 +104,21 @@
   </div>
   <div class="dist-legend">
     {% for k in ['A','B','C','D','F'] %}
-    <span><span class="grade grade-{{ k }}">{{ k }}</span> {{ "{:,}".format(g.get(k, 0)) }} cells</span>
+    <span><span class="grade grade-{{ k }}">{{ k }}</span> {{ "{:,}".format(g.get(k, 0)) }} pairs</span>
     {% endfor %}
-    <span><span class="grade grade-thin">n&lt;10</span> {{ "{:,}".format(g.get('thin', 0)) }} cells</span>
+    <span><span class="grade grade-thin">n&lt;10</span> {{ "{:,}".format(g.get('thin', 0)) }} pairs too small to grade</span>
   </div>
   <div class="two-col" style="margin-top: var(--wa-space-l)">
-    <p>Each graded unit is one plan in one county. A grade summarizes how usable that
+    <p>Each plan-county pair is one plan in one county. A grade summarizes how usable that
     plan's published mental health list is there: whether entries have real phone numbers
     and addresses, current update dates, and identifiers the federal registry recognizes.
     When a plan lists fewer than 10 mental health providers in a county, we skip the grade
     and report the small number itself.</p>
     <ul class="findings">
-      <li>On average, plans attach <strong>{{ national.avg_ooa_pct }}%</strong> of their
-      provider records to plans whose CMS-filed service area contains none of the record's
-      addresses, nor any adjacent county.</li>
-      <li>One issuer's current file carries placeholder phone 999999999 on
-      <strong>85%</strong> of records while marking 90% of them as accepting new patients.</li>
+      <li>On average, <strong>{{ national.avg_ooa_pct }}%</strong> of the providers
+      listed for a plan have no office in or near any county that plan covers.</li>
+      <li>One insurer's current file carries placeholder phone 999999999 on
+      <strong>85%</strong> of records while marking 90% of all its records as accepting new patients.</li>
       <li><strong>{{ "{:,}".format(national.deactivated) }}</strong> listed identifiers appear
       on the federal registry's deactivated list. Half were deactivated more than 20 months
       before the file was fetched.</li>
@@ -127,18 +126,19 @@
       update, against a monthly-update requirement.</li>
     </ul>
   </div>
-  <p class="note">Every claim decomposes to evidence rows quoting the issuer's own published
-  file, with the snapshot hash and fetch headers attached.
+  <p class="note">Every number on this site traces back to specific entries in the insurer's own
+  published file. Each one links to an archived copy of that file, with a fingerprint
+  that proves what the file said on the day we fetched it.
   See <a href="methodology/index.html">how scores are computed</a> and
   <a href="data/index.html">the downloadable evidence</a>.</p>
 </section>
 
 <section>
   <h2>Lowest-scoring insurers</h2>
-  <p>Mental health scope, insurers with at least 50 graded plan-county units,
-  averaged. Lower is worse.</p>
-  <table>
-    <thead><tr><th>Insurer</th><th class="num">Graded units</th>
+  <p>Mental health scope, insurers with at least 50 graded plan-county pairs with
+  adequate sample (30 or more listed providers), averaged. Lower is worse.</p>
+  <table class="sortable">
+    <thead><tr><th>Insurer</th><th class="num">Pairs graded</th>
       <th class="num">Average score</th><th class="bar-col">Score</th>
       <th class="num">Out-of-area rate</th></tr></thead>
     <tbody>
@@ -156,6 +156,13 @@
     {% endfor %}
     </tbody>
   </table>
+  {% if unauditable %}
+  <p style="margin-top: var(--wa-space-l)">Not rankable:
+  {% for u in unauditable %}<a href="issuers/{{ u.id }}/index.html">{{ u.name }}</a>
+  ({{ u.states | join(', ') }}){% if not loop.last %}, {% endif %}{% endfor %}
+  published no readable directory file this month. Their plans carry the grade
+  <span class="grade grade-X">X</span>, unauditable.</p>
+  {% endif %}
   <p class="note caution" style="margin-top: var(--wa-space-l)">Coverage: federal marketplace
   (HealthCare.gov) states only. State-based exchanges such as California and New York publish
   separately and are not yet included.</p>

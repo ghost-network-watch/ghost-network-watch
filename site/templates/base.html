@@ -38,15 +38,19 @@
   </main>
   <footer class="site-footer">
     <div class="wrap">
-      <p>The Directory Integrity Score measures whether an issuer's federally mandated
+      <p>The Directory Integrity Score measures whether an insurer's federally mandated
       machine-readable directory file is internally consistent, current, and usable as
-      published. It is computed entirely from the issuer's own published file and dated
+      published. It is computed entirely from the insurer's own published file and dated
       federal registry snapshots. It is not a measure of care quality, of network adequacy,
       or of any individual provider.</p>
-      <p>Corrections and questions: <a href="mailto:{{ contact }}">{{ contact }}</a>.
-      Issuers receive their complete flag exports before publication and responses are
-      published verbatim.</p>
+      <p>Data as of {{ snapshot_label }}. Scores update monthly; the next update is
+      expected {{ next_update }}. No accounts, no trackers: ZIP lookups run entirely in
+      your browser and are never sent to any server.</p>
+      <p>Corrections and questions: <a href="mailto:{{ contact }}">{{ contact }}</a> or the
+      <a href="{{ repo_url }}/issues">public correction tracker</a>. Insurers receive their
+      complete flag exports before publication and responses are published verbatim.</p>
     </div>
   </footer>
+  <script src="{{ depth }}sort.js" defer></script>
 </body>
 </html>

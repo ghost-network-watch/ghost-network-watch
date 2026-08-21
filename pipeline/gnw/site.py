@@ -72,6 +72,10 @@ def _con(data_root: Path, snapshot: str) -> duckdb.DuckDBPyConnection:
         "CREATE VIEW addresses AS SELECT * FROM read_parquet("
         f"'{data_root / 'parquet' / snapshot / 'provider_addresses' / '*.parquet'}')"
     )
+    con.execute(
+        "CREATE VIEW plan_county AS SELECT * FROM read_parquet("
+        f"'{data_root / 'reference' / 'parquet' / 'plan_county.parquet'}')"
+    )
     return con
 
 
@@ -136,13 +140,16 @@ def _state_map(con) -> list[dict]:
 def _receipt(con) -> dict | None:
     """One verbatim record from a mandated file for the hero exhibit.
     Name and NPI are never selected; the aggregate page shows values only."""
+    # Every defect the caption asserts is guaranteed by the query.
     row = con.execute("""
         SELECT p.specialties, p.accepting, p.last_updated_on,
                a.address, a.city, a.state, a.zip, a.phone, p.source_sha256
         FROM providers p
         JOIN addresses a USING (source_sha256, record_idx)
         WHERE a.phone IN ('999999999', '9999999999', '0000000000')
-          AND p.last_updated_on < '2014-01-01'
+          AND lower(coalesce(a.address, 'null')) IN ('null', 'n/a', '')
+          AND regexp_replace(coalesce(a.zip,''), '[^0-9]', '', 'g') IN ('99999', '00000')
+          AND p.last_updated_on = '1900-01-01'
           AND lower(coalesce(p.accepting, '')) = 'accepting'
           AND p.specialties ILIKE '%psych%'
         ORDER BY p.source_sha256, p.record_idx LIMIT 1
@@ -160,6 +167,75 @@ def _receipt(con) -> dict | None:
         "host": (meta[0] or "").split("/")[2] if meta and meta[0] else "",
         "fetched": str(meta[1] or "")[:10] if meta else "",
     }
+
+
+def _unauditable(con, data_root: Path) -> dict[str, dict]:
+    """Insurers whose mandated feed produced no scorable data (rubric M1: grade X).
+
+    Detected as landscape (on-exchange medical) issuers with zero rows in the
+    score table. Their plans and counties come from the landscape file so the
+    absence is published, not silent."""
+    import csv as _csv
+
+    from .seed import PUF_CSV
+
+    scored = {r[0] for r in con.execute("SELECT DISTINCT substr(scid,1,5) FROM scores").fetchall()}
+    out: dict[str, dict] = {}
+    rows = con.execute("""
+        SELECT substr(plan_id, 1, 14) AS scid, any_value(issuer_name),
+               any_value(plan_marketing_name), any_value(metal_level),
+               list(DISTINCT lpad(regexp_replace(fips,'[^0-9]','','g'), 5, '0')),
+               list(DISTINCT state)
+        FROM plan_county GROUP BY 1
+    """).fetchall()
+    urls = {}
+    with open(PUF_CSV) as fh:
+        for r in _csv.DictReader(fh):
+            urls[r["Issuer ID"]] = r["URL Submitted"]
+    for scid, iname, pname, metal, fips_list, states in rows:
+        iid = scid[:5]
+        if iid in scored:
+            continue
+        entry = out.setdefault(
+            iid,
+            {"id": iid, "name": iname or f"Issuer {iid}", "states": set(),
+             "plans": [], "url": urls.get(iid, "")},
+        )
+        entry["plans"].append(
+            {"scid": scid, "name": pname or scid, "metal": metal, "counties": fips_list}
+        )
+        entry["states"].update(states)
+    for e in out.values():
+        e["states"] = sorted(e["states"])
+        e["plans"].sort(key=lambda p: p["name"] or "")
+    return out
+
+
+def _threshold_sensitivity(con) -> dict:
+    """E2 metrics at alternate cutoffs (rubric §4.1 requires publishing these)."""
+    total = con.execute("SELECT count(*) FROM providers").fetchone()[0]
+    stale = {}
+    for days in (90, 180, 365):
+        n = con.execute(f"""
+            SELECT count(*) FROM providers
+            WHERE last_updated_on >= '2014-01-01'
+              AND last_updated_on < (DATE '2026-08-21' - INTERVAL {days} DAY)::VARCHAR
+        """).fetchone()[0]
+        stale[days] = round(100 * n / total, 1)
+    addr = {}
+    counts = con.execute("""
+        WITH u AS (
+          SELECT source_sha256, record_idx,
+                 count(DISTINCT coalesce(address,'') || '|' || coalesce(city,'') || '|' ||
+                       coalesce(state,'')) AS n_addr
+          FROM addresses GROUP BY 1, 2
+        )
+        SELECT sum((n_addr > 5)::INT), sum((n_addr > 10)::INT), sum((n_addr > 25)::INT)
+        FROM u
+    """).fetchone()
+    for thr, n in zip((5, 10, 25), counts):
+        addr[thr] = round(100 * (n or 0) / total, 2)
+    return {"stale": stale, "addr": addr}
 
 
 def _national(con) -> dict:
@@ -180,9 +256,15 @@ def _national(con) -> dict:
     deact = con.execute(
         "SELECT count(DISTINCT npi) FROM m9_npi_registry_status WHERE subcode='DEACTIVATED'"
     ).fetchone()[0]
-    ooa = con.execute(
-        "SELECT round(100 * avg(out_of_area_rate), 1) FROM scores WHERE scope='all' AND grade IS NOT NULL"
-    ).fetchone()[0]
+    # Per-plan mean (one value per plan), because the sentence on the page
+    # says "of the providers listed for a plan". The cell-weighted mean is 52%.
+    ooa = con.execute("""
+        SELECT round(100 * avg(rate), 1) FROM (
+          SELECT any_value(out_of_area_rate) AS rate
+          FROM scores WHERE scope='all' AND out_of_area_rate IS NOT NULL
+          GROUP BY scid
+        )
+    """).fetchone()[0]
     return {
         "grades": g,
         "plans": stats[0], "counties": stats[1], "states": stats[2],
@@ -252,12 +334,27 @@ def _cells(con) -> tuple[dict[str, dict], dict[str, dict]]:
         p["states"].add(r[2])
     for c in counties.values():
         c["plans"].sort(key=lambda x: (GRADE_ORDER.get(x["bh_grade"], 5), -(x["bh_n"] or 0)))
+    uniform = {
+        (r[0], r[1]): r[2]
+        for r in con.execute(
+            "SELECT scid, county_fips, score_uniform FROM scores WHERE scope='bh' AND grade IS NOT NULL"
+        ).fetchall()
+    }
     for p in plans.values():
         p["counties"].sort(key=lambda x: (x["state"], x["county_name"] or ""))
         p["states"] = sorted(p["states"])
         scored = [x["bh_score"] for x in p["counties"] if x["bh_score"] is not None and not x["bh_thin"]]
         p["avg_bh"] = round(sum(scored) / len(scored), 1) if scored else None
         p["band"] = _band(p["avg_bh"])
+        # Rubric §3.4: when the uniform-weight check lands in a different band,
+        # the plan page must show both.
+        uscores = [
+            uniform[(p["scid"], c["fips"])]
+            for c in p["counties"]
+            if (p["scid"], c["fips"]) in uniform and uniform[(p["scid"], c["fips"])] is not None
+        ]
+        p["avg_uniform"] = round(sum(uscores) / len(uscores), 1) if uscores else None
+        p["band_uniform"] = _band(p["avg_uniform"])
         p["thin"] = sum(1 for x in p["counties"] if x["bh_thin"])
     return counties, plans
 
@@ -421,7 +518,7 @@ def _write_exports(con, out_data: Path, snapshot: str) -> list[dict]:
         "start",
     )
     full = {
-        "M3_PLACEHOLDER_VALUE": "Every listing with fake-looking contact data: phones like "
+        "M3_PLACEHOLDER_VALUE": "Every listing with placeholder contact data: phones like "
         "999999999, ZIP 99999, addresses reading 'null', dates before 2014.",
         "M8_ACCEPTING_UNKNOWN": "Every individual-provider listing that leaves the required "
         "accepting-new-patients field blank or unknown.",
@@ -434,8 +531,8 @@ def _write_exports(con, out_data: Path, snapshot: str) -> list[dict]:
         copy_query(f"{m}.csv.gz", f"SELECT * FROM {m.lower()}", note + " Complete set.", "evidence")
     for m, note in (
         ("M4_STALE_ATTESTATION", "Listings whose own last-updated date is more than 180 days old."),
-        ("M5_CALL_CENTER_ONLY", "Listings whose only phone number is one shared with 50 or more "
-         "other listings in the same file."),
+        ("M5_CALL_CENTER_ONLY", "Listings whose only phone number is one appearing on at least "
+         "1% of the file's listings or 50 listings, whichever is larger."),
         ("M6_ADDRESS_INFLATION", "Individual providers listed at more than 10 street addresses "
          "at once (organizations, 25)."),
     ):
@@ -493,6 +590,28 @@ def build_site(
     issuer_names = _issuer_names(con)
     counties, plans = _cells(con)
     issuers = _issuer_pages(con, issuer_names)
+    unauditable = _unauditable(con, data_root)
+    thresholds = _threshold_sensitivity(con)
+
+    # Unauditable insurers' plans appear on county pages as grade X rows.
+    fips_names = {c["fips"]: (c["name"], c["state"]) for c in counties.values()}
+    for u in unauditable.values():
+        for pl in u["plans"]:
+            for fips in pl["counties"]:
+                if fips not in counties:
+                    continue
+                counties[fips]["plans"].append(
+                    {
+                        "fips": fips, "county_name": fips_names[fips][0],
+                        "state": fips_names[fips][1],
+                        "scid": pl["scid"], "issuer_id": u["id"], "issuer": u["name"],
+                        "plan": pl["name"], "metal": pl["metal"],
+                        "bh_grade": "X", "bh_score": None, "bh_n": None,
+                        "bh_thin": False, "bh_low": False,
+                        "all_grade": "X", "all_score": None, "all_n": None,
+                        "ooa_pct": None, "unauditable": True,
+                    }
+                )
 
     # ZIP search index: zip -> covered county fips list, plus fips -> label.
     search_dir = out_dir / "search"
@@ -527,14 +646,35 @@ def build_site(
     for s in states.values():
         s["counties"].sort(key=lambda x: (x["name"] or ""))
         s["issuers"] = sorted(s["issuers"])
+    state_stats = {
+        r[0]: {"avg": r[1], "band": _band(r[1]), "grades": {}, "thin": r[2], "df": r[3]}
+        for r in con.execute("""
+            SELECT state, round(avg(score) FILTER (grade IS NOT NULL), 1),
+                   count(*) FILTER (thin_roster),
+                   count(*) FILTER (grade IN ('D','F'))
+            FROM scores WHERE scope='bh' GROUP BY 1
+        """).fetchall()
+    }
+    for st, grade, n in con.execute(
+        "SELECT state, coalesce(grade,'thin'), count(*) FROM scores WHERE scope='bh' GROUP BY 1,2"
+    ).fetchall():
+        if st in state_stats:
+            state_stats[st]["grades"][grade] = n
+    for u in unauditable.values():
+        for st in u["states"]:
+            if st in state_stats:
+                state_stats[st].setdefault("unauditable", []).append(
+                    {"id": u["id"], "name": u["name"]}
+                )
     worst_grade_name = {0: "A", 1: "B", 2: "C", 3: "D", 4: "F", 5: None}
 
+    # Rubric §3.5: rankings exclude low-sample cohorts.
     league = con.execute("""
         SELECT substr(scid, 1, 5) AS iid, any_value(issuer_name), count(*) AS cells,
                round(avg(score), 1) AS avg_score,
                round(100 * avg(out_of_area_rate), 1) AS ooa,
                string_agg(DISTINCT state, ', ' ORDER BY state) AS states
-        FROM scores WHERE scope='bh' AND grade IS NOT NULL
+        FROM scores WHERE scope='bh' AND grade IS NOT NULL AND NOT low_sample
         GROUP BY 1 HAVING count(*) >= 50 ORDER BY avg_score ASC LIMIT 15
     """).fetchall()
 
@@ -548,11 +688,18 @@ def build_site(
         if old.name != css_file:
             old.unlink()
 
+    year, month = int(snapshot[:4]), int(snapshot[5:7])
+    ny, nm = (year + 1, 1) if month == 12 else (year, month + 1)
+    month_names = ["", "January", "February", "March", "April", "May", "June", "July",
+                   "August", "September", "October", "November", "December"]
     base_ctx = {
         "snapshot": snapshot,
         "site_name": "Ghost Network Watch",
         "contact": "contact@ghostnetworkwatch.org",
         "css_file": css_file,
+        "snapshot_label": f"{month_names[month]} {year}",
+        "next_update": f"early {month_names[nm]} {ny}",
+        "repo_url": "https://github.com/ghost-network-watch/ghost-network-watch",
     }
 
     def render(template: str, dest: Path, **ctx) -> None:
@@ -563,12 +710,14 @@ def build_site(
         "index.html", out_dir / "index.html",
         national=national, league=league,
         tiles=_state_map(con), receipt=_receipt(con),
+        unauditable=sorted(unauditable.values(), key=lambda u: u["name"]),
         depth="",
     )
     for code, s in states.items():
         render(
             "state.html", out_dir / "states" / code / "index.html",
-            code=code, state=s, worst_grade_name=worst_grade_name, depth="../../",
+            code=code, state=s, stats=state_stats.get(code, {}),
+            worst_grade_name=worst_grade_name, depth="../../",
         )
     for c in counties.values():
         render(
@@ -576,13 +725,25 @@ def build_site(
             county=c, depth="../../",
         )
     evidence_sizes = _issuer_evidence(con, out_dir / "data" / "files")
+    plans_by_issuer: dict[str, list] = defaultdict(list)
+    for p in plans.values():
+        plans_by_issuer[p["issuer_id"]].append(p)
+    for lst in plans_by_issuer.values():
+        lst.sort(key=lambda p: (GRADE_ORDER.get(p["band"], 5), p["name"] or ""))
     for i in issuers.values():
         render(
             "issuer.html", out_dir / "issuers" / i["id"] / "index.html",
-            issuer=i, evidence_mb=evidence_sizes.get(i["id"]), depth="../../",
+            issuer=i, evidence_mb=evidence_sizes.get(i["id"]),
+            issuer_plans=plans_by_issuer.get(i["id"], []), depth="../../",
+        )
+    for u in unauditable.values():
+        render(
+            "issuer_unauditable.html", out_dir / "issuers" / u["id"] / "index.html",
+            issuer=u, depth="../../",
         )
     for p in plans.values():
-        # Complaint-ready numbers for the plan page.
+        # Complaint-ready numbers for the plan page. Rendered on every page:
+        # graded plans cite grades, thin plans cite the roster counts.
         graded = [c for c in p["counties"] if c["bh_grade"] and not c["bh_thin"]]
         df = sum(1 for c in graded if c["bh_grade"] in ("D", "F"))
         p["complaint"] = {
@@ -593,7 +754,8 @@ def build_site(
             "plan.html", out_dir / "plans" / p["scid"] / "index.html",
             plan=p, depth="../../",
         )
-    render("methodology.html", out_dir / "methodology" / "index.html", depth="../", nav="methodology")
+    render("methodology.html", out_dir / "methodology" / "index.html", depth="../",
+           nav="methodology", thresholds=thresholds)
     render("patients.html", out_dir / "patients" / "index.html", depth="../", nav="patients")
     render("about.html", out_dir / "about" / "index.html", depth="../", nav="about")
     render("404.html", out_dir / "404.html", depth="/")
@@ -604,6 +766,7 @@ def build_site(
     shutil.copytree(
         repo_root / "site" / "assets" / "fonts", out_dir / "fonts", dirs_exist_ok=True
     )
+    shutil.copy(repo_root / "site" / "assets" / "sort.js", out_dir / "sort.js")
     if not (out_dir / "webawesome").exists():
         shutil.copytree(wa_kit, out_dir / "webawesome")
     log.info(
