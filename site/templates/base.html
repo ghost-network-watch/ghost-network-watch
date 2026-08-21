@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ site_name }}{% endblock %}</title>
   <meta name="description" content="{% block description %}Monthly integrity scores for every federal marketplace plan's mandated provider directory, computed from the insurers' own published files.{% endblock %}">
+  <meta property="og:site_name" content="{{ site_name }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ self.title() }}">
+  <meta property="og:description" content="{{ self.description() }}">
+  <meta name="twitter:card" content="summary">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231e50a2'/%3E%3Cpath d='M11.5 5.5h-5v5h3v-2h2v4h-7v-9h7z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="{{ depth }}webawesome/styles/native.css">
   <link rel="stylesheet" href="{{ depth }}webawesome/styles/utilities.css">
@@ -13,19 +18,20 @@
   <link rel="stylesheet" href="{{ depth }}{{ css_file }}">
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
       <a class="wordmark" href="{{ depth }}index.html">Ghost Network Watch</a>
       <span class="asof">data as of {{ snapshot }}</span>
       <nav class="site-nav">
-        <a href="{{ depth }}patients/index.html">For patients</a>
-        <a href="{{ depth }}methodology/index.html">Methodology</a>
-        <a href="{{ depth }}data/index.html">Data</a>
-        <a href="{{ depth }}about/index.html">About</a>
+        <a href="{{ depth }}patients/index.html"{% if nav == 'patients' %} aria-current="page"{% endif %}>For patients</a>
+        <a href="{{ depth }}methodology/index.html"{% if nav == 'methodology' %} aria-current="page"{% endif %}>Methodology</a>
+        <a href="{{ depth }}data/index.html"{% if nav == 'data' %} aria-current="page"{% endif %}>Data</a>
+        <a href="{{ depth }}about/index.html"{% if nav == 'about' %} aria-current="page"{% endif %}>About</a>
       </nav>
     </div>
   </header>
-  <main>
+  <main id="main">
     <div class="wrap">
       {% block content %}{% endblock %}
     </div>

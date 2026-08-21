@@ -2,16 +2,19 @@
 {% block title %}Data · {{ site_name }}{% endblock %}
 {% block content %}
 <section>
-  <h1>Open data</h1>
-  <p class="lede">Everything on this site, downloadable. Scores, roster facts, and the
-  evidence rows behind every flag.</p>
-  <p class="note">Provider details in evidence files are quoted from the insurer's published
-  directory file. No claim is made about the provider; listed clinicians are often unaware
-  of how they appear in payer directories.</p>
-  <table style="margin-top: var(--wa-space-l)">
-    <thead><tr><th>File</th><th>Contents</th><th class="num">Size</th></tr></thead>
+  <h1>Download the data</h1>
+  <p class="lede">Every number on this site, as files you can open in Excel, Google Sheets,
+  or any data tool. Free, no signup, released under CC0.</p>
+  <p>Each file ends in <span style="font-family: var(--wa-font-family-code)">.csv.gz</span>,
+  a compressed spreadsheet. Double-click it after downloading and your computer unpacks a
+  normal .csv file.</p>
+
+  <h2>Start here</h2>
+  <p>These two files answer most questions.</p>
+  <table>
+    <thead><tr><th>File</th><th>What is in it</th><th class="num">Size</th></tr></thead>
     <tbody>
-    {% for e in exports %}
+    {% for e in exports if e.group == 'start' %}
       <tr>
         <td><a href="files/{{ e.file }}">{{ e.file }}</a></td>
         <td>{{ e.note }}</td>
@@ -20,13 +23,41 @@
     {% endfor %}
     </tbody>
   </table>
-  <h2 style="margin-top: var(--wa-space-2xl)">Reproduce everything</h2>
-  <p>The full pipeline (crawler, parser, flag engine, scoring, this site) is open source.
-  The crawl seeds are CMS's own Machine-Readable URL PUF; the reference data is NPPES, the
-  NUCC taxonomy, and CMS's plan and service-area files. Column documentation lives in the
-  repository alongside the rule definitions, one rule version per evidence row.</p>
-  <p>License: scores and evidence exports are released under CC0. Source text quoted inside
-  evidence rows remains the issuer's published data, reproduced for accountability purposes
-  with provenance.</p>
+
+  <h2>The evidence behind the grades</h2>
+  <p>Every grade on this site is built from individual findings. Each row in these files is
+  one problem in one insurer's published listing, exactly as published. Every row carries
+  the fingerprint (SHA-256 hash) of the archived file it came from and the position of the
+  record inside it, so anyone can check our work against the archived original.</p>
+  <p class="note">Provider details in these files are quoted from the insurer's published
+  directory. No claim is made about the provider. Listed clinicians are often unaware of
+  how they appear in payer directories.</p>
+  <table style="margin-top: var(--wa-space-m)">
+    <thead><tr><th>File</th><th>What is in it</th><th class="num">Size</th></tr></thead>
+    <tbody>
+    {% for e in exports if e.group == 'evidence' %}
+      <tr>
+        <td><a href="files/{{ e.file }}">{{ e.file }}</a></td>
+        <td>{{ e.note }}</td>
+        <td class="num">{{ e.mb }} MB</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p>Three of the finding types produce hundreds of millions of rows. For those we publish
+  per-plan totals plus a 250,000-row random sample, because files that size do not belong
+  on a website. The complete sets are yours anyway; see the next section.</p>
+
+  <h2>Check our work, or rebuild everything</h2>
+  <p>This site is produced by open-source software from public government data. The code
+  lives at
+  <a href="https://github.com/ghost-network-watch/ghost-network-watch">github.com/ghost-network-watch</a>.
+  The inputs are all public: CMS's directory-address file for every marketplace insurer,
+  the insurers' own published directory files, the federal NPPES provider registry, and
+  CMS's plan and service-area filings.</p>
+  <p>The pipeline runs one command per stage: fetch the files, parse them, run the checks,
+  compute the scores, build this site. The repository's README walks through it. Running a
+  full month costs a few hours of computer time and produces every row summarized above,
+  including the complete sets we sample here.</p>
 </section>
 {% endblock %}

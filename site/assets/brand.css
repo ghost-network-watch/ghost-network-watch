@@ -1,8 +1,47 @@
 /* Ghost Network Watch brand layer. Loaded after the Web Awesome theme.
-   Token-only page styling; grade colors are semantic state, via WA pairs. */
+   Raw palette lives HERE ONLY and is mapped onto WA semantic tokens;
+   page rules below consume semantic tokens. Grade colors stay WA pairs. */
+
+@font-face {
+  font-family: "Libre Franklin";
+  src: url("fonts/librefranklin-var.woff2") format("woff2");
+  font-weight: 400 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Libre Franklin";
+  src: url("fonts/librefranklin-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
 :root {
   --gnw-max: 72rem;
+
+  /* Newsprint palette: warm paper, ink navy. */
+  --gnw-paper: #faf8f4;
+  --gnw-paper-raised: #f1eee7;
+  --gnw-border: #ddd6c8;
+  --gnw-ink: #212630;
+  --gnw-ink-quiet: #5d646f;
+  --gnw-navy: #1f3d5c;
+  --gnw-link: #24517a;
+
+  --wa-font-family-heading: "Libre Franklin", -apple-system, "Segoe UI", sans-serif;
+  --wa-font-family-body: "Libre Franklin", -apple-system, "Segoe UI", sans-serif;
+
+  --wa-color-surface-default: var(--gnw-paper);
+  --wa-color-surface-raised: var(--gnw-paper-raised);
+  --wa-color-surface-border: var(--gnw-border);
+  --wa-color-text-normal: var(--gnw-ink);
+  --wa-color-text-quiet: var(--gnw-ink-quiet);
+  --wa-color-brand-fill-loud: var(--gnw-navy);
+  --wa-color-brand-on-loud: #ffffff;
+  --wa-color-brand-fill-quiet: color-mix(in oklab, var(--gnw-navy) 10%, var(--gnw-paper));
+  --wa-color-brand-on-quiet: var(--gnw-link);
+  --wa-color-shadow: color-mix(in oklab, var(--gnw-navy) 25%, transparent);
 }
 
 body {
@@ -44,8 +83,24 @@ body {
   color: var(--wa-color-text-quiet);
   text-decoration: none;
   font-size: var(--wa-font-size-s);
+  padding-bottom: 2px;
 }
 .site-nav a:hover { color: var(--wa-color-brand-on-quiet); text-decoration: underline; }
+.site-nav a[aria-current="page"] {
+  color: var(--wa-color-text-normal);
+  font-weight: 600;
+  border-bottom: 2px solid var(--wa-color-brand-fill-loud);
+}
+.skip {
+  position: absolute;
+  left: -999px;
+  background: var(--wa-color-brand-fill-loud);
+  color: var(--wa-color-brand-on-loud);
+  padding: var(--wa-space-s) var(--wa-space-m);
+  border-radius: var(--wa-border-radius-s);
+  z-index: 10;
+}
+.skip:focus { left: var(--wa-space-m); top: var(--wa-space-m); }
 .asof {
   font-size: var(--wa-font-size-xs);
   color: var(--wa-color-text-quiet);
@@ -60,10 +115,12 @@ section + section { margin-top: var(--wa-space-2xl); }
 h1 {
   font-family: var(--wa-font-family-heading);
   font-size: clamp(var(--wa-font-size-2xl), 4.5vw, var(--wa-font-size-4xl));
+  font-weight: 800;
   line-height: var(--wa-line-height-condensed);
   letter-spacing: -0.03em;
   margin: 0 0 var(--wa-space-m);
   max-width: 24ch;
+  text-wrap: balance;
 }
 h2 {
   font-size: var(--wa-font-size-xl);
@@ -78,11 +135,18 @@ p { max-width: 65ch; }
 
 .cta-row { display: flex; gap: var(--wa-space-s); margin-top: var(--wa-space-l); flex-wrap: wrap; }
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--wa-font-size-m);
   padding: var(--wa-space-s) var(--wa-space-l);
   border-radius: var(--wa-border-radius-m);
   text-decoration: none;
-  font-weight: var(--wa-font-weight-semibold);
+  font-weight: 600;
   transition: background var(--wa-transition-fast) var(--wa-transition-easing);
 }
 .btn-primary { background: var(--wa-color-brand-fill-loud); color: var(--wa-color-brand-on-loud); }
@@ -298,13 +362,17 @@ a.tile:focus-visible { outline: var(--wa-focus-ring); outline-offset: 2px; }
 }
 .scorebar .fill { height: 100%; border-radius: inherit; }
 
+/* How-to steps */
+.steps { max-width: 65ch; padding-left: 1.4em; }
+.steps li + li { margin-top: var(--wa-space-s); }
+
 /* ZIP search */
 .zipsearch { max-width: 34rem; }
 .zipsearch label {
   display: block;
   margin-bottom: var(--wa-space-s);
 }
-.zipsearch-row { display: flex; gap: var(--wa-space-s); }
+.zipsearch-row { display: flex; gap: var(--wa-space-s); align-items: stretch; }
 .zipsearch input {
   flex: 1;
   min-width: 0;

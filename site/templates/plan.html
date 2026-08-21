@@ -11,11 +11,11 @@
   <div class="stats">
     <div class="stat"><div class="num">
       {% if plan.avg_bh is not none %}<span class="grade grade-{{ plan.band }}">{{ plan.band }}</span> {{ plan.avg_bh }}{% else %}n/a{% endif %}</div>
-      <div class="lbl">average behavioral-health score across graded counties</div></div>
+      <div class="lbl">average mental health directory score across graded counties</div></div>
     <div class="stat"><div class="num">{{ plan.counties | length }}</div>
       <div class="lbl">counties in this plan's service area</div></div>
     <div class="stat"><div class="num">{{ plan.thin }}</div>
-      <div class="lbl">counties where the plan lists fewer than 10 behavioral-health providers</div></div>
+      <div class="lbl">counties where the plan lists fewer than 10 mental health providers</div></div>
     <div class="stat"><div class="num">{{ plan.ooa_pct }}%</div>
       <div class="lbl">of the records attached to this plan have no address in or near its filed service area</div></div>
   </div>
@@ -24,7 +24,7 @@
 <section>
   <h2>County by county</h2>
   <table>
-    <thead><tr><th>County</th><th>BH grade</th><th class="num">BH providers</th>
+    <thead><tr><th>County</th><th>Mental health grade</th><th class="num">MH providers</th>
       <th>All grade</th><th class="num">All providers</th></tr></thead>
     <tbody>
     {% for c in plan.counties %}
@@ -32,7 +32,7 @@
         <td><a href="{{ depth }}counties/{{ c.fips }}/index.html">{{ c.county_name }}, {{ c.state }}</a></td>
         <td>
           {% if c.bh_thin %}
-            <span class="grade grade-thin" title="Fewer than 10 behavioral-health providers listed; the count is the finding.">n={{ c.bh_n }}</span>
+            <span class="grade grade-thin" title="Fewer than 10 mental health providers listed; the count is the finding.">n={{ c.bh_n }}</span>
           {% elif c.bh_grade %}
             <span class="grade grade-{{ c.bh_grade }}">{{ c.bh_grade }}</span>
             {% if c.bh_low %}<span class="meta">low sample</span>{% endif %}

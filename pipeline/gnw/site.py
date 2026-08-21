@@ -350,57 +350,84 @@ def _write_exports(con, out_data: Path, snapshot: str) -> list[dict]:
     out_data.mkdir(parents=True, exist_ok=True)
     exports = []
 
-    def copy_query(name: str, sql: str, note: str) -> None:
+    def copy_query(name: str, sql: str, note: str, group: str) -> None:
         dest = out_data / name
         con.execute(f"COPY ({sql}) TO '{dest}' (FORMAT CSV, HEADER, COMPRESSION GZIP)")
-        exports.append({"file": name, "note": note, "mb": round(dest.stat().st_size / 1e6, 1)})
+        mb = dest.stat().st_size / 1e6
+        exports.append(
+            {"file": name, "note": note, "group": group,
+             "mb": round(mb, 2) if mb < 1 else round(mb, 1)}
+        )
 
     copy_query(
         "plan_county_scores.csv.gz", "SELECT * FROM scores",
-        "Every plan x county x scope cell: scores, components, grades, sample sizes.",
+        "Every plan's score and grade in every county. One spreadsheet with everything "
+        "on this site. One row per plan, county, and scope (mental health or all providers).",
+        "start",
     )
     copy_query(
         "thin_rosters_bh.csv.gz",
         "SELECT scid, county_fips, county_name, state, issuer_name, plan_marketing_name, n "
         "FROM scores WHERE scope='bh' AND thin_roster ORDER BY state, county_fips",
-        "Behavioral-health cells listing fewer than 10 providers: the roster fact itself.",
+        "Every place a plan lists fewer than 10 mental health providers in a county. "
+        "Plan name, county, and the count.",
+        "start",
     )
     copy_query(
         "feed_status.csv.gz", "SELECT * FROM feed_flags",
-        "Feed-level findings: unreachable mandated URLs and browser-only access.",
+        "Insurers whose required directory web address was dead, or answered only to a "
+        "web browser and blocked automated tools.",
+        "start",
     )
     full = {
-        "M3_PLACEHOLDER_VALUE": "All placeholder-value evidence rows.",
-        "M8_ACCEPTING_UNKNOWN": "All accepting-unknown evidence rows.",
-        "M9_NPI_REGISTRY_STATUS": "All NPI registry evidence rows.",
-        "M10_TAXONOMY_MISMATCH": "All taxonomy-disagreement evidence rows.",
+        "M3_PLACEHOLDER_VALUE": "Every listing with fake-looking contact data: phones like "
+        "999999999, ZIP 99999, addresses reading 'null', dates before 2014.",
+        "M8_ACCEPTING_UNKNOWN": "Every individual-provider listing that leaves the required "
+        "accepting-new-patients field blank or unknown.",
+        "M9_NPI_REGISTRY_STATUS": "Every listing whose provider identifier is malformed or "
+        "retired in the federal registry.",
+        "M10_TAXONOMY_MISMATCH": "Every listing labeled mental health whose federal registry "
+        "record shows only unrelated specialties.",
     }
     for m, note in full.items():
-        copy_query(f"{m}.csv.gz", f"SELECT * FROM {m.lower()}", note)
-    for m, cap in (
-        ("M4_STALE_ATTESTATION", 250_000),
-        ("M5_CALL_CENTER_ONLY", 250_000),
-        ("M6_ADDRESS_INFLATION", 250_000),
+        copy_query(f"{m}.csv.gz", f"SELECT * FROM {m.lower()}", note + " Complete set.", "evidence")
+    for m, note in (
+        ("M4_STALE_ATTESTATION", "Listings whose own last-updated date is more than 180 days old."),
+        ("M5_CALL_CENTER_ONLY", "Listings whose only phone number is one shared with 50 or more "
+         "other listings in the same file."),
+        ("M6_ADDRESS_INFLATION", "Individual providers listed at more than 10 street addresses "
+         "at once (organizations, 25)."),
     ):
         total = con.execute(f"SELECT count(*) FROM {m.lower()}").fetchone()[0]
+        cap = min(250_000, total)
+        if cap >= total:
+            sample_note = f"{note} Complete set, {total:,} rows."
+        else:
+            sample_note = (
+                f"{note} The complete set is {total:,} rows; this file is a random "
+                f"sample of {cap:,}. See below for how to rebuild the complete set."
+            )
         copy_query(
             f"{m}.sample.csv.gz",
-            f"SELECT * FROM {m.lower()} USING SAMPLE {min(cap, total)} ROWS",
-            f"Random sample of {min(cap, total):,} of {total:,} evidence rows "
-            "(full set reproducible from the pipeline).",
+            f"SELECT * FROM {m.lower()} USING SAMPLE {cap} ROWS",
+            sample_note,
+            "evidence",
         )
     total7 = con.execute("SELECT count(*) FROM m7_out_of_area_listing").fetchone()[0]
     copy_query(
         "M7_OUT_OF_AREA_by_plan.csv.gz",
         "SELECT plan_id AS scid, count(*) AS out_of_area_attachments "
         "FROM m7_out_of_area_listing GROUP BY 1 ORDER BY 2 DESC",
-        f"Out-of-area attachment counts per plan (from {total7:,} attachment-level rows; "
-        "record-level sample below).",
+        "For each plan, how many of its listings have no address inside the plan's filed "
+        "service area or any neighboring county. Totals per plan.",
+        "evidence",
     )
     copy_query(
         "M7_OUT_OF_AREA_LISTING.sample.csv.gz",
         "SELECT * FROM m7_out_of_area_listing USING SAMPLE 250000 ROWS",
-        f"Random sample of 250,000 of {total7:,} out-of-area evidence rows.",
+        f"The listing-level rows behind the per-plan totals. The complete set is "
+        f"{total7:,} rows; this file is a random sample of 250,000.",
+        "evidence",
     )
     return exports
 
@@ -517,13 +544,17 @@ def build_site(
             "plan.html", out_dir / "plans" / p["scid"] / "index.html",
             plan=p, depth="../../",
         )
-    render("methodology.html", out_dir / "methodology" / "index.html", depth="../")
-    render("patients.html", out_dir / "patients" / "index.html", depth="../")
-    render("about.html", out_dir / "about" / "index.html", depth="../")
+    render("methodology.html", out_dir / "methodology" / "index.html", depth="../", nav="methodology")
+    render("patients.html", out_dir / "patients" / "index.html", depth="../", nav="patients")
+    render("about.html", out_dir / "about" / "index.html", depth="../", nav="about")
+    render("404.html", out_dir / "404.html", depth="/")
 
     exports = _write_exports(con, out_dir / "data" / "files", snapshot)
-    render("data.html", out_dir / "data" / "index.html", exports=exports, depth="../")
+    render("data.html", out_dir / "data" / "index.html", exports=exports, depth="../", nav="data")
 
+    shutil.copytree(
+        repo_root / "site" / "assets" / "fonts", out_dir / "fonts", dirs_exist_ok=True
+    )
     if not (out_dir / "webawesome").exists():
         shutil.copytree(wa_kit, out_dir / "webawesome")
     log.info(

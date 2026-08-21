@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Page not found · {{ site_name }}{% endblock %}
+{% block content %}
+<section>
+  <h1>That page does not exist.</h1>
+  <p class="lede">The address may have changed with a data update, or the link was wrong.</p>
+  <ul>
+    <li><a href="/index.html">Look up your county from the home page</a></li>
+    <li><a href="/patients/index.html">Read the guide for patients</a></li>
+    <li><a href="/data/index.html">Download the data</a></li>
+  </ul>
+</section>
+{% endblock %}

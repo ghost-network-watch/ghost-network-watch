@@ -2,13 +2,18 @@
 {% block content %}
 <section class="hero">
   <div>
-    <h1>The mandated provider directories, audited.</h1>
-    <p class="lede">Monthly integrity scores for every federal marketplace plan,
-    computed from the insurers' own published files. Focused on mental health.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="methodology/index.html">Read the methodology</a>
-      <a class="btn btn-quiet" href="data/index.html">Download the data</a>
-    </div>
+    <h1>Is your health plan's therapist list real?</h1>
+    <p class="lede">Insurers must publish their provider directories. We read every file,
+    every month, and grade every plan, county by county.</p>
+    <form id="zipform" class="zipsearch" style="margin-top: var(--wa-space-l)">
+      <label for="zip">Enter your ZIP code to see the plans where you live.</label>
+      <div class="zipsearch-row">
+        <input id="zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5"
+               placeholder="75023" required autocomplete="postal-code" aria-label="ZIP code">
+        <button class="btn btn-primary" type="submit">Look up</button>
+      </div>
+      <p id="zipresult" class="zipresult" role="status"></p>
+    </form>
   </div>
   {% if receipt %}
   <figure class="receipt">
@@ -38,31 +43,29 @@
     <div class="stat"><div class="num">{{ "{:,}".format(national.plans) }}</div>
       <div class="lbl">marketplace plans scored across {{ "{:,}".format(national.counties) }} counties in {{ national.states }} states</div></div>
     <div class="stat"><div class="num">{{ national.thin_bh_pct }}%</div>
-      <div class="lbl">of plan-county cells list fewer than 10 behavioral-health providers</div></div>
+      <div class="lbl">of plan-county combinations list fewer than 10 mental health providers</div></div>
     <div class="stat"><div class="num">{{ "{:,}".format(national.deactivated) }}</div>
-      <div class="lbl">listed NPIs appear on the federal deactivated-identifier report</div></div>
+      <div class="lbl">listed providers carry IDs the federal registry has retired</div></div>
   </div>
 </section>
 
 <section>
-  <h2>Find your county</h2>
-  <form id="zipform" class="zipsearch">
-    <label for="zip">Enter your ZIP code to see every plan's grades where you live.</label>
-    <div class="zipsearch-row">
-      <input id="zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5"
-             placeholder="75023" required autocomplete="postal-code">
-      <button class="btn btn-primary" type="submit">Look up</button>
-    </div>
-    <p id="zipresult" class="zipresult" role="status"></p>
-  </form>
-  <p class="meta" style="color: var(--wa-color-text-quiet); font-size: var(--wa-font-size-s)">
-  New to these terms? Start with the <a href="patients/index.html">guide for patients</a>.</p>
+  <h2>How to use this site</h2>
+  <ol class="steps">
+    <li><strong>Look up your county</strong> with the ZIP box above, or through the state
+    map below.</li>
+    <li><strong>Compare two numbers for each plan:</strong> the mental health grade and the
+    provider count. A grade B list with 400 providers beats a grade B list with 12.</li>
+    <li><strong>Already stuck with an unusable list?</strong> You can demand care anyway.
+    The <a href="patients/index.html">guide for patients</a> shows the exact steps and
+    words to use.</li>
+  </ol>
 </section>
 
 <section>
-  <h2>Directory integrity by state</h2>
-  <p>Tiles show the average behavioral-health cell score for each federal marketplace
-  state. Gray states run their own exchanges and are not yet covered.</p>
+  <h2>How states compare</h2>
+  <p>Tiles show each state's average mental health directory score. Gray states run
+  their own insurance exchanges and are not yet covered.</p>
   <div class="tilemap" role="list">
     {% for t in tiles %}
     {% if t.covered %}
@@ -91,10 +94,10 @@
 </section>
 
 <section>
-  <h2>Behavioral-health grades, nationally</h2>
+  <h2>The national picture</h2>
   {% set g = national.grades.bh %}
   {% set total = g.values() | sum %}
-  <div class="dist" role="img" aria-label="Grade distribution across behavioral-health plan-county cells">
+  <div class="dist" role="img" aria-label="Grade distribution across mental health plan-county cells">
     {% for k in ['A','B','C','D','F','thin'] %}
     <div class="dist-{{ k }}" style="width: {{ (100 * g.get(k, 0) / total) | round(2) }}%"></div>
     {% endfor %}
@@ -106,11 +109,11 @@
     <span><span class="grade grade-thin">n&lt;10</span> {{ "{:,}".format(g.get('thin', 0)) }} cells</span>
   </div>
   <div class="two-col" style="margin-top: var(--wa-space-l)">
-    <p>A cell is one plan in one county. Grades summarize how usable the plan's published
-    behavioral-health roster is in that county, from placeholder contact data, stale
-    attestation dates, shared-only phone numbers, address inflation, and federal registry
-    disagreements. Cells listing fewer than 10 providers are reported as a roster fact
-    instead of graded.</p>
+    <p>Each graded unit is one plan in one county. A grade summarizes how usable that
+    plan's published mental health list is there: whether entries have real phone numbers
+    and addresses, current update dates, and identifiers the federal registry recognizes.
+    When a plan lists fewer than 10 mental health providers in a county, we skip the grade
+    and report the small number itself.</p>
     <ul class="findings">
       <li>On average, plans attach <strong>{{ national.avg_ooa_pct }}%</strong> of their
       provider records to plans whose CMS-filed service area contains none of the record's
@@ -120,8 +123,8 @@
       <li><strong>{{ "{:,}".format(national.deactivated) }}</strong> listed identifiers appear
       on the federal registry's deactivated list. Half were deactivated more than 20 months
       before the file was fetched.</li>
-      <li>Several issuers' files have gone <strong>over a year</strong> without a record
-      attestation update, against a monthly-update requirement.</li>
+      <li>Several insurers' files have gone <strong>over a year</strong> without an
+      update, against a monthly-update requirement.</li>
     </ul>
   </div>
   <p class="note">Every claim decomposes to evidence rows quoting the issuer's own published
@@ -131,11 +134,11 @@
 </section>
 
 <section>
-  <h2>Lowest-scoring issuers</h2>
-  <p>Behavioral-health scope, issuers with at least 50 scored plan-county cells,
-  averaged across cells. Lower is worse.</p>
+  <h2>Lowest-scoring insurers</h2>
+  <p>Mental health scope, insurers with at least 50 graded plan-county units,
+  averaged. Lower is worse.</p>
   <table>
-    <thead><tr><th>Issuer</th><th class="num">Scored cells</th>
+    <thead><tr><th>Insurer</th><th class="num">Graded units</th>
       <th class="num">Average score</th><th class="bar-col">Score</th>
       <th class="num">Out-of-area rate</th></tr></thead>
     <tbody>
