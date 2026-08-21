@@ -15,7 +15,7 @@
     <tbody>
     {% for p in county.plans %}
       <tr>
-        <td>{{ p.plan }}</td>
+        <td><a href="{{ depth }}plans/{{ p.scid }}/index.html">{{ p.plan }}</a></td>
         <td><a href="{{ depth }}issuers/{{ p.issuer_id }}/index.html">{{ p.issuer }}</a></td>
         <td>{{ p.metal or '' }}</td>
         <td>

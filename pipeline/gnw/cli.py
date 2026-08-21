@@ -113,6 +113,15 @@ def cmd_notify(args) -> None:
     )
 
 
+def cmd_callsheet(args) -> None:
+    from .callsheet import build_callsheet
+
+    build_callsheet(
+        DATA_ROOT, snapshot=args.snapshot,
+        cells_per_grade=args.cells, per_cell=args.per_cell,
+    )
+
+
 def cmd_flags(args) -> None:
     from .flags import FlagEngine
 
@@ -187,6 +196,12 @@ def main() -> None:
     p.add_argument("--publish-date", required=True, help="planned publication date, YYYY-MM-DD")
     p.add_argument("--issuer", help="single HIOS issuer id")
     p.set_defaults(func=cmd_notify)
+
+    p = sub.add_parser("callsheet", help="phone-calibration call sheet (private research file)")
+    p.add_argument("--snapshot", required=True)
+    p.add_argument("--cells", type=int, default=5, help="cells per grade (A and F)")
+    p.add_argument("--per-cell", type=int, default=10, help="listings sampled per cell")
+    p.set_defaults(func=cmd_callsheet)
 
     p = sub.add_parser("flags", help="run rubric metrics -> evidence rows")
     p.add_argument("--snapshot", required=True)

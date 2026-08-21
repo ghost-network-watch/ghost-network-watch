@@ -45,6 +45,21 @@
 </section>
 
 <section>
+  <h2>Find your county</h2>
+  <form id="zipform" class="zipsearch">
+    <label for="zip">Enter your ZIP code to see every plan's grades where you live.</label>
+    <div class="zipsearch-row">
+      <input id="zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5"
+             placeholder="75023" required autocomplete="postal-code">
+      <button class="btn btn-primary" type="submit">Look up</button>
+    </div>
+    <p id="zipresult" class="zipresult" role="status"></p>
+  </form>
+  <p class="meta" style="color: var(--wa-color-text-quiet); font-size: var(--wa-font-size-s)">
+  New to these terms? Start with the <a href="patients/index.html">guide for patients</a>.</p>
+</section>
+
+<section>
   <h2>Directory integrity by state</h2>
   <p>Tiles show the average behavioral-health cell score for each federal marketplace
   state. Gray states run their own exchanges and are not yet covered.</p>
@@ -142,4 +157,46 @@
   (HealthCare.gov) states only. State-based exchanges such as California and New York publish
   separately and are not yet included.</p>
 </section>
+
+<script>
+(function () {
+  var form = document.getElementById('zipform');
+  var out = document.getElementById('zipresult');
+  var data = null;
+  function load() {
+    if (!data) {
+      data = Promise.all([
+        fetch('search/zips.json').then(function (r) { return r.json(); }),
+        fetch('search/counties.json').then(function (r) { return r.json(); })
+      ]);
+    }
+    return data;
+  }
+  document.getElementById('zip').addEventListener('focus', load);
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var z = document.getElementById('zip').value.replace(/\D/g, '').slice(0, 5);
+    if (z.length !== 5) { out.textContent = 'Enter a five-digit ZIP code.'; return; }
+    out.textContent = 'Looking up ' + z + '...';
+    load().then(function (res) {
+      var hits = res[0][z] || [];
+      var names = res[1];
+      if (hits.length === 0) {
+        out.textContent = 'No covered county found for ' + z + '. This site covers ' +
+          'HealthCare.gov states only; California, New York, and other state-run ' +
+          'exchanges are not yet included.';
+      } else if (hits.length === 1) {
+        window.location.href = 'counties/' + hits[0] + '/index.html';
+      } else {
+        out.innerHTML = 'That ZIP touches ' + hits.length + ' counties: ' +
+          hits.map(function (f) {
+            return '<a href="counties/' + f + '/index.html">' + (names[f] || f) + '</a>';
+          }).join(', ');
+      }
+    }).catch(function () {
+      out.textContent = 'Lookup failed to load. Use the state tiles below instead.';
+    });
+  });
+})();
+</script>
 {% endblock %}

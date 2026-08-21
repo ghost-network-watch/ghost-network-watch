@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}{{ plan.name }} · {{ site_name }}{% endblock %}
+{% block content %}
+<section>
+  <h1>{{ plan.name }}</h1>
+  <p class="lede">{{ plan.metal or '' }} plan from
+  <a href="{{ depth }}issuers/{{ plan.issuer_id }}/index.html">{{ plan.issuer }}</a>
+  in {{ plan.states | join(', ') }}.
+  Plan ID <span style="font-family: var(--wa-font-family-code)">{{ plan.scid }}</span>.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="num">
+      {% if plan.avg_bh is not none %}<span class="grade grade-{{ plan.band }}">{{ plan.band }}</span> {{ plan.avg_bh }}{% else %}n/a{% endif %}</div>
+      <div class="lbl">average behavioral-health score across graded counties</div></div>
+    <div class="stat"><div class="num">{{ plan.counties | length }}</div>
+      <div class="lbl">counties in this plan's service area</div></div>
+    <div class="stat"><div class="num">{{ plan.thin }}</div>
+      <div class="lbl">counties where the plan lists fewer than 10 behavioral-health providers</div></div>
+    <div class="stat"><div class="num">{{ plan.ooa_pct }}%</div>
+      <div class="lbl">of the records attached to this plan have no address in or near its filed service area</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>County by county</h2>
+  <table>
+    <thead><tr><th>County</th><th>BH grade</th><th class="num">BH providers</th>
+      <th>All grade</th><th class="num">All providers</th></tr></thead>
+    <tbody>
+    {% for c in plan.counties %}
+      <tr>
+        <td><a href="{{ depth }}counties/{{ c.fips }}/index.html">{{ c.county_name }}, {{ c.state }}</a></td>
+        <td>
+          {% if c.bh_thin %}
+            <span class="grade grade-thin" title="Fewer than 10 behavioral-health providers listed; the count is the finding.">n={{ c.bh_n }}</span>
+          {% elif c.bh_grade %}
+            <span class="grade grade-{{ c.bh_grade }}">{{ c.bh_grade }}</span>
+            {% if c.bh_low %}<span class="meta">low sample</span>{% endif %}
+          {% endif %}
+        </td>
+        <td class="num">{{ "{:,}".format(c.bh_n) if c.bh_n is not none else '' }}</td>
+        <td>{% if c.all_grade %}<span class="grade grade-{{ c.all_grade }}">{{ c.all_grade }}</span>{% endif %}</td>
+        <td class="num">{{ "{:,}".format(c.all_n) if c.all_n is not none else '' }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="note" style="margin-top: var(--wa-space-l)">Grades describe the plan's published
+  directory file in each county: whether its listings carry usable contact data, current
+  attestations, and identifiers the federal registry recognizes. A good grade means the file
+  is internally consistent. It does not promise that an office will answer the phone.
+  New to these terms? Read the <a href="{{ depth }}patients/index.html">guide for patients</a>.</p>
+</section>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}For patients · {{ site_name }}{% endblock %}
+{% block content %}
+<section>
+  <h1>A patient's guide to this site</h1>
+  <p class="lede">Insurance companies publish lists of the doctors and therapists in each
+  plan. Those lists are often wrong. This site checks the lists and grades them.</p>
+
+  <h2>What the grades mean</h2>
+  <p>Every plan gets a grade in every county it covers, based only on the plan's own
+  published provider list.</p>
+  <ul>
+    <li><span class="grade grade-A">A</span> or <span class="grade grade-B">B</span>:
+    the list is internally consistent and current. Most entries have real contact
+    information and identifiers the federal registry recognizes.</li>
+    <li><span class="grade grade-C">C</span> or <span class="grade grade-D">D</span>:
+    a meaningful share of entries have problems: fake-looking phone numbers, years-old
+    update dates, or identifiers the federal registry has retired.</li>
+    <li><span class="grade grade-F">F</span>: much of the list is unusable exactly as
+    published. In the worst files, most entries have no working contact information at all.</li>
+    <li><span class="grade grade-thin">n=4</span>: the plan lists fewer than 10 mental-health
+    providers in that county. We do not grade a list that small. The small number is the
+    finding.</li>
+  </ul>
+  <p>One honest limit, stated plainly: we read files. We do not call offices. A good grade
+  means the plan's published list is consistent and current. It does not promise that an
+  office will answer the phone or have appointments open.</p>
+
+  <h2>If you are choosing a plan</h2>
+  <ol>
+    <li>Find your county with the search box on the <a href="{{ depth }}index.html">home
+    page</a>, or through your state's page.</li>
+    <li>For each plan you are considering, look at two things together: the mental-health
+    grade and the provider count. A plan with grade B and 400 listed providers gives you
+    far better odds than a plan with grade B and 12.</li>
+    <li>Click the plan's name to see its whole footprint. A plan that grades F in every
+    county it operates in tells you how the insurer maintains its lists everywhere.</li>
+  </ol>
+
+  <h2>If you already have a plan and cannot reach a therapist</h2>
+  <p>You have more leverage than most people know. Use it in this order.</p>
+  <ol>
+    <li><strong>Document every attempt.</strong> Date, provider name, number called, and
+    what happened: disconnected, not in network, not accepting, no response. Three to five
+    documented failures is a strong record.</li>
+    <li><strong>Ask your plan, in writing, for an in-network appointment.</strong> Call the
+    member services number on your card, then follow up in writing. Ask them to name a
+    mental-health provider who is in network, accepting new patients, and reachable, with
+    an appointment within a reasonable time.</li>
+    <li><strong>If they cannot, request a network exception.</strong> Ask, in writing, for
+    out-of-network care at in-network cost sharing because the plan has no accessible
+    in-network provider. Plans grant these. Insurers and regulators call this a network
+    adequacy exception, a network gap exception, or a single-case agreement. Use those
+    words.</li>
+    <li><strong>If the plan refuses, complain to your state insurance department.</strong>
+    Every state has one, and network adequacy is their territory. Find yours through the
+    <a href="https://content.naic.org/consumer">NAIC state map</a>. Attach your documented
+    attempts.</li>
+    <li><strong>Attach the evidence from this site.</strong> Your plan's page here shows
+    what its own published list contains. The issuer's evidence file, on the
+    <a href="{{ depth }}data/index.html">data page</a>, itemizes every problem record. A
+    complaint that says "the plan's own federally mandated file shows placeholder phone
+    numbers on half its entries" is hard to dismiss.</li>
+  </ol>
+  <p>This is general information, not legal advice. Marketplace coverage questions can also
+  go to the federal help line at <a href="https://www.healthcare.gov/contact-us/">HealthCare.gov</a>.</p>
+
+  <h2>Words this site uses</h2>
+  <table>
+    <tbody>
+    <tr><td><strong>Cell</strong></td><td>One plan in one county. The unit every grade
+      attaches to.</td></tr>
+    <tr><td><strong>Attestation date</strong></td><td>The date a plan's file claims a
+      provider entry was last updated. Federal rules require monthly updates.</td></tr>
+    <tr><td><strong>NPI</strong></td><td>A provider's federal identifier. When the registry
+      retires one and a plan still lists it, the entry is usually a retired, relocated, or
+      deceased provider.</td></tr>
+    <tr><td><strong>Out-of-area listing</strong></td><td>A provider attached to a plan whose
+      service area contains none of that provider's addresses. It pads the list without
+      adding anyone you can see.</td></tr>
+    <tr><td><strong>Plan ID</strong></td><td>The 14-character code (like 12345TX0010001)
+      that identifies a plan in federal filings. Your plan documents carry it.</td></tr>
+    </tbody>
+  </table>
+</section>
+{% endblock %}

@@ -298,6 +298,27 @@ a.tile:focus-visible { outline: var(--wa-focus-ring); outline-offset: 2px; }
 }
 .scorebar .fill { height: 100%; border-radius: inherit; }
 
+/* ZIP search */
+.zipsearch { max-width: 34rem; }
+.zipsearch label {
+  display: block;
+  margin-bottom: var(--wa-space-s);
+}
+.zipsearch-row { display: flex; gap: var(--wa-space-s); }
+.zipsearch input {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--wa-font-size-l);
+  font-family: var(--wa-font-family-code);
+  padding: var(--wa-space-s) var(--wa-space-m);
+  border: 1px solid var(--wa-color-surface-border);
+  border-radius: var(--wa-border-radius-m);
+  background: var(--wa-color-surface-default);
+  color: var(--wa-color-text-normal);
+}
+.zipsearch input:focus-visible { outline: var(--wa-focus-ring); outline-offset: 1px; }
+.zipresult { min-height: 1.4em; color: var(--wa-color-text-quiet); font-size: var(--wa-font-size-s); }
+
 /* Two-column prose + findings */
 .two-col {
   display: grid;

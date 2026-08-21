@@ -205,9 +205,13 @@ def _issuer_names(con) -> dict[str, dict]:
     return out
 
 
-def _county_rows(con) -> dict[str, dict]:
-    """county_fips -> {name, state, plans: [row...]} (both scopes folded)."""
+def _cells(con) -> tuple[dict[str, dict], dict[str, dict]]:
+    """Fold score cells two ways:
+    counties: county_fips -> {name, state, plans: [cell...]}
+    plans:    scid -> {name, issuer, metal, counties: [cell...], rollups}
+    """
     counties: dict[str, dict] = {}
+    plans: dict[str, dict] = {}
     rows = con.execute("""
         SELECT county_fips, any_value(county_name), any_value(state), scid,
                any_value(issuer_name), any_value(plan_marketing_name), any_value(metal_level),
@@ -223,22 +227,39 @@ def _county_rows(con) -> dict[str, dict]:
         FROM scores GROUP BY county_fips, scid
     """).fetchall()
     for r in rows:
+        cell = {
+            "fips": r[0], "county_name": r[1], "state": r[2],
+            "scid": r[3], "issuer_id": r[3][:5], "issuer": r[4] or "Unknown issuer",
+            "plan": r[5] or r[3], "metal": r[6],
+            "bh_grade": r[7], "bh_score": r[8], "bh_n": r[9],
+            "bh_thin": bool(r[10]), "bh_low": bool(r[11]),
+            "all_grade": r[12], "all_score": r[13], "all_n": r[14],
+            "ooa_pct": round(100 * (r[15] or 0), 1),
+        }
         c = counties.setdefault(
             r[0], {"fips": r[0], "name": r[1], "state": r[2], "plans": []}
         )
-        c["plans"].append(
+        c["plans"].append(cell)
+        p = plans.setdefault(
+            r[3],
             {
-                "scid": r[3], "issuer_id": r[3][:5], "issuer": r[4] or "Unknown issuer",
-                "plan": r[5] or r[3], "metal": r[6],
-                "bh_grade": r[7], "bh_score": r[8], "bh_n": r[9],
-                "bh_thin": bool(r[10]), "bh_low": bool(r[11]),
-                "all_grade": r[12], "all_score": r[13], "all_n": r[14],
-                "ooa_pct": round(100 * (r[15] or 0), 1),
-            }
+                "scid": r[3], "issuer_id": r[3][:5], "issuer": cell["issuer"],
+                "name": cell["plan"], "metal": r[6], "ooa_pct": cell["ooa_pct"],
+                "counties": [], "states": set(),
+            },
         )
+        p["counties"].append(cell)
+        p["states"].add(r[2])
     for c in counties.values():
-        c["plans"].sort(key=lambda p: (GRADE_ORDER.get(p["bh_grade"], 5), -(p["bh_n"] or 0)))
-    return counties
+        c["plans"].sort(key=lambda x: (GRADE_ORDER.get(x["bh_grade"], 5), -(x["bh_n"] or 0)))
+    for p in plans.values():
+        p["counties"].sort(key=lambda x: (x["state"], x["county_name"] or ""))
+        p["states"] = sorted(p["states"])
+        scored = [x["bh_score"] for x in p["counties"] if x["bh_score"] is not None and not x["bh_thin"]]
+        p["avg_bh"] = round(sum(scored) / len(scored), 1) if scored else None
+        p["band"] = _band(p["avg_bh"])
+        p["thin"] = sum(1 for x in p["counties"] if x["bh_thin"])
+    return counties, plans
 
 
 def _issuer_pages(con, issuer_names) -> dict[str, dict]:
@@ -402,8 +423,26 @@ def build_site(
 
     national = _national(con)
     issuer_names = _issuer_names(con)
-    counties = _county_rows(con)
+    counties, plans = _cells(con)
     issuers = _issuer_pages(con, issuer_names)
+
+    # ZIP search index: zip -> covered county fips list, plus fips -> label.
+    search_dir = out_dir / "search"
+    search_dir.mkdir(parents=True, exist_ok=True)
+    zip_map: dict[str, list[str]] = {}
+    for z, fips in con.execute(
+        "SELECT zip, county_fips FROM read_parquet(?)",
+        [str(data_root / "reference" / "parquet" / "zip_county.parquet")],
+    ).fetchall():
+        if fips in counties:
+            zip_map.setdefault(z, []).append(fips)
+    (search_dir / "zips.json").write_text(json.dumps(zip_map, separators=(",", ":")))
+    (search_dir / "counties.json").write_text(
+        json.dumps(
+            {f: f"{c['name']}, {c['state']}" for f, c in counties.items()},
+            separators=(",", ":"),
+        )
+    )
 
     states: dict[str, dict] = defaultdict(lambda: {"counties": [], "issuers": set()})
     for c in counties.values():
@@ -473,7 +512,13 @@ def build_site(
             "issuer.html", out_dir / "issuers" / i["id"] / "index.html",
             issuer=i, depth="../../",
         )
+    for p in plans.values():
+        render(
+            "plan.html", out_dir / "plans" / p["scid"] / "index.html",
+            plan=p, depth="../../",
+        )
     render("methodology.html", out_dir / "methodology" / "index.html", depth="../")
+    render("patients.html", out_dir / "patients" / "index.html", depth="../")
     render("about.html", out_dir / "about" / "index.html", depth="../")
 
     exports = _write_exports(con, out_dir / "data" / "files", snapshot)
@@ -482,7 +527,7 @@ def build_site(
     if not (out_dir / "webawesome").exists():
         shutil.copytree(wa_kit, out_dir / "webawesome")
     log.info(
-        "site: %d county pages, %d issuer pages, %d state pages -> %s",
-        len(counties), len(issuers), len(states), out_dir,
+        "site: %d county, %d plan, %d issuer, %d state pages -> %s",
+        len(counties), len(plans), len(issuers), len(states), out_dir,
     )
     return out_dir
