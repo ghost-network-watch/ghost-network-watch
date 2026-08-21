@@ -382,10 +382,32 @@ def build_zcta(store: ReferenceStore) -> None:
     )
 
 
+CENSUS_COUNTY_ADJACENCY = (
+    "https://www2.census.gov/geo/docs/reference/county_adjacency/county_adjacency2023.txt"
+)
+
+
+def build_adjacency(store: ReferenceStore) -> None:
+    """Census county adjacency — M7's border-practice buffer."""
+    path = store.download("census_county_adjacency", CENSUS_COUNTY_ADJACENCY)
+    rows = []
+    with open(path, encoding="utf-8-sig", errors="replace") as fh:
+        for line in fh:
+            geoids = re.findall(r"\b\d{5}\b", line)
+            if len(geoids) >= 2:
+                rows.append({"county_fips": geoids[0], "adjacent_fips": geoids[-1]})
+    _write_parquet(
+        store.parquet / "county_adjacency.parquet",
+        rows,
+        pa.schema([("county_fips", pa.string()), ("adjacent_fips", pa.string())]),
+    )
+
+
 BUILDERS = {
     "nppes": build_nppes,
     "pufs": build_pufs,
     "landscape": build_landscape,
     "nucc": build_nucc,
     "zcta": build_zcta,
+    "adjacency": build_adjacency,
 }

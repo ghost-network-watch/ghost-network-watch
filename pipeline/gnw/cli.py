@@ -80,6 +80,15 @@ def cmd_refs(args) -> None:
         BUILDERS[name](store)
 
 
+def cmd_flags(args) -> None:
+    from .flags import FlagEngine
+
+    engine = FlagEngine(DATA_ROOT, snapshot=args.snapshot, fetch_date=args.fetch_date)
+    results = engine.run(only=args.metric)
+    for metric, n in results.items():
+        print(f"{metric}: {n:,} evidence rows")
+
+
 def cmd_status(args) -> None:
     store = EvidenceStore(DATA_ROOT)
     rows = store.load_manifest(args.snapshot)
@@ -121,9 +130,15 @@ def main() -> None:
     p.add_argument(
         "--source",
         default="all",
-        choices=["all", "nppes", "pufs", "landscape", "nucc", "zcta"],
+        choices=["all", "nppes", "pufs", "landscape", "nucc", "zcta", "adjacency"],
     )
     p.set_defaults(func=cmd_refs)
+
+    p = sub.add_parser("flags", help="run rubric metrics -> evidence rows")
+    p.add_argument("--snapshot", required=True)
+    p.add_argument("--fetch-date", default="2026-08-21", help="crawl date, YYYY-MM-DD")
+    p.add_argument("--metric", help="run a single metric (m3..m10, feed)")
+    p.set_defaults(func=cmd_flags)
 
     p = sub.add_parser("status", help="summarize a snapshot manifest")
     p.add_argument("--snapshot", required=True)
