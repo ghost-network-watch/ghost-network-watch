@@ -51,4 +51,33 @@
   is internally consistent. It does not promise that an office will answer the phone.
   New to these terms? Read the <a href="{{ depth }}patients/index.html">guide for patients</a>.</p>
 </section>
+
+{% if plan.complaint.graded %}
+<section>
+  <h2>Using this page in a complaint</h2>
+  <p>If you cannot reach an in-network mental health provider on this plan, you can cite
+  this audit to your plan or your state insurance department. Copy and adapt:</p>
+  <blockquote class="note" style="margin: var(--wa-space-m) 0">
+    According to Ghost Network Watch's {{ snapshot }} audit of the machine-readable
+    provider directory that {{ plan.issuer }} publishes under 45 CFR 156.230(b), the
+    mental health directory for plan {{ plan.name }} ({{ plan.scid }}) graded
+    {{ plan.complaint.df }} of {{ plan.complaint.graded }} counties D or F
+    {%- if plan.thin %}, lists fewer than 10 mental health providers in
+    {{ plan.thin }} counties{% endif %}
+    {%- if plan.ooa_pct and plan.ooa_pct > 10 %}, and attaches {{ plan.ooa_pct }}% of its
+    records to the plan without any address in its filed service area{% endif %}.
+    Source: this page. The insurer's itemized evidence file is attached.
+  </blockquote>
+  <p>Attach two things: a printout or PDF of this page, and
+  {% if plan.complaint.evidence_mb is not none %}
+  <a href="{{ depth }}data/files/issuers/{{ plan.issuer_id }}_evidence.csv.gz">the
+  insurer's evidence file</a> ({{ plan.complaint.evidence_mb }} MB), which lists every
+  problem record we found in {{ plan.issuer }}'s published directory.
+  {% else %}
+  the insurer's evidence from the <a href="{{ depth }}data/index.html">data page</a>.
+  {% endif %}
+  The <a href="{{ depth }}patients/index.html">guide for patients</a> walks through the
+  full complaint process.</p>
+</section>
+{% endif %}
 {% endblock %}

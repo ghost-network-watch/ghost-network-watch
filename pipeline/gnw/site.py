@@ -346,6 +346,47 @@ def _issuer_pages(con, issuer_names) -> dict[str, dict]:
     return issuers
 
 
+def _issuer_evidence(con, out_data: Path) -> dict[str, float]:
+    """One combined evidence CSV per issuer, linked from its page.
+
+    All record-level metrics share the evidence-row schema, so they union
+    cleanly. M7 is attachment-grain and enormous; it is included as per-plan
+    totals instead of raw rows. Requires the file_issuers temp table
+    (created in _issuer_pages).
+    """
+    dest_dir = out_data / "issuers"
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    record_metrics = [m for m in METRIC_LABELS if m != "M7_OUT_OF_AREA_LISTING"]
+    union = " UNION ALL ".join(f"SELECT * FROM {m.lower()}" for m in record_metrics)
+    con.execute(f"""
+        CREATE TEMP TABLE issuer_evidence AS
+        SELECT fi.issuer_id, f.*
+        FROM ({union}) f
+        JOIN file_issuers fi ON fi.sha256 = f.source_sha256
+        UNION ALL
+        SELECT substr(plan_id, 1, 5) AS issuer_id,
+               any_value(snapshot), 'M7_OUT_OF_AREA_SUMMARY', 'PER_PLAN_TOTAL',
+               'E2', 0.8, NULL, NULL, NULL, plan_id,
+               to_json(struct_pack(out_of_area_attachments := count(*))),
+               any_value(rule_version)
+        FROM m7_out_of_area_listing GROUP BY plan_id
+    """)
+    sizes: dict[str, float] = {}
+    for (iid,) in con.execute(
+        "SELECT DISTINCT issuer_id FROM issuer_evidence ORDER BY 1"
+    ).fetchall():
+        dest = dest_dir / f"{iid}_evidence.csv.gz"
+        con.execute(
+            f"COPY (SELECT * FROM issuer_evidence WHERE issuer_id = '{iid}' "
+            f"ORDER BY metric, source_sha256, record_idx) "
+            f"TO '{dest}' (FORMAT CSV, HEADER, COMPRESSION GZIP)"
+        )
+        sizes[iid] = round(dest.stat().st_size / 1e6, 2)
+    con.execute("DROP TABLE issuer_evidence")
+    log.info("issuer evidence files: %d", len(sizes))
+    return sizes
+
+
 def _write_exports(con, out_data: Path, snapshot: str) -> list[dict]:
     out_data.mkdir(parents=True, exist_ok=True)
     exports = []
@@ -534,12 +575,20 @@ def build_site(
             "county.html", out_dir / "counties" / c["fips"] / "index.html",
             county=c, depth="../../",
         )
+    evidence_sizes = _issuer_evidence(con, out_dir / "data" / "files")
     for i in issuers.values():
         render(
             "issuer.html", out_dir / "issuers" / i["id"] / "index.html",
-            issuer=i, depth="../../",
+            issuer=i, evidence_mb=evidence_sizes.get(i["id"]), depth="../../",
         )
     for p in plans.values():
+        # Complaint-ready numbers for the plan page.
+        graded = [c for c in p["counties"] if c["bh_grade"] and not c["bh_thin"]]
+        df = sum(1 for c in graded if c["bh_grade"] in ("D", "F"))
+        p["complaint"] = {
+            "graded": len(graded), "df": df,
+            "evidence_mb": evidence_sizes.get(p["issuer_id"]),
+        }
         render(
             "plan.html", out_dir / "plans" / p["scid"] / "index.html",
             plan=p, depth="../../",

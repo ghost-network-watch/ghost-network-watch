@@ -79,10 +79,16 @@
   <p>No record-level findings for this issuer's files in the current snapshot.</p>
   {% endif %}
   <p class="note" style="margin-top: var(--wa-space-l)">These counts describe values the
-  issuer's own published file carries, or dated disagreements between that file and the
-  federal NPPES registry. They are not claims about any individual provider. Full evidence
-  rows are in <a href="{{ depth }}data/index.html">the data downloads</a>. Hosting:
-  {{ issuer.hosts | join(', ') }}.</p>
+  insurer's own published file carries, or dated disagreements between that file and the
+  federal NPPES registry. They are not claims about any individual provider.
+  {% if evidence_mb is not none %}
+  <a href="{{ depth }}data/files/issuers/{{ issuer.id }}_evidence.csv.gz">Download this
+  insurer's complete evidence file</a> ({{ evidence_mb }} MB): one row per problem record,
+  ready to attach to a complaint or a records request.
+  {% else %}
+  Full evidence rows are in <a href="{{ depth }}data/index.html">the data downloads</a>.
+  {% endif %}
+  Hosting: {{ issuer.hosts | join(', ') }}.</p>
 </section>
 
 <section>
