@@ -428,13 +428,19 @@ class FlagEngine:
           FROM providers p JOIN luhn_bad USING (npi)
         ),
         deact AS (
+          -- The monthly NPPES file carries deactivated NPIs as STUB rows
+          -- (deactivation date only, no name/type), despite the readme's
+          -- "active provider data" claim. An NPI counts as deactivated when
+          -- it is on the deactivation report AND has no substantive active
+          -- row (entity_type present) in the monthly file.
           SELECT p.source_sha256, p.record_idx, p.npi, 'DEACTIVATED' AS subcode,
                  'E3' AS strength, 0.7 AS weight,
                  to_json(struct_pack(npi := p.npi,
                                      deactivation_date := d.deactivation_date)) AS observed
           FROM providers p
           JOIN nppes_deact d USING (npi)
-          ANTI JOIN nppes n ON n.npi = p.npi
+          ANTI JOIN (SELECT npi FROM nppes WHERE entity_type IS NOT NULL) n
+            ON n.npi = p.npi
         ),
         allf AS (
           SELECT * FROM missing UNION ALL SELECT * FROM luhn UNION ALL SELECT * FROM deact

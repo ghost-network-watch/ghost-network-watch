@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+  <h1>The mandated provider directories, audited.</h1>
+  <p class="lede">Monthly integrity scores for every federal marketplace plan,
+  computed from the insurers' own published files. Focused on mental health.</p>
+  <div class="cta-row">
+    <a class="btn btn-primary" href="methodology/index.html">Read the methodology</a>
+    <a class="btn btn-quiet" href="data/index.html">Download the data</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="num">{{ "{:,}".format(national.records) }}</div>
+      <div class="lbl">provider records parsed from mandated directory files</div></div>
+    <div class="stat"><div class="num">{{ "{:,}".format(national.plans) }}</div>
+      <div class="lbl">marketplace plans scored across {{ "{:,}".format(national.counties) }} counties in {{ national.states }} states</div></div>
+    <div class="stat"><div class="num">{{ national.thin_bh_pct }}%</div>
+      <div class="lbl">of plan-county cells list fewer than 10 behavioral-health providers</div></div>
+    <div class="stat"><div class="num">{{ "{:,}".format(national.deactivated) }}</div>
+      <div class="lbl">listed NPIs appear on the federal deactivated-identifier report</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Behavioral-health grades, nationally</h2>
+  {% set g = national.grades.bh %}
+  {% set total = g.values() | sum %}
+  <div class="dist" role="img" aria-label="Grade distribution across behavioral-health plan-county cells">
+    {% for k in ['A','B','C','D','F','thin'] %}
+    <div class="dist-{{ k }}" style="width: {{ (100 * g.get(k, 0) / total) | round(2) }}%"></div>
+    {% endfor %}
+  </div>
+  <div class="dist-legend">
+    {% for k in ['A','B','C','D','F'] %}
+    <span><span class="grade grade-{{ k }}">{{ k }}</span> {{ "{:,}".format(g.get(k, 0)) }} cells</span>
+    {% endfor %}
+    <span><span class="grade grade-thin">n&lt;10</span> {{ "{:,}".format(g.get('thin', 0)) }} cells</span>
+  </div>
+  <p style="margin-top: var(--wa-space-m)">A cell is one plan in one county. Grades summarize
+  how usable the plan's published behavioral-health roster is in that county, from placeholder
+  contact data, stale attestation dates, shared-only phone numbers, address inflation, and
+  federal registry disagreements. Cells listing fewer than 10 providers are reported as a
+  roster fact instead of graded.</p>
+</section>
+
+<section>
+  <h2>What the files show</h2>
+  <ul style="max-width: 70ch">
+    <li>On average, plans' files attach {{ national.avg_ooa_pct }}% of their provider records
+    to plans whose CMS-filed service area contains none of the record's addresses, nor any
+    adjacent county. These listings cannot serve the plan's geography as published.</li>
+    <li>One issuer's current file carries placeholder phone 999999999 on 85% of records
+    while marking 90% of them as accepting new patients.</li>
+    <li>{{ "{:,}".format(national.deactivated) }} listed provider identifiers appear on the
+    federal registry's deactivated list; half were deactivated more than 20 months before
+    the file was fetched.</li>
+    <li>Several issuers' mandated files have not had a record attestation updated in over a
+    year, against a monthly-update requirement.</li>
+  </ul>
+  <p class="note">Every claim decomposes to evidence rows quoting the issuer's own published
+  file, with the snapshot hash and fetch headers attached.
+  See <a href="methodology/index.html">how scores are computed</a> and
+  <a href="data/index.html">the downloadable evidence</a>.</p>
+</section>
+
+<section>
+  <h2>Lowest-scoring issuers</h2>
+  <p>Behavioral-health scope, issuers with at least 50 scored plan-county cells,
+  averaged across cells. Lower is worse.</p>
+  <table>
+    <thead><tr><th>Issuer</th><th class="num">Scored cells</th>
+      <th class="num">Average score</th><th class="num">Out-of-area rate</th><th></th></tr></thead>
+    <tbody>
+    {% for iid, name, cells, avg, ooa, st in league %}
+      <tr>
+        <td><a href="issuers/{{ iid }}/index.html">{{ name }}</a>
+          <span class="meta">({{ st }})</span></td>
+        <td class="num">{{ "{:,}".format(cells) }}</td>
+        <td class="num">{{ avg }}</td>
+        <td class="num">{{ ooa }}%</td>
+        <td><a href="issuers/{{ iid }}/index.html">details</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Browse by state</h2>
+  <div class="link-grid">
+    {% for s in states %}
+    <a href="states/{{ s.code }}/index.html">{{ s.code }}
+      <span class="meta">{{ s.counties }} counties, {{ s.issuers }} issuers</span></a>
+    {% endfor %}
+  </div>
+  <p class="note caution" style="margin-top: var(--wa-space-l)">Coverage: federal marketplace
+  (HealthCare.gov) states only. State-based exchanges such as California and New York publish
+  separately and are not yet included.</p>
+</section>
+{% endblock %}

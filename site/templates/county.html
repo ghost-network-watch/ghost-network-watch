@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}{{ county.name }}, {{ county.state }} · {{ site_name }}{% endblock %}
+{% block content %}
+<section>
+  <h1>{{ county.name or county.fips }}, {{ county.state }}</h1>
+  <p class="lede">{{ county.plans | length }} marketplace plans. BH = the plan's
+  behavioral-health roster in this county; All = every provider type.</p>
+  <table style="margin-top: var(--wa-space-l)">
+    <thead><tr>
+      <th>Plan</th><th>Issuer</th><th>Metal</th>
+      <th>BH grade</th><th class="num">BH providers</th>
+      <th>All grade</th><th class="num">All providers</th>
+      <th class="num">Out-of-area</th>
+    </tr></thead>
+    <tbody>
+    {% for p in county.plans %}
+      <tr>
+        <td>{{ p.plan }}</td>
+        <td><a href="{{ depth }}issuers/{{ p.issuer_id }}/index.html">{{ p.issuer }}</a></td>
+        <td>{{ p.metal or '' }}</td>
+        <td>
+          {% if p.bh_thin %}
+            <span class="grade grade-thin" title="Fewer than 10 behavioral-health providers listed; reported as a roster fact, not graded.">n={{ p.bh_n }}</span>
+          {% elif p.bh_grade %}
+            <span class="grade grade-{{ p.bh_grade }}">{{ p.bh_grade }}</span>
+            {% if p.bh_low %}<span class="meta" title="10 to 29 roster records">low sample</span>{% endif %}
+          {% endif %}
+        </td>
+        <td class="num">{{ "{:,}".format(p.bh_n) if p.bh_n is not none else '' }}</td>
+        <td>{% if p.all_grade %}<span class="grade grade-{{ p.all_grade }}">{{ p.all_grade }}</span>{% endif %}</td>
+        <td class="num">{{ "{:,}".format(p.all_n) if p.all_n is not none else '' }}</td>
+        <td class="num">{{ p.ooa_pct }}%</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="note" style="margin-top: var(--wa-space-l)">A cell marked <span class="grade grade-thin">n=…</span>
+  means the plan's file lists fewer than 10 behavioral-health provider records with an address
+  in this county. That count is the finding. "Out-of-area" is the share of all records the
+  issuer attaches to the plan that have no address inside the plan's CMS-filed service area
+  or any adjacent county; those records never enter county rosters.</p>
+</section>
+{% endblock %}

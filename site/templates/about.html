@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}About · {{ site_name }}{% endblock %}
+{% block content %}
+<section>
+  <h1>About this project</h1>
+  <p class="lede">People choose health plans based on provider directories that are often
+  wrong. The proof sits in the insurers' own mandated files. This project reads those files
+  every month and publishes what they show.</p>
+
+  <h2>Why</h2>
+  <p>Secret-shopper studies have repeatedly found that most listed mental-health providers
+  in insurance directories cannot actually be seen: numbers do not answer, clinicians left
+  the network years ago, panels are closed. Federal law already requires every marketplace
+  insurer to publish its full directory as machine-readable data and update it monthly, and
+  CMS's own file reviews from 2017 to 2021 found 29 to 47 percent of files fully accurate.
+  Those reviews named no issuers, imposed no penalties, and were not continued.</p>
+  <p>Beginning in plan year 2029, CMS will publish directory accuracy scores for Medicare
+  Advantage plans under the REAL Health Providers Act. Marketplace enrollees get nothing
+  equivalent. This project fills that gap now: a continuous, public, evidence-backed audit
+  of every federal marketplace issuer's mandated directory file, with mental health first.</p>
+
+  <h2>Who</h2>
+  <p>Ghost Network Watch is built and operated by Soorena Sasani, a cloud solutions
+  architect, as an independent public-interest project. It is not affiliated with CMS, any
+  insurer, or any vendor, and takes no money from payers. The pipeline is open source and
+  every published number is reproducible from public data.</p>
+
+  <h2>Corrections</h2>
+  <p>Before anything is published, each issuer's technical contact on file with CMS receives
+  the complete machine-readable export of its flags. Disputes sent to
+  <a href="mailto:{{ contact }}">{{ contact }}</a> are published verbatim alongside the flags
+  they dispute. Flags cleared by a subsequent crawl are marked resolved with the date;
+  history is retained, not deleted.</p>
+
+  <h2>What this is not</h2>
+  <p>This site does not recommend plans. It does not measure care quality. It makes no claim
+  about any individual clinician. The phrase "ghost networks" names a documented research
+  topic. This site asserts what dated files show, and nothing beyond that.</p>
+</section>
+{% endblock %}

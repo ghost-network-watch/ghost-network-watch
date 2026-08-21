@@ -146,7 +146,7 @@ def build_scores(data_root: Path, snapshot: str) -> Path:
     # Roster: attached records placed in their plan's landscape counties.
     con.execute("""
         CREATE TEMP TABLE roster AS
-        SELECT c.scid_id, c.county, t.fid, t.record_idx,
+        SELECT c.scid_id, c.county, c.state, t.fid, t.record_idx,
                (b.record_idx IS NOT NULL) AS is_bh
         FROM cells c
         JOIN attach_c t USING (scid_id)

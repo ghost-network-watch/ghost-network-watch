@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ code }} · {{ site_name }}{% endblock %}
+{% block content %}
+<section>
+  <h1>{{ code }}: directory integrity by county</h1>
+  <p class="lede">{{ state.counties | length }} counties. Issuers operating here:
+  {{ state.issuers | join(', ') }}.</p>
+  <div class="link-grid" style="margin-top: var(--wa-space-xl)">
+    {% for c in state.counties %}
+    <a href="{{ depth }}counties/{{ c.fips }}/index.html">{{ c.name or c.fips }}
+      <span class="meta">{{ c.plans }} plans{% if worst_grade_name[c.worst] %},
+        worst {{ worst_grade_name[c.worst] }}{% endif %}{% if c.thin %},
+        {{ c.thin }} thin BH rosters{% endif %}</span></a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

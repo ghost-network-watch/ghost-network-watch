@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Data · {{ site_name }}{% endblock %}
+{% block content %}
+<section>
+  <h1>Open data</h1>
+  <p class="lede">Everything on this site, downloadable. Scores, roster facts, and the
+  evidence rows behind every flag.</p>
+  <p class="note">Provider details in evidence files are quoted from the insurer's published
+  directory file. No claim is made about the provider; listed clinicians are often unaware
+  of how they appear in payer directories.</p>
+  <table style="margin-top: var(--wa-space-l)">
+    <thead><tr><th>File</th><th>Contents</th><th class="num">Size</th></tr></thead>
+    <tbody>
+    {% for e in exports %}
+      <tr>
+        <td><a href="files/{{ e.file }}">{{ e.file }}</a></td>
+        <td>{{ e.note }}</td>
+        <td class="num">{{ e.mb }} MB</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <h2 style="margin-top: var(--wa-space-2xl)">Reproduce everything</h2>
+  <p>The full pipeline (crawler, parser, flag engine, scoring, this site) is open source.
+  The crawl seeds are CMS's own Machine-Readable URL PUF; the reference data is NPPES, the
+  NUCC taxonomy, and CMS's plan and service-area files. Column documentation lives in the
+  repository alongside the rule definitions, one rule version per evidence row.</p>
+  <p>License: scores and evidence exports are released under CC0. Source text quoted inside
+  evidence rows remains the issuer's published data, reproduced for accountability purposes
+  with provenance.</p>
+</section>
+{% endblock %}

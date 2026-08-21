@@ -1,0 +1,198 @@
+/* Ghost Network Watch brand layer. Loaded after the Web Awesome theme.
+   Token-only page styling; grade colors are semantic state, via WA pairs. */
+
+:root {
+  --gnw-max: 72rem;
+}
+
+body {
+  margin: 0;
+  background: var(--wa-color-surface-default);
+  color: var(--wa-color-text-normal);
+  font-family: var(--wa-font-family-body);
+  line-height: var(--wa-line-height-normal);
+}
+
+.wrap {
+  max-width: var(--gnw-max);
+  margin-inline: auto;
+  padding-inline: var(--wa-space-l);
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--wa-color-surface-border);
+  background: var(--wa-color-surface-default);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: baseline;
+  gap: var(--wa-space-l);
+  padding-block: var(--wa-space-m);
+  flex-wrap: wrap;
+}
+.wordmark {
+  font-weight: var(--wa-font-weight-bold);
+  font-size: var(--wa-font-size-l);
+  letter-spacing: -0.02em;
+  color: var(--wa-color-text-normal);
+  text-decoration: none;
+}
+.wordmark:hover { color: var(--wa-color-brand-on-quiet); }
+.site-nav { display: flex; gap: var(--wa-space-m); margin-left: auto; }
+.site-nav a {
+  color: var(--wa-color-text-quiet);
+  text-decoration: none;
+  font-size: var(--wa-font-size-s);
+}
+.site-nav a:hover { color: var(--wa-color-brand-on-quiet); text-decoration: underline; }
+.asof {
+  font-size: var(--wa-font-size-xs);
+  color: var(--wa-color-text-quiet);
+  border: 1px solid var(--wa-color-surface-border);
+  border-radius: var(--wa-border-radius-pill);
+  padding: 0 var(--wa-space-s);
+}
+
+/* Sections and headings */
+main { padding-block: var(--wa-space-2xl); }
+section + section { margin-top: var(--wa-space-2xl); }
+h1 {
+  font-family: var(--wa-font-family-heading);
+  font-size: clamp(var(--wa-font-size-2xl), 4.5vw, var(--wa-font-size-4xl));
+  line-height: var(--wa-line-height-condensed);
+  letter-spacing: -0.03em;
+  margin: 0 0 var(--wa-space-m);
+  max-width: 24ch;
+}
+h2 {
+  font-size: var(--wa-font-size-xl);
+  letter-spacing: -0.02em;
+  border-top: 2px solid var(--wa-color-text-normal);
+  padding-top: var(--wa-space-s);
+  margin: 0 0 var(--wa-space-m);
+}
+h3 { font-size: var(--wa-font-size-m); margin: var(--wa-space-l) 0 var(--wa-space-xs); }
+p { max-width: 65ch; }
+.lede { font-size: var(--wa-font-size-l); color: var(--wa-color-text-quiet); max-width: 46ch; }
+
+.cta-row { display: flex; gap: var(--wa-space-s); margin-top: var(--wa-space-l); flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: var(--wa-space-s) var(--wa-space-l);
+  border-radius: var(--wa-border-radius-m);
+  text-decoration: none;
+  font-weight: var(--wa-font-weight-semibold);
+  transition: background var(--wa-transition-fast) var(--wa-transition-easing);
+}
+.btn-primary { background: var(--wa-color-brand-fill-loud); color: var(--wa-color-brand-on-loud); }
+.btn-primary:hover { background: color-mix(in oklab, var(--wa-color-brand-fill-loud) 88%, black); }
+.btn-quiet { border: 1px solid var(--wa-color-surface-border); color: var(--wa-color-text-normal); }
+.btn-quiet:hover { background: var(--wa-color-surface-raised); }
+.btn:active { transform: translateY(1px); }
+.btn:focus-visible { outline: var(--wa-focus-ring); outline-offset: 2px; }
+
+/* Stat tiles */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--wa-space-l);
+  margin-top: var(--wa-space-xl);
+}
+.stat { border-top: 1px solid var(--wa-color-surface-border); padding-top: var(--wa-space-s); }
+.stat .num {
+  font-size: var(--wa-font-size-2xl);
+  font-weight: var(--wa-font-weight-bold);
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.stat .lbl { color: var(--wa-color-text-quiet); font-size: var(--wa-font-size-s); max-width: 22ch; }
+
+/* Grade chips: real semantic state, WA fill/on pairs kept together */
+.grade {
+  display: inline-block;
+  min-width: 1.6em;
+  text-align: center;
+  padding: 0 var(--wa-space-2xs);
+  border-radius: var(--wa-border-radius-s);
+  font-weight: var(--wa-font-weight-bold);
+  font-variant-numeric: tabular-nums;
+}
+.grade-A { background: var(--wa-color-success-fill-loud); color: var(--wa-color-success-on-loud); }
+.grade-B { background: var(--wa-color-success-fill-quiet); color: var(--wa-color-success-on-quiet); }
+.grade-C { background: var(--wa-color-warning-fill-quiet); color: var(--wa-color-warning-on-quiet); }
+.grade-D { background: var(--wa-color-warning-fill-loud); color: var(--wa-color-warning-on-loud); }
+.grade-F { background: var(--wa-color-danger-fill-loud); color: var(--wa-color-danger-on-loud); }
+.grade-thin {
+  border: 1px solid var(--wa-color-surface-border);
+  color: var(--wa-color-text-quiet);
+  font-weight: var(--wa-font-weight-normal);
+}
+
+/* Grade distribution bar */
+.dist { display: flex; height: var(--wa-space-l); border-radius: var(--wa-border-radius-s); overflow: hidden; margin-top: var(--wa-space-s); }
+.dist > div { min-width: 2px; }
+.dist-A { background: var(--wa-color-success-fill-loud); }
+.dist-B { background: color-mix(in oklab, var(--wa-color-success-fill-loud) 55%, var(--wa-color-surface-default)); }
+.dist-C { background: var(--wa-color-warning-fill-quiet); }
+.dist-D { background: var(--wa-color-warning-fill-loud); }
+.dist-F { background: var(--wa-color-danger-fill-loud); }
+.dist-thin { background: var(--wa-color-surface-border); }
+.dist-legend { display: flex; gap: var(--wa-space-m); flex-wrap: wrap; margin-top: var(--wa-space-xs); font-size: var(--wa-font-size-xs); color: var(--wa-color-text-quiet); }
+
+/* Tables */
+table { border-collapse: collapse; width: 100%; font-size: var(--wa-font-size-s); }
+th {
+  text-align: left;
+  font-size: var(--wa-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--wa-color-text-quiet);
+  border-bottom: 2px solid var(--wa-color-text-normal);
+  padding: var(--wa-space-2xs) var(--wa-space-s) var(--wa-space-2xs) 0;
+}
+td {
+  border-bottom: 1px solid var(--wa-color-surface-border);
+  padding: var(--wa-space-xs) var(--wa-space-s) var(--wa-space-xs) 0;
+  vertical-align: top;
+}
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr:hover td { background: var(--wa-color-surface-raised); }
+a { color: var(--wa-color-brand-on-quiet); }
+
+/* Link grids (states, counties) */
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: var(--wa-space-2xs) var(--wa-space-l);
+  margin-top: var(--wa-space-m);
+}
+.link-grid a { text-decoration: none; padding-block: var(--wa-space-3xs); }
+.link-grid a:hover { text-decoration: underline; }
+.link-grid .meta { color: var(--wa-color-text-quiet); font-size: var(--wa-font-size-xs); }
+
+/* Callouts */
+.note {
+  border-left: 3px solid var(--wa-color-brand-fill-loud);
+  background: var(--wa-color-surface-raised);
+  padding: var(--wa-space-m) var(--wa-space-l);
+  border-radius: var(--wa-border-radius-s);
+  max-width: 70ch;
+}
+.note.caution { border-left-color: var(--wa-color-warning-fill-loud); }
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--wa-color-surface-border);
+  margin-top: var(--wa-space-3xl);
+  padding-block: var(--wa-space-xl);
+  color: var(--wa-color-text-quiet);
+  font-size: var(--wa-font-size-s);
+}
+.site-footer p { max-width: 75ch; }
+
+@media (max-width: 768px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .site-nav { margin-left: 0; }
+  .link-grid { grid-template-columns: 1fr 1fr; }
+}

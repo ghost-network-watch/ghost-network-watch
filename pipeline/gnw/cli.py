@@ -92,6 +92,27 @@ def cmd_score(args) -> None:
     build_scores(DATA_ROOT, snapshot=args.snapshot)
 
 
+def cmd_site(args) -> None:
+    from .site import build_site
+
+    build_site(
+        DATA_ROOT,
+        snapshot=args.snapshot,
+        repo_root=REPO_ROOT,
+        out_dir=Path(args.out) if args.out else REPO_ROOT / "site" / "dist",
+        wa_kit=Path(args.wa_kit).expanduser(),
+    )
+
+
+def cmd_notify(args) -> None:
+    from .notify import build_notifications
+
+    build_notifications(
+        DATA_ROOT, snapshot=args.snapshot,
+        publish_date=args.publish_date, only_issuer=args.issuer,
+    )
+
+
 def cmd_flags(args) -> None:
     from .flags import FlagEngine
 
@@ -153,6 +174,19 @@ def main() -> None:
     p = sub.add_parser("score", help="aggregate evidence rows into plan-county scores")
     p.add_argument("--snapshot", required=True)
     p.set_defaults(func=cmd_score)
+
+    p = sub.add_parser("site", help="generate the static site + open data exports")
+    p.add_argument("--snapshot", required=True)
+    p.add_argument("--out", help="output dir (default site/dist)")
+    p.add_argument("--wa-kit", default="~/soorena.io/webawesome",
+                   help="path to a Web Awesome kit to copy (not committed)")
+    p.set_defaults(func=cmd_site)
+
+    p = sub.add_parser("notify", help="generate issuer pre-notification bundles (no sending)")
+    p.add_argument("--snapshot", required=True)
+    p.add_argument("--publish-date", required=True, help="planned publication date, YYYY-MM-DD")
+    p.add_argument("--issuer", help="single HIOS issuer id")
+    p.set_defaults(func=cmd_notify)
 
     p = sub.add_parser("flags", help="run rubric metrics -> evidence rows")
     p.add_argument("--snapshot", required=True)

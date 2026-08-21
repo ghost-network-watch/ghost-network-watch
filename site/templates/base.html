@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" class="wa-brand-blue wa-neutral-gray">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ site_name }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}Monthly integrity scores for every federal marketplace plan's mandated provider directory, computed from the insurers' own published files.{% endblock %}">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231e50a2'/%3E%3Cpath d='M11.5 5.5h-5v5h3v-2h2v4h-7v-9h7z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="{{ depth }}webawesome/styles/native.css">
+  <link rel="stylesheet" href="{{ depth }}webawesome/styles/utilities.css">
+  <link rel="stylesheet" href="{{ depth }}webawesome/styles/themes/default.css">
+  <link rel="stylesheet" href="{{ depth }}webawesome/styles/color/palettes/default.css">
+  <link rel="stylesheet" href="{{ depth }}brand.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="wordmark" href="{{ depth }}index.html">Ghost Network Watch</a>
+      <span class="asof">data as of {{ snapshot }}</span>
+      <nav class="site-nav">
+        <a href="{{ depth }}methodology/index.html">Methodology</a>
+        <a href="{{ depth }}data/index.html">Data</a>
+        <a href="{{ depth }}about/index.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      {% block content %}{% endblock %}
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>The Directory Integrity Score measures whether an issuer's federally mandated
+      machine-readable directory file is internally consistent, current, and usable as
+      published. It is computed entirely from the issuer's own published file and dated
+      federal registry snapshots. It is not a measure of care quality, of network adequacy,
+      or of any individual provider.</p>
+      <p>Corrections and questions: <a href="mailto:{{ contact }}">{{ contact }}</a>.
+      Issuers receive their complete flag exports before publication and responses are
+      published verbatim.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Methodology · {{ site_name }}{% endblock %}
+{% block content %}
+<section>
+  <h1>How the Directory Integrity Score works</h1>
+  <p class="lede">Every score is computed from the insurer's own federally mandated
+  machine-readable directory file and dated federal registry snapshots. No other inputs
+  are used.</p>
+
+  <h2>What we measure, and what we do not</h2>
+  <p>Federal rules (45 CFR 156.230(b), implemented through CMS's issuer letters) require
+  every marketplace insurer to publish its provider directory as machine-readable JSON at a
+  public URL and to update it no less than monthly. This project fetches those files every
+  month, archives them with cryptographic hashes, and checks whether the published data is
+  internally consistent, current, and usable. The score is not a measure of care quality,
+  network adequacy, or any individual provider. A flag asserts what a dated file shows,
+  never why.</p>
+
+  <h2>The ten checks</h2>
+  <h3>Feed level</h3>
+  <p><strong>Dead feed.</strong> The CMS-submitted URL cannot be retrieved. Plans are graded
+  X, unauditable: an F asserts bad content, an X asserts absent content.</p>
+  <p><strong>Access restricted.</strong> The file is served only to web-browser User-Agents.
+  Published as a transparency note; no score effect, because the content, once fetched,
+  is complete.</p>
+
+  <h3>Record level, from the file alone</h3>
+  <p><strong>Placeholder values.</strong> Phones like 999999999, zip 99999, street address
+  "null", attestation dates before 2014. Deterministic, and the strongest flag class: a
+  record with placeholder contact data is unusable exactly as published.</p>
+  <p><strong>Stale attestations.</strong> Records whose own last_updated_on is more than 180
+  days old (heavier at 365). One caveat is mandatory. In three quarters of files, every
+  record shares a single date, so the field behaves as a file-generation timestamp. An old
+  date shows real staleness. A fresh date shows only that the file was regenerated. We
+  present fresh dates as regeneration, never as verification.</p>
+  <p><strong>Single shared phone only.</strong> Every phone on the record is a number shared
+  with at least 50 records or 1% of the file. We attribute the number's owner where known
+  (a plan's own line is worse than a provider organization's central booking line) and check
+  NPPES for a diverging direct phone.</p>
+  <p><strong>Address inflation.</strong> Individual providers listed at more than 10 unique
+  addresses (organizations, 25), with exclusions for specialties that legitimately cover
+  many sites. The worst observed records list one clinician at hundreds of addresses.</p>
+  <p><strong>Out-of-area listings.</strong> Records attached to a plan with no address inside
+  the plan's CMS-filed service area, nor any adjacent county. These records inflate apparent
+  network size while being unable to serve the plan's geography as filed. They never enter
+  county rosters and are scored plan-wide.</p>
+  <p><strong>Accepting-patients field missing.</strong> Individual records leaving the
+  CMS-required accepting field blank or unknown. Facility and group records are exempt by
+  schema and never counted.</p>
+
+  <h3>Record level, against the federal registry</h3>
+  <p><strong>NPI registry status.</strong> Identifiers that are malformed, fail the checksum,
+  or appear on the NPPES Deactivated NPI Report while absent from the active registry file.
+  NPIs are deactivated for many reasons, including retirement, death, and entity changes.
+  The flag asserts only that a current directory entry carries an identifier the federal
+  registry has retired, as of a dated report.</p>
+  <p><strong>Specialty and taxonomy disagreement.</strong> The file lists the provider under a
+  behavioral-health specialty while the registry records only unrelated taxonomy groups.
+  One of the two databases is wrong about this provider's specialty. We do not know which
+  one. The flag states both facts.</p>
+
+  <h2>From flags to grades</h2>
+  <p>The scoring unit is one plan in one county. A record's flags combine sublinearly, so one
+  broken record is never counted four times. County-roster integrity carries 80% of the
+  score; plan-file hygiene, which carries the out-of-area rate, the remaining 20%.
+  Cross-database flags can deduct at most 20 points: registry disagreement is capped until
+  the correction channel has operated a full cycle, because the registry itself is
+  self-reported and lags. Bands: A 90 and up, B 80, C 70, D 55, F below 55. Bands are
+  ordinal transparency tiers, calibrated to nothing external in this version; a
+  recalibration against the observed distribution is planned and will be published with
+  before and after.</p>
+  <p>Cells with 10 to 29 roster records carry a low-sample badge. Cells with fewer than 10
+  behavioral-health records are not graded at all; the roster count itself is published as
+  the finding.</p>
+
+  <h2>Evidence strength, on every flag</h2>
+  <p><strong>E1</strong> reproducible from the issuer's archived bytes alone.
+  <strong>E2</strong> same evidence, but through a chosen threshold; the thresholds and the
+  flag rates at alternate thresholds are published. <strong>E3</strong> a dated disagreement
+  between the file and a federal registry snapshot; either database could be the stale one,
+  and the flag always carries the registry date and the innocent-causes note.</p>
+
+  <h2>Known biases we publish</h2>
+  <p>Attestation bulk-stamping means freshness is never exculpatory. Fields that are absent
+  on facility and group records by schema are never counted as defects. One hosting platform
+  serves many issuers, so a platform bug correlates scores across issuers; issuer pages
+  disclose their hosting. The registry is not ground truth, which is exactly why
+  cross-database deductions are capped.</p>
+
+  <h2>Process guarantees</h2>
+  <p>Versioned methodology and rule versions on every evidence row. Every fetched file is
+  archived with URL, timestamp, response headers, and SHA-256; claims cite the snapshot, not
+  the live URL. Issuers' CMS-listed technical contacts receive their complete machine-readable
+  flag export at least 14 days before first publication. Disputes are published verbatim next
+  to the flags they dispute; flags cleared by a later crawl are marked resolved with a date,
+  and history is retained. Crawls run monthly, aligned to registry releases; pages older than
+  60 days badge themselves as awaiting re-crawl.</p>
+</section>
+{% endblock %}
