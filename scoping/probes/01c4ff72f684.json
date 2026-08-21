@@ -1,0 +1,265 @@
+{
+ "index_url": "https://dentaquest.com/getattachment/Marketplace/CMSDataIndex/cms-data-index.json",
+ "states": [
+  "AZ",
+  "FL",
+  "IN",
+  "LA",
+  "MO",
+  "OH",
+  "TN",
+  "TX"
+ ],
+ "issuer_ids": [
+  "12303",
+  "59667",
+  "43433",
+  "11904",
+  "58883",
+  "34964",
+  "43878",
+  "58609"
+ ],
+ "provider_urls_count": 2,
+ "plan_urls_count": 2,
+ "files": [
+  {
+   "url": "https://www.dentaquest.com/content/dam/dentaquest/en/cms/DQ-providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 8413,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "facility_name": 526,
+     "facility_type": 526,
+     "name": 474,
+     "specialty": 474,
+     "accepting": 474,
+     "languages": 474
+    },
+    "type_dist": {
+     "FACILITY": 526,
+     "INDIVIDUAL": 474
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 10,
+    "top_specialties": [
+     [
+      "General Practitioner",
+      400
+     ],
+     [
+      "Pediatric Dentist",
+      39
+     ],
+     [
+      "Orthodontist",
+      15
+     ],
+     [
+      "Oral Surgeon",
+      10
+     ],
+     [
+      "GP with Endodontics focus",
+      10
+     ],
+     [
+      "Endodontist",
+      6
+     ],
+     [
+      "GP with Pediatric Dentistry focus",
+      4
+     ],
+     [
+      "GP with Public Health focus",
+      3
+     ],
+     [
+      "Periodontist",
+      2
+     ],
+     [
+      "Prosthodontist",
+      1
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 526,
+     "accepting": 450,
+     "not accepting": 24
+    },
+    "last_updated_min": "2025-10-10",
+    "last_updated_max": "2025-10-10",
+    "last_updated_years": {
+     "2025": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "8889884066",
+      37
+     ],
+     [
+      "7733843500",
+      9
+     ],
+     [
+      "3052323737",
+      6
+     ],
+     [
+      "8325485000",
+      5
+     ],
+     [
+      "2143174039",
+      5
+     ],
+     [
+      "3053306359",
+      4
+     ],
+     [
+      "2485282116",
+      4
+     ],
+     [
+      "4808578270",
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.dentaquest.com/content/dam/dentaquest/en/cms/DQ-providers-2025.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 8696,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "facility_name": 509,
+     "facility_type": 509,
+     "name": 491,
+     "specialty": 491,
+     "accepting": 491,
+     "languages": 491
+    },
+    "type_dist": {
+     "FACILITY": 509,
+     "INDIVIDUAL": 491
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 10,
+    "top_specialties": [
+     [
+      "General Practitioner",
+      394
+     ],
+     [
+      "Pediatric Dentist",
+      39
+     ],
+     [
+      "Oral Surgeon",
+      20
+     ],
+     [
+      "Orthodontist",
+      19
+     ],
+     [
+      "Periodontist",
+      13
+     ],
+     [
+      "GP with Endodontics focus",
+      10
+     ],
+     [
+      "Endodontist",
+      6
+     ],
+     [
+      "GP with Pediatric Dentistry focus",
+      4
+     ],
+     [
+      "GP with Public Health focus",
+      2
+     ],
+     [
+      "Prosthodontist",
+      1
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 509,
+     "accepting": 468,
+     "not accepting": 23
+    },
+    "last_updated_min": "2025-08-20",
+    "last_updated_max": "2025-08-20",
+    "last_updated_years": {
+     "2025": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "8889884066",
+      37
+     ],
+     [
+      "7733843500",
+      9
+     ],
+     [
+      "3052323737",
+      6
+     ],
+     [
+      "8325485000",
+      5
+     ],
+     [
+      "2143174039",
+      5
+     ],
+     [
+      "3053306359",
+      4
+     ],
+     [
+      "2813586200",
+      4
+     ],
+     [
+      "7136498590",
+      4
+     ]
+    ]
+   }
+  }
+ ]
+}

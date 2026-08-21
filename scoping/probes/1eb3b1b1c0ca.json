@@ -1,0 +1,241 @@
+{
+ "index_url": "https://www.bcbsfl.com/DocumentLibrary/Providers/cms/index.json",
+ "states": [
+  "FL"
+ ],
+ "issuer_ids": [
+  "16842",
+  "30252"
+ ],
+ "provider_urls_count": 52,
+ "plan_urls_count": 3,
+ "files": [
+  {
+   "url": "http://www.bcbsfl.com/DocumentLibrary/Providers/cms/OPD_Providers_01.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 183,
+    "analyzed": 183,
+    "field_presence": {
+     "npi": 183,
+     "type": 183,
+     "name": 183,
+     "addresses": 183,
+     "specialty": 183,
+     "accepting": 183,
+     "plans": 183,
+     "last_updated_on": 183
+    },
+    "type_dist": {
+     "INDIVIDUAL": 183
+    },
+    "npi_present": 183,
+    "npi_luhn_valid": 183,
+    "bh_matches": 8,
+    "unique_specialties": 30,
+    "top_specialties": [
+     [
+      "OPHTHALMOLOGY",
+      18
+     ],
+     [
+      "INTERNAL MEDICINE",
+      17
+     ],
+     [
+      "INTERVENTIONAL CARDIOLOGY",
+      13
+     ],
+     [
+      "DERMATOLOGY",
+      12
+     ],
+     [
+      "PEDIATRICS",
+      11
+     ],
+     [
+      "CARDIOVASCULAR DISEASE",
+      11
+     ],
+     [
+      "FAMILY MEDICINE",
+      11
+     ],
+     [
+      "PSYCHIATRY",
+      8
+     ],
+     [
+      "OPTOMETRIST",
+      8
+     ],
+     [
+      "OBSTETRICS & GYNECOLOGY",
+      7
+     ],
+     [
+      "ORTHOPAEDIC SURGERY",
+      7
+     ],
+     [
+      "OTOLARYNGOLOGY",
+      5
+     ],
+     [
+      "CHIROPRACTOR",
+      5
+     ],
+     [
+      "CLINICAL",
+      5
+     ],
+     [
+      "SURGERY",
+      5
+     ],
+     [
+      "UROLOGY",
+      4
+     ],
+     [
+      "PULMONARY DISEASE",
+      4
+     ],
+     [
+      "PEDIATRIC GASTROENTEROLOGY",
+      4
+     ],
+     [
+      "VASCULAR SURGERY",
+      4
+     ],
+     [
+      "PHYSICAL MEDICINE & REHABILITATION",
+      4
+     ]
+    ],
+    "bh_specialty_values": [
+     "PSYCHIATRY"
+    ],
+    "accepting_values": {
+     "accepting in some locations": 36,
+     "accepting": 96,
+     "not accepting": 51
+    },
+    "last_updated_min": "2026-08-18",
+    "last_updated_max": "2026-08-18",
+    "last_updated_years": {
+     "2026": 183
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "8133211786",
+      4
+     ],
+     [
+      "9549619993",
+      3
+     ],
+     [
+      "8138218038",
+      3
+     ],
+     [
+      "5612264922",
+      3
+     ],
+     [
+      "5613223588",
+      3
+     ],
+     [
+      "3054422020",
+      3
+     ],
+     [
+      "2396244200",
+      3
+     ],
+     [
+      "5614967900",
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "url": "http://www.bcbsfl.com/DocumentLibrary/Providers/cms/OPD_Providers_27.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 150,
+    "analyzed": 150,
+    "field_presence": {
+     "npi": 150,
+     "type": 150,
+     "group_name": 150,
+     "addresses": 150,
+     "plans": 150,
+     "last_updated_on": 150
+    },
+    "type_dist": {
+     "GROUP": 150
+    },
+    "npi_present": 150,
+    "npi_luhn_valid": 150,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 150
+    },
+    "last_updated_min": "2026-08-18",
+    "last_updated_max": "2026-08-18",
+    "last_updated_years": {
+     "2026": 150
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "3052435302",
+      5
+     ],
+     [
+      "3052434598",
+      5
+     ],
+     [
+      "3053555000",
+      5
+     ],
+     [
+      "3056898648",
+      5
+     ],
+     [
+      "3052433000",
+      4
+     ],
+     [
+      "3055857456",
+      3
+     ],
+     [
+      "3055855610",
+      3
+     ],
+     [
+      "3055856000",
+      3
+     ]
+    ]
+   }
+  }
+ ]
+}

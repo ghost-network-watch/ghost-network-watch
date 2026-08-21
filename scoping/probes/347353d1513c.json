@@ -1,0 +1,172 @@
+{
+ "index_url": "https://apis.humana.com/v1/cms/index.json",
+ "states": [
+  "AL",
+  "AZ",
+  "FL",
+  "HI",
+  "IN",
+  "LA",
+  "MI",
+  "MO",
+  "MS",
+  "NC",
+  "OH",
+  "OK",
+  "TN",
+  "TX",
+  "UT",
+  "WI"
+ ],
+ "issuer_ids": [
+  "44580",
+  "66105",
+  "15980",
+  "31358",
+  "99791",
+  "44965",
+  "62294",
+  "30613",
+  "48963",
+  "32237",
+  "97596",
+  "23468",
+  "82120",
+  "63141",
+  "46958",
+  "91604"
+ ],
+ "provider_urls_count": 2995,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://apis.humana.com/v1/cms/pharma_providers-0.json",
+   "http_code": 200,
+   "fetched_chars": 1116025,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 399,
+    "analyzed": 399,
+    "field_presence": {
+     "npi": 399,
+     "type": 399,
+     "addresses": 399,
+     "plans": 399,
+     "last_updated_on": 399,
+     "facility_name": 399,
+     "facility_type": 399
+    },
+    "type_dist": {
+     "FACILITY": 399
+    },
+    "npi_present": 399,
+    "npi_luhn_valid": 399,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 399
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 399
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": []
+   }
+  },
+  {
+   "url": "https://apis.humana.com/v1/cms/providers-1397.json",
+   "http_code": 200,
+   "fetched_chars": 142864,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 22,
+    "analyzed": 22,
+    "field_presence": {
+     "npi": 22,
+     "type": 22,
+     "name": 22,
+     "addresses": 22,
+     "specialty": 22,
+     "accepting": 22,
+     "gender": 22,
+     "plans": 22,
+     "last_updated_on": 22,
+     "languages": 17
+    },
+    "type_dist": {
+     "INDIVIDUAL": 22
+    },
+    "npi_present": 22,
+    "npi_luhn_valid": 22,
+    "bh_matches": 0,
+    "unique_specialties": 4,
+    "top_specialties": [
+     [
+      "Dentist - General Practice",
+      21
+     ],
+     [
+      "Dentistry - Endodontics",
+      1
+     ],
+     [
+      "Dentist - Orthodontics And Dentofacial Orthopedics",
+      1
+     ],
+     [
+      "Dentistry - Periodontics",
+      1
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 22
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 22
+    },
+    "max_addresses_per_provider": 52,
+    "top_dup_phones": [
+     [
+      "2126863686",
+      4
+     ],
+     [
+      "6035955400",
+      3
+     ],
+     [
+      "2535374011",
+      3
+     ],
+     [
+      "8453572599",
+      2
+     ],
+     [
+      "6235360900",
+      2
+     ],
+     [
+      "6022697797",
+      2
+     ],
+     [
+      "6022771088",
+      2
+     ],
+     [
+      "6028631913",
+      2
+     ]
+    ]
+   }
+  }
+ ]
+}

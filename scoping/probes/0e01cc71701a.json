@@ -1,0 +1,190 @@
+{
+ "index_url": "https://www.bcbsm.com/amslibs/content/dam/public/marketplace/individual/json/bcn/index.json",
+ "states": [
+  "MI"
+ ],
+ "issuer_ids": [
+  "98185"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://cmsdocs.bcbsm.com/json/bcn/BCN_PROVIDERS_CURRYR.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3840,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "gender": 1000,
+     "languages": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 369,
+    "unique_specialties": 106,
+    "top_specialties": [
+     [
+      "CLINICAL LICENSED MASTERS SOCIAL WORKER",
+      146
+     ],
+     [
+      "PHYSICIAN ASSISTANT",
+      79
+     ],
+     [
+      "INTERNAL MEDICINE",
+      79
+     ],
+     [
+      "LICENSED PROFESSIONAL COUNSELOR",
+      64
+     ],
+     [
+      "FAMILY NURSE PRACTITIONER",
+      54
+     ],
+     [
+      "FAMILY PRACTICE",
+      52
+     ],
+     [
+      "BOARD CERTIFIED BEHAVIOR ANALYST",
+      36
+     ],
+     [
+      "INDEPENDENT PHYSICAL THERAPIST",
+      34
+     ],
+     [
+      "PEDIATRICS",
+      31
+     ],
+     [
+      "DIAGNOSTIC RADIOLOGY",
+      27
+     ],
+     [
+      "GERIATRIC NURSE PRACTITIONER",
+      27
+     ],
+     [
+      "CERTIFIED RN ANESTHETIST",
+      25
+     ],
+     [
+      "EMERGENCY MEDICINE",
+      21
+     ],
+     [
+      "CERTIFIED NURSE MIDWIFE",
+      20
+     ],
+     [
+      "LIMITED LICENSED PSYCHOLOGIST",
+      19
+     ],
+     [
+      "NEUROLOGY",
+      17
+     ],
+     [
+      "OPTOMETRIST",
+      17
+     ],
+     [
+      "PSYCHOLOGIST",
+      16
+     ],
+     [
+      "ORTHOPEDIC SURGERY",
+      15
+     ],
+     [
+      "OBSTETRICS AND GYNECOLOGY - OB/GYN",
+      14
+     ]
+    ],
+    "bh_specialty_values": [
+     "CLINICAL LICENSED MASTERS SOCIAL WORKER",
+     "LICENSED PROFESSIONAL COUNSELOR",
+     "BOARD CERTIFIED BEHAVIOR ANALYST",
+     "INDEPENDENT PHYSICAL THERAPIST",
+     "LIMITED LICENSED PSYCHOLOGIST",
+     "PSYCHOLOGIST",
+     "PSYCHIATRY",
+     "SPEECH THERAPY",
+     "OCCUPATIONAL THERAPIST",
+     "ADULT PSYCHIATRIC MENTAL HEALTH NURSING",
+     "LICENSED MARRIAGE AND FAMILY THERAPIST",
+     "NEUROLOGY AND PSYCHIATRY",
+     "CHILD/ADOLESCENT PSYCHIATRIC MENTAL HEALTH NURSING",
+     "GENETIC COUNSELOR",
+     "RADIATION THERAPY",
+     "GERIATRIC PSYCHIATRY",
+     "ADDICTION PSYCHIATRY",
+     "ADDICTION MEDICINE",
+     "CHILD/ADOLESCENT PSYCHIATRY"
+    ],
+    "accepting_values": {
+     "not accepting": 47,
+     "accepting": 953
+    },
+    "last_updated_min": "2025-11-15",
+    "last_updated_max": "2026-08-01",
+    "last_updated_years": {
+     "2026": 995,
+     "2025": 5
+    },
+    "max_addresses_per_provider": 24,
+    "top_dup_phones": [
+     [
+      "6469417645",
+      33
+     ],
+     [
+      "8006536568",
+      18
+     ],
+     [
+      "9898393060",
+      16
+     ],
+     [
+      "8006931916",
+      15
+     ],
+     [
+      "6163637272",
+      15
+     ],
+     [
+      "2486601220",
+      14
+     ],
+     [
+      "7349364054",
+      14
+     ],
+     [
+      "7349364000",
+      11
+     ]
+    ]
+   }
+  }
+ ]
+}

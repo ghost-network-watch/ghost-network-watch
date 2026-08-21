@@ -1,0 +1,62 @@
+{
+ "per_window": {
+  "head": {
+   "n": 2735,
+   "phone999": 2292,
+   "addr_null": 2290,
+   "state_UN": 2290,
+   "zip99999": 2290,
+   "lu1900": 2735,
+   "accepting_yes": 2453
+  },
+  "mid": {
+   "n": 2733,
+   "phone999": 2350,
+   "addr_null": 2346,
+   "state_UN": 2346,
+   "zip99999": 2346,
+   "lu1900": 2733,
+   "accepting_yes": 2490
+  },
+  "tail": {
+   "n": 2735,
+   "phone999": 2301,
+   "addr_null": 2298,
+   "state_UN": 2298,
+   "zip99999": 2298,
+   "lu1900": 2735,
+   "accepting_yes": 2410
+  }
+ },
+ "combined": {
+  "n": 8203,
+  "phone999": 6943,
+  "addr_null": 6934,
+  "state_UN": 6934,
+  "zip99999": 6934,
+  "lu1900": 8203,
+  "accepting_yes": 7353
+ },
+ "bh_n": 524,
+ "bh_ph": 500,
+ "npi_duplication_per_window": {
+  "head": {
+   "records": 2735,
+   "unique_npis": 1808,
+   "npis_with_multiple_records": 397,
+   "max_repeats": 19
+  },
+  "mid": {
+   "records": 2733,
+   "unique_npis": 1700,
+   "npis_with_multiple_records": 395,
+   "max_repeats": 20
+  },
+  "tail": {
+   "records": 2735,
+   "unique_npis": 1730,
+   "npis_with_multiple_records": 406,
+   "max_repeats": 16
+  }
+ }
+}

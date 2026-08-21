@@ -1,0 +1,93 @@
+{
+ "index_url": "https://rmm.mhc.coop/plans_providers/32225_MT_Index_2026.json",
+ "states": [
+  "MT"
+ ],
+ "issuer_ids": [
+  "32225"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://rmm.mhc.coop/plans_providers/32225_MT_Provider_2026.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1503,
+    "analyzed": 1000,
+    "field_presence": {
+     "type": 1000,
+     "name": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "languages": 1000,
+     "sex": 1000,
+     "npi": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 1,
+    "top_specialties": [
+     [
+      "",
+      1000
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 986,
+     "not accepting": 14
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 25,
+    "top_dup_phones": [
+     [
+      "4062382500",
+      79
+     ],
+     [
+      "4066654103",
+      75
+     ],
+     [
+      "8775221275",
+      35
+     ],
+     [
+      "4062578992",
+      32
+     ],
+     [
+      "4062584789",
+      21
+     ],
+     [
+      "4064574180",
+      19
+     ],
+     [
+      "4068748700",
+      18
+     ],
+     [
+      "4062936594",
+      17
+     ]
+    ]
+   }
+  }
+ ]
+}

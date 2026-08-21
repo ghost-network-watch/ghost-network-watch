@@ -1,0 +1,694 @@
+{
+  "title": "Ghost Network Watch - staleness exhibit: QHP machine-readable provider files whose newest record attestation (last_updated_on) is more than 6 months old",
+  "generated_at": "2026-08-21T01:09:02-04:00",
+  "as_of_date": "2026-08-21",
+  "staleness_cutoff": "2026-02-21",
+  "method": "Parsed 108 per-index probe reports (1-2 provider files sampled per index, Range-limited). An index is flagged stale when the NEWEST last_updated_on across all its sampled files predates the cutoff. For the 10 worst indexes, fresh HTTP HEAD (or 1-byte Range GET fallback) requests were made on 2026-08-21 with a browser User-Agent to record Last-Modified/ETag as independent corroboration.",
+  "counts": {
+    "indexes_probed": 108,
+    "stale_indexes": 15,
+    "stale_sampled_files": 24,
+    "note": "The earlier scoping figure of 24 refers to stale sampled FILES; those collapse to 15 stale INDEXES."
+  },
+  "cms_requirement": {
+    "claim": "QHP issuers in the FFMs must publish provider directory data in machine-readable format and update it no less than monthly.",
+    "regulatory_basis": "45 CFR 156.230(b): QHP issuer 'must publish an up-to-date, accurate, and complete provider directory'; 156.230(c): FFE issuers must make directory information available in an HHS-specified format (verified via law.cornell.edu/cfr/text/45/156.230, fetched 2026-08-21).",
+    "guidance_quote_1": "HHS has required that issuers in the FFMs submit the information in a machine readable format, and update it no less than monthly.",
+    "guidance_quote_2": "QHP issuers in an FFM must submit data in a manner that complies with the data requirements and specifications in the Information Collection for Machine Readable Data for Provider Network and Prescription Formulary Content for FFM QHPs (CMS-10558), update this information not less than monthly, and submit the machine readable link at: https://marketplace.cms.gov/submission/.",
+    "guidance_source": "Final 2017 Letter to Issuers in the Federally-facilitated Marketplaces, CMS/CCIIO, Feb 29, 2016, Chapter 3 (Decision Support Tools), Section 1. PDF: https://www.cms.gov/CCIIO/Resources/Regulations-and-Guidance/Downloads/Final-2017-Letter-to-Issuers-2-29-16.pdf (downloaded and text-verified 2026-08-21).",
+    "caveat": "CMS discontinued annual Letters to Issuers after 2018; the monthly-update cadence for CMS-10558 machine-readable data remains the operative published guidance and is reflected in QHP certification instructions (qhpcertification.cms.gov, JS-only site, not directly fetchable)."
+  },
+  "framing_note": "All statements describe what the payer's own published files and HTTP response headers show. No claim is made about provider legitimacy or issuer intent.",
+  "stale_indexes": [
+    {
+      "rank": 1,
+      "index_url": "https://www.aspirushealthplan.com/group-individual/files/json/index.json",
+      "states": [
+        "WI"
+      ],
+      "issuer_ids": [
+        "86584"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 1,
+      "newest_sampled_last_updated_on": "2024-06-05",
+      "days_since_newest_attestation": 807,
+      "fresh_header_check": true,
+      "sampled_files": [
+        {
+          "file_url": "https://www.aspirushealthplan.com/group-individual/files/json/providers-ASPIRUSSIGN.json",
+          "probe_http_code": 206,
+          "records_sampled": 1500,
+          "last_updated_on_min": "1990-01-01",
+          "last_updated_on_max": "2024-06-05",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Fri, 10 Oct 2025 14:14:41 GMT",
+            "etag": "\"96ee6638f039dc1:0\"",
+            "content_length": "88012583",
+            "server": "Host",
+            "fetched_at": "2026-08-21T01:01:30-0400"
+          },
+          "classification": "file-abandoned (HTTP Last-Modified itself >6 months old)",
+          "anomaly_note": "Records carry placeholder attestation dates as old as 1990-01-01."
+        }
+      ],
+      "note": "Newest record attestation 2024-06-05 (oldest 1990-01-01, a placeholder); file Last-Modified 2025-10-10, >10 months old. Both signals independently exceed the 6-month cutoff."
+    },
+    {
+      "rank": 2,
+      "index_url": "https://chppayment.christushealth.org/workfiles/json/index.json",
+      "states": [
+        "LA",
+        "TX"
+      ],
+      "issuer_ids": [
+        "98780",
+        "66252"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 7,
+      "newest_sampled_last_updated_on": "2024-08-09",
+      "days_since_newest_attestation": 742,
+      "fresh_header_check": true,
+      "sampled_files": [
+        {
+          "file_url": "https://chppayment.christushealth.org/workfiles/json/HSP_PROVIDER.json",
+          "probe_http_code": 206,
+          "records_sampled": 2188,
+          "last_updated_on_min": "1900-01-01",
+          "last_updated_on_max": "1900-01-01",
+          "fresh_check_2026_08_21": {
+            "method": "GET bytes=0-99 (no Accept header; HEAD returns 406)",
+            "http_code": 206,
+            "last_modified": "Wed, 22 Oct 2025 11:26:01 GMT",
+            "etag": "\"cc2588a54643dc1:0\"",
+            "content_length": "108237264",
+            "server": "Microsoft-IIS/10.0",
+            "fetched_at": "2026-08-21T05:02:26+0000"
+          },
+          "classification": "file-abandoned (HTTP Last-Modified itself >6 months old)",
+          "anomaly_note": "Records carry placeholder attestation dates as old as 1900-01-01."
+        },
+        {
+          "file_url": "https://chppayment.christushealth.org/workfiles/json/hcrprovider3.json",
+          "probe_http_code": 206,
+          "records_sampled": 654,
+          "last_updated_on_min": "2024-08-09",
+          "last_updated_on_max": "2024-08-09",
+          "fresh_check_2026_08_21": {
+            "method": "GET bytes=0-99 (no Accept header; HEAD returns 406)",
+            "http_code": 206,
+            "last_modified": "Fri, 16 Aug 2024 02:47:47 GMT",
+            "etag": "\"92d54ead86efda1:0\"",
+            "content_length": "203765984",
+            "server": "Microsoft-IIS/10.0",
+            "fetched_at": "2026-08-21T05:02:24+0000"
+          },
+          "classification": "file-abandoned (HTTP Last-Modified itself >6 months old)"
+        }
+      ],
+      "note": "hcrprovider3.json: Last-Modified 2024-08-16, ~2 years old. HSP_PROVIDER.json: file regenerated 2025-10-22 but every sampled record carries the placeholder attestation date 1900-01-01."
+    },
+    {
+      "rank": 3,
+      "index_url": "https://healthy.kaiserpermanente.org/content/dam/kporg/data/hi/cms-data-index.json",
+      "states": [
+        "HI"
+      ],
+      "issuer_ids": [
+        "60612"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 1,
+      "newest_sampled_last_updated_on": "2025-08-05",
+      "days_since_newest_attestation": 381,
+      "fresh_header_check": true,
+      "sampled_files": [
+        {
+          "file_url": "https://healthy.kaiserpermanente.org/content/dam/kporg/data/hi/providers.json",
+          "probe_http_code": 206,
+          "records_sampled": 802,
+          "last_updated_on_min": "2025-08-05",
+          "last_updated_on_max": "2025-08-05",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Wed, 19 Aug 2026 06:51:36 GMT",
+            "etag": null,
+            "content_length": null,
+            "server": "Apache",
+            "fetched_at": "2026-08-21T01:01:39-0400"
+          },
+          "classification": "regenerated-not-reattested (fresh HTTP Last-Modified, but newest record last_updated_on >6 months old)"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "index_url": "https://public-cdn.wellmark.com/json/WSD/index.json",
+      "states": [
+        "SD"
+      ],
+      "issuer_ids": [
+        "50305"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 1,
+      "newest_sampled_last_updated_on": "2025-09-15",
+      "days_since_newest_attestation": 340,
+      "fresh_header_check": true,
+      "sampled_files": [
+        {
+          "file_url": "https://public-cdn.wellmark.com/json/WSD/providers.json",
+          "probe_http_code": 206,
+          "records_sampled": 3912,
+          "last_updated_on_min": "2025-09-15",
+          "last_updated_on_max": "2025-09-15",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Fri, 12 Jun 2026 19:52:28 GMT",
+            "etag": "\"7a2fc4aa8a810331f26d74f91fc91451-3\"",
+            "content_length": "19496159",
+            "server": "AmazonS3",
+            "fetched_at": "2026-08-21T01:01:42-0400"
+          },
+          "classification": "regenerated-not-reattested (fresh HTTP Last-Modified, but newest record last_updated_on >6 months old)"
+        }
+      ],
+      "note": "Wellmark serves 403 to non-browser User-Agents; fresh check used browser UA. Last-Modified 2026-06-12 is ~70 days old, itself exceeding the monthly cadence, while record attestations are from 2025-09-15."
+    },
+    {
+      "rank": 5,
+      "index_url": "https://portal.insuringsmiles.com/machinereadablefiles/cms/cms-data-index.json",
+      "states": [
+        "IN",
+        "MI",
+        "OH"
+      ],
+      "issuer_ids": [
+        "33086",
+        "95233",
+        "25945"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 1,
+      "newest_sampled_last_updated_on": "2025-09-16",
+      "days_since_newest_attestation": 339,
+      "fresh_header_check": true,
+      "sampled_files": [
+        {
+          "file_url": "https://portal.insuringsmiles.com/machinereadablefiles/CMS/providers.json",
+          "probe_http_code": 206,
+          "records_sampled": 4608,
+          "last_updated_on_min": "2025-09-16",
+          "last_updated_on_max": "2025-09-16",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Tue, 18 Aug 2026 23:42:26 GMT",
+            "etag": "\"0dd47396b2fdd1:0\"",
+            "content_length": "179220747",
+            "server": null,
+            "fetched_at": "2026-08-21T01:01:46-0400"
+          },
+          "classification": "regenerated-not-reattested (fresh HTTP Last-Modified, but newest record last_updated_on >6 months old)"
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "index_url": "https://healthy.kaiserpermanente.org/content/dam/kporg/data/or/cms-data-index.json",
+      "states": [
+        "OR"
+      ],
+      "issuer_ids": [
+        "71287"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 1,
+      "newest_sampled_last_updated_on": "2025-09-29",
+      "days_since_newest_attestation": 326,
+      "fresh_header_check": true,
+      "sampled_files": [
+        {
+          "file_url": "https://healthy.kaiserpermanente.org/content/dam/kporg/data/or/providers.json",
+          "probe_http_code": 206,
+          "records_sampled": 1956,
+          "last_updated_on_min": "2025-09-29",
+          "last_updated_on_max": "2025-09-29",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Wed, 19 Aug 2026 12:52:01 GMT",
+            "etag": null,
+            "content_length": null,
+            "server": "Apache",
+            "fetched_at": "2026-08-21T01:01:49-0400"
+          },
+          "classification": "regenerated-not-reattested (fresh HTTP Last-Modified, but newest record last_updated_on >6 months old)"
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "index_url": "https://dentaquest.com/getattachment/Marketplace/CMSDataIndex/cms-data-index.json",
+      "states": [
+        "AZ",
+        "FL",
+        "IN",
+        "LA",
+        "MO",
+        "OH",
+        "TN",
+        "TX"
+      ],
+      "issuer_ids": [
+        "12303",
+        "59667",
+        "43433",
+        "11904",
+        "58883",
+        "34964",
+        "43878",
+        "58609"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 2,
+      "newest_sampled_last_updated_on": "2025-10-10",
+      "days_since_newest_attestation": 315,
+      "fresh_header_check": true,
+      "sampled_files": [
+        {
+          "file_url": "https://www.dentaquest.com/content/dam/dentaquest/en/cms/DQ-providers.json",
+          "probe_http_code": 206,
+          "records_sampled": 8413,
+          "last_updated_on_min": "2025-10-10",
+          "last_updated_on_max": "2025-10-10",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Fri, 10 Oct 2025 21:11:40 GMT",
+            "etag": "\"0x8DE08419B606632\"",
+            "content_length": "13770956",
+            "server": null,
+            "fetched_at": "2026-08-21T01:01:52-0400"
+          },
+          "classification": "file-abandoned (HTTP Last-Modified itself >6 months old)"
+        },
+        {
+          "file_url": "https://www.dentaquest.com/content/dam/dentaquest/en/cms/DQ-providers-2025.json",
+          "probe_http_code": 206,
+          "records_sampled": 8696,
+          "last_updated_on_min": "2025-08-20",
+          "last_updated_on_max": "2025-08-20",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Fri, 19 Sep 2025 21:36:06 GMT",
+            "etag": "\"0x8DDF7C48AAAAB76\"",
+            "content_length": "13711799",
+            "server": null,
+            "fetched_at": "2026-08-21T01:01:54-0400"
+          },
+          "classification": "file-abandoned (HTTP Last-Modified itself >6 months old)"
+        }
+      ],
+      "note": "DQ-providers.json Last-Modified (2025-10-10) equals the newest record attestation date, consistent with the file being generated once on 2025-10-10 and not modified since."
+    },
+    {
+      "rank": 8,
+      "index_url": "https://api.antidotehealth.ai/antidote-index-oh-2026.json",
+      "states": [
+        "OH"
+      ],
+      "issuer_ids": [
+        "31981"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 4,
+      "newest_sampled_last_updated_on": "2025-11-09",
+      "days_since_newest_attestation": 285,
+      "fresh_header_check": true,
+      "sampled_files": [
+        {
+          "file_url": "https://api.antidotehealth.ai/antidote-provider-antidote-oh-2026.json",
+          "probe_http_code": 206,
+          "records_sampled": 17423,
+          "last_updated_on_min": "2025-11-09",
+          "last_updated_on_max": "2025-11-09",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Wed, 26 Nov 2025 07:44:32 GMT",
+            "etag": "\"c9fc0e90041e50e1749fb4a223035872\"",
+            "content_length": "49640279",
+            "server": "UploadServer",
+            "fetched_at": "2026-08-21T01:01:56-0400"
+          },
+          "classification": "file-abandoned (HTTP Last-Modified itself >6 months old)"
+        },
+        {
+          "file_url": "https://api.antidotehealth.ai/antidote-provider-dental1-2026.json",
+          "probe_http_code": 206,
+          "records_sampled": 49373,
+          "last_updated_on_min": "2025-09-16",
+          "last_updated_on_max": "2025-09-16",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Sat, 01 Nov 2025 17:35:50 GMT",
+            "etag": "\"a9d41053bb1c0cae90af14835f99a2fb\"",
+            "content_length": "89611224",
+            "server": "UploadServer",
+            "fetched_at": "2026-08-21T01:01:58-0400"
+          },
+          "classification": "file-abandoned (HTTP Last-Modified itself >6 months old)"
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "index_url": "https://api.antidotehealth.ai/antidote-index-az-2026.json",
+      "states": [
+        "AZ"
+      ],
+      "issuer_ids": [
+        "68445"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 4,
+      "newest_sampled_last_updated_on": "2025-11-13",
+      "days_since_newest_attestation": 281,
+      "fresh_header_check": true,
+      "sampled_files": [
+        {
+          "file_url": "https://api.antidotehealth.ai/antidote-provider-antidote-az-2026.json",
+          "probe_http_code": 206,
+          "records_sampled": 3725,
+          "last_updated_on_min": "2025-11-13",
+          "last_updated_on_max": "2025-11-13",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Wed, 19 Nov 2025 13:40:25 GMT",
+            "etag": "\"700dd38b50ee4bbf1aa5dc79ff4484ca\"",
+            "content_length": "17813225",
+            "server": "UploadServer",
+            "fetched_at": "2026-08-21T01:02:01-0400"
+          },
+          "classification": "file-abandoned (HTTP Last-Modified itself >6 months old)"
+        },
+        {
+          "file_url": "https://api.antidotehealth.ai/antidote-provider-dental1-2026.json",
+          "probe_http_code": 206,
+          "records_sampled": 49373,
+          "last_updated_on_min": "2025-09-16",
+          "last_updated_on_max": "2025-09-16",
+          "fresh_check_2026_08_21": {
+            "method": "HEAD",
+            "http_code": 200,
+            "last_modified": "Sat, 01 Nov 2025 17:35:50 GMT",
+            "etag": "\"a9d41053bb1c0cae90af14835f99a2fb\"",
+            "content_length": "89611224",
+            "server": "UploadServer",
+            "fetched_at": "2026-08-21T01:01:58-0400"
+          },
+          "classification": "file-abandoned (HTTP Last-Modified itself >6 months old)"
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "index_url": "https://fm.formularynavigator.com/jsonFiles/publish/200/269/cms-data-index.json",
+      "states": [
+        "AZ"
+      ],
+      "issuer_ids": [
+        "85533"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 1,
+      "newest_sampled_last_updated_on": "2025-12-15",
+      "days_since_newest_attestation": 249,
+      "fresh_header_check": true,
+      "sampled_files": [
+        {
+          "file_url": "https://fm.formularynavigator.com/jsonFiles/publish/200/269/providers.json",
+          "probe_http_code": 200,
+          "records_sampled": 10670,
+          "last_updated_on_min": "2025-09-16",
+          "last_updated_on_max": "2025-12-15",
+          "fresh_check_2026_08_21": {
+            "method": "GET bytes=0-0",
+            "http_code": 200,
+            "last_modified": null,
+            "etag": null,
+            "content_length": "19973667",
+            "server": null,
+            "fetched_at": "2026-08-21T01:02:11-0400"
+          },
+          "classification": "no-freshness-headers (server exposes no Last-Modified/ETag; indeterminate)"
+        }
+      ],
+      "note": "Server 302-redirects and returns 200 ignoring Range, with no Last-Modified/ETag on the final response; header-based corroboration unavailable."
+    },
+    {
+      "rank": 11,
+      "index_url": "https://fm.formularynavigator.com/jsonFiles/publish/200/272/cms-data-index.json",
+      "states": [
+        "UT"
+      ],
+      "issuer_ids": [
+        "98113"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 1,
+      "newest_sampled_last_updated_on": "2025-12-16",
+      "days_since_newest_attestation": 248,
+      "fresh_header_check": false,
+      "sampled_files": [
+        {
+          "file_url": "https://fm.formularynavigator.com/jsonFiles/publish/200/272/providers.json",
+          "probe_http_code": 200,
+          "records_sampled": 2224,
+          "last_updated_on_min": "2025-09-16",
+          "last_updated_on_max": "2025-12-16"
+        }
+      ]
+    },
+    {
+      "rank": 12,
+      "index_url": "https://fm.formularynavigator.com/jsonFiles/publish/200/270/cms-data-index.json",
+      "states": [
+        "TX"
+      ],
+      "issuer_ids": [
+        "34826"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 1,
+      "newest_sampled_last_updated_on": "2025-12-16",
+      "days_since_newest_attestation": 248,
+      "fresh_header_check": false,
+      "sampled_files": [
+        {
+          "file_url": "https://fm.formularynavigator.com/jsonFiles/publish/200/270/providers.json",
+          "probe_http_code": 200,
+          "records_sampled": 23271,
+          "last_updated_on_min": "2025-09-16",
+          "last_updated_on_max": "2025-12-16"
+        }
+      ]
+    },
+    {
+      "rank": 13,
+      "index_url": "https://www.dentalhealthservices.com/files/index.json",
+      "states": [
+        "OR"
+      ],
+      "issuer_ids": [
+        "25486"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 1,
+      "newest_sampled_last_updated_on": "2026-01-02",
+      "days_since_newest_attestation": 231,
+      "fresh_header_check": false,
+      "sampled_files": [
+        {
+          "file_url": "https://www.dentalhealthservices.com/files/ORProviders.json",
+          "probe_http_code": 206,
+          "records_sampled": 485,
+          "last_updated_on_min": "2026-01-02",
+          "last_updated_on_max": "2026-01-02"
+        }
+      ]
+    },
+    {
+      "rank": 14,
+      "index_url": "https://www.ahsecure.net/CMS/index.json",
+      "states": [
+        "IA",
+        "SD"
+      ],
+      "issuer_ids": [
+        "74980",
+        "60536"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 12,
+      "newest_sampled_last_updated_on": "2026-01-23",
+      "days_since_newest_attestation": 210,
+      "fresh_header_check": false,
+      "sampled_files": [
+        {
+          "file_url": "https://www.ahsecure.net/CMS/providers-1.json",
+          "probe_http_code": 206,
+          "records_sampled": 865,
+          "last_updated_on_min": "2026-01-23",
+          "last_updated_on_max": "2026-01-23"
+        },
+        {
+          "file_url": "https://www.ahsecure.net/CMS/providers-4.json",
+          "probe_http_code": 206,
+          "records_sampled": 865,
+          "last_updated_on_min": "2026-01-23",
+          "last_updated_on_max": "2026-01-23"
+        }
+      ]
+    },
+    {
+      "rank": 15,
+      "index_url": "https://providerdirectory.communityhealthchoice.org/him/index.json",
+      "states": [
+        "TX"
+      ],
+      "issuer_ids": [
+        "11718",
+        "27248"
+      ],
+      "puf_mapping_verified": true,
+      "provider_urls_in_index": 1,
+      "newest_sampled_last_updated_on": "2026-01-28",
+      "days_since_newest_attestation": 205,
+      "fresh_header_check": false,
+      "sampled_files": [
+        {
+          "file_url": "https://providerdirectory.communityhealthchoice.org/him/providers.json",
+          "probe_http_code": 206,
+          "records_sampled": 1860,
+          "last_updated_on_min": "2026-01-28",
+          "last_updated_on_max": "2026-01-28"
+        }
+      ]
+    }
+  ],
+  "stale_files_within_otherwise_fresh_indexes": {
+    "note": "These 4 sampled files also fail the 6-month cutoff, but each sits in an index where another sampled file is fresh, so the index as a whole is not counted stale. Some appear to be prior-plan-year files still published in the index (e.g., a /2025/ path alongside a /2026/ path). Together with the 20 files in the 15 stale indexes, these account for the 24 stale sampled files from scoping.",
+    "files": [
+      {
+        "index_url": "https://public-cdn.wellmark.com/json/WHPI/index.json",
+        "states": [
+          "IA"
+        ],
+        "issuer_ids": [
+          "25896"
+        ],
+        "stale_file_url": "https://public-cdn.wellmark.com/json/WHPI/providers.json",
+        "stale_file_last_updated_max": "2025-09-15",
+        "fresh_sibling_file": "https://public-cdn.wellmark.com/json/WUPH/providers.json (max 2026-08-08)",
+        "days_since_attestation": 340
+      },
+      {
+        "index_url": "https://json.bestlife.com/cms/cms-data-index.json",
+        "states": [
+          "AK",
+          "AL",
+          "AR",
+          "AZ",
+          "FL",
+          "HI",
+          "IA",
+          "IN",
+          "KS",
+          "LA",
+          "MI",
+          "MO",
+          "MS",
+          "MT",
+          "NC",
+          "ND",
+          "NE",
+          "OH",
+          "OK",
+          "SC",
+          "SD",
+          "TN",
+          "TX",
+          "UT",
+          "WY"
+        ],
+        "issuer_ids": [
+          "74819",
+          "12538",
+          "26904",
+          "77352",
+          "17121",
+          "10046",
+          "71051",
+          "83557",
+          "63790",
+          "78461",
+          "35700",
+          "29416",
+          "11324",
+          "93895",
+          "94482",
+          "75329",
+          "50022",
+          "47509",
+          "40254",
+          "89281",
+          "61214",
+          "24601",
+          "47665",
+          "42757",
+          "47731"
+        ],
+        "stale_file_url": "https://json.bestlife.com/cms/2025/providers_wNPI.json",
+        "stale_file_last_updated_max": "2025-12-10",
+        "fresh_sibling_file": "https://json.bestlife.com/cms/2026/providers_wNPI.json (max 2026-08-10)",
+        "days_since_attestation": 254
+      },
+      {
+        "index_url": "https://shc-p-001.sitecorecontenthub.cloud/api/public/content/indexfile.json",
+        "states": [
+          "FL"
+        ],
+        "issuer_ids": [
+          "19898"
+        ],
+        "stale_file_url": "https://shc-p-001.sitecorecontenthub.cloud/api/public/content/esi-provider-network1a.json",
+        "stale_file_last_updated_max": "2025-08-09",
+        "fresh_sibling_file": "https://shc-p-001.sitecorecontenthub.cloud/api/public/content/provider8.json (max 2026-08-03)",
+        "days_since_attestation": 377
+      },
+      {
+        "index_url": "https://www.myparamount.org/machinereadablefiles/cms-data-index.json",
+        "states": [
+          "OH"
+        ],
+        "issuer_ids": [
+          "74313"
+        ],
+        "stale_file_url": "https://portal.insuringsmiles.com/machinereadablefiles/cms/providers.json",
+        "stale_file_last_updated_max": "2025-09-16",
+        "fresh_sibling_file": "https://www.myparamount.org/machinereadablefiles/providers.json (max 2026-07-31)",
+        "days_since_attestation": 339
+      }
+    ]
+  }
+}

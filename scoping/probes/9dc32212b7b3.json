@@ -1,0 +1,84 @@
+{
+ "index_url": "https://apps.hf.org/applications/dn/cms_json/index.json",
+ "states": [
+  "FL"
+ ],
+ "issuer_ids": [
+  "36194"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://apps.hf.org/applications/dn/cms_json/files/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388583,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2650,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "last_updated_on": 1000,
+     "plans": 1000,
+     "addresses": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 37,
+    "top_dup_phones": [
+     [
+      "4073038561",
+      19
+     ],
+     [
+      "8005394228",
+      15
+     ],
+     [
+      "8666978378",
+      11
+     ],
+     [
+      "3212416800",
+      8
+     ],
+     [
+      "7722578224",
+      7
+     ],
+     [
+      "4073032200",
+      7
+     ],
+     [
+      "4073032822",
+      6
+     ],
+     [
+      "3212686868",
+      6
+     ]
+    ]
+   }
+  }
+ ]
+}

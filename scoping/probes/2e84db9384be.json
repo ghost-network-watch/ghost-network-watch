@@ -1,0 +1,355 @@
+{
+ "index_url": "https://caresource.com/vendor/cms/cms-data-index.json",
+ "states": [
+  "IN",
+  "OH",
+  "WI",
+  "WV"
+ ],
+ "issuer_ids": [
+  "54192",
+  "77552",
+  "87416",
+  "50328"
+ ],
+ "provider_urls_count": 8,
+ "plan_urls_count": 4,
+ "files": [
+  {
+   "url": "https://www.caresource.com/vendor/cms/data/20260820/providers_IN_20260820.json",
+   "http_code": 200,
+   "fetched_chars": 209715200,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 55206,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "name": 522,
+     "specialty": 522,
+     "accepting": 522,
+     "languages": 522,
+     "sex": 522,
+     "Type": 478,
+     "group_name": 321,
+     "facility_name": 157,
+     "facility_type": 157
+    },
+    "type_dist": {
+     "GROUP": 321,
+     "INDIVIDUAL": 522,
+     "FACILITY": 157
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 6,
+    "unique_specialties": 59,
+    "top_specialties": [
+     [
+      "Certified Nurse Practitioner",
+      68
+     ],
+     [
+      "Cardiovascular Disease",
+      52
+     ],
+     [
+      "Family Practice",
+      50
+     ],
+     [
+      "Internal Medicine",
+      48
+     ],
+     [
+      "Ophthalmology",
+      25
+     ],
+     [
+      "OB/GYN",
+      24
+     ],
+     [
+      "Surgery",
+      20
+     ],
+     [
+      "Anesthesiology",
+      18
+     ],
+     [
+      "Pediatrics",
+      17
+     ],
+     [
+      "Physician Assistant",
+      15
+     ],
+     [
+      "Nephrology",
+      12
+     ],
+     [
+      "Otolaryngology",
+      12
+     ],
+     [
+      "Optometry",
+      11
+     ],
+     [
+      "Gastroenterology",
+      11
+     ],
+     [
+      "Orthopedic Surgery",
+      10
+     ],
+     [
+      "Podiatry",
+      10
+     ],
+     [
+      "Emergency Medicine",
+      9
+     ],
+     [
+      "Hematology Oncology",
+      8
+     ],
+     [
+      "Pulmonary Disease",
+      7
+     ],
+     [
+      "General Medicine",
+      7
+     ]
+    ],
+    "bh_specialty_values": [
+     "Psychiatry",
+     "Psychology (PhD)",
+     "Psychology, HSPP",
+     "Licensed Mental Health Counslr"
+    ],
+    "accepting_values": {
+     "None": 478,
+     "accepting": 522
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 85,
+    "top_dup_phones": [
+     [
+      "5025957744",
+      65
+     ],
+     [
+      "5028937710",
+      54
+     ],
+     [
+      "5028971166",
+      48
+     ],
+     [
+      "7659621337",
+      37
+     ],
+     [
+      "5139845133",
+      37
+     ],
+     [
+      "3179445000",
+      36
+     ],
+     [
+      "8124507899",
+      36
+     ],
+     [
+      "5134215558",
+      32
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.caresource.com/vendor/cms/data/20260820/providers_WI_20260820.json",
+   "http_code": 200,
+   "fetched_chars": 81736057,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 19956,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "name": 519,
+     "specialty": 519,
+     "accepting": 519,
+     "languages": 519,
+     "sex": 519,
+     "Type": 481,
+     "group_name": 455,
+     "facility_name": 26,
+     "facility_type": 26
+    },
+    "type_dist": {
+     "GROUP": 455,
+     "FACILITY": 26,
+     "INDIVIDUAL": 519
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 16,
+    "unique_specialties": 31,
+    "top_specialties": [
+     [
+      "Certified Nurse Practitioner",
+      240
+     ],
+     [
+      "Nurse Practitioner, Family Health",
+      169
+     ],
+     [
+      "Family Practice",
+      34
+     ],
+     [
+      "Diagnostic Radiology",
+      11
+     ],
+     [
+      "Physician Assistant",
+      9
+     ],
+     [
+      "Licensed Social Worker",
+      7
+     ],
+     [
+      "Internal Medicine",
+      6
+     ],
+     [
+      "Dermatopathology",
+      6
+     ],
+     [
+      "Dermatology",
+      3
+     ],
+     [
+      "Psychiatry & Neurology",
+      3
+     ],
+     [
+      "Emergency Medicine",
+      3
+     ],
+     [
+      "Orthopedic Surgery",
+      2
+     ],
+     [
+      "Anesthesiology",
+      2
+     ],
+     [
+      "Surgery",
+      2
+     ],
+     [
+      "Cardiovascular Disease",
+      2
+     ],
+     [
+      "Pediatrics",
+      2
+     ],
+     [
+      "Chiropractor",
+      2
+     ],
+     [
+      "Psychiatry",
+      2
+     ],
+     [
+      "Marriage/Family Therapist",
+      2
+     ],
+     [
+      "Nurse Practitioner, General",
+      1
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Social Worker",
+     "Psychiatry & Neurology",
+     "Psychiatry",
+     "Marriage/Family Therapist",
+     "Child & Adolescent Psychiatry",
+     "Lic Pro Clinical Cnslr LPCC"
+    ],
+    "accepting_values": {
+     "None": 481,
+     "accepting": 519
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 134,
+    "top_dup_phones": [
+     [
+      "8663892727",
+      1598
+     ],
+     [
+      "9207467200",
+      37
+     ],
+     [
+      "4017706937",
+      35
+     ],
+     [
+      "8669446046",
+      34
+     ],
+     [
+      "8887202012",
+      24
+     ],
+     [
+      "6148502407",
+      23
+     ],
+     [
+      "8009744378",
+      21
+     ],
+     [
+      "4143523100",
+      20
+     ]
+    ]
+   }
+  }
+ ]
+}

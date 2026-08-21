@@ -1,0 +1,183 @@
+{
+ "index_url": "https://exchange.communityfirsthealthplans.com/cms-data-index.json",
+ "states": [
+  "TX"
+ ],
+ "issuer_ids": [
+  "63251"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://exchange.communityfirsthealthplans.com/network.json",
+   "http_code": 200,
+   "fetched_chars": 6727961,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 3249,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 966,
+     "specialty": 966,
+     "accepting": 966,
+     "facility_name": 20,
+     "facility_type": 20,
+     "group_name": 14
+    },
+    "type_dist": {
+     "INDIVIDUAL": 966,
+     "FACILITY": 20,
+     "GROUP": 14
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 100,
+    "unique_specialties": 49,
+    "top_specialties": [
+     [
+      "Nurse Practitioner Clinical Nurse Specialist",
+      178
+     ],
+     [
+      "Family Practice General Practice",
+      99
+     ],
+     [
+      "Internal Medicine",
+      84
+     ],
+     [
+      "Physician Assistant",
+      68
+     ],
+     [
+      "Certified Registered Nurse Anesthetist CRNA",
+      65
+     ],
+     [
+      "Pediatrics",
+      61
+     ],
+     [
+      "Anesthesiology",
+      51
+     ],
+     [
+      "Licensed Professional Counselor CCP",
+      37
+     ],
+     [
+      "General Surgery",
+      31
+     ],
+     [
+      "OB GYN MD",
+      28
+     ],
+     [
+      "Cardiovascular Disease",
+      27
+     ],
+     [
+      "Radiology MD",
+      26
+     ],
+     [
+      "Psychiatry",
+      20
+     ],
+     [
+      "Psychology",
+      16
+     ],
+     [
+      "Neurology MD",
+      16
+     ],
+     [
+      "Orthopaedic Surgery",
+      14
+     ],
+     [
+      "Individual Physical Therapist",
+      11
+     ],
+     [
+      "Pulmonary Disease",
+      10
+     ],
+     [
+      "Podiatry",
+      9
+     ],
+     [
+      "Otorhinolaryngology ENT",
+      9
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Professional Counselor CCP",
+     "Psychiatry",
+     "Psychology",
+     "Individual Physical Therapist",
+     "Licensed Clinical Social Worker",
+     "Licensed Chemical Dependency Counselor",
+     "Radiation Therapy",
+     "Psychiatry DO",
+     "Speech Therapy CCP"
+    ],
+    "accepting_values": {
+     "accepting": 894,
+     "None": 34,
+     "not accepting": 72
+    },
+    "last_updated_min": "2026-05-18",
+    "last_updated_max": "2026-05-18",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 15,
+    "top_dup_phones": [
+     [
+      "2103584000",
+      303
+     ],
+     [
+      "2103585437",
+      203
+     ],
+     [
+      "2104509300",
+      87
+     ],
+     [
+      "2103583900",
+      72
+     ],
+     [
+      "2102337000",
+      53
+     ],
+     [
+      "2104506800",
+      50
+     ],
+     [
+      "2104509888",
+      43
+     ],
+     [
+      "2107745018",
+      42
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "index_url": "https://www.dominionnational.com/Resources/dominion/index.json",
+ "states": [
+  "DE",
+  "FL",
+  "IN",
+  "MI",
+  "MO",
+  "NC",
+  "OH",
+  "OR",
+  "TX",
+  "WI"
+ ],
+ "issuer_ids": [
+  "67775",
+  "74243",
+  "16845",
+  "15676",
+  "43512",
+  "66759",
+  "70455",
+  "98884",
+  "23018",
+  "65736"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.dominionnational.com/Resources/dominion/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 8225,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "plans": 1000,
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "languages": 1000,
+     "gender": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "General Provider",
+      840
+     ],
+     [
+      "Orthodontist",
+      59
+     ],
+     [
+      "Pedodontist",
+      30
+     ],
+     [
+      "Periodontist",
+      30
+     ],
+     [
+      "Oral Surgeon",
+      25
+     ],
+     [
+      "Endodontist",
+      15
+     ],
+     [
+      "Prosthodontist",
+      1
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 994,
+     "not accepting": 6
+    },
+    "last_updated_min": "2026-08-14",
+    "last_updated_max": "2026-08-14",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "7704488882",
+      17
+     ],
+     [
+      "3123555570",
+      12
+     ],
+     [
+      "3128466752",
+      10
+     ],
+     [
+      "7706921000",
+      9
+     ],
+     [
+      "7703754326",
+      7
+     ],
+     [
+      "8556176453",
+      7
+     ],
+     [
+      "7733387799",
+      7
+     ],
+     [
+      "8325485000",
+      5
+     ]
+    ]
+   }
+  }
+ ]
+}

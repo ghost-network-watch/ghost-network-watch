@@ -1,0 +1,181 @@
+{
+ "index_url": "https://www.aspirushealthplan.com/group-individual/files/json/index.json",
+ "states": [
+  "WI"
+ ],
+ "issuer_ids": [
+  "86584"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 6,
+ "files": [
+  {
+   "url": "https://www.aspirushealthplan.com/group-individual/files/json/providers-ASPIRUSSIGN.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1500,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "name": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "gender": 1000,
+     "languages": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 159,
+    "unique_specialties": 74,
+    "top_specialties": [
+     [
+      "Family Practice",
+      225
+     ],
+     [
+      "Mental Health",
+      139
+     ],
+     [
+      "Internal Medicine",
+      79
+     ],
+     [
+      "Obstetrics & Gynecology",
+      52
+     ],
+     [
+      "Pediatrics",
+      52
+     ],
+     [
+      "Orthopedic Surgery",
+      39
+     ],
+     [
+      "General Surgery",
+      39
+     ],
+     [
+      "Optometry",
+      28
+     ],
+     [
+      "Neurology",
+      27
+     ],
+     [
+      "Oncology",
+      25
+     ],
+     [
+      "Dermatology",
+      24
+     ],
+     [
+      "Cardiovascular Disease",
+      24
+     ],
+     [
+      "Hematology",
+      23
+     ],
+     [
+      "Gastroenterology",
+      21
+     ],
+     [
+      "Psychiatry",
+      18
+     ],
+     [
+      "Emergency Medicine",
+      14
+     ],
+     [
+      "Otolaryngology/ENT",
+      14
+     ],
+     [
+      "Cardiology",
+      14
+     ],
+     [
+      "Neonatal-Perinatal Medicine",
+      13
+     ],
+     [
+      "Infectious Disease",
+      11
+     ]
+    ],
+    "bh_specialty_values": [
+     "Mental Health",
+     "Psychiatry",
+     "Psychiatry, Child",
+     "Physical Therapy Rehabilitation Services"
+    ],
+    "accepting_values": {
+     "accepting": 924,
+     "not accepting": 76
+    },
+    "last_updated_min": "1990-01-01",
+    "last_updated_max": "2024-06-05",
+    "last_updated_years": {
+     "2024": 608,
+     "2023": 199,
+     "2021": 26,
+     "1990": 146,
+     "2022": 14,
+     "2020": 5,
+     "2018": 1,
+     "2019": 1
+    },
+    "max_addresses_per_provider": 69,
+    "top_dup_phones": [
+     [
+      "9208579041",
+      126
+     ],
+     [
+      "4148056400",
+      77
+     ],
+     [
+      "6087827300",
+      62
+     ],
+     [
+      "4142666450",
+      62
+     ],
+     [
+      "6082656400",
+      32
+     ],
+     [
+      "6082872000",
+      23
+     ],
+     [
+      "5074295018",
+      20
+     ],
+     [
+      "6089150400",
+      20
+     ]
+    ]
+   }
+  }
+ ]
+}

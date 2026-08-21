@@ -1,0 +1,303 @@
+{
+ "index_url": "https://api.antidotehealth.ai/antidote-index-oh-2026.json",
+ "states": [
+  "OH"
+ ],
+ "issuer_ids": [
+  "31981"
+ ],
+ "provider_urls_count": 4,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://api.antidotehealth.ai/antidote-provider-antidote-oh-2026.json",
+   "http_code": 206,
+   "fetched_chars": 49640279,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 17423,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "name": 972,
+     "specialty": 972,
+     "accepting": 972,
+     "gender": 972,
+     "languages": 972,
+     "facility_name": 28,
+     "facility_type": 28
+    },
+    "type_dist": {
+     "Individual": 972,
+     "Facility": 28
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 129,
+    "unique_specialties": 157,
+    "top_specialties": [
+     [
+      "Nurse Practitioner",
+      102
+     ],
+     [
+      "Family Medicine",
+      78
+     ],
+     [
+      "Pediatrics",
+      62
+     ],
+     [
+      "Internal Medicine",
+      60
+     ],
+     [
+      "Physician Assistant",
+      52
+     ],
+     [
+      "Nurse Practitioner, Family",
+      43
+     ],
+     [
+      "Obstetrics & Gynecology",
+      27
+     ],
+     [
+      "Nurse Practitioner, Pediatrics",
+      24
+     ],
+     [
+      "Orthopaedic Surgery",
+      22
+     ],
+     [
+      "Neurology",
+      18
+     ],
+     [
+      "Social Worker, Clinical",
+      17
+     ],
+     [
+      "Urology",
+      17
+     ],
+     [
+      "General Surgery",
+      17
+     ],
+     [
+      "Physical Therapy",
+      16
+     ],
+     [
+      "Counselor, Professional",
+      14
+     ],
+     [
+      "Chiropractor",
+      12
+     ],
+     [
+      "Gastroenterology",
+      12
+     ],
+     [
+      "Ophthalmology",
+      11
+     ],
+     [
+      "Cardiovascular Disease",
+      11
+     ],
+     [
+      "Dermatology",
+      10
+     ]
+    ],
+    "bh_specialty_values": [
+     "Social Worker, Clinical",
+     "Physical Therapy",
+     "Counselor, Professional",
+     "Psychiatry",
+     "Licensed Social Worker",
+     "Nurse Practitioner, Psych/Mental Health",
+     "Social Worker",
+     "Adult Psychiatry",
+     "Psychology",
+     "Psychologist",
+     "Pediatric Psychology",
+     "Physical Therapist",
+     "Counseling",
+     "Neurology Psychiatry",
+     "Counselor, Mental Health",
+     "Counselor",
+     "Genetic Counseling",
+     "Child & Adolescent Psychiatry",
+     "Psychiatry & Neurology, Child & Adolescent Psychiatry",
+     "Psychologist, Clinical",
+     "Clinical Neuropsychologist",
+     "Licensed Professional Clinical Counselor",
+     "Psychiatry, Child & Adolescent",
+     "Psychiatry & Neurology, Psychiatry",
+     "Psychiatry & Neurology, Sleep Medicine"
+    ],
+    "accepting_values": {
+     "not accepting": 844,
+     "None": 28,
+     "accepting": 128
+    },
+    "last_updated_min": "2025-11-09",
+    "last_updated_max": "2025-11-09",
+    "last_updated_years": {
+     "2025": 1000
+    },
+    "max_addresses_per_provider": 24,
+    "top_dup_phones": [
+     [
+      "6142939600",
+      61
+     ],
+     [
+      "6147222000",
+      55
+     ],
+     [
+      "2164442273",
+      55
+     ],
+     [
+      "8554465937",
+      47
+     ],
+     [
+      "6147545500",
+      46
+     ],
+     [
+      "6147226682",
+      41
+     ],
+     [
+      "6142937677",
+      41
+     ],
+     [
+      "6142935123",
+      37
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://api.antidotehealth.ai/antidote-provider-dental1-2026.json",
+   "http_code": 206,
+   "fetched_chars": 89611224,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 49373,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "sex": 1000,
+     "last_updated_on": 1000,
+     "plans": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "GENERAL",
+      813
+     ],
+     [
+      "PEDIATRICS",
+      55
+     ],
+     [
+      "ORTHODONTICS",
+      47
+     ],
+     [
+      "ORAL SURGERY",
+      36
+     ],
+     [
+      "ENDODONTICS",
+      34
+     ],
+     [
+      "PERIODONTICS",
+      24
+     ],
+     [
+      "PROSTHODONTICS",
+      10
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 953,
+     "accepting in some locations": 26,
+     "not accepting": 21
+    },
+    "last_updated_min": "2025-09-16",
+    "last_updated_max": "2025-09-16",
+    "last_updated_years": {
+     "2025": 1000
+    },
+    "max_addresses_per_provider": 144,
+    "top_dup_phones": [
+     [
+      "9724448888",
+      76
+     ],
+     [
+      "6516336500",
+      43
+     ],
+     [
+      "7706921000",
+      24
+     ],
+     [
+      "5612417656",
+      12
+     ],
+     [
+      "6095875858",
+      11
+     ],
+     [
+      "8889884066",
+      11
+     ],
+     [
+      "7733387799",
+      10
+     ],
+     [
+      "6154411441",
+      9
+     ]
+    ]
+   }
+  }
+ ]
+}

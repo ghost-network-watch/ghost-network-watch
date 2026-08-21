@@ -1,0 +1,114 @@
+{
+ "index_url": "https://www.dentegra.com/hcx/cms-data-index.json",
+ "states": [
+  "KS",
+  "OR"
+ ],
+ "issuer_ids": [
+  "11339",
+  "68420"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 3,
+ "files": [
+  {
+   "url": "https://www.dentegra.com/hcx/providers.json",
+   "http_code": 206,
+   "fetched_chars": 1173199,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 1290,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "gender": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 999,
+    "npi_luhn_valid": 999,
+    "bh_matches": 0,
+    "unique_specialties": 6,
+    "top_specialties": [
+     [
+      "General Dentist",
+      857
+     ],
+     [
+      "Orthodontist",
+      47
+     ],
+     [
+      "Pediatric Dentist",
+      35
+     ],
+     [
+      "Oral Surgeon",
+      34
+     ],
+     [
+      "Endodontist",
+      24
+     ],
+     [
+      "Periodontist",
+      13
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 1000
+    },
+    "last_updated_min": "2026-06-15",
+    "last_updated_max": "2026-06-15",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 63,
+    "top_dup_phones": [
+     [
+      "8884680022",
+      94
+     ],
+     [
+      "8889884066",
+      56
+     ],
+     [
+      "7737358353",
+      32
+     ],
+     [
+      "5034442824",
+      26
+     ],
+     [
+      "9712067133",
+      24
+     ],
+     [
+      "5417620225",
+      22
+     ],
+     [
+      "5032935454",
+      22
+     ],
+     [
+      "9717185358",
+      21
+     ]
+    ]
+   }
+  }
+ ]
+}

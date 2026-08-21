@@ -1,0 +1,296 @@
+{
+ "index_url": "https://www.pfpdata.com/cms-data/37160-nd/37160-index.json",
+ "states": [
+  "ND"
+ ],
+ "issuer_ids": [
+  "37160"
+ ],
+ "provider_urls_count": 3,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.pfpdata.com/cms-data/37160-nd/37160-md-provider.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2364,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "specialty": 905,
+     "name": 871,
+     "accepting": 871,
+     "languages": 871,
+     "sex": 867,
+     "group_name": 95,
+     "facility_name": 34,
+     "facility_type": 34
+    },
+    "type_dist": {
+     "INDIVIDUAL": 871,
+     "GROUP": 95,
+     "FACILITY": 34
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 232,
+    "unique_specialties": 87,
+    "top_specialties": [
+     [
+      "Nurse Practitioner - Family",
+      64
+     ],
+     [
+      "Certified Registered Nurse Anesthetist",
+      56
+     ],
+     [
+      "Certified Registered Nurse Practitioner",
+      45
+     ],
+     [
+      "Family Practice",
+      39
+     ],
+     [
+      "Physician Assistant",
+      37
+     ],
+     [
+      "Physical Therapist",
+      35
+     ],
+     [
+      "Licensed Clinical Social Worker",
+      34
+     ],
+     [
+      "Radiology",
+      33
+     ],
+     [
+      "Occupational Therapist",
+      29
+     ],
+     [
+      "Chiropractor",
+      25
+     ],
+     [
+      "Internal Medicine",
+      21
+     ],
+     [
+      "Psychiatry",
+      21
+     ],
+     [
+      "Speech Therapist",
+      21
+     ],
+     [
+      "Psychologist|Psychology",
+      20
+     ],
+     [
+      "Pediatrics",
+      20
+     ],
+     [
+      "Physician Assistant PCP",
+      20
+     ],
+     [
+      "Licensed Professional Counselor",
+      17
+     ],
+     [
+      "Optometrist",
+      17
+     ],
+     [
+      "Nephrology",
+      15
+     ],
+     [
+      "General Practice Dentistry",
+      13
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapist",
+     "Licensed Clinical Social Worker",
+     "Occupational Therapist",
+     "Psychiatry",
+     "Speech Therapist",
+     "Psychologist|Psychology",
+     "Licensed Professional Counselor",
+     "CRN Practitioner Mental Health|Nurse Practitioner - Psychiat",
+     "Clinic/Center - Mental Health (Including Community Mental Ce",
+     "Licensed Alcohol and Drug Counselor",
+     "Licensed Master Social Worker",
+     "Diagnostic Neuroimaging (Psychiatry & Neurology)|Radiology",
+     "Licensed Associate Professional Counselor",
+     "Licensed Alcohol and Drug Counselor|Licensed Professional Co",
+     "Marriage & Family Therapist",
+     "Behavioral Analyst",
+     "Case Manager/Care Coordinator|Licensed Professional Counselo",
+     "Case Manager/Care Coordinator|Licensed Clinical Social Worke",
+     "Case Manager/Care Coordinator|Licensed Master Social Worker"
+    ],
+    "accepting_values": {
+     "accepting": 871,
+     "None": 129
+    },
+    "last_updated_min": "2026-08-10",
+    "last_updated_max": "2026-08-10",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "7012342000",
+      116
+     ],
+     [
+      "7013236000",
+      72
+     ],
+     [
+      "7014172575",
+      49
+     ],
+     [
+      "7012804140",
+      26
+     ],
+     [
+      "7013643273",
+      17
+     ],
+     [
+      "7012053000",
+      16
+     ],
+     [
+      "7017805000",
+      12
+     ],
+     [
+      "7017806000",
+      12
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.pfpdata.com/cms-data/37160-nd/37160-dn-provider.json",
+   "http_code": 206,
+   "fetched_chars": 730576,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 284,
+    "analyzed": 284,
+    "field_presence": {
+     "npi": 284,
+     "type": 284,
+     "group_name": 284,
+     "plans": 284,
+     "name": 284,
+     "sex": 284,
+     "languages": 284,
+     "addresses": 284,
+     "accepting": 284,
+     "specialty": 284,
+     "last_updated_on": 284
+    },
+    "type_dist": {
+     "INDIVIDUAL": 243,
+     "GROUP": 41
+    },
+    "npi_present": 284,
+    "npi_luhn_valid": 284,
+    "bh_matches": 0,
+    "unique_specialties": 6,
+    "top_specialties": [
+     [
+      "General Dentistry",
+      225
+     ],
+     [
+      "Oral and Maxillofacial Surgery",
+      25
+     ],
+     [
+      "Pediatric Dentistry",
+      12
+     ],
+     [
+      "Dental Multi-Specialty Group",
+      8
+     ],
+     [
+      "Orthodontics",
+      8
+     ],
+     [
+      "Endodontics",
+      6
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "not accepting": 55,
+     "accepting": 229
+    },
+    "last_updated_min": "2026-08-01",
+    "last_updated_max": "2026-08-01",
+    "last_updated_years": {
+     "2026": 284
+    },
+    "max_addresses_per_provider": 6,
+    "top_dup_phones": [
+     [
+      "7017513237",
+      12
+     ],
+     [
+      "7012552523",
+      12
+     ],
+     [
+      "7012238262",
+      11
+     ],
+     [
+      "7012231194",
+      10
+     ],
+     [
+      "7012342000",
+      10
+     ],
+     [
+      "7012587220",
+      6
+     ],
+     [
+      "7017754444",
+      6
+     ],
+     [
+      "7012395969",
+      6
+     ]
+    ]
+   }
+  }
+ ]
+}

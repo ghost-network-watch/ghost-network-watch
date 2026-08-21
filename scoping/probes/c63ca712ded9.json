@@ -1,0 +1,117 @@
+{
+ "index_url": "https://dencap.com/json/cms-data-index.json",
+ "states": [
+  "MI"
+ ],
+ "issuer_ids": [
+  "31256"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://dencap.com/json/providers.json",
+   "http_code": 206,
+   "fetched_chars": 407404,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 541,
+    "analyzed": 541,
+    "field_presence": {
+     "npi": 541,
+     "type": 541,
+     "plans": 541,
+     "addresses": 541,
+     "last_updated_on": 541,
+     "name": 385,
+     "specialty": 385,
+     "accepting": 385,
+     "gender": 385,
+     "languages": 385,
+     "facility_name": 156,
+     "facility_type": 156
+    },
+    "type_dist": {
+     "INDIVIDUAL": 385,
+     "FACILITY": 156
+    },
+    "npi_present": 541,
+    "npi_luhn_valid": 541,
+    "bh_matches": 0,
+    "unique_specialties": 6,
+    "top_specialties": [
+     [
+      "General Dentistry",
+      181
+     ],
+     [
+      "Endodontics",
+      64
+     ],
+     [
+      "Periodontics",
+      57
+     ],
+     [
+      "Oral Surgery",
+      43
+     ],
+     [
+      "Orthodontics",
+      38
+     ],
+     [
+      "Pedodontics",
+      2
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 378,
+     "not accepting": 7,
+     "None": 156
+    },
+    "last_updated_min": "2026-08-10",
+    "last_updated_max": "2026-08-10",
+    "last_updated_years": {
+     "2026": 541
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "3133421997",
+      33
+     ],
+     [
+      "3138632800",
+      33
+     ],
+     [
+      "7345238300",
+      28
+     ],
+     [
+      "2482032330",
+      22
+     ],
+     [
+      "5865737334",
+      20
+     ],
+     [
+      "3139282500",
+      11
+     ],
+     [
+      "7342828600",
+      10
+     ],
+     [
+      "3133836800",
+      10
+     ]
+    ]
+   }
+  }
+ ]
+}

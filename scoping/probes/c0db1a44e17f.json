@@ -1,0 +1,311 @@
+{
+ "index_url": "https://api.centene.com/ambetter/reference/cms-data-index.json",
+ "states": [
+  "AL",
+  "AR",
+  "AZ",
+  "DE",
+  "FL",
+  "IA",
+  "IN",
+  "KS",
+  "LA",
+  "MI",
+  "MO",
+  "MS",
+  "NC",
+  "NE",
+  "NH",
+  "OH",
+  "OK",
+  "SC",
+  "TN",
+  "TX"
+ ],
+ "issuer_ids": [
+  "53932",
+  "37903",
+  "62141",
+  "70525",
+  "91450",
+  "64004",
+  "49004",
+  "86382",
+  "48286",
+  "35065",
+  "34368",
+  "90787",
+  "58594",
+  "99723",
+  "90714",
+  "77264",
+  "13484",
+  "75841",
+  "41047",
+  "62505",
+  "79222",
+  "70111",
+  "29418",
+  "87226"
+ ],
+ "provider_urls_count": 128,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://api.centene.com/ambetter/reference/provider_facility_0_0_0_array.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 241,
+    "analyzed": 241,
+    "field_presence": {
+     "addresses": 241,
+     "facility_type": 241,
+     "last_updated_on": 241,
+     "npi": 241,
+     "plans": 241,
+     "type": 241,
+     "facility_name": 196,
+     "group_name": 45
+    },
+    "type_dist": {
+     "GROUP": 45,
+     "FACILITY": 196
+    },
+    "npi_present": 241,
+    "npi_luhn_valid": 241,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 241
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 241
+    },
+    "max_addresses_per_provider": 45,
+    "top_dup_phones": [
+     [
+      "3056376400",
+      9
+     ],
+     [
+      "6106446755",
+      5
+     ],
+     [
+      "2154020800",
+      5
+     ],
+     [
+      "5123682809",
+      5
+     ],
+     [
+      "7757385100",
+      4
+     ],
+     [
+      "7029350025",
+      4
+     ],
+     [
+      "6103744401",
+      4
+     ],
+     [
+      "2152575071",
+      4
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://api.centene.com/ambetter/reference/provider_individual_0_0_0_array.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 672,
+    "analyzed": 672,
+    "field_presence": {
+     "accepting": 672,
+     "addresses": 672,
+     "gender": 672,
+     "languages": 672,
+     "last_updated_on": 672,
+     "name": 672,
+     "npi": 672,
+     "plans": 672,
+     "specialty": 672,
+     "type": 672
+    },
+    "type_dist": {
+     "INDIVIDUAL": 672
+    },
+    "npi_present": 672,
+    "npi_luhn_valid": 672,
+    "bh_matches": 121,
+    "unique_specialties": 143,
+    "top_specialties": [
+     [
+      "Nurse Practitioner: Family",
+      74
+     ],
+     [
+      "Physician Assistant",
+      49
+     ],
+     [
+      "Dentist: General Practice",
+      49
+     ],
+     [
+      "Internal Medicine",
+      40
+     ],
+     [
+      "Family Medicine",
+      38
+     ],
+     [
+      "Nurse Practitioner",
+      37
+     ],
+     [
+      "Physical Therapist",
+      36
+     ],
+     [
+      "Speech-Language Pathologist",
+      19
+     ],
+     [
+      "Surgery",
+      17
+     ],
+     [
+      "Occupational Therapist",
+      17
+     ],
+     [
+      "Pediatrics",
+      17
+     ],
+     [
+      "Obstetrics & Gynecology",
+      16
+     ],
+     [
+      "Orthopaedic Surgery",
+      15
+     ],
+     [
+      "Internal Medicine: Cardiovascular Disease",
+      14
+     ],
+     [
+      "Optometrist",
+      13
+     ],
+     [
+      "Social Worker: Clinical",
+      13
+     ],
+     [
+      "Ophthalmology",
+      12
+     ],
+     [
+      "Chiropractor",
+      11
+     ],
+     [
+      "Physician Assistant: Medical",
+      11
+     ],
+     [
+      "Counselor: Mental Health",
+      10
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapist",
+     "Occupational Therapist",
+     "Social Worker: Clinical",
+     "Counselor: Mental Health",
+     "Psychiatry & Neurology: Psychiatry",
+     "Behavior Technician",
+     "Psychiatry & Neurology: Neurology",
+     "Nurse Practitioner: Psych/Mental Health",
+     "Behavioral Analyst",
+     "Psychologist",
+     "Counselor",
+     "Physical Therapist: Orthopedic",
+     "Counselor: Professional",
+     "Clinical Neuropsychologist",
+     "Psychiatry & Neurology: Clinical Neurophysiology",
+     "Psychologist: Clinical",
+     "Psychiatry & Neurology: Vascular Neurology",
+     "Social Worker",
+     "Massage Therapist",
+     "Counselor: Addiction (Substance Use Disorder)",
+     "Physical Therapist: Geriatrics",
+     "Psychiatry & Neurology: Addiction Psychiatry",
+     "Pediatrics: Developmental - Behavioral Pediatrics",
+     "Psychologist: Clinical Child & Adolescent",
+     "Physical Therapist: Pediatrics"
+    ],
+    "accepting_values": {
+     "accepting": 512,
+     "not accepting": 124,
+     "accepting in some locations": 36
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 672
+    },
+    "max_addresses_per_provider": 9,
+    "top_dup_phones": [
+     [
+      "7024305333",
+      5
+     ],
+     [
+      "8003219999",
+      5
+     ],
+     [
+      "7063532990",
+      4
+     ],
+     [
+      "5092097429",
+      4
+     ],
+     [
+      "4042552033",
+      4
+     ],
+     [
+      "2813515174",
+      3
+     ],
+     [
+      "6239722116",
+      3
+     ],
+     [
+      "6307241790",
+      3
+     ]
+    ]
+   }
+  }
+ ]
+}

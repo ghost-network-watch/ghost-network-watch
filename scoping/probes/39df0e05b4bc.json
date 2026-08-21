@@ -1,0 +1,252 @@
+{
+ "index_url": "https://esbgatewaypub.medica.com/rest/QHP/ND/73751/cms-data-index.json",
+ "states": [
+  "ND"
+ ],
+ "issuer_ids": [
+  "73751"
+ ],
+ "provider_urls_count": 119,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://esbgatewaypub.medica.com:443/rest/QHP/ND/73751/Group/Providers1.json",
+   "http_code": 200,
+   "fetched_chars": 8098914,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 3558,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "group_name": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "type": 1000
+    },
+    "type_dist": {
+     "GROUP": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2025-03-15",
+    "last_updated_max": "2026-07-13",
+    "last_updated_years": {
+     "2026": 996,
+     "2025": 4
+    },
+    "max_addresses_per_provider": 13,
+    "top_dup_phones": [
+     [
+      "5074512630",
+      13
+     ],
+     [
+      "4029044729",
+      13
+     ],
+     [
+      "6516336883",
+      12
+     ],
+     [
+      "7154498400",
+      10
+     ],
+     [
+      "2188794641",
+      8
+     ],
+     [
+      "5156953121",
+      8
+     ],
+     [
+      "4023917246",
+      8
+     ],
+     [
+      "6127677222",
+      8
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://esbgatewaypub.medica.com:443/rest/QHP/ND/73751/Individual/Providers12.json",
+   "http_code": 200,
+   "fetched_chars": 10203373,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 3760,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "specialty": 1000,
+     "languages": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "last_updated_on": 1000,
+     "type": 1000,
+     "accepting": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 348,
+    "unique_specialties": 62,
+    "top_specialties": [
+     [
+      "Family Practice",
+      173
+     ],
+     [
+      "Physical Therapy Center",
+      110
+     ],
+     [
+      "Master'S Level Counselor",
+      93
+     ],
+     [
+      "Emergency Medicine",
+      56
+     ],
+     [
+      "Social Worker",
+      52
+     ],
+     [
+      "Physical Therapy Center - Occupational Therapy",
+      41
+     ],
+     [
+      "Hospitalist",
+      35
+     ],
+     [
+      "Neurologist",
+      28
+     ],
+     [
+      "Pediatrician",
+      26
+     ],
+     [
+      "Ob-Gynecologist",
+      25
+     ],
+     [
+      "Cardiologist",
+      25
+     ],
+     [
+      "Family Practice - Physicians Assistant",
+      24
+     ],
+     [
+      "Speech Pathology",
+      22
+     ],
+     [
+      "Nutritionist",
+      21
+     ],
+     [
+      "Psychologist",
+      21
+     ],
+     [
+      "Surgeon - Physicians Assistant",
+      20
+     ],
+     [
+      "Oncology",
+      14
+     ],
+     [
+      "Optometrist",
+      13
+     ],
+     [
+      "Emergency Medicine - Physicians Assistant",
+      13
+     ],
+     [
+      "Neonatology",
+      13
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapy Center",
+     "Master'S Level Counselor",
+     "Social Worker",
+     "Physical Therapy Center - Occupational Therapy",
+     "Psychologist",
+     "Marriage/Family",
+     "Genetic Counselor",
+     "Physician Psychiatry",
+     "Alcohol/Drug/Chem Counselor",
+     "Physician Assistant Behavioral",
+     "Board Cert Behavioral Analyst"
+    ],
+    "accepting_values": {
+     "accepting": 795,
+     "not accepting": 205
+    },
+    "last_updated_min": "2025-03-15",
+    "last_updated_max": "2026-07-13",
+    "last_updated_years": {
+     "2026": 994,
+     "2025": 6
+    },
+    "max_addresses_per_provider": 4,
+    "top_dup_phones": [
+     [
+      "8553247843",
+      38
+     ],
+     [
+      "8169311883",
+      15
+     ],
+     [
+      "6519827000",
+      12
+     ],
+     [
+      "6123319413",
+      12
+     ],
+     [
+      "9529469777",
+      10
+     ],
+     [
+      "8169320340",
+      10
+     ],
+     [
+      "7637554275",
+      9
+     ],
+     [
+      "9528318742",
+      9
+     ]
+    ]
+   }
+  }
+ ]
+}

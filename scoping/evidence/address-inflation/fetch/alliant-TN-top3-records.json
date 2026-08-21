@@ -1,0 +1,3148 @@
+{
+ "note": "top-3 records by address count, extracted from first-10MB Range sample fetched 2026-08-21",
+ "source_head_sample": "alliant-ProvidersTN.head10mb.json",
+ "records": [
+  {
+   "npi": "1003390295",
+   "type": "FACILITY",
+   "facility_name": "Independent Physical Therapy of GA",
+   "facility_type": [
+    "Physical Therapy Facility"
+   ],
+   "addresses": [
+    {
+     "address": "10 Village West Dr",
+     "city": "Senoia",
+     "state": "GA",
+     "zip": "30276",
+     "phone": "6787234415"
+    },
+    {
+     "address": "1000 Peachtree Industrial Blvd",
+     "city": "Suwanee",
+     "state": "GA",
+     "zip": "30024",
+     "phone": "6784829695"
+    },
+    {
+     "address": "102 Hines Rd",
+     "city": "Calhoun",
+     "state": "GA",
+     "zip": "30701",
+     "phone": "7066029655"
+    },
+    {
+     "address": "1021 Parkway Blvd",
+     "city": "Athens",
+     "state": "GA",
+     "zip": "30606",
+     "phone": "7063522448"
+    },
+    {
+     "address": "1025 E West Connector",
+     "city": "Austell",
+     "state": "GA",
+     "zip": "30106",
+     "phone": "7703841001"
+    },
+    {
+     "address": "1025 Veterans Memorial Hwy SE",
+     "city": "Mableton",
+     "state": "GA",
+     "zip": "30126",
+     "phone": "7709991961"
+    },
+    {
+     "address": "105 N Main St",
+     "city": "Cleveland",
+     "state": "GA",
+     "zip": "30528",
+     "phone": "7062194507"
+    },
+    {
+     "address": "1050 Richard D Sailors Pkwy",
+     "city": "Powder Springs",
+     "state": "GA",
+     "zip": "30127",
+     "phone": "6789322956"
+    },
+    {
+     "address": "10995 State Bridge Rd",
+     "city": "Johns Creek",
+     "state": "GA",
+     "zip": "30022",
+     "phone": "4704484860"
+    },
+    {
+     "address": "1106 Fountain Park Cir",
+     "city": "Brunswick",
+     "state": "GA",
+     "zip": "31520",
+     "phone": "9122622151"
+    },
+    {
+     "address": "11172 Highway 142 N",
+     "city": "Covington",
+     "state": "GA",
+     "zip": "30014",
+     "phone": "6787123692"
+    },
+    {
+     "address": "11186 Highway 142 N",
+     "city": "Covington",
+     "state": "GA",
+     "zip": "30014",
+     "phone": "6787123692"
+    },
+    {
+     "address": "112 Kia Dr",
+     "city": "LaGrange",
+     "state": "GA",
+     "zip": "30241",
+     "phone": "7066686336"
+    },
+    {
+     "address": "112990 Highway 9 N",
+     "city": "Milton",
+     "state": "GA",
+     "zip": "30004",
+     "phone": "7707510095"
+    },
+    {
+     "address": "113 Poplar Springs Rd",
+     "city": "Ringgold",
+     "state": "GA",
+     "zip": "30736",
+     "phone": "7069373735"
+    },
+    {
+     "address": "11365 Tara Blvd",
+     "city": "Hampton",
+     "state": "GA",
+     "zip": "30228",
+     "phone": "7709990849"
+    },
+    {
+     "address": "11490 Alpharetta Hwy",
+     "city": "Roswell",
+     "state": "GA",
+     "zip": "30076",
+     "phone": "7707408592"
+    },
+    {
+     "address": "119 Canal St",
+     "city": "Pooler",
+     "state": "GA",
+     "zip": "31322",
+     "phone": "9123308444"
+    },
+    {
+     "address": "12041 US 19 S",
+     "city": "Leesburg",
+     "state": "GA",
+     "zip": "31763",
+     "phone": "2294962342"
+    },
+    {
+     "address": "1205 Johnson Ferry Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30068",
+     "phone": "7705653201"
+    },
+    {
+     "address": "12050 Highway 92",
+     "city": "Woodstock",
+     "state": "GA",
+     "zip": "30188",
+     "phone": "7705163072"
+    },
+    {
+     "address": "1227 Rockbridge Rd",
+     "city": "Stone Mountain",
+     "state": "GA",
+     "zip": "30087",
+     "phone": "7709259210"
+    },
+    {
+     "address": "1260 Mars Hill Rd",
+     "city": "Watkinsville",
+     "state": "GA",
+     "zip": "30677",
+     "phone": "7067056110"
+    },
+    {
+     "address": "1280 Hwy 74 S",
+     "city": "Peachtree City",
+     "state": "GA",
+     "zip": "30269",
+     "phone": "7704866398"
+    },
+    {
+     "address": "130 Long Branch Rd",
+     "city": "Dahlonega",
+     "state": "GA",
+     "zip": "30533",
+     "phone": "7068640200"
+    },
+    {
+     "address": "1305 Cedarcrest Rd",
+     "city": "Dallas",
+     "state": "GA",
+     "zip": "30132",
+     "phone": "7709179603"
+    },
+    {
+     "address": "1350 Upper Hembree Rd",
+     "city": "Roswell",
+     "state": "GA",
+     "zip": "30076",
+     "phone": "7706644809"
+    },
+    {
+     "address": "1365 Sam Nunn Blvd",
+     "city": "Perry",
+     "state": "GA",
+     "zip": "31069",
+     "phone": "4788457708"
+    },
+    {
+     "address": "1394 Battlefield Pkwy",
+     "city": "Fort Oglethorpe",
+     "state": "GA",
+     "zip": "30742",
+     "phone": "7068580252"
+    },
+    {
+     "address": "1438 Hwy 16 W",
+     "city": "Griffin",
+     "state": "GA",
+     "zip": "30223",
+     "phone": "7702330350"
+    },
+    {
+     "address": "1453 Riverstone Pkwy",
+     "city": "Canton",
+     "state": "GA",
+     "zip": "30114",
+     "phone": "7707040774"
+    },
+    {
+     "address": "150 Medical Way",
+     "city": "Riverdale",
+     "state": "GA",
+     "zip": "30274",
+     "phone": "7709912747"
+    },
+    {
+     "address": "1508 N Thornton Ave",
+     "city": "Dalton",
+     "state": "GA",
+     "zip": "30720",
+     "phone": "7062260816"
+    },
+    {
+     "address": "1620 Oak Farm Dr",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30005",
+     "phone": "4703856555"
+    },
+    {
+     "address": "1639 Bradley Park Dr",
+     "city": "Columbus",
+     "state": "GA",
+     "zip": "31904",
+     "phone": "7065696250"
+    },
+    {
+     "address": "1680 Eatonton Rd",
+     "city": "Madison",
+     "state": "GA",
+     "zip": "30650",
+     "phone": "7063421971"
+    },
+    {
+     "address": "1689 Old Pendergrass Rd",
+     "city": "Jefferson",
+     "state": "GA",
+     "zip": "30549",
+     "phone": "7063870212"
+    },
+    {
+     "address": "1706 Hwy 129 S",
+     "city": "Cleveland",
+     "state": "GA",
+     "zip": "30528",
+     "phone": "7062194507"
+    },
+    {
+     "address": "1715 Howell Mill Rd NW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30318",
+     "phone": "4043515432"
+    },
+    {
+     "address": "1800 E Victory Dr",
+     "city": "Savannah",
+     "state": "GA",
+     "zip": "31404",
+     "phone": "9122367020"
+    },
+    {
+     "address": "1817 Rice Ave",
+     "city": "Dublin",
+     "state": "GA",
+     "zip": "31021",
+     "phone": "4783040799"
+    },
+    {
+     "address": "1904 W Broadway Ave",
+     "city": "Maryville",
+     "state": "TN",
+     "zip": "37801",
+     "phone": "8659838129"
+    },
+    {
+     "address": "1958 N Columbia St Milledgeville",
+     "city": "Milledgeville",
+     "state": "GA",
+     "zip": "31061",
+     "phone": "4782952109"
+    },
+    {
+     "address": "20 Market St",
+     "city": "Saint Simons Island",
+     "state": "GA",
+     "zip": "31522",
+     "phone": "9126345885"
+    },
+    {
+     "address": "2065 Grayson Hwy",
+     "city": "Grayson",
+     "state": "GA",
+     "zip": "30017",
+     "phone": "6783760212"
+    },
+    {
+     "address": "2097 N Decatur Rd",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30033",
+     "phone": "4046347171"
+    },
+    {
+     "address": "2100 Roswell Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30062",
+     "phone": "6784026355"
+    },
+    {
+     "address": "2120 W Spring St",
+     "city": "Monroe",
+     "state": "GA",
+     "zip": "30655",
+     "phone": "6787123686"
+    },
+    {
+     "address": "215 Davis Blvd",
+     "city": "Bremen",
+     "state": "GA",
+     "zip": "30110",
+     "phone": "6788213425"
+    },
+    {
+     "address": "2215 Tobacco Rd",
+     "city": "Augusta",
+     "state": "GA",
+     "zip": "30906",
+     "phone": "7067552823"
+    },
+    {
+     "address": "2235 Harrison Rd SE",
+     "city": "Thomson",
+     "state": "GA",
+     "zip": "30824",
+     "phone": "7068422820"
+    },
+    {
+     "address": "2255 Peachtree Rd NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30309",
+     "phone": "4043513257"
+    },
+    {
+     "address": "2267 Memorial Dr",
+     "city": "Waycross",
+     "state": "GA",
+     "zip": "31501",
+     "phone": "9122851927"
+    },
+    {
+     "address": "2295 Towne Lake Pkwy",
+     "city": "Woodstock",
+     "state": "GA",
+     "zip": "30189",
+     "phone": "7709262744"
+    },
+    {
+     "address": "2300 Bethelview Rd",
+     "city": "Cumming",
+     "state": "GA",
+     "zip": "30040",
+     "phone": "7708881106"
+    },
+    {
+     "address": "235 Ward St W",
+     "city": "Douglas",
+     "state": "GA",
+     "zip": "31533",
+     "phone": "9125255400"
+    },
+    {
+     "address": "2463 Hamilton Mill Pkwy",
+     "city": "Dacula",
+     "state": "GA",
+     "zip": "30019",
+     "phone": "7709329521"
+    },
+    {
+     "address": "2500 Dallas Hwy SW",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30064",
+     "phone": "7704225078"
+    },
+    {
+     "address": "2515 Fence Rd",
+     "city": "Dacula",
+     "state": "GA",
+     "zip": "30019",
+     "phone": "7702372852"
+    },
+    {
+     "address": "254 Robert C Daniel Jr Pkwy",
+     "city": "Augusta",
+     "state": "GA",
+     "zip": "30909",
+     "phone": "7067235795"
+    },
+    {
+     "address": "2580 Windy Hill Rd SE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30067",
+     "phone": "7709161567"
+    },
+    {
+     "address": "2641 E College Ave",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30030",
+     "phone": "4042289781"
+    },
+    {
+     "address": "2695 Lee Rd",
+     "city": "Lithia Springs",
+     "state": "GA",
+     "zip": "30122",
+     "phone": "7706939161"
+    },
+    {
+     "address": "2750 Chapel Hill Rd",
+     "city": "Douglasville",
+     "state": "GA",
+     "zip": "30135",
+     "phone": "6789816290"
+    },
+    {
+     "address": "277 Hwy 74 N",
+     "city": "Peachtree City",
+     "state": "GA",
+     "zip": "30269",
+     "phone": "6783640337"
+    },
+    {
+     "address": "2800 E Atlanta Rd",
+     "city": "Ellenwood",
+     "state": "GA",
+     "zip": "30294",
+     "phone": "6787823609"
+    },
+    {
+     "address": "2815 Buford Dr",
+     "city": "Buford",
+     "state": "GA",
+     "zip": "30519",
+     "phone": "7702714413"
+    },
+    {
+     "address": "2838 E Atlanta Rd",
+     "city": "Ellenwood",
+     "state": "GA",
+     "zip": "30294",
+     "phone": "6787823609"
+    },
+    {
+     "address": "285 Blvd NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30312",
+     "phone": ""
+    },
+    {
+     "address": "2850 Holcomb Bridge Rd",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30022",
+     "phone": "6785857921"
+    },
+    {
+     "address": "2865B N Druid Hills Rd NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30329",
+     "phone": "4042283678"
+    },
+    {
+     "address": "299 N Broad St",
+     "city": "Winder",
+     "state": "GA",
+     "zip": "30680",
+     "phone": "7708679994"
+    },
+    {
+     "address": "3007 Panola Rd",
+     "city": "Lithonia",
+     "state": "GA",
+     "zip": "30038",
+     "phone": "4232387217"
+    },
+    {
+     "address": "3150 Hwy 34 E",
+     "city": "Newnan",
+     "state": "GA",
+     "zip": "30265",
+     "phone": "7707406600"
+    },
+    {
+     "address": "3200 Downwood Cir NW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30327",
+     "phone": "4043556220"
+    },
+    {
+     "address": "330 Turner McCall Blvd",
+     "city": "Rome",
+     "state": "GA",
+     "zip": "30165",
+     "phone": "7062356555"
+    },
+    {
+     "address": "3450 Cobb Pkwy NW",
+     "city": "Acworth",
+     "state": "GA",
+     "zip": "30101",
+     "phone": "7709741978"
+    },
+    {
+     "address": "3455 Peachtree Pkwy",
+     "city": "Suwanee",
+     "state": "GA",
+     "zip": "30024",
+     "phone": "6784731081"
+    },
+    {
+     "address": "3480 Keith Bridge Rd",
+     "city": "Cumming",
+     "state": "GA",
+     "zip": "30041",
+     "phone": "6784558773"
+    },
+    {
+     "address": "3489 Chamblee Tucker Rd",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30341",
+     "phone": "7709368025"
+    },
+    {
+     "address": "35 Depot St",
+     "city": "Hartwell",
+     "state": "GA",
+     "zip": "30643",
+     "phone": "7068422095"
+    },
+    {
+     "address": "3540 Duluth Park Ln",
+     "city": "Duluth",
+     "state": "GA",
+     "zip": "30096",
+     "phone": "7704974228"
+    },
+    {
+     "address": "3610 Piedmont Rd NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30305",
+     "phone": "4049631171"
+    },
+    {
+     "address": "3630 Peachtree Pkwy",
+     "city": "Suwanee",
+     "state": "GA",
+     "zip": "30024",
+     "phone": "6784731081"
+    },
+    {
+     "address": "3641 Centerville Hwy",
+     "city": "Snellville",
+     "state": "GA",
+     "zip": "30039",
+     "phone": "8885798983"
+    },
+    {
+     "address": "3855 Shallowford Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30062",
+     "phone": "6783520827"
+    },
+    {
+     "address": "3870 Martha Berry Hwy NE",
+     "city": "Rome",
+     "state": "GA",
+     "zip": "30165",
+     "phone": "7063783124"
+    },
+    {
+     "address": "3885 Princeton Lake Way SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30331",
+     "phone": "4043442823"
+    },
+    {
+     "address": "3919 Carter Rd A",
+     "city": "Buford",
+     "state": "GA",
+     "zip": "30518",
+     "phone": "8886285722"
+    },
+    {
+     "address": "400 Tower Rd NE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060",
+     "phone": "7704199437"
+    },
+    {
+     "address": "4145 Lawrenceville Hwy NW",
+     "city": "Lilburn",
+     "state": "GA",
+     "zip": "30047",
+     "phone": "6786917163"
+    },
+    {
+     "address": "419 Lewiston Rd",
+     "city": "Grovetown",
+     "state": "GA",
+     "zip": "30813",
+     "phone": "7069450420"
+    },
+    {
+     "address": "420 Walmart Way",
+     "city": "Dahlonega",
+     "state": "GA",
+     "zip": "30533",
+     "phone": "7064822268"
+    },
+    {
+     "address": "4200 Wade Green Rd NW",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30144",
+     "phone": "7706272364"
+    },
+    {
+     "address": "4215 Jimmy Lee Smith Pkwy",
+     "city": "Hiram",
+     "state": "GA",
+     "zip": "30141",
+     "phone": "7704394045"
+    },
+    {
+     "address": "4319 Hartley Bridge Rd",
+     "city": "Macon",
+     "state": "GA",
+     "zip": "31216",
+     "phone": "4783335111"
+    },
+    {
+     "address": "4404 Hugh Howell Rd",
+     "city": "Tucker",
+     "state": "GA",
+     "zip": "30084",
+     "phone": "7704935543"
+    },
+    {
+     "address": "4446 Washington Rd",
+     "city": "Evans",
+     "state": "GA",
+     "zip": "30809",
+     "phone": "7068693352"
+    },
+    {
+     "address": "4510 Nelson Brogdon Blvd",
+     "city": "Sugar Hill",
+     "state": "GA",
+     "zip": "30518",
+     "phone": "7709451045"
+    },
+    {
+     "address": "455 Philip Blvd",
+     "city": "Lawrenceville",
+     "state": "GA",
+     "zip": "30046",
+     "phone": "6789850238"
+    },
+    {
+     "address": "4600 W Villages Pl SE",
+     "city": "Smyrna",
+     "state": "GA",
+     "zip": "30080",
+     "phone": "4232387217"
+    },
+    {
+     "address": "461 Johnny Mercer Blvd",
+     "city": "Savannah",
+     "state": "GA",
+     "zip": "31410",
+     "phone": "9122313619"
+    },
+    {
+     "address": "4959 Bill Gardner Pkwy",
+     "city": "Locust Grove",
+     "state": "GA",
+     "zip": "30248",
+     "phone": "4232387217"
+    },
+    {
+     "address": "508 S 3rd Ave",
+     "city": "Chatsworth",
+     "state": "GA",
+     "zip": "30705",
+     "phone": "7069712780"
+    },
+    {
+     "address": "511 Gordon Ave",
+     "city": "Thomasville",
+     "state": "GA",
+     "zip": "31792",
+     "phone": "2292289019"
+    },
+    {
+     "address": "5200 Dallas Hwy",
+     "city": "Powder Springs",
+     "state": "GA",
+     "zip": "30127",
+     "phone": "7704853203"
+    },
+    {
+     "address": "5310 Matt Hwy",
+     "city": "Cumming",
+     "state": "GA",
+     "zip": "30028",
+     "phone": "4702394255"
+    },
+    {
+     "address": "5370 Campbellton Fairburn Rd",
+     "city": "Fairburn",
+     "state": "GA",
+     "zip": "30213",
+     "phone": "6786664146"
+    },
+    {
+     "address": "5395 Hwy 136",
+     "city": "Trenton",
+     "state": "GA",
+     "zip": "30752",
+     "phone": "7066573035"
+    },
+    {
+     "address": "540 W Crossville Rd",
+     "city": "Roswell",
+     "state": "GA",
+     "zip": "30075",
+     "phone": "6785850175"
+    },
+    {
+     "address": "5415 Thompson Mill Rd",
+     "city": "Hoschton",
+     "state": "GA",
+     "zip": "30548",
+     "phone": "7709653508"
+    },
+    {
+     "address": "5429 Bowman Rd",
+     "city": "Macon",
+     "state": "GA",
+     "zip": "31210",
+     "phone": "4782199673"
+    },
+    {
+     "address": "5495 Cascade Rd SW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30331",
+     "phone": "4042285817"
+    },
+    {
+     "address": "5500 Chamblee Dunwoody Rd",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30338",
+     "phone": "7703963033"
+    },
+    {
+     "address": "5575 New Northside Dr",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30339",
+     "phone": "7707267867"
+    },
+    {
+     "address": "561 Thornton Rd",
+     "city": "Lithia Springs",
+     "state": "GA",
+     "zip": "30122",
+     "phone": "7705753154"
+    },
+    {
+     "address": "5710 Ogeechee Rd",
+     "city": "Savannah",
+     "state": "GA",
+     "zip": "31405",
+     "phone": "9127773378"
+    },
+    {
+     "address": "5815 Windward Pkwy",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30005",
+     "phone": "6785668091"
+    },
+    {
+     "address": "5948 E Lake Pkwy",
+     "city": "McDonough",
+     "state": "GA",
+     "zip": "30253",
+     "phone": "4708786059"
+    },
+    {
+     "address": "60 Exchange St",
+     "city": "Richmond Hill",
+     "state": "GA",
+     "zip": "31324",
+     "phone": "9124590072"
+    },
+    {
+     "address": "600 Chastain Rd NW",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30144",
+     "phone": "7704256701"
+    },
+    {
+     "address": "6010 Singleton Rd",
+     "city": "Norcross",
+     "state": "GA",
+     "zip": "30093",
+     "phone": "6788091466"
+    },
+    {
+     "address": "6035 Peachtree Rd",
+     "city": "Doraville",
+     "state": "GA",
+     "zip": "30360",
+     "phone": "7707331923"
+    },
+    {
+     "address": "6050 Peachtree",
+     "city": "Norcross",
+     "state": "GA",
+     "zip": "30092",
+     "phone": "7704411276"
+    },
+    {
+     "address": "6183 Lake Oconee Pkwy",
+     "city": "Greensboro",
+     "state": "GA",
+     "zip": "30642",
+     "phone": "7624451940"
+    },
+    {
+     "address": "62 Carriage Oaks Dr",
+     "city": "Tyrone",
+     "state": "GA",
+     "zip": "30290",
+     "phone": "7709697166"
+    },
+    {
+     "address": "626 E Main St",
+     "city": "Cartersville",
+     "state": "GA",
+     "zip": "30121",
+     "phone": "7703839734"
+    },
+    {
+     "address": "6361 Talokas Ln",
+     "city": "Columbus",
+     "state": "GA",
+     "zip": "31909",
+     "phone": "7065696250"
+    },
+    {
+     "address": "6395 Old National Hwy",
+     "city": "College Park",
+     "state": "GA",
+     "zip": "30349",
+     "phone": "7709940188"
+    },
+    {
+     "address": "6586 GA Hwy 40 E",
+     "city": "Saint Marys",
+     "state": "GA",
+     "zip": "31558",
+     "phone": "9128093015"
+    },
+    {
+     "address": "6601 Sugarloaf Pkwy",
+     "city": "Duluth",
+     "state": "GA",
+     "zip": "30097",
+     "phone": "7708143900"
+    },
+    {
+     "address": "6768 Hickory Flat Hwy",
+     "city": "Canton",
+     "state": "GA",
+     "zip": "30115",
+     "phone": "7707215767"
+    },
+    {
+     "address": "689 Hospital Rd",
+     "city": "Commerce",
+     "state": "GA",
+     "zip": "30529",
+     "phone": "7063359300"
+    },
+    {
+     "address": "705 Town Blvd NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30319",
+     "phone": "4048691912"
+    },
+    {
+     "address": "718 Cherokee St NE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30060",
+     "phone": "4707872932"
+    },
+    {
+     "address": "7805 Abercorn St",
+     "city": "Savannah",
+     "state": "GA",
+     "zip": "31406",
+     "phone": "9123563559"
+    },
+    {
+     "address": "785 Shugart Rd",
+     "city": "Dalton",
+     "state": "GA",
+     "zip": "30720",
+     "phone": "7062260816"
+    },
+    {
+     "address": "7938 GA Highway 21",
+     "city": "Port Wentworth",
+     "state": "GA",
+     "zip": "31407",
+     "phone": "9129650601"
+    },
+    {
+     "address": "7951 Villa Rica Hwy",
+     "city": "Dallas",
+     "state": "GA",
+     "zip": "30157",
+     "phone": "4709773310"
+    },
+    {
+     "address": "800 Peachtree St NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30308",
+     "phone": "4045237709"
+    },
+    {
+     "address": "8012 Cumming Hwy",
+     "city": "Canton",
+     "state": "GA",
+     "zip": "30115",
+     "phone": "7702246838"
+    },
+    {
+     "address": "804 S Pierce St",
+     "city": "Alma",
+     "state": "GA",
+     "zip": "31510",
+     "phone": "9126322667"
+    },
+    {
+     "address": "810 Plaza Dr",
+     "city": "Zebulon",
+     "state": "GA",
+     "zip": "30295",
+     "phone": "6784511280"
+    },
+    {
+     "address": "840 Buckhead Dr",
+     "city": "Statesboro",
+     "state": "GA",
+     "zip": "30458",
+     "phone": "9122599355"
+    },
+    {
+     "address": "842 N Highland Ave NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30306",
+     "phone": "6786859356"
+    },
+    {
+     "address": "860 Johnson Ferry Rd NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30342",
+     "phone": "4042525545"
+    },
+    {
+     "address": "863 W Oglethorpe Hwy",
+     "city": "Hinesville",
+     "state": "GA",
+     "zip": "31313",
+     "phone": "9123680534"
+    },
+    {
+     "address": "898 Hampton Rd",
+     "city": "McDonough",
+     "state": "GA",
+     "zip": "30253",
+     "phone": "6785839954"
+    },
+    {
+     "address": "909 S Park St",
+     "city": "Carrollton",
+     "state": "GA",
+     "zip": "30117",
+     "phone": "7708348702"
+    },
+    {
+     "address": "916 Loganville Hwy",
+     "city": "Bethlehem",
+     "state": "GA",
+     "zip": "30620",
+     "phone": "7708677463"
+    },
+    {
+     "address": "921 Moores Ferry Rd",
+     "city": "Villa Rica",
+     "state": "GA",
+     "zip": "30180",
+     "phone": "6788408881"
+    },
+    {
+     "address": "925 Garrett St",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30316",
+     "phone": "4046245407"
+    },
+    {
+     "address": "9420 Willeo Rd",
+     "city": "Roswell",
+     "state": "GA",
+     "zip": "30075",
+     "phone": "7705947250"
+    },
+    {
+     "address": "9622 Martha Berry Hwy",
+     "city": "Rock Spring",
+     "state": "GA",
+     "zip": "30739",
+     "phone": "7063955779"
+    }
+   ],
+   "plans": [
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010004",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010005",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010006",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010007",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010008",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010010",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010012",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010013",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010014",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010015",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010019",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010020",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010021",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    }
+   ],
+   "last_updated_on": "2026-08-20"
+  },
+  {
+   "npi": "1013058742",
+   "type": "GROUP",
+   "group_name": "100 Percent A Chiropractic Wellness  Ctr",
+   "specialty": [],
+   "addresses": [
+    {
+     "address": "1600 Mall of GA Blvd",
+     "city": "Buford",
+     "state": "GA",
+     "zip": "30519",
+     "phone": "7706141009"
+    },
+    {
+     "address": "1738 Dayton Blvd",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37405",
+     "phone": "4238000100"
+    },
+    {
+     "address": "3586 Old Milton Pkwy",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30005",
+     "phone": "6783797141"
+    },
+    {
+     "address": "1275 Shiloh Road NW",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30144",
+     "phone": "6788095773"
+    },
+    {
+     "address": "1885 Lawrenceville Suwanee Rd",
+     "city": "Lawrenceville",
+     "state": "GA",
+     "zip": "30043",
+     "phone": "7704970073"
+    },
+    {
+     "address": "3422 Sixes Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30064",
+     "phone": "7702138890"
+    },
+    {
+     "address": "131 Roswell St",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30009",
+     "phone": "7705586580"
+    },
+    {
+     "address": "1919 Glynn Avenue",
+     "city": "Brunswick",
+     "state": "GA",
+     "zip": "31520",
+     "phone": "9124669945"
+    },
+    {
+     "address": "801 Chickamouga Ave",
+     "city": "Rossville",
+     "state": "GA",
+     "zip": "30741",
+     "phone": "7068419969"
+    },
+    {
+     "address": "931 Lower Fayetteville Rd",
+     "city": "Newnan",
+     "state": "GA",
+     "zip": "30263",
+     "phone": "7706836884"
+    },
+    {
+     "address": "80 Horizon Dr",
+     "city": "Suwanee",
+     "state": "GA",
+     "zip": "30024",
+     "phone": "6787656230"
+    },
+    {
+     "address": "2850 Stage Village Cove",
+     "city": "Bartlett",
+     "state": "TN",
+     "zip": "38134",
+     "phone": "9013778600"
+    },
+    {
+     "address": "860 Franklin Gtwy SE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30067",
+     "phone": "7874498263"
+    },
+    {
+     "address": "1675 Heraeus Blvd",
+     "city": "Buford",
+     "state": "GA",
+     "zip": "30518",
+     "phone": "7702719355"
+    },
+    {
+     "address": "3775 Venture Dr",
+     "city": "Duluth",
+     "state": "GA",
+     "zip": "30096",
+     "phone": "6787357474"
+    },
+    {
+     "address": "1869 E Main St",
+     "city": "Hogansville",
+     "state": "GA",
+     "zip": "30230",
+     "phone": "7066371114"
+    },
+    {
+     "address": "9590 Medlock Rd",
+     "city": "Duluth",
+     "state": "GA",
+     "zip": "30097",
+     "phone": "7704101234"
+    },
+    {
+     "address": "184 Lovvorn Ave",
+     "city": "Bowdon",
+     "state": "GA",
+     "zip": "30108",
+     "phone": "7702588100"
+    },
+    {
+     "address": "2020 Lawrenceville-Suwanee Rd",
+     "city": "Suwanee",
+     "state": "GA",
+     "zip": "30024",
+     "phone": "7709620559"
+    },
+    {
+     "address": "2161 Cedarcrest Rd",
+     "city": "Acworth",
+     "state": "GA",
+     "zip": "30101",
+     "phone": "6785744878"
+    },
+    {
+     "address": "1400 Buford Hwy",
+     "city": "Buford",
+     "state": "GA",
+     "zip": "30518",
+     "phone": "6789042074"
+    },
+    {
+     "address": "11180 State Bridge Rd",
+     "city": "Johns Creek",
+     "state": "GA",
+     "zip": "30022",
+     "phone": "7707401255"
+    },
+    {
+     "address": "432 Corbin Ave",
+     "city": "Macon",
+     "state": "GA",
+     "zip": "31204",
+     "phone": "4787437575"
+    },
+    {
+     "address": "4385 Kimball Bridge Rd",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30022",
+     "phone": "6788986889"
+    },
+    {
+     "address": "2811 Watson Blvd",
+     "city": "Warner Robins",
+     "state": "GA",
+     "zip": "31093",
+     "phone": "4789714110"
+    },
+    {
+     "address": "6600 Roswell Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30328",
+     "phone": "4045310055"
+    },
+    {
+     "address": "799 Main St N",
+     "city": "Cornelia",
+     "state": "GA",
+     "zip": "30531",
+     "phone": "7067784013"
+    },
+    {
+     "address": "254 N Main St",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30009",
+     "phone": "7707544567"
+    },
+    {
+     "address": "1395 S Marieta Pkwy SE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30067",
+     "phone": "5705744152"
+    },
+    {
+     "address": "138 Canal St",
+     "city": "Pooler",
+     "state": "GA",
+     "zip": "31322",
+     "phone": "9123546767"
+    },
+    {
+     "address": "11525 Haynes Bridge Rd",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30009",
+     "phone": "7707723500"
+    },
+    {
+     "address": "95 Mikel St",
+     "city": "Cleveland",
+     "state": "TN",
+     "zip": "37312",
+     "phone": "4234760023"
+    },
+    {
+     "address": "3901 Maryu Eliza Trace NW",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30064",
+     "phone": "7704425052"
+    },
+    {
+     "address": "6602 Church St",
+     "city": "Douglasville",
+     "state": "GA",
+     "zip": "30134",
+     "phone": "7709422396"
+    },
+    {
+     "address": "327 Dahlonega St",
+     "city": "Cumming",
+     "state": "GA",
+     "zip": "30040",
+     "phone": "7875258307"
+    },
+    {
+     "address": "413 Greenville St",
+     "city": "Lagrange",
+     "state": "GA",
+     "zip": "30241",
+     "phone": "7068122225"
+    },
+    {
+     "address": "1000 Woodstock Pkwy",
+     "city": "Woodstock",
+     "state": "GA",
+     "zip": "30188",
+     "phone": "6783887788"
+    },
+    {
+     "address": "300 S Piedmont SE",
+     "city": "Calhoun",
+     "state": "GA",
+     "zip": "30701",
+     "phone": "7066022554"
+    },
+    {
+     "address": "2745 Sandy Plains Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30066",
+     "phone": "7705092554"
+    },
+    {
+     "address": "4292 Memorial Dr",
+     "city": "Decatur",
+     "state": "GA",
+     "zip": "30032",
+     "phone": "4042945050"
+    },
+    {
+     "address": "5155 Stilesboro Rd",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30152",
+     "phone": "4046496889"
+    },
+    {
+     "address": "1420 N Jefferson St",
+     "city": "Milledgeville",
+     "state": "GA",
+     "zip": "31061",
+     "phone": "4784524821"
+    },
+    {
+     "address": "3525 L'ville Suwanee Rd",
+     "city": "Suwanee",
+     "state": "GA",
+     "zip": "30024",
+     "phone": "7706149599"
+    },
+    {
+     "address": "2920 Marietta Hwy",
+     "city": "Canton",
+     "state": "GA",
+     "zip": "30114",
+     "phone": "7705800123"
+    },
+    {
+     "address": "1630 Buford Hwy",
+     "city": "Buford",
+     "state": "GA",
+     "zip": "30518",
+     "phone": "7709450561"
+    },
+    {
+     "address": "2479 Riverdale Rd",
+     "city": "College Park",
+     "state": "GA",
+     "zip": "30337",
+     "phone": "2055877518"
+    },
+    {
+     "address": "5527 Rodehall Pl",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30349",
+     "phone": "2055877518"
+    },
+    {
+     "address": "1100 Spring St NW",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30309",
+     "phone": "4048151505"
+    },
+    {
+     "address": "1102 N Jefferson St",
+     "city": "Dublin",
+     "state": "GA",
+     "zip": "31021",
+     "phone": "4782721800"
+    },
+    {
+     "address": "1215 Eagles Landing Pkwy",
+     "city": "Stockbridge",
+     "state": "GA",
+     "zip": "30281",
+     "phone": "7702938790"
+    },
+    {
+     "address": "2820 Lassiter Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30062",
+     "phone": "4048388985"
+    },
+    {
+     "address": "230 Riverstone Pkwy",
+     "city": "Canton",
+     "state": "GA",
+     "zip": "30114",
+     "phone": "7707200099"
+    },
+    {
+     "address": "110 Evans Mill Dr",
+     "city": "Dallas",
+     "state": "GA",
+     "zip": "30157",
+     "phone": "4704647733"
+    },
+    {
+     "address": "349 Reinhardt College Pkwy",
+     "city": "Canton",
+     "state": "GA",
+     "zip": "30114",
+     "phone": "4706463119"
+    },
+    {
+     "address": "2425 W Broad St",
+     "city": "Athens",
+     "state": "GA",
+     "zip": "30606",
+     "phone": "7065432584"
+    },
+    {
+     "address": "1727 Hwy 42 N",
+     "city": "McDonough",
+     "state": "GA",
+     "zip": "30253",
+     "phone": "7708983670"
+    },
+    {
+     "address": "1630 Buford Hwy NE",
+     "city": "Buford",
+     "state": "GA",
+     "zip": "30518",
+     "phone": "6785954320"
+    },
+    {
+     "address": "3575 Braselton Hwy",
+     "city": "Dacula",
+     "state": "GA",
+     "zip": "30019",
+     "phone": "7706146630"
+    },
+    {
+     "address": "1000 Whitlock Ave",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30064",
+     "phone": "7704277387"
+    },
+    {
+     "address": "3473 Satellite Blvd",
+     "city": "Duluth",
+     "state": "GA",
+     "zip": "30096",
+     "phone": "7704277387"
+    },
+    {
+     "address": "7454 Hannover Pkwy",
+     "city": "Newnan",
+     "state": "GA",
+     "zip": "30271",
+     "phone": "7704277387"
+    },
+    {
+     "address": "950 Cobb Pkwy SE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30063",
+     "phone": "7704277387"
+    },
+    {
+     "address": "1720 Mount Vernon Rd",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30338",
+     "phone": "6785802485"
+    },
+    {
+     "address": "7910 Mall Ring Rd",
+     "city": "Lithonia",
+     "state": "GA",
+     "zip": "30038",
+     "phone": "4703953142"
+    },
+    {
+     "address": "2000 Powers Ferry Rd SE",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30067",
+     "phone": "7708029687"
+    },
+    {
+     "address": "2790 Sandy Plains Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30066",
+     "phone": "7705658151"
+    },
+    {
+     "address": "120 Hickory Rd",
+     "city": "Canton",
+     "state": "GA",
+     "zip": "30115",
+     "phone": "6788806616"
+    },
+    {
+     "address": "5618 Brainerd Rd",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37411",
+     "phone": "7064596456"
+    },
+    {
+     "address": "468 Hwy 53 E",
+     "city": "Calhoun",
+     "state": "GA",
+     "zip": "30701",
+     "phone": "7064599456"
+    },
+    {
+     "address": "201 S Dean St",
+     "city": "Spartanburg",
+     "state": "SC",
+     "zip": "29302",
+     "phone": "8645833967"
+    },
+    {
+     "address": "3499 Duluth Park Ln",
+     "city": "Duluth",
+     "state": "GA",
+     "zip": "30096",
+     "phone": "7704762450"
+    },
+    {
+     "address": "1101 Cambridge Square",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30009",
+     "phone": "7704752225"
+    },
+    {
+     "address": "3025 Maple Dr",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30305",
+     "phone": "4042619522"
+    },
+    {
+     "address": "1600 Kennesaw Due West Rd",
+     "city": "Kennesaw",
+     "state": "GA",
+     "zip": "30152",
+     "phone": "6787428528"
+    },
+    {
+     "address": "2005 Boggs Rd",
+     "city": "Duluth",
+     "state": "GA",
+     "zip": "30096",
+     "phone": "7704970882"
+    },
+    {
+     "address": "1295 Old Peachtree Rd NW",
+     "city": "Suwanee",
+     "state": "GA",
+     "zip": "30024",
+     "phone": "4049329770"
+    },
+    {
+     "address": "4530 Nelson Brogdon Blvd",
+     "city": "Sugar Hill",
+     "state": "GA",
+     "zip": "30518",
+     "phone": "7702718949"
+    },
+    {
+     "address": "7000 Peachtree Dunwoody Rd",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30328",
+     "phone": "4049904678"
+    },
+    {
+     "address": "3536 Cummings Hwy",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37419",
+     "phone": "4238255252"
+    },
+    {
+     "address": "1685 Mars Hill Rd NW",
+     "city": "Acworth",
+     "state": "GA",
+     "zip": "30101",
+     "phone": "7702180400"
+    },
+    {
+     "address": "4935 Jimmy Carter Blvd",
+     "city": "Norcross",
+     "state": "GA",
+     "zip": "30093",
+     "phone": "4705450275"
+    },
+    {
+     "address": "6715 Hwy 41",
+     "city": "Ringgold",
+     "state": "GA",
+     "zip": "30736",
+     "phone": "7069359355"
+    },
+    {
+     "address": "1275 Powers Ferry Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30067",
+     "phone": "7709529664"
+    },
+    {
+     "address": "5825 Glenridge Dr",
+     "city": "Smyrna",
+     "state": "GA",
+     "zip": "30082",
+     "phone": "4702139202"
+    },
+    {
+     "address": "5441 Buford Hwy NE",
+     "city": "Doraville",
+     "state": "GA",
+     "zip": "30340",
+     "phone": "7704517848"
+    },
+    {
+     "address": "550 Hampton Rd",
+     "city": "Mcdonough",
+     "state": "GA",
+     "zip": "30253",
+     "phone": "7709577881"
+    },
+    {
+     "address": "2440 Vineville Ave",
+     "city": "Macon",
+     "state": "GA",
+     "zip": "31204",
+     "phone": "4783305087"
+    },
+    {
+     "address": "2509 N Ocoee St",
+     "city": "Cleveland",
+     "state": "TN",
+     "zip": "37312",
+     "phone": "4234782225"
+    },
+    {
+     "address": "424 Crosstown Dr",
+     "city": "Peachtree City",
+     "state": "GA",
+     "zip": "30269",
+     "phone": "7703366546"
+    },
+    {
+     "address": "8501 Hwy 85",
+     "city": "Riverdale",
+     "state": "GA",
+     "zip": "30274",
+     "phone": "7704785350"
+    },
+    {
+     "address": "1342 Northside Dr E",
+     "city": "Statesboro",
+     "state": "GA",
+     "zip": "30458",
+     "phone": "9126817746"
+    },
+    {
+     "address": "5008 North henry Blvd",
+     "city": "Stockbridge",
+     "state": "GA",
+     "zip": "30281",
+     "phone": "7705067788"
+    },
+    {
+     "address": "3370 Lawrenceville-Suwanee Rd",
+     "city": "Suwanee",
+     "state": "GA",
+     "zip": "30024",
+     "phone": "6788892594"
+    },
+    {
+     "address": "288 S Main St",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30009",
+     "phone": "7702744840"
+    },
+    {
+     "address": "2896 Chamblee Tucker Rd",
+     "city": "Chamblee",
+     "state": "GA",
+     "zip": "30341",
+     "phone": "7704570584"
+    },
+    {
+     "address": "3655 Macland Rd",
+     "city": "Hiram",
+     "state": "GA",
+     "zip": "30141",
+     "phone": "7704396063"
+    },
+    {
+     "address": "1011 N 5th Ave NE",
+     "city": "Rome",
+     "state": "GA",
+     "zip": "30165",
+     "phone": "7702347000"
+    },
+    {
+     "address": "5707 Abercorn St",
+     "city": "Savannah",
+     "state": "GA",
+     "zip": "31405",
+     "phone": "9123545073"
+    },
+    {
+     "address": "6111 Peachtree Dunwooday Rd NE",
+     "city": "Sandy Springs",
+     "state": "GA",
+     "zip": "30328",
+     "phone": "7706980909"
+    },
+    {
+     "address": "1017 E Hwy 80",
+     "city": "Pooler",
+     "state": "GA",
+     "zip": "31322",
+     "phone": "9127489125"
+    },
+    {
+     "address": "736 Windy Hill Rd SE",
+     "city": "Smyrna",
+     "state": "GA",
+     "zip": "30080",
+     "phone": "7709553502"
+    },
+    {
+     "address": "1170 Alpharetta St",
+     "city": "Roswell",
+     "state": "GA",
+     "zip": "30075",
+     "phone": "6786503866"
+    },
+    {
+     "address": "9716 Red Stone Dr",
+     "city": "Indian Land",
+     "state": "SC",
+     "zip": "29707",
+     "phone": "8039929966"
+    },
+    {
+     "address": "1870 Independence SQ Ste B",
+     "city": "Dunwoody",
+     "state": "GA",
+     "zip": "30338",
+     "phone": "7704554547"
+    },
+    {
+     "address": "2453 Towne Lake Pkwy",
+     "city": "Woodstock",
+     "state": "GA",
+     "zip": "30189",
+     "phone": "7705922505"
+    },
+    {
+     "address": "2308 D Memorial Blvd",
+     "city": "Springfield",
+     "state": "TN",
+     "zip": "37172",
+     "phone": "6153828144"
+    },
+    {
+     "address": "243 Smithville Church Rd",
+     "city": "Warner Robins",
+     "state": "GA",
+     "zip": "31088",
+     "phone": "4783333320"
+    },
+    {
+     "address": "1003 E Freeway Dr SE",
+     "city": "Conyers",
+     "state": "GA",
+     "zip": "30094",
+     "phone": "7707600060"
+    },
+    {
+     "address": "405 Pharr Rd NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30305",
+     "phone": "4042311872"
+    },
+    {
+     "address": "1044 Greystone Square",
+     "city": "Jackson",
+     "state": "TN",
+     "zip": "38305",
+     "phone": "7316645354"
+    },
+    {
+     "address": "2456 Macland Rd",
+     "city": "Dallas",
+     "state": "GA",
+     "zip": "30157",
+     "phone": "4043133198"
+    },
+    {
+     "address": "414 Lugenia Dr",
+     "city": "Vidalia",
+     "state": "GA",
+     "zip": "30474",
+     "phone": "9126859200"
+    },
+    {
+     "address": "1350 Joe Frank Harris Pkwy SE",
+     "city": "Cartersville",
+     "state": "GA",
+     "zip": "30120",
+     "phone": "6788488472"
+    },
+    {
+     "address": "207 E Felton Rd",
+     "city": "Cartersville",
+     "state": "GA",
+     "zip": "30120",
+     "phone": "6788488472"
+    },
+    {
+     "address": "44 Braves Ave",
+     "city": "Lawrenceville",
+     "state": "GA",
+     "zip": "30043",
+     "phone": "7709547244"
+    },
+    {
+     "address": "7380 Spout Springs Rd",
+     "city": "Flowery Branch",
+     "state": "GA",
+     "zip": "30542",
+     "phone": "7709547244"
+    },
+    {
+     "address": "4245 Johns Creek Pkwy",
+     "city": "Johns Creek",
+     "state": "GA",
+     "zip": "30024",
+     "phone": "6783040480"
+    },
+    {
+     "address": "505 N Laurel St",
+     "city": "Springfield",
+     "state": "GA",
+     "zip": "31329",
+     "phone": "9127543218"
+    },
+    {
+     "address": "246 Creekstone Ridge",
+     "city": "Woodstock",
+     "state": "GA",
+     "zip": "30188",
+     "phone": "6784949668"
+    },
+    {
+     "address": "74 Hwy 48",
+     "city": "Summerville",
+     "state": "GA",
+     "zip": "30747",
+     "phone": "7068574911"
+    },
+    {
+     "address": "3169 Maple Dr NE",
+     "city": "Atlanta",
+     "state": "GA",
+     "zip": "30305",
+     "phone": "7702396464"
+    },
+    {
+     "address": "5370 Hwy 78",
+     "city": "Stone Mountain",
+     "state": "GA",
+     "zip": "30087",
+     "phone": "7704987879"
+    },
+    {
+     "address": "419 Cherry St",
+     "city": "Macon",
+     "state": "GA",
+     "zip": "31201",
+     "phone": "4787467246"
+    },
+    {
+     "address": "498 Poplar St",
+     "city": "Macon",
+     "state": "GA",
+     "zip": "31201",
+     "phone": "4787467246"
+    },
+    {
+     "address": "1051 Park Dr",
+     "city": "Greensboro",
+     "state": "GA",
+     "zip": "30642",
+     "phone": "7622201144"
+    },
+    {
+     "address": "255 N Main St",
+     "city": "Madison",
+     "state": "GA",
+     "zip": "30650",
+     "phone": "7064381314"
+    },
+    {
+     "address": "11929 Augusta Rd",
+     "city": "Lavonia",
+     "state": "GA",
+     "zip": "30553",
+     "phone": "7063560776"
+    },
+    {
+     "address": "220 Gornto Rd",
+     "city": "Valdosta",
+     "state": "GA",
+     "zip": "31602",
+     "phone": "2292472828"
+    },
+    {
+     "address": "1939 Homer Rd",
+     "city": "Commerce",
+     "state": "GA",
+     "zip": "30529",
+     "phone": "7063521389"
+    },
+    {
+     "address": "3439 Keith St NW",
+     "city": "Cleveland",
+     "state": "TN",
+     "zip": "37312",
+     "phone": "4234581502"
+    },
+    {
+     "address": "317 N Main St",
+     "city": "Alpharetta",
+     "state": "GA",
+     "zip": "30009",
+     "phone": "7707408740"
+    },
+    {
+     "address": "3000 Windy Hill Rd",
+     "city": "Marietta",
+     "state": "GA",
+     "zip": "30067",
+     "phone": "7709888884"
+    }
+   ],
+   "plans": [
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010004",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010005",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010006",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010007",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010008",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010010",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010012",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010013",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010014",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010015",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010019",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010020",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010021",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    }
+   ],
+   "last_updated_on": "2026-08-20"
+  },
+  {
+   "npi": "1164474342",
+   "type": "FACILITY",
+   "facility_name": "Independent Physical Therapy",
+   "facility_type": [
+    "Physical Therapy Facility"
+   ],
+   "addresses": [
+    {
+     "address": "1 Sheridan Sq",
+     "city": "Kingsport",
+     "state": "TN",
+     "zip": "37660",
+     "phone": "4232300194"
+    },
+    {
+     "address": "1000 Pickwick St",
+     "city": "Savannah",
+     "state": "TN",
+     "zip": "38372",
+     "phone": "7319846202"
+    },
+    {
+     "address": "104 Jack Dance St",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37919",
+     "phone": "8656918381"
+    },
+    {
+     "address": "10665 Hardin Valley Rd",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37932",
+     "phone": "8656902960"
+    },
+    {
+     "address": "111 W Kingston Springs Rd",
+     "city": "Kingston Springs",
+     "state": "TN",
+     "zip": "37082",
+     "phone": "6154121131"
+    },
+    {
+     "address": "112 Newport Towne Center",
+     "city": "Newport",
+     "state": "TN",
+     "zip": "37821",
+     "phone": "4236232890"
+    },
+    {
+     "address": "1124 N Gateway Ave",
+     "city": "Rockwood",
+     "state": "TN",
+     "zip": "37854",
+     "phone": "8658829183"
+    },
+    {
+     "address": "115 Cumberland Plz",
+     "city": "Crossville",
+     "state": "TN",
+     "zip": "38555",
+     "phone": "9317871244"
+    },
+    {
+     "address": "1153 Oak Ridge Tpke",
+     "city": "Oak Ridge",
+     "state": "TN",
+     "zip": "37830",
+     "phone": "8656850904"
+    },
+    {
+     "address": "117 saundersville Rd",
+     "city": "Hendersonville",
+     "state": "TN",
+     "zip": "37075",
+     "phone": "6297778832"
+    },
+    {
+     "address": "1202 N Charles G Seivers Blvd",
+     "city": "Clinton",
+     "state": "TN",
+     "zip": "37716",
+     "phone": "8654570192"
+    },
+    {
+     "address": "125 Mountain View Dr",
+     "city": "Vonore",
+     "state": "TN",
+     "zip": "37885",
+     "phone": "4232387217"
+    },
+    {
+     "address": "132 Newport Towne Ctr",
+     "city": "Newport",
+     "state": "TN",
+     "zip": "37821",
+     "phone": "4236232890"
+    },
+    {
+     "address": "1412 Huntsville Hwy",
+     "city": "Fayetteville",
+     "state": "TN",
+     "zip": "37334",
+     "phone": "9314386335"
+    },
+    {
+     "address": "143 Thornton Dr Dickson",
+     "city": "Dickson",
+     "state": "TN",
+     "zip": "37055",
+     "phone": "6292357110"
+    },
+    {
+     "address": "1430 Volunteer Pkwy",
+     "city": "Bristol",
+     "state": "TN",
+     "zip": "37620",
+     "phone": "4236520265"
+    },
+    {
+     "address": "1467 N Mack Smith Rd",
+     "city": "East Ridge",
+     "state": "TN",
+     "zip": "37412",
+     "phone": "4238944403"
+    },
+    {
+     "address": "1480 E 3rd St",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37404",
+     "phone": "4236222459"
+    },
+    {
+     "address": "14821 Dayton Pike",
+     "city": "Sale Creek",
+     "state": "TN",
+     "zip": "37373",
+     "phone": "4232696496"
+    },
+    {
+     "address": "15 Courthouse Sq",
+     "city": "Jasper",
+     "state": "TN",
+     "zip": "37347",
+     "phone": "4239428073"
+    },
+    {
+     "address": "15331 Rankin Ave Ste B",
+     "city": "Dunlap",
+     "state": "TN",
+     "zip": "37327",
+     "phone": "4239492793"
+    },
+    {
+     "address": "15653 Rankin Ave",
+     "city": "Dunlap",
+     "state": "TN",
+     "zip": "37327",
+     "phone": "4239492793"
+    },
+    {
+     "address": "1595 Mallory Ln",
+     "city": "Brentwood",
+     "state": "TN",
+     "zip": "37027",
+     "phone": "6159004838"
+    },
+    {
+     "address": "1608 Gunbarrel Rd",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37421",
+     "phone": "4238928070"
+    },
+    {
+     "address": "1626 Lee Victory Pkwy",
+     "city": "Smyrna",
+     "state": "TN",
+     "zip": "37167",
+     "phone": "6159628807"
+    },
+    {
+     "address": "1642 Memorial Blvd",
+     "city": "Murfreesboro",
+     "state": "TN",
+     "zip": "37129",
+     "phone": "6158958157"
+    },
+    {
+     "address": "1660 W College St",
+     "city": "Pulaski",
+     "state": "TN",
+     "zip": "38478",
+     "phone": "9314245588"
+    },
+    {
+     "address": "1704 E Stone Dr",
+     "city": "Kingsport",
+     "state": "TN",
+     "zip": "37660",
+     "phone": "4237650985"
+    },
+    {
+     "address": "178 Centre St",
+     "city": "Pleasant View",
+     "state": "TN",
+     "zip": "37146",
+     "phone": "6292408710"
+    },
+    {
+     "address": "1802 N Jackson St",
+     "city": "Tullahoma",
+     "state": "TN",
+     "zip": "37388",
+     "phone": "9312224482"
+    },
+    {
+     "address": "1810 Shadybrook St",
+     "city": "Columbia",
+     "state": "TN",
+     "zip": "38401",
+     "phone": "9313888500"
+    },
+    {
+     "address": "1878 N Main St",
+     "city": "Shelbyville",
+     "state": "TN",
+     "zip": "37160",
+     "phone": "9316809722"
+    },
+    {
+     "address": "188 Market St",
+     "city": "Kingston",
+     "state": "TN",
+     "zip": "37763",
+     "phone": "8653785700"
+    },
+    {
+     "address": "189 Monroe Pl",
+     "city": "Ashland City",
+     "state": "TN",
+     "zip": "37015",
+     "phone": "6157922823"
+    },
+    {
+     "address": "1904 W Broadway Ave",
+     "city": "Maryville",
+     "state": "TN",
+     "zip": "37801",
+     "phone": "8659838129"
+    },
+    {
+     "address": "1919 Gallatin Pike N",
+     "city": "Madison",
+     "state": "TN",
+     "zip": "37115",
+     "phone": "6158593852"
+    },
+    {
+     "address": "201 S McCrary St",
+     "city": "Woodbury",
+     "state": "TN",
+     "zip": "37190",
+     "phone": "6155635520"
+    },
+    {
+     "address": "208 Railroad St",
+     "city": "Sweetwater",
+     "state": "TN",
+     "zip": "37874",
+     "phone": "4233377897"
+    },
+    {
+     "address": "2090 Oxford Glen Dr",
+     "city": "Franklin",
+     "state": "TN",
+     "zip": "37067",
+     "phone": "6152249590"
+    },
+    {
+     "address": "210 Walmart Dr",
+     "city": "Soddy Daisy",
+     "state": "TN",
+     "zip": "37379",
+     "phone": "4233329490"
+    },
+    {
+     "address": "2125 E Broadway Ave",
+     "city": "Maryville",
+     "state": "TN",
+     "zip": "37804",
+     "phone": "8659956566"
+    },
+    {
+     "address": "2130 Hwy 411",
+     "city": "Vonore",
+     "state": "TN",
+     "zip": "37885",
+     "phone": "4237778180"
+    },
+    {
+     "address": "223 W Summer St",
+     "city": "Greeneville",
+     "state": "TN",
+     "zip": "37743",
+     "phone": "4236381111"
+    },
+    {
+     "address": "22576 Rhea County Hwy",
+     "city": "Spring City",
+     "state": "TN",
+     "zip": "37381",
+     "phone": "4233655884"
+    },
+    {
+     "address": "226 Village Square Dr",
+     "city": "Loudon",
+     "state": "TN",
+     "zip": "37774",
+     "phone": "8656576415"
+    },
+    {
+     "address": "2318 Market Place Dr",
+     "city": "Maryville",
+     "state": "TN",
+     "zip": "37801",
+     "phone": "8659843141"
+    },
+    {
+     "address": "2325 Crestmoore Rd",
+     "city": "Nashville",
+     "state": "TN",
+     "zip": "37215",
+     "phone": "6159429050"
+    },
+    {
+     "address": "235 E Main St",
+     "city": "McMinnville",
+     "state": "TN",
+     "zip": "37110",
+     "phone": "9314888511"
+    },
+    {
+     "address": "2380 Lifestyle Way",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37421",
+     "phone": "4238036409"
+    },
+    {
+     "address": "2407 Callahan Dr",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37912",
+     "phone": "8658590260"
+    },
+    {
+     "address": "2556 Dalton Pike SE",
+     "city": "Cleveland",
+     "state": "TN",
+     "zip": "37323",
+     "phone": "4234764264"
+    },
+    {
+     "address": "26448 Main St",
+     "city": "Ardmore",
+     "state": "TN",
+     "zip": "38449",
+     "phone": "9314276030"
+    },
+    {
+     "address": "2707 Citico Ave",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37406",
+     "phone": "4236980853"
+    },
+    {
+     "address": "275 Jackson Meadows Dr",
+     "city": "Hermitage",
+     "state": "TN",
+     "zip": "37076",
+     "phone": "6158857848"
+    },
+    {
+     "address": "2817 W Andrew Johnson Hwy",
+     "city": "Morristown",
+     "state": "TN",
+     "zip": "37814",
+     "phone": "4235864810"
+    },
+    {
+     "address": "2838 Appalachian Hwy",
+     "city": "Jacksboro",
+     "state": "TN",
+     "zip": "37757",
+     "phone": "4235662356"
+    },
+    {
+     "address": "2913 Boones Creek Rd",
+     "city": "Johnson City",
+     "state": "TN",
+     "zip": "37615",
+     "phone": "4232320688"
+    },
+    {
+     "address": "2927 Alcoa Hwy",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37920",
+     "phone": "8655773555"
+    },
+    {
+     "address": "2946 Winfield Dunn",
+     "city": "Kodak",
+     "state": "TN",
+     "zip": "37764",
+     "phone": "8659321088"
+    },
+    {
+     "address": "300 Market Dr",
+     "city": "Lenoir City",
+     "state": "TN",
+     "zip": "37771",
+     "phone": "8659887610"
+    },
+    {
+     "address": "301 Richard Wilks Rd",
+     "city": "White House",
+     "state": "TN",
+     "zip": "37188",
+     "phone": "6156724966"
+    },
+    {
+     "address": "3098 Campbell Station Pkwy",
+     "city": "Spring Hill",
+     "state": "TN",
+     "zip": "37174",
+     "phone": "6153022141"
+    },
+    {
+     "address": "311 Congress Pkwy N",
+     "city": "Athens",
+     "state": "TN",
+     "zip": "37303",
+     "phone": "4237449232"
+    },
+    {
+     "address": "317 Ault Rd",
+     "city": "Signal Mountain",
+     "state": "TN",
+     "zip": "37377",
+     "phone": "4238869294"
+    },
+    {
+     "address": "320 E Main St",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37408",
+     "phone": "4237775367"
+    },
+    {
+     "address": "323 Sam Ridley Pkwy W",
+     "city": "Smyrna",
+     "state": "TN",
+     "zip": "37167",
+     "phone": "6157515211"
+    },
+    {
+     "address": "3310 Aspen Grove Dr",
+     "city": "Franklin",
+     "state": "TN",
+     "zip": "37067",
+     "phone": "6152249810"
+    },
+    {
+     "address": "3575 Keith St NW",
+     "city": "Cleveland",
+     "state": "TN",
+     "zip": "37312",
+     "phone": "4235590444"
+    },
+    {
+     "address": "3849 Dayton Blvd",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37415",
+     "phone": "4238775817"
+    },
+    {
+     "address": "4349 Highway 411",
+     "city": "Madisonville",
+     "state": "TN",
+     "zip": "37354",
+     "phone": "4234360309"
+    },
+    {
+     "address": "4356 Maynardville Hwy",
+     "city": "Maynardville",
+     "state": "TN",
+     "zip": "37807",
+     "phone": "8656309030"
+    },
+    {
+     "address": "4433 Kingston Pike",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37919",
+     "phone": "8656024242"
+    },
+    {
+     "address": "4512 Chapman Hwy",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37920",
+     "phone": "8655777779"
+    },
+    {
+     "address": "4626 Highway 58",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37416",
+     "phone": "4235537972"
+    },
+    {
+     "address": "4635 Greenway Dr",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37918",
+     "phone": "8655460801"
+    },
+    {
+     "address": "4654 Nashville Hwy",
+     "city": "Chapel Hill",
+     "state": "TN",
+     "zip": "37034",
+     "phone": "9313644666"
+    },
+    {
+     "address": "4738 Centerline Dr",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37917",
+     "phone": "8655460801"
+    },
+    {
+     "address": "4929 Peavine Rd",
+     "city": "Crossville",
+     "state": "TN",
+     "zip": "38571",
+     "phone": "9314847442"
+    },
+    {
+     "address": "500 Wilson Pike Cir",
+     "city": "Brentwood",
+     "state": "TN",
+     "zip": "37027",
+     "phone": "6298884981"
+    },
+    {
+     "address": "5022 Old Godsey Ln",
+     "city": "Hixson",
+     "state": "TN",
+     "zip": "37343",
+     "phone": "4238703573"
+    },
+    {
+     "address": "512 Tremont St",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37405",
+     "phone": "4235293127"
+    },
+    {
+     "address": "517 N Main St",
+     "city": "Greeneville",
+     "state": "TN",
+     "zip": "37745",
+     "phone": "4236381111"
+    },
+    {
+     "address": "5205 Bobby Hicks Hwy",
+     "city": "Johnson City",
+     "state": "TN",
+     "zip": "37615",
+     "phone": "4234730480"
+    },
+    {
+     "address": "545 N Mount Juliet Rd",
+     "city": "Mount Juliet",
+     "state": "TN",
+     "zip": "37122",
+     "phone": "6155534645"
+    },
+    {
+     "address": "586 S Jefferson Ave",
+     "city": "Cookeville",
+     "state": "TN",
+     "zip": "38501",
+     "phone": "9313721315"
+    },
+    {
+     "address": "5948 Howe Ln",
+     "city": "Ooltewah",
+     "state": "TN",
+     "zip": "37363",
+     "phone": "4232389444"
+    },
+    {
+     "address": "612 Lyle St",
+     "city": "Johnson City",
+     "state": "TN",
+     "zip": "37604",
+     "phone": "4233283156"
+    },
+    {
+     "address": "631 N Campbell Station Rd",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37934",
+     "phone": "8657770367"
+    },
+    {
+     "address": "646 E Broadway Blvd",
+     "city": "Jefferson City",
+     "state": "TN",
+     "zip": "37760",
+     "phone": "8654716890"
+    },
+    {
+     "address": "6681 Bristol Hwy",
+     "city": "Piney Flats",
+     "state": "TN",
+     "zip": "37686",
+     "phone": "4233918067"
+    },
+    {
+     "address": "6736 Charlotte Pike",
+     "city": "Nashville",
+     "state": "TN",
+     "zip": "37209",
+     "phone": "8887800279"
+    },
+    {
+     "address": "699 Parkway",
+     "city": "Sevierville",
+     "state": "TN",
+     "zip": "37862",
+     "phone": "8653663693"
+    },
+    {
+     "address": "705B Main St",
+     "city": "Nashville",
+     "state": "TN",
+     "zip": "37206",
+     "phone": "8883868311"
+    },
+    {
+     "address": "712 N Ellington Pkwy",
+     "city": "Lewisburg",
+     "state": "TN",
+     "zip": "37091",
+     "phone": "9313591913"
+    },
+    {
+     "address": "7336 Nolensville Rd",
+     "city": "Nolensville",
+     "state": "TN",
+     "zip": "37135",
+     "phone": "6157765215"
+    },
+    {
+     "address": "7380 Volkswagen Dr",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37416",
+     "phone": "4239331672"
+    },
+    {
+     "address": "7413 Maynardville Pike",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37938",
+     "phone": "8883579045"
+    },
+    {
+     "address": "7555 Barnett Way",
+     "city": "Powell",
+     "state": "TN",
+     "zip": "37849",
+     "phone": "8659383556"
+    },
+    {
+     "address": "7558 Mountain Grove Rd",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37920",
+     "phone": "8655778244"
+    },
+    {
+     "address": "7693 Rhea County Hwy",
+     "city": "Dayton",
+     "state": "TN",
+     "zip": "37321",
+     "phone": "4235700907"
+    },
+    {
+     "address": "8 W Norris Rd",
+     "city": "Norris",
+     "state": "TN",
+     "zip": "37828",
+     "phone": "8654946868"
+    },
+    {
+     "address": "8006 Hwy 100",
+     "city": "Nashville",
+     "state": "TN",
+     "zip": "37221",
+     "phone": "6159941867"
+    },
+    {
+     "address": "806 E Jackson Blvd",
+     "city": "Jonesborough",
+     "state": "TN",
+     "zip": "37659",
+     "phone": "4237532805"
+    },
+    {
+     "address": "8530 Hixson Pike",
+     "city": "Hixson",
+     "state": "TN",
+     "zip": "37343",
+     "phone": "4238215882"
+    },
+    {
+     "address": "8618 Highway 58",
+     "city": "Harrison",
+     "state": "TN",
+     "zip": "37341",
+     "phone": "4234684221"
+    },
+    {
+     "address": "8644 E Brainerd Rd",
+     "city": "Chattanooga",
+     "state": "TN",
+     "zip": "37421",
+     "phone": "4239332346"
+    },
+    {
+     "address": "878 Highway 411 N",
+     "city": "Etowah",
+     "state": "TN",
+     "zip": "37331",
+     "phone": "4232637070"
+    },
+    {
+     "address": "8805 New Highway 68",
+     "city": "Tellico Plains",
+     "state": "TN",
+     "zip": "37385",
+     "phone": "4232533300"
+    },
+    {
+     "address": "889B Bell Rd",
+     "city": "Antioch",
+     "state": "TN",
+     "zip": "37013",
+     "phone": "6157176262"
+    },
+    {
+     "address": "8904 Cross Park Dr",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37923",
+     "phone": "8656902671"
+    },
+    {
+     "address": "8905 Town and Country Cir",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37923",
+     "phone": "8655399185"
+    },
+    {
+     "address": "9040 Carothers Pkwy",
+     "city": "Franklin",
+     "state": "TN",
+     "zip": "37067",
+     "phone": "6152249590"
+    },
+    {
+     "address": "9305 S Northshore Dr",
+     "city": "Knoxville",
+     "state": "TN",
+     "zip": "37922",
+     "phone": "8656438695"
+    }
+   ],
+   "plans": [
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010004",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010005",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010006",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010007",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010008",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010010",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010012",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010013",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010014",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010015",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010019",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010020",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "29854TN0010021",
+     "network_tier": "PREFERRED",
+     "years": [
+      2026
+     ]
+    }
+   ],
+   "last_updated_on": "2026-08-20"
+  }
+ ]
+}

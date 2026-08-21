@@ -1,0 +1,394 @@
+{
+ "index_url": "https://www.molinahealthcare.com/cms/json/index.json",
+ "states": [
+  "FL",
+  "MS",
+  "OH",
+  "SC",
+  "TX",
+  "UT"
+ ],
+ "issuer_ids": [
+  "54172",
+  "79975",
+  "64353",
+  "42326",
+  "45786",
+  "18167"
+ ],
+ "provider_urls_count": 21,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.molinahealthcare.com/cmsjson/378245/cms/Provider-FL-1.json",
+   "http_code": 206,
+   "fetched_chars": 8388606,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3196,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "last_updated_on": 1000,
+     "name": 524,
+     "sex": 524,
+     "facility_name": 289,
+     "facility_type": 289,
+     "group_name": 187,
+     "group_type": 187
+    },
+    "type_dist": {
+     "FACILITY": 289,
+     "INDIVIDUAL": 524,
+     "GROUP": 187
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 994,
+    "bh_matches": 198,
+    "unique_specialties": 71,
+    "top_specialties": [
+     [
+      "PHARMACY",
+      274
+     ],
+     [
+      "MULTI-SPECIALTY GROUP",
+      97
+     ],
+     [
+      "OBSTETRICS & GYNECOLOGY",
+      67
+     ],
+     [
+      "SPEECH THERAPIST",
+      58
+     ],
+     [
+      "SINGLE SPECIALTY GROUP",
+      56
+     ],
+     [
+      "PHYSICAL THERAPIST",
+      41
+     ],
+     [
+      "OPHTHALMOLOGY",
+      39
+     ],
+     [
+      "INTERNAL MEDICINE",
+      38
+     ],
+     [
+      "OCCUPATIONAL THERAPIST",
+      32
+     ],
+     [
+      "PEDIATRICS",
+      32
+     ],
+     [
+      "OPTOMETRIST",
+      30
+     ],
+     [
+      "BEHAVIORAL ANALYST",
+      29
+     ],
+     [
+      "ORTHOPEDIC SURGERY",
+      21
+     ],
+     [
+      "HEMATOLOGY & ONCOLOGY",
+      16
+     ],
+     [
+      "",
+      15
+     ],
+     [
+      "FAMILY MEDICINE",
+      14
+     ],
+     [
+      "NURSE PRACTITIONER - PEDIATRICS",
+      12
+     ],
+     [
+      "OCCUPATIONAL THERAPIST - PEDIATRICS",
+      11
+     ],
+     [
+      "ADOLESCENT & CHILDREN MENTAL HEALTH CLINIC",
+      10
+     ],
+     [
+      "PSYCHIATRY",
+      9
+     ]
+    ],
+    "bh_specialty_values": [
+     "SPEECH THERAPIST",
+     "PHYSICAL THERAPIST",
+     "OCCUPATIONAL THERAPIST",
+     "BEHAVIORAL ANALYST",
+     "OCCUPATIONAL THERAPIST - PEDIATRICS",
+     "ADOLESCENT & CHILDREN MENTAL HEALTH CLINIC",
+     "PSYCHIATRY",
+     "COUNSELOR - MENTAL HEALTH",
+     "PEDIATRIC SPEECH THERAPIST",
+     "SOCIAL WORKER - CLINICAL",
+     "DEVELOPMENTAL THERAPIST",
+     "PSYCHOLOGIST - CLINICAL",
+     "NURSE PRACTITIONER - PSYCHIATRIC/MENTAL HEALTH",
+     "PSYCHOLOGIST",
+     "CHILD & ADOLESCENT PSYCHIATRY",
+     "BEHAVIOR TECHNICIAN",
+     "COUNSELOR - PROFESSIONAL",
+     "MARRIAGE & FAMILY THERAPIST"
+    ],
+    "accepting_values": {
+     "accepting": 964,
+     "not accepting": 21,
+     "": 15
+    },
+    "last_updated_min": "2026-08-15",
+    "last_updated_max": "2026-08-15",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "8649083530",
+      16
+     ],
+     [
+      "3055541700",
+      16
+     ],
+     [
+      "3054422020",
+      15
+     ],
+     [
+      "4078523300",
+      14
+     ],
+     [
+      "4078572502",
+      13
+     ],
+     [
+      "4072775400",
+      8
+     ],
+     [
+      "8138908004",
+      7
+     ],
+     [
+      "8132598500",
+      6
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.molinahealthcare.com/cmsjson/378245/cms/Provider-OH-1.json",
+   "http_code": 206,
+   "fetched_chars": 8388606,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3188,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "last_updated_on": 1000,
+     "name": 662,
+     "sex": 662,
+     "facility_name": 241,
+     "facility_type": 241,
+     "group_name": 97,
+     "group_type": 97
+    },
+    "type_dist": {
+     "INDIVIDUAL": 662,
+     "GROUP": 97,
+     "FACILITY": 241
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 269,
+    "unique_specialties": 83,
+    "top_specialties": [
+     [
+      "PHARMACY",
+      225
+     ],
+     [
+      "NURSE PRACTITIONER",
+      118
+     ],
+     [
+      "NURSE PRACTITIONER - FAMILY",
+      91
+     ],
+     [
+      "SOCIAL WORKER - INDEPENDENT",
+      77
+     ],
+     [
+      "INTERNAL MEDICINE",
+      67
+     ],
+     [
+      "MULTI-SPECIALTY GROUP",
+      59
+     ],
+     [
+      "LICENSED PROFESSIONAL CLINICAL COUNSELOR",
+      47
+     ],
+     [
+      "OPHTHALMOLOGY",
+      27
+     ],
+     [
+      "NURSE PRACTITIONER - PSYCHIATRIC/MENTAL HEALTH",
+      27
+     ],
+     [
+      "REGISTERED NURSE",
+      22
+     ],
+     [
+      "QUALIFIED MENTAL HEALTH SPECIALIST (ASSOCIATES DEGREE)",
+      21
+     ],
+     [
+      "ALLERGY & IMMUNOLOGY",
+      20
+     ],
+     [
+      "PHYSICIAN ASSISTANT",
+      20
+     ],
+     [
+      "ORTHOPEDIC SURGERY",
+      19
+     ],
+     [
+      "FAMILY MEDICINE",
+      18
+     ],
+     [
+      "NURSE PRACTITIONER - ADULT HEALTH",
+      18
+     ],
+     [
+      "COMMUNITY MENTAL HEALTH CENTER",
+      18
+     ],
+     [
+      "OBSTETRICS & GYNECOLOGY",
+      16
+     ],
+     [
+      "",
+      16
+     ],
+     [
+      "PSYCHIATRY",
+      16
+     ]
+    ],
+    "bh_specialty_values": [
+     "SOCIAL WORKER - INDEPENDENT",
+     "LICENSED PROFESSIONAL CLINICAL COUNSELOR",
+     "NURSE PRACTITIONER - PSYCHIATRIC/MENTAL HEALTH",
+     "QUALIFIED MENTAL HEALTH SPECIALIST (ASSOCIATES DEGREE)",
+     "COMMUNITY MENTAL HEALTH CENTER",
+     "PSYCHIATRY",
+     "QUALIFIED MENTAL HEALTH SPECIALIST (HIGH SCHOOL)",
+     "LICENSED INDEPENDENT CHEMICAL DEPENDENCY COUNSELORS",
+     "OHIO DEPARTMENT OF MENTAL HEALTH & ADDICTION SERVICES",
+     "QUALIFIED MENTAL HEALTH SPECIALIST (BACHELORS DEGREE)",
+     "PSYCHOLOGIST",
+     "QUALIFIED MENTAL HEALTH SPECIALIST (PLUS 3 YEARS)",
+     "COUNSELOR - PROFESSIONAL",
+     "QUALIFIED MENTAL HEALTH SPECIALIST (MASTERS DEGREE)",
+     "LICENSED SOCIAL WORKER",
+     "ADDICTION MEDICINE",
+     "LICENSED CHEMICAL DEPENDENCY COUNSELORS (II AND III)",
+     "CHILD & ADOLESCENT PSYCHIATRY",
+     "MARRIAGE & FAMILY THERAPIST",
+     "BEHAVIORAL ANALYST",
+     "CHEMICAL DEPENDENCY COUNSELOR ASSISTANT",
+     "SPEECH THERAPIST",
+     "LICENSED INDEPENDENT MARRIAGE AND FAMILY THERAPY",
+     "OCCUPATIONAL THERAPIST",
+     "SOCIAL WORKER TRAINEE"
+    ],
+    "accepting_values": {
+     "accepting": 705,
+     "not accepting": 279,
+     "": 16
+    },
+    "last_updated_min": "2026-08-15",
+    "last_updated_max": "2026-08-15",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "6142939600",
+      28
+     ],
+     [
+      "6143669211",
+      13
+     ],
+     [
+      "6142938116",
+      13
+     ],
+     [
+      "6142937677",
+      11
+     ],
+     [
+      "6142937499",
+      11
+     ],
+     [
+      "8008249861",
+      10
+     ],
+     [
+      "6143663687",
+      9
+     ],
+     [
+      "6142934837",
+      8
+     ]
+    ]
+   }
+  }
+ ]
+}

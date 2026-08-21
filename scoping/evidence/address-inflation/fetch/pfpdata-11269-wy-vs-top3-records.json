@@ -1,0 +1,8157 @@
+{
+ "note": "top-3 records by address count, extracted from first-10MB Range sample fetched 2026-08-21",
+ "source_head_sample": "pfpdata-11269-wy-vs-provider.head10mb.json",
+ "records": [
+  {
+   "npi": "1053988394",
+   "type": "INDIVIDUAL",
+   "plans": [
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070004",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070013",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070014",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070016",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070025",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070026",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150004",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150007",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150011",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150012",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150019",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150020",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170016",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170017",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170018",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170020",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170021",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180016",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180017",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180019",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180020",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180022",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    }
+   ],
+   "name": {
+    "prefix": "Dr.",
+    "first": "Makayla",
+    "last": "Porter"
+   },
+   "sex": "Female",
+   "languages": [
+    "Russian",
+    "Chinese",
+    "Spanish",
+    "French",
+    "Hindi",
+    "Vietnamese",
+    "English",
+    "Hebrew"
+   ],
+   "addresses": [
+    {
+     "address": "1233 W Morton Ave Ste C",
+     "address_2": "",
+     "city": "Jacksonville",
+     "state": "IL",
+     "zip": "62650",
+     "phone": "2172458800"
+    },
+    {
+     "address": "134 E Blackhawk Dr",
+     "address_2": "",
+     "city": "Byron",
+     "state": "IL",
+     "zip": "61010",
+     "phone": "8152342020"
+    },
+    {
+     "address": "1000 Hylan Dr",
+     "address_2": "",
+     "city": "Rochester",
+     "state": "NY",
+     "zip": "14623",
+     "phone": "5857945940"
+    },
+    {
+     "address": "10200 Mill Run Circle Ste 114",
+     "address_2": "",
+     "city": "Owings Mills",
+     "state": "MD",
+     "zip": "21117",
+     "phone": "4105592291"
+    },
+    {
+     "address": "108 Burgess Rd Ste 112",
+     "address_2": "",
+     "city": "Harrisonburg",
+     "state": "VA",
+     "zip": "22801",
+     "phone": "5404331247"
+    },
+    {
+     "address": "1094 OLD COUNTRY RD",
+     "address_2": "",
+     "city": "RIVERHEAD",
+     "state": "NY",
+     "zip": "11901",
+     "phone": "6316550290"
+    },
+    {
+     "address": "11035 Middlebelt Rd Ste D140",
+     "address_2": "",
+     "city": "Livonia",
+     "state": "MI",
+     "zip": "48150",
+     "phone": "7347930219"
+    },
+    {
+     "address": "11139 Lee Hwy",
+     "address_2": "",
+     "city": "Fairfax",
+     "state": "VA",
+     "zip": "22030",
+     "phone": "7036791030"
+    },
+    {
+     "address": "1121 Boardman Rd",
+     "address_2": "",
+     "city": "Jackson",
+     "state": "MI",
+     "zip": "49202",
+     "phone": "5177835344"
+    },
+    {
+     "address": "115 Coliseum Xing Ste 58",
+     "address_2": "",
+     "city": "Hampton",
+     "state": "VA",
+     "zip": "23666",
+     "phone": "7577516236"
+    },
+    {
+     "address": "11654 Sudley Manor Dr",
+     "address_2": "",
+     "city": "Manassas",
+     "state": "VA",
+     "zip": "20109",
+     "phone": "7033307336"
+    },
+    {
+     "address": "120 Simons Run Ste H",
+     "address_2": "",
+     "city": "Lynchburg",
+     "state": "VA",
+     "zip": "24502",
+     "phone": "4343821300"
+    },
+    {
+     "address": "1201 N Main St Ste 1",
+     "address_2": "",
+     "city": "Suffolk",
+     "state": "VA",
+     "zip": "23434",
+     "phone": "7579420452"
+    },
+    {
+     "address": "12551 Jefferson Ave Ste 249",
+     "address_2": "",
+     "city": "Newport News",
+     "state": "VA",
+     "zip": "23602",
+     "phone": "7579888020"
+    },
+    {
+     "address": "12765 Harper Village Dr Ste 107",
+     "address_2": "",
+     "city": "Battle Creek",
+     "state": "MI",
+     "zip": "49014",
+     "phone": "2699792832"
+    },
+    {
+     "address": "1328 S Rochester Rd",
+     "address_2": "",
+     "city": "Rochester Hills",
+     "state": "MI",
+     "zip": "48307",
+     "phone": "2488412747"
+    },
+    {
+     "address": "13530 Michigan Ave",
+     "address_2": "",
+     "city": "Dearborn",
+     "state": "MI",
+     "zip": "48126",
+     "phone": "3138270779"
+    },
+    {
+     "address": "1374 Martin Blvd",
+     "address_2": "",
+     "city": "Middle River",
+     "state": "MD",
+     "zip": "21220",
+     "phone": "4436482022"
+    },
+    {
+     "address": "1384 Towne Square Blvd NW",
+     "address_2": "",
+     "city": "Roanoke",
+     "state": "VA",
+     "zip": "24012",
+     "phone": "5402782880"
+    },
+    {
+     "address": "1401 Merritt Blvd Ste F",
+     "address_2": "",
+     "city": "Blatimore",
+     "state": "MD",
+     "zip": "21222",
+     "phone": "4433760019"
+    },
+    {
+     "address": "1401 Rockville Pike Ste 100",
+     "address_2": "",
+     "city": "Rockville",
+     "state": "MD",
+     "zip": "20852",
+     "phone": "3014689000"
+    },
+    {
+     "address": "1437 Sams Dr Ste 101",
+     "address_2": "",
+     "city": "Chesapeake",
+     "state": "VA",
+     "zip": "23320",
+     "phone": "7578190540"
+    },
+    {
+     "address": "14403 Chantilly Crossing Ln",
+     "address_2": "",
+     "city": "Chantilly",
+     "state": "VA",
+     "zip": "20151",
+     "phone": "7032341535"
+    },
+    {
+     "address": "145 Holt Garrison Pkwy",
+     "address_2": "",
+     "city": "Danville",
+     "state": "VA",
+     "zip": "24540",
+     "phone": "4344832199"
+    },
+    {
+     "address": "14609 Hancock Village St",
+     "address_2": "",
+     "city": "Chesterfield",
+     "state": "VA",
+     "zip": "23832",
+     "phone": "8044203122"
+    },
+    {
+     "address": "14635 Baltimore Ave Ste B",
+     "address_2": "",
+     "city": "Laurel",
+     "state": "MD",
+     "zip": "20707",
+     "phone": "2405815740"
+    },
+    {
+     "address": "150 Jennifer Rd Ste 160",
+     "address_2": "",
+     "city": "Annapolis",
+     "state": "MD",
+     "zip": "21401",
+     "phone": "4433210367"
+    },
+    {
+     "address": "1545 Central Ave",
+     "address_2": "",
+     "city": "Colonie",
+     "state": "NY",
+     "zip": "12205",
+     "phone": "5184521111"
+    },
+    {
+     "address": "1629 County Route 64",
+     "address_2": "",
+     "city": "Horseheads",
+     "state": "NY",
+     "zip": "14845",
+     "phone": "6073780346"
+    },
+    {
+     "address": "17233 Cole Rd",
+     "address_2": "",
+     "city": "Hagerstown",
+     "state": "MD",
+     "zip": "21740",
+     "phone": "2403294699"
+    },
+    {
+     "address": "1726 Hempstead Tpke",
+     "address_2": "",
+     "city": "Elmont",
+     "state": "NY",
+     "zip": "11003",
+     "phone": "5162095168"
+    },
+    {
+     "address": "1824 Rio Hill Ctr",
+     "address_2": "",
+     "city": "Charlottesville",
+     "state": "VA",
+     "zip": "22901",
+     "phone": "4344596011"
+    },
+    {
+     "address": "18304 Contour Rd",
+     "address_2": "",
+     "city": "Montgomery Village",
+     "state": "MD",
+     "zip": "20877",
+     "phone": "3015562020"
+    },
+    {
+     "address": "1871 Carl D Silver Pkwy",
+     "address_2": "",
+     "city": "Fredericksburg",
+     "state": "VA",
+     "zip": "22401",
+     "phone": "5407868081"
+    },
+    {
+     "address": "19195 West Rd",
+     "address_2": "",
+     "city": "Woodhaven",
+     "state": "MI",
+     "zip": "48183",
+     "phone": "7343650934"
+    },
+    {
+     "address": "1959 Middle Country Rd",
+     "address_2": "",
+     "city": "Centereach",
+     "state": "NY",
+     "zip": "11720",
+     "phone": "6316194243"
+    },
+    {
+     "address": "1971 E Beltline Ave NE Ste 127",
+     "address_2": "",
+     "city": "Grand Rapids",
+     "state": "MI",
+     "zip": "49525",
+     "phone": "6168184351"
+    },
+    {
+     "address": "2143 Delaware Ave",
+     "address_2": "",
+     "city": "Buffalo",
+     "state": "NY",
+     "zip": "14216",
+     "phone": "7165153129"
+    },
+    {
+     "address": "2215 N Telegraph Rd",
+     "address_2": "",
+     "city": "Monroe",
+     "state": "MI",
+     "zip": "48162",
+     "phone": "7342300030"
+    },
+    {
+     "address": "2279 N Park Dr Ste 910",
+     "address_2": "",
+     "city": "Holland",
+     "state": "MI",
+     "zip": "49424",
+     "phone": "6165102243"
+    },
+    {
+     "address": "232 E Sunrise Hwy",
+     "address_2": "",
+     "city": "Freeport",
+     "state": "NY",
+     "zip": "11520",
+     "phone": "5166322031"
+    },
+    {
+     "address": "2349A Central Park Ave",
+     "address_2": "",
+     "city": "Yonkers",
+     "state": "NY",
+     "zip": "10710",
+     "phone": "9146200177"
+    },
+    {
+     "address": "2400 Sheila Ln",
+     "address_2": "",
+     "city": "Richmond",
+     "state": "VA",
+     "zip": "23225",
+     "phone": "8044331950"
+    },
+    {
+     "address": "2421C Vestal Pkwy E Ste 5",
+     "address_2": "",
+     "city": "Vestal",
+     "state": "NY",
+     "zip": "13850",
+     "phone": "6072175169"
+    },
+    {
+     "address": "2435 N Franklin St",
+     "address_2": "",
+     "city": "Christiansburg",
+     "state": "VA",
+     "zip": "24073",
+     "phone": "5402518253"
+    },
+    {
+     "address": "2530 S PLEASANT VALLEY RD",
+     "address_2": "",
+     "city": "WINCHESTER",
+     "state": "VA",
+     "zip": "22601",
+     "phone": "5407736595"
+    },
+    {
+     "address": "2590 Hylan Blvd",
+     "address_2": "",
+     "city": "Staten Island",
+     "state": "NY",
+     "zip": "10306",
+     "phone": "7183553808"
+    },
+    {
+     "address": "27793 Novi Rd",
+     "address_2": "",
+     "city": "Novi",
+     "state": "MI",
+     "zip": "48377",
+     "phone": "2486975621"
+    },
+    {
+     "address": "2810 Sheridan Dr",
+     "address_2": "",
+     "city": "Tonawanda",
+     "state": "NY",
+     "zip": "14150",
+     "phone": "7168346000"
+    },
+    {
+     "address": "29138 Gratiot Ave",
+     "address_2": "",
+     "city": "Roseville",
+     "state": "MI",
+     "zip": "48066",
+     "phone": "5865410747"
+    },
+    {
+     "address": "2924 Prince William Pkwy",
+     "address_2": "",
+     "city": "Woodbridge",
+     "state": "VA",
+     "zip": "22192",
+     "phone": "7037631390"
+    },
+    {
+     "address": "300 N Clippert St Ste 18A",
+     "address_2": "",
+     "city": "Lansing",
+     "state": "MI",
+     "zip": "48912",
+     "phone": "5178270064"
+    },
+    {
+     "address": "3006 Waldorf Market Pl Ste 9",
+     "address_2": "",
+     "city": "Waldorf",
+     "state": "MD",
+     "zip": "20603",
+     "phone": "2404271915"
+    },
+    {
+     "address": "30262 Woodward Ave",
+     "address_2": "",
+     "city": "Royal Oak",
+     "state": "MI",
+     "zip": "48073",
+     "phone": "2486580145"
+    },
+    {
+     "address": "3042 W Ridge Rd",
+     "address_2": "",
+     "city": "Greece",
+     "state": "NY",
+     "zip": "14626",
+     "phone": "5856636000"
+    },
+    {
+     "address": "310 N Telegraph Rd",
+     "address_2": "",
+     "city": "Pontiac",
+     "state": "MI",
+     "zip": "48341",
+     "phone": "2483357482"
+    },
+    {
+     "address": "3118 Donnell Dr",
+     "address_2": "",
+     "city": "Forestville",
+     "state": "MD",
+     "zip": "20747",
+     "phone": "3017355600"
+    },
+    {
+     "address": "3145 East Main St",
+     "address_2": "",
+     "city": "Mohegan Lake",
+     "state": "NY",
+     "zip": "10547",
+     "phone": "8458234063"
+    },
+    {
+     "address": "324 ELMIRA RD STE 100",
+     "address_2": "",
+     "city": "ITHACA",
+     "state": "NY",
+     "zip": "14850",
+     "phone": "6073309004"
+    },
+    {
+     "address": "3275 Tittabawassee Rd",
+     "address_2": "",
+     "city": "Saginaw",
+     "state": "MI",
+     "zip": "48604",
+     "phone": "9893993477"
+    },
+    {
+     "address": "3295 Henry St Ste C",
+     "address_2": "",
+     "city": "Muskegon",
+     "state": "MI",
+     "zip": "49441",
+     "phone": "2319030374"
+    },
+    {
+     "address": "3332 Princess Anne Rd Ste 611",
+     "address_2": "",
+     "city": "Virginia Beach",
+     "state": "VA",
+     "zip": "23456",
+     "phone": "7573682828"
+    },
+    {
+     "address": "3375 Hempstead Tpke",
+     "address_2": "",
+     "city": "Levittown",
+     "state": "NY",
+     "zip": "11756",
+     "phone": "5166882093"
+    },
+    {
+     "address": "3409 Erie Blvd E",
+     "address_2": "",
+     "city": "Dewitt",
+     "state": "NY",
+     "zip": "13214",
+     "phone": "3154464446"
+    },
+    {
+     "address": "3439 W Genesee St Ste 300",
+     "address_2": "",
+     "city": "Syracuse",
+     "state": "NY",
+     "zip": "13219",
+     "phone": "3155586810"
+    },
+    {
+     "address": "3460 Crain Hwy",
+     "address_2": "",
+     "city": "Bowie",
+     "state": "MD",
+     "zip": "20716",
+     "phone": "2405441472"
+    },
+    {
+     "address": "35640 Warren Rd",
+     "address_2": "",
+     "city": "Westland",
+     "state": "MI",
+     "zip": "48185",
+     "phone": "7347930185"
+    },
+    {
+     "address": "3601 Washtenaw Ave Ste D",
+     "address_2": "",
+     "city": "Ann Arbor",
+     "state": "MI",
+     "zip": "48104",
+     "phone": "7349731969"
+    },
+    {
+     "address": "3626 Fort St",
+     "address_2": "",
+     "city": "Lincoln Park",
+     "state": "MI",
+     "zip": "48146",
+     "phone": "3133823479"
+    },
+    {
+     "address": "3647 28th St SE",
+     "address_2": "",
+     "city": "Grand Rapids",
+     "state": "MI",
+     "zip": "49512",
+     "phone": "6163896012"
+    },
+    {
+     "address": "38 W RIDGELY RD",
+     "address_2": "",
+     "city": "LUTHERVILLE TIMONIUM",
+     "state": "MD",
+     "zip": "21093",
+     "phone": "4104276000"
+    },
+    {
+     "address": "3800 State Route 31",
+     "address_2": "",
+     "city": "Liverpool",
+     "state": "NY",
+     "zip": "13090",
+     "phone": "3156579051"
+    },
+    {
+     "address": "3840 McKinley Pkwy",
+     "address_2": "",
+     "city": "Blasdell",
+     "state": "NY",
+     "zip": "14219",
+     "phone": "7168221000"
+    },
+    {
+     "address": "400 Englar Rd",
+     "address_2": "",
+     "city": "Westminster",
+     "state": "MD",
+     "zip": "21157",
+     "phone": "4434875075"
+    },
+    {
+     "address": "4107 Portsmouth Blvd Ste 115",
+     "address_2": "",
+     "city": "Chesapeake",
+     "state": "VA",
+     "zip": "23321",
+     "phone": "7572151050"
+    },
+    {
+     "address": "413 Tarrytown Rd",
+     "address_2": "",
+     "city": "White Plains",
+     "state": "NY",
+     "zip": "10607",
+     "phone": "9143235584"
+    },
+    {
+     "address": "418 Balltown Rd",
+     "address_2": "",
+     "city": "Schenectady",
+     "state": "NY",
+     "zip": "12304",
+     "phone": "5182435741"
+    },
+    {
+     "address": "427 Commerce Dr",
+     "address_2": "",
+     "city": "Victor",
+     "state": "NY",
+     "zip": "14564",
+     "phone": "5859247343"
+    },
+    {
+     "address": "444 Route 211 E Ste 5",
+     "address_2": "",
+     "city": "Middletown",
+     "state": "NY",
+     "zip": "10940",
+     "phone": "8453946205"
+    },
+    {
+     "address": "44569 Schoenherr Rd",
+     "address_2": "",
+     "city": "Sterling Hts",
+     "state": "MI",
+     "zip": "48313",
+     "phone": "5867260515"
+    },
+    {
+     "address": "4501 S Laburnum Ave Ste 145",
+     "address_2": "",
+     "city": "Richmond",
+     "state": "VA",
+     "zip": "23231",
+     "phone": "8045914581"
+    },
+    {
+     "address": "45591 Dulles Eastern Plz Ste 184",
+     "address_2": "",
+     "city": "Sterling",
+     "state": "VA",
+     "zip": "20166",
+     "phone": "7038801211"
+    },
+    {
+     "address": "4575 Canal Ave SW Ste A1",
+     "address_2": "",
+     "city": "Grandville",
+     "state": "MI",
+     "zip": "49418",
+     "phone": "6162548783"
+    },
+    {
+     "address": "47176 Michigan Ave",
+     "address_2": "",
+     "city": "Canton",
+     "state": "MI",
+     "zip": "48188",
+     "phone": "7348792211"
+    },
+    {
+     "address": "4735 Commercial Dr",
+     "address_2": "",
+     "city": "New Hartford",
+     "state": "NY",
+     "zip": "13413",
+     "phone": "3152921410"
+    },
+    {
+     "address": "4934 Transit Rd Ste 400",
+     "address_2": "",
+     "city": "Depew",
+     "state": "NY",
+     "zip": "14043",
+     "phone": "7166681484"
+    },
+    {
+     "address": "50 Route 17K",
+     "address_2": "",
+     "city": "Newburgh",
+     "state": "NY",
+     "zip": "12550",
+     "phone": "8452756190"
+    },
+    {
+     "address": "50697 Waterside Dr",
+     "address_2": "",
+     "city": "Chesterfield",
+     "state": "MI",
+     "zip": "48051",
+     "phone": "5868403282"
+    },
+    {
+     "address": "519 Baltimore Pike",
+     "address_2": "",
+     "city": "Bel Air",
+     "state": "MD",
+     "zip": "21014",
+     "phone": "4108360098"
+    },
+    {
+     "address": "5240 W Main St",
+     "address_2": "",
+     "city": "Kalamazoo",
+     "state": "MI",
+     "zip": "49009",
+     "phone": "2692760035"
+    },
+    {
+     "address": "5321 S Telegraph Rd",
+     "address_2": "",
+     "city": "Dearborn Heights",
+     "state": "MI",
+     "zip": "48125",
+     "phone": "3132927770"
+    },
+    {
+     "address": "533 N Marketplace Blvd Ste 6",
+     "address_2": "",
+     "city": "Lansing",
+     "state": "MI",
+     "zip": "48917",
+     "phone": "5176275403"
+    },
+    {
+     "address": "549 Hilltop Plz",
+     "address_2": "",
+     "city": "Virginia Beach",
+     "state": "VA",
+     "zip": "23454",
+     "phone": "7573646795"
+    },
+    {
+     "address": "5503 Leesburg Pike",
+     "address_2": "",
+     "city": "Baileys Crossroads",
+     "state": "VA",
+     "zip": "22041",
+     "phone": "5714834021"
+    },
+    {
+     "address": "5802 E Virginia Beach Blvd Ste 107",
+     "address_2": "",
+     "city": "Norfolk",
+     "state": "VA",
+     "zip": "23502",
+     "phone": "7572172050"
+    },
+    {
+     "address": "5814 BALTIMORE NATIONAL PIKE",
+     "address_2": "",
+     "city": "CATONSVILLE",
+     "state": "MD",
+     "zip": "21228",
+     "phone": "4109442222"
+    },
+    {
+     "address": "6315 Dort Hwy",
+     "address_2": "",
+     "city": "Grand Blanc",
+     "state": "MI",
+     "zip": "48439",
+     "phone": "8105790453"
+    },
+    {
+     "address": "6635 Ritchie Hwy",
+     "address_2": "",
+     "city": "Glen Burnie",
+     "state": "MD",
+     "zip": "21061",
+     "phone": "4107663070"
+    },
+    {
+     "address": "6800 S Westnedge Ave Ste E",
+     "address_2": "",
+     "city": "Portage",
+     "state": "MI",
+     "zip": "49002",
+     "phone": "2692165912"
+    },
+    {
+     "address": "6855 New Hampshire Ave",
+     "address_2": "",
+     "city": "Takoma Park",
+     "state": "MD",
+     "zip": "20912",
+     "phone": "3018916861"
+    },
+    {
+     "address": "700 W Montauk Hwy",
+     "address_2": "",
+     "city": "West Babylon",
+     "state": "NY",
+     "zip": "11704",
+     "phone": "6317920025"
+    },
+    {
+     "address": "7000 Forest Ave",
+     "address_2": "",
+     "city": "Richmond",
+     "state": "VA",
+     "zip": "23230",
+     "phone": "8042539778"
+    },
+    {
+     "address": "723 Southpark Blvd Ste E5",
+     "address_2": "",
+     "city": "Colonial Heights",
+     "state": "VA",
+     "zip": "23834",
+     "phone": "8045264261"
+    },
+    {
+     "address": "7256 Guilford Dr",
+     "address_2": "",
+     "city": "Frederick",
+     "state": "MD",
+     "zip": "21704",
+     "phone": "3018356120"
+    },
+    {
+     "address": "735 Dominion Sq Shopping Ctr",
+     "address_2": "",
+     "city": "Culpeper",
+     "state": "VA",
+     "zip": "22701",
+     "phone": "5404236601"
+    },
+    {
+     "address": "7549 E 10 Mile Rd",
+     "address_2": "",
+     "city": "Center Line",
+     "state": "MI",
+     "zip": "48015",
+     "phone": "5867575765"
+    },
+    {
+     "address": "800 E Rochambeau Dr Ste I",
+     "address_2": "",
+     "city": "Williamsburg",
+     "state": "VA",
+     "zip": "23188",
+     "phone": "7579413730"
+    },
+    {
+     "address": "8016 Cooper Ave Ste 3111",
+     "address_2": "",
+     "city": "Glendale",
+     "state": "NY",
+     "zip": "11385",
+     "phone": "7186853981"
+    },
+    {
+     "address": "8120 Governor Ritchie Hwy",
+     "address_2": "",
+     "city": "Pasadena",
+     "state": "MD",
+     "zip": "21122",
+     "phone": "4439429083"
+    },
+    {
+     "address": "831 Town Center Dr Ste H",
+     "address_2": "",
+     "city": "Waynesboro",
+     "state": "VA",
+     "zip": "22980",
+     "phone": "5409410045"
+    },
+    {
+     "address": "874 Sunrise Hwy",
+     "address_2": "",
+     "city": "Bay Shore",
+     "state": "NY",
+     "zip": "11706",
+     "phone": "6318940345"
+    },
+    {
+     "address": "8885 Woodyard Rd",
+     "address_2": "",
+     "city": "Clinton",
+     "state": "MD",
+     "zip": "20735",
+     "phone": "3017191100"
+    },
+    {
+     "address": "90 W 225th St",
+     "address_2": "",
+     "city": "Bronx",
+     "state": "NY",
+     "zip": "10463",
+     "phone": "7186642164"
+    },
+    {
+     "address": "909 Taylor Ave",
+     "address_2": "",
+     "city": "Towson",
+     "state": "MD",
+     "zip": "21286",
+     "phone": "4108216380"
+    },
+    {
+     "address": "916 Largo Center Dr Ste B23",
+     "address_2": "",
+     "city": "Upper Marlboro",
+     "state": "MD",
+     "zip": "20774",
+     "phone": "2404920253"
+    },
+    {
+     "address": "927 Holt Rd Ste 300",
+     "address_2": "",
+     "city": "Webster",
+     "state": "NY",
+     "zip": "14580",
+     "phone": "5855452891"
+    },
+    {
+     "address": "9337 Annapolis Rd",
+     "address_2": "",
+     "city": "Lanham",
+     "state": "MD",
+     "zip": "20706",
+     "phone": "2406964841"
+    },
+    {
+     "address": "9927 Brook Rd",
+     "address_2": "",
+     "city": "Glen Allen",
+     "state": "VA",
+     "zip": "23059",
+     "phone": "8049554650"
+    },
+    {
+     "address": "9058 Highland Rd",
+     "address_2": "",
+     "city": "White Lake",
+     "state": "MI",
+     "zip": "48386",
+     "phone": "2485996390"
+    },
+    {
+     "address": "49 LEE JACKSON HWY",
+     "address_2": "",
+     "city": "STAUNTON",
+     "state": "VA",
+     "zip": "24401",
+     "phone": "5406096660"
+    },
+    {
+     "address": "7225 Bell Creek Rd",
+     "address_2": "",
+     "city": "Mechanicsville",
+     "state": "VA",
+     "zip": "23111",
+     "phone": "8047896247"
+    },
+    {
+     "address": "11134 MIDLOTHIAN TPKE",
+     "address_2": "",
+     "city": "NORTH CHESTERFIELD",
+     "state": "VA",
+     "zip": "23235",
+     "phone": "8044649374"
+    },
+    {
+     "address": "215 N Maple Rd",
+     "address_2": "",
+     "city": "Ann Arbor",
+     "state": "MI",
+     "zip": "48103",
+     "phone": "7342069141"
+    },
+    {
+     "address": "7015C Manchester Blvd",
+     "address_2": "",
+     "city": "Alexandria",
+     "state": "VA",
+     "zip": "22310",
+     "phone": "5712276840"
+    },
+    {
+     "address": "2314 North Ocean Avenue",
+     "address_2": "",
+     "city": "Farmingville",
+     "state": "NY",
+     "zip": "11738",
+     "phone": "6315610320"
+    },
+    {
+     "address": "3900 State Street Road",
+     "address_2": "",
+     "city": "Bay City",
+     "state": "MI",
+     "zip": "48706",
+     "phone": "9894594605"
+    },
+    {
+     "address": "11404 W Broad St",
+     "address_2": "",
+     "city": "GLEN ALLEN",
+     "state": "VA",
+     "zip": "23060",
+     "phone": "8049984685"
+    },
+    {
+     "address": "3270 28th St SE",
+     "address_2": "",
+     "city": "Grand Rapids",
+     "state": "MI",
+     "zip": "49512",
+     "phone": "6169742020"
+    },
+    {
+     "address": "4487 Miller Rd",
+     "address_2": "",
+     "city": "Flint",
+     "state": "MI",
+     "zip": "48507",
+     "phone": "8104064866"
+    },
+    {
+     "address": "4763 Wilson Ave SW Ste G & H",
+     "address_2": "",
+     "city": "Grandville",
+     "state": "MI",
+     "zip": "49418",
+     "phone": "6162614811"
+    },
+    {
+     "address": "2907 OCEAN AVE",
+     "address_2": "",
+     "city": "BROOKLYN",
+     "state": "NY",
+     "zip": "11235",
+     "phone": "7183321017"
+    },
+    {
+     "address": "500 3RD AVE",
+     "address_2": "",
+     "city": "NEW YORK",
+     "state": "NY",
+     "zip": "10016",
+     "phone": "6467500118"
+    },
+    {
+     "address": "1 Newport Dr Ste J",
+     "address_2": "",
+     "city": "Forest Hill",
+     "state": "MD",
+     "zip": "21050",
+     "phone": "4108383200"
+    },
+    {
+     "address": "12101 WINCHESTER RD STE 102",
+     "address_2": "",
+     "city": "LAVALE",
+     "state": "MD",
+     "zip": "21502",
+     "phone": "3017226480"
+    },
+    {
+     "address": "12916 Conamar Dr Ste 104",
+     "address_2": "",
+     "city": "Hagerstown",
+     "state": "MD",
+     "zip": "21742",
+     "phone": "3017334944"
+    },
+    {
+     "address": "14700 Baltimore Ave Unit 109",
+     "address_2": "",
+     "city": "Laurel",
+     "state": "MD",
+     "zip": "20707",
+     "phone": "3012453903"
+    },
+    {
+     "address": "2127 Crompond Rd Ste 101",
+     "address_2": "",
+     "city": "Cortlandt Manor",
+     "state": "NY",
+     "zip": "10567",
+     "phone": "9147372020"
+    },
+    {
+     "address": "2657 N Salisbury Blvd Ste 104",
+     "address_2": "",
+     "city": "Salisbury",
+     "state": "MD",
+     "zip": "21801",
+     "phone": "4107426148"
+    },
+    {
+     "address": "28522 Marlboro Ave Ste A",
+     "address_2": "",
+     "city": "Easton",
+     "state": "MD",
+     "zip": "21601",
+     "phone": "4106908844"
+    },
+    {
+     "address": "2955 Crain Hwy Ste A",
+     "address_2": "",
+     "city": "Waldorf",
+     "state": "MD",
+     "zip": "20601",
+     "phone": "3016453600"
+    },
+    {
+     "address": "30 Shining Willow Way Ste 30B",
+     "address_2": "",
+     "city": "La Plata",
+     "state": "MD",
+     "zip": "20646",
+     "phone": "2405234454"
+    },
+    {
+     "address": "360 E Pulaski Hwy Ste 1B",
+     "address_2": "",
+     "city": "Elkton",
+     "state": "MD",
+     "zip": "21921",
+     "phone": "4103985240"
+    },
+    {
+     "address": "401 RACE ST",
+     "address_2": "",
+     "city": "CAMBRIDGE",
+     "state": "MD",
+     "zip": "21613",
+     "phone": "7038478899"
+    },
+    {
+     "address": "46300 LEXINGTON VILLAGE WAY",
+     "address_2": "",
+     "city": "LEXINGTON PARK",
+     "state": "MD",
+     "zip": "20653",
+     "phone": "3018622436"
+    },
+    {
+     "address": "5203A Campbell Blvd",
+     "address_2": "",
+     "city": "Nottingham",
+     "state": "MD",
+     "zip": "21236",
+     "phone": "4432906055"
+    },
+    {
+     "address": "623 BEL AIR RD.",
+     "address_2": "",
+     "city": "BEL AIR",
+     "state": "MD",
+     "zip": "21014",
+     "phone": "4108790044"
+    },
+    {
+     "address": "625 Baltimore Blvd Ste K",
+     "address_2": "",
+     "city": "Westminster",
+     "state": "MD",
+     "zip": "21157",
+     "phone": "4108485442"
+    },
+    {
+     "address": "6306 1 half York Rd",
+     "address_2": "",
+     "city": "Baltimore",
+     "state": "MD",
+     "zip": "21212",
+     "phone": "4438635206"
+    },
+    {
+     "address": "6804 RACE TRACK RD",
+     "address_2": "",
+     "city": "BOWIE",
+     "state": "MD",
+     "zip": "20715",
+     "phone": "3012621210"
+    },
+    {
+     "address": "8818 Waltham Woods Rd",
+     "address_2": "",
+     "city": "Parkville",
+     "state": "MD",
+     "zip": "21234",
+     "phone": "4108822020"
+    },
+    {
+     "address": "920 Revolution St",
+     "address_2": "",
+     "city": "Havre de Grace",
+     "state": "MD",
+     "zip": "21078",
+     "phone": "4109392200"
+    },
+    {
+     "address": "951 Beards Hill Rd Ste F",
+     "address_2": "",
+     "city": "Aberdeen",
+     "state": "MD",
+     "zip": "21001",
+     "phone": "4102721800"
+    },
+    {
+     "address": "7931 RITCHIE HWY",
+     "address_2": "",
+     "city": "GLEN BURNIE",
+     "state": "MD",
+     "zip": "21061",
+     "phone": "4107688830"
+    },
+    {
+     "address": "1421 S 11th St",
+     "address_2": "",
+     "city": "Niles",
+     "state": "MI",
+     "zip": "49120",
+     "phone": "2696841330"
+    },
+    {
+     "address": "1617 N W Ave",
+     "address_2": "",
+     "city": "Jackson",
+     "state": "MI",
+     "zip": "49202",
+     "phone": "5177803828"
+    },
+    {
+     "address": "1761 M 139",
+     "address_2": "",
+     "city": "Benton Harbor",
+     "state": "MI",
+     "zip": "49022",
+     "phone": "2699340424"
+    },
+    {
+     "address": "2067 S Drake Rd",
+     "address_2": "",
+     "city": "Kalamazoo",
+     "state": "MI",
+     "zip": "49006",
+     "phone": "2693663664"
+    },
+    {
+     "address": "22750 Allen Rd",
+     "address_2": "",
+     "city": "Woodhaven",
+     "state": "MI",
+     "zip": "48183",
+     "phone": "7346764300"
+    },
+    {
+     "address": "500 S Centerville Rd",
+     "address_2": "",
+     "city": "Sturgis",
+     "state": "MI",
+     "zip": "49091",
+     "phone": "2696511958"
+    },
+    {
+     "address": "5349 W Main St",
+     "address_2": "",
+     "city": "Kalamazoo",
+     "state": "MI",
+     "zip": "49009",
+     "phone": "2693497627"
+    },
+    {
+     "address": "5465 Gull Rd",
+     "address_2": "",
+     "city": "Kalamazoo",
+     "state": "MI",
+     "zip": "49048",
+     "phone": "2393497631"
+    },
+    {
+     "address": "6123 S Westnedge Ave",
+     "address_2": "",
+     "city": "Portage",
+     "state": "MI",
+     "zip": "49002",
+     "phone": "2693277079"
+    },
+    {
+     "address": "65 Columbia Ave E",
+     "address_2": "",
+     "city": "Battle Creek",
+     "state": "MI",
+     "zip": "49015",
+     "phone": "2699655106"
+    },
+    {
+     "address": "755 E Chicago St",
+     "address_2": "",
+     "city": "Coldwater",
+     "state": "MI",
+     "zip": "49036",
+     "phone": "5172789004"
+    },
+    {
+     "address": "855 Olds St",
+     "address_2": "",
+     "city": "Jonesville",
+     "state": "MI",
+     "zip": "49250",
+     "phone": "5178492200"
+    },
+    {
+     "address": "301 Mohawk Ave",
+     "address_2": "",
+     "city": "Scotia",
+     "state": "NY",
+     "zip": "12302",
+     "phone": "5183462627"
+    },
+    {
+     "address": "1033 W Northland Ave Ste B",
+     "address_2": "",
+     "city": "Appleton",
+     "state": "WI",
+     "zip": "54914",
+     "phone": "9207314511"
+    },
+    {
+     "address": "110 8th St",
+     "address_2": "",
+     "city": "Monroe",
+     "state": "WI",
+     "zip": "53566",
+     "phone": "6082229420"
+    },
+    {
+     "address": "1139 W Main St",
+     "address_2": "",
+     "city": "Whitewater",
+     "state": "WI",
+     "zip": "53190",
+     "phone": "2627316320"
+    },
+    {
+     "address": "120 N Grand Ave Ste 102",
+     "address_2": "",
+     "city": "Sun Prairie",
+     "state": "WI",
+     "zip": "53590",
+     "phone": "6088397008"
+    },
+    {
+     "address": "1490 Oneida St",
+     "address_2": "",
+     "city": "Appleton",
+     "state": "WI",
+     "zip": "54915",
+     "phone": "9207253752"
+    },
+    {
+     "address": "1500 S Church St",
+     "address_2": "",
+     "city": "Watertown",
+     "state": "WI",
+     "zip": "53094",
+     "phone": "9202619225"
+    },
+    {
+     "address": "1607 Losey Blvd S",
+     "address_2": "",
+     "city": "La Cosse",
+     "state": "WI",
+     "zip": "54601",
+     "phone": "6084591920"
+    },
+    {
+     "address": "1664 COMMERCE CT",
+     "address_2": "",
+     "city": "RIVER FALLS",
+     "state": "WI",
+     "zip": "54022",
+     "phone": "7154256144"
+    },
+    {
+     "address": "1741 E Geneva St Ste 800",
+     "address_2": "",
+     "city": "Delavan",
+     "state": "WI",
+     "zip": "53115",
+     "phone": "2627280068"
+    },
+    {
+     "address": "1745 S Main St Ste 7",
+     "address_2": "",
+     "city": "West Bend",
+     "state": "WI",
+     "zip": "53095",
+     "phone": "2623347077"
+    },
+    {
+     "address": "2029 Humes Rd",
+     "address_2": "",
+     "city": "Janesville",
+     "state": "WI",
+     "zip": "53545",
+     "phone": "6087547411"
+    },
+    {
+     "address": "2314 Lineville Rd Ste 104",
+     "address_2": "",
+     "city": "Green Bay",
+     "state": "WI",
+     "zip": "54313",
+     "phone": "9204345845"
+    },
+    {
+     "address": "2360 Costco Way Ste 120",
+     "address_2": "",
+     "city": "Green Bay",
+     "state": "WI",
+     "zip": "54311",
+     "phone": "9204684642"
+    },
+    {
+     "address": "2502 3rd Ave N",
+     "address_2": "",
+     "city": "Escanaba",
+     "state": "MI",
+     "zip": "49829",
+     "phone": "9067862295"
+    },
+    {
+     "address": "2800 Sarah Ln Ste E",
+     "address_2": "",
+     "city": "Waunakee",
+     "state": "WI",
+     "zip": "53597",
+     "phone": "6086025250"
+    },
+    {
+     "address": "2806 Woodman Dr",
+     "address_2": "",
+     "city": "Altoona",
+     "state": "WI",
+     "zip": "54720",
+     "phone": "5344442961"
+    },
+    {
+     "address": "2921 New Pinery Rd Ste 2",
+     "address_2": "",
+     "city": "Portage",
+     "state": "WI",
+     "zip": "53901",
+     "phone": "6086867011"
+    },
+    {
+     "address": "2960 Cahill Main Ste 103",
+     "address_2": "",
+     "city": "Fitchburg",
+     "state": "WI",
+     "zip": "53711",
+     "phone": "6086905121"
+    },
+    {
+     "address": "308 Division St",
+     "address_2": "",
+     "city": "Stevens Point",
+     "state": "WI",
+     "zip": "54481",
+     "phone": "7153445355"
+    },
+    {
+     "address": "3107 US Highway 41 W",
+     "address_2": "",
+     "city": "Marquette",
+     "state": "MI",
+     "zip": "49855",
+     "phone": "9062284120"
+    },
+    {
+     "address": "3199 Market Ln",
+     "address_2": "",
+     "city": "Kenosha",
+     "state": "WI",
+     "zip": "53144",
+     "phone": "2626588119"
+    },
+    {
+     "address": "352 S 18th Ave",
+     "address_2": "",
+     "city": "Wausau",
+     "state": "WI",
+     "zip": "54401",
+     "phone": "7158428040"
+    },
+    {
+     "address": "4097 State Road 28 Unit 2",
+     "address_2": "",
+     "city": "Sheboygan Falls",
+     "state": "WI",
+     "zip": "53085",
+     "phone": "9204585757"
+    },
+    {
+     "address": "5722 S 108th St",
+     "address_2": "",
+     "city": "Hales Corners",
+     "state": "WI",
+     "zip": "53130",
+     "phone": "4147862941"
+    },
+    {
+     "address": "6000 Monona Dr Ste 101",
+     "address_2": "",
+     "city": "Monona",
+     "state": "WI",
+     "zip": "53716",
+     "phone": "6082229420"
+    },
+    {
+     "address": "631 Hometown Cir Ste 106",
+     "address_2": "",
+     "city": "Verona",
+     "state": "WI",
+     "zip": "53593",
+     "phone": "6086536218"
+    },
+    {
+     "address": "717 S Central Ave",
+     "address_2": "",
+     "city": "Marshfield",
+     "state": "WI",
+     "zip": "54449",
+     "phone": "7153878608"
+    },
+    {
+     "address": "723 Main Ave",
+     "address_2": "",
+     "city": "Depere",
+     "state": "WI",
+     "zip": "54115",
+     "phone": "9203363390"
+    },
+    {
+     "address": "728 E 2nd St",
+     "address_2": "",
+     "city": "Merrill",
+     "state": "WI",
+     "zip": "54452",
+     "phone": "7155364292"
+    },
+    {
+     "address": "912 Highway 136 Suite 103",
+     "address_2": "",
+     "city": "Baraboo",
+     "state": "WI",
+     "zip": "53913",
+     "phone": "6085817525"
+    },
+    {
+     "address": "943 W CLAIREMONT AVE",
+     "address_2": "",
+     "city": "EAU CLAIRE",
+     "state": "WI",
+     "zip": "54701",
+     "phone": "7158327723"
+    },
+    {
+     "address": "980 Milwaukee Rd Ste 400",
+     "address_2": "",
+     "city": "Burlington",
+     "state": "WI",
+     "zip": "53105",
+     "phone": "6084292211"
+    },
+    {
+     "address": "N6663 Rolling Meadows Dr Ste I",
+     "address_2": "",
+     "city": "Fond du Lac",
+     "state": "WI",
+     "zip": "54937",
+     "phone": "9209218290"
+    },
+    {
+     "address": "W8159 S US Highway 2/141 Ste 102",
+     "address_2": "",
+     "city": "Iron Mountain",
+     "state": "MI",
+     "zip": "49801",
+     "phone": "9067799164"
+    },
+    {
+     "address": "2621 S ONEIDA ST STE 104",
+     "address_2": "",
+     "city": "ASHWAUBENON",
+     "state": "WI",
+     "zip": "54304",
+     "phone": "9204993511"
+    },
+    {
+     "address": "4550 CALUMET AVE STE 104",
+     "address_2": "",
+     "city": "MANITOWOC",
+     "state": "WI",
+     "zip": "54220",
+     "phone": "9206832244"
+    },
+    {
+     "address": "1045 E GRAND AVE",
+     "address_2": "",
+     "city": "ROTHSCHILD",
+     "state": "WI",
+     "zip": "54474",
+     "phone": "7153590649"
+    },
+    {
+     "address": "4551 8TH ST S STE 102",
+     "address_2": "",
+     "city": "WISCONSIN RAPIDS",
+     "state": "WI",
+     "zip": "54494",
+     "phone": "7154231340"
+    },
+    {
+     "address": "820 PARK AVE STE I",
+     "address_2": "",
+     "city": "BEAVER DAM",
+     "state": "WI",
+     "zip": "53916",
+     "phone": "9208873791"
+    },
+    {
+     "address": "2787 MILWAUKEE RD STE D",
+     "address_2": "",
+     "city": "BELOIT",
+     "state": "WI",
+     "zip": "53511",
+     "phone": "6083652512"
+    },
+    {
+     "address": "2860 S GREEN BAY RD STE 250",
+     "address_2": "",
+     "city": "MOUNT PLEASANT",
+     "state": "WI",
+     "zip": "53406",
+     "phone": "2626373733"
+    },
+    {
+     "address": "3525 E CALUMET ST STE 1400",
+     "address_2": "",
+     "city": "APPLETON",
+     "state": "WI",
+     "zip": "54915",
+     "phone": "9207884114"
+    },
+    {
+     "address": "3022 COMMERCIAL BLVD",
+     "address_2": "",
+     "city": "CHIPPEWA FALLS",
+     "state": "WI",
+     "zip": "54729",
+     "phone": "7157261671"
+    },
+    {
+     "address": "1212 S KOELLER ST",
+     "address_2": "",
+     "city": "OSHKOSH",
+     "state": "WI",
+     "zip": "54902",
+     "phone": "9204265730"
+    },
+    {
+     "address": "1640 MADISON AVE",
+     "address_2": "",
+     "city": "FORT ATKINSON",
+     "state": "WI",
+     "zip": "53538",
+     "phone": "9205632171"
+    },
+    {
+     "address": "9417 STATE ROAD 16 STE 300",
+     "address_2": "",
+     "city": "ONALASKA",
+     "state": "WI",
+     "zip": "54650",
+     "phone": "6087812010"
+    },
+    {
+     "address": "1154 WESTOWNE DR",
+     "address_2": "",
+     "city": "NEENAH",
+     "state": "WI",
+     "zip": "54956",
+     "phone": "9207510275"
+    },
+    {
+     "address": "2910 ROOSEVELT RD STE F",
+     "address_2": "",
+     "city": "MARINETTE",
+     "state": "WI",
+     "zip": "54143",
+     "phone": "7157350260"
+    },
+    {
+     "address": "2304 S MAIN ST STE 9",
+     "address_2": "",
+     "city": "RICE LAKE",
+     "state": "WI",
+     "zip": "54868",
+     "phone": "7152367906"
+    },
+    {
+     "address": "2193 LINCOLN ST",
+     "address_2": "",
+     "city": "RHINELANDER",
+     "state": "WI",
+     "zip": "54501",
+     "phone": "7153624800"
+    },
+    {
+     "address": "174 CROSSROADS DR",
+     "address_2": "",
+     "city": "PLOVER",
+     "state": "WI",
+     "zip": "54467",
+     "phone": "7153429634"
+    },
+    {
+     "address": "1166 W SUNSET DR STE F100",
+     "address_2": "",
+     "city": "WAUKESHA",
+     "state": "WI",
+     "zip": "53189",
+     "phone": "2625749410"
+    },
+    {
+     "address": "1810 JACKSON ST",
+     "address_2": "",
+     "city": "OSHKOSH",
+     "state": "WI",
+     "zip": "54901",
+     "phone": "9203851363"
+    },
+    {
+     "address": "1440 CAPITOL DR STE B",
+     "address_2": "",
+     "city": "PEWAUKEE",
+     "state": "WI",
+     "zip": "53072",
+     "phone": "2628202656"
+    },
+    {
+     "address": "123 N MALL DR",
+     "address_2": "",
+     "city": "APPLETON",
+     "state": "WI",
+     "zip": "54913",
+     "phone": "9209398211"
+    },
+    {
+     "address": "2268 W MASON ST",
+     "address_2": "",
+     "city": "GREEN BAY",
+     "state": "WI",
+     "zip": "54303",
+     "phone": "9202597068"
+    },
+    {
+     "address": "101 OAK AVE STE 2",
+     "address_2": "",
+     "city": "MENOMONIE",
+     "state": "WI",
+     "zip": "54751",
+     "phone": "7159533731"
+    },
+    {
+     "address": "1073 E JOHNSON ST",
+     "address_2": "",
+     "city": "FOND DU LAC",
+     "state": "WI",
+     "zip": "54935",
+     "phone": "9203755483"
+    },
+    {
+     "address": "2220 BADGER DR",
+     "address_2": "",
+     "city": "HUDSON",
+     "state": "WI",
+     "zip": "54016",
+     "phone": "7159546063"
+    },
+    {
+     "address": "1595 E SUMNER ST STE 108",
+     "address_2": "",
+     "city": "HARTFORD",
+     "state": "WI",
+     "zip": "53027",
+     "phone": "2627098211"
+    },
+    {
+     "address": "2480 STATE ROAD 138 STE 200",
+     "address_2": "",
+     "city": "STOUGHTON",
+     "state": "WI",
+     "zip": "53589",
+     "phone": "6088891047"
+    },
+    {
+     "address": "101 N WESTERN AVE STE 101",
+     "address_2": "",
+     "city": "WAUPACA",
+     "state": "WI",
+     "zip": "54981",
+     "phone": "5344002068"
+    },
+    {
+     "address": "901 W SHARON AVE STE 6",
+     "address_2": "",
+     "city": "HOUGHTON",
+     "state": "MI",
+     "zip": "49931",
+     "phone": "9062751440"
+    },
+    {
+     "address": "128 Grant Way Ste 200",
+     "address_2": "",
+     "city": "New Richmond",
+     "state": "WI",
+     "zip": "54017",
+     "phone": "7155006470"
+    },
+    {
+     "address": "6935 75th St",
+     "address_2": "",
+     "city": "Kenosha",
+     "state": "WI",
+     "zip": "53142",
+     "phone": "2624454890"
+    },
+    {
+     "address": "4511 Vanguard Dr",
+     "address_2": "",
+     "city": "Sheboygan",
+     "state": "WI",
+     "zip": "53083",
+     "phone": "9205472659"
+    },
+    {
+     "address": "1056 E Green Bay St Ste 500",
+     "address_2": "",
+     "city": "Shawano",
+     "state": "WI",
+     "zip": "54166",
+     "phone": "7159902054"
+    },
+    {
+     "address": "2325 NEVA RD",
+     "address_2": "",
+     "city": "ANTIGO",
+     "state": "WI",
+     "zip": "54409",
+     "phone": "7156233620"
+    },
+    {
+     "address": "129 HALE DR STE 6 106",
+     "address_2": "",
+     "city": "HOLMEN",
+     "state": "WI",
+     "zip": "54636",
+     "phone": "6085402410"
+    },
+    {
+     "address": "10 Glenridge Rd Ste 1",
+     "address_2": "",
+     "city": "Glenville",
+     "state": "NY",
+     "zip": "12302",
+     "phone": "5183993562"
+    },
+    {
+     "address": "100 E Main St",
+     "address_2": "",
+     "city": "Smithtown",
+     "state": "NY",
+     "zip": "11787",
+     "phone": "6312654700"
+    },
+    {
+     "address": "1003 Fairlawn Ave Ste 24A",
+     "address_2": "",
+     "city": "Laurel",
+     "state": "MD",
+     "zip": "20707",
+     "phone": "3017761818"
+    },
+    {
+     "address": "10112 York Rd",
+     "address_2": "",
+     "city": "Cockeysville",
+     "state": "MD",
+     "zip": "21030",
+     "phone": "4106285350"
+    },
+    {
+     "address": "1018 Oneida Plaza Dr",
+     "address_2": "",
+     "city": "Oneida",
+     "state": "NY",
+     "zip": "13421",
+     "phone": "3153661000"
+    },
+    {
+     "address": "1028 Ridge Rd Ste 104",
+     "address_2": "",
+     "city": "Webster",
+     "state": "NY",
+     "zip": "14580",
+     "phone": "5858722200"
+    },
+    {
+     "address": "10369 Reisterstown Rd",
+     "address_2": "",
+     "city": "Owings Mills",
+     "state": "MD",
+     "zip": "21117",
+     "phone": "4433948679"
+    },
+    {
+     "address": "107 W Market St # 113",
+     "address_2": "",
+     "city": "Corning",
+     "state": "NY",
+     "zip": "14830",
+     "phone": "6079362000"
+    },
+    {
+     "address": "110 Consumer Sq",
+     "address_2": "",
+     "city": "Plattsburgh",
+     "state": "NY",
+     "zip": "12901",
+     "phone": "5185620200"
+    },
+    {
+     "address": "1125 Arsenal St",
+     "address_2": "",
+     "city": "Watertown",
+     "state": "NY",
+     "zip": "13601",
+     "phone": "3157885020"
+    },
+    {
+     "address": "115 Rochester St",
+     "address_2": "",
+     "city": "Fulton",
+     "state": "NY",
+     "zip": "13069",
+     "phone": "3155988505"
+    },
+    {
+     "address": "125 Lawrence Rd E",
+     "address_2": "",
+     "city": "N Syracuse",
+     "state": "NY",
+     "zip": "13212",
+     "phone": "3154555500"
+    },
+    {
+     "address": "125 Shop City Plaza",
+     "address_2": "",
+     "city": "Syracuse",
+     "state": "NY",
+     "zip": "13206",
+     "phone": "3154637700"
+    },
+    {
+     "address": "1290 Upper Front St",
+     "address_2": "",
+     "city": "Binghamton",
+     "state": "NY",
+     "zip": "13901",
+     "phone": "6077714000"
+    },
+    {
+     "address": "130 N Route 303 Ste 6",
+     "address_2": "",
+     "city": "West Nyack",
+     "state": "NY",
+     "zip": "10994",
+     "phone": "8453483236"
+    },
+    {
+     "address": "1308 Niagara Falls Blvd",
+     "address_2": "",
+     "city": "Tonawanda",
+     "state": "NY",
+     "zip": "14150",
+     "phone": "7168318050"
+    },
+    {
+     "address": "1319 Erie Blvd W Ste 3",
+     "address_2": "",
+     "city": "Rome",
+     "state": "NY",
+     "zip": "13440",
+     "phone": "3153377700"
+    },
+    {
+     "address": "1365 New Scotland Rd Ste 3",
+     "address_2": "",
+     "city": "Slingerlands",
+     "state": "NY",
+     "zip": "12159",
+     "phone": "5184397600"
+    },
+    {
+     "address": "140 Route 104 Oswego Plaza",
+     "address_2": "",
+     "city": "Oswego",
+     "state": "NY",
+     "zip": "13126",
+     "phone": "3153420727"
+    },
+    {
+     "address": "1402 S Main Chapel Way Ste 114",
+     "address_2": "",
+     "city": "Gambrills",
+     "state": "MD",
+     "zip": "21054",
+     "phone": "4107215041"
+    },
+    {
+     "address": "1440 Central Ave Ste 2",
+     "address_2": "",
+     "city": "Colonie",
+     "state": "NY",
+     "zip": "12205",
+     "phone": "5184898575"
+    },
+    {
+     "address": "1498 Deer Park Ave",
+     "address_2": "",
+     "city": "North Babylon",
+     "state": "NY",
+     "zip": "11703",
+     "phone": "6312426730"
+    },
+    {
+     "address": "15431 Emerald Way",
+     "address_2": "",
+     "city": "Bowie",
+     "state": "MD",
+     "zip": "20716",
+     "phone": "3018056132"
+    },
+    {
+     "address": "15902 Crain Hwy Unit F",
+     "address_2": "",
+     "city": "Brandywine",
+     "state": "MD",
+     "zip": "20613",
+     "phone": "3017824907"
+    },
+    {
+     "address": "1663 E Henrietta Rd",
+     "address_2": "",
+     "city": "Rochester",
+     "state": "NY",
+     "zip": "14623",
+     "phone": "5854247400"
+    },
+    {
+     "address": "169 Jennifer Rd Ste D",
+     "address_2": "",
+     "city": "Annapolis",
+     "state": "MD",
+     "zip": "21401",
+     "phone": "4102240021"
+    },
+    {
+     "address": "1820 Old Country Rd",
+     "address_2": "",
+     "city": "Riverhead",
+     "state": "NY",
+     "zip": "11901",
+     "phone": "6312082927"
+    },
+    {
+     "address": "1930 South Rd Ste 105",
+     "address_2": "",
+     "city": "Poughkeepsie",
+     "state": "NY",
+     "zip": "12601",
+     "phone": "8452983200"
+    },
+    {
+     "address": "1958 Middle Country Rd # 1962",
+     "address_2": "",
+     "city": "Centereach",
+     "state": "NY",
+     "zip": "11720",
+     "phone": "6314670524"
+    },
+    {
+     "address": "2",
+     "address_2": "494 Gateway Dr Unit K1",
+     "city": "Brooklyn",
+     "state": "NY",
+     "zip": "11239",
+     "phone": "7182773120"
+    },
+    {
+     "address": "201 Market St",
+     "address_2": "",
+     "city": "Potsdam",
+     "state": "NY",
+     "zip": "13676",
+     "phone": "3152657872"
+    },
+    {
+     "address": "201 S Research Pl",
+     "address_2": "",
+     "city": "Central Islip",
+     "state": "NY",
+     "zip": "11722",
+     "phone": "6315824719"
+    },
+    {
+     "address": "2080 Western Ave Ste 140",
+     "address_2": "",
+     "city": "Guilderland",
+     "state": "NY",
+     "zip": "12084",
+     "phone": "5188624280"
+    },
+    {
+     "address": "23360 Eureka Rd",
+     "address_2": "",
+     "city": "Taylor",
+     "state": "MI",
+     "zip": "48180",
+     "phone": "7342870024"
+    },
+    {
+     "address": "23415 Three Notch Rd Ste 1101",
+     "address_2": "",
+     "city": "California",
+     "state": "MD",
+     "zip": "20619",
+     "phone": "3018621896"
+    },
+    {
+     "address": "25301 Rockaway Blvd",
+     "address_2": "",
+     "city": "Rosedale",
+     "state": "NY",
+     "zip": "11422",
+     "phone": "5165692750"
+    },
+    {
+     "address": "2588 Central Park Ave",
+     "address_2": "",
+     "city": "Yonkers",
+     "state": "NY",
+     "zip": "10710",
+     "phone": "9143372171"
+    },
+    {
+     "address": "2590 W Ridge Rd",
+     "address_2": "",
+     "city": "Rochester",
+     "state": "NY",
+     "zip": "14626",
+     "phone": "5852277150"
+    },
+    {
+     "address": "2655 Richmond Ave Ste 1140",
+     "address_2": "",
+     "city": "Staten Island",
+     "state": "NY",
+     "zip": "10314",
+     "phone": "7187615607"
+    },
+    {
+     "address": "2799 Route 112 Ste 2A",
+     "address_2": "",
+     "city": "Medford",
+     "state": "NY",
+     "zip": "11763",
+     "phone": "6312893937"
+    },
+    {
+     "address": "2830 Campus Way N Ste 628",
+     "address_2": "",
+     "city": "Lanham",
+     "state": "MD",
+     "zip": "20706",
+     "phone": "3013221037"
+    },
+    {
+     "address": "2921 Erie Blvd E",
+     "address_2": "",
+     "city": "Syracuse",
+     "state": "NY",
+     "zip": "13224",
+     "phone": "3154465120"
+    },
+    {
+     "address": "301 Clay Pitts Rd",
+     "address_2": "",
+     "city": "E Northport",
+     "state": "NY",
+     "zip": "11731",
+     "phone": "6317542020"
+    },
+    {
+     "address": "3039 Route 50",
+     "address_2": "",
+     "city": "Saratoga Spgs",
+     "state": "NY",
+     "zip": "12866",
+     "phone": "5185801117"
+    },
+    {
+     "address": "30955 Woodward Ave Ste 215",
+     "address_2": "",
+     "city": "Royal Oak",
+     "state": "MI",
+     "zip": "48073",
+     "phone": "2488730069"
+    },
+    {
+     "address": "313 Merrick Rd",
+     "address_2": "",
+     "city": "Rockville Ctr",
+     "state": "NY",
+     "zip": "11570",
+     "phone": "5165361031"
+    },
+    {
+     "address": "3244 Hempstead Tpke",
+     "address_2": "",
+     "city": "Levittown",
+     "state": "NY",
+     "zip": "11756",
+     "phone": "5164897979"
+    },
+    {
+     "address": "3246 Monroe Ave",
+     "address_2": "",
+     "city": "Rochester",
+     "state": "NY",
+     "zip": "14618",
+     "phone": "5853854980"
+    },
+    {
+     "address": "333 Grant Avenue Rd",
+     "address_2": "",
+     "city": "Auburn",
+     "state": "NY",
+     "zip": "13021",
+     "phone": "3152559212"
+    },
+    {
+     "address": "346-58 ROUTE 25A",
+     "address_2": "",
+     "city": "ROCKY POINT",
+     "state": "NY",
+     "zip": "11778",
+     "phone": "6317446800"
+    },
+    {
+     "address": "350 Walt Whitman Rd Unit 3",
+     "address_2": "",
+     "city": "Huntington Station",
+     "state": "NY",
+     "zip": "11746",
+     "phone": "6315490272"
+    },
+    {
+     "address": "3518 State Route 281",
+     "address_2": "",
+     "city": "Cortland",
+     "state": "NY",
+     "zip": "13045",
+     "phone": "6077562751"
+    },
+    {
+     "address": "3540 McKinley Pkwy",
+     "address_2": "",
+     "city": "Buffalo",
+     "state": "NY",
+     "zip": "14219",
+     "phone": "7168261673"
+    },
+    {
+     "address": "361 W 14 Mile Rd",
+     "address_2": "",
+     "city": "Madison Heights",
+     "state": "MI",
+     "zip": "48071",
+     "phone": "2488730059"
+    },
+    {
+     "address": "3620 28th St SE",
+     "address_2": "",
+     "city": "Kentwood",
+     "state": "MI",
+     "zip": "49512",
+     "phone": "6165120323"
+    },
+    {
+     "address": "3843 Union Rd",
+     "address_2": "",
+     "city": "Cheektowaga",
+     "state": "NY",
+     "zip": "14225",
+     "phone": "7166836582"
+    },
+    {
+     "address": "3873 State Route 31 Ste 110",
+     "address_2": "",
+     "city": "Liverpool",
+     "state": "NY",
+     "zip": "13090",
+     "phone": "3156525962"
+    },
+    {
+     "address": "3900 Vestal Pkwy E",
+     "address_2": "",
+     "city": "Vestal",
+     "state": "NY",
+     "zip": "13850",
+     "phone": "6077291212"
+    },
+    {
+     "address": "4042 Nesconset Hwy",
+     "address_2": "",
+     "city": "East Setauket",
+     "state": "NY",
+     "zip": "11733",
+     "phone": "6314763583"
+    },
+    {
+     "address": "4109 W Genesee St Ste 100",
+     "address_2": "",
+     "city": "Syracuse",
+     "state": "NY",
+     "zip": "13219",
+     "phone": "3154882020"
+    },
+    {
+     "address": "441 Balltown Rd Ste 1",
+     "address_2": "",
+     "city": "Schenectady",
+     "state": "NY",
+     "zip": "12304",
+     "phone": "5183466290"
+    },
+    {
+     "address": "4551 Commercial Dr",
+     "address_2": "",
+     "city": "New Hartford",
+     "state": "NY",
+     "zip": "13413",
+     "phone": "3157681000"
+    },
+    {
+     "address": "4879 State Highway 30 Ste 105",
+     "address_2": "",
+     "city": "Amsterdam",
+     "state": "NY",
+     "zip": "12010",
+     "phone": "5188435353"
+    },
+    {
+     "address": "4925 S Baldwin Rd Bldg B",
+     "address_2": "",
+     "city": "Lake Orion",
+     "state": "MI",
+     "zip": "48359",
+     "phone": "2483910158"
+    },
+    {
+     "address": "4930 Merrick Rd",
+     "address_2": "",
+     "city": "Massapequa Park",
+     "state": "NY",
+     "zip": "11762",
+     "phone": "5167996500"
+    },
+    {
+     "address": "50 Auert Ave",
+     "address_2": "",
+     "city": "Utica",
+     "state": "NY",
+     "zip": "13502",
+     "phone": "3157243000"
+    },
+    {
+     "address": "50 Cobblestone Court Dr",
+     "address_2": "",
+     "city": "Victor",
+     "state": "NY",
+     "zip": "14564",
+     "phone": "5854251770"
+    },
+    {
+     "address": "5006 State Highway 23",
+     "address_2": "",
+     "city": "Oneonta",
+     "state": "NY",
+     "zip": "13820",
+     "phone": "6074369200"
+    },
+    {
+     "address": "54 Crossing Blvd Ste X & Y",
+     "address_2": "",
+     "city": "Clifton Park",
+     "state": "NY",
+     "zip": "12065",
+     "phone": "5183732200"
+    },
+    {
+     "address": "5509 Urbana Pike",
+     "address_2": "",
+     "city": "Frederick",
+     "state": "MD",
+     "zip": "21704",
+     "phone": "3016620660"
+    },
+    {
+     "address": "560 Troy Schenectady Rd",
+     "address_2": "",
+     "city": "Latham",
+     "state": "NY",
+     "zip": "12110",
+     "phone": "5187830090"
+    },
+    {
+     "address": "5631 State Highway 12 Ste B",
+     "address_2": "",
+     "city": "Norwich",
+     "state": "NY",
+     "zip": "13815",
+     "phone": "6073362007"
+    },
+    {
+     "address": "5653 E Circle Dr",
+     "address_2": "",
+     "city": "Cicero",
+     "state": "NY",
+     "zip": "13039",
+     "phone": "3154581216"
+    },
+    {
+     "address": "5716 S Transit Rd Ste 600",
+     "address_2": "",
+     "city": "Lockport",
+     "state": "NY",
+     "zip": "14094",
+     "phone": "7164330504"
+    },
+    {
+     "address": "600 Old Country Rd",
+     "address_2": "",
+     "city": "Garden City",
+     "state": "NY",
+     "zip": "11530",
+     "phone": "5167456565"
+    },
+    {
+     "address": "622 Columbia Tpke",
+     "address_2": "",
+     "city": "East Greenbush",
+     "state": "NY",
+     "zip": "12061",
+     "phone": "5184778700"
+    },
+    {
+     "address": "6250 Columbia Crossing Cir Ste K",
+     "address_2": "",
+     "city": "Columbia",
+     "state": "MD",
+     "zip": "21045",
+     "phone": "4432850100"
+    },
+    {
+     "address": "6427 Baltimore National Pike Ste A",
+     "address_2": "",
+     "city": "Catonsville",
+     "state": "MD",
+     "zip": "21228",
+     "phone": "4107889303"
+    },
+    {
+     "address": "650 Lee Blvd Ste D01A",
+     "address_2": "",
+     "city": "Yorktown Hgts",
+     "state": "NY",
+     "zip": "10598",
+     "phone": "9149620379"
+    },
+    {
+     "address": "656 Bel Air Rd",
+     "address_2": "",
+     "city": "Bel Air",
+     "state": "MD",
+     "zip": "21014",
+     "phone": "4108381188"
+    },
+    {
+     "address": "6660 4th Section Rd Ste 3",
+     "address_2": "",
+     "city": "Brockport",
+     "state": "NY",
+     "zip": "14420",
+     "phone": "5856373300"
+    },
+    {
+     "address": "6731 Ritchie Hwy",
+     "address_2": "",
+     "city": "Glen Burnie",
+     "state": "MD",
+     "zip": "21061",
+     "phone": "4437633906"
+    },
+    {
+     "address": "6859 E Genesee St",
+     "address_2": "",
+     "city": "Fayetteville",
+     "state": "NY",
+     "zip": "13066",
+     "phone": "3152512206"
+    },
+    {
+     "address": "7000 ARUNDEL MILLS CIR STE 404",
+     "address_2": "",
+     "city": "HANOVER",
+     "state": "MD",
+     "zip": "21076",
+     "phone": "4107992770"
+    },
+    {
+     "address": "722 S Meadow St",
+     "address_2": "",
+     "city": "Ithaca",
+     "state": "NY",
+     "zip": "14850",
+     "phone": "6072733300"
+    },
+    {
+     "address": "740 Hoosick Rd Ste 5",
+     "address_2": "",
+     "city": "Troy",
+     "state": "NY",
+     "zip": "12180",
+     "phone": "5182723300"
+    },
+    {
+     "address": "7879 Oswego Rd Rte 57",
+     "address_2": "",
+     "city": "Liverpool",
+     "state": "NY",
+     "zip": "13090",
+     "phone": "3156222000"
+    },
+    {
+     "address": "809 Canandaigua Rd",
+     "address_2": "",
+     "city": "Geneva",
+     "state": "NY",
+     "zip": "14456",
+     "phone": "3157811162"
+    },
+    {
+     "address": "8153 Honeygo Blvd Ste C",
+     "address_2": "",
+     "city": "Baltimore",
+     "state": "MD",
+     "zip": "21236",
+     "phone": "4436784141"
+    },
+    {
+     "address": "820 State Route 9 Ste 1308",
+     "address_2": "",
+     "city": "Queensbury",
+     "state": "NY",
+     "zip": "12804",
+     "phone": "5187451200"
+    },
+    {
+     "address": "825 DULANEY VALLEY RD STE 1335",
+     "address_2": "",
+     "city": "TOWSON",
+     "state": "MD",
+     "zip": "21204",
+     "phone": "4108238452"
+    },
+    {
+     "address": "830 County Road 64",
+     "address_2": "",
+     "city": "Elmira",
+     "state": "NY",
+     "zip": "14903",
+     "phone": "6077399000"
+    },
+    {
+     "address": "8336 Lewiston Rd",
+     "address_2": "",
+     "city": "Batavia",
+     "state": "NY",
+     "zip": "14020",
+     "phone": "5853444000"
+    },
+    {
+     "address": "8551 Fenton St",
+     "address_2": "",
+     "city": "Silver Spring",
+     "state": "MD",
+     "zip": "20910",
+     "phone": "3015851080"
+    },
+    {
+     "address": "8652 Pulaski Hwy Ste A",
+     "address_2": "",
+     "city": "Rosedale",
+     "state": "MD",
+     "zip": "21237",
+     "phone": "4103915265"
+    },
+    {
+     "address": "9 Boices Ln",
+     "address_2": "",
+     "city": "Kingston",
+     "state": "NY",
+     "zip": "12401",
+     "phone": "8453363937"
+    },
+    {
+     "address": "9150 Baltimore national Pike Ste 15",
+     "address_2": "",
+     "city": "Ellicott City",
+     "state": "MD",
+     "zip": "21042",
+     "phone": "4434206182"
+    },
+    {
+     "address": "N 195 W 18437 County Line Rd",
+     "address_2": "",
+     "city": "Menomonee Falls",
+     "state": "WI",
+     "zip": "53051",
+     "phone": "2625320570"
+    },
+    {
+     "address": "701 Lynnhaven Parkway Unit E10",
+     "address_2": "",
+     "city": "Virginia Beach",
+     "state": "VA",
+     "zip": "23452",
+     "phone": "8555500743"
+    },
+    {
+     "address": "1039 Emmet St N # M016",
+     "address_2": "",
+     "city": "Charlottesville",
+     "state": "VA",
+     "zip": "22903",
+     "phone": "8555500743"
+    },
+    {
+     "address": "11936 MARKET ST",
+     "address_2": "",
+     "city": "RESTON",
+     "state": "VA",
+     "zip": "20190",
+     "phone": "8555500743"
+    },
+    {
+     "address": "13949 PROMENADE COMMONS ST",
+     "address_2": "",
+     "city": "GAINESVILLE",
+     "state": "VA",
+     "zip": "20155",
+     "phone": "8555500743"
+    },
+    {
+     "address": "233 SPRING ST FL 6",
+     "address_2": "",
+     "city": "NEW YORK",
+     "state": "NY",
+     "zip": "10013",
+     "phone": "6465175223"
+    },
+    {
+     "address": "10300 Little Patuxent Pkwy Ste 1005B",
+     "address_2": "",
+     "city": "Columbia",
+     "state": "MD",
+     "zip": "21044",
+     "phone": "8555500743"
+    },
+    {
+     "address": "825 Dulaney Valley RD",
+     "address_2": "",
+     "city": "Towson",
+     "state": "MD",
+     "zip": "21204",
+     "phone": "8555500743"
+    },
+    {
+     "address": "1475 Western Ave",
+     "address_2": "",
+     "city": "Albany",
+     "state": "NY",
+     "zip": "12203",
+     "phone": "8555500753"
+    }
+   ],
+   "accepting": "accepting in some locations",
+   "specialty": [
+    "Optometry"
+   ],
+   "last_updated_on": "2026-08-04"
+  },
+  {
+   "npi": "1043798622",
+   "type": "INDIVIDUAL",
+   "plans": [
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070004",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070013",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070014",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070016",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070025",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070026",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150004",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150007",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150011",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150012",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150019",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150020",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170016",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170017",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170018",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170020",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170021",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180016",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180017",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180019",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180020",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180022",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    }
+   ],
+   "name": {
+    "prefix": "Dr.",
+    "first": "Ashley",
+    "middle": "M",
+    "last": "Tang"
+   },
+   "sex": "Female",
+   "languages": [
+    "English",
+    "Spanish"
+   ],
+   "addresses": [
+    {
+     "address": "438 SINGING OAKS STE B",
+     "address_2": "",
+     "city": "SPRING BRANCH",
+     "state": "TX",
+     "zip": "78070",
+     "phone": "8307146139"
+    },
+    {
+     "address": "10013 Almeda Genoa Rd Ste G",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77075",
+     "phone": "3462373464"
+    },
+    {
+     "address": "4410 Dallas Fort Worth Turnpike",
+     "address_2": "",
+     "city": "Dallas",
+     "state": "TX",
+     "zip": "75211",
+     "phone": "2144590378"
+    },
+    {
+     "address": "1004 N Promenade Pkwy Ste 118",
+     "address_2": "",
+     "city": "Casa Grande",
+     "state": "AZ",
+     "zip": "85194",
+     "phone": "5208361759"
+    },
+    {
+     "address": "4411 Century Blvd",
+     "address_2": "",
+     "city": "Pittsburg",
+     "state": "CA",
+     "zip": "94565",
+     "phone": "9254704527"
+    },
+    {
+     "address": "1005 S Arizona Ave Ste 4",
+     "address_2": "",
+     "city": "Chandler",
+     "state": "AZ",
+     "zip": "85286",
+     "phone": "4802140065"
+    },
+    {
+     "address": "4429 Candlewood St",
+     "address_2": "",
+     "city": "Lakewood",
+     "state": "CA",
+     "zip": "90712",
+     "phone": "5622952126"
+    },
+    {
+     "address": "1008 Southmore Ave Ste 120",
+     "address_2": "",
+     "city": "Pasadena",
+     "state": "TX",
+     "zip": "77502",
+     "phone": "7138213091"
+    },
+    {
+     "address": "4571 E Los Coyotes Diagonal",
+     "address_2": "",
+     "city": "Long Beach",
+     "state": "CA",
+     "zip": "90815",
+     "phone": "5626685313"
+    },
+    {
+     "address": "1010 Pleasant Grove Blvd Suite 120",
+     "address_2": "",
+     "city": "Roseville",
+     "state": "CA",
+     "zip": "95678",
+     "phone": "9168722451"
+    },
+    {
+     "address": "4625 E Ray Rd",
+     "address_2": "",
+     "city": "Phoenix",
+     "state": "AZ",
+     "zip": "85044",
+     "phone": "6027600890"
+    },
+    {
+     "address": "1019 W University Ave Ste 1020",
+     "address_2": "",
+     "city": "Georgetown",
+     "state": "TX",
+     "zip": "78628",
+     "phone": "5125912952"
+    },
+    {
+     "address": "470 N Euclid St",
+     "address_2": "",
+     "city": "Anaheim",
+     "state": "CA",
+     "zip": "92801",
+     "phone": "7145073708"
+    },
+    {
+     "address": "102 N Murphy Rd Ste 1029",
+     "address_2": "",
+     "city": "Murphy",
+     "state": "TX",
+     "zip": "75094",
+     "phone": "9728069963"
+    },
+    {
+     "address": "4701 S Padre Island Dr",
+     "address_2": "",
+     "city": "Corpus Christi",
+     "state": "TX",
+     "zip": "78411",
+     "phone": "3617302375"
+    },
+    {
+     "address": "10261 North Fwy",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77037",
+     "phone": "2812498400"
+    },
+    {
+     "address": "4705 FM 1960 RD E STE E",
+     "address_2": "",
+     "city": "HOUSTON",
+     "state": "TX",
+     "zip": "77069",
+     "phone": "2818369027"
+    },
+    {
+     "address": "1036 W Southern Ave Ste 102",
+     "address_2": "",
+     "city": "Mesa",
+     "state": "AZ",
+     "zip": "85210",
+     "phone": "4809691991"
+    },
+    {
+     "address": "4759 29th St Unit C",
+     "address_2": "",
+     "city": "Greeley",
+     "state": "CO",
+     "zip": "80634",
+     "phone": "9703390087"
+    },
+    {
+     "address": "1063 E Interstate 30 Ste 105",
+     "address_2": "",
+     "city": "Rockwall",
+     "state": "TX",
+     "zip": "75087",
+     "phone": "4694343021"
+    },
+    {
+     "address": "4801 W Commerce St Ste 106",
+     "address_2": "",
+     "city": "San Antonio",
+     "state": "TX",
+     "zip": "78237",
+     "phone": "2105367937"
+    },
+    {
+     "address": "10734 C Trinity Pkwy",
+     "address_2": "",
+     "city": "Stockton",
+     "state": "CA",
+     "zip": "95219",
+     "phone": "2097156864"
+    },
+    {
+     "address": "4805 Hwy 6 N Ste 12B",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77084",
+     "phone": "2815007252"
+    },
+    {
+     "address": "10740 Foothill Blvd",
+     "address_2": "",
+     "city": "Rancho Cucamonga",
+     "state": "CA",
+     "zip": "91730",
+     "phone": "9099423030"
+    },
+    {
+     "address": "4811 Overton Ridge Blvd Ste 228",
+     "address_2": "",
+     "city": "Fort Worth",
+     "state": "TX",
+     "zip": "76132",
+     "phone": "8174238641"
+    },
+    {
+     "address": "1075 N Academy Blvd",
+     "address_2": "",
+     "city": "Colorado Springs",
+     "state": "CO",
+     "zip": "80909",
+     "phone": "7195974001"
+    },
+    {
+     "address": "482 N Main St Ste 101",
+     "address_2": "",
+     "city": "Corona",
+     "state": "CA",
+     "zip": "92878",
+     "phone": "9514932150"
+    },
+    {
+     "address": "110 N Interstate 35 Ste 203",
+     "address_2": "",
+     "city": "Round Rock",
+     "state": "TX",
+     "zip": "78681",
+     "phone": "7372078020"
+    },
+    {
+     "address": "5007 Parkcrest Dr Ste 103",
+     "address_2": "",
+     "city": "San Antonio",
+     "state": "TX",
+     "zip": "78218",
+     "phone": "2102467098"
+    },
+    {
+     "address": "1100 S Mount Vernon Ave Ste D",
+     "address_2": "",
+     "city": "Colton",
+     "state": "CA",
+     "zip": "92324",
+     "phone": "9096994061"
+    },
+    {
+     "address": "5066 S Wadsworth Way Unit 120",
+     "address_2": "",
+     "city": "Littleton",
+     "state": "CO",
+     "zip": "80123",
+     "phone": "3039710200"
+    },
+    {
+     "address": "11066 Pecan Park Blvd Ste 510",
+     "address_2": "",
+     "city": "Cedar Park",
+     "state": "TX",
+     "zip": "78613",
+     "phone": "5125168898"
+    },
+    {
+     "address": "5200 E Ramon Rd Ste H2",
+     "address_2": "",
+     "city": "Palm Springs",
+     "state": "CA",
+     "zip": "92264",
+     "phone": "7604596463"
+    },
+    {
+     "address": "11115 W GRAND PKWY S STE 180",
+     "address_2": "",
+     "city": "RICHMOND",
+     "state": "TX",
+     "zip": "77407",
+     "phone": "3463756980"
+    },
+    {
+     "address": "5300 S MoPac Expy Ste 102-102C",
+     "address_2": "",
+     "city": "Austin",
+     "state": "TX",
+     "zip": "78749",
+     "phone": "5123824135"
+    },
+    {
+     "address": "1114 Silber Rd Ste C",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77055",
+     "phone": "7139861489"
+    },
+    {
+     "address": "5301 Belt Line Rd Ste 104",
+     "address_2": "",
+     "city": "Dallas",
+     "state": "TX",
+     "zip": "75254",
+     "phone": "4698017825"
+    },
+    {
+     "address": "11168 Fondren Rd",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77096",
+     "phone": "8323250118"
+    },
+    {
+     "address": "55 Crescent Dr Ste 10D",
+     "address_2": "",
+     "city": "Pleasant Hill",
+     "state": "CA",
+     "zip": "94523",
+     "phone": "9253497258"
+    },
+    {
+     "address": "11255 Garland Rd Ste 800",
+     "address_2": "",
+     "city": "Dallas",
+     "state": "TX",
+     "zip": "75218",
+     "phone": "4698013186"
+    },
+    {
+     "address": "5601 President George Bush Hwy Ste 700",
+     "address_2": "",
+     "city": "Rowlett",
+     "state": "TX",
+     "zip": "75089",
+     "phone": "9722029589"
+    },
+    {
+     "address": "11411 Bandera Rd Ste 102",
+     "address_2": "",
+     "city": "San Antonio",
+     "state": "TX",
+     "zip": "78250",
+     "phone": "2105079148"
+    },
+    {
+     "address": "5609 Sierra Springs Ln",
+     "address_2": "",
+     "city": "Fort Worth",
+     "state": "TX",
+     "zip": "76123",
+     "phone": "6826106248"
+    },
+    {
+     "address": "11495 Twenty Mile Rd Unit A3",
+     "address_2": "",
+     "city": "Parker",
+     "state": "CO",
+     "zip": "80134",
+     "phone": "3038028022"
+    },
+    {
+     "address": "5667 Barnes Rd",
+     "address_2": "",
+     "city": "Colorado Springs",
+     "state": "CO",
+     "zip": "80917",
+     "phone": "7192160305"
+    },
+    {
+     "address": "1155 S Power Rd Ste 102",
+     "address_2": "",
+     "city": "Mesa",
+     "state": "AZ",
+     "zip": "85206",
+     "phone": "4802140011"
+    },
+    {
+     "address": "5801 Long Prairie Rd Ste 360",
+     "address_2": "",
+     "city": "Flower Mound",
+     "state": "TX",
+     "zip": "75028",
+     "phone": "9723553232"
+    },
+    {
+     "address": "1175 Renaissance Pkwy Ste 1050",
+     "address_2": "",
+     "city": "Rialto",
+     "state": "CA",
+     "zip": "92376",
+     "phone": "9095463465"
+    },
+    {
+     "address": "5807 E Sam Houston Pkwy N Ste B",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77049",
+     "phone": "2815292089"
+    },
+    {
+     "address": "1180 N Eagle Rd Ste 101",
+     "address_2": "",
+     "city": "Meridian",
+     "state": "ID",
+     "zip": "83642",
+     "phone": "2082023736"
+    },
+    {
+     "address": "5818 Santa Monica Blvd",
+     "address_2": "",
+     "city": "Los Angeles",
+     "state": "CA",
+     "zip": "90038",
+     "phone": "3237622294"
+    },
+    {
+     "address": "1180 Thorpe Ln Ste 201",
+     "address_2": "",
+     "city": "San Marcos",
+     "state": "TX",
+     "zip": "78666",
+     "phone": "5122146182"
+    },
+    {
+     "address": "5821 N Elizabeth St",
+     "address_2": "",
+     "city": "Pueblo",
+     "state": "CO",
+     "zip": "81008",
+     "phone": "7194041765"
+    },
+    {
+     "address": "11809 Wilcrest Dr",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77031",
+     "phone": "3462073137"
+    },
+    {
+     "address": "5860 W Arizona Pavilions Dr Ste 102",
+     "address_2": "",
+     "city": "Tucson",
+     "state": "AZ",
+     "zip": "85743",
+     "phone": "5208485011"
+    },
+    {
+     "address": "1183 W Irvington Rd Ste 131",
+     "address_2": "",
+     "city": "Tucson",
+     "state": "AZ",
+     "zip": "85714",
+     "phone": "5209086331"
+    },
+    {
+     "address": "5899 Sunrise Blvd",
+     "address_2": "",
+     "city": "Citrus Heights",
+     "state": "CA",
+     "zip": "95610",
+     "phone": "9165341018"
+    },
+    {
+     "address": "121 Highway 332 W Ste D",
+     "address_2": "",
+     "city": "Lake Jackson",
+     "state": "TX",
+     "zip": "77566",
+     "phone": "9792587716"
+    },
+    {
+     "address": "5950 Gulf Fwy Ste 400",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77023",
+     "phone": "8328394272"
+    },
+    {
+     "address": "1212 N Highway 377",
+     "address_2": "",
+     "city": "Roanoke",
+     "state": "TX",
+     "zip": "76262",
+     "phone": "8178375891"
+    },
+    {
+     "address": "6009 W Parker Rd Ste 121",
+     "address_2": "",
+     "city": "Plano",
+     "state": "TX",
+     "zip": "75093",
+     "phone": "9722022421"
+    },
+    {
+     "address": "1212 West Olive Ave",
+     "address_2": "",
+     "city": "Merced",
+     "state": "CA",
+     "zip": "95348",
+     "phone": "2096263604"
+    },
+    {
+     "address": "6014 Azle Ave Ste 200",
+     "address_2": "",
+     "city": "Lake Worth",
+     "state": "TX",
+     "zip": "76135",
+     "phone": "6823122603"
+    },
+    {
+     "address": "12148 Lakewood Blvd",
+     "address_2": "",
+     "city": "Downey",
+     "state": "CA",
+     "zip": "90242",
+     "phone": "5626742062"
+    },
+    {
+     "address": "6019 Florin Rd Suite 500",
+     "address_2": "",
+     "city": "Sacramento",
+     "state": "CA",
+     "zip": "95823",
+     "phone": "9165039460"
+    },
+    {
+     "address": "12250 Lake June Rd",
+     "address_2": "",
+     "city": "Balch Springs",
+     "state": "TX",
+     "zip": "75180",
+     "phone": "9726771361"
+    },
+    {
+     "address": "6101 Gateway Blvd W Ste OP06",
+     "address_2": "",
+     "city": "El Paso",
+     "state": "TX",
+     "zip": "79925",
+     "phone": "9152751582"
+    },
+    {
+     "address": "1230 E BELT LINE RD",
+     "address_2": "",
+     "city": "RICHARDSON",
+     "state": "TX",
+     "zip": "75081",
+     "phone": "4696277525"
+    },
+    {
+     "address": "616 American Way",
+     "address_2": "",
+     "city": "Terrell",
+     "state": "TX",
+     "zip": "75160",
+     "phone": "4694742077"
+    },
+    {
+     "address": "12318 Interstate 45 North",
+     "address_2": "",
+     "city": "Willis",
+     "state": "TX",
+     "zip": "77378",
+     "phone": "9362726203"
+    },
+    {
+     "address": "6323 E Highway 191",
+     "address_2": "",
+     "city": "Odessa",
+     "state": "TX",
+     "zip": "79762",
+     "phone": "4322488167"
+    },
+    {
+     "address": "1239 Pole Line Rd E Ste 312C",
+     "address_2": "",
+     "city": "Twin Falls",
+     "state": "ID",
+     "zip": "83301",
+     "phone": "2087362924"
+    },
+    {
+     "address": "6464 E Northwest Hwy Ste 309",
+     "address_2": "",
+     "city": "Dallas",
+     "state": "TX",
+     "zip": "75214",
+     "phone": "4692480670"
+    },
+    {
+     "address": "1240 FM 1462 Rd Ste 300",
+     "address_2": "",
+     "city": "Alvin",
+     "state": "TX",
+     "zip": "77511",
+     "phone": "2819686206"
+    },
+    {
+     "address": "6515 Garth Rd Ste 130",
+     "address_2": "",
+     "city": "Baytown",
+     "state": "TX",
+     "zip": "77521",
+     "phone": "2816919068"
+    },
+    {
+     "address": "12548 Westheimer Rd Ste A",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77077",
+     "phone": "2812498380"
+    },
+    {
+     "address": "655 W Illinois Ave Bldg 700 Ste 721",
+     "address_2": "",
+     "city": "Dallas",
+     "state": "TX",
+     "zip": "75224",
+     "phone": "4698018253"
+    },
+    {
+     "address": "12585 Cantu Galleano Ranch Rd Ste 120",
+     "address_2": "",
+     "city": "Eastvale",
+     "state": "CA",
+     "zip": "91752",
+     "phone": "9514164142"
+    },
+    {
+     "address": "6600 Spring Stuebner Rd Ste 160",
+     "address_2": "",
+     "city": "Spring",
+     "state": "TX",
+     "zip": "77389",
+     "phone": "8327618176"
+    },
+    {
+     "address": "12625 Frederick St Ste B10",
+     "address_2": "",
+     "city": "Moreno Valley",
+     "state": "CA",
+     "zip": "92553",
+     "phone": "9515712192"
+    },
+    {
+     "address": "6710 S Broadway Ave Ste 100",
+     "address_2": "",
+     "city": "Tyler",
+     "state": "TX",
+     "zip": "75703",
+     "phone": "9035086001"
+    },
+    {
+     "address": "12715 Main St Ste 740",
+     "address_2": "",
+     "city": "Hesperia",
+     "state": "CA",
+     "zip": "92345",
+     "phone": "7609980021"
+    },
+    {
+     "address": "6755 Fallbrook Ave",
+     "address_2": "",
+     "city": "West Hills",
+     "state": "CA",
+     "zip": "91307",
+     "phone": "8185774882"
+    },
+    {
+     "address": "12731 Towne Center Dr Ste L1",
+     "address_2": "",
+     "city": "Cerritos",
+     "state": "CA",
+     "zip": "90703",
+     "phone": "5623565619"
+    },
+    {
+     "address": "6771 Westminster Blvd Ste B",
+     "address_2": "",
+     "city": "Westminster",
+     "state": "CA",
+     "zip": "92683",
+     "phone": "6576667130"
+    },
+    {
+     "address": "12928 Willow Chase Dr",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77070",
+     "phone": "8329738800"
+    },
+    {
+     "address": "6834 Wesley St",
+     "address_2": "",
+     "city": "Greenville",
+     "state": "TX",
+     "zip": "75402",
+     "phone": "9032595187"
+    },
+    {
+     "address": "1330 E IH 10",
+     "address_2": "",
+     "city": "SEGUIN",
+     "state": "TX",
+     "zip": "78155",
+     "phone": "8304630483"
+    },
+    {
+     "address": "6940 FM 1960 RD E",
+     "address_2": "",
+     "city": "HUMBLE",
+     "state": "TX",
+     "zip": "77346",
+     "phone": "3468426730"
+    },
+    {
+     "address": "1331 S Lone Hill Ave Ste 130",
+     "address_2": "",
+     "city": "Glendora",
+     "state": "CA",
+     "zip": "91740",
+     "phone": "9099625029"
+    },
+    {
+     "address": "7000 Eastern Ave Ste A",
+     "address_2": "",
+     "city": "Bell Gardens",
+     "state": "CA",
+     "zip": "90201",
+     "phone": "3239734163"
+    },
+    {
+     "address": "13486 Northwest Fwy",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77040",
+     "phone": "3462727925"
+    },
+    {
+     "address": "701 N Central Expy Ste 300",
+     "address_2": "",
+     "city": "Plano",
+     "state": "TX",
+     "zip": "75075",
+     "phone": "4692983416"
+    },
+    {
+     "address": "13533 University Blvd Ste 300",
+     "address_2": "",
+     "city": "Sugar Land",
+     "state": "TX",
+     "zip": "77479",
+     "phone": "8329356228"
+    },
+    {
+     "address": "707 N Highway 67 Ste 150",
+     "address_2": "",
+     "city": "Cedar Hill",
+     "state": "TX",
+     "zip": "75104",
+     "phone": "9722998967"
+    },
+    {
+     "address": "13637 N Tatum Blvd Ste 22",
+     "address_2": "",
+     "city": "Phoenix",
+     "state": "AZ",
+     "zip": "85032",
+     "phone": "6026520126"
+    },
+    {
+     "address": "707 W HENDERSON ST",
+     "address_2": "",
+     "city": "CLEBURNE",
+     "state": "TX",
+     "zip": "76033",
+     "phone": "8175367041"
+    },
+    {
+     "address": "1390 Fitzgerald Dr",
+     "address_2": "",
+     "city": "Pinole",
+     "state": "CA",
+     "zip": "94564",
+     "phone": "5108545161"
+    },
+    {
+     "address": "7260 W Bell Rd Ste 5",
+     "address_2": "",
+     "city": "Glendale",
+     "state": "AZ",
+     "zip": "85308",
+     "phone": "6234861888"
+    },
+    {
+     "address": "14010 E Mississippi Ave",
+     "address_2": "",
+     "city": "Aurora",
+     "state": "CO",
+     "zip": "80012",
+     "phone": "3037514500"
+    },
+    {
+     "address": "7310 W 52nd Ave Unit X",
+     "address_2": "",
+     "city": "Arvada",
+     "state": "CO",
+     "zip": "80002",
+     "phone": "3032643994"
+    },
+    {
+     "address": "141 General Stillwell Dr Ste B",
+     "address_2": "",
+     "city": "Marina",
+     "state": "CA",
+     "zip": "93933",
+     "phone": "8312645814"
+    },
+    {
+     "address": "732 W Pipeline Rd",
+     "address_2": "",
+     "city": "Hurst",
+     "state": "TX",
+     "zip": "76053",
+     "phone": "8177994016"
+    },
+    {
+     "address": "14223 FM 2920 Rd Ste 100",
+     "address_2": "",
+     "city": "Tomball",
+     "state": "TX",
+     "zip": "77377",
+     "phone": "2812052290"
+    },
+    {
+     "address": "7333 W Thomas Rd Ste 18",
+     "address_2": "",
+     "city": "Phoenix",
+     "state": "AZ",
+     "zip": "85033",
+     "phone": "6232470777"
+    },
+    {
+     "address": "14243 E Sam Houston Pkwy N Ste 1000",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77044",
+     "phone": "3462079871"
+    },
+    {
+     "address": "7342 San Pedro Ave",
+     "address_2": "",
+     "city": "San Antonio",
+     "state": "TX",
+     "zip": "78216",
+     "phone": "2102762256"
+    },
+    {
+     "address": "1426 East Highway 377",
+     "address_2": "",
+     "city": "Granbury",
+     "state": "TX",
+     "zip": "76048",
+     "phone": "6824986041"
+    },
+    {
+     "address": "7509 San Dario Ave",
+     "address_2": "",
+     "city": "Laredo",
+     "state": "TX",
+     "zip": "78045",
+     "phone": "9568154238"
+    },
+    {
+     "address": "14300 Ocean Gate Ave",
+     "address_2": "",
+     "city": "Hawthorne",
+     "state": "CA",
+     "zip": "90250",
+     "phone": "4243911035"
+    },
+    {
+     "address": "7549 Westheimer Rd",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77063",
+     "phone": "7138301302"
+    },
+    {
+     "address": "14458 Delaware St Unit 300",
+     "address_2": "",
+     "city": "Westminster",
+     "state": "CO",
+     "zip": "80023",
+     "phone": "3037498835"
+    },
+    {
+     "address": "7600 N 10th St Ste 600G",
+     "address_2": "",
+     "city": "McAllen",
+     "state": "TX",
+     "zip": "78504",
+     "phone": "9568006870"
+    },
+    {
+     "address": "1450 EASTCHASE PKWY STE 100",
+     "address_2": "",
+     "city": "FORT WORTH",
+     "state": "TX",
+     "zip": "76120",
+     "phone": "8175051741"
+    },
+    {
+     "address": "7601 Carson Blvd",
+     "address_2": "",
+     "city": "Long Beach",
+     "state": "CA",
+     "zip": "90808",
+     "phone": "5623843065"
+    },
+    {
+     "address": "14675 Rinaldi St Ste E",
+     "address_2": "",
+     "city": "San Fernando",
+     "state": "CA",
+     "zip": "91340",
+     "phone": "8186759864"
+    },
+    {
+     "address": "7653 W 88th Ave",
+     "address_2": "",
+     "city": "Arvada",
+     "state": "CO",
+     "zip": "80005",
+     "phone": "3034224600"
+    },
+    {
+     "address": "148A Serramonte Ctr",
+     "address_2": "",
+     "city": "Daly City",
+     "state": "CA",
+     "zip": "94015",
+     "phone": "6504882628"
+    },
+    {
+     "address": "7721 Laguna Blvd",
+     "address_2": "",
+     "city": "Sacramento",
+     "state": "CA",
+     "zip": "95758",
+     "phone": "9168975055"
+    },
+    {
+     "address": "1505 E Warner Rd Ste A103",
+     "address_2": "",
+     "city": "Gilbert",
+     "state": "AZ",
+     "zip": "85296",
+     "phone": "4803334050"
+    },
+    {
+     "address": "780 Road To Six Flags St E Ste 224",
+     "address_2": "",
+     "city": "Arlington",
+     "state": "TX",
+     "zip": "76011",
+     "phone": "8175051500"
+    },
+    {
+     "address": "1505 University Drive East Ste 450",
+     "address_2": "",
+     "city": "College Station",
+     "state": "TX",
+     "zip": "77840",
+     "phone": "9794316053"
+    },
+    {
+     "address": "811 NE Alsbury Blvd Ste 100",
+     "address_2": "",
+     "city": "Burleson",
+     "state": "TX",
+     "zip": "76028",
+     "phone": "8172317131"
+    },
+    {
+     "address": "1515 N Town East Blvd Ste 173",
+     "address_2": "",
+     "city": "Mesquite",
+     "state": "TX",
+     "zip": "75150",
+     "phone": "4696082654"
+    },
+    {
+     "address": "8154 Kirby Dr",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77054",
+     "phone": "7133259999"
+    },
+    {
+     "address": "15600 E Briarwood Cir Ste C",
+     "address_2": "",
+     "city": "Aurora",
+     "state": "CO",
+     "zip": "80016",
+     "phone": "3035248696"
+    },
+    {
+     "address": "8215 Agora Pkwy Ste 103",
+     "address_2": "",
+     "city": "Selma",
+     "state": "TX",
+     "zip": "78154",
+     "phone": "2106726800"
+    },
+    {
+     "address": "1561 E Second St",
+     "address_2": "",
+     "city": "Beaumont",
+     "state": "CA",
+     "zip": "92223",
+     "phone": "9518465174"
+    },
+    {
+     "address": "8219 State Highway 151 Ste 124",
+     "address_2": "",
+     "city": "San Antonio",
+     "state": "TX",
+     "zip": "78245",
+     "phone": "2105076712"
+    },
+    {
+     "address": "1600 E Interstate Hwy 2 Ste 115",
+     "address_2": "",
+     "city": "San Juan",
+     "state": "TX",
+     "zip": "78589",
+     "phone": "9569044106"
+    },
+    {
+     "address": "8430 Rosedale Hwy Ste 101",
+     "address_2": "",
+     "city": "Bakersfiled",
+     "state": "CA",
+     "zip": "93312",
+     "phone": "6615356679"
+    },
+    {
+     "address": "16152 Jackson Creek Pkwy",
+     "address_2": "",
+     "city": "Monument",
+     "state": "CO",
+     "zip": "80132",
+     "phone": "7193020025"
+    },
+    {
+     "address": "8641 W Franklin Rd",
+     "address_2": "",
+     "city": "Boise",
+     "state": "ID",
+     "zip": "83709",
+     "phone": "2083788989"
+    },
+    {
+     "address": "163 W Ventura Blvd Ste A",
+     "address_2": "",
+     "city": "Camarillo",
+     "state": "CA",
+     "zip": "93010",
+     "phone": "8054651002"
+    },
+    {
+     "address": "871 S Preston Rd",
+     "address_2": "",
+     "city": "Prosper",
+     "state": "TX",
+     "zip": "75078",
+     "phone": "4692961296"
+    },
+    {
+     "address": "1641 W Imperial Hwy Ste C",
+     "address_2": "",
+     "city": "La Habra",
+     "state": "CA",
+     "zip": "90631",
+     "phone": "5625240189"
+    },
+    {
+     "address": "8758 Corbin Ave",
+     "address_2": "",
+     "city": "Northridge",
+     "state": "CA",
+     "zip": "91324",
+     "phone": "8184284048"
+    },
+    {
+     "address": "1643 Fall River Dr Ste 250",
+     "address_2": "",
+     "city": "Loveland",
+     "state": "CO",
+     "zip": "80538",
+     "phone": "9705416115"
+    },
+    {
+     "address": "883 S COTTON LN STE 121",
+     "address_2": "",
+     "city": "GOODYEAR",
+     "state": "AZ",
+     "zip": "85338",
+     "phone": "6026432147"
+    },
+    {
+     "address": "16439 N Marketplace Blvd",
+     "address_2": "",
+     "city": "Nampa",
+     "state": "ID",
+     "zip": "83687",
+     "phone": "2088006003"
+    },
+    {
+     "address": "8940 E Talking Stick Way Ste B3",
+     "address_2": "",
+     "city": "Scottsdale",
+     "state": "AZ",
+     "zip": "85250",
+     "phone": "4803377356"
+    },
+    {
+     "address": "1670 E Cheyenne Mt Blvd Ste N1-M",
+     "address_2": "",
+     "city": "Colorado Spgs",
+     "state": "CO",
+     "zip": "80906",
+     "phone": "7199605458"
+    },
+    {
+     "address": "9140 Whittier Blvd",
+     "address_2": "",
+     "city": "Pico Rivera",
+     "state": "CA",
+     "zip": "90660",
+     "phone": "5625513050"
+    },
+    {
+     "address": "16860 W Waddell Rd Ste 102",
+     "address_2": "",
+     "city": "Surprise",
+     "state": "AZ",
+     "zip": "85388",
+     "phone": "6026434054"
+    },
+    {
+     "address": "929 N Shepherd Dr",
+     "address_2": "",
+     "city": "Houston",
+     "state": "TX",
+     "zip": "77008",
+     "phone": "8329734974"
+    },
+    {
+     "address": "1700 N Hwy 77 Ste 180",
+     "address_2": "",
+     "city": "Waxahachie",
+     "state": "TX",
+     "zip": "75165",
+     "phone": "4693837148"
+    },
+    {
+     "address": "9340 W Northern Ave Ste 120",
+     "address_2": "",
+     "city": "Glendale",
+     "state": "AZ",
+     "zip": "85305",
+     "phone": "6027941608"
+    },
+    {
+     "address": "1703 W Bethany Home Rd Ste C-3",
+     "address_2": "",
+     "city": "Phoenix",
+     "state": "AZ",
+     "zip": "85015",
+     "phone": "6029442444"
+    },
+    {
+     "address": "9500 S Interstate 35 Ste J-100",
+     "address_2": "",
+     "city": "Austin",
+     "state": "TX",
+     "zip": "78748",
+     "phone": "5125826451"
+    },
+    {
+     "address": "1712 N Main St",
+     "address_2": "",
+     "city": "Salinas",
+     "state": "CA",
+     "zip": "93906",
+     "phone": "8312697200"
+    },
+    {
+     "address": "9609 E County Line Rd Ste A2",
+     "address_2": "",
+     "city": "Englewood",
+     "state": "CO",
+     "zip": "80112",
+     "phone": "7205350028"
+    },
+    {
+     "address": "1713 S Western Ave Ste A",
+     "address_2": "",
+     "city": "Los Angeles",
+     "state": "CA",
+     "zip": "90006",
+     "phone": "4243267911"
+    },
+    {
+     "address": "970 N Tustin St Ste A",
+     "address_2": "",
+     "city": "Orange",
+     "state": "CA",
+     "zip": "92867",
+     "phone": "7144504850"
+    },
+    {
+     "address": "1715 W Loop 281",
+     "address_2": "",
+     "city": "Longview",
+     "state": "TX",
+     "zip": "75604",
+     "phone": "9034751021"
+    },
+    {
+     "address": "98 Wadsworth Blvd Ste 118",
+     "address_2": "",
+     "city": "Lakewood",
+     "state": "CO",
+     "zip": "80226",
+     "phone": "3037498802"
+    },
+    {
+     "address": "173 Plaza Dr Ste 1009",
+     "address_2": "",
+     "city": "Vallejo",
+     "state": "CA",
+     "zip": "94591",
+     "phone": "7079174053"
+    },
+    {
+     "address": "9820 W Lower Buckeye Rd Ste 101",
+     "address_2": "",
+     "city": "Tolleson",
+     "state": "AZ",
+     "zip": "85353",
+     "phone": "6232150009"
+    },
+    {
+     "address": "17550 Colima Rd Ste D",
+     "address_2": "",
+     "city": "Rowland Heights",
+     "state": "CA",
+     "zip": "91748",
+     "phone": "6263221082"
+    },
+    {
+     "address": "Plaza La Cienega",
+     "address_2": "1837 S La Cienega Blvd Ste A",
+     "city": "Los Angeles",
+     "state": "CA",
+     "zip": "90035",
+     "phone": "4243267913"
+    },
+    {
+     "address": "1776 E Woodmen Rd",
+     "address_2": "",
+     "city": "Colorado Springs",
+     "state": "CO",
+     "zip": "80920",
+     "phone": "7193250223"
+    },
+    {
+     "address": "16855 VALLEY BLVD",
+     "address_2": "",
+     "city": "FONTANA",
+     "state": "CA",
+     "zip": "92335",
+     "phone": "9093206667"
+    },
+    {
+     "address": "17802 La Cantera Pkwy Ste 112",
+     "address_2": "",
+     "city": "San Antonio",
+     "state": "TX",
+     "zip": "78257",
+     "phone": "2109052859"
+    },
+    {
+     "address": "1695 INTERSTATE 35 S",
+     "address_2": "",
+     "city": "NEW BRAUNFELS",
+     "state": "TX",
+     "zip": "78130",
+     "phone": "8303276129"
+    },
+    {
+     "address": "1796 N Zaragoza Rd",
+     "address_2": "",
+     "city": "El Paso",
+     "state": "TX",
+     "zip": "79936",
+     "phone": "9153522589"
+    },
+    {
+     "address": "1418 S YUMA PALMS PKWY",
+     "address_2": "",
+     "city": "YUMA",
+     "state": "AZ",
+     "zip": "85365",
+     "phone": "9282614318"
+    },
+    {
+     "address": "1800 S Loop 288 Ste 205",
+     "address_2": "",
+     "city": "Denton",
+     "state": "TX",
+     "zip": "76205",
+     "phone": "9407834746"
+    },
+    {
+     "address": "243 FM 2094 RD",
+     "address_2": "",
+     "city": "KEMAH",
+     "state": "TX",
+     "zip": "77565",
+     "phone": "2815499615"
+    },
+    {
+     "address": "183 W Apache Trl Ste 101",
+     "address_2": "",
+     "city": "Apache Junction",
+     "state": "AZ",
+     "zip": "85120",
+     "phone": "4808247360"
+    },
+    {
+     "address": "5684 E STATE ROUTE 69",
+     "address_2": "",
+     "city": "PRESCOTT VALLEY",
+     "state": "AZ",
+     "zip": "86314",
+     "phone": "9284996585"
+    },
+    {
+     "address": "1850 N Perris Blvd Ste 40",
+     "address_2": "",
+     "city": "Perris",
+     "state": "CA",
+     "zip": "92571",
+     "phone": "9514364091"
+    },
+    {
+     "address": "849 N DOBSON RD STE 103",
+     "address_2": "",
+     "city": "MESA",
+     "state": "AZ",
+     "zip": "85201",
+     "phone": "4806272029"
+    },
+    {
+     "address": "18805 Bear Valley Rd Ste 2",
+     "address_2": "",
+     "city": "Apple Valley",
+     "state": "CA",
+     "zip": "92308",
+     "phone": "7605155131"
+    },
+    {
+     "address": "2183 Vista Way Ste B6",
+     "address_2": "",
+     "city": "Oceanside",
+     "state": "CA",
+     "zip": "92054",
+     "phone": "7606969370"
+    },
+    {
+     "address": "19075 Interstate 45 S Ste 121B",
+     "address_2": "",
+     "city": "Shenandoah",
+     "state": "TX",
+     "zip": "77385",
+     "phone": "9362711717"
+    },
+    {
+     "address": "1811 University Dr Ste 102",
+     "address_2": "",
+     "city": "Vista",
+     "state": "CA",
+     "zip": "92083",
+     "phone": "7607264074"
+    },
+    {
+     "address": "1919 W Expressway 83 Ste 200",
+     "address_2": "",
+     "city": "Weslaco",
+     "state": "TX",
+     "zip": "78596",
+     "phone": "9563762003"
+    },
+    {
+     "address": "1207 E Valley Parkway",
+     "address_2": "",
+     "city": "Escondido",
+     "state": "CA",
+     "zip": "92027",
+     "phone": "7603172052"
+    },
+    {
+     "address": "1935 SW Military Dr",
+     "address_2": "",
+     "city": "San Antonio",
+     "state": "TX",
+     "zip": "78221",
+     "phone": "2105070961"
+    },
+    {
+     "address": "3952 CLAIREMONT MESA BLVD Ste F",
+     "address_2": "",
+     "city": "San Diego",
+     "state": "CA",
+     "zip": "92117",
+     "phone": "8587957180"
+    },
+    {
+     "address": "1940 S Main St",
+     "address_2": "",
+     "city": "Weatherford",
+     "state": "TX",
+     "zip": "76086",
+     "phone": "8174587790"
+    },
+    {
+     "address": "7155 Broadway",
+     "address_2": "",
+     "city": "Lemon Grove",
+     "state": "CA",
+     "zip": "91945",
+     "phone": "6193150192"
+    },
+    {
+     "address": "1950 Tully Rd",
+     "address_2": "",
+     "city": "San Jose",
+     "state": "CA",
+     "zip": "95122",
+     "phone": "4089644164"
+    },
+    {
+     "address": "878 EASTLAKE PKWY STE 1010",
+     "address_2": "",
+     "city": "Chula Vista",
+     "state": "CA",
+     "zip": "91914",
+     "phone": "6192050098"
+    },
+    {
+     "address": "19800 Hawthorne Blvd Ste 200",
+     "address_2": "",
+     "city": "Torrance",
+     "state": "CA",
+     "zip": "90503",
+     "phone": "4242822152"
+    },
+    {
+     "address": "1170 Broadway ste 130",
+     "address_2": "",
+     "city": "Chula Vista",
+     "state": "CA",
+     "zip": "91911",
+     "phone": "6192058825"
+    },
+    {
+     "address": "19801 Gulf Fwy Ste 900B",
+     "address_2": "",
+     "city": "Webster",
+     "state": "TX",
+     "zip": "77598",
+     "phone": "2817246150"
+    },
+    {
+     "address": "20236 Fort Bend Pkwy",
+     "address_2": "",
+     "city": "Missouri City",
+     "state": "TX",
+     "zip": "77459",
+     "phone": "2814106825"
+    },
+    {
+     "address": "19963 KATY FWY",
+     "address_2": "",
+     "city": "HOUSTON",
+     "state": "TX",
+     "zip": "77094",
+     "phone": "8327396001"
+    },
+    {
+     "address": "4425 East McKellips Rd",
+     "address_2": "",
+     "city": "Mesa",
+     "state": "AZ",
+     "zip": "85215",
+     "phone": "4803336904"
+    },
+    {
+     "address": "20 W Shaw Ave Ste B",
+     "address_2": "",
+     "city": "Fresno",
+     "state": "CA",
+     "zip": "93704",
+     "phone": "5592220220"
+    },
+    {
+     "address": "25546 N. Lake Pleasant Pkwy",
+     "address_2": "",
+     "city": "Peoria",
+     "state": "AZ",
+     "zip": "85383",
+     "phone": "4803336900"
+    },
+    {
+     "address": "201 E Central Texas Expy Ste 2110",
+     "address_2": "",
+     "city": "Harker Heights",
+     "state": "TX",
+     "zip": "76548",
+     "phone": "2546696430"
+    },
+    {
+     "address": "32822 FM 2978 Rd",
+     "address_2": "",
+     "city": "Magnolia",
+     "state": "TX",
+     "zip": "77354",
+     "phone": "2182492284"
+    },
+    {
+     "address": "2020 FM 663",
+     "address_2": "",
+     "city": "Midlothian",
+     "state": "TX",
+     "zip": "76065",
+     "phone": "4698461162"
+    },
+    {
+     "address": "2525 W WHEATLAND RD",
+     "address_2": "",
+     "city": "DALLAS",
+     "state": "TX",
+     "zip": "75237",
+     "phone": "2146473378"
+    },
+    {
+     "address": "20297 Patio Dr",
+     "address_2": "",
+     "city": "Castro Valley",
+     "state": "CA",
+     "zip": "94546",
+     "phone": "5102445579"
+    },
+    {
+     "address": "2112 Southwest Hk Dodgen Loop",
+     "address_2": "",
+     "city": "Temple",
+     "state": "TX",
+     "zip": "76504",
+     "phone": "2545987579"
+    },
+    {
+     "address": "2041 Highway 287 N",
+     "address_2": "",
+     "city": "Mansfield",
+     "state": "TX",
+     "zip": "76063",
+     "phone": "8174739189"
+    },
+    {
+     "address": "14140 E Ellsworth Ave",
+     "address_2": "",
+     "city": "Aurora",
+     "state": "CO",
+     "zip": "80012",
+     "phone": "7202166496"
+    },
+    {
+     "address": "20440 Highway 59 N Ste 100",
+     "address_2": "",
+     "city": "Humble",
+     "state": "TX",
+     "zip": "77338",
+     "phone": "2815407437"
+    },
+    {
+     "address": "19121 Lyndon B Johnson Fwy Ste 200",
+     "address_2": "",
+     "city": "Mesquite",
+     "state": "TX",
+     "zip": "75150",
+     "phone": "4698012588"
+    },
+    {
+     "address": "205 Ken Pratt Blvd",
+     "address_2": "",
+     "city": "Longmont",
+     "state": "CO",
+     "zip": "80501",
+     "phone": "3035323056"
+    },
+    {
+     "address": "2050 W University Dr",
+     "address_2": "",
+     "city": "Mckinney",
+     "state": "TX",
+     "zip": "75071",
+     "phone": "4697964329"
+    },
+    {
+     "address": "21506 S Ellsworth Loop Rd Ste C3",
+     "address_2": "",
+     "city": "Queen Creek",
+     "state": "AZ",
+     "zip": "85142",
+     "phone": "4808006169"
+    },
+    {
+     "address": "8004 Denton Highway",
+     "address_2": "",
+     "city": "Watagua",
+     "state": "TX",
+     "zip": "76148",
+     "phone": "8177708807"
+    },
+    {
+     "address": "21550 Market Place Dr Ste 200",
+     "address_2": "",
+     "city": "New Caney",
+     "state": "TX",
+     "zip": "77357",
+     "phone": "8324326065"
+    },
+    {
+     "address": "5648 FAIRMONT PKWY",
+     "address_2": "",
+     "city": "PASADENA",
+     "state": "TX",
+     "zip": "77505",
+     "phone": "3463789260"
+    },
+    {
+     "address": "2200 Market Place Dr Ste B",
+     "address_2": "",
+     "city": "Monterey Park",
+     "state": "CA",
+     "zip": "91755",
+     "phone": "3239145920"
+    },
+    {
+     "address": "170 East Stacy Rd",
+     "address_2": "",
+     "city": "Allen",
+     "state": "TX",
+     "zip": "75002",
+     "phone": "4696757641"
+    },
+    {
+     "address": "22026 US Highway 281 N Ste 102",
+     "address_2": "",
+     "city": "San Antonio",
+     "state": "TX",
+     "zip": "78258",
+     "phone": "8302247911"
+    },
+    {
+     "address": "24101 East Orchard Road",
+     "address_2": "",
+     "city": "Aurora",
+     "state": "CO",
+     "zip": "80016",
+     "phone": "3036009087"
+    },
+    {
+     "address": "22225 ELYSON FALLS DR STE 200",
+     "address_2": "",
+     "city": "KATY",
+     "state": "TX",
+     "zip": "77449",
+     "phone": "3463078577"
+    },
+    {
+     "address": "5665 East Kings Canyon Rd",
+     "address_2": "",
+     "city": "Fresno",
+     "state": "CA",
+     "zip": "93727",
+     "phone": "5595381574"
+    },
+    {
+     "address": "2223 S Buckner Blvd Ste 235",
+     "address_2": "",
+     "city": "Dallas",
+     "state": "TX",
+     "zip": "75227",
+     "phone": "4693573678"
+    },
+    {
+     "address": "6977 Ridgmar Meadow Rd",
+     "address_2": "",
+     "city": "Fort Worth",
+     "state": "TX",
+     "zip": "76116",
+     "phone": "8173861380"
+    },
+    {
+     "address": "2225 Plaza Pkwy Ste C1",
+     "address_2": "",
+     "city": "Modesto",
+     "state": "CA",
+     "zip": "95350",
+     "phone": "2097026240"
+    },
+    {
+     "address": "9129 Eagle Dr",
+     "address_2": "",
+     "city": "Mont Belvieu",
+     "state": "TX",
+     "zip": "77523",
+     "phone": "8323075098"
+    },
+    {
+     "address": "2240 S Central Ave",
+     "address_2": "",
+     "city": "Compton",
+     "state": "CA",
+     "zip": "90220",
+     "phone": "3105541543"
+    },
+    {
+     "address": "3098 N Eastman Rd Ste 100",
+     "address_2": "",
+     "city": "Longview",
+     "state": "TX",
+     "zip": "75605",
+     "phone": "9037040301"
+    },
+    {
+     "address": "229 IH 45 S Ste H",
+     "address_2": "",
+     "city": "Huntsville",
+     "state": "TX",
+     "zip": "77340",
+     "phone": "9367557740"
+    },
+    {
+     "address": "3130 S Soncy Rd",
+     "address_2": "",
+     "city": "Amarillo",
+     "state": "TX",
+     "zip": "79124",
+     "phone": "8063580821"
+    },
+    {
+     "address": "2300 W Commonwealth Ave Unit 110",
+     "address_2": "",
+     "city": "Alhambra",
+     "state": "CA",
+     "zip": "91803",
+     "phone": "6263201703"
+    },
+    {
+     "address": "353 N Academy Blvd",
+     "address_2": "",
+     "city": "Colorado Springs",
+     "state": "CO",
+     "zip": "80909",
+     "phone": "7195743300"
+    },
+    {
+     "address": "2301 Prairie Center Pkwy Unit A",
+     "address_2": "",
+     "city": "Brighton",
+     "state": "CO",
+     "zip": "80601",
+     "phone": "7206853152"
+    },
+    {
+     "address": "3600 Youngfield St",
+     "address_2": "",
+     "city": "Wheat Ridge",
+     "state": "CO",
+     "zip": "80033",
+     "phone": "3037280960"
+    },
+    {
+     "address": "23515 Brazos Town Xing",
+     "address_2": "",
+     "city": "Rosenberg",
+     "state": "TX",
+     "zip": "77471",
+     "phone": "3467626076"
+    },
+    {
+     "address": "4090 S Parker Rd",
+     "address_2": "",
+     "city": "Aurora",
+     "state": "CO",
+     "zip": "80014",
+     "phone": "7205333825"
+    },
+    {
+     "address": "23600 El Toro Rd Ste A",
+     "address_2": "",
+     "city": "Lake Forest",
+     "state": "CA",
+     "zip": "92630",
+     "phone": "9493308119"
+    },
+    {
+     "address": "4901 S Broadway Ave",
+     "address_2": "",
+     "city": "Tyler",
+     "state": "TX",
+     "zip": "75703",
+     "phone": "9035082489"
+    },
+    {
+     "address": "2395 Iron Point Rd Suite 110",
+     "address_2": "",
+     "city": "Folsom",
+     "state": "CA",
+     "zip": "95630",
+     "phone": "9168508349"
+    },
+    {
+     "address": "7190 N Academy Blvd",
+     "address_2": "",
+     "city": "Colorado Springs",
+     "state": "CO",
+     "zip": "80920",
+     "phone": "7196538405"
+    },
+    {
+     "address": "2406 S Parker Rd Ste C",
+     "address_2": "",
+     "city": "Denver",
+     "state": "CO",
+     "zip": "80231",
+     "phone": "3034745283"
+    },
+    {
+     "address": "7705 Wadsworth Blvd",
+     "address_2": "",
+     "city": "Arvada",
+     "state": "CO",
+     "zip": "80003",
+     "phone": "7203029571"
+    },
+    {
+     "address": "24351 Magic Mountain Pkwy",
+     "address_2": "",
+     "city": "Valencia",
+     "state": "CA",
+     "zip": "91355",
+     "phone": "6616000100"
+    },
+    {
+     "address": "8055 W Bowles Ave",
+     "address_2": "",
+     "city": "Littleton",
+     "state": "CO",
+     "zip": "80123",
+     "phone": "3037236198"
+    },
+    {
+     "address": "2440 W Loop 340 Ste A7",
+     "address_2": "",
+     "city": "Waco",
+     "state": "TX",
+     "zip": "76711",
+     "phone": "2546334151"
+    },
+    {
+     "address": "8460 Memorial Boulevard",
+     "address_2": "",
+     "city": "Port Arthur",
+     "state": "TX",
+     "zip": "77640",
+     "phone": "8177708982"
+    },
+    {
+     "address": "2451 Pablo Kisel Blvd Ste F2",
+     "address_2": "",
+     "city": "Brownsville",
+     "state": "TX",
+     "zip": "78526",
+     "phone": "9565092339"
+    },
+    {
+     "address": "8360 Willow Street",
+     "address_2": "",
+     "city": "Lone Tree",
+     "state": "CO",
+     "zip": "80124",
+     "phone": "7203029500"
+    },
+    {
+     "address": "24600 Katy Fwy Ste 600",
+     "address_2": "",
+     "city": "Katy",
+     "state": "TX",
+     "zip": "77494",
+     "phone": "3463078084"
+    },
+    {
+     "address": "1000 E 41st St Ste L100",
+     "address_2": "",
+     "city": "Austin",
+     "state": "TX",
+     "zip": "78751",
+     "phone": "7372073643"
+    },
+    {
+     "address": "2484 W Victory Blvd",
+     "address_2": "",
+     "city": "Burbank",
+     "state": "CA",
+     "zip": "91506",
+     "phone": "7472617317"
+    },
+    {
+     "address": "2515 E Interstate Highway 2 Ste 300",
+     "address_2": "",
+     "city": "Mission",
+     "state": "TX",
+     "zip": "78572",
+     "phone": "9566824058"
+    },
+    {
+     "address": "2525 W Anderson Ln Ste 150",
+     "address_2": "",
+     "city": "Austin",
+     "state": "TX",
+     "zip": "78757",
+     "phone": "5125017854"
+    },
+    {
+     "address": "2546 Rimrock Ave Ste 100B",
+     "address_2": "",
+     "city": "Grand Junction",
+     "state": "CO",
+     "zip": "81505",
+     "phone": "9702081032"
+    },
+    {
+     "address": "25855 Highway 290 Ste E",
+     "address_2": "",
+     "city": "Cypress",
+     "state": "TX",
+     "zip": "77429",
+     "phone": "8327618101"
+    },
+    {
+     "address": "2600 W 7th St Ste 145",
+     "address_2": "",
+     "city": "Fort Worth",
+     "state": "TX",
+     "zip": "76107",
+     "phone": "8178060265"
+    },
+    {
+     "address": "2610 W University Dr Ste 1240",
+     "address_2": "",
+     "city": "Denton",
+     "state": "TX",
+     "zip": "76201",
+     "phone": "9407834470"
+    },
+    {
+     "address": "2614 E Gage Ave",
+     "address_2": "",
+     "city": "Huntington Park",
+     "state": "CA",
+     "zip": "90255",
+     "phone": "3232822811"
+    },
+    {
+     "address": "2626 N Belt Line Rd",
+     "address_2": "",
+     "city": "Irving",
+     "state": "TX",
+     "zip": "75062",
+     "phone": "4692762311"
+    },
+    {
+     "address": "2630 N Josey Ln Ste 111",
+     "address_2": "",
+     "city": "Carrollton",
+     "state": "TX",
+     "zip": "75007",
+     "phone": "9726955051"
+    },
+    {
+     "address": "2644 E Berry St",
+     "address_2": "",
+     "city": "Fort Worth",
+     "state": "TX",
+     "zip": "76105",
+     "phone": "8178400847"
+    },
+    {
+     "address": "2650 Pearland Pkwy Ste 126",
+     "address_2": "",
+     "city": "Pearland",
+     "state": "TX",
+     "zip": "77581",
+     "phone": "7135756225"
+    },
+    {
+     "address": "2651 N 44th St Ste 2",
+     "address_2": "",
+     "city": "Phoenix",
+     "state": "AZ",
+     "zip": "85008",
+     "phone": "4803332692"
+    },
+    {
+     "address": "267 Creekside Way",
+     "address_2": "",
+     "city": "New Braunfels",
+     "state": "TX",
+     "zip": "78130",
+     "phone": "8303877511"
+    },
+    {
+     "address": "26914 FM 1093 Ste 200",
+     "address_2": "",
+     "city": "Richmond",
+     "state": "TX",
+     "zip": "77406",
+     "phone": "3463078306"
+    },
+    {
+     "address": "2700 S Woodlands Village Blvd Ste 640",
+     "address_2": "",
+     "city": "Flagstaff",
+     "state": "AZ",
+     "zip": "86001",
+     "phone": "9282865445"
+    },
+    {
+     "address": "2709 W Expressway 83 Ste 170",
+     "address_2": "",
+     "city": "Harlingen",
+     "state": "TX",
+     "zip": "78552",
+     "phone": "9565077765"
+    },
+    {
+     "address": "2720 Council Tree Ave Ste 148",
+     "address_2": "",
+     "city": "Fort Collins",
+     "state": "CO",
+     "zip": "80525",
+     "phone": "9705303097"
+    },
+    {
+     "address": "2720 Texas 121",
+     "address_2": "",
+     "city": "Euless",
+     "state": "TX",
+     "zip": "76039",
+     "phone": "8177991670"
+    },
+    {
+     "address": "2803 Grass Valley Hwy",
+     "address_2": "",
+     "city": "Auburn",
+     "state": "CA",
+     "zip": "95603",
+     "phone": "5304019024"
+    },
+    {
+     "address": "2805 W Agua Fria Fwy Ste 1",
+     "address_2": "",
+     "city": "Phoenix",
+     "state": "AZ",
+     "zip": "85027",
+     "phone": "4803082838"
+    },
+    {
+     "address": "2837 Cochran St",
+     "address_2": "",
+     "city": "Simi Valley",
+     "state": "CA",
+     "zip": "93065",
+     "phone": "8054165456"
+    },
+    {
+     "address": "28901 S Western Ave Ste 129",
+     "address_2": "",
+     "city": "Rancho Palos Verdes",
+     "state": "CA",
+     "zip": "90275",
+     "phone": "3102213676"
+    },
+    {
+     "address": "290 Coddingtown Ctr",
+     "address_2": "",
+     "city": "Santa Rosa",
+     "state": "CA",
+     "zip": "95401",
+     "phone": "7075083371"
+    },
+    {
+     "address": "2922 Fulton Ave",
+     "address_2": "",
+     "city": "Sacramento",
+     "state": "CA",
+     "zip": "95821",
+     "phone": "9168301814"
+    },
+    {
+     "address": "3001 MING AVE",
+     "address_2": "",
+     "city": "BAKERSFIELD",
+     "state": "CA",
+     "zip": "93304",
+     "phone": "6615276502"
+    },
+    {
+     "address": "30107 Haun Rd",
+     "address_2": "",
+     "city": "Menifee",
+     "state": "CA",
+     "zip": "92584",
+     "phone": "9514346291"
+    },
+    {
+     "address": "3016 Texas Sage Trl",
+     "address_2": "",
+     "city": "Fort Worth",
+     "state": "TX",
+     "zip": "76177",
+     "phone": "8177416828"
+    },
+    {
+     "address": "3041 West Florida Ave",
+     "address_2": "",
+     "city": "Hemet",
+     "state": "CA",
+     "zip": "92545",
+     "phone": "9514923580"
+    },
+    {
+     "address": "3050 Gulf Fwy S",
+     "address_2": "",
+     "city": "Dickinson",
+     "state": "TX",
+     "zip": "77539",
+     "phone": "8325805030"
+    },
+    {
+     "address": "3143 SE Military Dr Ste 131",
+     "address_2": "",
+     "city": "San Antonio",
+     "state": "TX",
+     "zip": "78223",
+     "phone": "2105079000"
+    },
+    {
+     "address": "3166 S State Highway 161 Ste 160",
+     "address_2": "",
+     "city": "Grand Prairie",
+     "state": "TX",
+     "zip": "75052",
+     "phone": "4698056583"
+    },
+    {
+     "address": "3190 S Central Expy Ste 530",
+     "address_2": "",
+     "city": "McKinney",
+     "state": "TX",
+     "zip": "75070",
+     "phone": "2145042271"
+    },
+    {
+     "address": "320 N Glendale Ave",
+     "address_2": "",
+     "city": "Glendale",
+     "state": "CA",
+     "zip": "91206",
+     "phone": "8182541006"
+    },
+    {
+     "address": "324 South Mountain Ave",
+     "address_2": "",
+     "city": "Upland",
+     "state": "CA",
+     "zip": "91786",
+     "phone": "9092441068"
+    },
+    {
+     "address": "326 S California Ave",
+     "address_2": "",
+     "city": "West Covina",
+     "state": "CA",
+     "zip": "91790",
+     "phone": "6266462012"
+    },
+    {
+     "address": "3333 Preston Rd Ste 110",
+     "address_2": "",
+     "city": "Frisco",
+     "state": "TX",
+     "zip": "75034",
+     "phone": "2146181471"
+    },
+    {
+     "address": "33561 Yucaipa Blvd Ste B1",
+     "address_2": "",
+     "city": "Yucaipa",
+     "state": "CA",
+     "zip": "92399",
+     "phone": "9095006017"
+    },
+    {
+     "address": "3405 W Thunderbird Rd Ste 5",
+     "address_2": "",
+     "city": "Phoenix",
+     "state": "AZ",
+     "zip": "85053",
+     "phone": "6027600896"
+    },
+    {
+     "address": "3421 South 25th St E",
+     "address_2": "",
+     "city": "Ammon",
+     "state": "ID",
+     "zip": "83406",
+     "phone": "9864976251"
+    },
+    {
+     "address": "3499 E Broadway Blvd",
+     "address_2": "",
+     "city": "Tucson",
+     "state": "AZ",
+     "zip": "85716",
+     "phone": "5202322333"
+    },
+    {
+     "address": "3500 N Government Way Ste 102",
+     "address_2": "",
+     "city": "Coeur D Alene",
+     "state": "ID",
+     "zip": "83815",
+     "phone": "2086676545"
+    },
+    {
+     "address": "352 N 2nd St",
+     "address_2": "",
+     "city": "El Cajon",
+     "state": "CA",
+     "zip": "92021",
+     "phone": "6192195391"
+    },
+    {
+     "address": "3528 Palmer Hwy",
+     "address_2": "",
+     "city": "Texas City",
+     "state": "TX",
+     "zip": "77590",
+     "phone": "4099166010"
+    },
+    {
+     "address": "3535 W Southern Ave Ste 108",
+     "address_2": "",
+     "city": "Phoenix",
+     "state": "AZ",
+     "zip": "85041",
+     "phone": "4803376611"
+    },
+    {
+     "address": "3545 Quebec St Ste 115",
+     "address_2": "",
+     "city": "Denver",
+     "state": "CO",
+     "zip": "80207",
+     "phone": "3035011122"
+    },
+    {
+     "address": "3609 Business Center Dr Ste 112",
+     "address_2": "",
+     "city": "Pearland",
+     "state": "TX",
+     "zip": "77584",
+     "phone": "2812491142"
+    },
+    {
+     "address": "3641 W Northwest Hwy Ste 170",
+     "address_2": "",
+     "city": "Dallas",
+     "state": "TX",
+     "zip": "75220",
+     "phone": "2147655830"
+    },
+    {
+     "address": "3642 S Bristol St",
+     "address_2": "",
+     "city": "Santa Ana",
+     "state": "CA",
+     "zip": "92704",
+     "phone": "6573562607"
+    },
+    {
+     "address": "3649 Catclaw Dr",
+     "address_2": "",
+     "city": "Abilene",
+     "state": "TX",
+     "zip": "79606",
+     "phone": "3252716902"
+    },
+    {
+     "address": "3705 E Foothill Blvd",
+     "address_2": "",
+     "city": "Pasadena",
+     "state": "CA",
+     "zip": "91107",
+     "phone": "6263259323"
+    },
+    {
+     "address": "3733 W SHAW AVE",
+     "address_2": "",
+     "city": "FRESNO",
+     "state": "CA",
+     "zip": "93711",
+     "phone": "5595128391"
+    },
+    {
+     "address": "381 S Loop 336 W Ste 1300",
+     "address_2": "",
+     "city": "Conroe",
+     "state": "TX",
+     "zip": "77304",
+     "phone": "9367031293"
+    },
+    {
+     "address": "3820 River Point Pkwy Ste 102",
+     "address_2": "",
+     "city": "Sheridan",
+     "state": "CO",
+     "zip": "80110",
+     "phone": "3032642091"
+    },
+    {
+     "address": "3855 South Gilbert Rd",
+     "address_2": "",
+     "city": "Gilbert",
+     "state": "AZ",
+     "zip": "85297",
+     "phone": "6026432002"
+    },
+    {
+     "address": "3916 Kemp Blvd Ste K",
+     "address_2": "",
+     "city": "Wichita Falls",
+     "state": "TX",
+     "zip": "76308",
+     "phone": "9402856611"
+    },
+    {
+     "address": "39256 10th St W Ste C",
+     "address_2": "",
+     "city": "Palmdale",
+     "state": "CA",
+     "zip": "93551",
+     "phone": "6619982744"
+    },
+    {
+     "address": "3950 Grand Ave Ste A",
+     "address_2": "",
+     "city": "Chino",
+     "state": "CA",
+     "zip": "91710",
+     "phone": "9096640057"
+    },
+    {
+     "address": "4001 N US Highway 75 Ste 300",
+     "address_2": "",
+     "city": "Sherman",
+     "state": "TX",
+     "zip": "75090",
+     "phone": "9032094180"
+    },
+    {
+     "address": "4030 Madison St",
+     "address_2": "",
+     "city": "Riverside",
+     "state": "CA",
+     "zip": "92504",
+     "phone": "9513543897"
+    },
+    {
+     "address": "40810 Winchester Rd Ste 2",
+     "address_2": "",
+     "city": "Temecula",
+     "state": "CA",
+     "zip": "92591",
+     "phone": "9513262100"
+    },
+    {
+     "address": "4101 S Cooper St Ste 107",
+     "address_2": "",
+     "city": "Arlington",
+     "state": "TX",
+     "zip": "76015",
+     "phone": "8174720001"
+    },
+    {
+     "address": "4153 Sunset Dr",
+     "address_2": "",
+     "city": "San Angelo",
+     "state": "TX",
+     "zip": "76904",
+     "phone": "3252766183"
+    },
+    {
+     "address": "4191 Poleline Rd Ste C",
+     "address_2": "",
+     "city": "Pocatello",
+     "state": "ID",
+     "zip": "83202",
+     "phone": "2082397927"
+    },
+    {
+     "address": "420 E Round Grove Rd Ste 610",
+     "address_2": "",
+     "city": "Lewisville",
+     "state": "TX",
+     "zip": "75067",
+     "phone": "4695281201"
+    },
+    {
+     "address": "421 W 104th Ave Ste J",
+     "address_2": "",
+     "city": "Northglenn",
+     "state": "CO",
+     "zip": "80234",
+     "phone": "7205023060"
+    },
+    {
+     "address": "4210 82nd St Ste 222",
+     "address_2": "",
+     "city": "Lubbock",
+     "state": "TX",
+     "zip": "79423",
+     "phone": "8063685813"
+    },
+    {
+     "address": "42450 Jackson St",
+     "address_2": "",
+     "city": "Indio",
+     "state": "CA",
+     "zip": "92203",
+     "phone": "7609845220"
+    },
+    {
+     "address": "425 E Manchester Blvd",
+     "address_2": "",
+     "city": "Inglewood",
+     "state": "CA",
+     "zip": "90301",
+     "phone": "3102424008"
+    },
+    {
+     "address": "432 N Capitol Ave",
+     "address_2": "",
+     "city": "San Jose",
+     "state": "CA",
+     "zip": "95133",
+     "phone": "4089644128"
+    },
+    {
+     "address": "4356 N Oracle Rd Ste 120",
+     "address_2": "",
+     "city": "Tucson",
+     "state": "AZ",
+     "zip": "85705",
+     "phone": "5204075554"
+    },
+    {
+     "address": "4360 E Main St Ste D",
+     "address_2": "",
+     "city": "Ventura",
+     "state": "CA",
+     "zip": "93003",
+     "phone": "8056655532"
+    }
+   ],
+   "accepting": "accepting in some locations",
+   "specialty": [
+    "Optometry"
+   ],
+   "last_updated_on": "2026-08-04"
+  },
+  {
+   "npi": "1083182950",
+   "type": "INDIVIDUAL",
+   "plans": [
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070004",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070013",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070014",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070016",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070025",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0070026",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150004",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150007",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150011",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150012",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150019",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0150020",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170016",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170017",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170018",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170020",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0170021",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180016",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180017",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180019",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180020",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    },
+    {
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "11269WY0180022",
+     "network_tier": "ALLOWED",
+     "years": [
+      2025,
+      2026
+     ]
+    }
+   ],
+   "name": {
+    "prefix": "Dr.",
+    "first": "Tiffany",
+    "last": "Marcoe"
+   },
+   "sex": "Female",
+   "languages": [
+    "English",
+    "Sign",
+    "Spanish"
+   ],
+   "addresses": [
+    {
+     "address": "1000 Easton Rd Ste 415",
+     "address_2": "",
+     "city": "Wyncote",
+     "state": "PA",
+     "zip": "19095",
+     "phone": "2158876538"
+    },
+    {
+     "address": "3560 Route 611 Ste 115",
+     "address_2": "",
+     "city": "Bartonsville",
+     "state": "PA",
+     "zip": "18321",
+     "phone": "5704212785"
+    },
+    {
+     "address": "1140 Baltimore Pike",
+     "address_2": "",
+     "city": "Springfield",
+     "state": "PA",
+     "zip": "19064",
+     "phone": "6105438300"
+    },
+    {
+     "address": "3586 Aramingo Ave",
+     "address_2": "",
+     "city": "Philadelphia",
+     "state": "PA",
+     "zip": "19134",
+     "phone": "2155354264"
+    },
+    {
+     "address": "1315 Walnut St",
+     "address_2": "",
+     "city": "Philadelphia",
+     "state": "PA",
+     "zip": "19107",
+     "phone": "2155461666"
+    },
+    {
+     "address": "361 W 14 Mile Rd",
+     "address_2": "",
+     "city": "Madison Heights",
+     "state": "MI",
+     "zip": "48071",
+     "phone": "2488730059"
+    },
+    {
+     "address": "140 Allendale Rd",
+     "address_2": "",
+     "city": "King of Prussia",
+     "state": "PA",
+     "zip": "19406",
+     "phone": "6102650344"
+    },
+    {
+     "address": "3620 28th St SE",
+     "address_2": "",
+     "city": "Kentwood",
+     "state": "MI",
+     "zip": "49512",
+     "phone": "6165120323"
+    },
+    {
+     "address": "1515 US Highway 22",
+     "address_2": "",
+     "city": "Watchung",
+     "state": "NJ",
+     "zip": "07069",
+     "phone": "9085464404"
+    },
+    {
+     "address": "3714 Easton Nazareth Hwy Ste 4",
+     "address_2": "",
+     "city": "Easton",
+     "state": "PA",
+     "zip": "18045",
+     "phone": "6102531626"
+    },
+    {
+     "address": "17233 Cole Rd",
+     "address_2": "",
+     "city": "Hagerstown",
+     "state": "MD",
+     "zip": "21740",
+     "phone": "2403294699"
+    },
+    {
+     "address": "4800 GOLF RD STE 436",
+     "address_2": "",
+     "city": "EAU CLAIRE",
+     "state": "WI",
+     "zip": "54701",
+     "phone": "7158348404"
+    },
+    {
+     "address": "2231 N 2nd St",
+     "address_2": "",
+     "city": "Millville",
+     "state": "NJ",
+     "zip": "08332",
+     "phone": "8568252671"
+    },
+    {
+     "address": "4891 West Chester Pike",
+     "address_2": "",
+     "city": "Newtown Square",
+     "state": "PA",
+     "zip": "19073",
+     "phone": "6103598131"
+    },
+    {
+     "address": "2401 Route 22 W Ste 1D",
+     "address_2": "",
+     "city": "Union",
+     "state": "NJ",
+     "zip": "07083",
+     "phone": "9083781821"
+    },
+    {
+     "address": "4925 S Baldwin Rd Bldg B",
+     "address_2": "",
+     "city": "Lake Orion",
+     "state": "MI",
+     "zip": "48359",
+     "phone": "2483910158"
+    },
+    {
+     "address": "3118 Donnell Dr",
+     "address_2": "",
+     "city": "Forestville",
+     "state": "MD",
+     "zip": "20747",
+     "phone": "3017355600"
+    },
+    {
+     "address": "5072 Jonestown Rd",
+     "address_2": "",
+     "city": "Harrisburg",
+     "state": "PA",
+     "zip": "17112",
+     "phone": "7175410961"
+    },
+    {
+     "address": "4600 E Roosevelt Blvd Ste A3",
+     "address_2": "",
+     "city": "Philadelphia",
+     "state": "PA",
+     "zip": "19124",
+     "phone": "2155332595"
+    },
+    {
+     "address": "5300 S 76th St",
+     "address_2": "",
+     "city": "Greendale",
+     "state": "WI",
+     "zip": "53129",
+     "phone": "4144216450"
+    },
+    {
+     "address": "519 Baltimore Pike",
+     "address_2": "",
+     "city": "Bel Air",
+     "state": "MD",
+     "zip": "21014",
+     "phone": "4108360098"
+    },
+    {
+     "address": "550 E Lancaster Ave Ste C1",
+     "address_2": "",
+     "city": "Radnor",
+     "state": "PA",
+     "zip": "19087",
+     "phone": "6106870364"
+    },
+    {
+     "address": "629 Conchester Hwy",
+     "address_2": "",
+     "city": "Boothwyn",
+     "state": "PA",
+     "zip": "19061",
+     "phone": "4844832771"
+    },
+    {
+     "address": "5509 Urbana Pike",
+     "address_2": "",
+     "city": "Frederick",
+     "state": "MD",
+     "zip": "21704",
+     "phone": "3016620660"
+    },
+    {
+     "address": "6635 Ritchie Hwy",
+     "address_2": "",
+     "city": "Glen Burnie",
+     "state": "MD",
+     "zip": "21061",
+     "phone": "4107663070"
+    },
+    {
+     "address": "560 MILLCREEK MALL",
+     "address_2": "",
+     "city": "ERIE",
+     "state": "PA",
+     "zip": "16565",
+     "phone": "8148688540"
+    },
+    {
+     "address": "7636 City Ave",
+     "address_2": "",
+     "city": "Philadelphia",
+     "state": "PA",
+     "zip": "19151",
+     "phone": "2155948622"
+    },
+    {
+     "address": "6250 Columbia Crossing Cir Ste K",
+     "address_2": "",
+     "city": "Columbia",
+     "state": "MD",
+     "zip": "21045",
+     "phone": "4432850100"
+    },
+    {
+     "address": "8885 Woodyard Rd",
+     "address_2": "",
+     "city": "Clinton",
+     "state": "MD",
+     "zip": "20735",
+     "phone": "3017191100"
+    },
+    {
+     "address": "639 Clairton Blvd Ste B",
+     "address_2": "",
+     "city": "Pleasant Hills",
+     "state": "PA",
+     "zip": "15236",
+     "phone": "4126557394"
+    },
+    {
+     "address": "9171 Roosevelt Blvd Ste G",
+     "address_2": "",
+     "city": "Philadelphia",
+     "state": "PA",
+     "zip": "19114",
+     "phone": "2156731300"
+    },
+    {
+     "address": "6416 Carlisle Pike Ste 1700",
+     "address_2": "",
+     "city": "Mechanicsburg",
+     "state": "PA",
+     "zip": "17050",
+     "phone": "7177910103"
+    },
+    {
+     "address": "1775 North Highland Road",
+     "address_2": "",
+     "city": "PITTSBURGH",
+     "state": "PA",
+     "zip": "15241",
+     "phone": "4123081070"
+    },
+    {
+     "address": "6427 Baltimore National Pike Ste A",
+     "address_2": "",
+     "city": "Catonsville",
+     "state": "MD",
+     "zip": "21228",
+     "phone": "4107889303"
+    },
+    {
+     "address": "204 McHolme Dr",
+     "address_2": "",
+     "city": "Pittsburgh",
+     "state": "PA",
+     "zip": "15275",
+     "phone": "4122496220"
+    },
+    {
+     "address": "656 Bel Air Rd",
+     "address_2": "",
+     "city": "Bel Air",
+     "state": "MD",
+     "zip": "21014",
+     "phone": "4108381188"
+    },
+    {
+     "address": "3270 28th St SE",
+     "address_2": "",
+     "city": "Grand Rapids",
+     "state": "MI",
+     "zip": "49512",
+     "phone": "6169742020"
+    },
+    {
+     "address": "6731 Ritchie Hwy",
+     "address_2": "",
+     "city": "Glen Burnie",
+     "state": "MD",
+     "zip": "21061",
+     "phone": "4437633906"
+    },
+    {
+     "address": "4100 William Penn Highway Ste 36",
+     "address_2": "",
+     "city": "Monroeville",
+     "state": "PA",
+     "zip": "15146",
+     "phone": "4123175575"
+    },
+    {
+     "address": "684 N West End Blvd",
+     "address_2": "",
+     "city": "Quakertown",
+     "state": "PA",
+     "zip": "18951",
+     "phone": "2155367023"
+    },
+    {
+     "address": "4487 Miller Rd",
+     "address_2": "",
+     "city": "Flint",
+     "state": "MI",
+     "zip": "48507",
+     "phone": "8104064866"
+    },
+    {
+     "address": "7000 ARUNDEL MILLS CIR STE 404",
+     "address_2": "",
+     "city": "HANOVER",
+     "state": "MD",
+     "zip": "21076",
+     "phone": "4107992770"
+    },
+    {
+     "address": "13830 Outlet Dr",
+     "address_2": "",
+     "city": "Silver Spring",
+     "state": "MD",
+     "zip": "20904",
+     "phone": "3018909777"
+    },
+    {
+     "address": "7214 Green Bay Rd",
+     "address_2": "",
+     "city": "Kenosha",
+     "state": "WI",
+     "zip": "53142",
+     "phone": "2626945464"
+    },
+    {
+     "address": "186 W Street Rd",
+     "address_2": "",
+     "city": "Feasterville",
+     "state": "PA",
+     "zip": "19053",
+     "phone": "2152588492"
+    },
+    {
+     "address": "7700 Crittenden St",
+     "address_2": "",
+     "city": "Philadelphia",
+     "state": "PA",
+     "zip": "19118",
+     "phone": "2152471085"
+    },
+    {
+     "address": "2560 Solomons Island Rd",
+     "address_2": "",
+     "city": "Annapolis",
+     "state": "MD",
+     "zip": "21401",
+     "phone": "4105732020"
+    },
+    {
+     "address": "780 N Krocks Rd",
+     "address_2": "",
+     "city": "Allentown",
+     "state": "PA",
+     "zip": "18106",
+     "phone": "6105303180"
+    },
+    {
+     "address": "160 N Gulph Ste 1122",
+     "address_2": "",
+     "city": "King of Prussia",
+     "state": "PA",
+     "zip": "19406",
+     "phone": "6109047522"
+    },
+    {
+     "address": "8153 Honeygo Blvd Ste C",
+     "address_2": "",
+     "city": "Baltimore",
+     "state": "MD",
+     "zip": "21236",
+     "phone": "4436784141"
+    },
+    {
+     "address": "20680 Seneca Meadows Pkwy",
+     "address_2": "",
+     "city": "Germantown",
+     "state": "MD",
+     "zip": "20876",
+     "phone": "3013936280"
+    },
+    {
+     "address": "825 DULANEY VALLEY RD STE 1335",
+     "address_2": "",
+     "city": "TOWSON",
+     "state": "MD",
+     "zip": "21204",
+     "phone": "4108238452"
+    },
+    {
+     "address": "7984 Honeygo Blvd",
+     "address_2": "",
+     "city": "Nottingham",
+     "state": "MD",
+     "zip": "21236",
+     "phone": "4435820828"
+    },
+    {
+     "address": "854 Plaza Blvd",
+     "address_2": "",
+     "city": "Lancaster",
+     "state": "PA",
+     "zip": "17601",
+     "phone": "7172953111"
+    },
+    {
+     "address": "87 Monroe St",
+     "address_2": "",
+     "city": "Detroit",
+     "state": "MI",
+     "zip": "48226",
+     "phone": "3139652740"
+    },
+    {
+     "address": "8551 Fenton St",
+     "address_2": "",
+     "city": "Silver Spring",
+     "state": "MD",
+     "zip": "20910",
+     "phone": "3015851080"
+    },
+    {
+     "address": "442 W KENNEDY BLVD STE 280",
+     "address_2": "",
+     "city": "TAMPA",
+     "state": "FL",
+     "zip": "33606",
+     "phone": "8134676111"
+    },
+    {
+     "address": "8652 Pulaski Hwy Ste A",
+     "address_2": "",
+     "city": "Rosedale",
+     "state": "MD",
+     "zip": "21237",
+     "phone": "4103915265"
+    },
+    {
+     "address": "1 Newport Dr Ste J",
+     "address_2": "",
+     "city": "Forest Hill",
+     "state": "MD",
+     "zip": "21050",
+     "phone": "4108383200"
+    },
+    {
+     "address": "9150 Baltimore national Pike Ste 15",
+     "address_2": "",
+     "city": "Ellicott City",
+     "state": "MD",
+     "zip": "21042",
+     "phone": "4434206182"
+    },
+    {
+     "address": "102 Henry Ave",
+     "address_2": "",
+     "city": "Plant City",
+     "state": "FL",
+     "zip": "33563",
+     "phone": "8137046090"
+    },
+    {
+     "address": "949 Airport Center Dr",
+     "address_2": "",
+     "city": "Allentown",
+     "state": "PA",
+     "zip": "18109",
+     "phone": "6102640891"
+    },
+    {
+     "address": "10264 SOUTHERN MARYLAND BLVD STE 101",
+     "address_2": "",
+     "city": "DUNKIRK",
+     "state": "MD",
+     "zip": "20754",
+     "phone": "4439648705"
+    },
+    {
+     "address": "968 Freeport Rd",
+     "address_2": "",
+     "city": "Pittsburgh",
+     "state": "PA",
+     "zip": "15238",
+     "phone": "4127811012"
+    },
+    {
+     "address": "1039 Wayne Ave",
+     "address_2": "",
+     "city": "Chambersburg",
+     "state": "PA",
+     "zip": "17201",
+     "phone": "7172632389"
+    },
+    {
+     "address": "968 Norland Ave",
+     "address_2": "",
+     "city": "Chambersburg",
+     "state": "PA",
+     "zip": "17201",
+     "phone": "7172637424"
+    },
+    {
+     "address": "11100 SW 93rd Court Rd Ste 15",
+     "address_2": "",
+     "city": "Ocala",
+     "state": "FL",
+     "zip": "34481",
+     "phone": "3522912000"
+    },
+    {
+     "address": "N 195 W 18437 County Line Rd",
+     "address_2": "",
+     "city": "Menomonee Falls",
+     "state": "WI",
+     "zip": "53051",
+     "phone": "2625320570"
+    },
+    {
+     "address": "11945 San Jose Blvd ste 202",
+     "address_2": "",
+     "city": "Jacksonville",
+     "state": "FL",
+     "zip": "32223",
+     "phone": "9042622249"
+    },
+    {
+     "address": "570 ROUTE 70",
+     "address_2": "",
+     "city": "BRICK",
+     "state": "NJ",
+     "zip": "08723",
+     "phone": "8555500743"
+    },
+    {
+     "address": "12101 WINCHESTER RD STE 102",
+     "address_2": "",
+     "city": "LAVALE",
+     "state": "MD",
+     "zip": "21502",
+     "phone": "3017226480"
+    },
+    {
+     "address": "140 Univ Town Center Dr",
+     "address_2": "",
+     "city": "Sarasota",
+     "state": "FL",
+     "zip": "34243",
+     "phone": "8555500743"
+    },
+    {
+     "address": "12916 Conamar Dr Ste 104",
+     "address_2": "",
+     "city": "Hagerstown",
+     "state": "MD",
+     "zip": "21742",
+     "phone": "3017334944"
+    },
+    {
+     "address": "315 N Broadway",
+     "address_2": "",
+     "city": "Milwaukee",
+     "state": "WI",
+     "zip": "53202",
+     "phone": "4142531812"
+    },
+    {
+     "address": "1303 E Vine St",
+     "address_2": "",
+     "city": "Kissimmee",
+     "state": "FL",
+     "zip": "34744",
+     "phone": "4078702020"
+    },
+    {
+     "address": "1200 Morris Tpke Ste B299",
+     "address_2": "",
+     "city": "Short Hills",
+     "state": "NJ",
+     "zip": "07078",
+     "phone": "8555500743"
+    },
+    {
+     "address": "1304 Baltimore St",
+     "address_2": "",
+     "city": "Hanover",
+     "state": "PA",
+     "zip": "17331",
+     "phone": "7176328600"
+    },
+    {
+     "address": "10300 Little Patuxent Pkwy Ste 1005B",
+     "address_2": "",
+     "city": "Columbia",
+     "state": "MD",
+     "zip": "21044",
+     "phone": "8555500743"
+    },
+    {
+     "address": "1433 E Lafayette St",
+     "address_2": "",
+     "city": "Tallahassee",
+     "state": "FL",
+     "zip": "32301",
+     "phone": "8508774687"
+    },
+    {
+     "address": "2500 N Mayfair Rd Ste 128",
+     "address_2": "",
+     "city": "Wauwatosa",
+     "state": "WI",
+     "zip": "53226",
+     "phone": "8555500743"
+    },
+    {
+     "address": "14625 Mount Airy Rd",
+     "address_2": "",
+     "city": "Shrewsbury",
+     "state": "PA",
+     "zip": "17361",
+     "phone": "7172272030"
+    },
+    {
+     "address": "825 Dulaney Valley RD",
+     "address_2": "",
+     "city": "Towson",
+     "state": "MD",
+     "zip": "21204",
+     "phone": "8555500743"
+    },
+    {
+     "address": "14700 Baltimore Ave Unit 109",
+     "address_2": "",
+     "city": "Laurel",
+     "state": "MD",
+     "zip": "20707",
+     "phone": "3012453903"
+    },
+    {
+     "address": "12325 W Burleigh St",
+     "address_2": "",
+     "city": "Milwaukee",
+     "state": "WI",
+     "zip": "53222",
+     "phone": "4148739090"
+    },
+    {
+     "address": "1480 Timberlane Rd",
+     "address_2": "",
+     "city": "Tallahassee",
+     "state": "FL",
+     "zip": "32312",
+     "phone": "8508934687"
+    },
+    {
+     "address": "1260 N Port Washington Rd",
+     "address_2": "",
+     "city": "Grafton",
+     "state": "WI",
+     "zip": "53024",
+     "phone": "2625460234"
+    },
+    {
+     "address": "15 Cypress Branch Way Ste 205",
+     "address_2": "",
+     "city": "Palm Coast",
+     "state": "FL",
+     "zip": "32164",
+     "phone": "3864451880"
+    },
+    {
+     "address": "1920 W Layton Ave",
+     "address_2": "",
+     "city": "Milwaukee",
+     "state": "WI",
+     "zip": "53221",
+     "phone": "4143258600"
+    },
+    {
+     "address": "1555 Highlands Dr Ste 180",
+     "address_2": "",
+     "city": "Lititz",
+     "state": "PA",
+     "zip": "17543",
+     "phone": "7176254600"
+    },
+    {
+     "address": "20205 UNION ST",
+     "address_2": "",
+     "city": "BROOKFIELD",
+     "state": "WI",
+     "zip": "53045",
+     "phone": "2627859393"
+    },
+    {
+     "address": "1611 State Road 60 E",
+     "address_2": "",
+     "city": "Lake Wales",
+     "state": "FL",
+     "zip": "33853",
+     "phone": "8632157156"
+    },
+    {
+     "address": "2262 S 108th St",
+     "address_2": "",
+     "city": "West Allis",
+     "state": "WI",
+     "zip": "53227",
+     "phone": "4144760200"
+    },
+    {
+     "address": "1695 N Broadway Ave",
+     "address_2": "",
+     "city": "Bartow",
+     "state": "FL",
+     "zip": "33830",
+     "phone": "8635342020"
+    },
+    {
+     "address": "2612 E Washington Ave",
+     "address_2": "",
+     "city": "Madison",
+     "state": "WI",
+     "zip": "53704",
+     "phone": "6082495100"
+    },
+    {
+     "address": "180 Good Dr Ste 2",
+     "address_2": "",
+     "city": "Lancaster",
+     "state": "PA",
+     "zip": "17603",
+     "phone": "7173972020"
+    },
+    {
+     "address": "2929 Milton Ave Ste 140",
+     "address_2": "",
+     "city": "Janesville",
+     "state": "WI",
+     "zip": "53545",
+     "phone": "6087560728"
+    },
+    {
+     "address": "1854 3rd St S",
+     "address_2": "",
+     "city": "Jackson Beach",
+     "state": "FL",
+     "zip": "32250",
+     "phone": "9045953232"
+    },
+    {
+     "address": "8225 S 27th St",
+     "address_2": "",
+     "city": "Franklin",
+     "state": "WI",
+     "zip": "53132",
+     "phone": "4147612269"
+    },
+    {
+     "address": "212 State Rd 312",
+     "address_2": "",
+     "city": "St Augustine",
+     "state": "FL",
+     "zip": "32086",
+     "phone": "9048242021"
+    },
+    {
+     "address": "N85W16033 Appleton Ave",
+     "address_2": "",
+     "city": "Menomonee Falls",
+     "state": "WI",
+     "zip": "53051",
+     "phone": "2622511900"
+    },
+    {
+     "address": "215 1st St N Ste 100",
+     "address_2": "",
+     "city": "Winter Haven",
+     "state": "FL",
+     "zip": "33881",
+     "phone": "8632998908"
+    },
+    {
+     "address": "3968 SW Archer Rd # W101",
+     "address_2": "",
+     "city": "Gainesville",
+     "state": "FL",
+     "zip": "32608",
+     "phone": "3523766622"
+    },
+    {
+     "address": "2155 White St",
+     "address_2": "",
+     "city": "York",
+     "state": "PA",
+     "zip": "17404",
+     "phone": "7178484654"
+    },
+    {
+     "address": "40 Noble Blvd Ste 120",
+     "address_2": "",
+     "city": "Carlisle",
+     "state": "PA",
+     "zip": "17013",
+     "phone": "7172186656"
+    },
+    {
+     "address": "2305 Oleander Blvd.",
+     "address_2": "",
+     "city": "Fort Pierce",
+     "state": "FL",
+     "zip": "34982",
+     "phone": "7724656616"
+    },
+    {
+     "address": "401 RACE ST",
+     "address_2": "",
+     "city": "CAMBRIDGE",
+     "state": "MD",
+     "zip": "21613",
+     "phone": "7038478899"
+    },
+    {
+     "address": "2553 E Market St",
+     "address_2": "",
+     "city": "York",
+     "state": "PA",
+     "zip": "17402",
+     "phone": "7177575632"
+    },
+    {
+     "address": "4337 S Florida Ave",
+     "address_2": "",
+     "city": "Lakeland",
+     "state": "FL",
+     "zip": "33813",
+     "phone": "8636192700"
+    },
+    {
+     "address": "2657 N Salisbury Blvd Ste 104",
+     "address_2": "",
+     "city": "Salisbury",
+     "state": "MD",
+     "zip": "21801",
+     "phone": "4107426148"
+    },
+    {
+     "address": "46300 LEXINGTON VILLAGE WAY",
+     "address_2": "",
+     "city": "LEXINGTON PARK",
+     "state": "MD",
+     "zip": "20653",
+     "phone": "3018622436"
+    },
+    {
+     "address": "2791 S Queen St",
+     "address_2": "",
+     "city": "Dallastown",
+     "state": "PA",
+     "zip": "17313",
+     "phone": "7177414788"
+    },
+    {
+     "address": "49 S 2nd St",
+     "address_2": "",
+     "city": "Oxford",
+     "state": "PA",
+     "zip": "19363",
+     "phone": "6109329356"
+    },
+    {
+     "address": "28522 Marlboro Ave Ste A",
+     "address_2": "",
+     "city": "Easton",
+     "state": "MD",
+     "zip": "21601",
+     "phone": "4106908844"
+    },
+    {
+     "address": "494 Gateway Ave",
+     "address_2": "",
+     "city": "Chambersburg",
+     "state": "PA",
+     "zip": "17201",
+     "phone": "7172636186"
+    },
+    {
+     "address": "2955 Crain Hwy Ste A",
+     "address_2": "",
+     "city": "Waldorf",
+     "state": "MD",
+     "zip": "20601",
+     "phone": "3016453600"
+    },
+    {
+     "address": "5012 Carlisle Pike",
+     "address_2": "",
+     "city": "Mechanicsburg",
+     "state": "PA",
+     "zip": "17050",
+     "phone": "7177632020"
+    },
+    {
+     "address": "30 Shining Willow Way Ste 30B",
+     "address_2": "",
+     "city": "La Plata",
+     "state": "MD",
+     "zip": "20646",
+     "phone": "2405234454"
+    },
+    {
+     "address": "5203A Campbell Blvd",
+     "address_2": "",
+     "city": "Nottingham",
+     "state": "MD",
+     "zip": "21236",
+     "phone": "4432906055"
+    },
+    {
+     "address": "3101 SW College Rd",
+     "address_2": "",
+     "city": "Ocala",
+     "state": "FL",
+     "zip": "34474",
+     "phone": "3522373768"
+    },
+    {
+     "address": "535 S Monroe Ave",
+     "address_2": "",
+     "city": "Green Bay",
+     "state": "WI",
+     "zip": "54301",
+     "phone": "9204359511"
+    },
+    {
+     "address": "319 York Rd",
+     "address_2": "",
+     "city": "Carlisle",
+     "state": "PA",
+     "zip": "17013",
+     "phone": "7172584422"
+    },
+    {
+     "address": "623 BEL AIR RD.",
+     "address_2": "",
+     "city": "BEL AIR",
+     "state": "MD",
+     "zip": "21014",
+     "phone": "4108790044"
+    },
+    {
+     "address": "341 Baltimore Rd",
+     "address_2": "",
+     "city": "Shippensburg",
+     "state": "PA",
+     "zip": "17257",
+     "phone": "7175328806"
+    },
+    {
+     "address": "625 Baltimore Blvd Ste K",
+     "address_2": "",
+     "city": "Westminster",
+     "state": "MD",
+     "zip": "21157",
+     "phone": "4108485442"
+    },
+    {
+     "address": "360 E Pulaski Hwy Ste 1B",
+     "address_2": "",
+     "city": "Elkton",
+     "state": "MD",
+     "zip": "21921",
+     "phone": "4103985240"
+    },
+    {
+     "address": "6306 1 half York Rd",
+     "address_2": "",
+     "city": "Baltimore",
+     "state": "MD",
+     "zip": "21212",
+     "phone": "4438635206"
+    },
+    {
+     "address": "3600 US Highway 27 N",
+     "address_2": "",
+     "city": "Sebring",
+     "state": "FL",
+     "zip": "33870",
+     "phone": "8633822020"
+    },
+    {
+     "address": "665 Town Center Dr",
+     "address_2": "",
+     "city": "York",
+     "state": "PA",
+     "zip": "17408",
+     "phone": "7177648705"
+    },
+    {
+     "address": "3720 Curtis Blvd Ste 106-108",
+     "address_2": "",
+     "city": "Port St John",
+     "state": "FL",
+     "zip": "32927",
+     "phone": "3216390910"
+    },
+    {
+     "address": "6804 RACE TRACK RD",
+     "address_2": "",
+     "city": "BOWIE",
+     "state": "MD",
+     "zip": "20715",
+     "phone": "3012621210"
+    },
+    {
+     "address": "7077 Normandy Blvd Ste 7",
+     "address_2": "",
+     "city": "Jacksonville",
+     "state": "FL",
+     "zip": "32205",
+     "phone": "9047817717"
+    },
+    {
+     "address": "840 N Stone St",
+     "address_2": "",
+     "city": "DeLand",
+     "state": "FL",
+     "zip": "32720",
+     "phone": "3867341766"
+    },
+    {
+     "address": "8818 Waltham Woods Rd",
+     "address_2": "",
+     "city": "Parkville",
+     "state": "MD",
+     "zip": "21234",
+     "phone": "4108822020"
+    },
+    {
+     "address": "920 Revolution St",
+     "address_2": "",
+     "city": "Havre de Grace",
+     "state": "MD",
+     "zip": "21078",
+     "phone": "4109392200"
+    },
+    {
+     "address": "923 Paoli Pike",
+     "address_2": "",
+     "city": "West Chester",
+     "state": "PA",
+     "zip": "19380",
+     "phone": "6106928300"
+    },
+    {
+     "address": "945 Indian Springs Rd",
+     "address_2": "",
+     "city": "Indiana",
+     "state": "PA",
+     "zip": "15701",
+     "phone": "7244656232"
+    },
+    {
+     "address": "951 Beards Hill Rd Ste F",
+     "address_2": "",
+     "city": "Aberdeen",
+     "state": "MD",
+     "zip": "21001",
+     "phone": "4102721800"
+    },
+    {
+     "address": "9560 Crosshill Blvd Ste 106",
+     "address_2": "",
+     "city": "Jacksonville",
+     "state": "FL",
+     "zip": "32222",
+     "phone": "9047772927"
+    },
+    {
+     "address": "9398-1 Arlington Expy",
+     "address_2": "",
+     "city": "Jacksonville",
+     "state": "FL",
+     "zip": "32225",
+     "phone": "9047249210"
+    },
+    {
+     "address": "1000 Carlisle St Ste 1280",
+     "address_2": "",
+     "city": "Hanover",
+     "state": "PA",
+     "zip": "17331",
+     "phone": "7176374944"
+    },
+    {
+     "address": "1736 W Michigan Ave",
+     "address_2": "",
+     "city": "Jackson",
+     "state": "MI",
+     "zip": "49202",
+     "phone": "5177897131"
+    },
+    {
+     "address": "4576 MILLER RD",
+     "address_2": "",
+     "city": "Flint",
+     "state": "MI",
+     "zip": "48507",
+     "phone": "8107324110"
+    },
+    {
+     "address": "1421 S 11th St",
+     "address_2": "",
+     "city": "Niles",
+     "state": "MI",
+     "zip": "49120",
+     "phone": "2696841330"
+    },
+    {
+     "address": "1617 N W Ave",
+     "address_2": "",
+     "city": "Jackson",
+     "state": "MI",
+     "zip": "49202",
+     "phone": "5177803828"
+    },
+    {
+     "address": "1761 M 139",
+     "address_2": "",
+     "city": "Benton Harbor",
+     "state": "MI",
+     "zip": "49022",
+     "phone": "2699340424"
+    },
+    {
+     "address": "2067 S Drake Rd",
+     "address_2": "",
+     "city": "Kalamazoo",
+     "state": "MI",
+     "zip": "49006",
+     "phone": "2693663664"
+    },
+    {
+     "address": "22750 Allen Rd",
+     "address_2": "",
+     "city": "Woodhaven",
+     "state": "MI",
+     "zip": "48183",
+     "phone": "7346764300"
+    },
+    {
+     "address": "500 S Centerville Rd",
+     "address_2": "",
+     "city": "Sturgis",
+     "state": "MI",
+     "zip": "49091",
+     "phone": "2696511958"
+    },
+    {
+     "address": "5349 W Main St",
+     "address_2": "",
+     "city": "Kalamazoo",
+     "state": "MI",
+     "zip": "49009",
+     "phone": "2693497627"
+    },
+    {
+     "address": "5465 Gull Rd",
+     "address_2": "",
+     "city": "Kalamazoo",
+     "state": "MI",
+     "zip": "49048",
+     "phone": "2393497631"
+    },
+    {
+     "address": "6123 S Westnedge Ave",
+     "address_2": "",
+     "city": "Portage",
+     "state": "MI",
+     "zip": "49002",
+     "phone": "2693277079"
+    },
+    {
+     "address": "65 Columbia Ave E",
+     "address_2": "",
+     "city": "Battle Creek",
+     "state": "MI",
+     "zip": "49015",
+     "phone": "2699655106"
+    },
+    {
+     "address": "755 E Chicago St",
+     "address_2": "",
+     "city": "Coldwater",
+     "state": "MI",
+     "zip": "49036",
+     "phone": "5172789004"
+    },
+    {
+     "address": "855 Olds St",
+     "address_2": "",
+     "city": "Jonesville",
+     "state": "MI",
+     "zip": "49250",
+     "phone": "5178492200"
+    },
+    {
+     "address": "1033 W Northland Ave Ste B",
+     "address_2": "",
+     "city": "Appleton",
+     "state": "WI",
+     "zip": "54914",
+     "phone": "9207314511"
+    },
+    {
+     "address": "110 8th St",
+     "address_2": "",
+     "city": "Monroe",
+     "state": "WI",
+     "zip": "53566",
+     "phone": "6082229420"
+    },
+    {
+     "address": "1139 W Main St",
+     "address_2": "",
+     "city": "Whitewater",
+     "state": "WI",
+     "zip": "53190",
+     "phone": "2627316320"
+    },
+    {
+     "address": "120 N Grand Ave Ste 102",
+     "address_2": "",
+     "city": "Sun Prairie",
+     "state": "WI",
+     "zip": "53590",
+     "phone": "6088397008"
+    },
+    {
+     "address": "1490 Oneida St",
+     "address_2": "",
+     "city": "Appleton",
+     "state": "WI",
+     "zip": "54915",
+     "phone": "9207253752"
+    },
+    {
+     "address": "1500 S Church St",
+     "address_2": "",
+     "city": "Watertown",
+     "state": "WI",
+     "zip": "53094",
+     "phone": "9202619225"
+    },
+    {
+     "address": "1607 Losey Blvd S",
+     "address_2": "",
+     "city": "La Cosse",
+     "state": "WI",
+     "zip": "54601",
+     "phone": "6084591920"
+    },
+    {
+     "address": "1664 COMMERCE CT",
+     "address_2": "",
+     "city": "RIVER FALLS",
+     "state": "WI",
+     "zip": "54022",
+     "phone": "7154256144"
+    },
+    {
+     "address": "1741 E Geneva St Ste 800",
+     "address_2": "",
+     "city": "Delavan",
+     "state": "WI",
+     "zip": "53115",
+     "phone": "2627280068"
+    },
+    {
+     "address": "1745 S Main St Ste 7",
+     "address_2": "",
+     "city": "West Bend",
+     "state": "WI",
+     "zip": "53095",
+     "phone": "2623347077"
+    },
+    {
+     "address": "2029 Humes Rd",
+     "address_2": "",
+     "city": "Janesville",
+     "state": "WI",
+     "zip": "53545",
+     "phone": "6087547411"
+    },
+    {
+     "address": "2314 Lineville Rd Ste 104",
+     "address_2": "",
+     "city": "Green Bay",
+     "state": "WI",
+     "zip": "54313",
+     "phone": "9204345845"
+    },
+    {
+     "address": "2360 Costco Way Ste 120",
+     "address_2": "",
+     "city": "Green Bay",
+     "state": "WI",
+     "zip": "54311",
+     "phone": "9204684642"
+    },
+    {
+     "address": "2502 3rd Ave N",
+     "address_2": "",
+     "city": "Escanaba",
+     "state": "MI",
+     "zip": "49829",
+     "phone": "9067862295"
+    },
+    {
+     "address": "2800 Sarah Ln Ste E",
+     "address_2": "",
+     "city": "Waunakee",
+     "state": "WI",
+     "zip": "53597",
+     "phone": "6086025250"
+    },
+    {
+     "address": "2806 Woodman Dr",
+     "address_2": "",
+     "city": "Altoona",
+     "state": "WI",
+     "zip": "54720",
+     "phone": "5344442961"
+    },
+    {
+     "address": "2921 New Pinery Rd Ste 2",
+     "address_2": "",
+     "city": "Portage",
+     "state": "WI",
+     "zip": "53901",
+     "phone": "6086867011"
+    },
+    {
+     "address": "2960 Cahill Main Ste 103",
+     "address_2": "",
+     "city": "Fitchburg",
+     "state": "WI",
+     "zip": "53711",
+     "phone": "6086905121"
+    },
+    {
+     "address": "308 Division St",
+     "address_2": "",
+     "city": "Stevens Point",
+     "state": "WI",
+     "zip": "54481",
+     "phone": "7153445355"
+    },
+    {
+     "address": "3107 US Highway 41 W",
+     "address_2": "",
+     "city": "Marquette",
+     "state": "MI",
+     "zip": "49855",
+     "phone": "9062284120"
+    },
+    {
+     "address": "3199 Market Ln",
+     "address_2": "",
+     "city": "Kenosha",
+     "state": "WI",
+     "zip": "53144",
+     "phone": "2626588119"
+    },
+    {
+     "address": "352 S 18th Ave",
+     "address_2": "",
+     "city": "Wausau",
+     "state": "WI",
+     "zip": "54401",
+     "phone": "7158428040"
+    },
+    {
+     "address": "4097 State Road 28 Unit 2",
+     "address_2": "",
+     "city": "Sheboygan Falls",
+     "state": "WI",
+     "zip": "53085",
+     "phone": "9204585757"
+    },
+    {
+     "address": "5722 S 108th St",
+     "address_2": "",
+     "city": "Hales Corners",
+     "state": "WI",
+     "zip": "53130",
+     "phone": "4147862941"
+    },
+    {
+     "address": "6000 Monona Dr Ste 101",
+     "address_2": "",
+     "city": "Monona",
+     "state": "WI",
+     "zip": "53716",
+     "phone": "6082229420"
+    },
+    {
+     "address": "631 Hometown Cir Ste 106",
+     "address_2": "",
+     "city": "Verona",
+     "state": "WI",
+     "zip": "53593",
+     "phone": "6086536218"
+    },
+    {
+     "address": "717 S Central Ave",
+     "address_2": "",
+     "city": "Marshfield",
+     "state": "WI",
+     "zip": "54449",
+     "phone": "7153878608"
+    },
+    {
+     "address": "723 Main Ave",
+     "address_2": "",
+     "city": "Depere",
+     "state": "WI",
+     "zip": "54115",
+     "phone": "9203363390"
+    },
+    {
+     "address": "728 E 2nd St",
+     "address_2": "",
+     "city": "Merrill",
+     "state": "WI",
+     "zip": "54452",
+     "phone": "7155364292"
+    },
+    {
+     "address": "912 Highway 136 Suite 103",
+     "address_2": "",
+     "city": "Baraboo",
+     "state": "WI",
+     "zip": "53913",
+     "phone": "6085817525"
+    },
+    {
+     "address": "943 W CLAIREMONT AVE",
+     "address_2": "",
+     "city": "EAU CLAIRE",
+     "state": "WI",
+     "zip": "54701",
+     "phone": "7158327723"
+    },
+    {
+     "address": "980 Milwaukee Rd Ste 400",
+     "address_2": "",
+     "city": "Burlington",
+     "state": "WI",
+     "zip": "53105",
+     "phone": "6084292211"
+    },
+    {
+     "address": "N6663 Rolling Meadows Dr Ste I",
+     "address_2": "",
+     "city": "Fond du Lac",
+     "state": "WI",
+     "zip": "54937",
+     "phone": "9209218290"
+    },
+    {
+     "address": "W8159 S US Highway 2/141 Ste 102",
+     "address_2": "",
+     "city": "Iron Mountain",
+     "state": "MI",
+     "zip": "49801",
+     "phone": "9067799164"
+    },
+    {
+     "address": "2621 S ONEIDA ST STE 104",
+     "address_2": "",
+     "city": "ASHWAUBENON",
+     "state": "WI",
+     "zip": "54304",
+     "phone": "9204993511"
+    },
+    {
+     "address": "4550 CALUMET AVE STE 104",
+     "address_2": "",
+     "city": "MANITOWOC",
+     "state": "WI",
+     "zip": "54220",
+     "phone": "9206832244"
+    },
+    {
+     "address": "1045 E GRAND AVE",
+     "address_2": "",
+     "city": "ROTHSCHILD",
+     "state": "WI",
+     "zip": "54474",
+     "phone": "7153590649"
+    },
+    {
+     "address": "4551 8TH ST S STE 102",
+     "address_2": "",
+     "city": "WISCONSIN RAPIDS",
+     "state": "WI",
+     "zip": "54494",
+     "phone": "7154231340"
+    },
+    {
+     "address": "820 PARK AVE STE I",
+     "address_2": "",
+     "city": "BEAVER DAM",
+     "state": "WI",
+     "zip": "53916",
+     "phone": "9208873791"
+    },
+    {
+     "address": "2787 MILWAUKEE RD STE D",
+     "address_2": "",
+     "city": "BELOIT",
+     "state": "WI",
+     "zip": "53511",
+     "phone": "6083652512"
+    },
+    {
+     "address": "2860 S GREEN BAY RD STE 250",
+     "address_2": "",
+     "city": "MOUNT PLEASANT",
+     "state": "WI",
+     "zip": "53406",
+     "phone": "2626373733"
+    },
+    {
+     "address": "3525 E CALUMET ST STE 1400",
+     "address_2": "",
+     "city": "APPLETON",
+     "state": "WI",
+     "zip": "54915",
+     "phone": "9207884114"
+    },
+    {
+     "address": "3022 COMMERCIAL BLVD",
+     "address_2": "",
+     "city": "CHIPPEWA FALLS",
+     "state": "WI",
+     "zip": "54729",
+     "phone": "7157261671"
+    },
+    {
+     "address": "1212 S KOELLER ST",
+     "address_2": "",
+     "city": "OSHKOSH",
+     "state": "WI",
+     "zip": "54902",
+     "phone": "9204265730"
+    },
+    {
+     "address": "1640 MADISON AVE",
+     "address_2": "",
+     "city": "FORT ATKINSON",
+     "state": "WI",
+     "zip": "53538",
+     "phone": "9205632171"
+    },
+    {
+     "address": "9417 STATE ROAD 16 STE 300",
+     "address_2": "",
+     "city": "ONALASKA",
+     "state": "WI",
+     "zip": "54650",
+     "phone": "6087812010"
+    },
+    {
+     "address": "1154 WESTOWNE DR",
+     "address_2": "",
+     "city": "NEENAH",
+     "state": "WI",
+     "zip": "54956",
+     "phone": "9207510275"
+    },
+    {
+     "address": "2910 ROOSEVELT RD STE F",
+     "address_2": "",
+     "city": "MARINETTE",
+     "state": "WI",
+     "zip": "54143",
+     "phone": "7157350260"
+    },
+    {
+     "address": "2304 S MAIN ST STE 9",
+     "address_2": "",
+     "city": "RICE LAKE",
+     "state": "WI",
+     "zip": "54868",
+     "phone": "7152367906"
+    },
+    {
+     "address": "2193 LINCOLN ST",
+     "address_2": "",
+     "city": "RHINELANDER",
+     "state": "WI",
+     "zip": "54501",
+     "phone": "7153624800"
+    },
+    {
+     "address": "174 CROSSROADS DR",
+     "address_2": "",
+     "city": "PLOVER",
+     "state": "WI",
+     "zip": "54467",
+     "phone": "7153429634"
+    },
+    {
+     "address": "1166 W SUNSET DR STE F100",
+     "address_2": "",
+     "city": "WAUKESHA",
+     "state": "WI",
+     "zip": "53189",
+     "phone": "2625749410"
+    },
+    {
+     "address": "1810 JACKSON ST",
+     "address_2": "",
+     "city": "OSHKOSH",
+     "state": "WI",
+     "zip": "54901",
+     "phone": "9203851363"
+    },
+    {
+     "address": "1440 CAPITOL DR STE B",
+     "address_2": "",
+     "city": "PEWAUKEE",
+     "state": "WI",
+     "zip": "53072",
+     "phone": "2628202656"
+    },
+    {
+     "address": "123 N MALL DR",
+     "address_2": "",
+     "city": "APPLETON",
+     "state": "WI",
+     "zip": "54913",
+     "phone": "9209398211"
+    },
+    {
+     "address": "2268 W MASON ST",
+     "address_2": "",
+     "city": "GREEN BAY",
+     "state": "WI",
+     "zip": "54303",
+     "phone": "9202597068"
+    },
+    {
+     "address": "101 OAK AVE STE 2",
+     "address_2": "",
+     "city": "MENOMONIE",
+     "state": "WI",
+     "zip": "54751",
+     "phone": "7159533731"
+    },
+    {
+     "address": "1073 E JOHNSON ST",
+     "address_2": "",
+     "city": "FOND DU LAC",
+     "state": "WI",
+     "zip": "54935",
+     "phone": "9203755483"
+    },
+    {
+     "address": "2220 BADGER DR",
+     "address_2": "",
+     "city": "HUDSON",
+     "state": "WI",
+     "zip": "54016",
+     "phone": "7159546063"
+    },
+    {
+     "address": "1595 E SUMNER ST STE 108",
+     "address_2": "",
+     "city": "HARTFORD",
+     "state": "WI",
+     "zip": "53027",
+     "phone": "2627098211"
+    },
+    {
+     "address": "2480 STATE ROAD 138 STE 200",
+     "address_2": "",
+     "city": "STOUGHTON",
+     "state": "WI",
+     "zip": "53589",
+     "phone": "6088891047"
+    },
+    {
+     "address": "101 N WESTERN AVE STE 101",
+     "address_2": "",
+     "city": "WAUPACA",
+     "state": "WI",
+     "zip": "54981",
+     "phone": "5344002068"
+    },
+    {
+     "address": "901 W SHARON AVE STE 6",
+     "address_2": "",
+     "city": "HOUGHTON",
+     "state": "MI",
+     "zip": "49931",
+     "phone": "9062751440"
+    },
+    {
+     "address": "128 Grant Way Ste 200",
+     "address_2": "",
+     "city": "New Richmond",
+     "state": "WI",
+     "zip": "54017",
+     "phone": "7155006470"
+    },
+    {
+     "address": "6935 75th St",
+     "address_2": "",
+     "city": "Kenosha",
+     "state": "WI",
+     "zip": "53142",
+     "phone": "2624454890"
+    },
+    {
+     "address": "4511 Vanguard Dr",
+     "address_2": "",
+     "city": "Sheboygan",
+     "state": "WI",
+     "zip": "53083",
+     "phone": "9205472659"
+    },
+    {
+     "address": "1056 E Green Bay St Ste 500",
+     "address_2": "",
+     "city": "Shawano",
+     "state": "WI",
+     "zip": "54166",
+     "phone": "7159902054"
+    },
+    {
+     "address": "2325 NEVA RD",
+     "address_2": "",
+     "city": "ANTIGO",
+     "state": "WI",
+     "zip": "54409",
+     "phone": "7156233620"
+    },
+    {
+     "address": "129 HALE DR STE 6 106",
+     "address_2": "",
+     "city": "HOLMEN",
+     "state": "WI",
+     "zip": "54636",
+     "phone": "6085402410"
+    },
+    {
+     "address": "1314 N Telegraph Rd",
+     "address_2": "",
+     "city": "Monroe",
+     "state": "MI",
+     "zip": "48162",
+     "phone": "7342430960"
+    },
+    {
+     "address": "1407 W Main St Ste A",
+     "address_2": "",
+     "city": "Gaylord",
+     "state": "MI",
+     "zip": "49735",
+     "phone": "9892173075"
+    },
+    {
+     "address": "1416 S Main St Ste 360",
+     "address_2": "",
+     "city": "Adrian",
+     "state": "MI",
+     "zip": "49221",
+     "phone": "5172658086"
+    },
+    {
+     "address": "1545 S Division St Ste 122",
+     "address_2": "",
+     "city": "Traverse City",
+     "state": "MI",
+     "zip": "49684",
+     "phone": "2314860580"
+    },
+    {
+     "address": "15801 SOUTHFIELD RD",
+     "address_2": "",
+     "city": "ALLEN PARK",
+     "state": "MI",
+     "zip": "48101",
+     "phone": "3133820100"
+    },
+    {
+     "address": "16256 Fort St",
+     "address_2": "",
+     "city": "Southgate",
+     "state": "MI",
+     "zip": "48195",
+     "phone": "7342259500"
+    },
+    {
+     "address": "1700 S Drake Rd Ste D",
+     "address_2": "",
+     "city": "Kalamazoo",
+     "state": "MI",
+     "zip": "49006",
+     "phone": "2698884320"
+    },
+    {
+     "address": "19165 Mack Ave",
+     "address_2": "",
+     "city": "Grosse Pointe Woods",
+     "state": "MI",
+     "zip": "48236",
+     "phone": "3138827883"
+    },
+    {
+     "address": "20340 West Rd",
+     "address_2": "",
+     "city": "Woodhaven",
+     "state": "MI",
+     "zip": "48183",
+     "phone": "7346758197"
+    },
+    {
+     "address": "22320 Goddard Rd",
+     "address_2": "",
+     "city": "Taylor",
+     "state": "MI",
+     "zip": "48180",
+     "phone": "3132998870"
+    },
+    {
+     "address": "2500 E Beltline Ave SE Ste C",
+     "address_2": "",
+     "city": "Grand Rapids",
+     "state": "MI",
+     "zip": "49546",
+     "phone": "6162456300"
+    },
+    {
+     "address": "2575 Airport Rd",
+     "address_2": "",
+     "city": "Jackson",
+     "state": "MI",
+     "zip": "49202",
+     "phone": "5177832883"
+    },
+    {
+     "address": "26671 Ford Rd",
+     "address_2": "",
+     "city": "Dearborn Heights",
+     "state": "MI",
+     "zip": "48127",
+     "phone": "7344585181"
+    },
+    {
+     "address": "2909 Cook Rd Ste 105",
+     "address_2": "",
+     "city": "West Branch",
+     "state": "MI",
+     "zip": "48661",
+     "phone": "9893453680"
+    },
+    {
+     "address": "3184 Gratiot Blvd",
+     "address_2": "",
+     "city": "Marysville",
+     "state": "MI",
+     "zip": "48040",
+     "phone": "8103645520"
+    },
+    {
+     "address": "35169 E Michigan Ave",
+     "address_2": "",
+     "city": "Wayne",
+     "state": "MI",
+     "zip": "48184",
+     "phone": "7347285940"
+    },
+    {
+     "address": "36383 26 Mile Rd",
+     "address_2": "",
+     "city": "Lenox",
+     "state": "MI",
+     "zip": "48048",
+     "phone": "5866485990"
+    },
+    {
+     "address": "40097 S GROESBECK HWY",
+     "address_2": "",
+     "city": "CLINTON TOWNSHIP",
+     "state": "MI",
+     "zip": "48036",
+     "phone": "5864687612"
+    },
+    {
+     "address": "4459 E BLUE GRASS RD APT D",
+     "address_2": "",
+     "city": "MOUNT PLEASANT",
+     "state": "MI",
+     "zip": "48858",
+     "phone": "9895463905"
+    },
+    {
+     "address": "455 E Grand River Ave",
+     "address_2": "",
+     "city": "Brighton",
+     "state": "MI",
+     "zip": "48116",
+     "phone": "8102272376"
+    },
+    {
+     "address": "4930 Marsh Rd Ste 5",
+     "address_2": "",
+     "city": "Okemos",
+     "state": "MI",
+     "zip": "48864",
+     "phone": "5177098010"
+    },
+    {
+     "address": "5761 E 12 Mile Rd",
+     "address_2": "",
+     "city": "Warren",
+     "state": "MI",
+     "zip": "48092",
+     "phone": "5866193600"
+    },
+    {
+     "address": "100 Robinson Center Dr Spc 1360",
+     "address_2": "",
+     "city": "Pittsburgh",
+     "state": "PA",
+     "zip": "15205",
+     "phone": "4127884054"
+    },
+    {
+     "address": "1003 Fairlawn Ave Ste 24A",
+     "address_2": "",
+     "city": "Laurel",
+     "state": "MD",
+     "zip": "20707",
+     "phone": "3017761818"
+    },
+    {
+     "address": "1006 Baltimore Pike Ste N-8",
+     "address_2": "",
+     "city": "Springfield",
+     "state": "PA",
+     "zip": "19064",
+     "phone": "6105443828"
+    },
+    {
+     "address": "101 Wilson Ave Ste D",
+     "address_2": "",
+     "city": "Hanover",
+     "state": "PA",
+     "zip": "17331",
+     "phone": "7176300567"
+    },
+    {
+     "address": "10112 York Rd",
+     "address_2": "",
+     "city": "Cockeysville",
+     "state": "MD",
+     "zip": "21030",
+     "phone": "4106285350"
+    },
+    {
+     "address": "10369 Reisterstown Rd",
+     "address_2": "",
+     "city": "Owings Mills",
+     "state": "MD",
+     "zip": "21117",
+     "phone": "4433948679"
+    },
+    {
+     "address": "11110 MALL CIR",
+     "address_2": "",
+     "city": "WALDORF",
+     "state": "MD",
+     "zip": "20603",
+     "phone": "3017058383"
+    },
+    {
+     "address": "116 W Township Line Rd Ste 204",
+     "address_2": "",
+     "city": "Havertown",
+     "state": "PA",
+     "zip": "19083",
+     "phone": "6104461089"
+    },
+    {
+     "address": "118 Wagner Rd",
+     "address_2": "",
+     "city": "Monaca",
+     "state": "PA",
+     "zip": "15061",
+     "phone": "7247752987"
+    },
+    {
+     "address": "1194 Mae St",
+     "address_2": "",
+     "city": "Hummelstown",
+     "state": "PA",
+     "zip": "17036",
+     "phone": "7175666374"
+    },
+    {
+     "address": "120 Trinity Point Dr",
+     "address_2": "",
+     "city": "Washington",
+     "state": "PA",
+     "zip": "15301",
+     "phone": "7242222164"
+    },
+    {
+     "address": "1207 Carlisle Rd Ste 880",
+     "address_2": "",
+     "city": "York",
+     "state": "PA",
+     "zip": "17404",
+     "phone": "7178483420"
+    },
+    {
+     "address": "1402 S Main Chapel Way Ste 114",
+     "address_2": "",
+     "city": "Gambrills",
+     "state": "MD",
+     "zip": "21054",
+     "phone": "4107215041"
+    },
+    {
+     "address": "15431 Emerald Way",
+     "address_2": "",
+     "city": "Bowie",
+     "state": "MD",
+     "zip": "20716",
+     "phone": "3018056132"
+    },
+    {
+     "address": "15902 Crain Hwy Unit F",
+     "address_2": "",
+     "city": "Brandywine",
+     "state": "MD",
+     "zip": "20613",
+     "phone": "3017824907"
+    },
+    {
+     "address": "167 Montgomery Mall",
+     "address_2": "",
+     "city": "North Wales",
+     "state": "PA",
+     "zip": "19454",
+     "phone": "2153618549"
+    },
+    {
+     "address": "169 Jennifer Rd Ste D",
+     "address_2": "",
+     "city": "Annapolis",
+     "state": "MD",
+     "zip": "21401",
+     "phone": "4102240021"
+    },
+    {
+     "address": "1810 E Ridge Pike Ste 100",
+     "address_2": "",
+     "city": "Royersford",
+     "state": "PA",
+     "zip": "19468",
+     "phone": "6104540546"
+    },
+    {
+     "address": "2118 Cottman Ave Ste 8",
+     "address_2": "",
+     "city": "Philadelphia",
+     "state": "PA",
+     "zip": "19149",
+     "phone": "2157251209"
+    },
+    {
+     "address": "221 Easton Rd Ste 112",
+     "address_2": "",
+     "city": "Warrington",
+     "state": "PA",
+     "zip": "18976",
+     "phone": "2154911450"
+    },
+    {
+     "address": "2250 S Columbus Blvd",
+     "address_2": "",
+     "city": "Philadelphia",
+     "state": "PA",
+     "zip": "19148",
+     "phone": "2153395341"
+    },
+    {
+     "address": "2300 E Lincoln Hwy",
+     "address_2": "",
+     "city": "Langhorne",
+     "state": "PA",
+     "zip": "19047",
+     "phone": "2157503760"
+    },
+    {
+     "address": "23360 Eureka Rd",
+     "address_2": "",
+     "city": "Taylor",
+     "state": "MI",
+     "zip": "48180",
+     "phone": "7342870024"
+    },
+    {
+     "address": "23415 Three Notch Rd Ste 1101",
+     "address_2": "",
+     "city": "California",
+     "state": "MD",
+     "zip": "20619",
+     "phone": "3018621896"
+    },
+    {
+     "address": "2350 Lincoln Hwy E Ste 890",
+     "address_2": "",
+     "city": "Lancaster",
+     "state": "PA",
+     "zip": "17602",
+     "phone": "7172933268"
+    },
+    {
+     "address": "240 E Waterfront Dr Ste C",
+     "address_2": "",
+     "city": "Homestead",
+     "state": "PA",
+     "zip": "15120",
+     "phone": "4124628198"
+    },
+    {
+     "address": "247 N Pottstown Pike",
+     "address_2": "",
+     "city": "Exton",
+     "state": "PA",
+     "zip": "19341",
+     "phone": "6105941737"
+    },
+    {
+     "address": "2500 N Mayfair Rd",
+     "address_2": "",
+     "city": "Wauwatosa",
+     "state": "WI",
+     "zip": "53226",
+     "phone": "4144532866"
+    },
+    {
+     "address": "264 Upland Sq Dr",
+     "address_2": "",
+     "city": "Pottstown",
+     "state": "PA",
+     "zip": "19464",
+     "phone": "6107051890"
+    },
+    {
+     "address": "2733 Papermill Rd Ste X15",
+     "address_2": "",
+     "city": "Wyomissing",
+     "state": "PA",
+     "zip": "19610",
+     "phone": "6103735108"
+    },
+    {
+     "address": "2761 S 108th St",
+     "address_2": "",
+     "city": "West Allis",
+     "state": "WI",
+     "zip": "53227",
+     "phone": "4143212425"
+    },
+    {
+     "address": "277 Mundy St Ste 101",
+     "address_2": "",
+     "city": "Wilkes Barre",
+     "state": "PA",
+     "zip": "18702",
+     "phone": "5708291437"
+    },
+    {
+     "address": "2830 Campus Way N Ste 628",
+     "address_2": "",
+     "city": "Lanham",
+     "state": "MD",
+     "zip": "20706",
+     "phone": "3013221037"
+    },
+    {
+     "address": "30955 Woodward Ave Ste 215",
+     "address_2": "",
+     "city": "Royal Oak",
+     "state": "MI",
+     "zip": "48073",
+     "phone": "2488730069"
+    },
+    {
+     "address": "3401 Hartzdale Dr",
+     "address_2": "",
+     "city": "Camp Hill",
+     "state": "PA",
+     "zip": "17011",
+     "phone": "7179750501"
+    },
+    {
+     "address": "3500 S 27th St",
+     "address_2": "",
+     "city": "Milwaukee",
+     "state": "WI",
+     "zip": "53221",
+     "phone": "4148179100"
+    }
+   ],
+   "accepting": "accepting",
+   "specialty": [
+    "Optometry"
+   ],
+   "last_updated_on": "2026-08-04"
+  }
+ ]
+}

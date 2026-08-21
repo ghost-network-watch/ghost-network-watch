@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "task": "Prior-art and positioning check for Ghost Network Watch",
+    "researched": "2026-08-21",
+    "method": "Web research via Bing search (browser UA) + direct page/PDF fetches; GitHub API for repo search",
+    "note": "All claims below cite the URL they came from. Vendor-blog claims are flagged."
+  },
+  "healthporta": {
+    "verdict": "B2B data-infrastructure aggregator; publishes NO accuracy/integrity metrics",
+    "urls": ["https://www.healthporta.com/", "https://www.healthporta.com/data"],
+    "coverage_stats_2026_08_18": {"marketplace_plans": "15.5K", "issuers_monitored": 735, "states": 46, "provider_profiles": "1.3M", "formularies": "6.9K", "drug_coverage_rows": "29.4M"},
+    "quality_claims": "Only 'field standardization, validation checks', 'source-quality monitoring' dashboards and refresh timestamps; no accuracy scores, error rates, stale flags, or plan scoring",
+    "sources_cited_by_them": "CMS marketplace source files and issuer submissions; NPPES/NPI, NUCC, CMS provider reference files",
+    "audience": "healthcare platforms, AI product teams, market intelligence; explicitly not consumers; subscription B2B, demo-gated pricing"
+  },
+  "academic_audits": [
+    {
+      "citation": "Zhu JM, Charlesworth CJ, Polsky D, McConnell KJ. Phantom Networks: Discrepancies Between Reported And Realized Mental Health Care Access In Oregon Medicaid. Health Affairs 41(7):1013-1022, July 2022. doi:10.1377/hlthaff.2022.00052",
+      "urls": ["https://www.healthaffairs.org/doi/10.1377/hlthaff.2022.00052", "https://oregonarchive.org/wp-content/uploads/2022/07/hlthaff.2022.00052-1-1.pdf"],
+      "method": "Directory listings vs claims-constructed networks, Oregon Medicaid MCOs, CY2018 data",
+      "key_findings": "58.2% of directory listings were phantom providers (no claims for >=5 members); 67.4% of MH prescribers; 59.0% of MH nonprescribers; 54.0% of PCPs",
+      "cadence": "one-time cross-sectional study, 2018 data published 2022",
+      "local_fulltext": "evidence/zhu-2022-phantom-networks-healthaffairs-fulltext.txt"
+    },
+    {
+      "citation": "Butala NM, Jiwani K, Bucholz EM. Consistency of Physician Data Across Health Insurer Directories. JAMA 329(10):841-842, March 14, 2023. doi:10.1001/jama.2023.0296. PMID 36917060",
+      "urls": ["https://jamanetwork.com/journals/jama/fullarticle/2802329", "https://pubmed.ncbi.nlm.nih.gov/36917060/"],
+      "method": "634,914 PECOS physicians searched in online directories of UnitedHealth, Elevance, Cigna, Aetna, Humana (Sept 2022 snapshot, HiLabs tech); scraped online directories, NOT the CMS QHP machine-readable JSON",
+      "key_findings": "449,282 physicians in >1 directory; only 19.4% consistent address+specialty across directories; 27.9% consistent address; 67.8% consistent specialty; consistency falls to 7.8% for physicians in all 5 directories",
+      "cadence": "one-time cross-sectional; follow-up: Butala et al., BMC Health Serv Res 24:808, Jul 18 2024 (variation by specialty/state/insurer), PMID 39020337"
+    },
+    {
+      "citation": "Adelberg M, Frakt A, Polsky D, Strollo MK. Improving provider directory accuracy: Can machine-readable directories help? Am J Manag Care 25(5):241-245, May 2019",
+      "urls": ["https://www.ajmc.com/view/improving-provider-directory-accuracy-can-machinereadable-directories-help", "https://pure.johnshopkins.edu/en/publications/improving-provider-directory-accuracy-can-machine-readable-direct/"],
+      "method": "Four provider data sources across 5 counties incl. machine-readable files; text matching + phone verification + 21 stakeholder interviews",
+      "key_findings": "Widespread inaccuracy across directory types; MR directories NOT more accurate than conventional directories, but aggregating from MR files vastly cheaper; MR tech could be leveraged cost-effectively",
+      "cadence": "one-time study (2019). Closest published use of the same QHP MR file corpus; no Friedberg/RAND authorship found for any MR-file study in searches"
+    },
+    {
+      "citation": "Harvard T.H. Chan (Dr. Thomas Tsai, Healthcare Quality and Outcomes Lab) + HiLabs multi-year ghost-network research collaboration, announced June 30, 2026 (PR Newswire via Yahoo Finance)",
+      "urls": ["https://finance.yahoo.com/healthcare/articles/harvard-researchers-partner-hilabs-study-120000174.html"],
+      "scope": "Medicare Advantage only (~35M enrollees); findings via 'appropriate research and academic channels'; no stated public per-plan scoring or continuous public monitoring",
+      "cadence": "multi-year research, not a public scorecard"
+    }
+  ],
+  "senate_finance_2023": {
+    "citation": "Senate Finance Committee majority staff secret shopper study, released May 3, 2023 (Wyden)",
+    "urls": ["https://www.finance.senate.gov/chairmans-news/wyden-calls-for-action-to-get-rid-of-ghost-networks-releases-secret-shopper-study", "https://www.finance.senate.gov/imo/media/doc/050323%20Ghost%20Network%20Hearing%20-%20Secret%20Shopper%20Study%20Report.pdf"],
+    "method": "120 calls to 10 providers from each of 12 Medicare Advantage plan directories in 6 states",
+    "key_findings": "33% inaccurate/non-working/unreturned; appointment secured only 18% of the time; 0 successful appointments in Oregon",
+    "cadence": "one-time staff study; Wyden called for regular CMS audits + penalties (not enacted at the time)"
+  },
+  "state_regulators": {
+    "ny_ag": {
+      "report": "NY OAG 'ghost networks' report, Dec 7, 2023: called 396 listed MH providers across 13 plans (Aetna, Cigna, UHC, Emblem, Fidelis...); 86% were ghosts (unreachable/not in-network/not accepting); only 14% offered appointments; recommended recurring secret-shopper monitoring by NY DOH/OMH/DFS",
+      "urls": ["https://ag.ny.gov/press-release/2023/attorney-general-james-uncovers-major-problems-accessing-mental-health-care", "https://ag.ny.gov/sites/default/files/reports/mental-health-report_0.pdf"],
+      "enforcement_followup": "EmblemHealth $2.5M settlement with NY AG (week of Feb 19, 2026, per ProPublica): 82% of Emblem-listed providers unavailable in 2023 survey; remedies = restitution, 2-business-day corrections, 90-day verification of every listing, independent monitor. Largest ghost-network fine by that office to date.",
+      "enforcement_url": "https://www.propublica.org/article/emblem-health-ghost-network-settlement-mental-health",
+      "cadence": "episodic enforcement, phone-survey-based, one state; no standing public plan scorecard"
+    },
+    "ca_dmhc": {
+      "framework": "SB 137 / Health & Safety Code 1367.27: plans must maintain accurate directories, annual verification; DMHC published Uniform Provider Directory Standards (2020). No ongoing public plan-level accuracy scorecard found.",
+      "urls": ["https://www.dmhc.ca.gov/LicensingReporting.aspx", "https://www.dmhc.ca.gov/Portals/0/Docs/OPL/Uniform%20Provider%20Directory%20Standards%20-%20SB%20137.pdf"],
+      "ab_280": "CA AB 280 (2025-26) would set accuracy benchmarks 60% by Jul 1 2026 rising to 95% by Jul 1 2029 with administrative penalties, DMHC/CDI enforcement. STATUS: NOT ENACTED - ordered to inactive file at Sen. Durazo's request Sept 8, 2025 (calmatters.digitaldemocracy.org). Vendor blogs (symplr) present it as if effective - it is not.",
+      "ab_280_urls": ["https://calmatters.digitaldemocracy.org/bills/ca_202520260ab280", "https://www.symplr.com/articles/keeping-up-with-california-dmhc-regulations"]
+    }
+  },
+  "cms_enforcement": {
+    "qhp_marketplace": {
+      "document": "CMS/CCIIO 'Machine-Readable Provider Directory Review Summary Report, Plan Years 2017-2021', March 22, 2022 (Marketplace Plan Management Group, Division of Issuer Compliance and Monitoring)",
+      "url": "https://www.cms.gov/files/document/2017-2021mrpdsummaryreportfinal508.pdf",
+      "local_copy": "evidence/cms-cciio-mrpd-review-summary-py2017-2021.pdf",
+      "authority": "45 CFR 156.230(c) requires FFE QHP issuers to publish provider directory info in HHS-specified format",
+      "method": "annual samples of ~1,235-6,250 MR records across ~50 issuers; secret-shopper calls + comparison to network URL directory, NPPES, USPS",
+      "key_findings": "Records fully accurate+up-to-date via secret shopper: PY2017 29%, PY2018 38%, PY2019 43%, PY2020 skipped (COVID), PY2021 47%; MR-vs-URL complete match 60% (PY2018) to 73% (PY2021)",
+      "enforcement": "NONE published: report contains no penalties, corrective actions, or issuer names - concludes with voluntary 'best practices'. No successor report for PY2022+ surfaced in searches as of 2026-08-21.",
+      "vendor_claim_unverified": "Ideon blog (Feb 27, 2026) claims 85% accuracy threshold + July 2024 CMS corrective-action-plan guidance for QHPs; not verified against a primary CMS document in this pass"
+    },
+    "medicare_advantage_history": {
+      "document": "CMS Online Provider Directory Review Reports, 3 rounds 2016-2018 (MA only); Round 3 (Nov 28, 2018) examined 108 providers/locations from 52 MAOs",
+      "urls": ["https://www.cms.gov/medicare/health-plans/managedcaremarketing/downloads/provider_directory_review_industry_report_round_3_11-28-2018.pdf", "https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents/CMS/226504_OY2-Provider-Directory-Review-Industry-Report_11-21-2018.pdf"],
+      "context": "Zhu 2022 cites CMS 2018 finding that >half of MA directory listings had >=1 inaccuracy (48.74% of locations per Ideon's citation of Round 3); reviews discontinued after 2018"
+    }
+  },
+  "rule_landscape_2025_2026": {
+    "real_health_providers_act": {
+      "what": "Requiring Enhanced & Accurate Lists of (REAL) Health Providers Act, enacted as HR 7148 sec. 6220 within the Consolidated Appropriations Act signed Feb 3, 2026. Bills: H.R.5281 / S.3750 (119th Congress).",
+      "requires": "MA plans: verify all directory info at least every 90 days; remove departed providers within 5 business days; no member cost-sharing penalty on reasonable reliance on wrong listing; submit annual directory accuracy analyses; CMS publishes plan-level accuracy scores beginning plan year 2029 (plans display scores from 2029); HHS guidance due ~Aug 2027 (18 months post-enactment); scoring methodology left to future rulemaking (~2028); $4M appropriated",
+      "scope": "MEDICARE ADVANTAGE ONLY - nothing for ACA QHPs or the marketplace MR files",
+      "urls": ["https://defacto.health/2026/02/23/real-health-providers-act-passed/", "https://www.ama-assn.org/health-care-advocacy/federal-advocacy/8-wins-doctors-patients-latest-federal-budget-deal", "https://www.govtrack.us/congress/bills/119/hr5281", "https://ainpi.dev/real-health-providers", "https://www.chiefhealthcareexecutive.com/view/the-real-health-providers-act-what-health-plans-need-to-know-to-comply-viewpoint"]
+    },
+    "cms_4208_f2": {
+      "what": "CMS-4208-F2, 'CY2026 Policy and Technical Changes' final rule, published Sept 19, 2025 (90 FR, doc 2025-18236), codified 42 CFR 422.111: MA orgs must make provider directory data available to CMS for Medicare Plan Finder, update within 30 days, attest annually (CEO/CFO/COO) that data is accurate/complete",
+      "timeline": "Feb 18, 2026 final technical guidance; May 1, 2026 REVISED guidance (HPMS memo) dropping dynamic FHIR API for bulk-publish files CMS crawls daily; May-Aug 2026 testing; Sept 1, 2026 executive attestation deadline; Oct 1, 2026 production go-live for PY2027 MPF",
+      "format_note": "MA machine-readable JSON option is BASED ON the CMS ACA QHP healthcare.gov schema (per defacto.health) - GNW's QHP parser is forward-compatible with this MA regime",
+      "scope": "MA only; CMS validates format/cadence, NOT real-world accuracy",
+      "urls": ["https://www.federalregister.gov/documents/2025/09/19/2025-18236/medicare-and-medicaid-programs-contract-year-2026-policy-and-technical-changes-to-the-medicare", "https://defacto.health/2026/05/15/cms-embraces-bulk-fhir-publish-for-medicare-plan-finder/", "https://1up.health/blog/cms-4208-f2-provider-directory-requirements-for-medicare-advantage-plans-2026/", "https://www.cms.gov/files/document/mpf-ma-provider-directory-technical-guide-11072025-final-draft-pdf.pdf", "https://candorhealth.com/blog/cms-is-publishing-your-provider-directory-publicly-daily-and-by-name/"]
+    },
+    "april_2026_items": {
+      "verdict": "NO standalone 'April 2026 CMS rule' on provider directories was found. Literal April 2026 items: (1) April 23, 2026 CMS letter to State Medicaid Directors requiring 2-year provider revalidation strategy incl. managed-care directory oversight (per defacto.health); (2) CMS-0062-P proposed rule coverage re payer API endpoint reporting (Apr 17, 2026 post). The likely referent of 'April 2026 rule tightening directories' is the REAL Health Providers Act (Feb 3, 2026) and/or CMS-4208-F2 spring-2026 implementation guidance.",
+      "urls": ["https://defacto.health/2026/05/15/cms-embraces-bulk-fhir-publish-for-medicare-plan-finder/"]
+    },
+    "nbpp_2027": {
+      "what": "2027 NBPP final rule (released May 15, 2026; 91 FR 29526, May 20, 2026; effective Jul 20, 2026): network adequacy items (non-network plan certification 2028, ECP review to SBEs) but NO provider directory / MR data provisions per Groom Law summary",
+      "urls": ["https://www.cms.gov/newsroom/fact-sheets/hhs-notice-benefit-payment-parameters-2027-final-rule", "https://www.federalregister.gov/documents/2026/05/20/2026-10050/patient-protection-and-affordable-care-act-hhs-notice-of-benefit-and-payment-parameters-for-2027-and", "https://www.groom.com/resources/cms-issues-2027-hhs-notice-of-benefit-and-payment-parameters-final-rule/"]
+    }
+  },
+  "github_landscape": {
+    "verdict": "No public repo parses CMS QHP provider JSON at scale as of 2026-08-21",
+    "searches": "GitHub API repo search: 'QHP provider directory'=0, 'marketplace provider puf'=0, 'healthcare.gov provider json'=0, 'provider directory cms json'=0, 'insurance provider directory scraper'=0",
+    "adjacent": [
+      {"repo": "FHIR-IQ/AINPI (ainpi.dev)", "note": "open-source (Apache-2.0) provider-data audit of CMS National Directory/NPPES/OIG-LEIE/SAM.gov; 6 integrity dimensions; state x specialty grid (partly synthetic placeholder values); MA/NDH focus; NO QHP files, NO per-plan/per-county scores, no BH focus; consulting business attached (FHIR IQ / Eugene Vestel)", "urls": ["https://ainpi.dev/", "https://github.com/FHIR-IQ/AINPI"]},
+      {"repo": "tiffpvrl/ghost-network-buster", "note": "multi-agent AI voice caller 'secret shopper' demo, 0 stars, pushed 2026-05-05; calls, not file audits"},
+      {"repo": "api-evangelist/turquoise + api-evangelist/serif-health", "note": "price-transparency (TiC/hospital MRF) profiles, not provider directories"},
+      {"repo": "vericred/* (now Ideon)", "note": "dormant API clients (last pushed 2018) for the commercial aggregator; Ideon sells IdeonSelect directory API across 300+ carriers - aggregation/compliance product, no public integrity scoring"},
+      {"repo": "TransparentHealth/plan-net-provider-directory; MITA-Governance-Board/medicaid-plannet-fsh", "note": "FHIR Plan-Net IG tooling, standards work, not audits"}
+    ]
+  },
+  "lane_conclusion": "Continuous, public, per-plan-per-county integrity auditing of ACA QHP machine-readable provider directories - especially behavioral health - is EMPTY as of 2026-08-21. Every adjacent effort is either commercial-aggregation (HealthPorta, Ideon, HiLabs), one-off research (Zhu 2022, Butala 2023, Senate 2023), episodic single-state enforcement (NY AG), MA-only regulation (REAL Act, CMS-4208-F2), or non-QHP open-source (AINPI)."
+}

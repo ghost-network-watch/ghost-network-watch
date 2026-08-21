@@ -1,0 +1,10 @@
+{
+ "index_url": "https://files.myplancentral.com/ACA/cms-data-index.json",
+ "states": [
+  "OH"
+ ],
+ "issuer_ids": [
+  "52664"
+ ],
+ "error": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+}

@@ -1,0 +1,169 @@
+{
+ "index_url": "https://esbgatewaypub.medica.com/rest/QHP/IA/93078/cms-data-index.json",
+ "states": [
+  "IA"
+ ],
+ "issuer_ids": [
+  "93078"
+ ],
+ "provider_urls_count": 35,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://esbgatewaypub.medica.com:443/rest/QHP/IA/93078/Facility/providers1.json",
+   "http_code": 200,
+   "fetched_chars": 21374612,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 4583,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "facility_type": 1000,
+     "type": 1000,
+     "facility_name": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2019-12-10",
+    "last_updated_max": "2026-06-24",
+    "last_updated_years": {
+     "2021": 61,
+     "2020": 775,
+     "2023": 31,
+     "2022": 26,
+     "2024": 29,
+     "2026": 33,
+     "2025": 44,
+     "2019": 1
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "4237562268",
+      3
+     ],
+     [
+      "6514587002",
+      3
+     ],
+     [
+      "8647125820",
+      3
+     ],
+     [
+      "5633595313",
+      3
+     ],
+     [
+      "5152857133",
+      3
+     ],
+     [
+      "5633911543",
+      3
+     ],
+     [
+      "3197530112",
+      3
+     ],
+     [
+      "4026142500",
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://esbgatewaypub.medica.com:443/rest/QHP/IA/93078/Facility/providers18.json",
+   "http_code": 200,
+   "fetched_chars": 21387408,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 4593,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "facility_type": 1000,
+     "type": 1000,
+     "facility_name": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2019-05-16",
+    "last_updated_max": "2026-07-01",
+    "last_updated_years": {
+     "2021": 65,
+     "2020": 759,
+     "2025": 42,
+     "2023": 50,
+     "2024": 38,
+     "2026": 31,
+     "2022": 14,
+     "2019": 1
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "3076870501",
+      3
+     ],
+     [
+      "2288633331",
+      3
+     ],
+     [
+      "5802336502",
+      3
+     ],
+     [
+      "9702520212",
+      3
+     ],
+     [
+      "4025029782",
+      3
+     ],
+     [
+      "4233499000",
+      3
+     ],
+     [
+      "5635571004",
+      3
+     ],
+     [
+      "5733320020",
+      3
+     ]
+    ]
+   }
+  }
+ ]
+}

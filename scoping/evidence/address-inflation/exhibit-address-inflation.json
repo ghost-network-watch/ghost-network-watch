@@ -1,0 +1,191 @@
+{
+  "exhibit": "address-inflation",
+  "prepared": "2026-08-21",
+  "method": {
+    "fetch": "Fresh Range-limited GET (first 10,485,760 bytes) with browser User-Agent; WY file also tail-sampled (last 3,000,000 bytes) to rule out sort bias. Medica blocked curl with a Cloudflare JS challenge; fetched via real Chromium (Playwright), full file ~4 MB.",
+    "parsing": "Truncated samples repaired by cutting at the last complete top-level record.",
+    "nppes": "Each key NPI checked against the free NPPES registry API (https://npiregistry.cms.hhs.gov/api/?number=NPI&version=2.1) on 2026-08-21. Raw responses saved in nppes/.",
+    "framing_note": "All claims are of the form 'the payer's own published machine-readable file shows X' or 'the file disagrees with the public NPPES record'. No claim is made that any provider is fake or that any insurer is lying."
+  },
+  "files_examined": [
+    {
+      "issuer": "11269 (WY) - BlueSelect marketplace plans per the issuer's own 11269-plans.json (BCBS of Wyoming brand)",
+      "url": "https://www.pfpdata.com/cms-data/11269-wy/11269-vs-provider.json",
+      "file_role": "vision network file listed in the CMS-submitted index for WY issuer 11269",
+      "content_length_bytes": 118806930,
+      "last_modified": "2026-08-05",
+      "head_sample_records": 2933,
+      "tail_sample_records": 1150,
+      "sample_stats": {
+        "head_all_type_INDIVIDUAL": true,
+        "median_addresses": 2,
+        "mean_addresses": 8.4,
+        "pct_records_over_10_addresses": 16.2,
+        "records_over_25_addresses": 201,
+        "max_addresses": 341,
+        "records_with_any_WY_address_head": "2 of 2,933 (0.1%)",
+        "records_with_any_WY_address_tail": "1 of 1,150 (0.1%)",
+        "top_address_states_head": ["NY 2993", "TX 2310", "FL 2221", "PA 1764", "CA 1372"]
+      },
+      "worst_records": [
+        {
+          "name": "Makayla Porter",
+          "npi": "1053988394",
+          "type": "INDIVIDUAL",
+          "specialty": ["Optometry"],
+          "addresses_in_file": 341,
+          "unique_cities": 264,
+          "states_in_file": {"NY": 111, "WI": 66, "MD": 65, "MI": 57, "VA": 40, "IL": 2},
+          "wyoming_addresses": 0,
+          "phones": "335 unique phone numbers across 341 addresses (distinct third-party locations)",
+          "nppes": "NPI-1, Optometrist, single MI license, practice LOCATION = 4763 Wilson Ave SW, Grandville, MI; zero additional practice locations on file; last updated 2021-06-07"
+        },
+        {
+          "name": "Ashley M Tang",
+          "npi": "1043798622",
+          "type": "INDIVIDUAL",
+          "specialty": ["Optometry"],
+          "addresses_in_file": 313,
+          "unique_cities": 219,
+          "states_in_file": {"TX": 148, "CA": 92, "CO": 34, "AZ": 32, "ID": 7},
+          "wyoming_addresses": 0,
+          "nppes": "NPI-1, Optometrist, CA license only, LOCATION = Vista, CA; one practice location (CA); last updated 2020-12-26"
+        },
+        {
+          "name": "Tiffany Marcoe",
+          "npi": "1083182950",
+          "type": "INDIVIDUAL",
+          "specialty": ["Optometry"],
+          "addresses_in_file": 281,
+          "unique_cities": 207,
+          "states_in_file": {"WI": 84, "PA": 68, "MD": 52, "MI": 48, "FL": 24, "NJ": 5},
+          "wyoming_addresses": 0,
+          "nppes": "NPI-1, Optometrist licensed in PA/WI/FL/MD/MI/NJ (multi-state), LOCATION = Springfield, PA. Multi-state licensure makes some multi-site listing plausible, but 281 simultaneous locations across 207 cities remains far beyond NPPES's single listed location."
+        }
+      ],
+      "key_observation": "A Wyoming marketplace vision file of ~119 MB in which ~99.9% of sampled records (head and tail) contain no Wyoming address at all; individual optometrists are fanned out to hundreds of retail locations in other states, contradicting their NPPES practice locations."
+    },
+    {
+      "issuer": "47840 (MO) - Medica, per mr-puf-2026.csv",
+      "url": "https://www.medica.com/mrf/output/MO2/Group/Providers1.json",
+      "file_role": "Group providers file from https://www.medica.com/mrf/index/MO2.json",
+      "full_file_records": 1985,
+      "sample_stats": {
+        "median_addresses": 1,
+        "pct_records_over_10_addresses": 0.9,
+        "records_over_25_addresses": 7,
+        "max_addresses": 352,
+        "records_with_any_MO_address": "1,508 of 1,985 (76.0%)"
+      },
+      "worst_records": [
+        {
+          "group_name": "Great Lakes Behavioral Health Services PC",
+          "npi": "1639916349",
+          "type": "GROUP",
+          "addresses_in_file": 352,
+          "unique_city_state": 88,
+          "states_in_file": {"MO": 352},
+          "phones": "ALL 352 addresses share one phone: 646-941-7645 (Manhattan area code)",
+          "last_updated_on_in_file": "2026-08-01",
+          "nppes": "NPI-2, Psychiatry, sole MAILING+LOCATION = 205 Hudson St FL 9, New York, NY 10013, phone 646-453-6777; enumerated 2024-07-10; zero practice locations in Missouri. 205 Hudson St FL 9 is the same NPPES address and phone as Headway Michigan Behavioral Health Services PC (NPI 1790377489), indicating a Headway-affiliated telehealth PC."
+        },
+        {
+          "group_name": "OK Alma Community Network",
+          "npi": "1427671437",
+          "type": "GROUP",
+          "addresses_in_file": "161 (plus a second record for the same NPI with 51 more)",
+          "states_in_file": {"MO": 153, "IL": 8},
+          "last_updated_on_in_file": "2025-10-14",
+          "nppes": "NPI-2 'ALMA COMMUNITY NETWORK', taxonomy Counselor/Community Behavioral Health, LOCATION = 397 Bridge St FL 7, Brooklyn, NY; zero MO practice locations. Alma is a telehealth therapist platform."
+        },
+        {
+          "group_name": "Headway Michigan Behavioral Health Services",
+          "npi": "1790377489",
+          "type": "GROUP",
+          "addresses_in_file": 86,
+          "states_in_file": {"MO": 86},
+          "nppes": "NPI-2, Psychiatry, sole LOCATION = 205 Hudson St FL 9, New York, NY (Headway HQ); a 'Michigan' entity listed at 86 Missouri street addresses in a Missouri marketplace file."
+        },
+        {
+          "group_name": "SonderMind Provider Network LLC (5th-largest record)",
+          "npi": "1760854442",
+          "type": "GROUP",
+          "addresses_in_file": 51,
+          "nppes": "NPI-2, Denver CO HQ, 16 secondary practice locations on file of which 2 are in MO."
+        }
+      ],
+      "key_observation": "The four largest GROUP records in Medica's MO behavioral file are telehealth-platform network entities (Headway-affiliated PCs, Alma, SonderMind) whose single national NPI is attached to dozens-to-hundreds of Missouri street addresses; NPPES places each entity at one out-of-state corporate address. The 352-address record shares one Manhattan phone number across every listed Missouri location."
+    },
+    {
+      "issuer": "29854 (TN) - Alliant Health Plans, per mr-puf-2026.csv",
+      "url": "https://www.alliantplans.com/json/ProvidersTN.json",
+      "content_length_bytes": 104664014,
+      "last_modified": "2026-08-20",
+      "head_sample_records": 3397,
+      "sample_stats": {
+        "median_addresses": 1,
+        "pct_records_over_10_addresses": 3.5,
+        "by_type_over_10_pct": {"INDIVIDUAL": 7.8, "GROUP": 3.2, "FACILITY": 1.6},
+        "max_addresses": 154,
+        "records_with_any_TN_address": "694 of 3,397 (20.4%) in a Tennessee file"
+      },
+      "worst_records": [
+        {
+          "name": "Independent Physical Therapy of GA",
+          "npi": "1003390295",
+          "type": "FACILITY",
+          "facility_type": ["Physical Therapy Facility"],
+          "addresses_in_file": 154,
+          "states_in_file": {"GA": 153, "TN": 1},
+          "nppes": "NPI-2 'INDEPENDENT PHYSICAL THERAPY OF GA LLC', single LOCATION = Powder Springs, GA; zero additional practice locations. File lists 154 addresses in 100 cities."
+        },
+        {
+          "name": "100 Percent A Chiropractic Wellness Ctr",
+          "npi": "1013058742",
+          "type": "GROUP",
+          "addresses_in_file": 132,
+          "states_in_file": {"GA": 121, "TN": 9, "SC": 2},
+          "nppes": "NPI-2 registered as 'ACTIVHEALTHCARE, INC.', primary taxonomy 'Preferred Provider Organization' (a network/PPO, not a care provider), single LOCATION = Tucker, GA. The directory name in the file does not match the NPI's registered organization, and the NPI's own taxonomy says it is a network entity."
+        },
+        {
+          "name": "Independent Physical Therapy",
+          "npi": "1164474342",
+          "type": "FACILITY",
+          "addresses_in_file": 113,
+          "states_in_file": {"TN": 113},
+          "nppes": "NPI-2, single LOCATION = Lookout Mountain, TN; file lists 113 TN addresses in 72 cities."
+        }
+      ],
+      "counter_example": "Top INDIVIDUAL records are interventional/diagnostic radiologists (e.g. NPI 1003082272, Chris C Sung) at 79 GA imaging sites - a plausibly legitimate multi-site pattern (radiology groups covering many imaging centers). Illustrates why the metric must be specialty-aware.",
+      "key_observation": "Umbrella network entities (an IPA-style PT network and a chiropractic PPO) have their single organizational NPI attached to every member clinic address; NPPES records one location each."
+    }
+  ],
+  "cross_market_baseline": {
+    "source": "162 provider files sampled across all 108 reachable indexes (scoping/probes/)",
+    "files_worst_record_over_10_addresses": "89/162 (55%)",
+    "files_worst_record_over_25": "58/162 (36%)",
+    "files_worst_record_over_50": "31/162 (19%)",
+    "files_worst_record_over_100": "10/162 (6%)"
+  },
+  "metric_assessment": {
+    "verdict": "Defensible with refinements; raw '% of records with >10 addresses' alone is too blunt.",
+    "mechanisms_observed": [
+      "A) Vision-network fan-out: individual ODs attached to hundreds of retail locations across many states (WY/pfpdata).",
+      "B) Telehealth-platform NPIs (Headway/Alma/SonderMind PCs) attached to hundreds of in-state street addresses with a single out-of-state phone (Medica MO; behavioral health specifically).",
+      "C) Umbrella IPA/PPO NPIs attached to every member clinic (Alliant TN).",
+      "D) Plausibly legitimate multi-site practice: teleradiology 79 sites, hospital-system facility records, multi-state-licensed travelers."
+    ],
+    "recommended_flags": [
+      "Tier by record type: INDIVIDUAL at >10 simultaneous locations is a strong flag (exclude specialties with known legitimate multi-site patterns: radiology, pathology, anesthesia, EM/hospitalist).",
+      "Corroborate with NPPES divergence: directory location count vs NPPES practice-location count/state is the decisive, citable contrast.",
+      "Corroborate with phone concentration: one phone across all N addresses (Great Lakes: 1 phone / 352 addresses).",
+      "Corroborate with NPPES taxonomy: entity registered as 'Preferred Provider Organization' listed as a care provider.",
+      "Separate 'wrong-state share' metric: % of a state file's addresses outside the plan's state (WY vision file: ~99.9% of records have no WY address)."
+    ]
+  },
+  "artifacts": {
+    "raw_range_samples": "fetch/pfpdata-11269-wy-vs-provider.head10mb.json, fetch/pfpdata-11269-wy-vs-provider.tail3mb.json, fetch/alliant-ProvidersTN.head10mb.json",
+    "full_worst_records": "fetch/pfpdata-11269-wy-vs-top3-records.json, fetch/alliant-TN-top3-records.json, fetch/medica-MO2-top5-records.json",
+    "nppes_raw_responses": "nppes/nppes-<NPI>.json (10 NPIs)"
+  }
+}

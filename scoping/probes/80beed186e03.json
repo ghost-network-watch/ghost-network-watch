@@ -1,0 +1,214 @@
+{
+ "index_url": "https://www22.elevancehealth.com/cms-data-index-json/Elevance-Health-Data-Index.json",
+ "states": [
+  "FL",
+  "IN",
+  "MO",
+  "NH",
+  "OH",
+  "TX",
+  "WI"
+ ],
+ "issuer_ids": [
+  "44228",
+  "17575",
+  "32753",
+  "57601",
+  "96751",
+  "29276",
+  "47501",
+  "79475",
+  "90028"
+ ],
+ "provider_urls_count": 38,
+ "plan_urls_count": 9,
+ "files": [
+  {
+   "url": "https://www22.elevancehealth.com/cms/PROVIDERS_CT.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 4119,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 901,
+     "specialty": 901,
+     "accepting": 901,
+     "languages": 901,
+     "gender": 621,
+     "group_name": 94,
+     "facility_type": 7,
+     "facility_name": 5
+    },
+    "type_dist": {
+     "INDIVIDUAL": 901,
+     "GROUP": 94,
+     "FACILITY": 5
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 82,
+    "unique_specialties": 64,
+    "top_specialties": [
+     [
+      "Dentist",
+      404
+     ],
+     [
+      "Optometrist",
+      210
+     ],
+     [
+      "Clinical, Social Work",
+      30
+     ],
+     [
+      "Pediatric Dentist",
+      30
+     ],
+     [
+      "Ophthalmology",
+      27
+     ],
+     [
+      "Orthodontics and Dentofacial Orthopedics, Dentist",
+      23
+     ],
+     [
+      "Internal Medicine",
+      20
+     ],
+     [
+      "Oral and Maxillofacial Surgery, Dentist",
+      18
+     ],
+     [
+      "Social Worker",
+      17
+     ],
+     [
+      "Nurse Practitioner",
+      13
+     ],
+     [
+      "Family Medicine",
+      13
+     ],
+     [
+      "Physician Assistant",
+      13
+     ],
+     [
+      "Professional, Counselor",
+      12
+     ],
+     [
+      "Endodontist",
+      12
+     ],
+     [
+      "Periodontist",
+      11
+     ],
+     [
+      "Mental Health, Counselor",
+      9
+     ],
+     [
+      "Family, Nurse Prac",
+      8
+     ],
+     [
+      "Clinical, Psychologist",
+      7
+     ],
+     [
+      "Marriage & Family Therapist",
+      7
+     ],
+     [
+      "Pediatrics",
+      6
+     ]
+    ],
+    "bh_specialty_values": [
+     "Clinical, Social Work",
+     "Social Worker",
+     "Professional, Counselor",
+     "Mental Health, Counselor",
+     "Clinical, Psychologist",
+     "Marriage & Family Therapist",
+     "Psychiatric/Mental Health, Nurse Prac",
+     "Behavioral Analyst",
+     "Physical Therapist",
+     "Psychiatry",
+     "Addiction (Substance Use Disorder), Counselor",
+     "Neurology, Psych/Neuro",
+     "Psychologist",
+     "Counseling, Psychologist",
+     "Clinical Neuropsychologist",
+     "Counselor",
+     "Psychiatric/Mental Health, RN",
+     "Neurodevelopmental Disabilities, Peds",
+     "Child & Adolescent Psychiatry"
+    ],
+    "accepting_values": {
+     "accepting": 893,
+     "None": 99,
+     "accepting in some locations": 7,
+     "not accepting": 1
+    },
+    "last_updated_min": "2026-08-06",
+    "last_updated_max": "2026-08-06",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 134,
+    "top_dup_phones": [
+     [
+      "8175298151",
+      29
+     ],
+     [
+      "7706921000",
+      28
+     ],
+     [
+      "8667076664",
+      20
+     ],
+     [
+      "9169840304",
+      16
+     ],
+     [
+      "6464536777",
+      14
+     ],
+     [
+      "9724448888",
+      14
+     ],
+     [
+      "2165734538",
+      12
+     ],
+     [
+      "5094448200",
+      12
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www22.elevancehealth.com/cms/PROVIDERS_WI_9_OF_16.json",
+   "error": "RemoteDisconnected: Remote end closed connection without response"
+  }
+ ]
+}

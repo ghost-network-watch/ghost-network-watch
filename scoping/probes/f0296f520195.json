@@ -1,0 +1,184 @@
+{
+ "index_url": "https://secure.ccok.com/json/index.json",
+ "states": [
+  "OK"
+ ],
+ "issuer_ids": [
+  "98905"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://secure.ccok.com/json/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3064,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "sex": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 999,
+    "npi_luhn_valid": 999,
+    "bh_matches": 253,
+    "unique_specialties": 91,
+    "top_specialties": [
+     [
+      "LICENSED PROFESSIONAL COUNSELOR",
+      111
+     ],
+     [
+      "FAMILY MEDICINE",
+      93
+     ],
+     [
+      "INTERNAL MEDICINE",
+      49
+     ],
+     [
+      "SOCIAL WORKER",
+      44
+     ],
+     [
+      "OPTOMETRY",
+      43
+     ],
+     [
+      "CHIROPRACTIC MEDICINE",
+      42
+     ],
+     [
+      "PEDIATRICS",
+      39
+     ],
+     [
+      "PHYSICAL THERAPY",
+      35
+     ],
+     [
+      "OBSTETRICS AND GYNECOLOGY",
+      33
+     ],
+     [
+      "CARDIOVASCULAR DISEASE",
+      32
+     ],
+     [
+      "NURSE PRACTITIONER",
+      31
+     ],
+     [
+      "SPEECH-LANGUAGE PATHOLOGY",
+      26
+     ],
+     [
+      "NEUROLOGY",
+      26
+     ],
+     [
+      "GENERAL SURGERY",
+      25
+     ],
+     [
+      "ORTHOPEDIC SURGERY",
+      24
+     ],
+     [
+      "NEPHROLOGY",
+      22
+     ],
+     [
+      "OPHTHALMOLOGY",
+      18
+     ],
+     [
+      "PSYCHIATRY",
+      14
+     ],
+     [
+      "",
+      13
+     ],
+     [
+      "DERMATOLOGY",
+      13
+     ]
+    ],
+    "bh_specialty_values": [
+     "LICENSED PROFESSIONAL COUNSELOR",
+     "SOCIAL WORKER",
+     "PHYSICAL THERAPY",
+     "PSYCHIATRY",
+     "OCCUPATIONAL THERAPIST",
+     "PSYCHOLOGY",
+     "LICENSED MARRIAGE AND FAMILY THERAPIST",
+     "CHILD AND ADOLESCENT PSYCHIATRY",
+     "LICENSED ALCOHOL AND DRUG COUNSELOR",
+     "BEHAVIORAL ANALYST",
+     "ADDICTION MEDICINE",
+     "OCCUPATIONAL THERAPY ASSISTANT",
+     "PHYSICAL THERAPY ASSISTANT",
+     "GERIATRIC PSYCHIATRY",
+     "ADDICTION PSYCHIATRY"
+    ],
+    "accepting_values": {
+     "accepting": 1000
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "9185879471",
+      27
+     ],
+     [
+      "9186194400",
+      20
+     ],
+     [
+      "9183550993",
+      14
+     ],
+     [
+      "9185920999",
+      11
+     ],
+     [
+      "9182164999",
+      10
+     ],
+     [
+      "9184913700",
+      9
+     ],
+     [
+      "9187125000",
+      8
+     ],
+     [
+      "4056083800",
+      7
+     ]
+    ]
+   }
+  }
+ ]
+}

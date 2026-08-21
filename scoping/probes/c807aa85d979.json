@@ -1,0 +1,197 @@
+{
+ "index_url": "https://static.mending.com/json/cms-data-index.json",
+ "states": [
+  "OK"
+ ],
+ "issuer_ids": [
+  "58944"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://static.mending.com/json/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3784,
+    "analyzed": 1000,
+    "field_presence": {
+     "name": 1000,
+     "npi": 1000,
+     "prefix": 1000,
+     "suffix": 1000,
+     "type": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "gender": 1000,
+     "languages": 1000,
+     "plans": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 125,
+    "unique_specialties": 94,
+    "top_specialties": [
+     [
+      "Radiology",
+      205
+     ],
+     [
+      "Anesthesiology",
+      160
+     ],
+     [
+      "Direct Primary Care",
+      150
+     ],
+     [
+      "Nurse Practitioner, Family",
+      45
+     ],
+     [
+      "Family Medicine",
+      42
+     ],
+     [
+      "Physician Assistant",
+      33
+     ],
+     [
+      "Pathology",
+      29
+     ],
+     [
+      "Physical Therapist",
+      24
+     ],
+     [
+      "Internal Medicine",
+      21
+     ],
+     [
+      "Behavioral health",
+      20
+     ],
+     [
+      "Nurse Practitioner",
+      20
+     ],
+     [
+      "Counselor, Professional",
+      17
+     ],
+     [
+      "Speech-Language Pathologist",
+      14
+     ],
+     [
+      "Internal Medicine, Cardiovascular Disease",
+      11
+     ],
+     [
+      "Social Worker, Clinical",
+      10
+     ],
+     [
+      "Pediatrics",
+      10
+     ],
+     [
+      "Emergency Medicine",
+      9
+     ],
+     [
+      "Nurse Anesthetist, Certified Registered",
+      9
+     ],
+     [
+      "Behavioral Health and Social Services",
+      8
+     ],
+     [
+      "Counselor, Mental Health",
+      8
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapist",
+     "Behavioral health",
+     "Counselor, Professional",
+     "Social Worker, Clinical",
+     "Behavioral Health and Social Services",
+     "Counselor, Mental Health",
+     "Occupational Therapist",
+     "Social Worker",
+     "Counselor",
+     "Psychiatry & Neurology, Psychiatry",
+     "Marriage & Family Therapist",
+     "Mental Health",
+     "Behavior Analyst",
+     "Nurse Practitioner, Psychiatric/Mental Health",
+     "Psychiatry & Neurology, Neurology",
+     "Speech Therapy",
+     "Psychiatry",
+     "Behavior Technician",
+     "Clinical Neuropsychologist",
+     "Psychologist, Counseling",
+     "Psychiatry & Neurology, Child & Adolescent Psychiatry",
+     "Psychologist, Clinical Child & Adolescent",
+     "Psychologist, Clinical",
+     "Occupational Therapist, Pediatrics",
+     "Psychologist, Health Service"
+    ],
+    "accepting_values": {
+     "not accepting": 150,
+     "accepting": 850
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 25,
+    "top_dup_phones": [
+     [
+      "2076620111",
+      255
+     ],
+     [
+      "2079737000",
+      37
+     ],
+     [
+      "2072837000",
+      32
+     ],
+     [
+      "4056083800",
+      31
+     ],
+     [
+      "2078793000",
+      30
+     ],
+     [
+      "4056326688",
+      26
+     ],
+     [
+      "2079218000",
+      22
+     ],
+     [
+      "2077780482",
+      22
+     ]
+    ]
+   }
+  }
+ ]
+}

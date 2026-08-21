@@ -1,0 +1,5326 @@
+{
+ "fetched_at": "2026-08-21T05:04:26.254Z",
+ "source_url": "https://www.medica.com/mrf/output/MO2/Group/Providers1.json",
+ "phones_top_record": {
+  "6469417645": 352
+ },
+ "top": [
+  {
+   "addresses": [
+    {
+     "zip": "63367",
+     "address": "100 Centre On The Lk",
+     "city": "Lake St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63005",
+     "address": "100 Chesterfield Business Pkwy Ste 204",
+     "city": "Chesterfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64850",
+     "address": "100 E Spring St",
+     "city": "Neosho",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63367",
+     "address": "100 Medical Plz",
+     "city": "Lake St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63367",
+     "address": "1000 Edgewater Pt Ste 401",
+     "city": "Lake St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "1000 W Nifong Blvd Ste 210",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63368",
+     "address": "1001 Brdwlk Spgs Pl Ste 111",
+     "city": "O Fallon",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63552",
+     "address": "1003 S Missouri St Ste B",
+     "city": "Macon",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63137",
+     "address": "10043 Coburg Lands Dr",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65240",
+     "address": "101 S Collier St",
+     "city": "Centralia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63123",
+     "address": "10205 Gravois Rd Ste G",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "1034 S Brentwood Blvd Ste 1250",
+     "city": "Richmond Heights",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "1034 S Brentwood Blvd Ste 555",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "1034 S Brentwood Blvd Ste 660",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63146",
+     "address": "10379 Gosport Dr",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "1047 S Big Bend Blvd Ste 206",
+     "city": "Richmond Heights",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63501",
+     "address": "105 Pfeiffer Ave",
+     "city": "Kirksville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64701",
+     "address": "105 W Wall St",
+     "city": "Harrisonville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65806",
+     "address": "1050 E Walnut St",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64153",
+     "address": "10502 N Ambassador Dr Ste 230",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "1053 Cave Springs Rd Ste 203",
+     "city": "St. Peters",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63303",
+     "address": "1060 Country Club Rd",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63131",
+     "address": "13418 Clayton Rd",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1350 E Bradford Pkwy",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63301",
+     "address": "1360 S 5th St",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63301",
+     "address": "1360 S 5th St Ste 392",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63011",
+     "address": "13975 Manchester Rd Ste 2",
+     "city": "Manchester",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63011",
+     "address": "13975 Manchester Rd Ste 3",
+     "city": "Manchester",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63011",
+     "address": "13975 Manchester Rd Ste 7",
+     "city": "Ballwin",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "140 Prospect Ave",
+     "city": "Kirkwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64029",
+     "address": "1406 Sw Eagles Pkwy",
+     "city": "Grain Valley",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64118",
+     "address": "1420 Nw Vivion Rd Ste 108",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63107",
+     "address": "1428 Salisbury St",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63103",
+     "address": "1430 Washington Ave Ste 225",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63135",
+     "address": "1433 Stein Rd",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65202",
+     "address": "1512 W Business Loop 70 Ste C",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64470",
+     "address": "1528 Childers Dr",
+     "city": "Mound City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1531 E Sunshine St Ste W29",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "107 Sw Market St Ste D",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64105",
+     "address": "107 W 9th St Fl 2",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "108 N Clay Ave Ste 200",
+     "city": "Kirkwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64085",
+     "address": "108 W N Main St",
+     "city": "Richmond",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64648",
+     "address": "1091 State Hwy U",
+     "city": "Jamesport",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63146",
+     "address": "10922 Schuetz Rd",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64093",
+     "address": "110 N Marr Dr",
+     "city": "Warrensburg",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "1100 Saint Peters Centre Blvd",
+     "city": "St. Peters",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63146",
+     "address": "111 W Port Plz",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "11106 Olive Blvd",
+     "city": "Creve Coeur",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63123",
+     "address": "11140 S Towne Sq Ste 200",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65270",
+     "address": "1115 Lowry Ct",
+     "city": "Moberly",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63552",
+     "address": "1119 S Missouri St Ste C",
+     "city": "Macon",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63367",
+     "address": "112 Centre On The Lk",
+     "city": "Lake St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "112 W Jefferson Ave Ste 130",
+     "city": "Kirkwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63123",
+     "address": "11222 Tesson Ferry Rd Ste 200",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63755",
+     "address": "113 W Main St Ste 8",
+     "city": "Jackson",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64155",
+     "address": "11319 N Holly St",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64015",
+     "address": "1133 W Main St Ste 105",
+     "city": "Blue Springs",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63366",
+     "address": "1137 N Main St",
+     "city": "O Fallon",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63366",
+     "address": "1137 N Main St Ste 2",
+     "city": "O Fallon",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65806",
+     "address": "1147 E Walnut St",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63044",
+     "address": "11558 Saint Charles Rock Rd",
+     "city": "Bridgeton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63501",
+     "address": "117 E Washington St",
+     "city": "Kirksville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63028",
+     "address": "1170a E Gannon Dr",
+     "city": "Festus",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65583",
+     "address": "119 Ichord Ave",
+     "city": "Waynesville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64118",
+     "address": "119 Ne 72nd St",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63146",
+     "address": "11960 Westline Industrial Dr Ste 265",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "120 S Central Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1200 E Woodhurst Dr",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "1201 Nw Briarcliff Pkwy",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65775",
+     "address": "1211 Porter Wagoner Blvd Ste 23",
+     "city": "W Plains",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "12166 Old Big Bend Rd Ste 315",
+     "city": "Kirkwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63401",
+     "address": "1221 Broadway",
+     "city": "Hannibal",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65041",
+     "address": "123 Bavarian Hills Plz",
+     "city": "Hermann",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63044",
+     "address": "12303 De Paul Dr",
+     "city": "Bridgeton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "220 W Argonne Dr Ste 200",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "2200 E Sunshine St Ste 214",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65109",
+     "address": "2208 Missouri Blvd Ste 102",
+     "city": "Jefferson City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "222 S Meramec Ave Ste 202",
+     "city": "Clayton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64114",
+     "address": "222 W Gregory Blvd Ste 319",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63028",
+     "address": "223 Main St Ste  B",
+     "city": "Festus",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63118",
+     "address": "2235 Lynch St",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "2240 Se Blue Pkwy",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65301",
+     "address": "231 S Ohio Ave Ste A",
+     "city": "Sedalia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "1534 Burlington St",
+     "city": "N Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63011",
+     "address": "15480 Clayton Rd Ste 101",
+     "city": "Ballwin",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63119",
+     "address": "16 N Gore Ave Ste 202",
+     "city": "Webster Groves",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64772",
+     "address": "1601 W Hickory St",
+     "city": "Nevada",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63010",
+     "address": "161 Arnold Crossroads Ctr",
+     "city": "Arnold",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64136",
+     "address": "16201 E 48th Ter",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65401",
+     "address": "16202 Private Drive 8434",
+     "city": "Rolla",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65270",
+     "address": "1624 Gratz Brown St",
+     "city": "Moberly",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1630 S Enterprise Ave",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1638 E Republic Rd",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65079",
+     "address": "17019 N State Hwy 5",
+     "city": "Sunrise Beach",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65202",
+     "address": "1705 N Stadium Blvd",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65202",
+     "address": "1705 N Stadium Blvd Ste D",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1722 S Glenstone Ave Ste H",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1722 S Glenstone Ave Ste Nn",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1722 S Glenstone Ave Ste W",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65807",
+     "address": "1735 W Bennett St Apt A107",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1736 E Sunshine St Ste 517",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1736 E Sunshine St Ste 709",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63026",
+     "address": "1736 W Park Ctr Dr Ste 100",
+     "city": "Fenton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63144",
+     "address": "1750 S Brentwood Blvd Ste 302",
+     "city": "Brentwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64057",
+     "address": "17844 E 23rd St S",
+     "city": "Independence",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65616",
+     "address": "1790 Bee Creek Rd",
+     "city": "Branson",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64068",
+     "address": "19 N Water St Ste 1",
+     "city": "Liberty",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65202",
+     "address": "1900 N Providence Rd Ste 305",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1902 E Battlefield Rd",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65109",
+     "address": "1905 Stadium Blvd",
+     "city": "Jefferson City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1907 S Stewart Ave Ste H",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63701",
+     "address": "1918 N Kingshwy St Ste 102",
+     "city": "Cape Girardeau",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63701",
+     "address": "1930 Broadway St",
+     "city": "Cape Girardeau",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63701",
+     "address": "1930 Broadway St Ste B",
+     "city": "Cape Girardeau",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1936 E Sunshine St Ste B",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1944 E Sunshine St Ste D",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65233",
+     "address": "19900 Rocheport Rd",
+     "city": "Boonville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "20 S Sarah St",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64050",
+     "address": "124 S Main St",
+     "city": "Independence",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64055",
+     "address": "12401 E 43rd St S",
+     "city": "Independence",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64055",
+     "address": "12401 E 43rd St S Ste 121",
+     "city": "Independence",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64055",
+     "address": "12401 E 43rd St S Ste 221",
+     "city": "Independence",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63020",
+     "address": "12601 State Route 21",
+     "city": "De Soto",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64030",
+     "address": "12612 3rd St",
+     "city": "Grandview",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "12747 Olive Blvd Ste 300",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "1284 Jungermann Rd",
+     "city": "St. Peters",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63366",
+     "address": "1297 Bryan Rd",
+     "city": "O Fallon",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "130 S Bemiston Ave Ste 710",
+     "city": "Clayton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64068",
+     "address": "130 Westwoods Dr",
+     "city": "Liberty",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1300 E Bradford Pkwy",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64105",
+     "address": "1301 Woodswether Rd",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63128",
+     "address": "13023 Tesson Ferry Rd",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65109",
+     "address": "1303 Edgewood Dr",
+     "city": "Jefferson City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64034",
+     "address": "1305 W Main St",
+     "city": "Greenwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64118",
+     "address": "1310 Nw Vivion Rd Ste 105",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64468",
+     "address": "1315 S Main St Ste C",
+     "city": "Maryville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65807",
+     "address": "1325 W Sunshine St",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65802",
+     "address": "1330 E Cherry St Ste 106",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64064",
+     "address": "3720 Ne Troon Dr",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63501",
+     "address": "23153 State Hwy H",
+     "city": "Kirksville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65536",
+     "address": "23604 Red Oak Dr",
+     "city": "Lebanon",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64505",
+     "address": "2405 Green Valley Rd",
+     "city": "St. Joseph",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "2456 E Madrid Ave",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63303",
+     "address": "2480 Executive Dr Ste 200",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63104",
+     "address": "2526 S 12th St",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63368",
+     "address": "2528 Hwy K Ste 204c",
+     "city": "O Fallon",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63135",
+     "address": "258 S Florissant Rd",
+     "city": "Ferguson",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64119",
+     "address": "2601 Ne Kendallwood Pkwy Ste 204",
+     "city": "Gladstone",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65251",
+     "address": "2606 N Bluff St Ste 102a",
+     "city": "Fulton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63303",
+     "address": "2623 Muegge Rd",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "2705 Saint Peters Howell Rd",
+     "city": "O Fallon",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "2705 Saint Peters Howell Rd Ste C",
+     "city": "St. Peters",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63367",
+     "address": "273 Ancient Elms Ct",
+     "city": "Lake St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63303",
+     "address": "2730 S Saint Peters Pkwy Ste 106",
+     "city": "St. Peters",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64068",
+     "address": "28 Westwoods Dr Ste 106",
+     "city": "Liberty",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64068",
+     "address": "28 Westwoods Dr Ste 109",
+     "city": "Liberty",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65738",
+     "address": "281 Us Hwy 60 W",
+     "city": "Republic",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65738",
+     "address": "283 Us Hwy 60 W",
+     "city": "Republic",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63118",
+     "address": "2838 S Grand Blvd",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63703",
+     "address": "2846 Professional Ct",
+     "city": "Cape Girardeau",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63136",
+     "address": "2870 Netherton Dr",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65775",
+     "address": "2900 Independence Sq",
+     "city": "W Plains",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63103",
+     "address": "2900 Washington Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63118",
+     "address": "2929 S Jefferson Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65742",
+     "address": "299 Regal Dr",
+     "city": "Rogersville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63301",
+     "address": "300 1st Capitol Dr",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63124",
+     "address": "300 Hunter Ave Ste 110",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64772",
+     "address": "300 W Cherry St",
+     "city": "Nevada",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64119",
+     "address": "3000 Ne Brooktree Ln Ste 230",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64701",
+     "address": "3001 N State Route 291 Ste 2",
+     "city": "Harrisonville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65802",
+     "address": "3003 E Chestnut Expy",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64804",
+     "address": "3010 Mc Clelland Blvd",
+     "city": "Joplin",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "3022 S National Ave",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "303 N Stadium Blvd Ste  202",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "303 N Stadium Blvd Ste 200",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65711",
+     "address": "200 N Main St Ste P",
+     "city": "Mountain Grove",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64086",
+     "address": "200 Ne Missouri Rd Ste 200",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64086",
+     "address": "200 Ne Missouri Rd Ste 268",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65201",
+     "address": "200 Old 63 S",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64501",
+     "address": "200 S 8th St",
+     "city": "St. Joseph",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "200 S Bemiston Ave Ste 306",
+     "city": "Clayton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "200 S Bemiston Ave Ste 312",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "200 Se Eastridge St Ste A",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65605",
+     "address": "201 S Jefferson Ave",
+     "city": "Aurora",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "201 W Broadway Ste 2f",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65775",
+     "address": "203 E Main St",
+     "city": "W Plains",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65775",
+     "address": "205 E Main St",
+     "city": "W Plains",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63146",
+     "address": "2055 Craigshire Dr Ste 370",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63303",
+     "address": "2085 Bluestone Dr Ste 201",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "210 Nikki Way",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65201",
+     "address": "2100 E Broadway",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65201",
+     "address": "2100 E Broadway Ste 102",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65809",
+     "address": "2121 S Blackman Rd",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63544",
+     "address": "213 Lincoln St",
+     "city": "Green Castle",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63090",
+     "address": "214 Elm St Ste 203",
+     "city": "Washington",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63090",
+     "address": "214 Elm St Ste 207",
+     "city": "Washington",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "214 N Clay Ave",
+     "city": "Kirkwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "214 N Clay Ave Ste 215",
+     "city": "Kirkwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64850",
+     "address": "214 N Washington St",
+     "city": "Neosho",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65809",
+     "address": "2149 S Cedar Hill Ave",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65803",
+     "address": "219 W Commercial St Ste 104",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "220 W Argonne Dr",
+     "city": "Kirkwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65806",
+     "address": "401 W Mcdaniel St",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "404 S Clay Ave Ste 204",
+     "city": "Kirkwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64111",
+     "address": "4049 Central St",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64111",
+     "address": "4049 Pennsylvania Ave Ste 203",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64111",
+     "address": "406 W 34th St Ste 405",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65049",
+     "address": "409 Alt Rte Us Hwy 54",
+     "city": "Lake Ozark",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63110",
+     "address": "4220 Duncan Ave Ste 201",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63123",
+     "address": "4225 Bayless Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "4249 N Saint Peters Pkwy Ste B",
+     "city": "St. Peters",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "439 S Kirkwood Rd Ste 208",
+     "city": "Kirkwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65806",
+     "address": "440 S Market Ave",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64119",
+     "address": "4401 Ne Vivion Rd Ste 204",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63116",
+     "address": "4401 Ridgewood Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "4444 N Belleview Ave Ste 210",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "449 N Euclid Ave Ste 300",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65052",
+     "address": "449 Y 40 R",
+     "city": "Linn Creek",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63084",
+     "address": "45 Saint Andrews Dr",
+     "city": "Union",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "4501 Troost Ave",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64057",
+     "address": "4505 Little Blue Pkwy",
+     "city": "Independence",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4625 Lindell Blvd Ste 200",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "4650 Mexico Rd",
+     "city": "St. Peters",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65810",
+     "address": "4707 S Forest Ave",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63115",
+     "address": "4943 Terry Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63385",
+     "address": "5 W Pearce Blvd",
+     "city": "Wentzville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63126",
+     "address": "50 Crestwood Executive Ctr",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "500 Huber Park Ct Ste 103",
+     "city": "Weldon Spring",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64855",
+     "address": "500 N Grant St",
+     "city": "Oronogo",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63019",
+     "address": "508 N Truman Blvd Ste H",
+     "city": "Crystal City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64105",
+     "address": "512 Delaware St Ste 135",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64801",
+     "address": "305 S Virginia Ave",
+     "city": "Joplin",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64759",
+     "address": "307 W 11th St",
+     "city": "Lamar",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64109",
+     "address": "3130 Troost Ave Ste 202",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63042",
+     "address": "320 Brookes Dr",
+     "city": "Hazelwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63042",
+     "address": "320 Brookes Dr Ste 223a",
+     "city": "Hazelwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63026",
+     "address": "320 Gravois Rd",
+     "city": "Fenton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64772",
+     "address": "320 Mac Blvd",
+     "city": "Nevada",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63103",
+     "address": "3200 Chouteau Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64109",
+     "address": "3216 Gillham Plz",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64109",
+     "address": "3216 Gillham Plz Ste 210",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "3228 Ivanhoe Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "3232 Ivanhoe Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64108",
+     "address": "325 E 31st St Ste 25",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "325 N Kirkwood Rd Ste 102",
+     "city": "Kirkwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65806",
+     "address": "325 S Ave",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "3250 Hampton Ave Ste 200a",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "3259 E Sunshine St Ste L",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "3284 Ivanhoe Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63301",
+     "address": "3324 Rue Royale St",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "332a Jungermann Rd",
+     "city": "St. Peters",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63555",
+     "address": "334 Green St",
+     "city": "Memphis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65807",
+     "address": "3433 S Campbell Ave Ste P",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "3460 Hampton Ave Ste 106",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "3460 Hampton Ave Ste 204",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63044",
+     "address": "3482 Hollenberg Dr",
+     "city": "Bridgeton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64506",
+     "address": "3500 N Village Dr Ste 264",
+     "city": "St. Joseph",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "3520 S Culpepper Cir",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63119",
+     "address": "36 Kirkham Industrial Dr Ste 100",
+     "city": "Webster Groves",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63010",
+     "address": "3601 San Simeon Commerce Dr",
+     "city": "Arnold",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64111",
+     "address": "3619 Broadway Blvd",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64111",
+     "address": "3619 Broadway Blvd Ste 4",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64055",
+     "address": "3622 E Noland Ct",
+     "city": "Independence",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65809",
+     "address": "3628 E Stanford St",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63033",
+     "address": "3633 Marietta Dr",
+     "city": "Florissant",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63121",
+     "address": "3641 Oakdale Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65806",
+     "address": "800 E Walnut St",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64014",
+     "address": "801 Nw Saint Mary Dr Ste 206",
+     "city": "Blue Springs",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65648",
+     "address": "8050 N Farm Road 189",
+     "city": "Fair Grove",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63755",
+     "address": "810 E Jackson Blvd Ste B1",
+     "city": "Jackson",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64114",
+     "address": "8301 State Line Rd Ste 202",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64118",
+     "address": "8320 N Oak Trfy Ste 208",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64152",
+     "address": "8341 Nw Mace Rd Ste 120",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64151",
+     "address": "8350 N Saint Clair Ave Ste 275",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65584",
+     "address": "839 Vfw Memorial Dr Ste 4",
+     "city": "St. Robert",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64133",
+     "address": "8401 E Blue Pkwy Ste 205",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64153",
+     "address": "8450 Nw Prairie View Rd",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "851 Nw 45th St Ste 104",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63123",
+     "address": "87 Grasso Plz Ste  325",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63144",
+     "address": "8949 Manchester Rd",
+     "city": "Brentwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64068",
+     "address": "9 Victory Dr Ste 1a",
+     "city": "Liberty",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64015",
+     "address": "901 W Main St",
+     "city": "Blue Springs",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63101",
+     "address": "906 Olive St Ste 200",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65613",
+     "address": "910 E San Martin St",
+     "city": "Bolivar",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64156",
+     "address": "9111 N Cleveland Ave",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63011",
+     "address": "930 Kehrs Mill Rd Ste 322",
+     "city": "Ballwin",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63011",
+     "address": "930 Kehrs Mill Rd Ste 325",
+     "city": "Ballwin",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "529 Se 2nd St Ste C",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64801",
+     "address": "5290 E 7th St",
+     "city": "Joplin",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63040",
+     "address": "530 Beacon Point Ln",
+     "city": "Wildwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "530 Doss St",
+     "city": "Farmington",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64804",
+     "address": "5399 Hwy 43",
+     "city": "Joplin",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63112",
+     "address": "5621 Delmar Blvd Ste 106",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65065",
+     "address": "5780 Osage Beach Pkwy Ste 205b",
+     "city": "Osage Beach",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64130",
+     "address": "5934 Prospect Ave",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "600 Sw Jefferson St",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "601 E 63rd St Ste 340",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "601 N Washington St",
+     "city": "Farmington",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63301",
+     "address": "608 Jefferson St",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "6083 Hartford St",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63136",
+     "address": "6085 W Florissant Ave Ste 4",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63134",
+     "address": "6121 N Hanley Rd",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65802",
+     "address": "614 S Pickwick Ave",
+     "city": "Springfield",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "616 E 63rd St Ste 106",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "616 E 63rd St Ste 204",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63301",
+     "address": "621 S 5th St",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63701",
+     "address": "628 County Road 327",
+     "city": "Cape Girardeau",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64151",
+     "address": "6300 N Revere Dr Ste 255",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "633 E 63rd St",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65742",
+     "address": "6544 E County Line Rd",
+     "city": "Rogersville",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "672 Se Bayberry Ln Ste 101",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63143",
+     "address": "6780 Southw Ave Ste 2a",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "684 Se Bayberry Ln Ste 103",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64118",
+     "address": "7001 N Locust St Ste C203",
+     "city": "Gladstone",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64015",
+     "address": "710 W Main St Ste F",
+     "city": "Blue Springs",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64015",
+     "address": "710 W Main St Ste H",
+     "city": "Blue Springs",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65721",
+     "address": "716 N 22nd St Ste 109",
+     "city": "Ozark",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65721",
+     "address": "716 N 22nd St Ste 115",
+     "city": "Ozark",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65101",
+     "address": "718 W Mccarty St",
+     "city": "Jefferson Cty",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63143",
+     "address": "7200 Manchester Rd",
+     "city": "Maplewood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63119",
+     "address": "7259 Lansdowne Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64153",
+     "address": "7280 Nw 87th Ter Ste C210",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63143",
+     "address": "7310 Manchester Rd",
+     "city": "Maplewood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63044",
+     "address": "3751 Pennridge Dr Ste 119",
+     "city": "Bridgeton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64064",
+     "address": "3805 Ne Ellison Dr",
+     "city": "Lees Summit",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "3910 S Old Hwy 94 Ste 112",
+     "city": "St. Charles",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65721",
+     "address": "3989 N 20th St",
+     "city": "Ozark",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63841",
+     "address": "4 Vine St",
+     "city": "Dexter",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "400 N Washington St Ste 130a",
+     "city": "Farmington",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "401 W Blvd N Ste D",
+     "city": "Columbia",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "933 Gardenview Office Pkwy",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63136",
+     "address": "9420 W Florissant Ave",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "65256",
+     "address": "9501 W Coyote Hill Rd",
+     "city": "Harrisburg",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64157",
+     "address": "9614 N Oxford Ct",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd Ste 370",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd Ste 510",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63143",
+     "address": "7346 Manchester Rd",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63042",
+     "address": "737 Dunn Rd",
+     "city": "Hazelwood",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63123",
+     "address": "74 Grasso Plz",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "745 Craig Rd Ste 214",
+     "city": "Creve Coeur",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "745 Craig Rd Ste 305",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "751 E 63rd St Ste 212",
+     "city": "Kansas City",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63368",
+     "address": "760 Falcon Hill Trl",
+     "city": "O Fallon",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "764 Weber Rd",
+     "city": "Farmington",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "765 Weber Rd",
+     "city": "Farmington",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "770 Market St Ste 90",
+     "city": "Farmington",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "7710 Carondelet Ave Ste 347",
+     "city": "Clayton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "7733 Forsyth Blvd Fl 11",
+     "city": "Clayton",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "7750 Clayton Rd Ste 204",
+     "city": "St. Louis",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "777 Craig Rd Ste 200",
+     "city": "Creve Coeur",
+     "phone": "6469417645",
+     "state": "MO"
+    },
+    {
+     "zip": "63017",
+     "address": "78 Clarkson Wilson Ctr",
+     "city": "Chesterfield",
+     "phone": "6469417645",
+     "state": "MO"
+    }
+   ],
+   "group_name": "Great Lakes Behavioral Health Services PC",
+   "npi": "1639916349",
+   "plans": [
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010015",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010016",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010022",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010021",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010023",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010019",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010020",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010017",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010024",
+     "years": [
+      2026
+     ]
+    }
+   ],
+   "last_updated_on": "2026-08-01",
+   "type": "GROUP"
+  },
+  {
+   "addresses": [
+    {
+     "zip": "63119",
+     "address": "425 Marshall Ave",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "4444 N Belleview Ave",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "4444 N Belleview Ave Ste 210",
+     "city": "N Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63084",
+     "address": "45 Saint Andrews Dr",
+     "city": "Union",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62226",
+     "address": "4509 N Illinois St",
+     "city": "Swansea",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "64112",
+     "address": "4608 Bell St",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4625 Lindell Blvd Ste 200",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4625 Lindell Blvd Ste 200-300",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4625 Lindell Blvd Ste 300",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "2026 S Big Bend Blvd",
+     "city": "Richmond Heights",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63031",
+     "address": "203 Dunn Rd",
+     "city": "Florissant",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65775",
+     "address": "205 E Main St",
+     "city": "W Plains",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63146",
+     "address": "2055 Craigshire Rd Ste 120",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64772",
+     "address": "210 S Elm St",
+     "city": "Nevada",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "2117 S Stewart Ave",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65809",
+     "address": "2121 S Blackman Rd",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62034",
+     "address": "22 Jennifer Dr",
+     "city": "Glen Carbon",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "65804",
+     "address": "2200 E Sunshine St Ste 110",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "222 S Meramec Ave Ste 202",
+     "city": "Clayton",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "222 S Meramec Ave Ste 303",
+     "city": "Clayton",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62034",
+     "address": "2220 S State Route 157 Ste 200f",
+     "city": "Glen Carbon",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "63105",
+     "address": "225 S Meramec Ave Ste 216",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63775",
+     "address": "23 S Jackson St",
+     "city": "Perryville",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "2401 Bernadette Dr",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65251",
+     "address": "2606 N Bluff St Ste 102a",
+     "city": "Fulton",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64068",
+     "address": "28 Westwoods Dr Ste 109",
+     "city": "Liberty",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "2804 Forum Blvd",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65738",
+     "address": "283 Us Hwy 60 W",
+     "city": "Republic",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63118",
+     "address": "2838 S Grand Blvd",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63136",
+     "address": "2870 Netherton Dr",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65802",
+     "address": "3003 E Chestnut Expy Ste 800",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64804",
+     "address": "3714 Wind Cliff Ln",
+     "city": "Joplin",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64064",
+     "address": "3720 Ne Troon Dr",
+     "city": "Lees Summit",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63303",
+     "address": "1060 Country Club Rd Ste 101",
+     "city": "St. Charles",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63366",
+     "address": "1074 Bryan Rd",
+     "city": "O Fallon",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63127",
+     "address": "10820 Sunset Office Dr Ste 204",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64015",
+     "address": "1114 W Main St",
+     "city": "Blue Springs",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63366",
+     "address": "1137 N Main St",
+     "city": "O Fallon",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64114",
+     "address": "1150 W 81st St Ste 200",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63044",
+     "address": "11558 Saint Charles Rock Rd",
+     "city": "Bridgeton",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63028",
+     "address": "1170a E Gannon Dr",
+     "city": "Festus",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "12166 Old Big Bend Rd Ste 315",
+     "city": "Kirkwood",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64055",
+     "address": "12401 E 43rd St S Ste 221",
+     "city": "Independence",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64093",
+     "address": "125 N Holden St Ste I",
+     "city": "Warrensburg",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1320 E Kingsley St Ste A",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65802",
+     "address": "1330 E Cherry St Ste 209",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65802",
+     "address": "1330 E Cherry St Ste 213",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63301",
+     "address": "1360 S 5th St Ste 392",
+     "city": "St. Charles",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "140 Prospect Ave Ste A",
+     "city": "Kirkwood",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63103",
+     "address": "1430 Washington Ave Ste 231",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1446 E Bradford Pkwy Ste E",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "1480 Woodstone Dr Ste 115",
+     "city": "St. Charles",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65202",
+     "address": "1512 W Business Loop 70 Ste C",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63011",
+     "address": "15620 Manchester Rd Ste 5",
+     "city": "Ellisville",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63901",
+     "address": "1600 W Maud St Ste 2",
+     "city": "Poplar Bluff",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63010",
+     "address": "161 Arnold Crossroads Ctr",
+     "city": "Arnold",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1630 S Enterprise Ave",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "168 N Meramec Ave Ste 150",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "1711 Icon Way",
+     "city": "Farmington",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1722 S Glenstone Ave Ste W108",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1736 E Sunshine St Ste 811",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1771 S Fremont Ave",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63118",
+     "address": "1902 Arsenal St Ste 220",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1944 E Sunshine St Ste D",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65711",
+     "address": "200 N Main St Ste P",
+     "city": "Mountain Grove",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64086",
+     "address": "200 Ne Missouri Rd Ste 268",
+     "city": "Lees Summit",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65201",
+     "address": "200 Old 63 S Ste 201",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "200 S Bemiston Ave Ste 310",
+     "city": "Clayton",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62002",
+     "address": "200 W 3rd St Ste 410",
+     "city": "Alton",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "63117",
+     "address": "2016 S Big Bend Blvd",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65301",
+     "address": "202 W 4th St",
+     "city": "Sedalia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "2024 Cherry Hill Dr Ste 201m",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63044",
+     "address": "3751 Pennridge Dr Ste 119",
+     "city": "Bridgeton",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63010",
+     "address": "3838 Jeffco Blvd Ste 8",
+     "city": "Arnold",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "3900 S Old Hwy 94 Ste 6",
+     "city": "St. Charles",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "3910 S Old Hwy 94 Ste 121",
+     "city": "St. Charles",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "3918 Charlotte St",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63841",
+     "address": "4 Vine St",
+     "city": "Dexter",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64131",
+     "address": "400 E Red Bridge Rd Ste 304",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65201",
+     "address": "401 N Keene St",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "401 W Blvd N",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63156",
+     "address": "4021 Laclede Ave",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "408 Caroline Ave",
+     "city": "Kirkwood",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63110",
+     "address": "4103 Shenandoah Ave",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "410b Se 3rd St Ste 101",
+     "city": "Lees Summit",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4144 Lindell Blvd Ste 140",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63129",
+     "address": "4171 Crescent Dr Ste 202",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64068",
+     "address": "10 Westowne St",
+     "city": "Liberty",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63367",
+     "address": "100 Centre On The Lk",
+     "city": "Lake St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63368",
+     "address": "1001 Boardwalk Springs Pl Ste 111",
+     "city": "O Fallon",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63104",
+     "address": "1015 S Compton Ave",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65583",
+     "address": "102 Jonathan Carter St",
+     "city": "Waynesville",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63123",
+     "address": "10205 Gravois Rd Ste G",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64083",
+     "address": "103 S Jefferson St",
+     "city": "Raymore",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65401",
+     "address": "1030 Kingshwy St Ste A",
+     "city": "Rolla",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "1034 S Brentwood Blvd Ste 555",
+     "city": "Richmond Heights",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63366",
+     "address": "801 S Woodlawn Ave Ste 28",
+     "city": "O Fallon",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "8011 Clayton Rd Ste 207",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63021",
+     "address": "805 Castle Ridge Ct",
+     "city": "Ballwin",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65584",
+     "address": "839 Vfw Memorial Dr Ste 4",
+     "city": "St. Robert",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62234",
+     "address": "850 Vandalia St Ste 210",
+     "city": "Collinsville",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "64116",
+     "address": "851 Nw 45th St Ste 104",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64068",
+     "address": "9 Victory Dr Ste 1a",
+     "city": "Liberty",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65806",
+     "address": "901 E Saint Louis St Ste 103a",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65613",
+     "address": "910 E San Martin St Ste 2",
+     "city": "Bolivar",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63801",
+     "address": "912 S Kingshwy St",
+     "city": "Sikeston",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64106",
+     "address": "929 Walnut St Ste 5105",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63011",
+     "address": "930 Kehrs Mill Rd Ste 325",
+     "city": "Ballwin",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9378 Olive Blvd Ste 104a",
+     "city": "Olivette",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd Ste 370",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63119",
+     "address": "9804 Manchester Rd Ste B",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62269",
+     "address": "305 Wellesley Dr",
+     "city": "O Fallon",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "65775",
+     "address": "306 Davis Dr Ste 104",
+     "city": "W Plains",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63118",
+     "address": "3109 S Grand Blvd",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65802",
+     "address": "3112 W Grand St",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63118",
+     "address": "3115 S Grand Blvd Ste 400",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64108",
+     "address": "325 E 31st St Ste 30",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "3284 Ivanhoe Ave",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "33 E Broadway Ste 165",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "332a Jungermann Rd",
+     "city": "St. Peters",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63555",
+     "address": "334 Green St",
+     "city": "Memphis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64506",
+     "address": "3500 N Village Dr Ste 264",
+     "city": "St. Joseph",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65201",
+     "address": "3610 Buttonwood Dr",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63116",
+     "address": "3672b Arsenal St",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63010",
+     "address": "3685 W Outer Rd Ste 1",
+     "city": "Arnold",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64870",
+     "address": "37 S Main St",
+     "city": "Webb City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63109",
+     "address": "5106 Hampton Ave Ste 203",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65721",
+     "address": "5240 N Towne Centre Dr Ste 102a",
+     "city": "Ozark",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "529 Se 2nd St Ste C",
+     "city": "Lees Summit",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "5336 Main St",
+     "city": "Cottleville",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64151",
+     "address": "5709 Nw 64th Ter",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "601 E 63rd St Ste 340",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "601 N Washington St",
+     "city": "Farmington",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "668 Se Bayberry Ln Ste 105",
+     "city": "Lees Summit",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63368",
+     "address": "6702 Keaton Corporate Pkwy Ste 1",
+     "city": "O Fallon",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "672 Se Bayberry Ln Ste 101",
+     "city": "Lees Summit",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62269",
+     "address": "7 Eagle Ctr Ste B1",
+     "city": "O Fallon",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "63501",
+     "address": "701 E Laharpe St",
+     "city": "Kirksville",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63501",
+     "address": "705 E Laharpe St Ste C",
+     "city": "Kirksville",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65721",
+     "address": "716 N 22nd St Ste 115",
+     "city": "Ozark",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64153",
+     "address": "7280 Nw 87th Ter Ste 210",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63042",
+     "address": "737 Dunn Rd",
+     "city": "Hazelwood",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "745 Craig Rd Ste 104b",
+     "city": "Creve Coeur",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "745 Craig Rd Ste 301a",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "745 Craig Rd Ste 305",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63368",
+     "address": "760 Falcon Hill Trl",
+     "city": "O Fallon",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "7600 Dale Ave",
+     "city": "Richmond Heights",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "7750 Clayton Rd Ste 112",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "7750 Clayton Rd Ste 300",
+     "city": "Richmond Heights",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63017",
+     "address": "78 Clarkson Wilson Ctr",
+     "city": "Chesterfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64131",
+     "address": "800 E 101st Ter Ste 350",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65806",
+     "address": "800 E Walnut St",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "8000 Bonhomme Ave Ste 102",
+     "city": "Clayton",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "8000 Bonhomme Ave Ste 312",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4625 Lindell Blvd, Ste 200 & 300",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4626 Lindell Blvd Ste 200",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "4650 Mexico Rd",
+     "city": "St. Peters",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62234",
+     "address": "502 W Main St Ste 200",
+     "city": "Collinsville",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "65775",
+     "address": "504 W Main St",
+     "city": "W Plains",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64801",
+     "address": "5065 N Main St",
+     "city": "Joplin",
+     "phone": "3158732936",
+     "state": "MO"
+    }
+   ],
+   "group_name": "OK Alma Community Network",
+   "npi": "1427671437",
+   "plans": [
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010024",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010017",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010020",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010023",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010022",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010021",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010019",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010015",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010016",
+     "years": [
+      2026
+     ]
+    }
+   ],
+   "last_updated_on": "2025-10-14",
+   "type": "GROUP"
+  },
+  {
+   "addresses": [
+    {
+     "zip": "63116",
+     "address": "4401 Ridgewood Ave",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4625 Lindell Blvd Fl 2098",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4625 Lindell Blvd Ste 200",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "4650 Mexico Rd",
+     "city": "St. Peters",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63115",
+     "address": "4943 Terry Ave",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "500 Huber Park Ct Ste 203",
+     "city": "Weldon Spring",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64801",
+     "address": "5290 E 7th St",
+     "city": "Joplin",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "601 E 63rd St Ste  340",
+     "city": "Kansas City",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63134",
+     "address": "6121 N Hanley Rd",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "616 E 63rd St Ste 200a",
+     "city": "Kansas City",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64110",
+     "address": "616 E 63rd St Ste 204",
+     "city": "Kansas City",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63701",
+     "address": "628 County Road 327",
+     "city": "Cape Girardeau",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "672 Se Bayberry Ln Ste 101",
+     "city": "Lees Summit",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64118",
+     "address": "7001 N Locust St Ste C203",
+     "city": "Gladstone",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63136",
+     "address": "2870 Netherton Dr",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64772",
+     "address": "300 W Cherry St",
+     "city": "Nevada",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "3022 S National Ave",
+     "city": "Springfield",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63042",
+     "address": "320 Brookes Dr Ste 223a",
+     "city": "Hazelwood",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64772",
+     "address": "320 Mac Blvd",
+     "city": "Nevada",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65807",
+     "address": "323 E Grand St",
+     "city": "Springfield",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "325 N Kirkwood Rd Ste 102",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "332a Jungermann Rd",
+     "city": "St. Peters",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63376",
+     "address": "332a Jungermann Rd Ste A",
+     "city": "St. Peters",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "3460 Hampton Ave Ste 204",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63044",
+     "address": "3482 Hollenberg Dr",
+     "city": "Bridgeton",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63119",
+     "address": "36 Kirkham Industrial Dr Ste 100",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64064",
+     "address": "3720 Ne Troon Dr",
+     "city": "Lees Summit",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63044",
+     "address": "3751 Pennridge Dr Ste 119",
+     "city": "Bridgeton",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "3910 S Old Hwy 94 Ste 112",
+     "city": "St. Charles",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63841",
+     "address": "4 Vine St",
+     "city": "Dexter",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63368",
+     "address": "4132 Keaton Crossing Blvd Ste 204",
+     "city": "O Fallon",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "764 Weber Rd",
+     "city": "Farmington",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "770 Market St Ste  90",
+     "city": "Farmington",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "7750 Clayton Rd Ste 203",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "7750 Clayton Rd Ste 204",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65802",
+     "address": "800 S Park Ave",
+     "city": "Springfield",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "851 Nw 45th St Ste 104",
+     "city": "Kansas City",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63136",
+     "address": "8835 Lucas And Hunt Rd",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64068",
+     "address": "9 Victory Dr Ste 1a",
+     "city": "Liberty",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65721",
+     "address": "716 N 22nd St Ste 109",
+     "city": "Ozark",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64153",
+     "address": "7280 Nw 87th Ter Ste  C210",
+     "city": "Kansas City",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63042",
+     "address": "737 Dunn Rd",
+     "city": "Hazelwood",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64105",
+     "address": "107 W 9th St Fl 2",
+     "city": "Kansas City",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd Ste 205",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "140 Prospect Ave Ste N",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "140 Prospect Ave Ste S",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64029",
+     "address": "1406 Sw Eagles Pkwy",
+     "city": "Grain Valley",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63103",
+     "address": "1430 Washington Ave Ste 225",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64772",
+     "address": "1601 W Hickory St",
+     "city": "Nevada",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63017",
+     "address": "16091 Swingley Ridge Rd Ste 110",
+     "city": "Chesterfield",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1630 S Enterprise Ave",
+     "city": "Springfield",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1638 E Republic Rd",
+     "city": "Springfield",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64804",
+     "address": "1801 W 32nd St Ste 215",
+     "city": "Joplin",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65109",
+     "address": "1905 Stadium Blvd",
+     "city": "Jefferson City",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "20 S Sarah St",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64501",
+     "address": "200 S 8th St",
+     "city": "St. Joseph",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63105",
+     "address": "200 S Bemiston Ave Ste 312",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63090",
+     "address": "214 Elm St Ste 203",
+     "city": "Washington",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65809",
+     "address": "2149 S Cedar Hill Ave",
+     "city": "Springfield",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65803",
+     "address": "219 W Commercial St Ste 104",
+     "city": "Springfield",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65536",
+     "address": "23604 Red Oak Dr",
+     "city": "Lebanon",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65738",
+     "address": "283 Us Hwy 60 W",
+     "city": "Republic",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63123",
+     "address": "11140 S Towne Sq Ste 200",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63552",
+     "address": "1119 S Missouri St Ste C",
+     "city": "Macon",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63755",
+     "address": "113 W Main St Ste 8",
+     "city": "Jackson",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64155",
+     "address": "11319 N Holly St",
+     "city": "Kansas City",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63366",
+     "address": "1137 N Main St Ste 2",
+     "city": "O Fallon",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "11477 Olde Cabin Rd Ste 210",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63401",
+     "address": "1221 Broadway",
+     "city": "Hannibal",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64055",
+     "address": "12401 E 43rd St S Ste 221",
+     "city": "Independence",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1300 E Bradford Pkwy",
+     "city": "Springfield",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64105",
+     "address": "1301 Woodswether Rd",
+     "city": "Kansas City",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64468",
+     "address": "1315 S Main St Ste C",
+     "city": "Maryville",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63128",
+     "address": "13303 Tesson Ferry Rd Ste 52",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63011",
+     "address": "13975 Manchester Rd Ste 7",
+     "city": "Ballwin",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "140 Prospect Ave Ste G",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "140 Prospect Ave Ste H",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "140 Prospect Ave Ste I",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "140 Prospect Ave Ste L",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64153",
+     "address": "Virtual Visits Only Provider",
+     "city": "Kansas City",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "64850",
+     "address": "100 E Spring St",
+     "city": "Neosho",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63368",
+     "address": "1001 Boardwalk Springs Pl Ste 111",
+     "city": "O Fallon",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "1034 S Brentwood Blvd Ste 555",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63501",
+     "address": "105 Pfeiffer Ave",
+     "city": "Kirksville",
+     "phone": "6464536777",
+     "state": "MO"
+    },
+    {
+     "zip": "63146",
+     "address": "10922 Schuetz Rd",
+     "city": "St. Louis",
+     "phone": "6464536777",
+     "state": "MO"
+    }
+   ],
+   "group_name": "Headway Michigan Behavioral Health Services",
+   "npi": "1790377489",
+   "plans": [
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010023",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010024",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010017",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010020",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010019",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010021",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010022",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010016",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010015",
+     "years": [
+      2026
+     ]
+    }
+   ],
+   "last_updated_on": "2026-08-01",
+   "type": "GROUP"
+  },
+  {
+   "addresses": [
+    {
+     "zip": "63139",
+     "address": "3250 Hampton Ave Ste 200a",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "3284 Ivanhoe Ave",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63139",
+     "address": "3338 Watson Rd",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65714",
+     "address": "4304 Oak Haven Dr",
+     "city": "Nixa",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65806",
+     "address": "431 S Jefferson Ave Ste 106",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "439 S Kirkwood Rd Ste 208",
+     "city": "Kirkwood",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "4444 N Belleview Ave Ste 210",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "4444 N Belleview Ave Ste 211",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "9 Se 3rd St Ste 206",
+     "city": "Lees Summit",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63366",
+     "address": "923 E Terra Ln Ste A",
+     "city": "O Fallon",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65256",
+     "address": "9501 W Coyote Hill Rd",
+     "city": "Harrisburg",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63119",
+     "address": "9804 Manchester Rd Ste B",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65101",
+     "address": "Virtual Visits Only Provider",
+     "city": "Jefferson City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63117",
+     "address": "1034 S Brentwood Blvd Ste 555",
+     "city": "Richmond Heights",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "107 Sw Market St Ste D",
+     "city": "Lees Summit",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63146",
+     "address": "10922 Schuetz Rd",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64118",
+     "address": "119 Ne 72nd St Ste 2",
+     "city": "Gladstone",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62226",
+     "address": "12 Wolf Creek Dr Ste 100",
+     "city": "Swansea",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "63141",
+     "address": "12747 Olive Blvd Ste 300",
+     "city": "Creve Coeur",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64068",
+     "address": "130 Westwoods Dr",
+     "city": "Liberty",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "1480 Woodstone Dr Ste 114",
+     "city": "St. Charles",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63118",
+     "address": "1902 Arsenal St Ste 260",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65201",
+     "address": "200 Old Hwy 63 S Ste 303",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63628",
+     "address": "202 N Division St",
+     "city": "Bonne Terre",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65775",
+     "address": "203 E Main St",
+     "city": "W Plains",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65625",
+     "address": "203 W 7th St",
+     "city": "Cassville",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63146",
+     "address": "2055 Craigshire Dr Ste 370",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64063",
+     "address": "208 Se 3rd St Ste 5",
+     "city": "Lees Summit",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63303",
+     "address": "2085 Bluestone Dr Ste 201",
+     "city": "St. Charles",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62062",
+     "address": "210 W Division St",
+     "city": "Maryville",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "63376",
+     "address": "2705 Saint Peters Howell Rd Ste D",
+     "city": "St. Peters",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4625 Lindell Blvd Ste 200",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4660 Maryland Ave",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65775",
+     "address": "504 W Main St",
+     "city": "W Plains",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63019",
+     "address": "508 N Truman Blvd Ste J",
+     "city": "Crystal City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "520 Huber Park Ct Ste 175",
+     "city": "Weldon Spring",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63109",
+     "address": "5400 Devonshire Ave",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "5500 S Southwood Rd",
+     "city": "Springfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "601 W Nifong Blvd Ste 5a",
+     "city": "Columbia",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64152",
+     "address": "6114 N Hwy 9 Ste B6",
+     "city": "Parkville",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65101",
+     "address": "718 W Mccarty St",
+     "city": "Jefferson City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63017",
+     "address": "78 Clarkson Wilson Ctr",
+     "city": "Chesterfield",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64131",
+     "address": "800 E 101st Ter Ste 350",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64113",
+     "address": "809 Greenway Ter",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "851 Nw 45th St Ste 104",
+     "city": "Kansas City",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "63367",
+     "address": "8654 Orf Rd",
+     "city": "Lake St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "65738",
+     "address": "281 Us Hwy 60 W",
+     "city": "Republic",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "62223",
+     "address": "2900 Frank Scott Pkwy W Ste 972b",
+     "city": "Belleville",
+     "phone": "3158732936",
+     "state": "IL"
+    },
+    {
+     "zip": "63141",
+     "address": "3 The Pines Ct Ste B",
+     "city": "St. Louis",
+     "phone": "3158732936",
+     "state": "MO"
+    },
+    {
+     "zip": "64870",
+     "address": "30 S Main St",
+     "city": "Webb City",
+     "phone": "3158732936",
+     "state": "MO"
+    }
+   ],
+   "group_name": "Alma Community Newtork II LLC",
+   "npi": "1427671437",
+   "plans": [
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010024",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010017",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010020",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010023",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010022",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010021",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010019",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010015",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010016",
+     "years": [
+      2026
+     ]
+    }
+   ],
+   "last_updated_on": "2025-10-14",
+   "type": "GROUP"
+  },
+  {
+   "addresses": [
+    {
+     "zip": "65109",
+     "address": "4100 Country Club Dr",
+     "city": "Jefferson City",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63110",
+     "address": "4240 Duncan Ave",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63116",
+     "address": "4401 Ridgewood Ave",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "64116",
+     "address": "4444 N Belleview Ave Ste 210",
+     "city": "Kansas City",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63136",
+     "address": "8835 Lucas And Hunt Rd",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65613",
+     "address": "910 E San Martin St Ste 2",
+     "city": "Bolivar",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63126",
+     "address": "9109 Watson Rd Ste 130",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "64801",
+     "address": "931 E 4th St Rm 222",
+     "city": "Joplin",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65256",
+     "address": "9501 W Coyote Hill Rd",
+     "city": "Harrisburg",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd Ste 332",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "9666 Olive Blvd Ste 370",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "64153",
+     "address": "10015 N Ambassador Dr",
+     "city": "Kansas City",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63303",
+     "address": "1060 Country Club Rd",
+     "city": "St. Charles",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65340",
+     "address": "1060 S Odell Ave Ste 102",
+     "city": "Marshall",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63146",
+     "address": "10922 Schuetz Rd",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "11042 Manchester Rd",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "111 Prospect Ave Ste 201d",
+     "city": "Kirkwood",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63367",
+     "address": "112 Centre On The Lk",
+     "city": "Lake St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "64015",
+     "address": "1209 Nw N Ridge Dr Ste C",
+     "city": "Blue Springs",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65616",
+     "address": "1232 Branson Hills Pkwy Ste 104",
+     "city": "Branson",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63863",
+     "address": "127 S Madison St",
+     "city": "Malden",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63141",
+     "address": "12747 Olive Blvd",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63010",
+     "address": "1324 Jeffco Blvd",
+     "city": "Arnold",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65802",
+     "address": "1330 E Cherry St Ste 211",
+     "city": "Springfield",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63129",
+     "address": "140 Cliff Cave Rd Ste 200",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63122",
+     "address": "140 Prospect Ave",
+     "city": "Kirkwood",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63132",
+     "address": "1515 N Warson Rd Ste 122",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63303",
+     "address": "1600 Heritage Lndg Ste 117",
+     "city": "St. Peters",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "1638 E Republic Rd Ste C",
+     "city": "Springfield",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "64015",
+     "address": "1701 Sw Us Hwy 40 Ste 207",
+     "city": "Blue Springs",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63640",
+     "address": "17885 Hart Pinkston Rd",
+     "city": "Farmington",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65109",
+     "address": "1808 Crader Dr Ste C",
+     "city": "Jefferson City",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65201",
+     "address": "2100 E Broadway Ste 123",
+     "city": "Columbia",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63090",
+     "address": "214 Elm St Ste 203",
+     "city": "Washington",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65804",
+     "address": "2200 E Sunshine St Ste 110",
+     "city": "Springfield",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65203",
+     "address": "303 N Stadium Blvd Ste 200",
+     "city": "Columbia",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63042",
+     "address": "320 Brookes Dr Ste 231",
+     "city": "Hazelwood",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "64057",
+     "address": "3737 S Elizabeth St Ste 104",
+     "city": "Independence",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63010",
+     "address": "3838 Jeffco Blvd Ste 8",
+     "city": "Arnold",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63304",
+     "address": "3900 S Old Hwy 94 Ste 6",
+     "city": "St. Charles",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63379",
+     "address": "405 E Cherry St",
+     "city": "Troy",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "4625 Lindell Blvd Ste 300",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "64485",
+     "address": "500 E Pawnee St",
+     "city": "Savannah",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65721",
+     "address": "5349 N 22nd St Ste 4",
+     "city": "Ozark",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63136",
+     "address": "7080 Emma Ave",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "65721",
+     "address": "716 N 22nd St Ste 115",
+     "city": "Ozark",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "64014",
+     "address": "801 Nw Saint Mary Dr Ste 206",
+     "city": "Blue Springs",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63755",
+     "address": "810 E Jackson Blvd Ste B1",
+     "city": "Jackson",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "64501",
+     "address": "816 Faraon St",
+     "city": "St. Joseph",
+     "phone": "8669458131",
+     "state": "MO"
+    },
+    {
+     "zip": "63108",
+     "address": "449 N Euclid Ave",
+     "city": "St. Louis",
+     "phone": "8669458131",
+     "state": "MO"
+    }
+   ],
+   "group_name": "Sondermind Provider Network",
+   "npi": "1760854442",
+   "plans": [
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010015",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010016",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010022",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010021",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010019",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010020",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010017",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010024",
+     "years": [
+      2026
+     ]
+    },
+    {
+     "network_tier": "PREFERRED",
+     "plan_id_type": "HIOS-PLAN-ID",
+     "plan_id": "47840MO0010023",
+     "years": [
+      2026
+     ]
+    }
+   ],
+   "last_updated_on": "2026-08-01",
+   "type": "GROUP"
+  }
+ ]
+}

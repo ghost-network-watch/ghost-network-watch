@@ -1,0 +1,378 @@
+{
+ "index_url": "https://www.providencehealthplan.com/cms-data-index.json",
+ "states": [
+  "OR"
+ ],
+ "issuer_ids": [
+  "56707"
+ ],
+ "provider_urls_count": 3,
+ "plan_urls_count": 2,
+ "files": [
+  {
+   "url": "https://phppd.providence.org/json/providers_43111_EPO.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 5628,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "name": 766,
+     "specialty": 766,
+     "accepting": 766,
+     "gender": 766,
+     "languages": 766,
+     "facility_name": 234,
+     "facility_type": 234
+    },
+    "type_dist": {
+     "INDIVIDUAL": 766,
+     "FACILITY": 234
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 111,
+    "unique_specialties": 95,
+    "top_specialties": [
+     [
+      "Family Medicine",
+      88
+     ],
+     [
+      "Internal Medicine",
+      65
+     ],
+     [
+      "Physician Assistant",
+      54
+     ],
+     [
+      "Nurse Practitioner",
+      51
+     ],
+     [
+      "Pediatrics",
+      37
+     ],
+     [
+      "Chiropractic Medicine",
+      35
+     ],
+     [
+      "Anxiety Disorders",
+      32
+     ],
+     [
+      "Counseling - Adults",
+      31
+     ],
+     [
+      "Depressive Disorders",
+      30
+     ],
+     [
+      "Physical Therapy",
+      29
+     ],
+     [
+      "Optometry",
+      28
+     ],
+     [
+      "Grief and Bereavement",
+      26
+     ],
+     [
+      "Surgery - Orthopedic",
+      25
+     ],
+     [
+      "Surgery - General",
+      22
+     ],
+     [
+      "Trauma Therapy",
+      21
+     ],
+     [
+      "Oncology and Hematology",
+      20
+     ],
+     [
+      "Counseling",
+      20
+     ],
+     [
+      "Social Work Therapy",
+      18
+     ],
+     [
+      "Obstetrics and Gynecology",
+      18
+     ],
+     [
+      "Counselor Therapy",
+      18
+     ]
+    ],
+    "bh_specialty_values": [
+     "Counseling - Adults",
+     "Physical Therapy",
+     "Trauma Therapy",
+     "Counseling",
+     "Social Work Therapy",
+     "Counselor Therapy",
+     "Psychiatry",
+     "Psychology",
+     "Counseling - Children and Adolescents",
+     "Counseling - Geriatric",
+     "Marriage and Family",
+     "Psychiatric Nurse Practitioner",
+     "Occupational Therapy",
+     "Psychiatry, Adult",
+     "Mental Health Counseling",
+     "Substance Use Disorder",
+     "Counseling - Children",
+     "Dialectical Behavioral Therapy",
+     "Psychiatry - Children and Adolescents",
+     "Addiction Medicine",
+     "Neuropsychology",
+     "Neuropsychological Testing",
+     "Psychological Testing",
+     "Counseling - Marriage and Family"
+    ],
+    "accepting_values": {
+     "not accepting": 766,
+     "None": 234
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 32,
+    "top_dup_phones": [
+     [
+      "5094554455",
+      30
+     ],
+     [
+      "2063204476",
+      18
+     ],
+     [
+      "8775221275",
+      16
+     ],
+     [
+      "3608822778",
+      14
+     ],
+     [
+      "5094558820",
+      13
+     ],
+     [
+      "5413343350",
+      13
+     ],
+     [
+      "4252612000",
+      11
+     ],
+     [
+      "3602546161",
+      10
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://phppd.providence.org/json/providers_53111_Choice.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 5496,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "gender": 1000,
+     "languages": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 264,
+    "unique_specialties": 96,
+    "top_specialties": [
+     [
+      "Anxiety Disorders",
+      91
+     ],
+     [
+      "Depressive Disorders",
+      85
+     ],
+     [
+      "Family Medicine",
+      82
+     ],
+     [
+      "Counseling - Adults",
+      81
+     ],
+     [
+      "Grief and Bereavement",
+      65
+     ],
+     [
+      "Optometry",
+      63
+     ],
+     [
+      "Trauma Therapy",
+      62
+     ],
+     [
+      "Counseling",
+      54
+     ],
+     [
+      "Counselor Therapy",
+      54
+     ],
+     [
+      "Physician Assistant",
+      53
+     ],
+     [
+      "Psychiatry",
+      51
+     ],
+     [
+      "Social Work Therapy",
+      49
+     ],
+     [
+      "Physical Therapy",
+      46
+     ],
+     [
+      "Marriage and Family",
+      43
+     ],
+     [
+      "Psychology",
+      43
+     ],
+     [
+      "Abuse",
+      40
+     ],
+     [
+      "Counseling - Children and Adolescents",
+      39
+     ],
+     [
+      "Pediatrics",
+      39
+     ],
+     [
+      "Internal Medicine",
+      39
+     ],
+     [
+      "Attention Deficit Disorders (ADHD)",
+      38
+     ]
+    ],
+    "bh_specialty_values": [
+     "Counseling - Adults",
+     "Trauma Therapy",
+     "Counseling",
+     "Counselor Therapy",
+     "Psychiatry",
+     "Social Work Therapy",
+     "Physical Therapy",
+     "Marriage and Family",
+     "Psychology",
+     "Counseling - Children and Adolescents",
+     "Counseling - Geriatric",
+     "Psychiatry, Adult",
+     "Counseling - Children",
+     "Psychiatric Nurse Practitioner",
+     "Substance Use Disorder",
+     "Mental Health Counseling",
+     "Dialectical Behavioral Therapy",
+     "Occupational Therapy",
+     "Pediatric Developmental and Behavioral Medicine",
+     "Neuropsychology",
+     "Psychiatry - Children and Adolescents",
+     "Neuropsychological Testing",
+     "Forensic Psychiatry",
+     "Psychological Testing",
+     "Psychiatry, Children & Adult"
+    ],
+    "accepting_values": {
+     "not accepting": 1000
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 9,
+    "top_dup_phones": [
+     [
+      "3608822778",
+      44
+     ],
+     [
+      "3602546161",
+      22
+     ],
+     [
+      "5413822811",
+      11
+     ],
+     [
+      "2065205000",
+      10
+     ],
+     [
+      "3607543934",
+      10
+     ],
+     [
+      "5413896313",
+      9
+     ],
+     [
+      "3604937230",
+      8
+     ],
+     [
+      "5413343350",
+      8
+     ]
+    ]
+   }
+  }
+ ]
+}

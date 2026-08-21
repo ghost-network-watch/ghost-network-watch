@@ -1,0 +1,348 @@
+{
+ "index_url": "https://planfinder.ghcscw.com/cms/index.json",
+ "states": [
+  "WI"
+ ],
+ "issuer_ids": [
+  "94529"
+ ],
+ "provider_urls_count": 51,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://planfinder.ghcscw.com/cms/provider-1.json",
+   "http_code": 206,
+   "fetched_chars": 1095062,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 300,
+    "analyzed": 300,
+    "field_presence": {
+     "name": 300,
+     "addresses": 300,
+     "specialty": 300,
+     "accepting": 300,
+     "languages": 300,
+     "npi": 300,
+     "type": 300,
+     "plans": 300,
+     "last_updated_on": 300
+    },
+    "type_dist": {
+     "INDIVIDUAL": 300
+    },
+    "npi_present": 300,
+    "npi_luhn_valid": 300,
+    "bh_matches": 76,
+    "unique_specialties": 65,
+    "top_specialties": [
+     [
+      "Counseling / Therapy",
+      49
+     ],
+     [
+      "Family Medicine",
+      35
+     ],
+     [
+      "Emergency Medicine",
+      16
+     ],
+     [
+      "Internal Medicine",
+      16
+     ],
+     [
+      "Cardiovascular Medicine",
+      11
+     ],
+     [
+      "Physical Therapy",
+      11
+     ],
+     [
+      "Pediatrics",
+      10
+     ],
+     [
+      "Hospitalist",
+      9
+     ],
+     [
+      "Urology",
+      8
+     ],
+     [
+      "Nephrology",
+      8
+     ],
+     [
+      "Radiology/Imaging",
+      8
+     ],
+     [
+      "Orthopedic Surgery",
+      8
+     ],
+     [
+      "Plastic Surgery",
+      7
+     ],
+     [
+      "General Surgery",
+      6
+     ],
+     [
+      "Neurology",
+      6
+     ],
+     [
+      "Psychiatry",
+      5
+     ],
+     [
+      "Pulmonology",
+      5
+     ],
+     [
+      "Anesthesiology",
+      5
+     ],
+     [
+      "Geriatrics",
+      4
+     ],
+     [
+      "Urgent Care",
+      4
+     ]
+    ],
+    "bh_specialty_values": [
+     "Counseling / Therapy",
+     "Physical Therapy",
+     "Psychiatry",
+     "Occupational Therapy (ASD)",
+     "Substance Use",
+     "Addiction Medicine",
+     "Nutrition Counseling",
+     "Primary Care Behavioral Health",
+     "Speech and Language Therapy (ASD)",
+     "Occupational Therapy",
+     "Psychology",
+     "Psychology - Pediatric"
+    ],
+    "accepting_values": {
+     "accepting": 300
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 300
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "6082636400",
+      35
+     ],
+     [
+      "6089140100",
+      12
+     ],
+     [
+      "6083754144",
+      12
+     ],
+     [
+      "6082631530",
+      11
+     ],
+     [
+      "6083642200",
+      11
+     ],
+     [
+      "6083645011",
+      10
+     ],
+     [
+      "6082636420",
+      8
+     ],
+     [
+      "9205685000",
+      6
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://planfinder.ghcscw.com/cms/provider-26.json",
+   "http_code": 206,
+   "fetched_chars": 1138051,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 300,
+    "analyzed": 300,
+    "field_presence": {
+     "name": 300,
+     "addresses": 300,
+     "specialty": 300,
+     "accepting": 300,
+     "languages": 300,
+     "npi": 300,
+     "type": 300,
+     "plans": 300,
+     "last_updated_on": 300
+    },
+    "type_dist": {
+     "INDIVIDUAL": 300
+    },
+    "npi_present": 300,
+    "npi_luhn_valid": 300,
+    "bh_matches": 88,
+    "unique_specialties": 66,
+    "top_specialties": [
+     [
+      "Counseling / Therapy",
+      42
+     ],
+     [
+      "Family Medicine",
+      39
+     ],
+     [
+      "Emergency Medicine",
+      21
+     ],
+     [
+      "Radiology/Imaging",
+      15
+     ],
+     [
+      "Cardiovascular Medicine",
+      12
+     ],
+     [
+      "Hospitalist",
+      12
+     ],
+     [
+      "Occupational Therapy",
+      11
+     ],
+     [
+      "Physical Therapy",
+      11
+     ],
+     [
+      "Internal Medicine",
+      10
+     ],
+     [
+      "Autism",
+      10
+     ],
+     [
+      "Orthopedic Surgery",
+      7
+     ],
+     [
+      "Psychiatry",
+      6
+     ],
+     [
+      "Speech Therapy",
+      6
+     ],
+     [
+      "Psychology",
+      5
+     ],
+     [
+      "Urgent Care",
+      5
+     ],
+     [
+      "Obstetrics and Gynecology",
+      4
+     ],
+     [
+      "Voice and Swallowing",
+      4
+     ],
+     [
+      "General Surgery",
+      4
+     ],
+     [
+      "Ophthalmology",
+      4
+     ],
+     [
+      "Anesthesiology",
+      4
+     ]
+    ],
+    "bh_specialty_values": [
+     "Counseling / Therapy",
+     "Occupational Therapy",
+     "Physical Therapy",
+     "Psychiatry",
+     "Speech Therapy",
+     "Psychology",
+     "Occupational Therapy (ASD)",
+     "Psychiatry - Pediatric",
+     "Nutrition Counseling",
+     "Speech and Language Therapy (ASD)",
+     "Substance Use",
+     "Psychology - Pediatric",
+     "Addiction Medicine"
+    ],
+    "accepting_values": {
+     "accepting": 300
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 300
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "6082636400",
+      28
+     ],
+     [
+      "6082631530",
+      19
+     ],
+     [
+      "6089140100",
+      10
+     ],
+     [
+      "6082579700",
+      10
+     ],
+     [
+      "6089162000",
+      9
+     ],
+     [
+      "6083642200",
+      9
+     ],
+     [
+      "6082636420",
+      8
+     ],
+     [
+      "6084176000",
+      8
+     ]
+    ]
+   }
+  }
+ ]
+}

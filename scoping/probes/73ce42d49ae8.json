@@ -1,0 +1,253 @@
+{
+ "index_url": "https://www.lablue.com/acadirectory/97176/97176Index.json",
+ "states": [
+  "LA"
+ ],
+ "issuer_ids": [
+  "97176"
+ ],
+ "provider_urls_count": 10,
+ "plan_urls_count": 2,
+ "files": [
+  {
+   "url": "http://www.lablue.com/acadirectory/97176/individualprovidersfile.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 6347,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "gender": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 242,
+    "unique_specialties": 93,
+    "top_specialties": [
+     [
+      "TELEHEALTH SERVICES",
+      365
+     ],
+     [
+      "NURSE PRACTITIONER (NP)",
+      226
+     ],
+     [
+      "LICENSED PROFESSIONAL COUNSLR",
+      111
+     ],
+     [
+      "NURSE PRAC-FAMILY",
+      100
+     ],
+     [
+      "LICENSED CLINCAL SOCIAL WORKER",
+      76
+     ],
+     [
+      "INTERNAL MEDICINE",
+      64
+     ],
+     [
+      "PHYSICAL THERAPY",
+      54
+     ],
+     [
+      "PEDIATRICS",
+      47
+     ],
+     [
+      "FAMILY PRACTICE",
+      46
+     ],
+     [
+      "PHYSICIAN'S ASSISTANT (PA)",
+      41
+     ],
+     [
+      "BEHAVIOR ANALYST",
+      34
+     ],
+     [
+      "SPEECH & LANGUAGE PATHOLOGY",
+      33
+     ],
+     [
+      "CARDIOLOGY/CARDIO DISEASE",
+      21
+     ],
+     [
+      "GENERAL SURGERY",
+      21
+     ],
+     [
+      "OBSTETRICS & GYNECOLOGY",
+      19
+     ],
+     [
+      "PSYCHIATRIC NURSE PRACTITIONER",
+      19
+     ],
+     [
+      "OCCUPATIONAL THERAPY",
+      18
+     ],
+     [
+      "CHIROPRACTIC MEDICINE",
+      17
+     ],
+     [
+      "AUDIOLOGY",
+      15
+     ],
+     [
+      "PSYCHOLOGY",
+      15
+     ]
+    ],
+    "bh_specialty_values": [
+     "LICENSED CLINCAL SOCIAL WORKER",
+     "PHYSICAL THERAPY",
+     "BEHAVIOR ANALYST",
+     "PSYCHIATRIC NURSE PRACTITIONER",
+     "OCCUPATIONAL THERAPY",
+     "PSYCHOLOGY",
+     "PSYCHIATRY",
+     "MARRIAGE & FAMILY THERAPY",
+     "SUBSTANCE ABUSE COUNSELING",
+     "MARRIAGE THERAPY",
+     "CHILD & ADOLESCENT PSYCHIATRY",
+     "GERIATRIC PSYCHIATRY",
+     "PSYCHIATRIC PHYSICIAN ASSISTANT"
+    ],
+    "accepting_values": {
+     "accepting": 983,
+     "not accepting": 17
+    },
+    "last_updated_min": "2026-08-05",
+    "last_updated_max": "2026-08-05",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 17,
+    "top_dup_phones": [
+     [
+      "2257615200",
+      29
+     ],
+     [
+      "5048313112",
+      29
+     ],
+     [
+      "2257655500",
+      18
+     ],
+     [
+      "5046093282",
+      17
+     ],
+     [
+      "5042073060",
+      17
+     ],
+     [
+      "3186260526",
+      14
+     ],
+     [
+      "3182129440",
+      13
+     ],
+     [
+      "3187318346",
+      12
+     ]
+    ]
+   }
+  },
+  {
+   "url": "http://www.lablue.com/acadirectory/97176/standalonedentalgroupprovidersfile.json",
+   "http_code": 206,
+   "fetched_chars": 114888,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 124,
+    "analyzed": 124,
+    "field_presence": {
+     "npi": 124,
+     "type": 124,
+     "group_name": 124,
+     "addresses": 124,
+     "plans": 124,
+     "last_updated_on": 124
+    },
+    "type_dist": {
+     "GROUP": 124
+    },
+    "npi_present": 124,
+    "npi_luhn_valid": 124,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 124
+    },
+    "last_updated_min": "2026-08-05",
+    "last_updated_max": "2026-08-05",
+    "last_updated_years": {
+     "2026": 124
+    },
+    "max_addresses_per_provider": 13,
+    "top_dup_phones": [
+     [
+      "3186867470",
+      4
+     ],
+     [
+      "3374399983",
+      4
+     ],
+     [
+      "3182129440",
+      3
+     ],
+     [
+      "3186260547",
+      3
+     ],
+     [
+      "3186260050",
+      2
+     ],
+     [
+      "3186262710",
+      2
+     ],
+     [
+      "3183307000",
+      2
+     ],
+     [
+      "3186867707",
+      2
+     ]
+    ]
+   }
+  }
+ ]
+}

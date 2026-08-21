@@ -1,0 +1,226 @@
+{
+ "index_url": "https://www.medica.com/mrf/index/WI2.json",
+ "states": [
+  "WI"
+ ],
+ "issuer_ids": [
+  "38345"
+ ],
+ "provider_urls_count": 41,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.medica.com/mrf/output/WI2/Individual/Providers1.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3027,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "specialty": 1000,
+     "languages": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "last_updated_on": 1000,
+     "type": 1000,
+     "accepting": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 557,
+    "unique_specialties": 62,
+    "top_specialties": [
+     [
+      "Behavioral Health Specialist",
+      334
+     ],
+     [
+      "Family Medicine",
+      79
+     ],
+     [
+      "Behavioral Analysis-Autism Specialist",
+      78
+     ],
+     [
+      "Behavioral Health-Autism Specialist",
+      60
+     ],
+     [
+      "Alcohol & Drug-Substance Abuse Specialist",
+      36
+     ],
+     [
+      "Chiropractic Medicine",
+      32
+     ],
+     [
+      "Internal Medicine Specialist",
+      29
+     ],
+     [
+      "Cardiologist",
+      28
+     ],
+     [
+      "Psychologist",
+      24
+     ],
+     [
+      "Ob Gyn Specialist",
+      18
+     ],
+     [
+      "General Surgeon",
+      18
+     ],
+     [
+      "Otolaryngologist",
+      18
+     ],
+     [
+      "Urologist",
+      15
+     ],
+     [
+      "Family Practice",
+      15
+     ],
+     [
+      "Optometrist",
+      14
+     ],
+     [
+      "Psychiatrist",
+      13
+     ],
+     [
+      "Nephrologist",
+      12
+     ],
+     [
+      "Pediatric Medicine Specialist",
+      12
+     ],
+     [
+      "Orthopaedist",
+      11
+     ],
+     [
+      "Occupational Medicine Specialist",
+      9
+     ]
+    ],
+    "bh_specialty_values": [
+     "Behavioral Health Specialist",
+     "Behavioral Analysis-Autism Specialist",
+     "Behavioral Health-Autism Specialist",
+     "Alcohol & Drug-Substance Abuse Specialist",
+     "Psychologist",
+     "Psychiatrist",
+     "Other Behavioral Health",
+     "Psychologist-Autism",
+     "Child And Adolescent Psychiatrist",
+     "Neuropsychologist"
+    ],
+    "accepting_values": {
+     "accepting": 978,
+     "not accepting": 22
+    },
+    "last_updated_min": "2026-08-01",
+    "last_updated_max": "2026-08-13",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 2,
+    "top_dup_phones": [
+     [
+      "9208579041",
+      98
+     ],
+     [
+      "9204964700",
+      52
+     ],
+     [
+      "2629993495",
+      52
+     ],
+     [
+      "8555072704",
+      24
+     ],
+     [
+      "2629283000",
+      11
+     ],
+     [
+      "2629284036",
+      11
+     ],
+     [
+      "6082606000",
+      10
+     ],
+     [
+      "2629288899",
+      10
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.medica.com/mrf/output/WI2/Facility/Providers14.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1646,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "facility_type": 1000,
+     "type": 1000,
+     "facility_name": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-06-10",
+    "last_updated_max": "2026-08-13",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "9526532525",
+      6
+     ],
+     [
+      "9127729100",
+      2
+     ]
+    ]
+   }
+  }
+ ]
+}

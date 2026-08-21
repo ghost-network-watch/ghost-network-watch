@@ -1,0 +1,380 @@
+{
+ "index_url": "https://www.uhc.com/content/dam/uhcdotcom/en/general/cms-data-index.json",
+ "states": [
+  "AL",
+  "AZ",
+  "FL",
+  "IA",
+  "IN",
+  "KS",
+  "LA",
+  "MI",
+  "MO",
+  "MS",
+  "NC",
+  "NE",
+  "OH",
+  "OK",
+  "SC",
+  "TN",
+  "TX",
+  "WI",
+  "WY"
+ ],
+ "issuer_ids": [
+  "69461",
+  "40702",
+  "68398",
+  "56610",
+  "72850",
+  "94968",
+  "69842",
+  "71667",
+  "95426",
+  "97560",
+  "54332",
+  "73102",
+  "33931",
+  "45480",
+  "33764",
+  "69443",
+  "40220",
+  "70754",
+  "80180",
+  "49714"
+ ],
+ "provider_urls_count": 22,
+ "plan_urls_count": 21,
+ "files": [
+  {
+   "url": "https://providermrf.uhc.com/api/stream/ui/ifp/providers/JSON_Providers_ALIEX.json",
+   "http_code": 200,
+   "fetched_chars": 31457280,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 5711,
+    "analyzed": 1000,
+    "field_presence": {
+     "accepting": 1000,
+     "addresses": 1000,
+     "last_updated_on": 1000,
+     "name": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "specialty": 1000,
+     "type": 1000,
+     "gender": 999
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 457,
+    "unique_specialties": 59,
+    "top_specialties": [
+     [
+      "MASTERS LEVEL COUNSELOR",
+      217
+     ],
+     [
+      "SOCIAL WORKER",
+      154
+     ],
+     [
+      "NURSE PRACTITIONER",
+      101
+     ],
+     [
+      "FAMILY NURSE PRACTITIONER",
+      68
+     ],
+     [
+      "NURSE WITH RX",
+      58
+     ],
+     [
+      "FAMILY PRACTICE",
+      43
+     ],
+     [
+      "PHYSICIAN ASSISTANT",
+      39
+     ],
+     [
+      "MARRIAGE/FAMILY(THERAPY);",
+      27
+     ],
+     [
+      "PSYCHOLOGIST",
+      25
+     ],
+     [
+      "PSYCHIATRY",
+      25
+     ],
+     [
+      "INTERNAL MEDICINE",
+      23
+     ],
+     [
+      "GENERAL SURGERY",
+      17
+     ],
+     [
+      "OBSTETRICS & GYNECOLOGY",
+      17
+     ],
+     [
+      "CHIROPRACTOR",
+      16
+     ],
+     [
+      "ORTHOPAEDIC SURGERY",
+      15
+     ],
+     [
+      "PEDIATRICS",
+      13
+     ],
+     [
+      "CARDIOVASCULAR DISEASE",
+      13
+     ],
+     [
+      "OPHTHALMOLOGY",
+      11
+     ],
+     [
+      "DERMATOLOGY",
+      10
+     ],
+     [
+      "NEPHROLOGY",
+      7
+     ]
+    ],
+    "bh_specialty_values": [
+     "MASTERS LEVEL COUNSELOR",
+     "SOCIAL WORKER",
+     "MARRIAGE/FAMILY(THERAPY);",
+     "PSYCHOLOGIST",
+     "PSYCHIATRY",
+     "PHYSICAL THERAPY",
+     "OCCUPATIONAL THERAPY",
+     "ALCOHOL/DRG/CHEM COUNSELOR"
+    ],
+    "accepting_values": {
+     "accepting": 968,
+     "not accepting": 32
+    },
+    "last_updated_min": "2026-08-18",
+    "last_updated_max": "2026-08-18",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 42,
+    "top_dup_phones": [
+     [
+      "8449951212",
+      103
+     ],
+     [
+      "8883802028",
+      99
+     ],
+     [
+      "2109002599",
+      82
+     ],
+     [
+      "6469417645",
+      68
+     ],
+     [
+      "3158732936",
+      64
+     ],
+     [
+      "4153603348",
+      54
+     ],
+     [
+      "7862443620",
+      50
+     ],
+     [
+      "8885870335",
+      46
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://providermrf.uhc.com/api/stream/ui/ifp/providers/JSON_Providers_NCIEX.json",
+   "http_code": 200,
+   "fetched_chars": 31457280,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 6072,
+    "analyzed": 1000,
+    "field_presence": {
+     "accepting": 1000,
+     "addresses": 1000,
+     "gender": 1000,
+     "last_updated_on": 1000,
+     "name": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "specialty": 1000,
+     "type": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 333,
+    "unique_specialties": 71,
+    "top_specialties": [
+     [
+      "MASTERS LEVEL COUNSELOR",
+      130
+     ],
+     [
+      "SOCIAL WORKER",
+      114
+     ],
+     [
+      "PHYSICIAN ASSISTANT",
+      108
+     ],
+     [
+      "NURSE PRACTITIONER",
+      101
+     ],
+     [
+      "FAMILY NURSE PRACTITIONER",
+      50
+     ],
+     [
+      "FAMILY PRACTICE",
+      46
+     ],
+     [
+      "NURSE WITH RX",
+      40
+     ],
+     [
+      "INTERNAL MEDICINE",
+      34
+     ],
+     [
+      "OBSTETRICS & GYNECOLOGY",
+      27
+     ],
+     [
+      "PSYCHOLOGIST",
+      23
+     ],
+     [
+      "PHYSICAL THERAPY",
+      22
+     ],
+     [
+      "PEDIATRICS",
+      22
+     ],
+     [
+      "CHIROPRACTOR",
+      19
+     ],
+     [
+      "PSYCHIATRY",
+      19
+     ],
+     [
+      "NEUROLOGY",
+      19
+     ],
+     [
+      "GENERAL SURGERY",
+      17
+     ],
+     [
+      "OPTOMETRY",
+      16
+     ],
+     [
+      "ORTHOPAEDIC SURGERY",
+      14
+     ],
+     [
+      "CARDIOVASCULAR DISEASE",
+      13
+     ],
+     [
+      "GASTROENTEROLOGY",
+      11
+     ]
+    ],
+    "bh_specialty_values": [
+     "MASTERS LEVEL COUNSELOR",
+     "SOCIAL WORKER",
+     "PSYCHOLOGIST",
+     "PHYSICAL THERAPY",
+     "PSYCHIATRY",
+     "PHYSICIAN ASSISTANT BEHAVIORAL",
+     "MARRIAGE/FAMILY(THERAPY);",
+     "ALCOHOL/DRG/CHEM COUNSELOR",
+     "OCCUPATIONAL THERAPY",
+     "DEVELOPMENTAL PEDIATRICS"
+    ],
+    "accepting_values": {
+     "accepting": 940,
+     "not accepting": 60
+    },
+    "last_updated_min": "2026-08-18",
+    "last_updated_max": "2026-08-18",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 27,
+    "top_dup_phones": [
+     [
+      "3158732936",
+      107
+     ],
+     [
+      "6469417645",
+      44
+     ],
+     [
+      "9199667890",
+      39
+     ],
+     [
+      "4153603348",
+      37
+     ],
+     [
+      "6464536777",
+      25
+     ],
+     [
+      "9103323800",
+      24
+     ],
+     [
+      "8449951212",
+      19
+     ],
+     [
+      "8434490453",
+      19
+     ]
+    ]
+   }
+  }
+ ]
+}

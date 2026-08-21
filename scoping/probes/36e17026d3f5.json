@@ -1,0 +1,156 @@
+{
+ "index_url": "https://22healthplan.com/machine-readable-files/cms-data-index.json",
+ "states": [
+  "FL"
+ ],
+ "issuer_ids": [
+  "13887"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://22healthplan.com/machine-readable-files/cms-data-providers.json",
+   "http_code": 200,
+   "fetched_chars": 8629444,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 8703,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "name": 977,
+     "first": 977,
+     "last": 977,
+     "group_name": 20,
+     "facility_name": 3,
+     "facility_type": 3
+    },
+    "type_dist": {
+     "INDIVIDUAL": 977,
+     "GROUP": 20,
+     "FACILITY": 3
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 144,
+    "unique_specialties": 77,
+    "top_specialties": [
+     [
+      "Pediatrics",
+      125
+     ],
+     [
+      "Obstetrics and Gynecology",
+      107
+     ],
+     [
+      "Family Medicine",
+      93
+     ],
+     [
+      "Internal Medicine",
+      74
+     ],
+     [
+      "Physical Therapy",
+      44
+     ],
+     [
+      "Occupational Therapy",
+      32
+     ],
+     [
+      "Diagnostic Radiology",
+      30
+     ],
+     [
+      "Urology",
+      25
+     ],
+     [
+      "Oncology and Hematology",
+      25
+     ],
+     [
+      "Podiatry",
+      21
+     ],
+     [
+      "Cardiovascular Disease",
+      20
+     ],
+     [
+      "Gastroenterology",
+      17
+     ],
+     [
+      "Allergy and Immunology",
+      17
+     ],
+     [
+      "Nephrology",
+      16
+     ],
+     [
+      "Orthopedic Surgery",
+      16
+     ],
+     [
+      "Surgery",
+      16
+     ],
+     [
+      "Maternal Fetal Medicine",
+      15
+     ],
+     [
+      "Physical Medicine and Rehabilitation",
+      15
+     ],
+     [
+      "Pediatric Cardiology",
+      14
+     ],
+     [
+      "Licensed Clinical Social Worker",
+      14
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapy",
+     "Occupational Therapy",
+     "Licensed Clinical Social Worker",
+     "Psychiatry & Neurology",
+     "Psychiatry",
+     "Licensed Mental Health Counselor",
+     "Speech Therapy",
+     "Mental Health",
+     "Psychology",
+     "Community Substance Abuse Treatment Center",
+     "Infusion Therapy",
+     "Marriage & Family Therapist",
+     "Child and Adolescent Psychiatry",
+     "Neuropsychology",
+     "Behavioral Health"
+    ],
+    "accepting_values": {
+     "accepting": 1000
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 21,
+    "top_dup_phones": []
+   }
+  }
+ ]
+}

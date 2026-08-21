@@ -1,0 +1,204 @@
+{
+ "index_url": "https://www.amerihealthcaritasnext.com/cms-data-index.json",
+ "states": [
+  "DE",
+  "FL",
+  "LA",
+  "NC"
+ ],
+ "issuer_ids": [
+  "72760",
+  "67926",
+  "38246",
+  "17414"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 4,
+ "files": [
+  {
+   "url": "https://s3.us-west-2.amazonaws.com/prd2-directory-generation-service-machine-readable-json/ACNEXT/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3924,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "name": 916,
+     "group_name": 68,
+     "facility_name": 16,
+     "facility_type": 16
+    },
+    "type_dist": {
+     "INDIVIDUAL": 916,
+     "GROUP": 68,
+     "FACILITY": 16
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 177,
+    "unique_specialties": 143,
+    "top_specialties": [
+     [
+      "Physician Assistant",
+      86
+     ],
+     [
+      "Family Practice",
+      80
+     ],
+     [
+      "Internal Medicine",
+      61
+     ],
+     [
+      "Family Nurse Practitioner",
+      59
+     ],
+     [
+      "Nurse Practitioner",
+      56
+     ],
+     [
+      "Pediatrics",
+      55
+     ],
+     [
+      "Multi-Specialty Group",
+      33
+     ],
+     [
+      "Obstetrics & Gynecology",
+      32
+     ],
+     [
+      "Physical Therapy",
+      27
+     ],
+     [
+      "Social Worker",
+      25
+     ],
+     [
+      "Psychiatry",
+      17
+     ],
+     [
+      "Nurse Practitioner - Acute Care",
+      16
+     ],
+     [
+      "Cardiovascular Disease",
+      16
+     ],
+     [
+      "Orthopaedic Surgery",
+      15
+     ],
+     [
+      "Licensed Professional Counselor",
+      15
+     ],
+     [
+      "Mental Health Counseling",
+      15
+     ],
+     [
+      "Optometry",
+      13
+     ],
+     [
+      "Psychiatric Nurse Practitioner",
+      13
+     ],
+     [
+      "Nephrology",
+      11
+     ],
+     [
+      "Psychology",
+      11
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapy",
+     "Social Worker",
+     "Psychiatry",
+     "Licensed Professional Counselor",
+     "Mental Health Counseling",
+     "Psychiatric Nurse Practitioner",
+     "Psychology",
+     "Occupational Therapy",
+     "Psychiatry & Neurology",
+     "Certified Clinical Social Worker",
+     "Marriage & Family Therapy",
+     "Psychiatric/Mental Health Nurse Practitioner",
+     "Pediatric Psychiatry",
+     "Addiction Counselor",
+     "Mental Health Services",
+     "Genetic Counselor",
+     "Behavior Analyst",
+     "Licensed Clinical Social Worker",
+     "Speech Therapy",
+     "Community Mental Health Center",
+     "Adult Psychiatric & Mental Health Nurse Practitioner",
+     "Pediatric Psychology",
+     "Addiction Psychiatry",
+     "Pediatric Speech Therapy",
+     "Mental Health Targeted Case Management"
+    ],
+    "accepting_values": {
+     "accepting": 981,
+     "not accepting": 19
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 31,
+    "top_dup_phones": [
+     [
+      "3024773300",
+      33
+     ],
+     [
+      "8774632010",
+      27
+     ],
+     [
+      "3056898648",
+      17
+     ],
+     [
+      "3052662929",
+      16
+     ],
+     [
+      "8009672289",
+      15
+     ],
+     [
+      "3026514200",
+      13
+     ],
+     [
+      "3055388835",
+      13
+     ],
+     [
+      "3368329943",
+      12
+     ]
+    ]
+   }
+  }
+ ]
+}

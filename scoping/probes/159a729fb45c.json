@@ -1,0 +1,127 @@
+{
+ "index_url": "https://alliantplans.com/cms-data-index.json",
+ "states": [
+  "TN"
+ ],
+ "issuer_ids": [
+  "29854"
+ ],
+ "provider_urls_count": 2,
+ "plan_urls_count": 2,
+ "files": [
+  {
+   "url": "https://www.alliantplans.com/json/ProvidersTN.json",
+   "http_code": 206,
+   "fetched_chars": 8388607,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2793,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 154,
+    "top_dup_phones": [
+     [
+      "7702190950",
+      21
+     ],
+     [
+      "4788642600",
+      15
+     ],
+     [
+      "7709623642",
+      15
+     ],
+     [
+      "4049204950",
+      15
+     ],
+     [
+      "8448930012",
+      15
+     ],
+     [
+      "9317299631",
+      7
+     ],
+     [
+      "9313880777",
+      7
+     ],
+     [
+      "6787718468",
+      6
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.alliantplans.com/json/prime_providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2630,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "9526532525",
+      3
+     ]
+    ]
+   }
+  }
+ ]
+}

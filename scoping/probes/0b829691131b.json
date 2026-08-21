@@ -1,0 +1,274 @@
+{
+ "index_url": "https://www.pfpdata.com/cms-data/11269-wy/11269-index.json",
+ "states": [
+  "WY"
+ ],
+ "issuer_ids": [
+  "11269"
+ ],
+ "provider_urls_count": 4,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.pfpdata.com/cms-data/11269-wy/11269-md-provider.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2081,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "specialty": 826,
+     "name": 765,
+     "accepting": 765,
+     "languages": 765,
+     "sex": 764,
+     "group_name": 174,
+     "facility_name": 61,
+     "facility_type": 61
+    },
+    "type_dist": {
+     "INDIVIDUAL": 765,
+     "GROUP": 174,
+     "FACILITY": 61
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 395,
+    "unique_specialties": 68,
+    "top_specialties": [
+     [
+      "Physical Therapist",
+      117
+     ],
+     [
+      "Licensed Professional Counselor",
+      96
+     ],
+     [
+      "Nurse Practitioner - Family",
+      71
+     ],
+     [
+      "Radiology",
+      54
+     ],
+     [
+      "Family Practice",
+      47
+     ],
+     [
+      "Clinical Social Work|Licensed Clinical Social Worker",
+      42
+     ],
+     [
+      "Clinic/Center - Mental Health (Including Community Mental Ce",
+      40
+     ],
+     [
+      "Emergency Medicine",
+      35
+     ],
+     [
+      "Internal Medicine",
+      30
+     ],
+     [
+      "Physician Assistant",
+      26
+     ],
+     [
+      "CRN Clinical Nurse Spec - Mental Health|Psychiatric Nurse",
+      22
+     ],
+     [
+      "Certified Registered Nurse Anesthetist",
+      20
+     ],
+     [
+      "Occupational Therapist",
+      17
+     ],
+     [
+      "General Surgery",
+      17
+     ],
+     [
+      "Psychologist|Psychology",
+      15
+     ],
+     [
+      "Licensed Alcohol and Drug Counselor",
+      14
+     ],
+     [
+      "Psychiatry",
+      13
+     ],
+     [
+      "Orthopedic Surgery",
+      12
+     ],
+     [
+      "General Practice Dentistry",
+      10
+     ],
+     [
+      "Anesthesiology",
+      8
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapist",
+     "Licensed Professional Counselor",
+     "Clinical Social Work|Licensed Clinical Social Worker",
+     "Clinic/Center - Mental Health (Including Community Mental Ce",
+     "CRN Clinical Nurse Spec - Mental Health|Psychiatric Nurse",
+     "Occupational Therapist",
+     "Psychologist|Psychology",
+     "Licensed Alcohol and Drug Counselor",
+     "Psychiatry",
+     "Marriage & Family Therapist",
+     "Speech Therapist",
+     "CRN Practitioner Mental Health|Nurse Practitioner - Psychiat",
+     "CRN Clinical Nurse Spec - Mental Health|Nurse Practitioner -",
+     "Psychologist|Psychology|Psychologist|Psychology"
+    ],
+    "accepting_values": {
+     "accepting": 765,
+     "None": 235
+    },
+    "last_updated_min": "2026-08-10",
+    "last_updated_max": "2026-08-10",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "3077547257",
+      16
+     ],
+     [
+      "3078855852",
+      16
+     ],
+     [
+      "3073582122",
+      16
+     ],
+     [
+      "3075683311",
+      13
+     ],
+     [
+      "3075277561",
+      10
+     ],
+     [
+      "3076545852",
+      10
+     ],
+     [
+      "8009286040",
+      10
+     ],
+     [
+      "7035786030",
+      10
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.pfpdata.com/cms-data/11269-wy/11269-vs-provider.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2375,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "sex": 1000,
+     "languages": 1000,
+     "addresses": 1000,
+     "accepting": 1000,
+     "specialty": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 2,
+    "top_specialties": [
+     [
+      "Optometry",
+      892
+     ],
+     [
+      "Ophthalmology",
+      108
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 921,
+     "accepting in some locations": 60,
+     "not accepting": 19
+    },
+    "last_updated_min": "2026-08-04",
+    "last_updated_max": "2026-08-04",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 234,
+    "top_dup_phones": [
+     [
+      "8555500743",
+      326
+     ],
+     [
+      "8555500753",
+      37
+     ],
+     [
+      "2053258620",
+      22
+     ],
+     [
+      "8773503399",
+      17
+     ],
+     [
+      "3027345861",
+      16
+     ],
+     [
+      "8337338742",
+      13
+     ],
+     [
+      "2152766000",
+      12
+     ],
+     [
+      "2053255620",
+      12
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,112 @@
+{
+  "verified": "2026-08-21",
+  "claim": "Per-plan county attribution path verified end-to-end on PY2026 CMS files",
+  "scid_format_validation": {
+    "source": "plan-attributes-puf.csv (PY2026), 22,059 rows, 5,144 unique StandardComponentIds",
+    "regex_standard_component": "^\\d{5}[A-Z]{2}\\d{7}$",
+    "regex_plan_id_variant": "^\\d{5}[A-Z]{2}\\d{7}-\\d{2}$",
+    "violations": 0,
+    "chars_1_5_equal_issuer_id": true,
+    "chars_6_7_equal_state_code": true,
+    "scid_to_service_area_cardinality": "each StandardComponentId maps to exactly 1 ServiceAreaId (0 exceptions in 5,144)",
+    "variant_semantics_from_CSRVariationType": {
+      "-00": "Off Exchange standard plan",
+      "-01": "On Exchange standard plan",
+      "-02": "Zero Cost Sharing Plan Variation (AI/AN)",
+      "-03": "Limited Cost Sharing Plan Variation (AI/AN)",
+      "-04": "73% AV Silver CSR",
+      "-05": "87% AV Silver CSR",
+      "-06": "94% AV Silver CSR"
+    }
+  },
+  "join_example_medical": {
+    "plan": "53932AL0100003 (Centene/Ambetter AL, 'Everyday Bronze', MarketCoverage=Individual, DentalOnlyPlan=No)",
+    "plan_attributes_gives": {
+      "ServiceAreaId": "ALS001",
+      "NetworkId": "ALN001"
+    },
+    "service_area_puf_gives": {
+      "CoverEntireState": "No",
+      "n_counties": 40,
+      "county_fips": [
+        "01003",
+        "01005",
+        "01011",
+        "01017",
+        "01023",
+        "01029",
+        "01031",
+        "01033",
+        "01039",
+        "01043",
+        "01047",
+        "01049",
+        "01053",
+        "01055",
+        "01059",
+        "01061",
+        "01067",
+        "01069",
+        "01071",
+        "01073",
+        "01077",
+        "01079",
+        "01081",
+        "01083",
+        "01085",
+        "01089",
+        "01093",
+        "01095",
+        "01097",
+        "01101",
+        "01103",
+        "01105",
+        "01107",
+        "01111",
+        "01113",
+        "01117",
+        "01119",
+        "01121",
+        "01127",
+        "01129"
+      ]
+    },
+    "landscape_cross_check": "identical 40 FIPS counties in individual_market_medical.xlsx rows for this plan (exact set match)"
+  },
+  "join_example_entire_state": {
+    "plan": "28856IN0220001 (Delta Dental of IN; the plan_id observed in provider records is a DENTAL plan)",
+    "plan_attributes_gives": {
+      "ServiceAreaId": "INS001",
+      "DentalOnlyPlan": "Yes"
+    },
+    "service_area_puf_gives": {
+      "CoverEntireState": "Yes",
+      "County": "(empty - must expand to all state counties externally)"
+    }
+  },
+  "service_area_puf_shape": {
+    "rows": 8820,
+    "states": 30,
+    "issuers": 359,
+    "unique_issuer_service_areas": 656,
+    "columns": [
+      "BusinessYear",
+      "StateCode",
+      "IssuerId",
+      "SourceName",
+      "ImportDate",
+      "ServiceAreaId",
+      "ServiceAreaName",
+      "CoverEntireState",
+      "County",
+      "PartialCounty",
+      "ZipCodes",
+      "PartialCountyJustification",
+      "MarketCoverage",
+      "DentalOnlyPlan"
+    ],
+    "cover_entire_state_yes_rows": 252,
+    "partial_county_yes_rows": 23,
+    "partial_county_detail": "23 rows (MI/OR/TX, Individual market) list explicit ZipCodes for the covered slice of the county"
+  }
+}

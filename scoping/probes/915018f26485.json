@@ -1,0 +1,139 @@
+{
+ "index_url": "https://www.medica.com/mrf/index/MO2.json",
+ "states": [
+  "MO"
+ ],
+ "issuer_ids": [
+  "47840"
+ ],
+ "provider_urls_count": 19,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.medica.com/mrf/output/MO2/Group/Providers1.json",
+   "http_code": 206,
+   "fetched_chars": 4074972,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 1985,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "group_name": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "type": 1000
+    },
+    "type_dist": {
+     "GROUP": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2025-10-14",
+    "last_updated_max": "2026-08-13",
+    "last_updated_years": {
+     "2026": 940,
+     "2025": 60
+    },
+    "max_addresses_per_provider": 161,
+    "top_dup_phones": [
+     [
+      "3158732936",
+      212
+     ],
+     [
+      "8884031071",
+      40
+     ],
+     [
+      "8448538937",
+      26
+     ],
+     [
+      "6469417645",
+      17
+     ],
+     [
+      "3143941911",
+      16
+     ],
+     [
+      "6369332243",
+      10
+     ],
+     [
+      "2175258332",
+      9
+     ],
+     [
+      "3145903721",
+      8
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.medica.com/mrf/output/MO2/Facility/Providers3.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 4252,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "facility_type": 1000,
+     "type": 1000,
+     "facility_name": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-06-10",
+    "last_updated_max": "2026-08-13",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 2,
+    "top_dup_phones": [
+     [
+      "9526532525",
+      3
+     ],
+     [
+      "6184678889",
+      2
+     ],
+     [
+      "4017651500",
+      2
+     ],
+     [
+      "9033742303",
+      2
+     ]
+    ]
+   }
+  }
+ ]
+}

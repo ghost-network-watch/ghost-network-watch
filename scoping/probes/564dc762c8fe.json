@@ -1,0 +1,255 @@
+{
+ "index_url": "https://public-cdn.wellmark.com/json/WHPI/index.json",
+ "states": [
+  "IA"
+ ],
+ "issuer_ids": [
+  "25896"
+ ],
+ "provider_urls_count": 2,
+ "plan_urls_count": 2,
+ "files": [
+  {
+   "url": "https://public-cdn.wellmark.com/json/WHPI/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 5333,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2025-09-15",
+    "last_updated_max": "2025-09-15",
+    "last_updated_years": {
+     "2025": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "8772885340",
+      8
+     ],
+     [
+      "5635683411",
+      4
+     ],
+     [
+      "7123643311",
+      3
+     ],
+     [
+      "7122646198",
+      3
+     ],
+     [
+      "7127923581",
+      3
+     ],
+     [
+      "7124232311",
+      3
+     ],
+     [
+      "7128525500",
+      3
+     ],
+     [
+      "5152952451",
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://public-cdn.wellmark.com/json/WUPH/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 8204,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "facility_name": 818,
+     "facility_type": 818,
+     "name": 182,
+     "specialty": 182,
+     "accepting": 182,
+     "languages": 182
+    },
+    "type_dist": {
+     "FACILITY": 818,
+     "INDIVIDUAL": 182
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 45,
+    "unique_specialties": 52,
+    "top_specialties": [
+     [
+      "Hospitalist",
+      20
+     ],
+     [
+      "Nurse Practitioner",
+      19
+     ],
+     [
+      "Physical Therapist",
+      12
+     ],
+     [
+      "Family Practice",
+      9
+     ],
+     [
+      "Mental Health Counselor",
+      9
+     ],
+     [
+      "Cardiology",
+      8
+     ],
+     [
+      "Internal Medicine",
+      8
+     ],
+     [
+      "Gastroenterology (Digestion-Liver)",
+      7
+     ],
+     [
+      "Social Worker",
+      7
+     ],
+     [
+      "Emergency Medicine",
+      7
+     ],
+     [
+      "Physician Assistant",
+      6
+     ],
+     [
+      "Internal Medicine (Non PCP)",
+      6
+     ],
+     [
+      "Anesthesiology",
+      6
+     ],
+     [
+      "Family Practice (Non PCP)",
+      6
+     ],
+     [
+      "Psychiatry",
+      5
+     ],
+     [
+      "Surgery: General",
+      4
+     ],
+     [
+      "Radiology",
+      4
+     ],
+     [
+      "Occupational Therapist",
+      3
+     ],
+     [
+      "Nurse Practitioner (Hospitalist)",
+      3
+     ],
+     [
+      "Pulmonary Medicine (Lung)",
+      3
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapist",
+     "Mental Health Counselor",
+     "Social Worker",
+     "Psychiatry",
+     "Occupational Therapist",
+     "Nurse Practitioner (Mental Health)",
+     "Psychologist",
+     "Board Certified Behavior Analyst",
+     "Addiction Counselor",
+     "Physical Therapist - Hand"
+    ],
+    "accepting_values": {
+     "None": 818,
+     "accepting": 127,
+     "accepting in some locations": 24,
+     "not accepting": 31
+    },
+    "last_updated_min": "2026-08-08",
+    "last_updated_max": "2026-08-08",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 19,
+    "top_dup_phones": [
+     [
+      "3097793101",
+      14
+     ],
+     [
+      "3193393551",
+      13
+     ],
+     [
+      "5633363000",
+      10
+     ],
+     [
+      "9208579041",
+      10
+     ],
+     [
+      "3194626131",
+      9
+     ],
+     [
+      "5632649100",
+      9
+     ],
+     [
+      "5152067270",
+      8
+     ],
+     [
+      "3193564241",
+      8
+     ]
+    ]
+   }
+  }
+ ]
+}

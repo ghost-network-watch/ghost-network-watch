@@ -1,0 +1,183 @@
+{
+ "index_url": "https://www.thinkinghealthforward.com/Index.json",
+ "states": [
+  "MO"
+ ],
+ "issuer_ids": [
+  "96384"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.thinkinghealthforward.com/data/providers.json",
+   "http_code": 200,
+   "fetched_chars": 18446060,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 9726,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "name": 989,
+     "specialty": 989,
+     "accepting": 989,
+     "facility_name": 11,
+     "facility_type": 11
+    },
+    "type_dist": {
+     "INDIVIDUAL": 989,
+     "FACILITY": 11
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 140,
+    "unique_specialties": 120,
+    "top_specialties": [
+     [
+      "NURSE PRACTITIONER",
+      111
+     ],
+     [
+      "LICENSED",
+      111
+     ],
+     [
+      "PSYCHOLOGIST",
+      62
+     ],
+     [
+      "PHYSICIAN ASSISTANT",
+      51
+     ],
+     [
+      "FAMILY PRACTICE",
+      46
+     ],
+     [
+      "OPTOMETRY",
+      38
+     ],
+     [
+      "MEDICAL ONCOLOGY",
+      31
+     ],
+     [
+      "SOCIAL WORKER",
+      30
+     ],
+     [
+      "LICENSED CLINICAL  (LCSW)..",
+      30
+     ],
+     [
+      "PEDIATRIC ORTHOPAEDIC SURGERY",
+      23
+     ],
+     [
+      "GASTROENTEROLOGY",
+      23
+     ],
+     [
+      "OBSTETRICS/GYNECOLOGY",
+      19
+     ],
+     [
+      "FAMILY NURSE PRACTITIONER",
+      19
+     ],
+     [
+      "PEDIATRIC MEDICINE",
+      18
+     ],
+     [
+      "PEDIATRIC HOSPITALIST MEDICINE",
+      18
+     ],
+     [
+      "ADULT NURSE PRACTITIONER",
+      17
+     ],
+     [
+      "PEDIATRIC PRIMARY CARE PHYSICIAN",
+      16
+     ],
+     [
+      "PRIMARY CARE PHYSICIAN",
+      14
+     ],
+     [
+      "INTERNAL MEDICINE",
+      13
+     ],
+     [
+      "UROLOGIC SURGERY",
+      12
+     ]
+    ],
+    "bh_specialty_values": [
+     "PSYCHOLOGIST",
+     "SOCIAL WORKER",
+     "LICENSED CLINICAL  (LCSW)..",
+     "PSYCHIATRY",
+     "OCCUPATIONAL THERAPY",
+     "PHYSICAL THERAPY",
+     "PSYCHOLOGY",
+     "OCCUPATIONAL THERAPIST",
+     "ADULT PSYCHIATRY",
+     "CHILD PSYCHIATRY",
+     "HAND THERAPY"
+    ],
+    "accepting_values": {
+     "accepting": 872,
+     "None": 11,
+     "not accepting": 117
+    },
+    "last_updated_min": "2026-08-14",
+    "last_updated_max": "2026-08-14",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "3145143500",
+      50
+     ],
+     [
+      "3147471171",
+      42
+     ],
+     [
+      "4173348337",
+      42
+     ],
+     [
+      "3147472066",
+      31
+     ],
+     [
+      "4178511625",
+      23
+     ],
+     [
+      "3143627509",
+      22
+     ],
+     [
+      "4178310150",
+      18
+     ],
+     [
+      "4177615000",
+      17
+     ]
+    ]
+   }
+  }
+ ]
+}

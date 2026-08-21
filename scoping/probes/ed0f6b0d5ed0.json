@@ -1,0 +1,384 @@
+{
+ "index_url": "https://emihealth.com/Services/providerdata/cms-data-index.json",
+ "states": [
+  "AL",
+  "AZ",
+  "FL",
+  "MI",
+  "MO",
+  "NC",
+  "OH",
+  "SC",
+  "TN",
+  "TX",
+  "UT",
+  "WI",
+  "WY"
+ ],
+ "issuer_ids": [
+  "46363",
+  "53613",
+  "98869",
+  "88507",
+  "40519",
+  "93383",
+  "44346",
+  "47973",
+  "97536",
+  "91476",
+  "40335",
+  "69380",
+  "34588"
+ ],
+ "provider_urls_count": 20,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://emihealth.com/services/providerdata/providerdataAL.json",
+   "http_code": 206,
+   "fetched_chars": 1154890,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 863,
+    "analyzed": 863,
+    "field_presence": {
+     "npi": 863,
+     "type": 863,
+     "plans": 863,
+     "name": 863,
+     "addresses": 863,
+     "specialty": 863,
+     "accepting": 863,
+     "languages": 863,
+     "sex": 863,
+     "last_updated_on": 863
+    },
+    "type_dist": {
+     "INDIVIDUAL": 863
+    },
+    "npi_present": 863,
+    "npi_luhn_valid": 861,
+    "bh_matches": 154,
+    "unique_specialties": 130,
+    "top_specialties": [
+     [
+      "General Dentist",
+      777
+     ],
+     [
+      "Optometrist",
+      333
+     ],
+     [
+      "Oral Surgery",
+      93
+     ],
+     [
+      "Internal Medicine",
+      80
+     ],
+     [
+      "Cardiovascular Disease",
+      59
+     ],
+     [
+      "Surgery, Orthopedic",
+      58
+     ],
+     [
+      "Orthodontics",
+      57
+     ],
+     [
+      "Pediatrics",
+      53
+     ],
+     [
+      "Endodontics",
+      52
+     ],
+     [
+      "Psychiatry",
+      48
+     ],
+     [
+      "Family Practice",
+      48
+     ],
+     [
+      "Ophthalmology",
+      48
+     ],
+     [
+      "Obstetrics & Gynecology",
+      42
+     ],
+     [
+      "Nephrology",
+      41
+     ],
+     [
+      "Pediatric Dentist",
+      40
+     ],
+     [
+      "Urology",
+      40
+     ],
+     [
+      "Obstetrics and Gynecology",
+      38
+     ],
+     [
+      "Dermatology",
+      32
+     ],
+     [
+      "Neurology",
+      32
+     ],
+     [
+      "Surgery - Orthopedic",
+      27
+     ]
+    ],
+    "bh_specialty_values": [
+     "Psychiatry",
+     "Physical Therapy",
+     "Counseling",
+     "Therapy - Physical",
+     "Professional Counselor",
+     "Psychology",
+     "Addiction Medicine",
+     "Occupational Therapy",
+     "Clinical Social Work",
+     "Therapy - Occupational",
+     "Social Work",
+     "Licensed Professional Counselor",
+     "Neurology & Psychiatry",
+     "Addiction Psychiatry",
+     "Child/Adolescent Psychiatry",
+     "Physical Therapy & Rehabilitation Service"
+    ],
+    "accepting_values": {
+     "accepting": 849,
+     "not accepting": 14
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 863
+    },
+    "max_addresses_per_provider": 8,
+    "top_dup_phones": [
+     [
+      "2563830377",
+      45
+     ],
+     [
+      "2515803788",
+      29
+     ],
+     [
+      "2519288770",
+      26
+     ],
+     [
+      "2517067960",
+      18
+     ],
+     [
+      "2566905099",
+      16
+     ],
+     [
+      "2564443201",
+      15
+     ],
+     [
+      "3343523777",
+      15
+     ],
+     [
+      "2055107545",
+      14
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://emihealth.com/services/providerdata/providerdataOH.json",
+   "http_code": 206,
+   "fetched_chars": 5583033,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 4067,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "languages": 1000,
+     "sex": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 174,
+    "unique_specialties": 140,
+    "top_specialties": [
+     [
+      "General Dentist",
+      902
+     ],
+     [
+      "Optometrist",
+      446
+     ],
+     [
+      "Internal Medicine",
+      91
+     ],
+     [
+      "Cardiovascular Disease",
+      90
+     ],
+     [
+      "Pediatric Dentist",
+      86
+     ],
+     [
+      "Orthodontics",
+      79
+     ],
+     [
+      "Surgery, Orthopedic",
+      78
+     ],
+     [
+      "Psychiatry",
+      77
+     ],
+     [
+      "Family Practice",
+      73
+     ],
+     [
+      "Oral Surgery",
+      71
+     ],
+     [
+      "Ophthalmology",
+      66
+     ],
+     [
+      "Urology",
+      59
+     ],
+     [
+      "Obstetrics & Gynecology",
+      58
+     ],
+     [
+      "Pediatrics",
+      57
+     ],
+     [
+      "Endodontics",
+      52
+     ],
+     [
+      "Surgery",
+      47
+     ],
+     [
+      "Nephrology",
+      45
+     ],
+     [
+      "Surgery - Orthopedic",
+      43
+     ],
+     [
+      "Dermatology",
+      42
+     ],
+     [
+      "Obstetrics and Gynecology",
+      36
+     ]
+    ],
+    "bh_specialty_values": [
+     "Psychiatry",
+     "Therapy - Physical",
+     "Physical Therapy",
+     "Counseling",
+     "Therapy - Occupational",
+     "Social Work",
+     "Occupational Therapy",
+     "Psychology",
+     "Psychiatry, Child & Adolescent",
+     "Psychiatry, Geriatric",
+     "Professional Counselor",
+     "Marriage and Family Therapist",
+     "Physical Therapy & Rehabilitation Service",
+     "Speech Therapy",
+     "Psychology, Adult",
+     "Clinical Social Work",
+     "Neurology & Psychiatry"
+    ],
+    "accepting_values": {
+     "accepting": 980,
+     "not accepting": 20
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 17,
+    "top_dup_phones": [
+     [
+      "2162268750",
+      49
+     ],
+     [
+      "6148901333",
+      25
+     ],
+     [
+      "2163687238",
+      24
+     ],
+     [
+      "4409464241",
+      23
+     ],
+     [
+      "4409749530",
+      14
+     ],
+     [
+      "4403242310",
+      14
+     ],
+     [
+      "4408422200",
+      14
+     ],
+     [
+      "3304924250",
+      14
+     ]
+    ]
+   }
+  }
+ ]
+}

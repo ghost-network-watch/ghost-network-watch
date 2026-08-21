@@ -1,0 +1,189 @@
+{
+ "index_url": "https://fm.formularynavigator.com/jsonFiles/publish/200/272/cms-data-index.json",
+ "states": [
+  "UT"
+ ],
+ "issuer_ids": [
+  "98113"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://fm.formularynavigator.com/jsonFiles/publish/200/272/providers.json",
+   "http_code": 200,
+   "fetched_chars": 3763884,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 2224,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 754,
+     "specialty": 754,
+     "accepting": 754,
+     "languages": 754,
+     "facility_name": 246,
+     "facility_type": 246
+    },
+    "type_dist": {
+     "FACILITY": 246,
+     "INDIVIDUAL": 754
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 136,
+    "unique_specialties": 101,
+    "top_specialties": [
+     [
+      "NURSE PRACTITIONER",
+      145
+     ],
+     [
+      "Nurse Practitioner",
+      145
+     ],
+     [
+      "PHYSICIAN ASSISTANT",
+      104
+     ],
+     [
+      "Physician Assistant",
+      104
+     ],
+     [
+      "FAMILY PRACTICE",
+      75
+     ],
+     [
+      "Family Practice",
+      75
+     ],
+     [
+      "Social Worker",
+      53
+     ],
+     [
+      "SOCIAL WORKER",
+      53
+     ],
+     [
+      "DIAGNOSTIC RADIOLOGY",
+      41
+     ],
+     [
+      "Diagnostic Radiology",
+      41
+     ],
+     [
+      "OBSTETRICS & GYNECOLOGY",
+      36
+     ],
+     [
+      "Obstetrics & Gynecology",
+      36
+     ],
+     [
+      "LICENSED PROFESSIONAL COUNSELOR",
+      33
+     ],
+     [
+      "Licensed Professional Counselor",
+      33
+     ],
+     [
+      "INTERNAL MEDICINE",
+      32
+     ],
+     [
+      "Internal Medicine",
+      32
+     ],
+     [
+      "PEDIATRICS",
+      24
+     ],
+     [
+      "Pediatrics",
+      24
+     ],
+     [
+      "ORTHOPEDIC SURGERY",
+      23
+     ],
+     [
+      "Orthopedic Surgery",
+      23
+     ]
+    ],
+    "bh_specialty_values": [
+     "Social Worker",
+     "SOCIAL WORKER",
+     "LICENSED PROFESSIONAL COUNSELOR",
+     "Licensed Professional Counselor",
+     "BEHAVIORAL ANALYST",
+     "Behavioral Analyst",
+     "PSYCHIATRY",
+     "Psychiatry",
+     "MARRIAGE/FAMILY COUNSELOR",
+     "Physical Therapy",
+     "PHYSICAL THERAPY",
+     "Addiction Medicine",
+     "ADDICTION MEDICINE",
+     "Psychology",
+     "PSYCHOLOGY"
+    ],
+    "accepting_values": {
+     "None": 246,
+     "accepting": 710,
+     "not accepting": 35,
+     "accepting in some locations": 9
+    },
+    "last_updated_min": "2025-09-16",
+    "last_updated_max": "2025-12-16",
+    "last_updated_years": {
+     "2025": 1000
+    },
+    "max_addresses_per_provider": 11,
+    "top_dup_phones": [
+     [
+      "8662998436",
+      71
+     ],
+     [
+      "8017130600",
+      48
+     ],
+     [
+      "4353872411",
+      35
+     ],
+     [
+      "4352573684",
+      34
+     ],
+     [
+      "4356445811",
+      34
+     ],
+     [
+      "4356233000",
+      34
+     ],
+     [
+      "4355287246",
+      34
+     ],
+     [
+      "4324387100",
+      33
+     ]
+    ]
+   }
+  }
+ ]
+}

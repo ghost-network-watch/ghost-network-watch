@@ -1,0 +1,378 @@
+{
+ "index_url": "https://d3ul0st9g52g6o.cloudfront.net/ffm/cms-data-index.json",
+ "states": [
+  "AL",
+  "AZ",
+  "FL",
+  "IA",
+  "KS",
+  "MI",
+  "MO",
+  "MS",
+  "NC",
+  "NE",
+  "OH",
+  "OK",
+  "TN",
+  "TX"
+ ],
+ "issuer_ids": [
+  "17091",
+  "13877",
+  "21525",
+  "45819",
+  "43490",
+  "77739",
+  "69512",
+  "20635",
+  "69803",
+  "57424",
+  "29341",
+  "45845",
+  "91908",
+  "23552",
+  "20069"
+ ],
+ "provider_urls_count": 21,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://d3ul0st9g52g6o.cloudfront.net/ffm/providers_0.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 5532,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "specialty": 1000,
+     "languages": 1000,
+     "gender": 1000,
+     "accepting": 1000,
+     "addresses": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 467,
+    "unique_specialties": 55,
+    "top_specialties": [
+     [
+      "Mental Health Counselor",
+      222
+     ],
+     [
+      "Nurse Practitioner",
+      204
+     ],
+     [
+      "Social Worker",
+      113
+     ],
+     [
+      "Optometrist",
+      67
+     ],
+     [
+      "Psychiatrist",
+      41
+     ],
+     [
+      "Psychologist",
+      38
+     ],
+     [
+      "Audiologist",
+      35
+     ],
+     [
+      "Family Practice",
+      34
+     ],
+     [
+      "Physical Therapist",
+      32
+     ],
+     [
+      "Physician Assistant",
+      30
+     ],
+     [
+      "Behavioral Analyst",
+      26
+     ],
+     [
+      "Internal Medicine",
+      21
+     ],
+     [
+      "Marriage and Family Therapist",
+      19
+     ],
+     [
+      "Orthopedic Surgeon",
+      19
+     ],
+     [
+      "Emergency Medicine Doctor",
+      17
+     ],
+     [
+      "Dermatologist",
+      9
+     ],
+     [
+      "OBGYN (Obstetrician and Gynecologist)",
+      9
+     ],
+     [
+      "Cardiologist",
+      9
+     ],
+     [
+      "Chiropractor",
+      8
+     ],
+     [
+      "Radiologist",
+      8
+     ]
+    ],
+    "bh_specialty_values": [
+     "Mental Health Counselor",
+     "Social Worker",
+     "Psychiatrist",
+     "Psychologist",
+     "Physical Therapist",
+     "Behavioral Analyst",
+     "Marriage and Family Therapist",
+     "Speech Therapist",
+     "Occupational Therapist",
+     "Psychiatrist specializing in Pediatrics",
+     "Psychiatrist specializing in geriatrics"
+    ],
+    "accepting_values": {
+     "accepting": 947,
+     "not accepting": 46,
+     "accepting in some locations": 7
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 25,
+    "top_dup_phones": [
+     [
+      "2059300920",
+      37
+     ],
+     [
+      "2054092794",
+      33
+     ],
+     [
+      "3347935000",
+      28
+     ],
+     [
+      "2514502211",
+      22
+     ],
+     [
+      "8885404781",
+      22
+     ],
+     [
+      "7862443620",
+      20
+     ],
+     [
+      "2059717500",
+      20
+     ],
+     [
+      "2056242436",
+      20
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://d3ul0st9g52g6o.cloudfront.net/ffm/providers_14.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3184,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "specialty": 1000,
+     "languages": 1000,
+     "gender": 1000,
+     "accepting": 1000,
+     "addresses": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 540,
+    "unique_specialties": 67,
+    "top_specialties": [
+     [
+      "Mental Health Counselor",
+      199
+     ],
+     [
+      "Social Worker",
+      163
+     ],
+     [
+      "Nurse Practitioner",
+      159
+     ],
+     [
+      "Physical Therapist",
+      70
+     ],
+     [
+      "Behavioral Analyst",
+      57
+     ],
+     [
+      "Optometrist",
+      50
+     ],
+     [
+      "Physician Assistant",
+      37
+     ],
+     [
+      "Family Practice",
+      35
+     ],
+     [
+      "Psychiatrist",
+      32
+     ],
+     [
+      "Marriage and Family Therapist",
+      26
+     ],
+     [
+      "Internal Medicine",
+      24
+     ],
+     [
+      "Psychologist",
+      24
+     ],
+     [
+      "Oncologist",
+      14
+     ],
+     [
+      "Emergency Medicine Doctor",
+      13
+     ],
+     [
+      "Occupational Therapist",
+      13
+     ],
+     [
+      "Neurologist",
+      10
+     ],
+     [
+      "Cardiologist",
+      10
+     ],
+     [
+      "Critical Care Doctor",
+      9
+     ],
+     [
+      "Hospitalist",
+      9
+     ],
+     [
+      "Other",
+      9
+     ]
+    ],
+    "bh_specialty_values": [
+     "Mental Health Counselor",
+     "Social Worker",
+     "Physical Therapist",
+     "Behavioral Analyst",
+     "Psychiatrist",
+     "Marriage and Family Therapist",
+     "Psychologist",
+     "Occupational Therapist",
+     "Speech Therapist",
+     "Psychiatrist specializing in Pediatrics",
+     "Pediatrician specializing in Developmental and Behavioral He"
+    ],
+    "accepting_values": {
+     "accepting": 977,
+     "not accepting": 15,
+     "accepting in some locations": 8
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 39,
+    "top_dup_phones": [
+     [
+      "9135881227",
+      145
+     ],
+     [
+      "8448538937",
+      43
+     ],
+     [
+      "3148334030",
+      25
+     ],
+     [
+      "7858236322",
+      17
+     ],
+     [
+      "6202319873",
+      16
+     ],
+     [
+      "6202311960",
+      16
+     ],
+     [
+      "3146172000",
+      14
+     ],
+     [
+      "8889972669",
+      14
+     ]
+    ]
+   }
+  }
+ ]
+}

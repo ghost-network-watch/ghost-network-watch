@@ -1,0 +1,194 @@
+{
+ "index_url": "https://www.healthpartners.com/cms/ffm/cms-data-index.json",
+ "states": [
+  "WI"
+ ],
+ "issuer_ids": [
+  "20173"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.healthpartners.com/cms/ffm/PROVIDER.json",
+   "http_code": 200,
+   "fetched_chars": 209715200,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 221825,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "sex": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 107,
+    "unique_specialties": 62,
+    "top_specialties": [
+     [
+      "Family Medicine",
+      140
+     ],
+     [
+      "Physician Assistant",
+      89
+     ],
+     [
+      "Optometry",
+      82
+     ],
+     [
+      "Cardiology",
+      57
+     ],
+     [
+      "Nurse Practitioner",
+      47
+     ],
+     [
+      "Orthopedic Surgery",
+      43
+     ],
+     [
+      "Surgery",
+      38
+     ],
+     [
+      "Chiropractic",
+      38
+     ],
+     [
+      "Internal Medicine",
+      35
+     ],
+     [
+      "Pediatrics",
+      32
+     ],
+     [
+      "Psychologist",
+      31
+     ],
+     [
+      "Psychiatry",
+      27
+     ],
+     [
+      "Obstetrics & Gynecology",
+      23
+     ],
+     [
+      "Social Worker",
+      22
+     ],
+     [
+      "Otolaryngology",
+      20
+     ],
+     [
+      "Gastroenterology",
+      19
+     ],
+     [
+      "Oncology",
+      18
+     ],
+     [
+      "Ophthalmology",
+      17
+     ],
+     [
+      "Urology",
+      16
+     ],
+     [
+      "Professional Counselor",
+      14
+     ]
+    ],
+    "bh_specialty_values": [
+     "Psychologist",
+     "Psychiatry",
+     "Social Worker",
+     "Professional Counselor",
+     "Child & Adolescent Psychiatry",
+     "Marriage and Family Therapist",
+     "Addiction Medicine"
+    ],
+    "accepting_values": {
+     "accepting": 738,
+     "not accepting": 56,
+     "accepting in some locations": 206
+    },
+    "last_updated_min": "2007-03-28",
+    "last_updated_max": "2026-08-14",
+    "last_updated_years": {
+     "2024": 93,
+     "2025": 130,
+     "2021": 50,
+     "2026": 610,
+     "2019": 12,
+     "2012": 3,
+     "2023": 43,
+     "2018": 9,
+     "2014": 1,
+     "2017": 4,
+     "2007": 3,
+     "2022": 19,
+     "2020": 16,
+     "2010": 2,
+     "2011": 1,
+     "2015": 1,
+     "2008": 3
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "6087827300",
+      127
+     ],
+     [
+      "6087758100",
+      43
+     ],
+     [
+      "7155316800",
+      30
+     ],
+     [
+      "8008283627",
+      27
+     ],
+     [
+      "7152942111",
+      25
+     ],
+     [
+      "7154833221",
+      19
+     ],
+     [
+      "7158177100",
+      18
+     ],
+     [
+      "7156841111",
+      17
+     ]
+    ]
+   }
+  }
+ ]
+}

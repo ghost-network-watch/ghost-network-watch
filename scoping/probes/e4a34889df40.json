@@ -1,0 +1,356 @@
+{
+ "index_url": "https://azblue.com/JSON/Index.JSON",
+ "states": [
+  "AZ"
+ ],
+ "issuer_ids": [
+  "53901"
+ ],
+ "provider_urls_count": 5,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.azblue.com/JSON/Provider_IN_1.JSON",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1631,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 234,
+    "unique_specialties": 75,
+    "top_specialties": [
+     [
+      "Physician Assistant",
+      88
+     ],
+     [
+      "Licensed Professional Counselor",
+      85
+     ],
+     [
+      "Family Nurse Practitioner",
+      80
+     ],
+     [
+      "Certified Registered Nurse Anesthetist",
+      61
+     ],
+     [
+      "Anesthesiology",
+      60
+     ],
+     [
+      "Radiology, Diagnostic",
+      55
+     ],
+     [
+      "Emergency Medicine",
+      51
+     ],
+     [
+      "Licensed Clinical Social Worker",
+      36
+     ],
+     [
+      "Dentistry, General",
+      36
+     ],
+     [
+      "Psychiatric Nurse Practitioner",
+      32
+     ],
+     [
+      "Hospitalist",
+      30
+     ],
+     [
+      "Chiropractic",
+      29
+     ],
+     [
+      "Internal Medicine",
+      27
+     ],
+     [
+      "Pediatrics",
+      24
+     ],
+     [
+      "Family Medicine",
+      19
+     ],
+     [
+      "Physical Therapy & Rehabilitation Service",
+      16
+     ],
+     [
+      "Behavioral Analyst",
+      16
+     ],
+     [
+      "Cardiovascular Disease",
+      15
+     ],
+     [
+      "Psychiatry, Adult, Adolescent, & Child",
+      14
+     ],
+     [
+      "Optometry",
+      13
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Professional Counselor",
+     "Licensed Clinical Social Worker",
+     "Psychiatric Nurse Practitioner",
+     "Physical Therapy & Rehabilitation Service",
+     "Behavioral Analyst",
+     "Psychiatry, Adult, Adolescent, & Child",
+     "Licensed Marriage and Family Therapy",
+     "Psychology, Adult and Adolescent",
+     "Psychiatry, Adult & Adolescent",
+     "Speech Therapy",
+     "Psychology, Adult, Adolescent and Child",
+     "Psychiatry, Neurology",
+     "Occupational Therapy",
+     "Psychiatry, Adolescent & Child",
+     "Psychology, Adult",
+     "Licensed Independent Addiction Counselor"
+    ],
+    "accepting_values": {
+     "accepting": 977,
+     "not accepting": 23
+    },
+    "last_updated_min": "2026-06-29",
+    "last_updated_max": "2026-06-29",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 55,
+    "top_dup_phones": [
+     [
+      "6469417645",
+      66
+     ],
+     [
+      "8004020881",
+      59
+     ],
+     [
+      "4804255000",
+      59
+     ],
+     [
+      "6028396968",
+      46
+     ],
+     [
+      "6232998743",
+      38
+     ],
+     [
+      "6026855211",
+      38
+     ],
+     [
+      "5206948888",
+      35
+     ],
+     [
+      "8666148555",
+      27
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.azblue.com/JSON/Provider_IN_3.JSON",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1602,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 258,
+    "unique_specialties": 80,
+    "top_specialties": [
+     [
+      "Family Nurse Practitioner",
+      108
+     ],
+     [
+      "Licensed Professional Counselor",
+      74
+     ],
+     [
+      "Physician Assistant",
+      74
+     ],
+     [
+      "Psychiatric Nurse Practitioner",
+      54
+     ],
+     [
+      "Dentistry, General",
+      48
+     ],
+     [
+      "Radiology, Diagnostic",
+      48
+     ],
+     [
+      "Certified Registered Nurse Anesthetist",
+      45
+     ],
+     [
+      "Anesthesiology",
+      44
+     ],
+     [
+      "Licensed Clinical Social Worker",
+      34
+     ],
+     [
+      "Emergency Medicine",
+      34
+     ],
+     [
+      "Internal Medicine",
+      32
+     ],
+     [
+      "Family Medicine",
+      29
+     ],
+     [
+      "Optometry",
+      25
+     ],
+     [
+      "Hospitalist",
+      24
+     ],
+     [
+      "Behavioral Analyst",
+      22
+     ],
+     [
+      "Physical Therapy & Rehabilitation Service",
+      22
+     ],
+     [
+      "Acute Care Nurse Practitioner",
+      20
+     ],
+     [
+      "Ophthalmology",
+      18
+     ],
+     [
+      "Licensed Marriage and Family Therapy",
+      17
+     ],
+     [
+      "Pediatrics",
+      16
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Professional Counselor",
+     "Psychiatric Nurse Practitioner",
+     "Licensed Clinical Social Worker",
+     "Behavioral Analyst",
+     "Physical Therapy & Rehabilitation Service",
+     "Licensed Marriage and Family Therapy",
+     "Psychiatry, Adult, Adolescent, & Child",
+     "Occupational Therapy",
+     "Psychology, Adult, Adolescent and Child",
+     "Psychiatry, Neurology",
+     "Psychology, Adult and Adolescent",
+     "Speech Therapy",
+     "Neuropsychology",
+     "Psychiatry, Adult",
+     "Licensed Independent Addiction Counselor"
+    ],
+    "accepting_values": {
+     "accepting": 982,
+     "not accepting": 18
+    },
+    "last_updated_min": "2026-06-29",
+    "last_updated_max": "2026-06-29",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 75,
+    "top_dup_phones": [
+     [
+      "4806107400",
+      84
+     ],
+     [
+      "6469417645",
+      73
+     ],
+     [
+      "5206948888",
+      36
+     ],
+     [
+      "8004020881",
+      36
+     ],
+     [
+      "6236837050",
+      23
+     ],
+     [
+      "4805432000",
+      22
+     ],
+     [
+      "6026485444",
+      22
+     ],
+     [
+      "5205436960",
+      22
+     ]
+    ]
+   }
+  }
+ ]
+}

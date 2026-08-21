@@ -1,0 +1,263 @@
+{
+ "index_url": "https://www.bcbstx.com/aca-json/tx/index_tx.json",
+ "states": [
+  "TX"
+ ],
+ "issuer_ids": [
+  "33602"
+ ],
+ "provider_urls_count": 84,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.bcbstx.com/aca-json/tx/medical_provider_FACILITY_TX1_BAV_1.json",
+   "http_code": 200,
+   "fetched_chars": 114080581,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 2175,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "type": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2014-05-13",
+    "last_updated_max": "2026-06-06",
+    "last_updated_years": {
+     "2025": 348,
+     "2026": 282,
+     "2021": 14,
+     "2019": 55,
+     "2024": 238,
+     "2023": 34,
+     "2022": 21,
+     "2020": 6,
+     "2015": 1,
+     "2014": 1
+    },
+    "max_addresses_per_provider": 15,
+    "top_dup_phones": [
+     [
+      "4092966000",
+      15
+     ],
+     [
+      "2547242111",
+      5
+     ],
+     [
+      "8778258584",
+      4
+     ],
+     [
+      "2106989844",
+      4
+     ],
+     [
+      "7137415000",
+      4
+     ],
+     [
+      "7134565000",
+      3
+     ],
+     [
+      "2106141234",
+      3
+     ],
+     [
+      "9729919504",
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.bcbstx.com/aca-json/tx/medical_provider_INDIVIDUAL_TX1_BAV_34.json",
+   "http_code": 200,
+   "fetched_chars": 198133651,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 3756,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "languages": 1000,
+     "gender": 1000,
+     "addresses": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 317,
+    "unique_specialties": 73,
+    "top_specialties": [
+     [
+      "Licensed Clinical Professional Counselor",
+      127
+     ],
+     [
+      "ANP/CERT/CLNP",
+      118
+     ],
+     [
+      "Family Practice",
+      99
+     ],
+     [
+      "Internal Medicine",
+      76
+     ],
+     [
+      "Licensed Clinical Social Worker",
+      56
+     ],
+     [
+      "Physical Therapy",
+      52
+     ],
+     [
+      "Emergency Medicine",
+      49
+     ],
+     [
+      "Physician Assistant",
+      41
+     ],
+     [
+      "Nurse Anesthetist",
+      40
+     ],
+     [
+      "Board Certified Behavior Analyst",
+      32
+     ],
+     [
+      "Radiology",
+      27
+     ],
+     [
+      "Speech Pathology",
+      26
+     ],
+     [
+      "Anesthesiology",
+      24
+     ],
+     [
+      "Nutrition & Dietetics",
+      24
+     ],
+     [
+      "Pediatrics",
+      23
+     ],
+     [
+      "Urgent Care Provider",
+      20
+     ],
+     [
+      "Optometry",
+      20
+     ],
+     [
+      "Occupational Therapy",
+      15
+     ],
+     [
+      "General Surgery",
+      14
+     ],
+     [
+      "Psychiatry",
+      13
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Clinical Professional Counselor",
+     "Licensed Clinical Social Worker",
+     "Physical Therapy",
+     "Board Certified Behavior Analyst",
+     "Occupational Therapy",
+     "Psychiatry",
+     "Clinical Psychology",
+     "Licensed Marriage/Family Therapy",
+     "Licensed Chemical Dependency Counselor",
+     "Licensed Psychological Associate",
+     "Board Certified Assistant Behavior Analyst",
+     "Developmental-Behavioral Pediatrics"
+    ],
+    "accepting_values": {
+     "not accepting": 124,
+     "accepting": 754,
+     "accepting in some locations": 122
+    },
+    "last_updated_min": "2026-06-07",
+    "last_updated_max": "2026-06-07",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 37,
+    "top_dup_phones": [
+     [
+      "6469417645",
+      84
+     ],
+     [
+      "9035832111",
+      69
+     ],
+     [
+      "2147428387",
+      60
+     ],
+     [
+      "8173552202",
+      54
+     ],
+     [
+      "2547432048",
+      47
+     ],
+     [
+      "8328694818",
+      42
+     ],
+     [
+      "8663939132",
+      37
+     ],
+     [
+      "7137947100",
+      34
+     ]
+    ]
+   }
+  }
+ ]
+}

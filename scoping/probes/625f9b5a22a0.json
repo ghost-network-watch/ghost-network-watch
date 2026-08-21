@@ -1,0 +1,254 @@
+{
+ "index_url": "https://www.mercycarehealthplans.com/wp-content/uploads/JSON/cms-data-index.json",
+ "states": [
+  "WI"
+ ],
+ "issuer_ids": [
+  "58326"
+ ],
+ "provider_urls_count": 2,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://s3.us-west-2.amazonaws.com/prd2-directory-generation-service-machine-readable-json/MERCYCARE/providers.json",
+   "http_code": 206,
+   "fetched_chars": 7270825,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 2681,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "name": 761,
+     "facility_name": 221,
+     "facility_type": 221,
+     "group_name": 18
+    },
+    "type_dist": {
+     "INDIVIDUAL": 761,
+     "FACILITY": 221,
+     "GROUP": 18
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 999,
+    "bh_matches": 419,
+    "unique_specialties": 127,
+    "top_specialties": [
+     [
+      "Clinical Social Worker",
+      76
+     ],
+     [
+      "Professional Counseling",
+      71
+     ],
+     [
+      "Family Nurse Practitioner",
+      59
+     ],
+     [
+      "Family Medicine",
+      56
+     ],
+     [
+      "Physician Assistant",
+      46
+     ],
+     [
+      "Psychiatric Nurse Practitioner",
+      44
+     ],
+     [
+      "Psychiatry",
+      39
+     ],
+     [
+      "Mental Health Counseling",
+      39
+     ],
+     [
+      "Chiropractor",
+      31
+     ],
+     [
+      "Nurse Practitioner",
+      31
+     ],
+     [
+      "Physical Therapy",
+      29
+     ],
+     [
+      "Clinic/Center",
+      29
+     ],
+     [
+      "Mental Health Clinic/Center",
+      22
+     ],
+     [
+      "Internal Medicine",
+      22
+     ],
+     [
+      "Social Worker",
+      19
+     ],
+     [
+      "Obstetrics & Gynecology",
+      18
+     ],
+     [
+      "Home Infusion Agency",
+      16
+     ],
+     [
+      "Marriage & Family Therapy",
+      16
+     ],
+     [
+      "Behavioral Health Counseling",
+      16
+     ],
+     [
+      "General Surgery",
+      14
+     ]
+    ],
+    "bh_specialty_values": [
+     "Clinical Social Worker",
+     "Professional Counseling",
+     "Psychiatric Nurse Practitioner",
+     "Psychiatry",
+     "Mental Health Counseling",
+     "Physical Therapy",
+     "Mental Health Clinic/Center",
+     "Social Worker",
+     "Marriage & Family Therapy",
+     "Behavioral Health Counseling",
+     "Clinical Psychology",
+     "Addiction (Substance Use Disorder) Counseling",
+     "Psychology",
+     "Occupational Therapy",
+     "Child & Adolescent Mental Health Clinic/Center",
+     "Child & Adolescent Psychiatry",
+     "Substance Use Disorder Rehabilitation Clinic/Center",
+     "Addiction Medicine (Internal Medicine)",
+     "Addiction Medicine (Family Medicine)",
+     "Adult Mental Health Clinic/Center",
+     "Community/Behavioral Health Agency",
+     "Psychiatric Hospital",
+     "Behavioral Neurology & Neuropsychiatry",
+     "Adult Psychiatric/Mental Health Clinical Nurse Specialist",
+     "Geriatric Psychiatry"
+    ],
+    "accepting_values": {
+     "accepting": 973,
+     "not accepting": 27
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 5,
+    "top_dup_phones": [
+     [
+      "8159717000",
+      93
+     ],
+     [
+      "6087566000",
+      55
+     ],
+     [
+      "8882206432",
+      54
+     ],
+     [
+      "8159712000",
+      54
+     ],
+     [
+      "8154901600",
+      47
+     ],
+     [
+      "7792205500",
+      39
+     ],
+     [
+      "2622450535",
+      38
+     ],
+     [
+      "8774483627",
+      36
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://mercycarehealthplans.com/mercy-endpoint/pharmacies",
+   "http_code": 200,
+   "fetched_chars": 6494022,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 1290,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "addresses": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 1000
+    },
+    "last_updated_min": "2026-08-21",
+    "last_updated_max": "2026-08-21",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "9526532525",
+      44
+     ],
+     [
+      "8473818899",
+      7
+     ],
+     [
+      "7157623283",
+      2
+     ],
+     [
+      "7155262011",
+      2
+     ]
+    ]
+   }
+  }
+ ]
+}

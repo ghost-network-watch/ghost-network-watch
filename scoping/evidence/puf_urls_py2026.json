@@ -1,0 +1,34 @@
+{
+  "verified": "2026-08-21",
+  "notes": "All URLs verified live 2026-08-21 (HTTP 200). CMS PUF page (https://www.cms.gov/marketplace/resources/data/public-use-files) serves 403 to non-browser User-Agents; use browser UA.",
+  "cms_marketplace_pufs_py2026": {
+    "plan_attributes": "https://download.cms.gov/marketplace-puf/2026/plan-attributes-puf.zip",
+    "service_area": "https://download.cms.gov/marketplace-puf/2026/service-area-puf.zip",
+    "benefits_and_cost_sharing": "https://download.cms.gov/marketplace-puf/2026/benefits-and-cost-sharing-puf.zip",
+    "rate": "https://download.cms.gov/marketplace-puf/2026/rate-puf.zip",
+    "network": "https://download.cms.gov/marketplace-puf/2026/network-puf.zip",
+    "business_rules": "https://download.cms.gov/marketplace-puf/2026/business-rules-puf.zip",
+    "plan_id_crosswalk": "https://download.cms.gov/marketplace-puf/2026/plan-id-crosswalk-puf.zip",
+    "machine_readable_url": "https://download.cms.gov/marketplace-puf/2026/machine-readable-url-puf.zip",
+    "transparency_in_coverage": "https://download.cms.gov/marketplace-puf/2026/transparency-in-coverage-puf.zip"
+  },
+  "data_dictionaries_py2026": {
+    "plan_attributes": "https://www.cms.gov/files/document/planattributes-datadictionary-py26.pdf",
+    "service_area": "https://www.cms.gov/files/document/servicearea-datadictionary-py26.pdf",
+    "network": "https://www.cms.gov/files/document/network-datadictionary-py26.pdf",
+    "machine_readable": "https://www.cms.gov/files/document/machinereadable-datadictionary-py26.pdf",
+    "plan_id_crosswalk": "https://www.cms.gov/files/document/plan-id-crosswalk-datadictionary-py26.pdf"
+  },
+  "qhp_landscape_py2026": {
+    "individual_market_medical": "https://data.healthcare.gov/datafile/py2026/individual_market_medical.zip",
+    "individual_market_dental": "https://data.healthcare.gov/datafile/py2026/individual_market_dental.zip",
+    "notes": "xlsx inside zip; sheet Individual_Market_Medical; header on row 2; one row per plan per county; 97,082 rows / 4,044 unique 14-char plan IDs for PY2026 medical."
+  },
+  "zip_to_county": {
+    "hud_usps_crosswalk_page": "https://www.huduser.gov/portal/datasets/usps_crosswalk.html",
+    "hud_api": "https://www.huduser.gov/portal/dataset/uspszip-api.html",
+    "notes": "ZIP-COUNTY file, quarterly, cols ZIP/COUNTY(5-digit FIPS)/RES_RATIO/BUS_RATIO/OTH_RATIO/TOT_RATIO. Free but requires account login for file download or free API token.",
+    "census_zcta_county_alternative": "https://www2.census.gov/geo/docs/maps-data/data/rel2020/zcta520/tab20_zcta520_county20_natl.txt"
+  },
+  "mr_spec": "https://github.com/CMSgov/QHP-provider-formulary-APIs"
+}

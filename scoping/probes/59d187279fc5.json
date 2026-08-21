@@ -1,0 +1,274 @@
+{
+ "index_url": "https://secure.arkansasbluecross.com/doclib/QHP/index.json",
+ "states": [
+  "AR"
+ ],
+ "issuer_ids": [
+  "75293"
+ ],
+ "provider_urls_count": 2,
+ "plan_urls_count": 2,
+ "files": [
+  {
+   "url": "https://secure.arkansasbluecross.com/doclib/QHP/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1862,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "name": 943,
+     "specialty": 943,
+     "accepting": 943,
+     "Gender": 943,
+     "facility_name": 54,
+     "facility_type": 54,
+     "group_name": 3
+    },
+    "type_dist": {
+     "INDIVIDUAL": 943,
+     "FACILITY": 54,
+     "GROUP": 3
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 261,
+    "unique_specialties": 66,
+    "top_specialties": [
+     [
+      "Certified Nurse Practitioner",
+      87
+     ],
+     [
+      "Professional Counselor",
+      78
+     ],
+     [
+      "Certified Nurse Prac PC",
+      76
+     ],
+     [
+      "Speech Pathology",
+      65
+     ],
+     [
+      "Physical Therapy",
+      62
+     ],
+     [
+      "Certified Social Worker",
+      58
+     ],
+     [
+      "Family Medicine",
+      53
+     ],
+     [
+      "CRNA",
+      38
+     ],
+     [
+      "Internal Medicine",
+      33
+     ],
+     [
+      "Dentistry",
+      32
+     ],
+     [
+      "Occupational Therapy",
+      31
+     ],
+     [
+      "Radiology/Diagnostic",
+      31
+     ],
+     [
+      "Pediatric Medicine",
+      26
+     ],
+     [
+      "Chiropractor",
+      23
+     ],
+     [
+      "Physician Assistant",
+      21
+     ],
+     [
+      "Obstetrics/Gynecology",
+      16
+     ],
+     [
+      "General Surgery",
+      15
+     ],
+     [
+      "Optometry",
+      14
+     ],
+     [
+      "Pharmacist",
+      13
+     ],
+     [
+      "Psychiatry",
+      13
+     ]
+    ],
+    "bh_specialty_values": [
+     "Professional Counselor",
+     "Physical Therapy",
+     "Certified Social Worker",
+     "Occupational Therapy",
+     "Psychiatry",
+     "Psychology (Clinical)",
+     "Behavioral Analyst",
+     "Psychological Examiner"
+    ],
+    "accepting_values": {
+     "accepting": 935,
+     "None": 57,
+     "not accepting": 8
+    },
+    "last_updated_min": "2006-03-29",
+    "last_updated_max": "2026-07-30",
+    "last_updated_years": {
+     "2022": 68,
+     "2006": 85,
+     "2007": 53,
+     "2023": 96,
+     "2012": 30,
+     "2020": 53,
+     "2017": 36,
+     "2008": 16,
+     "2014": 21,
+     "2021": 58,
+     "2010": 14,
+     "2015": 41,
+     "2011": 15,
+     "2024": 106,
+     "2025": 115,
+     "2026": 19,
+     "2019": 40,
+     "2016": 41,
+     "2009": 22,
+     "2018": 46,
+     "2013": 25
+    },
+    "max_addresses_per_provider": 44,
+    "top_dup_phones": [
+     [
+      "5016031900",
+      40
+     ],
+     [
+      "5013644400",
+      38
+     ],
+     [
+      "8887108220",
+      26
+     ],
+     [
+      "5013644000",
+      25
+     ],
+     [
+      "5013641100",
+      23
+     ],
+     [
+      "5012022093",
+      23
+     ],
+     [
+      "5015003500",
+      22
+     ],
+     [
+      "5019063000",
+      20
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://secure.arkansasbluecross.com/doclib/QHP/pharmacies.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2154,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "plans": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-08-04",
+    "last_updated_max": "2026-08-04",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "8774209400",
+      4
+     ],
+     [
+      "5012252222",
+      2
+     ],
+     [
+      "8702512432",
+      2
+     ],
+     [
+      "4794433411",
+      2
+     ],
+     [
+      "5012682536",
+      2
+     ],
+     [
+      "8703675301",
+      2
+     ],
+     [
+      "8708563080",
+      2
+     ],
+     [
+      "8705385233",
+      2
+     ]
+    ]
+   }
+  }
+ ]
+}

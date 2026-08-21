@@ -1,0 +1,261 @@
+{
+ "index_url": "https://www.bcbsok.com/aca-json/ok/index_ok.json",
+ "states": [
+  "OK"
+ ],
+ "issuer_ids": [
+  "87571"
+ ],
+ "provider_urls_count": 16,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.bcbsok.com/aca-json/ok/medical_provider_FACILITY_OK1_BAV_1.json",
+   "http_code": 206,
+   "fetched_chars": 1789505,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 581,
+    "analyzed": 581,
+    "field_presence": {
+     "npi": 581,
+     "addresses": 581,
+     "plans": 581,
+     "type": 581,
+     "facility_name": 581,
+     "facility_type": 581,
+     "last_updated_on": 581
+    },
+    "type_dist": {
+     "FACILITY": 581
+    },
+    "npi_present": 581,
+    "npi_luhn_valid": 581,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 581
+    },
+    "last_updated_min": "2022-03-14",
+    "last_updated_max": "2026-06-05",
+    "last_updated_years": {
+     "2024": 201,
+     "2025": 157,
+     "2026": 115,
+     "2022": 46,
+     "2023": 62
+    },
+    "max_addresses_per_provider": 7,
+    "top_dup_phones": [
+     [
+      "8664342597",
+      13
+     ],
+     [
+      "4059477700",
+      10
+     ],
+     [
+      "9187862275",
+      9
+     ],
+     [
+      "5803322323",
+      8
+     ],
+     [
+      "4053774434",
+      7
+     ],
+     [
+      "5807636021",
+      7
+     ],
+     [
+      "9183426705",
+      6
+     ],
+     [
+      "9187564233",
+      6
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.bcbsok.com/aca-json/ok/medical_provider_INDIVIDUAL_OK1_EPP_1.json",
+   "http_code": 200,
+   "fetched_chars": 65537353,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 24284,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "languages": 1000,
+     "gender": 1000,
+     "addresses": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 331,
+    "unique_specialties": 89,
+    "top_specialties": [
+     [
+      "Licensed Clinical Professional Counselor",
+      143
+     ],
+     [
+      "Family Practice",
+      119
+     ],
+     [
+      "Certified Nurse Practitioner",
+      72
+     ],
+     [
+      "Internal Medicine",
+      65
+     ],
+     [
+      "Physical Therapy",
+      56
+     ],
+     [
+      "Anesthesiology",
+      50
+     ],
+     [
+      "Physician Assistant",
+      38
+     ],
+     [
+      "Emergency Medicine",
+      35
+     ],
+     [
+      "Licensed Clinical Social Worker",
+      34
+     ],
+     [
+      "Speech Pathology",
+      33
+     ],
+     [
+      "Radiology",
+      29
+     ],
+     [
+      "Pediatrics",
+      26
+     ],
+     [
+      "Board Certified Behavior Analyst",
+      23
+     ],
+     [
+      "Chiropractic",
+      21
+     ],
+     [
+      "Obstetrics-Gynecology",
+      20
+     ],
+     [
+      "Orthopedic Surgery",
+      20
+     ],
+     [
+      "Optometry",
+      17
+     ],
+     [
+      "Psychiatry",
+      15
+     ],
+     [
+      "Occupational Therapy",
+      15
+     ],
+     [
+      "Nurse Anesthetist",
+      14
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Clinical Professional Counselor",
+     "Physical Therapy",
+     "Licensed Clinical Social Worker",
+     "Board Certified Behavior Analyst",
+     "Psychiatry",
+     "Occupational Therapy",
+     "Licensed Marriage/Family Therapy",
+     "Clinical Psychology",
+     "Licensed Alcohol and Drug Counselor",
+     "Counseling",
+     "Social Worker",
+     "Child & Adolescent Psychiatry",
+     "Child & Adolescents Psychology",
+     "Osteopathic Manipulative Therapy",
+     "Addiction Medicine"
+    ],
+    "accepting_values": {
+     "accepting": 981,
+     "accepting in some locations": 14,
+     "not accepting": 5
+    },
+    "last_updated_min": "2026-06-07",
+    "last_updated_max": "2026-06-07",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 19,
+    "top_dup_phones": [
+     [
+      "4052724978",
+      22
+     ],
+     [
+      "8557827822",
+      20
+     ],
+     [
+      "6469417645",
+      19
+     ],
+     [
+      "9187443131",
+      17
+     ],
+     [
+      "9184948500",
+      15
+     ],
+     [
+      "9189948000",
+      14
+     ],
+     [
+      "9185021900",
+      14
+     ],
+     [
+      "4052714351",
+      13
+     ]
+    ]
+   }
+  }
+ ]
+}

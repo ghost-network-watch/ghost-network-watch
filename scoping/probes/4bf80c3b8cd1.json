@@ -1,0 +1,217 @@
+{
+ "index_url": "https://fl-d4h.dentaltotalhealth.com/healthcare-data/FL/cms-data-index.json",
+ "states": [
+  "FL"
+ ],
+ "issuer_ids": [
+  "30115"
+ ],
+ "provider_urls_count": 10,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://fl-d4h.dentaltotalhealth.com/healthcare-data/FL/providers_1.json",
+   "http_code": 206,
+   "fetched_chars": 6527127,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 7283,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "accepting": 1000,
+     "specialty": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "General Dentist",
+      789
+     ],
+     [
+      "Pedodontist",
+      62
+     ],
+     [
+      "Orthodontist",
+      59
+     ],
+     [
+      "Oral Surgeon",
+      31
+     ],
+     [
+      "Endodontist",
+      27
+     ],
+     [
+      "Periodontist",
+      20
+     ],
+     [
+      "Prosthodontist",
+      12
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 935,
+     "not accepting": 65
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 69,
+    "top_dup_phones": [
+     [
+      "8553764533",
+      146
+     ],
+     [
+      "7704488882",
+      45
+     ],
+     [
+      "8552036038",
+      32
+     ],
+     [
+      "8005793783",
+      30
+     ],
+     [
+      "8004924227",
+      28
+     ],
+     [
+      "7706921000",
+      28
+     ],
+     [
+      "8175298151",
+      20
+     ],
+     [
+      "8889884066",
+      16
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://fl-d4h.dentaltotalhealth.com/healthcare-data/FL/providers_5.json",
+   "http_code": 206,
+   "fetched_chars": 6400386,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 7283,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "accepting": 1000,
+     "specialty": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "General Dentist",
+      800
+     ],
+     [
+      "Pedodontist",
+      68
+     ],
+     [
+      "Orthodontist",
+      61
+     ],
+     [
+      "Oral Surgeon",
+      36
+     ],
+     [
+      "Endodontist",
+      18
+     ],
+     [
+      "Prosthodontist",
+      9
+     ],
+     [
+      "Periodontist",
+      8
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 892,
+     "not accepting": 108
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 52,
+    "top_dup_phones": [
+     [
+      "8553764533",
+      74
+     ],
+     [
+      "7022912031",
+      30
+     ],
+     [
+      "7706921000",
+      27
+     ],
+     [
+      "8004924227",
+      21
+     ],
+     [
+      "6185199200",
+      17
+     ],
+     [
+      "2818241490",
+      14
+     ],
+     [
+      "3173995771",
+      14
+     ],
+     [
+      "2538482331",
+      11
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,187 @@
+{
+ "index_url": "https://providersearch.medmutual.com/cms-data-index.json",
+ "states": [
+  "OH"
+ ],
+ "issuer_ids": [
+  "99969"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://providersearch.medmutual.com/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2160,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 995,
+     "specialty": 995,
+     "accepting": 995,
+     "gender": 995,
+     "languages": 995,
+     "facility_name": 5,
+     "facility_type": 5
+    },
+    "type_dist": {
+     "INDIVIDUAL": 995,
+     "FACILITY": 5
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 327,
+    "unique_specialties": 88,
+    "top_specialties": [
+     [
+      "Primary Care Physician (PCP)",
+      216
+     ],
+     [
+      "Licensed Independent Social Worker",
+      89
+     ],
+     [
+      "Licensed Professional Clinical Counselor",
+      86
+     ],
+     [
+      "Pediatrician",
+      68
+     ],
+     [
+      "Advanced Nurse Practitioner",
+      58
+     ],
+     [
+      "Family Medicine Doctor",
+      57
+     ],
+     [
+      "Psychologist",
+      50
+     ],
+     [
+      "Family Nurse Practitioner",
+      44
+     ],
+     [
+      "Internal Medicine Doctor",
+      42
+     ],
+     [
+      "Obstetrics - Gynecologist",
+      39
+     ],
+     [
+      "Adult Nurse Practitioner",
+      36
+     ],
+     [
+      "Psychiatrist",
+      32
+     ],
+     [
+      "Physical Therapist",
+      31
+     ],
+     [
+      "Cardiologist",
+      29
+     ],
+     [
+      "General Surgeon",
+      23
+     ],
+     [
+      "Orthopedic Surgeon",
+      22
+     ],
+     [
+      "Neurologist",
+      21
+     ],
+     [
+      "Podiatrist",
+      19
+     ],
+     [
+      "Gastroenterologist",
+      17
+     ],
+     [
+      "Ophthalmologist",
+      16
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Independent Social Worker",
+     "Licensed Professional Clinical Counselor",
+     "Psychologist",
+     "Psychiatrist",
+     "Physical Therapist",
+     "Child & Adolescent Psychiatrist",
+     "Adult Psychiatric & MH Cns/Np",
+     "Occupational Therapist",
+     "Addiction Medicine Doctor",
+     "Audiologist - Speech Therapist",
+     "Family Psychology And MH Np",
+     "Child Adolescent Psychology MH Cns",
+     "Geriatric Psychiatrist"
+    ],
+    "accepting_values": {
+     "accepting": 898,
+     "not accepting": 97,
+     "None": 5
+    },
+    "last_updated_min": "2026-06-26",
+    "last_updated_max": "2026-06-26",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 18,
+    "top_dup_phones": [
+     [
+      "6147545600",
+      38
+     ],
+     [
+      "2166963876",
+      37
+     ],
+     [
+      "2168443800",
+      24
+     ],
+     [
+      "6145335500",
+      19
+     ],
+     [
+      "2164685000",
+      16
+     ],
+     [
+      "2162810872",
+      15
+     ],
+     [
+      "5133543700",
+      15
+     ],
+     [
+      "6143289927",
+      15
+     ]
+    ]
+   }
+  }
+ ]
+}

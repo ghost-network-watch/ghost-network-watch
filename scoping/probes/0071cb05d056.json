@@ -1,0 +1,343 @@
+{
+ "index_url": "https://apps.quartzbenefits.com/cmsfiles/CMS-INDEX-JSON.json",
+ "states": [
+  "WI"
+ ],
+ "issuer_ids": [
+  "37833"
+ ],
+ "provider_urls_count": 6,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://apps.quartzbenefits.com/cmsfiles/PROVIDERS1.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 582,
+    "analyzed": 582,
+    "field_presence": {
+     "npi": 582,
+     "accepting": 582,
+     "type": 582,
+     "last_updated_on": 582,
+     "name": 582,
+     "sex": 582,
+     "addresses": 582,
+     "specialty": 582,
+     "languages": 582,
+     "plans": 582
+    },
+    "type_dist": {
+     "INDIVIDUAL": 582
+    },
+    "npi_present": 582,
+    "npi_luhn_valid": 582,
+    "bh_matches": 175,
+    "unique_specialties": 88,
+    "top_specialties": [
+     [
+      "BEHAVIORAL HEALTH THERAPIST",
+      115
+     ],
+     [
+      "FAMILY MEDICINE",
+      49
+     ],
+     [
+      "FAMILY MEDICINE NURSE PRACTITIONER",
+      24
+     ],
+     [
+      "OPTOMETRY",
+      22
+     ],
+     [
+      "CHIROPRACTOR",
+      20
+     ],
+     [
+      "BEHAVIORAL HEALTH SUBSTANCE ABUSE",
+      20
+     ],
+     [
+      "ORTHOPAEDIC SURGERY",
+      16
+     ],
+     [
+      "BEHAVIORAL HEALTH PSYCHOLOGY",
+      15
+     ],
+     [
+      "OBSTETRICS &amp; GYNECOLOGY",
+      15
+     ],
+     [
+      "SURGERY, GENERAL",
+      14
+     ],
+     [
+      "GENERAL INTERNAL MEDICINE",
+      12
+     ],
+     [
+      "PULMONARY",
+      11
+     ],
+     [
+      "GASTROENTEROLOGY",
+      11
+     ],
+     [
+      "CARDIOLOGY",
+      11
+     ],
+     [
+      "OPHTHALMOLOGY",
+      11
+     ],
+     [
+      "PHYSICAL THERAPIST",
+      10
+     ],
+     [
+      "UROLOGY",
+      9
+     ],
+     [
+      "BEHAVIORAL HEALTH NURSE PRACTITIONER",
+      8
+     ],
+     [
+      "HEMATOLOGY",
+      6
+     ],
+     [
+      "ENDOCRINOLOGY",
+      6
+     ]
+    ],
+    "bh_specialty_values": [
+     "BEHAVIORAL HEALTH THERAPIST",
+     "BEHAVIORAL HEALTH SUBSTANCE ABUSE",
+     "BEHAVIORAL HEALTH PSYCHOLOGY",
+     "PHYSICAL THERAPIST",
+     "BEHAVIORAL HEALTH NURSE PRACTITIONER",
+     "OCCUPATIONAL THERAPY",
+     "BEHAVIORAL HEALTH PSYCHIATRY"
+    ],
+    "accepting_values": {
+     "accepting": 554,
+     "not accepting": 28
+    },
+    "last_updated_min": "2026-08-15",
+    "last_updated_max": "2026-08-15",
+    "last_updated_years": {
+     "2026": 582
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "9208579041",
+      33
+     ],
+     [
+      "8003629567",
+      19
+     ],
+     [
+      "6089150200",
+      15
+     ],
+     [
+      "4149086500",
+      10
+     ],
+     [
+      "8153911000",
+      10
+     ],
+     [
+      "6089140100",
+      9
+     ],
+     [
+      "8556078242",
+      9
+     ],
+     [
+      "4142474667",
+      8
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://apps.quartzbenefits.com/cmsfiles/PROVIDERS4.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 580,
+    "analyzed": 580,
+    "field_presence": {
+     "npi": 580,
+     "accepting": 580,
+     "type": 580,
+     "last_updated_on": 580,
+     "name": 580,
+     "sex": 580,
+     "addresses": 580,
+     "specialty": 580,
+     "languages": 580,
+     "plans": 580
+    },
+    "type_dist": {
+     "INDIVIDUAL": 580
+    },
+    "npi_present": 580,
+    "npi_luhn_valid": 580,
+    "bh_matches": 229,
+    "unique_specialties": 89,
+    "top_specialties": [
+     [
+      "BEHAVIORAL HEALTH THERAPIST",
+      127
+     ],
+     [
+      "BEHAVIORAL HEALTH SUBSTANCE ABUSE",
+      40
+     ],
+     [
+      "FAMILY MEDICINE NURSE PRACTITIONER",
+      33
+     ],
+     [
+      "FAMILY MEDICINE",
+      29
+     ],
+     [
+      "BEHAVIORAL HEALTH NURSE PRACTITIONER",
+      20
+     ],
+     [
+      "PEDIATRICS",
+      14
+     ],
+     [
+      "ORTHOPAEDIC SURGERY",
+      13
+     ],
+     [
+      "BEHAVIORAL HEALTH PSYCHOLOGY",
+      13
+     ],
+     [
+      "CHIROPRACTOR",
+      13
+     ],
+     [
+      "BEHAVIORAL HEALTH PSYCHIATRY",
+      13
+     ],
+     [
+      "SURGERY, GENERAL",
+      12
+     ],
+     [
+      "CARDIOLOGY",
+      10
+     ],
+     [
+      "OBSTETRICS &amp; GYNECOLOGY MIDWIFE",
+      10
+     ],
+     [
+      "SURGERY, PHYSICIAN ASSISTANT",
+      9
+     ],
+     [
+      "INTERVENTIONAL CARDIOLOGY",
+      8
+     ],
+     [
+      "ORTHOPAEDIC SURGERY PHYSICIAN ASSISTANT",
+      8
+     ],
+     [
+      "OBSTETRICS &amp; GYNECOLOGY",
+      8
+     ],
+     [
+      "ORTHOPAEDIC SURGERY NURSE PRACTITIONER",
+      8
+     ],
+     [
+      "PHYSICAL THERAPIST",
+      7
+     ],
+     [
+      "PULMONARY",
+      7
+     ]
+    ],
+    "bh_specialty_values": [
+     "BEHAVIORAL HEALTH THERAPIST",
+     "BEHAVIORAL HEALTH SUBSTANCE ABUSE",
+     "BEHAVIORAL HEALTH NURSE PRACTITIONER",
+     "BEHAVIORAL HEALTH PSYCHOLOGY",
+     "BEHAVIORAL HEALTH PSYCHIATRY",
+     "PHYSICAL THERAPIST",
+     "OCCUPATIONAL THERAPY",
+     "NEUROPSYCHOLOGY",
+     "BEHAVIORAL HEALTH PHYSICIAN ASSISTANT"
+    ],
+    "accepting_values": {
+     "not accepting": 29,
+     "accepting": 551
+    },
+    "last_updated_min": "2026-08-15",
+    "last_updated_max": "2026-08-15",
+    "last_updated_years": {
+     "2026": 580
+    },
+    "max_addresses_per_provider": 2,
+    "top_dup_phones": [
+     [
+      "8003629567",
+      18
+     ],
+     [
+      "2629993495",
+      17
+     ],
+     [
+      "8556078242",
+      16
+     ],
+     [
+      "8153911000",
+      15
+     ],
+     [
+      "6089140100",
+      10
+     ],
+     [
+      "9202888000",
+      9
+     ],
+     [
+      "6089150200",
+      9
+     ],
+     [
+      "6082657550",
+      8
+     ]
+    ]
+   }
+  }
+ ]
+}

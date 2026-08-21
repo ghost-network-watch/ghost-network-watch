@@ -1,0 +1,200 @@
+{
+ "index_url": "https://assets.harborhealth.com/qhp/mrf/index.json",
+ "states": [
+  "TX"
+ ],
+ "issuer_ids": [
+  "37758"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://assets.harborhealth.com/qhp/mrf/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 9139,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "addresses": 1000,
+     "last_updated_on": 1000,
+     "name": 933,
+     "specialty": 933,
+     "accepting": 933,
+     "languages": 933,
+     "sex": 933,
+     "facility_name": 48,
+     "facility_type": 48,
+     "group_name": 19
+    },
+    "type_dist": {
+     "INDIVIDUAL": 933,
+     "FACILITY": 48,
+     "GROUP": 19
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 494,
+    "unique_specialties": 189,
+    "top_specialties": [
+     [
+      "Counselor, Professional",
+      221
+     ],
+     [
+      "Social Worker, Clinical",
+      112
+     ],
+     [
+      "Counselor, Mental Health",
+      73
+     ],
+     [
+      "Physician Assistant",
+      44
+     ],
+     [
+      "Nurse Practitioner, Psychiatric/Mental Health",
+      29
+     ],
+     [
+      "Nurse Practitioner, Psychiatry & Neurology, Psychiatry",
+      28
+     ],
+     [
+      "Pediatrics",
+      27
+     ],
+     [
+      "Physical Therapist",
+      25
+     ],
+     [
+      "Nurse Practitioner, Family",
+      24
+     ],
+     [
+      "Behavior Analyst",
+      23
+     ],
+     [
+      "Anesthesiology",
+      22
+     ],
+     [
+      "Marriage & Family Therapist",
+      21
+     ],
+     [
+      "Emergency Medicine",
+      20
+     ],
+     [
+      "Obstetrics & Gynecology",
+      20
+     ],
+     [
+      "Surgery",
+      19
+     ],
+     [
+      "Psychiatry & Neurology, Psychiatry",
+      18
+     ],
+     [
+      "Internal Medicine",
+      16
+     ],
+     [
+      "Nurse Practitioner",
+      15
+     ],
+     [
+      "Nurse Practitioner, Pediatrics",
+      15
+     ],
+     [
+      "Family Medicine",
+      14
+     ]
+    ],
+    "bh_specialty_values": [
+     "Counselor, Professional",
+     "Social Worker, Clinical",
+     "Counselor, Mental Health",
+     "Nurse Practitioner, Psychiatric/Mental Health",
+     "Nurse Practitioner, Psychiatry & Neurology, Psychiatry",
+     "Physical Therapist",
+     "Behavior Analyst",
+     "Marriage & Family Therapist",
+     "Psychiatry & Neurology, Psychiatry",
+     "Psychologist, Clinical",
+     "Counselor, Addiction (Substance Use Disorder)",
+     "Psychologist",
+     "Psychiatry & Neurology, Neurology with Special Qualification",
+     "Psychiatry & Neurology, Neurology",
+     "Psychiatry & Neurology, Child & Adolescent Psychiatry",
+     "Physician Assistant, Psychiatry & Neurology, Psychiatry",
+     "Occupational Therapist",
+     "Psychologist, Counseling",
+     "Counselor, School",
+     "Psychologist, Forensic",
+     "Behavior Technician",
+     "Psychiatry & Neurology, Sleep Medicine",
+     "Psychiatry & Neurology, Addiction Psychiatry",
+     "Clinical Nurse Specialist, Psychiatry & Neurology, Neurology",
+     "Psychiatry & Neurology, Clinical Neurophysiology"
+    ],
+    "accepting_values": {
+     "accepting": 933,
+     "None": 67
+    },
+    "last_updated_min": "2026-08-17",
+    "last_updated_max": "2026-08-17",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 28,
+    "top_dup_phones": [
+     [
+      "6464536777",
+      298
+     ],
+     [
+      "51257940003353",
+      84
+     ],
+     [
+      "5124542554",
+      51
+     ],
+     [
+      "8448437279",
+      49
+     ],
+     [
+      "5123241010",
+      38
+     ],
+     [
+      "8002433839",
+      38
+     ],
+     [
+      "5123244000",
+      37
+     ],
+     [
+      "5123246000",
+      33
+     ]
+    ]
+   }
+  }
+ ]
+}

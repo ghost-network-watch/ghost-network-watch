@@ -1,0 +1,192 @@
+{
+ "index_url": "https://www.firstchoicenext.com/cms-data-index.json",
+ "states": [
+  "SC"
+ ],
+ "issuer_ids": [
+  "73107"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://s3.us-west-2.amazonaws.com/prd2-directory-generation-service-machine-readable-json/FCNEXT/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3528,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "name": 880,
+     "group_name": 98,
+     "facility_name": 22,
+     "facility_type": 22
+    },
+    "type_dist": {
+     "INDIVIDUAL": 880,
+     "GROUP": 98,
+     "FACILITY": 22
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 74,
+    "unique_specialties": 111,
+    "top_specialties": [
+     [
+      "Family Nurse Practitioner",
+      117
+     ],
+     [
+      "Family Practice",
+      115
+     ],
+     [
+      "Physician Assistant",
+      103
+     ],
+     [
+      "Pediatrics",
+      66
+     ],
+     [
+      "Internal Medicine",
+      61
+     ],
+     [
+      "Multi-Specialty Group",
+      56
+     ],
+     [
+      "Obstetrics & Gynecology",
+      47
+     ],
+     [
+      "Orthopaedic Surgery",
+      43
+     ],
+     [
+      "Nurse Practitioner - Acute Care",
+      35
+     ],
+     [
+      "Nurse Practitioner",
+      30
+     ],
+     [
+      "Urgent Care",
+      22
+     ],
+     [
+      "Licensed Professional Counselor",
+      19
+     ],
+     [
+      "Chiropractor",
+      19
+     ],
+     [
+      "Physical Therapy",
+      17
+     ],
+     [
+      "Urology",
+      16
+     ],
+     [
+      "Federally Qualified Health Center (FQHC)",
+      16
+     ],
+     [
+      "General Surgery",
+      15
+     ],
+     [
+      "Essential Provider - Federally Qualified Health Center (FQHC",
+      14
+     ],
+     [
+      "Social Worker",
+      14
+     ],
+     [
+      "Gastroenterology",
+      13
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Professional Counselor",
+     "Physical Therapy",
+     "Social Worker",
+     "Psychiatry",
+     "Psychology",
+     "Adult Psychiatric & Mental Health Nurse Practitioner",
+     "Psychiatric/Mental Health Nurse Practitioner",
+     "Child & Adolescent Psychiatry",
+     "Substance Use Disorder Rehabilitation Clinic/Center",
+     "Community Mental Health Center",
+     "Therapist - Multi-Specialty Group",
+     "Certified Clinical Social Worker",
+     "Psychiatric Nurse Practitioner",
+     "Board Certified Behavioral Analyst",
+     "Speech Therapy",
+     "Marriage & Family Therapy",
+     "Social Work",
+     "Behavioral Health",
+     "Behavior Analyst"
+    ],
+    "accepting_values": {
+     "accepting": 998,
+     "not accepting": 2
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 55,
+    "top_dup_phones": [
+     [
+      "8437921414",
+      111
+     ],
+     [
+      "8438533474",
+      21
+     ],
+     [
+      "8642720388",
+      18
+     ],
+     [
+      "8645822411",
+      16
+     ],
+     [
+      "8433472450",
+      14
+     ],
+     [
+      "8437891850",
+      12
+     ],
+     [
+      "8436679414",
+      11
+     ],
+     [
+      "8432032240",
+      11
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,193 @@
+{
+ "index_url": "https://www.southcarolinablues.com/web/data/sc/bluecross-index.json",
+ "states": [
+  "SC"
+ ],
+ "issuer_ids": [
+  "26065"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.southcarolinablues.com/web/data/providers.json",
+   "http_code": 200,
+   "fetched_chars": 209715200,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 28336,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "addresses": 1000,
+     "last_updated_on": 1000,
+     "facility_type": 955,
+     "group_name": 837,
+     "facility_name": 118,
+     "name": 45,
+     "specialty": 45,
+     "accepting": 45,
+     "sex": 45,
+     "languages": 1
+    },
+    "type_dist": {
+     "INDIVIDUAL": 45,
+     "GROUP": 837,
+     "FACILITY": 118
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 23,
+    "unique_specialties": 20,
+    "top_specialties": [
+     [
+      "MENTAL HEALTH COUNSELOR",
+      13
+     ],
+     [
+      "INTERNAL MEDICINE",
+      4
+     ],
+     [
+      "SOCIAL WORKER",
+      4
+     ],
+     [
+      "OPTOMETRIST",
+      3
+     ],
+     [
+      "CHIROPRACTIC",
+      3
+     ],
+     [
+      "NURSE PRACTITIONER",
+      2
+     ],
+     [
+      "EMERGENCY MEDICINE",
+      2
+     ],
+     [
+      "PHYSICAL THERAPIST",
+      2
+     ],
+     [
+      "DENTIST",
+      2
+     ],
+     [
+      "SPEECH PATHOLOGIST/SPEECH THERAPIST",
+      2
+     ],
+     [
+      "CERTIFIED REGISTERED NURSE ANESTHETIST (CRNA)",
+      2
+     ],
+     [
+      "HOSPITALIST",
+      1
+     ],
+     [
+      "PATHOLOGY",
+      1
+     ],
+     [
+      "ORTHODONTIST",
+      1
+     ],
+     [
+      "ANESTHESIOLOGY",
+      1
+     ],
+     [
+      "PLASTIC SURGERY",
+      1
+     ],
+     [
+      "AUTISM THERAPY",
+      1
+     ],
+     [
+      "PSYCHIATRY (ADULT)",
+      1
+     ],
+     [
+      "PSYCHIATRY",
+      1
+     ],
+     [
+      "MARRIAGE AND FAMILY COUNSELOR",
+      1
+     ]
+    ],
+    "bh_specialty_values": [
+     "MENTAL HEALTH COUNSELOR",
+     "SOCIAL WORKER",
+     "PHYSICAL THERAPIST",
+     "SPEECH PATHOLOGIST/SPEECH THERAPIST",
+     "AUTISM THERAPY",
+     "PSYCHIATRY (ADULT)",
+     "PSYCHIATRY",
+     "MARRIAGE AND FAMILY COUNSELOR"
+    ],
+    "accepting_values": {
+     "accepting": 44,
+     "None": 955,
+     "not accepting": 1
+    },
+    "last_updated_min": "2014-07-03",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 553,
+     "2022": 49,
+     "2023": 123,
+     "2025": 186,
+     "2024": 65,
+     "2020": 16,
+     "2019": 2,
+     "2021": 4,
+     "2014": 1,
+     "2016": 1
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "8037735227",
+      6
+     ],
+     [
+      "3127666780",
+      5
+     ],
+     [
+      "7069220600",
+      5
+     ],
+     [
+      "8437238823",
+      5
+     ],
+     [
+      "8036415000",
+      4
+     ],
+     [
+      "7045125333",
+      4
+     ],
+     [
+      "8439581281",
+      4
+     ],
+     [
+      "8439582500",
+      4
+     ]
+    ]
+   }
+  }
+ ]
+}

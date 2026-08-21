@@ -1,0 +1,199 @@
+{
+ "index_url": "https://ebu.intermountainhealthcare.org/shprovider/index.json",
+ "states": [
+  "UT"
+ ],
+ "issuer_ids": [
+  "68781"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 4,
+ "files": [
+  {
+   "url": "https://ebu.intermountainhealthcare.org/shprovider/exchange.providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2740,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 977,
+     "specialty": 977,
+     "accepting": 977,
+     "languages": 977,
+     "sex": 977,
+     "facility_name": 23,
+     "facility_type": 23
+    },
+    "type_dist": {
+     "INDIVIDUAL": 977,
+     "FACILITY": 23
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 417,
+    "unique_specialties": 207,
+    "top_specialties": [
+     [
+      "Family Medicine",
+      114
+     ],
+     [
+      "Counselor",
+      107
+     ],
+     [
+      "Nurse Practitioner",
+      83
+     ],
+     [
+      "Physician Assistant",
+      76
+     ],
+     [
+      "Social Worker",
+      71
+     ],
+     [
+      "Internal Medicine",
+      68
+     ],
+     [
+      "Social Worker, Clinical",
+      64
+     ],
+     [
+      "Physical Therapist",
+      53
+     ],
+     [
+      "Counselor, Professional",
+      42
+     ],
+     [
+      "Pediatrics",
+      36
+     ],
+     [
+      "Counselor, Mental Health",
+      33
+     ],
+     [
+      "Marriage & Family Therapist",
+      29
+     ],
+     [
+      "Orthopaedic Surgery",
+      27
+     ],
+     [
+      "Nurse Practitioner, Family",
+      25
+     ],
+     [
+      "Psychiatry & Neurology",
+      24
+     ],
+     [
+      "Psychologist",
+      22
+     ],
+     [
+      "Dentist",
+      21
+     ],
+     [
+      "Social Work",
+      20
+     ],
+     [
+      "Surgery",
+      19
+     ],
+     [
+      "Obstetrics & Gynecology",
+      19
+     ]
+    ],
+    "bh_specialty_values": [
+     "Counselor",
+     "Social Worker",
+     "Social Worker, Clinical",
+     "Physical Therapist",
+     "Counselor, Professional",
+     "Counselor, Mental Health",
+     "Marriage & Family Therapist",
+     "Psychiatry & Neurology",
+     "Psychologist",
+     "Social Work",
+     "Counseling",
+     "Nurse Practitioner, Psych/Mental Health",
+     "BEHAVIORAL HEALTH",
+     "Occupational Therapist",
+     "Physical Therapy",
+     "COUNSELOR",
+     "Psychiatry & Neurology, Child & Adolescent Psychiatry",
+     "Psychiatry & Neurology, Psychiatry",
+     "Occupational Therapy",
+     "SOCIAL WORKER",
+     "Behavior Analyst",
+     "Marriage and Family Therapy",
+     "Psychiatric - Mental Health",
+     "Licensed Clinical Social Worker",
+     "Nurse Practitioner, Psychiatric/Mental Health"
+    ],
+    "accepting_values": {
+     "accepting": 811,
+     "not accepting": 166,
+     "None": 23
+    },
+    "last_updated_min": "2026-08-18",
+    "last_updated_max": "2026-08-18",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 20,
+    "top_dup_phones": [
+     [
+      "8014053590",
+      112
+     ],
+     [
+      "6469417645",
+      73
+     ],
+     [
+      "7208480000",
+      39
+     ],
+     [
+      "7207771234",
+      23
+     ],
+     [
+      "8014472265",
+      17
+     ],
+     [
+      "3036045000",
+      15
+     ],
+     [
+      "7205161000",
+      13
+     ],
+     [
+      "7193651950",
+      12
+     ]
+    ]
+   }
+  }
+ ]
+}

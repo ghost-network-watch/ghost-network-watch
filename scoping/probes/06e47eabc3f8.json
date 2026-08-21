@@ -1,0 +1,117 @@
+{
+ "index_url": "https://www.bcbsm.com/amslibs/content/dam/public/marketplace/individual/json/bcbsm/index.json",
+ "states": [
+  "MI"
+ ],
+ "issuer_ids": [
+  "15560"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://cmsdocs.bcbsm.com/json/bcbsm/BCBSM_PROVIDERS_CURRYR.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 7616,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "gender": 1000,
+     "languages": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "GENERAL DENTIST",
+      868
+     ],
+     [
+      "ORAL SURGEON",
+      32
+     ],
+     [
+      "ENDODONTIST",
+      27
+     ],
+     [
+      "ORTHODONTIST",
+      25
+     ],
+     [
+      "PEDIATRIC",
+      25
+     ],
+     [
+      "PERIODONTIST",
+      13
+     ],
+     [
+      "PROSTHODONTIST",
+      10
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 916,
+     "not accepting": 84
+    },
+    "last_updated_min": "2026-07-08",
+    "last_updated_max": "2026-07-08",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 36,
+    "top_dup_phones": [
+     [
+      "2699271313",
+      36
+     ],
+     [
+      "2482120400",
+      32
+     ],
+     [
+      "5178410000",
+      23
+     ],
+     [
+      "6165309900",
+      23
+     ],
+     [
+      "3139392127",
+      23
+     ],
+     [
+      "9892497888",
+      23
+     ],
+     [
+      "9897854855",
+      21
+     ],
+     [
+      "8107322867",
+      20
+     ]
+    ]
+   }
+  }
+ ]
+}

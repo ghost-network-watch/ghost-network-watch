@@ -1,0 +1,1332 @@
+{
+ "generated": "2026-08-21",
+ "source": "PY2026 Machine-Readable URL PUF (346 issuer rows, 108 unique index URLs) + 108 index probes + 162 sampled provider files",
+ "totals": {
+  "issuer_rows": 346,
+  "dental_rows": 160,
+  "medical_rows": 186,
+  "medical_fraction": 0.538,
+  "dental_provider_files": 3069,
+  "medical_provider_files": 1295,
+  "note_file_counts": "file counts include deep-probe fallbacks for indexes that 403d the plain probe (UHC, Wellmark, MercyCare); slight variance vs the 4,337 headline is expected. Humana alone is 2,995 (dental/pharmacy) files.",
+  "medical_corpus_est_gb_lower_bound": 29.2,
+  "note_size": "estimate = per-index mean sampled size x provider file count; samples Range-capped (8MB most, 30MB UHC, 200MB some), so lower bound AND biased by which files were sampled -- treat as order of magnitude only"
+ },
+ "dental_medical_method": "classified per hosting platform using specialty vocabularies in sampled files + issuer identity (POC email domain, brand). Caveats: EMI Health and Humana classified dental from FFM market presence; BCBSM MI dental-heavy sample reflects Range sampling from file start of a mixed network file, both MI rows kept medical.",
+ "platforms": [
+  {
+   "platform": "Medical single-issuer self-hosted (long tail)",
+   "issuer_rows": 56,
+   "unique_issuer_ids": 56,
+   "hosts": [
+    "22healthplan.com",
+    "alliantplans.com",
+    "api.antidotehealth.ai",
+    "apps.hf.org",
+    "apps.quartzbenefits.com",
+    "assets.harborhealth.com",
+    "azblue.com",
+    "capitalhealth.com",
+    "chppayment.christushealth.org",
+    "cms.nebraskablue.com",
+    "connect.wellsense.org:8443",
+    "data.networkhealth.com",
+    "doc.uhealthplan.utah.edu",
+    "ebu.intermountainhealthcare.org",
+    "enroll.pacificsource.com",
+    "exchange.communityfirsthealthplans.com",
+    "files.myplancentral.com",
+    "hmsa.com",
+    "my.firstcare.com",
+    "planfinder.ghcscw.com",
+    "priorityhealth.stylelabs.cloud",
+    "providerdirectory.communityhealthchoice.org",
+    "rmm.mhc.coop",
+    "secure.ccok.com",
+    "senderohealth.com",
+    "shc-p-001.sitecorecontenthub.cloud",
+    "shp-web-public.s3.amazonaws.com",
+    "static.mending.com",
+    "tools.sanfordhealthplan.com",
+    "www.ahsecure.net",
+    "www.aspirushealthplan.com",
+    "www.bcbsal.org",
+    "www.bcbsfl.com",
+    "www.bcbsks.com",
+    "www.bcbsm.com",
+    "www.bcbsnc.com",
+    "www.bcbst.com",
+    "www.bluekc.com",
+    "www.fhcp.com",
+    "www.harvardpilgrim.org",
+    "www.healthpartners.com",
+    "www.lablue.com",
+    "www.mclaren.org",
+    "www.mercycarehealthplans.com",
+    "www.providencehealthplan.com",
+    "www.thinkinghealthforward.com"
+   ],
+   "n_states": 22,
+   "states": [
+    "AL",
+    "AZ",
+    "FL",
+    "HI",
+    "IA",
+    "KS",
+    "LA",
+    "MI",
+    "MO",
+    "MT",
+    "NC",
+    "ND",
+    "NE",
+    "NH",
+    "OH",
+    "OK",
+    "OR",
+    "SD",
+    "TN",
+    "TX",
+    "UT",
+    "WI"
+   ],
+   "unique_index_urls": 50,
+   "provider_file_count": 281,
+   "dead_indexes": 2,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "50 unique indexes on ~40 bespoke hosts; most follow {host}/.../cms-data-index.json -> small set of providers*.json",
+   "quirks": [
+    "the schema is uniform (CMS QHP JSON) but everything else varies: port 8443 (wellsense), S3 bucket hosting (Security Health), Sitecore CDN (Priority Health, Sentara), AEM paths",
+    "placeholder dates: 1900-01-01 (CHRISTUS), 1990-01-01 (Aspirus); 2006 timestamps (Arkansas already grouped)",
+    "rmm.mhc.coop (Montana Health CO-OP): specialty = empty string on sampled records -- BH classification impossible from specialty alone",
+    "alliantplans.com: accepting=None on 100% sampled + one provider with 154 addresses",
+    "www.bcbsfl.com: only ~180 records per 8MB -- extremely verbose records (huge plans arrays), need streaming parser",
+    "www.mercycarehealthplans.com 403 non-browser UA; files.myplancentral.com (SummaCare OH) DNS-dead; www.bcbsnc.com 404-dead",
+    "www.providencehealthplan.com: sampled BH file has accepting=\"not accepting\" on 100% of records",
+    "Cox/thinkinghealthforward: truncated specialty string \"LICENSED\"; bcbsks: specialty strings truncated at ~60 chars",
+    "www.mclaren.org: only coarse NUCC grouping-level specialties (\"Behavioral Health and Social Service Providers\")"
+   ],
+   "adapter_notes": "One generic CMS-schema adapter with per-host config (UA, retries, size cap, streaming) covers all of these; keep a per-host quirks registry rather than 50 code paths. 56 issuer rows / 22 states.",
+   "sampled_sizes_mb": [
+    0.1,
+    1.1,
+    1.1,
+    1.3,
+    2.3,
+    5.1,
+    6.5,
+    6.7,
+    6.7,
+    6.7,
+    7.3,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.6,
+    17.8,
+    18.4,
+    20.7,
+    49.6,
+    89.6,
+    89.6,
+    91.9,
+    118.2,
+    150.5,
+    169.3,
+    209.7
+   ],
+   "est_total_mb_lower_bound": 5966
+  },
+  {
+   "platform": "Delta Dental national platform",
+   "issuer_rows": 25,
+   "unique_issuer_ids": 25,
+   "hosts": [
+    "cms.deltadental.com",
+    "www.hawaiidentalservice.com"
+   ],
+   "n_states": 23,
+   "states": [
+    "AK",
+    "AL",
+    "AR",
+    "AZ",
+    "DE",
+    "FL",
+    "HI",
+    "IA",
+    "IN",
+    "LA",
+    "MI",
+    "MS",
+    "MT",
+    "NC",
+    "ND",
+    "NE",
+    "NH",
+    "OH",
+    "OR",
+    "TX",
+    "UT",
+    "WI",
+    "WV"
+   ],
+   "unique_index_urls": 2,
+   "provider_file_count": 2,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": true,
+   "url_pattern": "cms.deltadental.com/index.json -> single national providers.json; hawaiidentalservice.com index points at the SAME cms.deltadental.com/providers.json",
+   "quirks": [
+    "25 issuer rows share one physical file",
+    "uses sex"
+   ],
+   "adapter_notes": "OUT OF SCOPE (dental). If ever audited: one file, dedupe across issuers.",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 17
+  },
+  {
+   "platform": "BestLife (self-hosted)",
+   "issuer_rows": 25,
+   "unique_issuer_ids": 25,
+   "hosts": [
+    "json.bestlife.com"
+   ],
+   "n_states": 25,
+   "states": [
+    "AK",
+    "AL",
+    "AR",
+    "AZ",
+    "FL",
+    "HI",
+    "IA",
+    "IN",
+    "KS",
+    "LA",
+    "MI",
+    "MO",
+    "MS",
+    "MT",
+    "NC",
+    "ND",
+    "NE",
+    "OH",
+    "OK",
+    "SC",
+    "SD",
+    "TN",
+    "TX",
+    "UT",
+    "WY"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 2,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": true,
+   "url_pattern": "json.bestlife.com/cms/cms-data-index.json -> /cms/{2025|2026}/providers_wNPI.json",
+   "quirks": [
+    "index lists BOTH 2025 and 2026 vintage files",
+    "tab-indented pretty-printed JSON (bloats size)",
+    "2025 file last_updated 2025-12-10 (stale vintage still served)"
+   ],
+   "adapter_notes": "OUT OF SCOPE (dental/vision). Pick 2026 file only.",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 17
+  },
+  {
+   "platform": "Centene (Ambetter, api.centene.com)",
+   "issuer_rows": 24,
+   "unique_issuer_ids": 24,
+   "hosts": [
+    "api.centene.com"
+   ],
+   "n_states": 20,
+   "states": [
+    "AL",
+    "AR",
+    "AZ",
+    "DE",
+    "FL",
+    "IA",
+    "IN",
+    "KS",
+    "LA",
+    "MI",
+    "MO",
+    "MS",
+    "NC",
+    "NE",
+    "NH",
+    "OH",
+    "OK",
+    "SC",
+    "TN",
+    "TX"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 128,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "single national index api.centene.com/ambetter/reference/cms-data-index.json -> 128 files provider_facility_{i}_{j}_{k}_array.json (all Ambetter brands, 20 states, one adapter)",
+   "quirks": [
+    "one index covers 24 issuer rows / 20 states -- no per-state file naming, must split records by plans[] array",
+    "files >8MB (Range-truncated in probe); facility files have accepting=None and empty specialty stats",
+    "individual files use gender (not sex); specialty vocab like \"Nurse Practitioner: Family\" (colon-delimited)"
+   ],
+   "adapter_notes": "Highest-leverage single adapter for medical: 24 issuer rows. Must map records->issuer via plans[] (issuer id embedded in plan id). Stream-parse large files.",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 1074
+  },
+  {
+   "platform": "Guardian Direct dental exchange",
+   "issuer_rows": 22,
+   "unique_issuer_ids": 22,
+   "hosts": [
+    "dentalexchange.guardiandirect.com"
+   ],
+   "n_states": 21,
+   "states": [
+    "AL",
+    "AZ",
+    "FL",
+    "HI",
+    "IA",
+    "IN",
+    "KS",
+    "LA",
+    "MI",
+    "MO",
+    "MS",
+    "MT",
+    "NC",
+    "NE",
+    "OH",
+    "OK",
+    "SC",
+    "TN",
+    "TX",
+    "UT",
+    "WI"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 16,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": false,
+   "url_pattern": "dentalexchange.guardiandirect.com/secure/json/index.json -> Provider_2026-{1..16}.json",
+   "quirks": [
+    "last_updated back to 2015"
+   ],
+   "adapter_notes": "OUT OF SCOPE (dental).",
+   "sampled_sizes_mb": [
+    5.3,
+    5.3
+   ],
+   "est_total_mb_lower_bound": 84
+  },
+  {
+   "platform": "UnitedHealthcare (AEM /content/dam)",
+   "issuer_rows": 20,
+   "unique_issuer_ids": 20,
+   "hosts": [
+    "www.uhc.com"
+   ],
+   "n_states": 19,
+   "states": [
+    "AL",
+    "AZ",
+    "FL",
+    "IA",
+    "IN",
+    "KS",
+    "LA",
+    "MI",
+    "MO",
+    "MS",
+    "NC",
+    "NE",
+    "OH",
+    "OK",
+    "SC",
+    "TN",
+    "TX",
+    "WI",
+    "WY"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 22,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "www.uhc.com/content/dam/uhcdotcom/en/general/cms-data-index.json (Adobe AEM DAM); ~22 provider files",
+   "quirks": [
+    "403 to non-browser User-Agents -- index probe failed, deep probe with Chrome UA succeeded",
+    "files large (>=31MB sampled, Range-capped)",
+    "uses gender; specialty vocab ALL-CAPS (\"MASTERS LEVEL COUNSELOR\")"
+   ],
+   "adapter_notes": "Must send browser UA. One index for 20 issuer rows/19 states; split by plans[]. BH-rich (33-46% of sampled records).",
+   "sampled_sizes_mb": [
+    31.5,
+    31.5
+   ],
+   "est_total_mb_lower_bound": 692
+  },
+  {
+   "platform": "Humana API gateway",
+   "issuer_rows": 16,
+   "unique_issuer_ids": 16,
+   "hosts": [
+    "apis.humana.com"
+   ],
+   "n_states": 16,
+   "states": [
+    "AL",
+    "AZ",
+    "FL",
+    "HI",
+    "IN",
+    "LA",
+    "MI",
+    "MO",
+    "MS",
+    "NC",
+    "OH",
+    "OK",
+    "TN",
+    "TX",
+    "UT",
+    "WI"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 2995,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": false,
+   "url_pattern": "apis.humana.com/v1/cms/index.json -> 2,995 files (pharma_providers-N.json etc.)",
+   "quirks": [
+    "2,995 provider files = 69% of ALL provider files in the PUF; mostly pharmacy locations",
+    "Humana sells only dental/vision QHPs on FFM (exited individual medical 2018)"
+   ],
+   "adapter_notes": "OUT OF SCOPE (dental/pharmacy). Excluding Humana removes ~3k files from crawl plan.",
+   "sampled_sizes_mb": [
+    0.1,
+    1.1
+   ],
+   "est_total_mb_lower_bound": 1885
+  },
+  {
+   "platform": "Oscar Health (CloudFront)",
+   "issuer_rows": 15,
+   "unique_issuer_ids": 15,
+   "hosts": [
+    "d3ul0st9g52g6o.cloudfront.net"
+   ],
+   "n_states": 14,
+   "states": [
+    "AL",
+    "AZ",
+    "FL",
+    "IA",
+    "KS",
+    "MI",
+    "MO",
+    "MS",
+    "NC",
+    "NE",
+    "OH",
+    "OK",
+    "TN",
+    "TX"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 21,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "d3ul0st9g52g6o.cloudfront.net/ffm/cms-data-index.json -> providers_{0..20}.json; CloudFront static bucket. Identified as Oscar Health via PUF Tech POC email extproviderdataeng@hioscar.com",
+   "quirks": [
+    "uses gender instead of sex",
+    "very BH-heavy content (top specialty = Mental Health Counselor; bh regex ~47-54% of sampled records)",
+    "fresh data (last_updated 2026-08-19)",
+    "anonymous CloudFront hostname -- nothing brand-identifying in URL"
+   ],
+   "adapter_notes": "Confirm Oscar identity from plan IDs inside plans.json before publishing. Single adapter covers 15 issuer rows/14 states. Ideal early target: fresh, clean, BH-rich.",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 176
+  },
+  {
+   "platform": "Renaissance Dental (providers4you)",
+   "issuer_rows": 13,
+   "unique_issuer_ids": 13,
+   "hosts": [
+    "cmsdata.providers4you.com"
+   ],
+   "n_states": 13,
+   "states": [
+    "AL",
+    "FL",
+    "KS",
+    "LA",
+    "MO",
+    "MS",
+    "NH",
+    "OK",
+    "SC",
+    "TX",
+    "UT",
+    "WI",
+    "WY"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 15,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": true,
+   "url_pattern": "cmsdata.providers4you.com/cms-data-index.json -> providers{1..15}.json",
+   "quirks": [
+    "last_updated 2026-08-21 (updates daily?)"
+   ],
+   "adapter_notes": "OUT OF SCOPE (dental).",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 126
+  },
+  {
+   "platform": "EMI Health (self-hosted)",
+   "issuer_rows": 13,
+   "unique_issuer_ids": 13,
+   "hosts": [
+    "emihealth.com"
+   ],
+   "n_states": 13,
+   "states": [
+    "AL",
+    "AZ",
+    "FL",
+    "MI",
+    "MO",
+    "NC",
+    "OH",
+    "SC",
+    "TN",
+    "TX",
+    "UT",
+    "WI",
+    "WY"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 20,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": false,
+   "url_pattern": "emihealth.com/Services/providerdata/cms-data-index.json -> providerdata{ST}.json",
+   "quirks": [
+    "files mix dental+vision+some medical specialties; EMI FFM presence is dental/vision"
+   ],
+   "adapter_notes": "OUT OF SCOPE (dental/vision) -- verify via plans.json if ever in doubt.",
+   "sampled_sizes_mb": [
+    1.2,
+    5.6
+   ],
+   "est_total_mb_lower_bound": 67
+  },
+  {
+   "platform": "TruAssure (Northwinds Tech)",
+   "issuer_rows": 12,
+   "unique_issuer_ids": 12,
+   "hosts": [
+    "qhp.truassure.com"
+   ],
+   "n_states": 12,
+   "states": [
+    "AL",
+    "AZ",
+    "IN",
+    "KS",
+    "MO",
+    "NC",
+    "NE",
+    "OH",
+    "OK",
+    "SC",
+    "TN",
+    "TX"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 1,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": true,
+   "url_pattern": "qhp.truassure.com/cmsdata/index.json -> data/providers.json",
+   "quirks": [
+    "specialty values are 2-letter codes: GP/OR/OS/PD/PE -- no human-readable taxonomy"
+   ],
+   "adapter_notes": "OUT OF SCOPE (dental). Vendor = Northwinds Technology (POC email).",
+   "sampled_sizes_mb": [
+    8.4
+   ],
+   "est_total_mb_lower_bound": 8
+  },
+  {
+   "platform": "Dominion National (self-hosted)",
+   "issuer_rows": 10,
+   "unique_issuer_ids": 10,
+   "hosts": [
+    "www.dominionnational.com"
+   ],
+   "n_states": 10,
+   "states": [
+    "DE",
+    "FL",
+    "IN",
+    "MI",
+    "MO",
+    "NC",
+    "OH",
+    "OR",
+    "TX",
+    "WI"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 1,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": true,
+   "url_pattern": "www.dominionnational.com/Resources/dominion/index.json -> providers.json",
+   "quirks": [],
+   "adapter_notes": "OUT OF SCOPE (dental).",
+   "sampled_sizes_mb": [
+    8.4
+   ],
+   "est_total_mb_lower_bound": 8
+  },
+  {
+   "platform": "Cigna (self-hosted)",
+   "issuer_rows": 9,
+   "unique_issuer_ids": 9,
+   "hosts": [
+    "www.cigna.com"
+   ],
+   "n_states": 7,
+   "states": [
+    "AZ",
+    "FL",
+    "IN",
+    "MS",
+    "NC",
+    "TN",
+    "TX"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 1,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "www.cigna.com/sites/json/cms-data-index.json -> single providers.json for all 7 states",
+   "quirks": [
+    "index lists provider file with http:// (not https) scheme",
+    "specialty vocabulary is CONDITIONS TREATED, not provider taxonomy: \"Anxiety Issues\", \"Depression Issues\", \"Substance Use Detoxification Outpatient Program\" -- breaks any NUCC-taxonomy-based BH classifier",
+    "BH share of sampled records ~43%"
+   ],
+   "adapter_notes": "Needs custom specialty mapping table. Single file for 9 issuer rows -- must split by plans[]. Normalize http->https.",
+   "sampled_sizes_mb": [
+    8.4
+   ],
+   "est_total_mb_lower_bound": 8
+  },
+  {
+   "platform": "Elevance Health (www22)",
+   "issuer_rows": 9,
+   "unique_issuer_ids": 9,
+   "hosts": [
+    "www22.elevancehealth.com"
+   ],
+   "n_states": 7,
+   "states": [
+    "FL",
+    "IN",
+    "MO",
+    "NH",
+    "OH",
+    "TX",
+    "WI"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 38,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "www22.elevancehealth.com/cms-data-index-json/Elevance-Health-Data-Index.json -> /cms/PROVIDERS_{ST}.json, big states split _1_OF_2/_2_OF_2",
+   "quirks": [
+    "per-state file naming = easy state routing (incl. non-FFM states like CT in same index)",
+    "one sampled file dropped connection mid-Range request (RemoteDisconnected) -- flaky server or anti-scrape",
+    "mixed dental+vision+medical providers inside medical files (Dentist/Optometrist top specialties)"
+   ],
+   "adapter_notes": "Retry logic needed. Per-state files mean county-level work only needs relevant state files. 9 rows/7 FFM states.",
+   "sampled_sizes_mb": [
+    8.4
+   ],
+   "est_total_mb_lower_bound": 319
+  },
+  {
+   "platform": "Medica ESB gateway",
+   "issuer_rows": 9,
+   "unique_issuer_ids": 9,
+   "hosts": [
+    "esbgatewaypub.medica.com",
+    "www.medica.com"
+   ],
+   "n_states": 7,
+   "states": [
+    "IA",
+    "KS",
+    "MO",
+    "ND",
+    "NE",
+    "OK",
+    "WI"
+   ],
+   "unique_index_urls": 9,
+   "provider_file_count": 618,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "esbgatewaypub.medica.com/rest/QHP/{ST}/{issuer_id}/cms-data-index.json -> :443/rest/QHP/{ST}/{issuer}/{Facility|Group|Practitioner}/providersN.json (www.medica.com redirects into same gateway)",
+   "quirks": [
+    "only platform with per-issuer-per-state indexes AND issuer ID in URL -- cleanest issuer attribution",
+    "provider files split by type (Facility/Group/Practitioner); Facility+Group files have accepting=None and no individual specialties",
+    "last_updated spans 2019-2026 -- many very stale records",
+    "618 provider files total, est >=7.8GB (largest medical corpus after HCSC)"
+   ],
+   "adapter_notes": "Filter to Practitioner files for BH audit (Facility/Group files lack accepting + specialty). Explicit :443 port in URLs.",
+   "sampled_sizes_mb": [
+    4.1,
+    6.5,
+    7.4,
+    7.7,
+    8.1,
+    8.4,
+    8.4,
+    8.4,
+    9.5,
+    9.7,
+    10.1,
+    10.2,
+    16.1,
+    21.4,
+    21.4,
+    22.1,
+    22.1,
+    25.9
+   ],
+   "est_total_mb_lower_bound": 7812
+  },
+  {
+   "platform": "DentaQuest (AEM)",
+   "issuer_rows": 8,
+   "unique_issuer_ids": 8,
+   "hosts": [
+    "dentaquest.com"
+   ],
+   "n_states": 8,
+   "states": [
+    "AZ",
+    "FL",
+    "IN",
+    "LA",
+    "MO",
+    "OH",
+    "TN",
+    "TX"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 2,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": true,
+   "url_pattern": "dentaquest.com/getattachment/... index -> www.dentaquest.com/content/dam/... DQ-providers.json + DQ-providers-2025.json",
+   "quirks": [
+    "stale: last_updated 2025-08/2025-10; 2025-vintage file still in index",
+    "index host differs from file host"
+   ],
+   "adapter_notes": "OUT OF SCOPE (dental).",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 17
+  },
+  {
+   "platform": "Solstice Benefits API",
+   "issuer_rows": 8,
+   "unique_issuer_ids": 8,
+   "hosts": [
+    "api.solsticebenefits.com"
+   ],
+   "n_states": 6,
+   "states": [
+    "AZ",
+    "FL",
+    "MI",
+    "OH",
+    "TX",
+    "UT"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 1,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": true,
+   "url_pattern": "api.solsticebenefits.com/v1/Providers/Cms/GetIndex.json -> GetProviders.json",
+   "quirks": [
+    "single >=200MB file, 163k records -- largest single dental file"
+   ],
+   "adapter_notes": "OUT OF SCOPE (dental).",
+   "sampled_sizes_mb": [
+    209.7
+   ],
+   "est_total_mb_lower_bound": 210
+  },
+  {
+   "platform": "Molina (self-hosted)",
+   "issuer_rows": 6,
+   "unique_issuer_ids": 6,
+   "hosts": [
+    "www.molinahealthcare.com"
+   ],
+   "n_states": 6,
+   "states": [
+    "FL",
+    "MS",
+    "OH",
+    "SC",
+    "TX",
+    "UT"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 21,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "www.molinahealthcare.com/cms/json/index.json -> /cmsjson/{buildId}/cms/Provider-{ST}-{n}.json",
+   "quirks": [
+    "buildId path segment changes per publish",
+    "uses sex; PHARMACY as top \"specialty\" in one file"
+   ],
+   "adapter_notes": "Re-resolve via index each run. Per-state files.",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 176
+  },
+  {
+   "platform": "AmeriHealth Caritas Next (S3-backed)",
+   "issuer_rows": 5,
+   "unique_issuer_ids": 5,
+   "hosts": [
+    "www.amerihealthcaritasnext.com",
+    "www.firstchoicenext.com"
+   ],
+   "n_states": 5,
+   "states": [
+    "DE",
+    "FL",
+    "LA",
+    "NC",
+    "SC"
+   ],
+   "unique_index_urls": 2,
+   "provider_file_count": 2,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "www.amerihealthcaritasnext.com/cms-data-index.json -> provider file on s3.us-west-2.amazonaws.com/prd2-directory-generation-service-machine-readable-json/ACNEXT/providers.json (firstchoicenext.com same backend)",
+   "quirks": [
+    "index host and file host differ (S3 direct) -- domain-pinning would break",
+    "single providers.json for 5 states"
+   ],
+   "adapter_notes": "Follow index URLs verbatim, never assume same-host. Split by plans[].",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 17
+  },
+  {
+   "platform": "Dental single-issuer self-hosted",
+   "issuer_rows": 5,
+   "unique_issuer_ids": 5,
+   "hosts": [
+    "dencap.com",
+    "fl-d4h.dentaltotalhealth.com",
+    "www.dentalhealthservices.com",
+    "www.dentegra.com"
+   ],
+   "n_states": 4,
+   "states": [
+    "FL",
+    "KS",
+    "MI",
+    "OR"
+   ],
+   "unique_index_urls": 4,
+   "provider_file_count": 13,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": false,
+   "url_pattern": "dentegra.com, dencap.com, fl-d4h.dentaltotalhealth.com, dentalhealthservices.com -- bespoke",
+   "quirks": [],
+   "adapter_notes": "OUT OF SCOPE (dental).",
+   "sampled_sizes_mb": [
+    0.4,
+    0.7,
+    1.2,
+    6.4,
+    6.5
+   ],
+   "est_total_mb_lower_bound": 40
+  },
+  {
+   "platform": "MMIT Formulary Navigator",
+   "issuer_rows": 4,
+   "unique_issuer_ids": 4,
+   "hosts": [
+    "fm.formularynavigator.com"
+   ],
+   "n_states": 4,
+   "states": [
+    "AK",
+    "AZ",
+    "TX",
+    "UT"
+   ],
+   "unique_index_urls": 4,
+   "provider_file_count": 4,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "fm.formularynavigator.com/jsonFiles/publish/{orgId}/{pubId}/cms-data-index.json -> same-dir providers.json",
+   "quirks": [
+    "true multi-tenant vendor: Premera (AK) + Imperial Health (3 indexes) on same host; also serves formulary_urls for MANY other issuers (e.g. 22healthplan)",
+    "Premera providers.json >=200MB, 74k+ records; Imperial files 3.7-47MB",
+    "Imperial last_updated stale (2025-09..2025-12); duplicate vocab casing (\"Nurse Practitioner\" vs \"NURSE PRACTITIONER\")"
+   ],
+   "adapter_notes": "Adapter keyed on orgId/pubId path. Case-fold specialties. Watch for more issuers migrating here.",
+   "sampled_sizes_mb": [
+    3.8,
+    20.0,
+    46.8,
+    209.7
+   ],
+   "est_total_mb_lower_bound": 280
+  },
+  {
+   "platform": "PFPData / Thryve Digital (Highmark family)",
+   "issuer_rows": 4,
+   "unique_issuer_ids": 4,
+   "hosts": [
+    "www.pfpdata.com"
+   ],
+   "n_states": 4,
+   "states": [
+    "DE",
+    "ND",
+    "WV",
+    "WY"
+   ],
+   "unique_index_urls": 4,
+   "provider_file_count": 17,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "www.pfpdata.com/cms-data/{issuerId}-{st}/{issuerId}-index.json -> {issuerId}-{md|dn|vs|pm}-provider.json",
+   "quirks": [
+    "cleanest network typing anywhere: md=medical, dn=dental, vs=vision, pm=pharmacy per file name",
+    "issuer ID + state embedded in URL = free attribution",
+    "uses sex field; md files BH-rich (23-40%)"
+   ],
+   "adapter_notes": "Audit only -md- files. 4 rows: Highmark family DE/ND/WV/WY (POC thryvedigital.com = Highmark IT subsidiary).",
+   "sampled_sizes_mb": [
+    0.7,
+    1.3,
+    7.0,
+    7.8,
+    8.4,
+    8.4,
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 107
+  },
+  {
+   "platform": "CareSource (self-hosted)",
+   "issuer_rows": 4,
+   "unique_issuer_ids": 4,
+   "hosts": [
+    "caresource.com"
+   ],
+   "n_states": 4,
+   "states": [
+    "IN",
+    "OH",
+    "WI",
+    "WV"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 8,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "caresource.com/vendor/cms/cms-data-index.json -> www.caresource.com/vendor/cms/data/{YYYYMMDD}/providers_{ST}_{YYYYMMDD}.json",
+   "quirks": [
+    "date-stamped directories -- index must be re-read to discover current file URLs (they rotate daily/periodically)",
+    "files up to >=200MB",
+    "accepting=None on ~48% of sampled records"
+   ],
+   "adapter_notes": "Never cache provider URLs; always re-resolve via index. Per-state files ease routing.",
+   "sampled_sizes_mb": [
+    81.7,
+    209.7
+   ],
+   "est_total_mb_lower_bound": 1166
+  },
+  {
+   "platform": "Cambia/Regence (self-hosted)",
+   "issuer_rows": 4,
+   "unique_issuer_ids": 4,
+   "hosts": [
+    "cms-machine-readable.cambiahealth.com"
+   ],
+   "n_states": 2,
+   "states": [
+    "OR",
+    "UT"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 3,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "cms-machine-readable.cambiahealth.com/index.json -> providers.json + facility_providers.json + group_providers.json",
+   "quirks": [
+    "clean type-split like Medica; facility file lacks accepting/specialty"
+   ],
+   "adapter_notes": "Audit providers.json only.",
+   "sampled_sizes_mb": [
+    4.5,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 19
+  },
+  {
+   "platform": "Moda Health (self-hosted)",
+   "issuer_rows": 3,
+   "unique_issuer_ids": 3,
+   "hosts": [
+    "www.modahealth.com"
+   ],
+   "n_states": 3,
+   "states": [
+    "AK",
+    "OR",
+    "TX"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 3,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "www.modahealth.com/cms-data-index.json -> /cms-data/providers-{AK|OR|TX}.json",
+   "quirks": [
+    "per-state files; BH-rich (45%)",
+    "Moda POC also listed on Delta Dental AK row (affiliated companies)"
+   ],
+   "adapter_notes": "Straightforward.",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 25
+  },
+  {
+   "platform": "Arkansas Blue family",
+   "issuer_rows": 3,
+   "unique_issuer_ids": 3,
+   "hosts": [
+    "secure.arkansasbluecross.com",
+    "secure.arkansasoctave.com",
+    "secure.healthadvantage-hmo.com"
+   ],
+   "n_states": 1,
+   "states": [
+    "AR"
+   ],
+   "unique_index_urls": 3,
+   "provider_file_count": 6,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "secure.{arkansasbluecross|healthadvantage-hmo|arkansasoctave}.com -- 3 brand hosts, identical file structure (same platform)",
+   "quirks": [
+    "last_updated min 2006-03-29 -- 20-year-old timestamps in live file",
+    "sampled distributions identical across brands = shared master network file"
+   ],
+   "adapter_notes": "One adapter, three hosts. Octave = ABCBS exchange brand (medical, despite the name).",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 50
+  },
+  {
+   "platform": "insuringsmiles (ProMedica dental)",
+   "issuer_rows": 3,
+   "unique_issuer_ids": 3,
+   "hosts": [
+    "portal.insuringsmiles.com"
+   ],
+   "n_states": 3,
+   "states": [
+    "IN",
+    "MI",
+    "OH"
+   ],
+   "unique_index_urls": 1,
+   "provider_file_count": 1,
+   "dead_indexes": 0,
+   "dental_or_medical": "dental",
+   "size_is_lower_bound": true,
+   "url_pattern": "portal.insuringsmiles.com/machinereadablefiles/cms/cms-data-index.json -> providers.json",
+   "quirks": [
+    "same file also referenced from Paramount (medical) index"
+   ],
+   "adapter_notes": "OUT OF SCOPE (dental).",
+   "sampled_sizes_mb": [
+    8.4
+   ],
+   "est_total_mb_lower_bound": 8
+  },
+  {
+   "platform": "HCSC (bcbstx/ok/mt)",
+   "issuer_rows": 3,
+   "unique_issuer_ids": 3,
+   "hosts": [
+    "www.bcbsmt.com",
+    "www.bcbsok.com",
+    "www.bcbstx.com"
+   ],
+   "n_states": 3,
+   "states": [
+    "MT",
+    "OK",
+    "TX"
+   ],
+   "unique_index_urls": 3,
+   "provider_file_count": 112,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "www.bcbs{tx,ok,mt}.com/... separate per-state hosts, shared POC mrfcmsnotifications@bcbstx.com; per-type file splits",
+   "quirks": [
+    "largest single files seen: 65MB (OK), 114MB+198MB (TX), 209MB+ (MT dental file); Range mandatory",
+    "facility files stale to 2014; practitioner files fresh (2026-06)",
+    "MT sampled file is dental-network content inside a medical issuer index"
+   ],
+   "adapter_notes": "One adapter, three hosts. Stream-parse; do not load in memory. 3 rows only but TX is the biggest FFM state -- high journalistic value.",
+   "sampled_sizes_mb": [
+    0.3,
+    1.8,
+    65.5,
+    114.1,
+    198.1,
+    209.7
+   ],
+   "est_total_mb_lower_bound": 11006
+  },
+  {
+   "platform": "Kaiser Permanente (AEM)",
+   "issuer_rows": 2,
+   "unique_issuer_ids": 2,
+   "hosts": [
+    "healthy.kaiserpermanente.org"
+   ],
+   "n_states": 2,
+   "states": [
+    "HI",
+    "OR"
+   ],
+   "unique_index_urls": 2,
+   "provider_file_count": 2,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "healthy.kaiserpermanente.org/content/dam/kporg/data/{hi|or}/cms-data-index.json -> same-dir providers.json",
+   "quirks": [
+    "stale: last_updated 2025-08-05 (HI) / 2025-09-29 (OR) -- ~1 year old",
+    "OR file BH-heavy (50%)"
+   ],
+   "adapter_notes": "Staleness itself is a reportable integrity finding.",
+   "sampled_sizes_mb": [
+    3.0,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 11
+  },
+  {
+   "platform": "Wellmark CDN",
+   "issuer_rows": 2,
+   "unique_issuer_ids": 2,
+   "hosts": [
+    "public-cdn.wellmark.com"
+   ],
+   "n_states": 2,
+   "states": [
+    "IA",
+    "SD"
+   ],
+   "unique_index_urls": 2,
+   "provider_file_count": 3,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "public-cdn.wellmark.com/json/{WHPI|WSD}/index.json",
+   "quirks": [
+    "403 to non-browser UA",
+    "one sampled file stale (2025-09-15)",
+    "accepting=None on most sampled records"
+   ],
+   "adapter_notes": "Browser UA required.",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 25
+  },
+  {
+   "platform": "Medical Mutual OH family",
+   "issuer_rows": 2,
+   "unique_issuer_ids": 2,
+   "hosts": [
+    "providersearch.medmutual.com",
+    "www.myparamount.org"
+   ],
+   "n_states": 1,
+   "states": [
+    "OH"
+   ],
+   "unique_index_urls": 2,
+   "provider_file_count": 3,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "providersearch.medmutual.com + www.myparamount.org (Paramount owned by MedMutual)",
+   "quirks": [
+    "Paramount index also lists the insuringsmiles DENTAL file (n=4608, lu 2025-09-16) -- cross-platform file reuse; dedupe by URL before counting"
+   ],
+   "adapter_notes": "Dedupe provider-file URLs globally, not per issuer.",
+   "sampled_sizes_mb": [
+    8.4,
+    8.4,
+    8.4
+   ],
+   "est_total_mb_lower_bound": 25
+  },
+  {
+   "platform": "BCBS SC family",
+   "issuer_rows": 2,
+   "unique_issuer_ids": 2,
+   "hosts": [
+    "www.instilhealth.com",
+    "www.southcarolinablues.com"
+   ],
+   "n_states": 1,
+   "states": [
+    "SC"
+   ],
+   "unique_index_urls": 2,
+   "provider_file_count": 2,
+   "dead_indexes": 0,
+   "dental_or_medical": "medical",
+   "size_is_lower_bound": true,
+   "url_pattern": "www.southcarolinablues.com + www.instilhealth.com (same POC email)",
+   "quirks": [
+    "SC Blues file >=200MB with last_updated back to 2014",
+    "InstilHealth: accepting=None on 98% of sampled records"
+   ],
+   "adapter_notes": "Stream-parse; the None-accepting rate is itself a finding.",
+   "sampled_sizes_mb": [
+    10.4,
+    209.7
+   ],
+   "est_total_mb_lower_bound": 220
+  }
+ ]
+}

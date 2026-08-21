@@ -1,0 +1,199 @@
+{
+ "index_url": "https://priorityhealth.stylelabs.cloud/api/public/content/index.json",
+ "states": [
+  "MI"
+ ],
+ "issuer_ids": [
+  "29698"
+ ],
+ "provider_urls_count": 26,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://priorityhealth.stylelabs.cloud/api/public/content/priority-health-providers-1.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 822,
+    "analyzed": 822,
+    "field_presence": {
+     "npi": 822,
+     "type": 822,
+     "facility_name": 822,
+     "facility_type": 822,
+     "addresses": 822,
+     "plans": 822,
+     "last_updated_on": 822
+    },
+    "type_dist": {
+     "FACILITY": 822
+    },
+    "npi_present": 822,
+    "npi_luhn_valid": 822,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 822
+    },
+    "last_updated_min": "2026-07-28",
+    "last_updated_max": "2026-07-28",
+    "last_updated_years": {
+     "2026": 822
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "",
+      822
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://priorityhealth.stylelabs.cloud/api/public/content/priority-health-providers-14.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 875,
+    "analyzed": 875,
+    "field_presence": {
+     "npi": 875,
+     "type": 875,
+     "name": 875,
+     "addresses": 875,
+     "specialty": 875,
+     "accepting": 875,
+     "plans": 875,
+     "sex": 875,
+     "last_updated_on": 875
+    },
+    "type_dist": {
+     "INDIVIDUAL": 875
+    },
+    "npi_present": 875,
+    "npi_luhn_valid": 875,
+    "bh_matches": 263,
+    "unique_specialties": 76,
+    "top_specialties": [
+     [
+      "General Practice",
+      157
+     ],
+     [
+      "Social Worker",
+      97
+     ],
+     [
+      "Family Medicine",
+      56
+     ],
+     [
+      "Professional Counseling",
+      49
+     ],
+     [
+      "Internal Medicine",
+      42
+     ],
+     [
+      "Pediatrics",
+      31
+     ],
+     [
+      "Behavior Analyst",
+      31
+     ],
+     [
+      "Psychiatry",
+      28
+     ],
+     [
+      "Optometry",
+      26
+     ],
+     [
+      "Cardiovascular Disease",
+      24
+     ],
+     [
+      "Surgery",
+      24
+     ],
+     [
+      "Obstetrics & Gynecology",
+      21
+     ],
+     [
+      "Ophthalmology",
+      15
+     ],
+     [
+      "Psychology, Masters Llp",
+      13
+     ],
+     [
+      "Orthopaedic Surgery",
+      13
+     ],
+     [
+      "Chiropractic",
+      12
+     ],
+     [
+      "Neurology",
+      12
+     ],
+     [
+      "Gastroenterology",
+      12
+     ],
+     [
+      "Psychology, Doctoral",
+      11
+     ],
+     [
+      "Dermatology",
+      10
+     ]
+    ],
+    "bh_specialty_values": [
+     "Social Worker",
+     "Professional Counseling",
+     "Behavior Analyst",
+     "Psychiatry",
+     "Psychology, Masters Llp",
+     "Psychology, Doctoral",
+     "Psychology",
+     "Physical Therapy",
+     "Speech Language Therapy",
+     "Occupational Therapy",
+     "Geriatric Psychiatry",
+     "Psychiatry, Child & Adolescent",
+     "Pediatric Developmental-Behavioral",
+     "Genetic Counseling",
+     "Marriage And Family Therapy"
+    ],
+    "accepting_values": {
+     "accepting": 856,
+     "not accepting": 19
+    },
+    "last_updated_min": "2026-07-28",
+    "last_updated_max": "2026-07-28",
+    "last_updated_years": {
+     "2026": 875
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "",
+      875
+     ]
+    ]
+   }
+  }
+ ]
+}

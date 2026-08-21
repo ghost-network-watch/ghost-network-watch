@@ -1,0 +1,160 @@
+{
+ "index_url": "https://esbgatewaypub.medica.com/rest/QHP/MO/53461/cms-data-index.json",
+ "states": [
+  "MO"
+ ],
+ "issuer_ids": [
+  "53461"
+ ],
+ "provider_urls_count": 91,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://esbgatewaypub.medica.com:443/rest/QHP/MO/53461/Group/Providers1.json",
+   "http_code": 200,
+   "fetched_chars": 6526308,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 2058,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "group_name": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "type": 1000
+    },
+    "type_dist": {
+     "GROUP": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-07-01",
+    "last_updated_max": "2026-07-13",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 18,
+    "top_dup_phones": [
+     [
+      "8169311883",
+      19
+     ],
+     [
+      "8169320340",
+      17
+     ],
+     [
+      "6464536777",
+      16
+     ],
+     [
+      "8557827822",
+      13
+     ],
+     [
+      "4029553900",
+      13
+     ],
+     [
+      "4029169421",
+      12
+     ],
+     [
+      "4025006870",
+      11
+     ],
+     [
+      "6362374700",
+      10
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://esbgatewaypub.medica.com:443/rest/QHP/MO/53461/Facility/Providers42.json",
+   "http_code": 200,
+   "fetched_chars": 9456280,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 1855,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "facility_type": 1000,
+     "type": 1000,
+     "facility_name": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2020-03-23",
+    "last_updated_max": "2026-07-13",
+    "last_updated_years": {
+     "2020": 695,
+     "2021": 57,
+     "2026": 142,
+     "2024": 24,
+     "2023": 39,
+     "2022": 24,
+     "2025": 19
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "7327191500",
+      2
+     ],
+     [
+      "3014241411",
+      2
+     ],
+     [
+      "9526532568",
+      2
+     ],
+     [
+      "5737552315",
+      2
+     ],
+     [
+      "7047031441",
+      2
+     ],
+     [
+      "2078342880",
+      2
+     ],
+     [
+      "5164831767",
+      2
+     ],
+     [
+      "9517372355",
+      2
+     ]
+    ]
+   }
+  }
+ ]
+}

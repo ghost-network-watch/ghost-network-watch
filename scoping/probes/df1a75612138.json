@@ -1,0 +1,300 @@
+{
+ "index_url": "https://www.myparamount.org/machinereadablefiles/cms-data-index.json",
+ "states": [
+  "OH"
+ ],
+ "issuer_ids": [
+  "74313"
+ ],
+ "provider_urls_count": 2,
+ "plan_urls_count": 2,
+ "files": [
+  {
+   "url": "https://www.myparamount.org/machinereadablefiles/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1450,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "languages": 1000,
+     "gender": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 908,
+     "FACILITY": 92
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 304,
+    "unique_specialties": 122,
+    "top_specialties": [
+     [
+      "Primary Care Provider",
+      162
+     ],
+     [
+      "Nurse Practitioner",
+      132
+     ],
+     [
+      "Social Worker-Independent",
+      75
+     ],
+     [
+      "Professional Clinical Counselor",
+      72
+     ],
+     [
+      "Family Medicine",
+      54
+     ],
+     [
+      "Internal Medicine",
+      54
+     ],
+     [
+      "Nurse Anesthetist",
+      52
+     ],
+     [
+      "Physician Assistant",
+      40
+     ],
+     [
+      "Social Worker",
+      39
+     ],
+     [
+      "Optometry",
+      37
+     ],
+     [
+      "Professional Counselor",
+      37
+     ],
+     [
+      "Physical Therapy",
+      29
+     ],
+     [
+      "Emergency Medicine",
+      22
+     ],
+     [
+      "Dialysis",
+      22
+     ],
+     [
+      "Durable Medical Equipment",
+      21
+     ],
+     [
+      "Behavioral Health Advanced Practice Nurse CNP",
+      20
+     ],
+     [
+      "Anesthesiology",
+      19
+     ],
+     [
+      "Speech Pathology",
+      18
+     ],
+     [
+      "Psychology",
+      17
+     ],
+     [
+      "Chiropractor",
+      16
+     ]
+    ],
+    "bh_specialty_values": [
+     "Social Worker-Independent",
+     "Professional Clinical Counselor",
+     "Social Worker",
+     "Professional Counselor",
+     "Physical Therapy",
+     "Behavioral Health Advanced Practice Nurse CNP",
+     "Psychology",
+     "Chemical Dependency Counselor-Independent",
+     "Psychiatry",
+     "Behavioral Analyst",
+     "Community Mental Health Center OHMHAS",
+     "Chemical Dependency Counselor",
+     "Alcohol and Drug Addiction OHMHAS",
+     "Qualified Mental Health Specialist - Bachelors",
+     "Marriage and Family Therapy-Independent",
+     "Occupational Therapy",
+     "Counselor Trainee",
+     "Chemical Dependency Counselor Assistant",
+     "Behavioral Health Nurse-RN",
+     "Social Worker Trainee",
+     "Psychiatry, Child & Adolescent",
+     "Marriage and Family Therapy",
+     "Qualified Mental Health Specialist - 3 Years Experience",
+     "Psychology, School",
+     "Qualified Mental Health Specialist - Masters"
+    ],
+    "accepting_values": {
+     "accepting": 980,
+     "not accepting": 20
+    },
+    "last_updated_min": "2026-07-31",
+    "last_updated_max": "2026-07-31",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 80,
+    "top_dup_phones": [
+     [
+      "3303976007",
+      47
+     ],
+     [
+      "4193835555",
+      44
+     ],
+     [
+      "4193835000",
+      40
+     ],
+     [
+      "2602665700",
+      29
+     ],
+     [
+      "4196151114",
+      28
+     ],
+     [
+      "4402401655",
+      28
+     ],
+     [
+      "2164442273",
+      28
+     ],
+     [
+      "4404491540",
+      22
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://portal.insuringsmiles.com/machinereadablefiles/cms/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 4608,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "sex": 1000,
+     "last_updated_on": 1000,
+     "plans": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "GENERAL",
+      816
+     ],
+     [
+      "ORTHODONTICS",
+      51
+     ],
+     [
+      "PEDIATRICS",
+      48
+     ],
+     [
+      "ORAL SURGERY",
+      44
+     ],
+     [
+      "PERIODONTICS",
+      25
+     ],
+     [
+      "ENDODONTICS",
+      20
+     ],
+     [
+      "PROSTHODONTICS",
+      7
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 961,
+     "accepting in some locations": 23,
+     "not accepting": 16
+    },
+    "last_updated_min": "2025-09-16",
+    "last_updated_max": "2025-09-16",
+    "last_updated_years": {
+     "2025": 1000
+    },
+    "max_addresses_per_provider": 119,
+    "top_dup_phones": [
+     [
+      "8889884066",
+      33
+     ],
+     [
+      "9724448888",
+      32
+     ],
+     [
+      "7706921000",
+      26
+     ],
+     [
+      "7023888989",
+      21
+     ],
+     [
+      "8835437678",
+      15
+     ],
+     [
+      "5629244401",
+      11
+     ],
+     [
+      "7732841645",
+      8
+     ],
+     [
+      "5169372220",
+      8
+     ]
+    ]
+   }
+  }
+ ]
+}

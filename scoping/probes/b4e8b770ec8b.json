@@ -1,0 +1,10 @@
+{
+ "index_url": "https://www.bcbsnc.com/cms-data-index.json",
+ "states": [
+  "NC"
+ ],
+ "issuer_ids": [
+  "11512"
+ ],
+ "error": "HTTPError: HTTP Error 404: Not Found"
+}

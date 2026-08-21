@@ -1,0 +1,1073 @@
+{
+ "exhibit": "CareSource duplicate-phone anomaly (866-389-2727) - verification",
+ "prepared": "2026-08-21T01:07:27-0400",
+ "method": {
+  "index_url": "https://caresource.com/vendor/cms/cms-data-index.json",
+  "files_fetched": [
+   "https://www.caresource.com/vendor/cms/data/20260820/providers_IN_20260820.json",
+   "https://www.caresource.com/vendor/cms/data/20260820/providers_OH_20260820.json",
+   "https://www.caresource.com/vendor/cms/data/20260820/providers_WI_20260820.json",
+   "https://www.caresource.com/vendor/cms/data/20260820/providers_WV_20260820.json"
+  ],
+  "fetch_style": "browser User-Agent, gzip, Range bytes=0-8388607 per file (<=8MB transfer each); WI and WV decompressed to complete files, IN and OH partial",
+  "wi_coverage": "complete census: 19,956 of 19,956 records",
+  "counting_unit": "provider records (not address rows); a record 'lists only the target' if every phone across all its addresses is 866-389-2727"
+ },
+ "what_the_number_is": {
+  "number": "866-389-2727",
+  "identity": "MinuteClinic (CVS Health) national customer service / appointment line, styled 1-866-389-ASAP (2727)",
+  "sources": [
+   "https://www.cvs.com/minuteclinic/info/contact page text: '1-866-389-ASAP (2727) (TTY: 711)' (fetched 2026-08-21)",
+   "NPPES NPI 1932171634 (MINUTECLINIC DIAGNOSTICS OF INDIANA, LLC): official location & mailing phone = 866-389-2727, mailing address 'MINUTECLINIC CREDENTIALING', Woonsocket RI (CVS HQ city)"
+  ],
+  "NOT": "CareSource member services. The initial hypothesis (plan call center replacing provider numbers) is REJECTED."
+ },
+ "per_state_counts": {
+  "IN": {
+   "records_parsed": 54595,
+   "complete_file": false,
+   "only_866_389_2727": 139,
+   "target_plus_other_phone": 118,
+   "no_phone_at_all": 0,
+   "pct_only_target": 0.25,
+   "behavioral_health_records_affected": 0
+  },
+  "OH": {
+   "records_parsed": 61567,
+   "complete_file": false,
+   "only_866_389_2727": 118,
+   "target_plus_other_phone": 32,
+   "no_phone_at_all": 0,
+   "pct_only_target": 0.19,
+   "behavioral_health_records_affected": 0
+  },
+  "WI": {
+   "records_parsed": 19956,
+   "complete_file": true,
+   "only_866_389_2727": 657,
+   "target_plus_other_phone": 185,
+   "no_phone_at_all": 0,
+   "pct_only_target": 3.29,
+   "behavioral_health_records_affected": 0
+  },
+  "WV": {
+   "records_parsed": 27593,
+   "complete_file": true,
+   "only_866_389_2727": 3,
+   "target_plus_other_phone": 7,
+   "no_phone_at_all": 0,
+   "pct_only_target": 0.01,
+   "behavioral_health_records_affected": 0
+  }
+ },
+ "wi_cohort_profile": {
+  "records_listing_number": 842,
+  "distinct_npis": 779,
+  "records_with_ONLY_this_number": 657,
+  "records_with_any_wisconsin_address": 33,
+  "pct_cohort_with_no_wi_address": 96.1,
+  "record_state_footprint": {
+   "OH": 241,
+   "GA": 237,
+   "FL": 3,
+   "IN": 196,
+   "SC": 1,
+   "RI": 2,
+   "KY": 41,
+   "NC": 159,
+   "WI": 33,
+   "TX": 1,
+   "AZ": 1,
+   "ME": 6
+  },
+  "address_level_states": {
+   "OH": 484,
+   "FL": 20,
+   "GA": 903,
+   "IN": 886,
+   "SC": 1,
+   "RI": 2,
+   "KY": 41,
+   "NC": 230,
+   "WI": 37,
+   "TX": 1,
+   "AZ": 10,
+   "ME": 6
+  },
+  "top_specialties": [
+   [
+    "Certified Nurse Practitioner",
+    519
+   ],
+   [
+    "Nurse Practitioner, Family Health",
+    223
+   ],
+   [
+    "Family Practice",
+    69
+   ],
+   [
+    "Physician Assistant",
+    11
+   ],
+   [
+    "Nurse Practitioner, General",
+    8
+   ],
+   [
+    "Cardiology",
+    2
+   ]
+  ],
+  "note": "cohort is overwhelmingly nurse practitioners (MinuteClinic staffing profile); 0 behavioral-health specialties affected",
+  "footprint_note": "record_state_footprint counts records with >=1 address in that state; records can span multiple states, so counts sum to more than 842"
+ },
+ "whole_wi_file_context": {
+  "records": 19956,
+  "records_with_at_least_one_wi_address": 18164,
+  "records_with_zero_wi_addresses": 1792,
+  "pct_zero_wi_addresses": 9.0,
+  "top_address_states": [
+   [
+    "WI",
+    98915
+   ],
+   [
+    "GA",
+    1063
+   ],
+   [
+    "IN",
+    995
+   ],
+   [
+    "OH",
+    708
+   ],
+   [
+    "MI",
+    626
+   ],
+   [
+    "MN",
+    557
+   ],
+   [
+    "NC",
+    308
+   ],
+   [
+    "IL",
+    232
+   ],
+   [
+    "TX",
+    141
+   ],
+   [
+    "FL",
+    82
+   ]
+  ],
+  "distinct_npis": 19316,
+  "plan_structure_note": "every record lists every WI plan ID (all 32 plan|tier keys have total=19,956), so the file encodes no per-plan network differentiation"
+ },
+ "nppes_spot_checks": [
+  {
+   "npi": "1346594959",
+   "caresource_name": "Bonita Ponder",
+   "caresource_states": [
+    "GA"
+   ],
+   "caresource_phones": [
+    "8663892727"
+   ],
+   "nppes_name": "BONITA PONDER",
+   "nppes_location_city_state": "LOGANVILLE, GA",
+   "nppes_phone": "770-277-5996",
+   "nppes_primary_taxonomy": "Nurse Practitioner, Family"
+  },
+  {
+   "npi": "1952665556",
+   "caresource_name": "Alyson J Lane",
+   "caresource_states": [
+    "GA"
+   ],
+   "caresource_phones": [
+    "8663892727"
+   ],
+   "nppes_name": "ALYSON LANE",
+   "nppes_location_city_state": "MARIETTA, GA",
+   "nppes_phone": "770-977-9220",
+   "nppes_primary_taxonomy": "Nurse Practitioner, Family"
+  },
+  {
+   "npi": "1881945681",
+   "caresource_name": "Ashleigh S Russell",
+   "caresource_states": [
+    "GA"
+   ],
+   "caresource_phones": [
+    "8663892727"
+   ],
+   "nppes_name": "ASHLEIGH RUSSELL",
+   "nppes_location_city_state": "SAVANNAH, GA",
+   "nppes_phone": "252-567-0352",
+   "nppes_primary_taxonomy": "Nurse Practitioner, Family"
+  },
+  {
+   "npi": "1700842176",
+   "caresource_name": "Casandra M Buenger",
+   "caresource_states": [
+    "GA"
+   ],
+   "caresource_phones": [
+    "8663892727"
+   ],
+   "nppes_name": "CASANDRA BUENGER",
+   "nppes_location_city_state": "CANTON, GA",
+   "nppes_phone": "866-389-2727",
+   "nppes_primary_taxonomy": "Nurse Practitioner, Family"
+  },
+  {
+   "npi": "1811323520",
+   "caresource_name": "Brenda L Hugee Ford",
+   "caresource_states": [
+    "GA"
+   ],
+   "caresource_phones": [
+    "8663892727"
+   ],
+   "nppes_name": "BRENDA FORD",
+   "nppes_location_city_state": "MACON, GA",
+   "nppes_phone": "478-788-1015",
+   "nppes_primary_taxonomy": "Nurse Practitioner, Family"
+  }
+ ],
+ "typo_variants_observed": {
+  "note": "MinuteClinic group records also carry apparent transcription variants of the same national number on some addresses",
+  "variants": [
+   "8662892727",
+   "8662982727",
+   "8663592727"
+  ],
+  "example_npi": "1699747303 (MinuteClinic Diagnostic of Ohio LLC, 54 addresses in WI file)"
+ },
+ "example_records": {
+  "only_866_389_2727": [
+   {
+    "state_file": "WI",
+    "npi": "1932171634",
+    "type": "GROUP",
+    "name": "MinuteClinic Diagnostic of Indiana LLC",
+    "specialty": [],
+    "accepting": null,
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 1,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "1466 W Oak St",
+      "city": "Zionsville",
+      "state": "IN",
+      "zip": "46077",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1134191836",
+    "type": "GROUP",
+    "name": "Minute Clinic",
+    "specialty": [],
+    "accepting": null,
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 1,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "2429 Martin Luther King Jr Dr SW",
+      "city": "Atlanta",
+      "state": "GA",
+      "zip": "30311",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1346594959",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Bonita",
+     "last": "Ponder",
+     "middle": "",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 4,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "4192 Salem Rd # GA002",
+      "city": "Covington",
+      "state": "GA",
+      "zip": "30016",
+      "phone": "8663892727"
+     },
+     {
+      "address": "3027 Jim Moore Rd",
+      "city": "Dacula",
+      "state": "GA",
+      "zip": "30019",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1952665556",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Alyson",
+     "last": "Lane",
+     "middle": "J",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 2,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "3905 Due West Rd NW # GA004",
+      "city": "Marietta",
+      "state": "GA",
+      "zip": "30064",
+      "phone": "8663892727"
+     },
+     {
+      "address": "687 Johnson Ferry Rd",
+      "city": "Marietta",
+      "state": "GA",
+      "zip": "30068",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1881945681",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Ashleigh",
+     "last": "Russell",
+     "middle": "S",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 4,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "5690 Ogeechee Rd # GA006",
+      "city": "Savannah",
+      "state": "GA",
+      "zip": "31405",
+      "phone": "8663892727"
+     },
+     {
+      "address": "5401 Abercorn St",
+      "city": "Savannah",
+      "state": "GA",
+      "zip": "31405",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1700842176",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Casandra",
+     "last": "Buenger",
+     "middle": "M",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 3,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "1380 Woodstock Rd",
+      "city": "Roswell",
+      "state": "GA",
+      "zip": "30075",
+      "phone": "8663892727"
+     },
+     {
+      "address": "687 Johnson Ferry Rd",
+      "city": "Marietta",
+      "state": "GA",
+      "zip": "30068",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1811323520",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Brenda",
+     "last": "Hugee Ford",
+     "middle": "L",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 3,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "2 N Zack Hinton Pkwy",
+      "city": "McDonough",
+      "state": "GA",
+      "zip": "30253",
+      "phone": "8663892727"
+     },
+     {
+      "address": "4585 Hartley Bridge Rd",
+      "city": "Macon",
+      "state": "GA",
+      "zip": "31216",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1649611104",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Camille",
+     "last": "Lundi",
+     "middle": "S",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 1,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "4192 Salem Rd",
+      "city": "Covington",
+      "state": "GA",
+      "zip": "30016",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1417207879",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Angela",
+     "last": "Turner",
+     "middle": "L",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 1,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "2 N Zack Hinton Pkwy # GA002",
+      "city": "McDonough",
+      "state": "GA",
+      "zip": "30253",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1306255690",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Chiquita",
+     "last": "Thomas",
+     "middle": "M",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 5,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "3001 Russell Pkwy",
+      "city": "Warner Robins",
+      "state": "GA",
+      "zip": "31088",
+      "phone": "8663892727"
+     },
+     {
+      "address": "6381 Zebulon Rd",
+      "city": "Macon",
+      "state": "GA",
+      "zip": "31220",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1568881217",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Jamie",
+     "last": "Wells",
+     "middle": "E",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 2,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "7300 GA Highway 21",
+      "city": "Port Wentworth",
+      "state": "GA",
+      "zip": "31407",
+      "phone": "8663892727"
+     },
+     {
+      "address": "2324 US Highway 17",
+      "city": "Richmond Hill",
+      "state": "GA",
+      "zip": "31324",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1861741100",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Jaekea",
+     "last": "Coar",
+     "middle": "T",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 1,
+    "distinct_phones": [
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "4192 Salem Rd",
+      "city": "Mcdonough",
+      "state": "GA",
+      "zip": "30253",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   }
+  ],
+  "number_plus_other_phone": [
+   {
+    "state_file": "WI",
+    "npi": "1699747303",
+    "type": "GROUP",
+    "name": "MinuteClinic Diagnostic of Ohio LLC",
+    "specialty": [],
+    "accepting": null,
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 54,
+    "distinct_phones": [
+     "8662892727",
+     "8662982727",
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "296 Center St",
+      "city": "Chardon",
+      "state": "OH",
+      "zip": "44024",
+      "phone": "8663892727"
+     },
+     {
+      "address": "918 High St",
+      "city": "Worthington",
+      "state": "OH",
+      "zip": "43085",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1134191836",
+    "type": "GROUP",
+    "name": "Minute Clinic LLC",
+    "specialty": [],
+    "accepting": null,
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 39,
+    "distinct_phones": [
+     "8663592727",
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "99 Magnolia Ave",
+      "city": "Auburndale",
+      "state": "FL",
+      "zip": "33823",
+      "phone": "8663592727"
+     },
+     {
+      "address": "1380 Woodstock Rd",
+      "city": "Roswell",
+      "state": "GA",
+      "zip": "30075",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1154747970",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Crystal",
+     "last": "Nicosia",
+     "middle": "",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 3,
+    "distinct_phones": [
+     "7704201092",
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "2324 US Highway 17",
+      "city": "Richmond Hill",
+      "state": "GA",
+      "zip": "31324",
+      "phone": "8663892727"
+     },
+     {
+      "address": "5690 Ogeechee Rd",
+      "city": "Savannah",
+      "state": "GA",
+      "zip": "31405",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1346516028",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Holly",
+     "last": "Stanfield",
+     "middle": "L",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 5,
+    "distinct_phones": [
+     "6784231043",
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "5848 Highway 124 W",
+      "city": "Hoschton",
+      "state": "GA",
+      "zip": "30548",
+      "phone": "8663892727"
+     },
+     {
+      "address": "2720 Loganville Hwy",
+      "city": "Loganville",
+      "state": "GA",
+      "zip": "30052",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1174582167",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Swapna",
+     "last": "Vacha",
+     "middle": "R",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 4,
+    "distinct_phones": [
+     "7704201092",
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "2782 Cobb Pkwy NW",
+      "city": "Kennesaw",
+      "state": "GA",
+      "zip": "30152",
+      "phone": "7704201092"
+     },
+     {
+      "address": "5095 Peachtree Pkwy",
+      "city": "Norcross",
+      "state": "GA",
+      "zip": "30092",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1437411519",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Sally",
+     "last": "Bell",
+     "middle": "N",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 5,
+    "distinct_phones": [
+     "7704201092",
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "1600 Towne Lake Pkwy",
+      "city": "Woodstock",
+      "state": "GA",
+      "zip": "30189",
+      "phone": "8663892727"
+     },
+     {
+      "address": "687 Johnson Ferry Rd",
+      "city": "Marietta",
+      "state": "GA",
+      "zip": "30068",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1104171446",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Yentl",
+     "last": "Butler",
+     "middle": "C",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, General"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 2,
+    "distinct_phones": [
+     "7703390129",
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "3027 Jim Moore Rd",
+      "city": "Dacula",
+      "state": "GA",
+      "zip": "30019",
+      "phone": "7703390129"
+     },
+     {
+      "address": "4192 Salem Rd",
+      "city": "Covington",
+      "state": "GA",
+      "zip": "30016",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   },
+   {
+    "state_file": "WI",
+    "npi": "1487991675",
+    "type": "INDIVIDUAL",
+    "name": {
+     "first": "Susana",
+     "last": "McGuire",
+     "middle": "S",
+     "suffix": "",
+     "prefix": ""
+    },
+    "specialty": [
+     "Nurse Practitioner, Family Health"
+    ],
+    "accepting": "accepting",
+    "last_updated_on": "2026-08-20",
+    "n_addresses": 3,
+    "distinct_phones": [
+     "7704201092",
+     "7705171022",
+     "8663892727"
+    ],
+    "sample_addresses": [
+     {
+      "address": "1600 Towne Lake Pkwy",
+      "city": "Woodstock",
+      "state": "GA",
+      "zip": "30189",
+      "phone": "7705171022"
+     },
+     {
+      "address": "6120 Hickory Flat Hwy # GA004",
+      "city": "Canton",
+      "state": "GA",
+      "zip": "30115",
+      "phone": "8663892727"
+     }
+    ],
+    "plan_ids": [
+     "87416WI0030003",
+     "87416WI0030005",
+     "87416WI0030017",
+     "87416WI0030023"
+    ]
+   }
+  ]
+ },
+ "assessment": {
+  "original_metric_verdict": "NOT defensible as originally framed. '866-389-2727 = the plan's own call center' is false; it is the provider organization's (CVS MinuteClinic's) national booking line and matches the org's NPPES record. Publishing 'X% of providers have only the plan's call-center number' for CareSource would be a factual error.",
+  "sampling_artifact": "the 1,598-per-1,000-records figure from the first probe counted phone occurrences per ADDRESS; multi-address MinuteClinic records (up to 134 addresses) inflated it. Record-level truth in WI: 657/19,956 = 3.3% only-this-number, 842/19,956 = 4.2% list it anywhere.",
+  "defensible_reframe_1": "phone-concentration metric: share of records whose ONLY listed phone is a number shared by >=N other records, published WITH attribution of the number's owner (plan call center vs provider-org central line vs unknown). Central lines like MinuteClinic's or Kaiser's are a lower-severity class than a plan-owned call center.",
+  "defensible_reframe_2": "geographic-relevance flag (the stronger finding here): 809 of 842 cohort records (96.1%) have no Wisconsin service address at all; 237 cohort records include Georgia addresses and 903 of the cohort's 2,621 address rows are in Georgia. Whole file: 1,792 records (9.0%) in the WI QHP file have zero Wisconsin addresses. Fair framing: 'the payer's own published Wisconsin file lists N providers whose service addresses are all outside Wisconsin'.",
+  "bh_relevance": "none of the affected records match behavioral-health specialties in any of the 4 states; this flag does not support the mental-health narrative and should not be presented as such."
+ }
+}

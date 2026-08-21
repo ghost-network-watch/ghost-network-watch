@@ -1,0 +1,180 @@
+{
+ "index_url": "https://healthy.kaiserpermanente.org/content/dam/kporg/data/hi/cms-data-index.json",
+ "states": [
+  "HI"
+ ],
+ "issuer_ids": [
+  "60612"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://healthy.kaiserpermanente.org/content/dam/kporg/data/hi/providers.json",
+   "http_code": 206,
+   "fetched_chars": 3011335,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 802,
+    "analyzed": 802,
+    "field_presence": {
+     "npi": 802,
+     "type": 802,
+     "addresses": 802,
+     "plans": 802,
+     "last_updated_on": 802,
+     "name": 779,
+     "specialty": 779,
+     "accepting": 779,
+     "gender": 779,
+     "languages": 90,
+     "facility_name": 22,
+     "facility_type": 22,
+     "group_name": 1
+    },
+    "type_dist": {
+     "INDIVIDUAL": 779,
+     "GROUP": 1,
+     "FACILITY": 22
+    },
+    "npi_present": 802,
+    "npi_luhn_valid": 802,
+    "bh_matches": 24,
+    "unique_specialties": 60,
+    "top_specialties": [
+     [
+      "FAMILY MEDICINE",
+      64
+     ],
+     [
+      "OB/GYN",
+      54
+     ],
+     [
+      "HOSPITALIST",
+      48
+     ],
+     [
+      "INTERNAL MEDICINE",
+      45
+     ],
+     [
+      "URGENT CARE",
+      44
+     ],
+     [
+      "EMERGENCY MEDICINE",
+      43
+     ],
+     [
+      "PEDIATRICS",
+      28
+     ],
+     [
+      "RADIOLOGY",
+      27
+     ],
+     [
+      "ORTHOPAEDICS",
+      24
+     ],
+     [
+      "OPTOMETRY",
+      23
+     ],
+     [
+      "CARDIOLOGY",
+      22
+     ],
+     [
+      "GASTROENTEROLOGY",
+      20
+     ],
+     [
+      "INTEGRATED BEHAVIORAL HEALTH",
+      19
+     ],
+     [
+      "GENERAL SURGERY",
+      18
+     ],
+     [
+      "DERMATOLOGY",
+      18
+     ],
+     [
+      "PED SPECIALTY",
+      17
+     ],
+     [
+      "SAME DAY CARE",
+      17
+     ],
+     [
+      "CONTINUING CARE",
+      13
+     ],
+     [
+      "OPHTHALMOLOGY",
+      13
+     ],
+     [
+      "ONCOLOGY",
+      12
+     ]
+    ],
+    "bh_specialty_values": [
+     "INTEGRATED BEHAVIORAL HEALTH",
+     "DEVELOPMENTAL  BEHAVIORAL PEDS",
+     "PSYCHIATRY",
+     "ADDICTION MEDICINE"
+    ],
+    "accepting_values": {
+     "accepting": 717,
+     "not accepting": 62,
+     "None": 23
+    },
+    "last_updated_min": "2025-08-05",
+    "last_updated_max": "2025-08-05",
+    "last_updated_years": {
+     "2025": 802
+    },
+    "max_addresses_per_provider": 6,
+    "top_dup_phones": [
+     [
+      "8084320000",
+      344
+     ],
+     [
+      "8084322000",
+      296
+     ],
+     [
+      "8082436000",
+      173
+     ],
+     [
+      "8083344400",
+      154
+     ],
+     [
+      "8085487033",
+      36
+     ],
+     [
+      "8084327600",
+      19
+     ],
+     [
+      "8338333333",
+      17
+     ],
+     [
+      "8085476881",
+      14
+     ]
+    ]
+   }
+  }
+ ]
+}

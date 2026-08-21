@@ -1,0 +1,251 @@
+{
+ "index_url": "https://www.lablue.com/acadirectory/19636/19636Index.json",
+ "states": [
+  "LA"
+ ],
+ "issuer_ids": [
+  "19636"
+ ],
+ "provider_urls_count": 8,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "http://www.lablue.com/acadirectory/19636/individualprovidersfile.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3065,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "gender": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 182,
+    "unique_specialties": 100,
+    "top_specialties": [
+     [
+      "TELEHEALTH SERVICES",
+      303
+     ],
+     [
+      "NURSE PRACTITIONER (NP)",
+      186
+     ],
+     [
+      "HOSPITAL BASED",
+      179
+     ],
+     [
+      "INTERNAL MEDICINE",
+      103
+     ],
+     [
+      "NURSE PRAC-FAMILY",
+      81
+     ],
+     [
+      "LICENSED PROFESSIONAL COUNSLR",
+      69
+     ],
+     [
+      "CERTIFIED REG NURSE ANE (CRNA)",
+      67
+     ],
+     [
+      "LICENSED CLINCAL SOCIAL WORKER",
+      61
+     ],
+     [
+      "HOSPITALIST",
+      54
+     ],
+     [
+      "FAMILY PRACTICE",
+      53
+     ],
+     [
+      "PEDIATRICS",
+      49
+     ],
+     [
+      "MEDICAL STAFF",
+      46
+     ],
+     [
+      "PHYSICAL THERAPY",
+      45
+     ],
+     [
+      "PHYSICIAN'S ASSISTANT (PA)",
+      38
+     ],
+     [
+      "RADIOLOGY",
+      35
+     ],
+     [
+      "ANESTHESIOLOGY",
+      22
+     ],
+     [
+      "SPEECH & LANGUAGE PATHOLOGY",
+      22
+     ],
+     [
+      "CARDIOLOGY/CARDIO DISEASE",
+      20
+     ],
+     [
+      "GENERAL SURGERY",
+      20
+     ],
+     [
+      "OBSTETRICS & GYNECOLOGY",
+      18
+     ]
+    ],
+    "bh_specialty_values": [
+     "LICENSED CLINCAL SOCIAL WORKER",
+     "PHYSICAL THERAPY",
+     "BEHAVIOR ANALYST",
+     "PSYCHIATRY",
+     "OCCUPATIONAL THERAPY",
+     "PSYCHOLOGY",
+     "PSYCHIATRIC NURSE PRACTITIONER",
+     "MARRIAGE & FAMILY THERAPY",
+     "CHILD & ADOLESCENT PSYCHIATRY",
+     "SUBSTANCE ABUSE COUNSELING",
+     "MARRIAGE THERAPY"
+    ],
+    "accepting_values": {
+     "accepting": 967,
+     "not accepting": 33
+    },
+    "last_updated_min": "2026-08-05",
+    "last_updated_max": "2026-08-05",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 34,
+    "top_dup_phones": [
+     [
+      "8665306111",
+      63
+     ],
+     [
+      "5048313112",
+      30
+     ],
+     [
+      "2257615200",
+      29
+     ],
+     [
+      "3182129440",
+      25
+     ],
+     [
+      "5047025700",
+      24
+     ],
+     [
+      "5048423754",
+      24
+     ],
+     [
+      "5046093282",
+      23
+     ],
+     [
+      "8774062916",
+      22
+     ]
+    ]
+   }
+  },
+  {
+   "url": "http://www.lablue.com/acadirectory/19636/groupprovidersfile.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 4495,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "group_name": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "GROUP": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-08-05",
+    "last_updated_max": "2026-08-05",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 99,
+    "top_dup_phones": [
+     [
+      "2257690933",
+      20
+     ],
+     [
+      "8008414236",
+      19
+     ],
+     [
+      "8665306111",
+      15
+     ],
+     [
+      "2257660416",
+      13
+     ],
+     [
+      "2259230030",
+      11
+     ],
+     [
+      "3182247223",
+      11
+     ],
+     [
+      "5045295558",
+      10
+     ],
+     [
+      "2256429676",
+      10
+     ]
+    ]
+   }
+  }
+ ]
+}

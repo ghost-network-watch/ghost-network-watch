@@ -1,0 +1,216 @@
+{
+ "index_url": "https://shc-p-001.sitecorecontenthub.cloud/api/public/content/indexfile.json",
+ "states": [
+  "FL"
+ ],
+ "issuer_ids": [
+  "19898"
+ ],
+ "provider_urls_count": 25,
+ "plan_urls_count": 2,
+ "files": [
+  {
+   "url": "https://shc-p-001.sitecorecontenthub.cloud/api/public/content/esi-provider-network1a.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 643,
+    "analyzed": 643,
+    "field_presence": {
+     "npi": 643,
+     "type": 643,
+     "facility_name": 643,
+     "facility_type": 643,
+     "addresses": 643,
+     "plans": 643,
+     "last_updated_on": 643
+    },
+    "type_dist": {
+     "FACILITY": 643
+    },
+    "npi_present": 643,
+    "npi_luhn_valid": 643,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 643
+    },
+    "last_updated_min": "2025-08-09",
+    "last_updated_max": "2025-08-09",
+    "last_updated_years": {
+     "2025": 643
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": []
+   }
+  },
+  {
+   "url": "https://shc-p-001.sitecorecontenthub.cloud/api/public/content/provider8.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1211,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 768,
+     "specialty": 768,
+     "accepting": 768,
+     "gender": 768,
+     "languages": 751,
+     "facility_name": 131,
+     "facility_type": 131,
+     "group_name": 101
+    },
+    "type_dist": {
+     "INDIVIDUAL": 768,
+     "FACILITY": 131,
+     "GROUP": 101
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 26,
+    "unique_specialties": 60,
+    "top_specialties": [
+     [
+      "Family Medicine",
+      75
+     ],
+     [
+      "Internal Medicine",
+      66
+     ],
+     [
+      "Pediatrics",
+      57
+     ],
+     [
+      "Cardiovascular Disease",
+      42
+     ],
+     [
+      "Optometry",
+      42
+     ],
+     [
+      "Orthopaedic Surgery",
+      39
+     ],
+     [
+      "Obstetrics & Gynecology",
+      35
+     ],
+     [
+      "Dermatology",
+      26
+     ],
+     [
+      "Gastroenterology",
+      25
+     ],
+     [
+      "Medical Oncology",
+      23
+     ],
+     [
+      "Surgery (General Surgery)",
+      22
+     ],
+     [
+      "Ophthalmology",
+      22
+     ],
+     [
+      "Physical Therapy",
+      18
+     ],
+     [
+      "Hematology",
+      18
+     ],
+     [
+      "Urology",
+      14
+     ],
+     [
+      "Neurology",
+      14
+     ],
+     [
+      "Pulmonary Disease",
+      14
+     ],
+     [
+      "Infectious Disease",
+      11
+     ],
+     [
+      "Chiropractor",
+      10
+     ],
+     [
+      "Interventional Cardiology",
+      10
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapy",
+     "Occupational Therapy"
+    ],
+    "accepting_values": {
+     "accepting": 623,
+     "None": 232,
+     "not accepting": 145
+    },
+    "last_updated_min": "2026-08-03",
+    "last_updated_max": "2026-08-03",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 37,
+    "top_dup_phones": [
+     [
+      "4077384200",
+      39
+     ],
+     [
+      "8139789700",
+      27
+     ],
+     [
+      "8443427935",
+      26
+     ],
+     [
+      "3526224251",
+      9
+     ],
+     [
+      "9043556583",
+      9
+     ],
+     [
+      "5616421000",
+      8
+     ],
+     [
+      "5616947776",
+      8
+     ],
+     [
+      "9542653441",
+      7
+     ]
+    ]
+   }
+  }
+ ]
+}

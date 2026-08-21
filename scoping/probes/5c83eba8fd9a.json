@@ -1,0 +1,180 @@
+{
+ "index_url": "https://www.fhcp.com/xml/cms-data-index.json",
+ "states": [
+  "FL"
+ ],
+ "issuer_ids": [
+  "56503"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.fhcp.com/xml/Providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 684,
+    "analyzed": 684,
+    "field_presence": {
+     "npi": 684,
+     "type": 684,
+     "name": 684,
+     "addresses": 684,
+     "specialty": 684,
+     "accepting": 684,
+     "plans": 684,
+     "languages": 684,
+     "last_updated_on": 684
+    },
+    "type_dist": {
+     "INDIVIDUAL": 684
+    },
+    "npi_present": 684,
+    "npi_luhn_valid": 684,
+    "bh_matches": 101,
+    "unique_specialties": 59,
+    "top_specialties": [
+     [
+      "Family Medicine",
+      86
+     ],
+     [
+      "Telehealth (Telemedicine) Services",
+      78
+     ],
+     [
+      "Pediatrics",
+      52
+     ],
+     [
+      "Internal Medicine",
+      45
+     ],
+     [
+      "Behavioral Health-Mental Health Counselor",
+      45
+     ],
+     [
+      "Optometry",
+      34
+     ],
+     [
+      "Behavioral Health-Social Worker",
+      26
+     ],
+     [
+      "Orthopaedic Surgery",
+      26
+     ],
+     [
+      "Cardiology",
+      25
+     ],
+     [
+      "Gastroenterology",
+      24
+     ],
+     [
+      "Ophthalmology",
+      24
+     ],
+     [
+      "Oncology-Medical/Hematology",
+      22
+     ],
+     [
+      "Podiatry",
+      20
+     ],
+     [
+      "Colonoscopy-Screening",
+      19
+     ],
+     [
+      "Dermatology",
+      17
+     ],
+     [
+      "Gynecology",
+      17
+     ],
+     [
+      "General Surgery",
+      17
+     ],
+     [
+      "Pulmonology",
+      17
+     ],
+     [
+      "Nephrology",
+      16
+     ],
+     [
+      "WorkForce Wellness",
+      15
+     ]
+    ],
+    "bh_specialty_values": [
+     "Behavioral Health-Mental Health Counselor",
+     "Behavioral Health-Social Worker",
+     "Psychiatry/Behavioral Health",
+     "Psychiatry/Behavioral Health-Child & Adolescent",
+     "Behavioral Health-Psychologist",
+     "Behavioral Health-Marriage & Family Therapy",
+     "Substance Abuse",
+     "Behavioral Health-Nurse Practitioner"
+    ],
+    "accepting_values": {
+     "accepting": 661,
+     "not accepting": 23
+    },
+    "last_updated_min": "2023-02-22",
+    "last_updated_max": "2026-08-18",
+    "last_updated_years": {
+     "2026": 379,
+     "2025": 199,
+     "2024": 99,
+     "2023": 7
+    },
+    "max_addresses_per_provider": 6,
+    "top_dup_phones": [
+     [
+      "3862554596",
+      34
+     ],
+     [
+      "3212416800",
+      30
+     ],
+     [
+      "8669328643",
+      27
+     ],
+     [
+      "3866682221",
+      12
+     ],
+     [
+      "3217241614",
+      12
+     ],
+     [
+      "3219843200",
+      9
+     ],
+     [
+      "3865619967",
+      8
+     ],
+     [
+      "3867349122",
+      8
+     ]
+    ]
+   }
+  }
+ ]
+}

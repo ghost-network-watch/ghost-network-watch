@@ -1,0 +1,349 @@
+{
+ "index_url": "https://www.harvardpilgrim.org/cmsjson/rest/index.json",
+ "states": [
+  "NH"
+ ],
+ "issuer_ids": [
+  "59025"
+ ],
+ "provider_urls_count": 9,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.harvardpilgrim.org/cmsjson/rest/providers.json?client=cms&sid=hTrE2DCZ3s&page=1",
+   "http_code": 200,
+   "fetched_chars": 6669511,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 5000,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "facility_type": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "languages": 151
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 291,
+    "unique_specialties": 82,
+    "top_specialties": [
+     [
+      "Social Work",
+      94
+     ],
+     [
+      "Psychiatry",
+      73
+     ],
+     [
+      "Acupuncture",
+      72
+     ],
+     [
+      "Family Nurse Practitioner",
+      67
+     ],
+     [
+      "Family Practice",
+      48
+     ],
+     [
+      "Psychology",
+      43
+     ],
+     [
+      "Obstetrics & Gynecology",
+      42
+     ],
+     [
+      "Surgery",
+      40
+     ],
+     [
+      "Mental Health Counselor",
+      37
+     ],
+     [
+      "Cardiovascular Disease",
+      35
+     ],
+     [
+      "Orthopedic Surgery",
+      30
+     ],
+     [
+      "Psychiatric Nurse",
+      28
+     ],
+     [
+      "Midwife",
+      27
+     ],
+     [
+      "Optometry",
+      24
+     ],
+     [
+      "Pediatrics",
+      22
+     ],
+     [
+      "Internal Medicine",
+      21
+     ],
+     [
+      "Nutrition",
+      21
+     ],
+     [
+      "Pulmonary Disease",
+      21
+     ],
+     [
+      "Medical Oncology",
+      17
+     ],
+     [
+      "Otolaryngology",
+      14
+     ]
+    ],
+    "bh_specialty_values": [
+     "Social Work",
+     "Psychiatry",
+     "Psychology",
+     "Mental Health Counselor",
+     "Psychiatric Nurse",
+     "Child and Adolescent Psychiatry",
+     "Addiction Medicine",
+     "Developmental Behavioral Pediatrics",
+     "Geriatric Psychiatry",
+     "Marriage & Family Therapy",
+     "Pastoral Counselor",
+     "Alcohol and Drug Counselor"
+    ],
+    "accepting_values": {
+     "accepting": 949,
+     "not accepting": 51
+    },
+    "last_updated_min": "2026-08-18",
+    "last_updated_max": "2026-08-18",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 12,
+    "top_dup_phones": [
+     [
+      "6036505000",
+      120
+     ],
+     [
+      "6033545400",
+      96
+     ],
+     [
+      "6036952500",
+      41
+     ],
+     [
+      "6035371300",
+      31
+     ],
+     [
+      "6034483121",
+      16
+     ],
+     [
+      "8666790831",
+      15
+     ],
+     [
+      "6037780557",
+      15
+     ],
+     [
+      "2078859905",
+      12
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.harvardpilgrim.org/cmsjson/rest/providers.json?client=cms&sid=hTrE2DCZ3s&page=5",
+   "http_code": 200,
+   "fetched_chars": 6729571,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 5000,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "facility_type": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "languages": 181
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 850,
+    "unique_specialties": 44,
+    "top_specialties": [
+     [
+      "Social Work",
+      303
+     ],
+     [
+      "Mental Health Counselor",
+      246
+     ],
+     [
+      "Psychiatric Nurse",
+      115
+     ],
+     [
+      "Psychology",
+      68
+     ],
+     [
+      "Psychiatry",
+      60
+     ],
+     [
+      "Neurology",
+      35
+     ],
+     [
+      "Applied Behavior Analysis",
+      27
+     ],
+     [
+      "Marriage & Family Therapy",
+      18
+     ],
+     [
+      "Obstetrics & Gynecology",
+      14
+     ],
+     [
+      "Child and Adolescent Psychiatry",
+      11
+     ],
+     [
+      "Family Practice",
+      10
+     ],
+     [
+      "Alcohol and Drug Counselor",
+      10
+     ],
+     [
+      "Acupuncture",
+      10
+     ],
+     [
+      "Physician Assistant",
+      8
+     ],
+     [
+      "Family Nurse Practitioner",
+      8
+     ],
+     [
+      "Medical Oncology",
+      8
+     ],
+     [
+      "Nutrition",
+      8
+     ],
+     [
+      "Surgery",
+      7
+     ],
+     [
+      "Internal Medicine",
+      7
+     ],
+     [
+      "Cardiovascular Disease",
+      5
+     ]
+    ],
+    "bh_specialty_values": [
+     "Social Work",
+     "Mental Health Counselor",
+     "Psychiatric Nurse",
+     "Psychology",
+     "Psychiatry",
+     "Applied Behavior Analysis",
+     "Marriage & Family Therapy",
+     "Child and Adolescent Psychiatry",
+     "Alcohol and Drug Counselor",
+     "Psychiatric Physician Assistant"
+    ],
+    "accepting_values": {
+     "accepting": 965,
+     "not accepting": 35
+    },
+    "last_updated_min": "2026-08-18",
+    "last_updated_max": "2026-08-18",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 12,
+    "top_dup_phones": [
+     [
+      "6469417645",
+      199
+     ],
+     [
+      "6036505000",
+      34
+     ],
+     [
+      "6033545400",
+      27
+     ],
+     [
+      "6179172389",
+      27
+     ],
+     [
+      "6173556000",
+      22
+     ],
+     [
+      "3127666780",
+      21
+     ],
+     [
+      "2392082206",
+      20
+     ],
+     [
+      "6038830005",
+      18
+     ]
+    ]
+   }
+  }
+ ]
+}

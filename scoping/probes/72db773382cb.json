@@ -1,0 +1,189 @@
+{
+ "index_url": "https://senderohealth.com/files/json/index.json",
+ "states": [
+  "TX"
+ ],
+ "issuer_ids": [
+  "71837"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://senderohealth.com/files/json/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1781,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 741,
+     "gender": 741,
+     "languages": 741,
+     "specialty": 741,
+     "accepting": 741,
+     "facility_name": 259,
+     "facility_type": 259
+    },
+    "type_dist": {
+     "INDIVIDUAL": 741,
+     "FACILITY": 259
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 85,
+    "unique_specialties": 102,
+    "top_specialties": [
+     [
+      "Emergency Medicine",
+      86
+     ],
+     [
+      "Diagnostic Radiology",
+      63
+     ],
+     [
+      "Internal Medicine",
+      38
+     ],
+     [
+      "Family Medicine",
+      37
+     ],
+     [
+      "Physician Assistant",
+      36
+     ],
+     [
+      "Family Nurse Practitioner",
+      36
+     ],
+     [
+      "Nurse Practitioner",
+      33
+     ],
+     [
+      "Anesthesiology",
+      30
+     ],
+     [
+      "Physical Therapy",
+      25
+     ],
+     [
+      "Certified Registered Nurse Anesthetist",
+      24
+     ],
+     [
+      "Obstetrics & Gynecology",
+      21
+     ],
+     [
+      "Neonatology",
+      18
+     ],
+     [
+      "Social Worker, Clinical",
+      14
+     ],
+     [
+      "Radiology, Diagnostic Radiology",
+      13
+     ],
+     [
+      "Psychiatry",
+      12
+     ],
+     [
+      "Pediatrics",
+      11
+     ],
+     [
+      "Counselor, Professional",
+      10
+     ],
+     [
+      "Orthopedic Surgery",
+      10
+     ],
+     [
+      "Pediatrics, Adolescent Medicine",
+      10
+     ],
+     [
+      "Ophthalmology",
+      9
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapy",
+     "Social Worker, Clinical",
+     "Psychiatry",
+     "Counselor, Professional",
+     "Psychiatric-Mental Health Nurse Practitioner",
+     "Psychology",
+     "Psychiatry & Neurology, Child & Adolescent Psychia",
+     "Occupational Therapy",
+     "Licensed Professional Clinical Counselor",
+     "Licensed Clinical Social Worker",
+     "Behavior Analyst",
+     "Nurse Practitioner, Psych/Mental Health",
+     "Social Worker",
+     "Counselor",
+     "Counselor, Mental Health"
+    ],
+    "accepting_values": {
+     "accepting": 713,
+     "None": 259,
+     "not accepting": 28
+    },
+    "last_updated_min": "2026-08-10",
+    "last_updated_max": "2026-08-10",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 27,
+    "top_dup_phones": [
+     [
+      "5124535100",
+      230
+     ],
+     [
+      "5123241000",
+      161
+     ],
+     [
+      "9152643174",
+      79
+     ],
+     [
+      "5125287000",
+      78
+     ],
+     [
+      "5124536100",
+      74
+     ],
+     [
+      "5124542554",
+      25
+     ],
+     [
+      "5129778200",
+      24
+     ],
+     [
+      "5123432292",
+      23
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,230 @@
+{
+ "index_url": "https://chppayment.christushealth.org/workfiles/json/index.json",
+ "states": [
+  "LA",
+  "TX"
+ ],
+ "issuer_ids": [
+  "98780",
+  "66252"
+ ],
+ "provider_urls_count": 7,
+ "plan_urls_count": 4,
+ "files": [
+  {
+   "url": "https://chppayment.christushealth.org/workfiles/json/HSP_PROVIDER.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2188,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 938,
+     "specialty": 938,
+     "accepting": 938,
+     "languages": 938,
+     "gender": 936,
+     "facility_name": 62,
+     "facility_type": 62
+    },
+    "type_dist": {
+     "INDIVIDUAL": 938,
+     "FACILITY": 62
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 179,
+    "unique_specialties": 112,
+    "top_specialties": [
+     [
+      "Emergency Medicine",
+      126
+     ],
+     [
+      "Physical Therapist",
+      124
+     ],
+     [
+      "Family",
+      94
+     ],
+     [
+      "Internal Medicine",
+      75
+     ],
+     [
+      "Family Medicine",
+      58
+     ],
+     [
+      "Physician Assistant",
+      50
+     ],
+     [
+      "Nurse Practitioner",
+      33
+     ],
+     [
+      "Pediatrics",
+      29
+     ],
+     [
+      "Nurse Anesthetist, Certified Registered",
+      27
+     ],
+     [
+      "Hematology & Oncology",
+      19
+     ],
+     [
+      "Hospitalist",
+      19
+     ],
+     [
+      "Surgery",
+      17
+     ],
+     [
+      "Obstetrics & Gynecology",
+      17
+     ],
+     [
+      "Professional Counselor",
+      17
+     ],
+     [
+      "Dermatology",
+      16
+     ],
+     [
+      "Orthopedic",
+      15
+     ],
+     [
+      "Cardiovascular Disease",
+      14
+     ],
+     [
+      "Neurology",
+      13
+     ],
+     [
+      "Acute Care",
+      13
+     ],
+     [
+      "Medical",
+      13
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapist",
+     "Professional Counselor",
+     "Psychiatry",
+     "Social Worker, Clinical",
+     "Psych/Mental Health",
+     "Behavioral Analyst",
+     "Social Worker",
+     "Psychologist",
+     "Counselor",
+     "Mental Health",
+     "Child & Adolescent Psychiatry",
+     "Pediatrics;Psych/Mental Health",
+     "Genetic Counselor, MS",
+     "Marriage & Family Therapist",
+     "Clinical Psychologist",
+     "Allopathic & Osteopathic Physicians/Psychiatry & Neurology/N"
+    ],
+    "accepting_values": {
+     "accepting": 904,
+     "None": 62,
+     "not accepting": 34
+    },
+    "last_updated_min": "1900-01-01",
+    "last_updated_max": "1900-01-01",
+    "last_updated_years": {
+     "1900": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "999999999",
+      845
+     ],
+     [
+      "2104942223",
+      5
+     ],
+     [
+      "8709492718",
+      4
+     ],
+     [
+      "9036061721",
+      3
+     ],
+     [
+      "3183753239",
+      2
+     ],
+     [
+      "3183267272",
+      2
+     ],
+     [
+      "3189655017",
+      2
+     ],
+     [
+      "3183750001",
+      2
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://chppayment.christushealth.org/workfiles/json/hcrprovider3.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 654,
+    "analyzed": 654,
+    "field_presence": {
+     "npi": 654,
+     "type": 654,
+     "facility_name": 654,
+     "facility_type": 654,
+     "addresses": 654,
+     "plans": 654,
+     "last_updated_on": 654
+    },
+    "type_dist": {
+     "FACILITY": 654
+    },
+    "npi_present": 654,
+    "npi_luhn_valid": 654,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 654
+    },
+    "last_updated_min": "2024-08-09",
+    "last_updated_max": "2024-08-09",
+    "last_updated_years": {
+     "2024": 654
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": []
+   }
+  }
+ ]
+}

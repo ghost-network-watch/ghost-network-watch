@@ -1,0 +1,134 @@
+{
+  "verified_at": "2026-08-21",
+  "method": "curl with browser User-Agent 'Mozilla/5.0 ... Chrome/126.0 Safari/537.36'; HEAD requests for sizes; full download of the two small zips (2.6 MB deactivation report, 6.9 MB weekly); HTTP Range request for the last 8 KB of the 1.15 GB monthly zip to read its central directory (no bulk download); two single-NPI queries to the NPPES API.",
+  "listing_page": {
+    "url": "https://download.cms.gov/nppes/NPI_Files.html",
+    "notes": [
+      "Static HTML; relative hrefs to zips on same host. Served 403 to non-browser fetchers; 200 with browser UA.",
+      "Page states: 'Effective 03/03/2026 NPPES will no longer support Version 1 of the Monthly and Weekly Downloadable File.' Use V.2 only.",
+      "Filenames change every cycle; scrape this page each run for current hrefs."
+    ]
+  },
+  "monthly_full_replacement": {
+    "url": "https://download.cms.gov/nppes/NPPES_Data_Dissemination_August_2026_V2.zip",
+    "url_pattern": "NPPES_Data_Dissemination_<MonthName>_<YYYY>_V2.zip",
+    "http_head": {
+      "status": 200,
+      "content_length": 1151460412,
+      "last_modified": "Mon, 10 Aug 2026 09:05:09 GMT"
+    },
+    "zip_members_uncompressed_bytes": {
+      "npidata_pfile_20050523-20260809.csv": 11632650533,
+      "npidata_pfile_20050523-20260809_fileheader.csv": 12267,
+      "pl_pfile_20050523-20260809.csv": 118829947,
+      "endpoint_pfile_20050523-20260809.csv": 125310263,
+      "othername_pfile_20050523-20260809.csv": 49949439,
+      "NPPES_Data_Dissemination_CodeValues.pdf": 2833301,
+      "NPPES_Data_Dissemination_Readme_v.2.pdf": 517521
+    },
+    "total_uncompressed_bytes": 11930104381,
+    "main_csv_n_fields": 330,
+    "estimated_rows": "~9.7M (11,632,650,533 bytes / 1,198 bytes-per-row observed in weekly file)",
+    "readme_quote_scope": "'These files will contain all of the FOIA-disclosable ACTIVE provider data in NPPES' (Readme v.2 dated May 12, 2026, sec 1.2) - deactivated NPIs are NOT in the monthly full file."
+  },
+  "monthly_deactivation_report": {
+    "url": "https://download.cms.gov/nppes/NPPES_Deactivated_NPI_Report_081026_V2.zip",
+    "url_pattern": "NPPES_Deactivated_NPI_Report_MMDDYY_V2.zip",
+    "http_head": {
+      "status": 200,
+      "content_length": 2635802,
+      "last_modified": "Mon, 10 Aug 2026 07:01:07 GMT"
+    },
+    "inner_file": "NPPES Deactivated NPI Report 20260810.xlsx (5,533,683 bytes)",
+    "sheet": "DeactivatedNPIs",
+    "title_row": "NPPES Deactivated Records as of Aug 10 2026",
+    "columns": [
+      "NPI",
+      "NPPES Deactivation Date"
+    ],
+    "data_rows": 351912,
+    "sample_rows": [
+      [
+        "1780670281",
+        "08/09/2026"
+      ],
+      [
+        "1306142682",
+        "08/09/2026"
+      ],
+      [
+        "1770470643",
+        "08/09/2026"
+      ]
+    ],
+    "notes": "Cumulative list of currently-deactivated NPIs as of the report date. No deactivation reason: readme states 'NPI Deactivation Reason Code ... This is not publicly disseminated' - the 330-column layout reserves the column but it is always blank in public files."
+  },
+  "weekly_incremental": {
+    "url_example": "https://download.cms.gov/nppes/NPPES_Data_Dissemination_081026_081626_Weekly_V2.zip",
+    "url_pattern": "NPPES_Data_Dissemination_MMDDYY_MMDDYY_Weekly_V2.zip",
+    "http_head": {
+      "status": 200,
+      "content_length": 6934401,
+      "last_modified": "Mon, 17 Aug 2026 07:05:50 GMT"
+    },
+    "npidata_rows": 35294,
+    "deactivated_stub_rows": 783,
+    "deactivated_stub_examples": [
+      {
+        "NPI": "1356128706",
+        "NPI Deactivation Date": "08/10/2026"
+      },
+      {
+        "NPI": "1427972686",
+        "NPI Deactivation Date": "08/10/2026"
+      },
+      {
+        "NPI": "1750714721",
+        "NPI Deactivation Date": "08/10/2026"
+      }
+    ],
+    "notes": "Weekly file contains only records new/changed since last file. NPIs deactivated during the week appear as stub rows with ONLY 'NPI' and 'NPI Deactivation Date' populated (verified empirically; even reason code blank). Readme sec 1.3."
+  },
+  "nppes_api": {
+    "base_url": "https://npiregistry.cms.hhs.gov/api/?version=2.1",
+    "tested": [
+      {
+        "query": "number=1356128706 (deactivated 08/10/2026 per weekly stub)",
+        "result": "result_count: 0 - API does NOT return deactivated NPIs; a not-found is ambiguous between deactivated and never-issued"
+      },
+      {
+        "query": "number=1770426538 (active, from weekly file)",
+        "result": "result_count: 1; basic.status='A'; basic.certification_date and last_updated present; addresses[] with address_purpose MAILING/LOCATION + state; taxonomies[] with code/primary/state/license; practiceLocations[]"
+      }
+    ],
+    "documented_limits_from_registry_spa_bundle": [
+      "'An API query will return a maximum of 200 results per request. The Skip field in the API will let you skip up to 1000 records ... you can get up to a maximum of 1,200 records over six requests.'",
+      "'Effective 6/25/2024: To ensure the best experience, NPPES has limited the amount of NPI Registry queries that can be completed per hour' (no numeric cap published)",
+      "'Bulk NPI Registry queries must use the DDS file.' (CMS's own instruction: batch work belongs on the downloadable files)"
+    ]
+  },
+  "fields_needed_column_index_in_v2_main_csv": {
+    "NPI": 0,
+    "Entity Type Code": 1,
+    "Provider Organization Name (Legal Business Name)": 4,
+    "Provider Last Name (Legal Name)": 5,
+    "Provider First Name": 6,
+    "Provider Credential Text": 10,
+    "Practice Location Address (first line/city/state/zip/phone)": [
+      28,
+      30,
+      31,
+      32,
+      34
+    ],
+    "Provider Enumeration Date": 36,
+    "Last Update Date": 37,
+    "NPI Deactivation Reason Code (ALWAYS BLANK - not disseminated)": 38,
+    "NPI Deactivation Date": 39,
+    "NPI Reactivation Date": 40,
+    "Healthcare Provider Taxonomy Code_1..15 (stride 4)": "47, 51, 55, ... 103",
+    "Provider License Number State Code_1..15 (stride 4)": "49, 53, 57, ... 105",
+    "Healthcare Provider Primary Taxonomy Switch_1..15 (stride 4)": "50, 54, 58, ... 106",
+    "Is Sole Proprietor / secondary locations": "secondary practice locations live in pl_pfile (Type 1 and Type 2), NOT the main csv - needed for the state-mismatch flag"
+  }
+}

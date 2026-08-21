@@ -1,0 +1,190 @@
+{
+ "index_url": "https://fm.formularynavigator.com/jsonFiles/publish/200/270/cms-data-index.json",
+ "states": [
+  "TX"
+ ],
+ "issuer_ids": [
+  "34826"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://fm.formularynavigator.com/jsonFiles/publish/200/270/providers.json",
+   "http_code": 200,
+   "fetched_chars": 46842212,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 23271,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 714,
+     "specialty": 714,
+     "accepting": 714,
+     "languages": 714,
+     "facility_name": 286,
+     "facility_type": 286
+    },
+    "type_dist": {
+     "INDIVIDUAL": 714,
+     "FACILITY": 286
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 166,
+    "unique_specialties": 175,
+    "top_specialties": [
+     [
+      "Nurse Practitioner",
+      109
+     ],
+     [
+      "NURSE PRACTITIONER",
+      109
+     ],
+     [
+      "LICENSED PROFESSIONAL COUNSELOR",
+      83
+     ],
+     [
+      "Licensed Professional Counselor",
+      83
+     ],
+     [
+      "PHYSICIAN ASSISTANT",
+      43
+     ],
+     [
+      "Physician Assistant",
+      43
+     ],
+     [
+      "SOCIAL WORKER",
+      34
+     ],
+     [
+      "Social Worker",
+      34
+     ],
+     [
+      "FAMILY PRACTICE",
+      31
+     ],
+     [
+      "Family Practice",
+      31
+     ],
+     [
+      "INTERNAL MEDICINE",
+      27
+     ],
+     [
+      "Internal Medicine",
+      27
+     ],
+     [
+      "HOSPITALIST",
+      22
+     ],
+     [
+      "Hospitalist",
+      22
+     ],
+     [
+      "Emergency Medicine",
+      21
+     ],
+     [
+      "EMERGENCY MEDICINE",
+      21
+     ],
+     [
+      "Physical Therapy",
+      20
+     ],
+     [
+      "PHYSICAL THERAPY",
+      20
+     ],
+     [
+      "Orthopedic Surgery",
+      19
+     ],
+     [
+      "ORTHOPEDIC SURGERY",
+      19
+     ]
+    ],
+    "bh_specialty_values": [
+     "LICENSED PROFESSIONAL COUNSELOR",
+     "Licensed Professional Counselor",
+     "SOCIAL WORKER",
+     "Social Worker",
+     "Physical Therapy",
+     "PHYSICAL THERAPY",
+     "PSYCHOLOGY",
+     "Psychology",
+     "Psychiatry",
+     "PSYCHIATRY",
+     "MARRIAGE/FAMILY COUNSELOR",
+     "Occupational Therapy",
+     "OCCUPATIONAL THERAPY",
+     "DEVELOPMENTAL DISABILITIES",
+     "PEDIATRICS - DEVELOPMENTAL/BEHAVIORAL",
+     "MENTAL HEALTH",
+     "PEDIATRIC NEURODEVELOPMENTAL DISABILITIES"
+    ],
+    "accepting_values": {
+     "accepting": 696,
+     "None": 286,
+     "not accepting": 18
+    },
+    "last_updated_min": "2025-09-16",
+    "last_updated_max": "2025-12-16",
+    "last_updated_years": {
+     "2025": 1000
+    },
+    "max_addresses_per_provider": 25,
+    "top_dup_phones": [
+     [
+      "8448437279",
+      77
+     ],
+     [
+      "2103584000",
+      31
+     ],
+     [
+      "8174988585",
+      28
+     ],
+     [
+      "9726612273",
+      24
+     ],
+     [
+      "8662998436",
+      22
+     ],
+     [
+      "8325485000",
+      21
+     ],
+     [
+      "2818888999",
+      19
+     ],
+     [
+      "9155776011",
+      16
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,124 @@
+{
+ "index_url": "https://www.bluekc.com/cms-data/index.json",
+ "states": [
+  "KS",
+  "MO"
+ ],
+ "issuer_ids": [
+  "94248",
+  "34762"
+ ],
+ "provider_urls_count": 4,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.bluekc.com/cms-data/cms-data-providers-facility.json",
+   "http_code": 206,
+   "fetched_chars": 2289506,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 1321,
+    "analyzed": 1000,
+    "field_presence": {
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-07-30",
+    "last_updated_max": "2026-07-30",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 2,
+    "top_dup_phones": [
+     [
+      "8166322101",
+      13
+     ],
+     [
+      "8166912000",
+      6
+     ],
+     [
+      "8169660900",
+      6
+     ],
+     [
+      "8167957990",
+      6
+     ],
+     [
+      "9133671618",
+      6
+     ],
+     [
+      "9138568747",
+      6
+     ],
+     [
+      "8004771916",
+      6
+     ],
+     [
+      "9137442433",
+      6
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://legacy.providerlookuponline.com/mrf/optumrx/providers/2877216/JSON_Providers_BLUEKC_HIX.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1829,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-07-16",
+    "last_updated_max": "2026-07-16",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": []
+   }
+  }
+ ]
+}

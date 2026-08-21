@@ -1,0 +1,154 @@
+{
+ "index_url": "https://cms.nebraskablue.com/cms-data-index.json",
+ "states": [
+  "NE"
+ ],
+ "issuer_ids": [
+  "29678"
+ ],
+ "provider_urls_count": 4,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://cms.Nebraskablue.com/bcbsne-providers-facility-2026.json",
+   "http_code": 206,
+   "fetched_chars": 5100479,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 985,
+    "analyzed": 985,
+    "field_presence": {
+     "npi": 985,
+     "type": 985,
+     "facility_name": 985,
+     "last_updated_on": 985,
+     "facility_type": 985,
+     "addresses": 985,
+     "plans": 985
+    },
+    "type_dist": {
+     "FACILITY": 985
+    },
+    "npi_present": 985,
+    "npi_luhn_valid": 985,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 985
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 985
+    },
+    "max_addresses_per_provider": 12,
+    "top_dup_phones": [
+     [
+      "8667765907",
+      11
+     ],
+     [
+      "3096647930",
+      5
+     ],
+     [
+      "4023904111",
+      5
+     ],
+     [
+      "4026093000",
+      4
+     ],
+     [
+      "4023762525",
+      4
+     ],
+     [
+      "3084325586",
+      4
+     ],
+     [
+      "9528876360",
+      4
+     ],
+     [
+      "8664518804",
+      4
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://cms.Nebraskablue.com/bcbsne-providers-group-2026.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1660,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "group_name": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "plans": 1000
+    },
+    "type_dist": {
+     "GROUP": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 36,
+    "top_dup_phones": [
+     [
+      "4029553900",
+      19
+     ],
+     [
+      "3083272026",
+      11
+     ],
+     [
+      "4023911800",
+      10
+     ],
+     [
+      "7127962545",
+      10
+     ],
+     [
+      "4022305861",
+      9
+     ],
+     [
+      "3085683500",
+      9
+     ],
+     [
+      "5152075251",
+      8
+     ],
+     [
+      "5156953121",
+      6
+     ]
+    ]
+   }
+  }
+ ]
+}

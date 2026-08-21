@@ -1,0 +1,177 @@
+{
+ "index_url": "https://hmsa.com/cms-data-index.json",
+ "states": [
+  "HI"
+ ],
+ "issuer_ids": [
+  "18350"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://hmsa.com/search/providers/providers.json",
+   "http_code": 200,
+   "fetched_chars": 20729844,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 18273,
+    "analyzed": 1000,
+    "field_presence": {
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "gender": 1000,
+     "languages": 1000,
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 138,
+    "unique_specialties": 56,
+    "top_specialties": [
+     [
+      "General Dentistry",
+      205
+     ],
+     [
+      "Internal Medicine",
+      124
+     ],
+     [
+      "Optometry",
+      102
+     ],
+     [
+      "Ophthalmology",
+      64
+     ],
+     [
+      "Psychology",
+      46
+     ],
+     [
+      "Psychiatry",
+      45
+     ],
+     [
+      "Family Physician",
+      44
+     ],
+     [
+      "Pediatrics",
+      33
+     ],
+     [
+      "Physical Therapy",
+      32
+     ],
+     [
+      "Obstetrics & Gynecology",
+      22
+     ],
+     [
+      "Pedodontist",
+      20
+     ],
+     [
+      "General Practice",
+      19
+     ],
+     [
+      "Orthopedic Surgery",
+      19
+     ],
+     [
+      "Cardiology",
+      19
+     ],
+     [
+      "Gastroenterology",
+      17
+     ],
+     [
+      "Oncology/Hematology",
+      15
+     ],
+     [
+      "Dermatology",
+      14
+     ],
+     [
+      "Nephrology",
+      13
+     ],
+     [
+      "Chiropractor",
+      11
+     ],
+     [
+      "Endocrinology",
+      9
+     ]
+    ],
+    "bh_specialty_values": [
+     "Psychology",
+     "Psychiatry",
+     "Physical Therapy",
+     "Social Worker",
+     "Child Psychiatry",
+     "Psychology, Child",
+     "Occupational Therapy"
+    ],
+    "accepting_values": {
+     "accepting": 861,
+     "not accepting": 139
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "8089224787",
+      19
+     ],
+     [
+      "8083563820",
+      15
+     ],
+     [
+      "8089836000",
+      11
+     ],
+     [
+      "8087919400",
+      8
+     ],
+     [
+      "8086973300",
+      7
+     ],
+     [
+      "8084878928",
+      6
+     ],
+     [
+      "8089650880",
+      5
+     ],
+     [
+      "8087299090",
+      5
+     ]
+    ]
+   }
+  }
+ ]
+}

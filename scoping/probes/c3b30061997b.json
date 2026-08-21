@@ -1,0 +1,188 @@
+{
+ "index_url": "https://capitalhealth.com/cms-data-index.json",
+ "states": [
+  "FL"
+ ],
+ "issuer_ids": [
+  "66966"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://capitalhealth.com/json/provider.json",
+   "http_code": 200,
+   "fetched_chars": 1344893,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 946,
+    "analyzed": 946,
+    "field_presence": {
+     "npi": 946,
+     "type": 946,
+     "name": 946,
+     "facility_name": 946,
+     "group_name": 946,
+     "facility_type": 946,
+     "addresses": 946,
+     "specialty": 946,
+     "accepting": 946,
+     "last_updated_on": 946,
+     "plans": 946
+    },
+    "type_dist": {
+     "FACILITY": 146,
+     "GROUP": 142,
+     "INDIVIDUAL": 658
+    },
+    "npi_present": 946,
+    "npi_luhn_valid": 946,
+    "bh_matches": 193,
+    "unique_specialties": 83,
+    "top_specialties": [
+     [
+      "null",
+      288
+     ],
+     [
+      "Family Medicine",
+      110
+     ],
+     [
+      "Behavioral Health - Social Worker",
+      64
+     ],
+     [
+      "Psychiatry",
+      55
+     ],
+     [
+      "Internal Medicine",
+      41
+     ],
+     [
+      "Behavioral Health - Counselor (Mental Health and Professiona",
+      30
+     ],
+     [
+      "Orthopedic Surgery",
+      24
+     ],
+     [
+      "Pediatrics",
+      23
+     ],
+     [
+      "OB/GYN",
+      23
+     ],
+     [
+      "Behavioral Health - Psychology",
+      21
+     ],
+     [
+      "Dermatology",
+      17
+     ],
+     [
+      "General Surgery",
+      17
+     ],
+     [
+      "BEHAVIORAL HEALTH COUNSELOR",
+      17
+     ],
+     [
+      "Ophthalmology",
+      16
+     ],
+     [
+      "Cardiology",
+      14
+     ],
+     [
+      "Neurology",
+      14
+     ],
+     [
+      "Urology",
+      12
+     ],
+     [
+      "Hematology Oncology",
+      11
+     ],
+     [
+      "Pulmonary Medicine",
+      11
+     ],
+     [
+      "Coumadin",
+      10
+     ]
+    ],
+    "bh_specialty_values": [
+     "Behavioral Health - Social Worker",
+     "Psychiatry",
+     "Behavioral Health - Counselor (Mental Health and Professiona",
+     "Behavioral Health - Psychology",
+     "BEHAVIORAL HEALTH COUNSELOR",
+     "Medical Nutritional Counseling",
+     "Behavioral Health - Marriage and Family Therapist",
+     "Neuropsychology",
+     "PSYCHOLOGY",
+     "Pediatric Psychiatry",
+     "ADDICTION MEDICINE",
+     "PSYC/MENTAL HEALTH NURSE PRACTITIONER"
+    ],
+    "accepting_values": {
+     "unknown": 288,
+     "accepting": 545,
+     "not accepting": 113
+    },
+    "last_updated_min": "2024-11-15",
+    "last_updated_max": "2026-08-12",
+    "last_updated_years": {
+     "2026": 536,
+     "2025": 293,
+     "2024": 117
+    },
+    "max_addresses_per_provider": 2,
+    "top_dup_phones": [
+     [
+      "8502160100",
+      68
+     ],
+     [
+      "8508778174",
+      62
+     ],
+     [
+      "8504315105",
+      38
+     ],
+     [
+      "8504315430",
+      28
+     ],
+     [
+      "8506441543",
+      24
+     ],
+     [
+      "8502050189",
+      23
+     ],
+     [
+      "8508774134",
+      22
+     ],
+     [
+      "8508788714",
+      22
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,206 @@
+{
+ "index_url": "https://www.pfpdata.com/cms-data/31274-wv/31274-index.json",
+ "states": [
+  "WV"
+ ],
+ "issuer_ids": [
+  "31274"
+ ],
+ "provider_urls_count": 5,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.pfpdata.com/cms-data/31274-wv/31274-dn-provider.json",
+   "http_code": 206,
+   "fetched_chars": 1300645,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 515,
+    "analyzed": 515,
+    "field_presence": {
+     "npi": 515,
+     "type": 515,
+     "group_name": 515,
+     "name": 515,
+     "addresses": 515,
+     "specialty": 515,
+     "accepting": 515,
+     "plans": 515,
+     "languages": 515,
+     "last_updated_on": 515
+    },
+    "type_dist": {
+     "INDIVIDUAL": 433,
+     "GROUP": 82
+    },
+    "npi_present": 515,
+    "npi_luhn_valid": 515,
+    "bh_matches": 0,
+    "unique_specialties": 8,
+    "top_specialties": [
+     [
+      "General Dentistry",
+      406
+     ],
+     [
+      "Oral and Maxillofacial Surgery",
+      40
+     ],
+     [
+      "Endodontics",
+      19
+     ],
+     [
+      "Dental Multi-Specialty Group",
+      16
+     ],
+     [
+      "Orthodontics",
+      15
+     ],
+     [
+      "Pediatric Dentistry",
+      12
+     ],
+     [
+      "Periodontics",
+      5
+     ],
+     [
+      "Prosthodontics",
+      2
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 409,
+     "not accepting": 106
+    },
+    "last_updated_min": "2026-08-01",
+    "last_updated_max": "2026-08-01",
+    "last_updated_years": {
+     "2026": 515
+    },
+    "max_addresses_per_provider": 9,
+    "top_dup_phones": [
+     [
+      "3042935831",
+      64
+     ],
+     [
+      "3042936208",
+      48
+     ],
+     [
+      "3042930401",
+      21
+     ],
+     [
+      "3042932924",
+      21
+     ],
+     [
+      "3042938730",
+      21
+     ],
+     [
+      "3042935642",
+      20
+     ],
+     [
+      "3043883290",
+      13
+     ],
+     [
+      "3044692905",
+      9
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.pfpdata.com/cms-data/31274-wv/31274-vs-provider.json",
+   "http_code": 206,
+   "fetched_chars": 7036764,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 2562,
+    "analyzed": 1000,
+    "field_presence": {
+     "name": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "languages": 1000,
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 2,
+    "top_specialties": [
+     [
+      "Optometry",
+      864
+     ],
+     [
+      "Ophthalmology",
+      136
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 967,
+     "accepting in some locations": 19,
+     "not accepting": 14
+    },
+    "last_updated_min": "2026-08-04",
+    "last_updated_max": "2026-08-04",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 67,
+    "top_dup_phones": [
+     [
+      "8555500743",
+      165
+     ],
+     [
+      "4126472200",
+      92
+     ],
+     [
+      "2152766000",
+      69
+     ],
+     [
+      "7172584422",
+      65
+     ],
+     [
+      "7175328806",
+      64
+     ],
+     [
+      "7177648705",
+      64
+     ],
+     [
+      "2152471085",
+      63
+     ],
+     [
+      "7172272030",
+      62
+     ]
+    ]
+   }
+  }
+ ]
+}

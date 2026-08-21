@@ -1,0 +1,194 @@
+{
+ "index_url": "https://www.bcbsmt.com/aca-json/mt/index_mt.json",
+ "states": [
+  "MT"
+ ],
+ "issuer_ids": [
+  "30751"
+ ],
+ "provider_urls_count": 12,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.bcbsmt.com/aca-json/mt/medical_provider_FACILITY_MT1_BLC_1.json",
+   "http_code": 206,
+   "fetched_chars": 344247,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 107,
+    "analyzed": 107,
+    "field_presence": {
+     "npi": 107,
+     "addresses": 107,
+     "plans": 107,
+     "type": 107,
+     "facility_name": 107,
+     "facility_type": 107,
+     "last_updated_on": 107
+    },
+    "type_dist": {
+     "FACILITY": 107
+    },
+    "npi_present": 107,
+    "npi_luhn_valid": 107,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 107
+    },
+    "last_updated_min": "2019-10-15",
+    "last_updated_max": "2026-05-27",
+    "last_updated_years": {
+     "2026": 20,
+     "2025": 28,
+     "2023": 15,
+     "2022": 7,
+     "2024": 29,
+     "2019": 5,
+     "2021": 3
+    },
+    "max_addresses_per_provider": 4,
+    "top_dup_phones": [
+     [
+      "8664342597",
+      8
+     ],
+     [
+      "4064555000",
+      6
+     ],
+     [
+      "4806323380",
+      4
+     ],
+     [
+      "4068833570",
+      4
+     ],
+     [
+      "4067318817",
+      4
+     ],
+     [
+      "4064574180",
+      4
+     ],
+     [
+      "8886165123",
+      4
+     ],
+     [
+      "4069324603",
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.bcbsmt.com/aca-json/mt/dental_provider_mt-1.json",
+   "http_code": 200,
+   "fetched_chars": 209715200,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 131013,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "languages": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "General Dentist",
+      850
+     ],
+     [
+      "Orthodontist",
+      49
+     ],
+     [
+      "Pediatric",
+      47
+     ],
+     [
+      "Oral Surgeon",
+      30
+     ],
+     [
+      "Endodontist",
+      14
+     ],
+     [
+      "Periodontist",
+      14
+     ],
+     [
+      "Prosthodontist",
+      1
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "not accepting": 6,
+     "accepting": 956,
+     "accepting in some locations": 38
+    },
+    "last_updated_min": "2026-06-19",
+    "last_updated_max": "2026-06-19",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 73,
+    "top_dup_phones": [
+     [
+      "6516336500",
+      105
+     ],
+     [
+      "9724448888",
+      76
+     ],
+     [
+      "8889884066",
+      63
+     ],
+     [
+      "5623520397",
+      40
+     ],
+     [
+      "7704488882",
+      26
+     ],
+     [
+      "7709169000",
+      25
+     ],
+     [
+      "5407364949",
+      24
+     ],
+     [
+      "9165294974",
+      23
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,121 @@
+{
+ "index_url": "https://www.mclaren.org/Uploads/Public/Documents/HealthPlan/documents/CMSUploads/cms-data-index.json",
+ "states": [
+  "MI"
+ ],
+ "issuer_ids": [
+  "74917"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.mclaren.org/Uploads/Public/Documents/HealthPlan/documents/CMSUploads/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1525,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "addresses": 1000,
+     "name": 937,
+     "specialty": 937,
+     "accepting": 937,
+     "sex": 937,
+     "facility_name": 63,
+     "facility_type": 63
+    },
+    "type_dist": {
+     "FACILITY": 63,
+     "INDIVIDUAL": 937
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 41,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "Allopathic  and  Osteopathic Physicians",
+      685
+     ],
+     [
+      "Primary Care Providers",
+      121
+     ],
+     [
+      "Physician Assistants  and  Advanced Practice Nursing Provide",
+      61
+     ],
+     [
+      "Behavioral Health  and  Social Service Providers",
+      41
+     ],
+     [
+      "Chiropractic Providers",
+      12
+     ],
+     [
+      "Podiatric Medicine  and  Surgery Service Providers",
+      10
+     ],
+     [
+      "Eye and Vision Services Providers",
+      7
+     ]
+    ],
+    "bh_specialty_values": [
+     "Behavioral Health  and  Social Service Providers"
+    ],
+    "accepting_values": {
+     "None": 63,
+     "accepting": 937
+    },
+    "last_updated_min": "2026-08-15",
+    "last_updated_max": "2026-08-15",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "0",
+      58
+     ],
+     [
+      "2319356600",
+      24
+     ],
+     [
+      "8107887822",
+      20
+     ],
+     [
+      "8106067500",
+      20
+     ],
+     [
+      "8106644870",
+      20
+     ],
+     [
+      "2315478905",
+      16
+     ],
+     [
+      "5867748811",
+      12
+     ],
+     [
+      "9898393060",
+      12
+     ]
+    ]
+   }
+  }
+ ]
+}

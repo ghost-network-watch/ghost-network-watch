@@ -1,0 +1,207 @@
+{
+ "index_url": "https://www.cigna.com/sites/json/cms-data-index.json",
+ "states": [
+  "AZ",
+  "FL",
+  "IN",
+  "MS",
+  "NC",
+  "TN",
+  "TX"
+ ],
+ "issuer_ids": [
+  "86830",
+  "97667",
+  "48121",
+  "79850",
+  "94419",
+  "56766",
+  "73943",
+  "99248",
+  "76589"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "http://www.cigna.com/sites/json/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388607,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3154,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 428,
+    "unique_specialties": 118,
+    "top_specialties": [
+     [
+      "Anxiety Issues",
+      305
+     ],
+     [
+      "Substance Use Assessment Program",
+      305
+     ],
+     [
+      "Depression Issues",
+      298
+     ],
+     [
+      "Substance Use Detoxification Outpatient Program",
+      256
+     ],
+     [
+      "Counseling",
+      239
+     ],
+     [
+      "Child Adolescent Issues",
+      196
+     ],
+     [
+      "Mental Health Intensive Outpatient Program (Iop)",
+      196
+     ],
+     [
+      "Substance Use Day Treatment Program",
+      152
+     ],
+     [
+      "Grief/Loss",
+      152
+     ],
+     [
+      "Eap",
+      150
+     ],
+     [
+      "Family Counseling",
+      108
+     ],
+     [
+      "Marital/Couples Therapy",
+      90
+     ],
+     [
+      "Medication Management",
+      80
+     ],
+     [
+      "Social Work",
+      74
+     ],
+     [
+      "Eating Disorders Inpatient Hospital",
+      73
+     ],
+     [
+      "Gender Sexuality Issues",
+      73
+     ],
+     [
+      "Substance Use Inpatient Hospital Rehab",
+      73
+     ],
+     [
+      "Telehealth",
+      73
+     ],
+     [
+      "Internal Medicine",
+      71
+     ],
+     [
+      "Family Practice",
+      70
+     ]
+    ],
+    "bh_specialty_values": [
+     "Substance Use Assessment Program",
+     "Substance Use Detoxification Outpatient Program",
+     "Counseling",
+     "Mental Health Intensive Outpatient Program (Iop)",
+     "Substance Use Day Treatment Program",
+     "Family Counseling",
+     "Marital/Couples Therapy",
+     "Social Work",
+     "Substance Use Inpatient Hospital Rehab",
+     "Mental Health & Substance Use Intensive Outpatient Program (",
+     "Mental Health Day Treatment Facility",
+     "Alcohol/Substance Abuse",
+     "Substance Use Detoxification Inpatient Hospital",
+     "Electroconvulsive Therapy (Ect) Inpatient Hospital",
+     "Behavioral Nurse",
+     "Mental Health & Substance Use Inpatient Hospital",
+     "Substance Use Intensive Outpatient Program (Iop)",
+     "Mental Health Inpatient Hospital",
+     "Faith Based Counseling",
+     "Psychiatry",
+     "Psychology",
+     "Physical Therapy",
+     "Occupational Therapy",
+     "Psychology, Neurological"
+    ],
+    "accepting_values": {
+     "accepting": 937,
+     "not accepting": 48,
+     "accepting in some locations": 15
+    },
+    "last_updated_min": "2026-08-18",
+    "last_updated_max": "2026-08-18",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 41,
+    "top_dup_phones": [
+     [
+      "8328694818",
+      73
+     ],
+     [
+      "4159414109",
+      28
+     ],
+     [
+      "3158732936",
+      25
+     ],
+     [
+      "5743874313",
+      24
+     ],
+     [
+      "8884843258",
+      21
+     ],
+     [
+      "7047804271",
+      19
+     ],
+     [
+      "6153223000",
+      18
+     ],
+     [
+      "3179445000",
+      15
+     ]
+    ]
+   }
+  }
+ ]
+}

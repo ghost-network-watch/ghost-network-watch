@@ -1,0 +1,181 @@
+{
+ "index_url": "https://doc.uhealthplan.utah.edu/individual/json/42261_UT_index.json",
+ "states": [
+  "UT"
+ ],
+ "issuer_ids": [
+  "42261"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 2,
+ "files": [
+  {
+   "url": "https://doc.uhealthplan.utah.edu/individual/json/42261_UT_provider.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3616,
+    "analyzed": 1000,
+    "field_presence": {
+     "type": 1000,
+     "npi": 1000,
+     "name": 1000,
+     "sex": 1000,
+     "specialty": 1000,
+     "languages": 1000,
+     "accepting": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 432,
+    "unique_specialties": 84,
+    "top_specialties": [
+     [
+      "Social Work",
+      137
+     ],
+     [
+      "Physician Assistant",
+      102
+     ],
+     [
+      "Counseling",
+      89
+     ],
+     [
+      "Physical Therapy",
+      85
+     ],
+     [
+      "Nurse Practitioner, Family",
+      78
+     ],
+     [
+      "Family Medicine",
+      52
+     ],
+     [
+      "Behavior Analysis",
+      27
+     ],
+     [
+      "Marriage and Family Therapy",
+      27
+     ],
+     [
+      "Nurse Practitioner, Psychiatric-Mental Health",
+      25
+     ],
+     [
+      "Pediatrics",
+      23
+     ],
+     [
+      "Internal Medicine",
+      20
+     ],
+     [
+      "Optometry",
+      18
+     ],
+     [
+      "Psychology",
+      18
+     ],
+     [
+      "Chiropractic",
+      18
+     ],
+     [
+      "Orthopedics/Orthopaedic Surgery",
+      18
+     ],
+     [
+      "Nurse Practitioner",
+      17
+     ],
+     [
+      "Speech-Language Pathology",
+      15
+     ],
+     [
+      "Occupational Therapy",
+      13
+     ],
+     [
+      "Obstetrics and Gynecology",
+      13
+     ],
+     [
+      "Surgery, General",
+      13
+     ]
+    ],
+    "bh_specialty_values": [
+     "Social Work",
+     "Counseling",
+     "Physical Therapy",
+     "Behavior Analysis",
+     "Marriage and Family Therapy",
+     "Nurse Practitioner, Psychiatric-Mental Health",
+     "Psychology",
+     "Occupational Therapy",
+     "Psychiatry",
+     "Psychiatry, Child and Adolescent",
+     "Addiction Medicine"
+    ],
+    "accepting_values": {
+     "accepting": 982,
+     "not accepting": 18
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 15,
+    "top_dup_phones": [
+     [
+      "8019354171",
+      90
+     ],
+     [
+      "8013829338",
+      52
+     ],
+     [
+      "8017734840",
+      48
+     ],
+     [
+      "8016831062",
+      34
+     ],
+     [
+      "8012549700",
+      27
+     ],
+     [
+      "8012882634",
+      22
+     ],
+     [
+      "8013698989",
+      22
+     ],
+     [
+      "8012133599",
+      18
+     ]
+    ]
+   }
+  }
+ ]
+}

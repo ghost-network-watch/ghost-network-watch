@@ -1,0 +1,186 @@
+{
+ "index_url": "https://my.firstcare.com/CMS/MachineReadableFormat/swhp/cms-data-index.json",
+ "states": [
+  "TX"
+ ],
+ "issuer_ids": [
+  "40788"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://my.firstcare.com/ApiGatewayApi/api/CmsDocument/swhp/providers.json",
+   "http_code": 200,
+   "fetched_chars": 169274832,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 85004,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 950,
+     "specialty": 950,
+     "accepting": 950,
+     "languages": 950,
+     "gender": 926,
+     "facility_name": 50,
+     "facility_type": 50
+    },
+    "type_dist": {
+     "INDIVIDUAL": 950,
+     "FACILITY": 50
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 228,
+    "unique_specialties": 88,
+    "top_specialties": [
+     [
+      "Mental Health Counselor (LPC, LCDC, LMFT, LCSW)",
+      102
+     ],
+     [
+      "Emergency Medicine",
+      67
+     ],
+     [
+      "Anesthesiology",
+      64
+     ],
+     [
+      "Internal Medicine",
+      58
+     ],
+     [
+      "Certified Registered Nurse Anesthetist",
+      49
+     ],
+     [
+      "Family Medicine",
+      45
+     ],
+     [
+      "Pediatrics",
+      43
+     ],
+     [
+      "Diagnostic Radiology",
+      38
+     ],
+     [
+      "Applied Behavior Analysis",
+      28
+     ],
+     [
+      "Psychiatry",
+      25
+     ],
+     [
+      "Obstetrics & Gynecology (OB/GYN)",
+      24
+     ],
+     [
+      "Psychology",
+      22
+     ],
+     [
+      "Physical Therapy",
+      21
+     ],
+     [
+      "Chiropractor",
+      21
+     ],
+     [
+      "Gastroenterology",
+      19
+     ],
+     [
+      "Surgery",
+      18
+     ],
+     [
+      "Optometry - Therapeutic",
+      17
+     ],
+     [
+      "Radiology",
+      16
+     ],
+     [
+      "Neurology",
+      14
+     ],
+     [
+      "Orthopaedic Surgery",
+      12
+     ]
+    ],
+    "bh_specialty_values": [
+     "Mental Health Counselor (LPC, LCDC, LMFT, LCSW)",
+     "Applied Behavior Analysis",
+     "Psychiatry",
+     "Psychology",
+     "Physical Therapy",
+     "Optometry - Therapeutic",
+     "Mental Health Nurse Practitioner",
+     "Psychiatry - Child & Adolescent",
+     "Occupational Therapy",
+     "Pediatric Speech Therapy",
+     "Pediatric Developmental-Behavioral",
+     "Psychology - Child & Adolescent"
+    ],
+    "accepting_values": {
+     "accepting": 815,
+     "None": 50,
+     "not accepting": 135
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 39,
+    "top_dup_phones": [
+     [
+      "8008414236",
+      53
+     ],
+     [
+      "9727155000",
+      49
+     ],
+     [
+      "3304934443",
+      46
+     ],
+     [
+      "5123241000",
+      35
+     ],
+     [
+      "2546900900",
+      29
+     ],
+     [
+      "5125287000",
+      29
+     ],
+     [
+      "5127153000",
+      28
+     ],
+     [
+      "8308757000",
+      28
+     ]
+    ]
+   }
+  }
+ ]
+}

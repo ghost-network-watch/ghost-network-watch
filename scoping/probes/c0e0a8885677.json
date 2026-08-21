@@ -1,0 +1,229 @@
+{
+ "index_url": "https://www.bcbsal.org/cms/cms-data-index.json",
+ "states": [
+  "AL"
+ ],
+ "issuer_ids": [
+  "46944"
+ ],
+ "provider_urls_count": 2,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.bcbsal.org/cms/data/providers_prime.json",
+   "http_code": 200,
+   "fetched_chars": 118243263,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 47782,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "addresses": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-08-17",
+    "last_updated_max": "2026-08-17",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "7067823813",
+      2
+     ],
+     [
+      "7344393900",
+      2
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.bcbsal.org/cms/data/providers_bcbsal.json",
+   "http_code": 200,
+   "fetched_chars": 150488075,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 75254,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "type": 1000,
+     "last_updated_on": 1000,
+     "accepting": 527,
+     "gender": 527,
+     "languages": 527,
+     "name": 527,
+     "specialty": 527,
+     "facility_name": 473,
+     "facility_type": 473
+    },
+    "type_dist": {
+     "INDIVIDUAL": 527,
+     "FACILITY": 473
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 26,
+    "unique_specialties": 85,
+    "top_specialties": [
+     [
+      "Internal Medicine",
+      185
+     ],
+     [
+      "Family Practice",
+      116
+     ],
+     [
+      "Emergency Medicine",
+      70
+     ],
+     [
+      "Pediatrics",
+      59
+     ],
+     [
+      "OB/Gynecology",
+      34
+     ],
+     [
+      "Anesthesiology",
+      33
+     ],
+     [
+      "Cardiology",
+      31
+     ],
+     [
+      "Orthopedic Surgery",
+      29
+     ],
+     [
+      "General Surgery",
+      26
+     ],
+     [
+      "Gastroenterology",
+      22
+     ],
+     [
+      "Radiology",
+      21
+     ],
+     [
+      "General Practice",
+      19
+     ],
+     [
+      "Pain Management",
+      17
+     ],
+     [
+      "Geriatrics",
+      16
+     ],
+     [
+      "Dermatology",
+      16
+     ],
+     [
+      "Pulmonary Diseases",
+      16
+     ],
+     [
+      "Critical Care",
+      15
+     ],
+     [
+      "Psychiatry",
+      15
+     ],
+     [
+      "ENT (Otolaryngology)",
+      14
+     ],
+     [
+      "Urology",
+      14
+     ]
+    ],
+    "bh_specialty_values": [
+     "Psychiatry",
+     "Addiction Medicine",
+     "Neuropsychiatry",
+     "Radiology, Therapeutic",
+     "Neuromuscular Therapy",
+     "Lic Marriage Family Therapy",
+     "Licensed Prof Counselor"
+    ],
+    "accepting_values": {
+     "accepting": 495,
+     "None": 473,
+     "not accepting": 19,
+     "accepting in some locations": 13
+    },
+    "last_updated_min": "2026-08-17",
+    "last_updated_max": "2026-08-17",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 32,
+    "top_dup_phones": [
+     [
+      "2059344011",
+      35
+     ],
+     [
+      "2059300920",
+      18
+     ],
+     [
+      "2562651000",
+      13
+     ],
+     [
+      "2514765050",
+      12
+     ],
+     [
+      "2514331895",
+      11
+     ],
+     [
+      "2059307100",
+      11
+     ],
+     [
+      "3342557360",
+      10
+     ],
+     [
+      "2568764147",
+      10
+     ]
+    ]
+   }
+  }
+ ]
+}

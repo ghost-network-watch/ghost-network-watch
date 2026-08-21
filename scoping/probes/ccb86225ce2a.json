@@ -1,0 +1,187 @@
+{
+ "index_url": "https://enroll.pacificsource.com/MRF/OR/cms-data-index.json",
+ "states": [
+  "OR"
+ ],
+ "issuer_ids": [
+  "10091"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://enroll.pacificsource.com/MRF/OR/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1597,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "languages": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 489,
+    "unique_specialties": 89,
+    "top_specialties": [
+     [
+      "Family Practice",
+      100
+     ],
+     [
+      "Physical Therapy",
+      94
+     ],
+     [
+      "Licensed Clinical Social Worker",
+      89
+     ],
+     [
+      "Licensed Professional Counselor",
+      71
+     ],
+     [
+      "Licensed Clinical Professional Counselor",
+      65
+     ],
+     [
+      "Chiropractic",
+      42
+     ],
+     [
+      "Family Nurse Practitioner",
+      36
+     ],
+     [
+      "Optometry",
+      31
+     ],
+     [
+      "Dental",
+      31
+     ],
+     [
+      "Psychology",
+      23
+     ],
+     [
+      "Speech Language Pathologist",
+      22
+     ],
+     [
+      "Psychiatric Mental Health Nurse Practitioner",
+      21
+     ],
+     [
+      "Licensed Master Social Worker",
+      21
+     ],
+     [
+      "General Practice",
+      20
+     ],
+     [
+      "Occupational Therapy",
+      19
+     ],
+     [
+      "Licensed Marriage Family Therapist",
+      19
+     ],
+     [
+      "Orthopedic Surgery",
+      18
+     ],
+     [
+      "Acupuncture",
+      17
+     ],
+     [
+      "Internal Medicine",
+      16
+     ],
+     [
+      "Licensed Massage Therapy",
+      15
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapy",
+     "Licensed Clinical Social Worker",
+     "Licensed Professional Counselor",
+     "Licensed Clinical Professional Counselor",
+     "Psychology",
+     "Psychiatric Mental Health Nurse Practitioner",
+     "Licensed Master Social Worker",
+     "Occupational Therapy",
+     "Licensed Marriage Family Therapist",
+     "Licensed Massage Therapy",
+     "Board Certified Behavioral Analyst",
+     "Psychiatry",
+     "Licensed Mental Health Counselor",
+     "Licensed Addiction Counselor",
+     "Mental Health Nurse Practitioner",
+     "Genetic Counselor",
+     "Licensed Independent Clinical Social Worker",
+     "Pediatric Physical Therapy"
+    ],
+    "accepting_values": {
+     "accepting": 989,
+     "not accepting": 11
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 12,
+    "top_dup_phones": [
+     [
+      "",
+      50
+     ],
+     [
+      "2086838320",
+      15
+     ],
+     [
+      "4062382500",
+      11
+     ],
+     [
+      "4064570000",
+      11
+     ],
+     [
+      "4062382501",
+      9
+     ],
+     [
+      "4062375050",
+      9
+     ],
+     [
+      "4064574180",
+      8
+     ],
+     [
+      "3608822778",
+      8
+     ]
+    ]
+   }
+  }
+ ]
+}

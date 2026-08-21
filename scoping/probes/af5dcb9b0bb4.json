@@ -1,0 +1,255 @@
+{
+ "index_url": "https://cms-machine-readable.cambiahealth.com/index.json",
+ "states": [
+  "OR",
+  "UT"
+ ],
+ "issuer_ids": [
+  "63474",
+  "77969",
+  "22013",
+  "34541"
+ ],
+ "provider_urls_count": 3,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://cms-machine-readable.cambiahealth.com/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 4754,
+    "analyzed": 1000,
+    "field_presence": {
+     "accepting": 1000,
+     "addresses": 1000,
+     "languages": 1000,
+     "last_updated_on": 1000,
+     "name": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "sex": 1000,
+     "specialty": 1000,
+     "type": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 199,
+    "unique_specialties": 83,
+    "top_specialties": [
+     [
+      "DENTISTRY",
+      278
+     ],
+     [
+      "FAMILY PRACTICE",
+      102
+     ],
+     [
+      "BEHAVIORAL - SOCIAL WORK SERVICES",
+      72
+     ],
+     [
+      "PSYCHOLOGY",
+      54
+     ],
+     [
+      "OPTOMETRY",
+      46
+     ],
+     [
+      "INTERNAL MEDICINE",
+      44
+     ],
+     [
+      "PEDIATRICS",
+      43
+     ],
+     [
+      "CHIROPRACTIC MEDICINE",
+      42
+     ],
+     [
+      "PHYSICAL THERAPY",
+      37
+     ],
+     [
+      "OBSTETRICS AND GYNECOLOGY",
+      23
+     ],
+     [
+      "ORTHODONTICS",
+      23
+     ],
+     [
+      "OPHTHALMOLOGY",
+      20
+     ],
+     [
+      "ORTHOPEDICS",
+      20
+     ],
+     [
+      "PHYSICAL MEDICINE AND REHABILITATION",
+      17
+     ],
+     [
+      "PODIATRY",
+      17
+     ],
+     [
+      "PSYCHIATRY",
+      17
+     ],
+     [
+      "PEDIATRIC DENTISTRY",
+      13
+     ],
+     [
+      "NEUROLOGY",
+      10
+     ],
+     [
+      "EAR NOSE THROAT- OTOLARYNGOLOGY",
+      10
+     ],
+     [
+      "ENDODONTIA",
+      10
+     ]
+    ],
+    "bh_specialty_values": [
+     "BEHAVIORAL - SOCIAL WORK SERVICES",
+     "PSYCHOLOGY",
+     "PHYSICAL THERAPY",
+     "PSYCHIATRY",
+     "BEHAVIORAL - MARRIAGE AND FAMILY THERAPY",
+     "BEHAVIORAL - COUNSELING",
+     "BEHAVIORAL - ADDICTION MEDICINE",
+     "PEDIATRIC PSYCHIATRY",
+     "BEHAVIORAL - MENTAL HEALTH SERVICES",
+     "SPEECH THERAPY",
+     "OCCUPATIONAL THERAPY"
+    ],
+    "accepting_values": {
+     "accepting": 1000
+    },
+    "last_updated_min": "2026-08-20",
+    "last_updated_max": "2026-08-20",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 25,
+    "top_dup_phones": [
+     [
+      "8015812220",
+      75
+     ],
+     [
+      "8012133599",
+      48
+     ],
+     [
+      "8017734840",
+      39
+     ],
+     [
+      "8012132995",
+      37
+     ],
+     [
+      "8012139530",
+      32
+     ],
+     [
+      "8017738644",
+      18
+     ],
+     [
+      "8015812352",
+      17
+     ],
+     [
+      "8015876453",
+      13
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://cms-machine-readable.cambiahealth.com/facility_providers.json",
+   "http_code": 206,
+   "fetched_chars": 4505145,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 3406,
+    "analyzed": 1000,
+    "field_presence": {
+     "addresses": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "last_updated_on": 1000,
+     "npi": 1000,
+     "plans": 1000,
+     "type": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 101,
+    "top_dup_phones": [
+     [
+      "8008710102",
+      18
+     ],
+     [
+      "2068617000",
+      18
+     ],
+     [
+      "8012555131",
+      14
+     ],
+     [
+      "8013223222",
+      12
+     ],
+     [
+      "8014856166",
+      10
+     ],
+     [
+      "4356880648",
+      9
+     ],
+     [
+      "8886738684",
+      8
+     ],
+     [
+      "8016390020",
+      7
+     ]
+    ]
+   }
+  }
+ ]
+}

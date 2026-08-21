@@ -1,0 +1,194 @@
+{
+ "index_url": "https://fm.formularynavigator.com/jsonFiles/publish/11/47/cms-data-index.json",
+ "states": [
+  "AK"
+ ],
+ "issuer_ids": [
+  "38344"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://fm.formularynavigator.com/jsonFiles/publish/11/47/providers.json",
+   "http_code": 200,
+   "fetched_chars": 209715198,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 73980,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 802,
+     "specialty": 802,
+     "accepting": 802,
+     "languages": 802,
+     "group_name": 163,
+     "facility_name": 35,
+     "facility_type": 35
+    },
+    "type_dist": {
+     "INDIVIDUAL": 802,
+     "GROUP": 163,
+     "FACILITY": 35
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 283,
+    "unique_specialties": 134,
+    "top_specialties": [
+     [
+      "Counselor",
+      66
+     ],
+     [
+      "Physical Therapist",
+      65
+     ],
+     [
+      "INTERNAL MEDICINE",
+      51
+     ],
+     [
+      "Internal Medicine",
+      51
+     ],
+     [
+      "Physician Assistant-Medical",
+      45
+     ],
+     [
+      "SOCIAL WORKER",
+      43
+     ],
+     [
+      "Social Worker",
+      43
+     ],
+     [
+      "Family Medicine",
+      41
+     ],
+     [
+      "Nurse Practitioner-Family",
+      37
+     ],
+     [
+      "Massage Therapist",
+      33
+     ],
+     [
+      "Dentist",
+      29
+     ],
+     [
+      "DENTIST",
+      29
+     ],
+     [
+      "Chiropractor",
+      23
+     ],
+     [
+      "Internal Medicine-Critical Care Medicine",
+      19
+     ],
+     [
+      "Pediatrics",
+      18
+     ],
+     [
+      "PEDIATRICS",
+      18
+     ],
+     [
+      "Nurse Practitioner-Psych/Mental Health",
+      16
+     ],
+     [
+      "NURSE PRACTITIONER",
+      15
+     ],
+     [
+      "Nurse Practitioner",
+      15
+     ],
+     [
+      "Radiology-Diagnostic Radiology",
+      14
+     ]
+    ],
+    "bh_specialty_values": [
+     "Counselor",
+     "Physical Therapist",
+     "SOCIAL WORKER",
+     "Social Worker",
+     "Massage Therapist",
+     "Nurse Practitioner-Psych/Mental Health",
+     "Marriage & Family Therapist",
+     "Occupational Therapist",
+     "Psychiatry & Neurology-Psychiatry",
+     "Behavior Analyst",
+     "Psychologist",
+     "Psychologist-Clinical",
+     "Psychiatry & Neurology-Neurology",
+     "Psychiatry & Neurology-Neurology with Special Qual",
+     "Family Medicine, Addiction Medicine",
+     "Genetic Counselor, MS",
+     "Psychologist-Clinical Child & Adolescent",
+     "Psychiatry & Neurology-Child & Adolescent Psychiat",
+     "Psychiatry & Neurology-Clinical Neurophysiology",
+     "Psychiatry & Neurology-Vascular Neurology"
+    ],
+    "accepting_values": {
+     "accepting": 802,
+     "None": 198
+    },
+    "last_updated_min": "2026-08-12",
+    "last_updated_max": "2026-08-12",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 23,
+    "top_dup_phones": [
+     [
+      "2069872000",
+      111
+     ],
+     [
+      "2532721812",
+      60
+     ],
+     [
+      "2065205000",
+      50
+     ],
+     [
+      "2069872515",
+      40
+     ],
+     [
+      "2065984830",
+      31
+     ],
+     [
+      "5094448200",
+      24
+     ],
+     [
+      "2063640500",
+      23
+     ],
+     [
+      "5095758000",
+      22
+     ]
+    ]
+   }
+  }
+ ]
+}

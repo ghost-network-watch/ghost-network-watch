@@ -1,0 +1,373 @@
+{
+ "index_url": "https://www.ahsecure.net/CMS/index.json",
+ "states": [
+  "IA",
+  "SD"
+ ],
+ "issuer_ids": [
+  "74980",
+  "60536"
+ ],
+ "provider_urls_count": 12,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.ahsecure.net/CMS/providers-1.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 865,
+    "analyzed": 865,
+    "field_presence": {
+     "npi": 865,
+     "type": 865,
+     "plans": 865,
+     "last_updated_on": 865,
+     "addresses": 865,
+     "facility_name": 760,
+     "facility_type": 760,
+     "name": 105,
+     "prefix": 105,
+     "first": 105,
+     "middle": 105,
+     "last": 105,
+     "suffix": 105,
+     "specialty": 105,
+     "accepting": 105,
+     "gender": 105,
+     "languages": 105
+    },
+    "type_dist": {
+     "FACILITY": 760,
+     "INDIVIDUAL": 105
+    },
+    "npi_present": 865,
+    "npi_luhn_valid": 865,
+    "bh_matches": 35,
+    "unique_specialties": 52,
+    "top_specialties": [
+     [
+      "Physical Therapist",
+      10
+     ],
+     [
+      "Counselor - Mental Health",
+      10
+     ],
+     [
+      "Family Medicine",
+      8
+     ],
+     [
+      "Nurse Practitioner - Family",
+      7
+     ],
+     [
+      "Radiology - Diagnostic Radiology",
+      6
+     ],
+     [
+      "Psychiatry & Neurology - Neurology",
+      4
+     ],
+     [
+      "Internal Medicine",
+      4
+     ],
+     [
+      "Social Worker - Clinical",
+      4
+     ],
+     [
+      "Pediatrics",
+      4
+     ],
+     [
+      "Chiropractor",
+      4
+     ],
+     [
+      "Nurse Anesthetist - Certified Registered",
+      3
+     ],
+     [
+      "Nurse Practitioner",
+      3
+     ],
+     [
+      "Physician Assistant",
+      3
+     ],
+     [
+      "Optometrist",
+      3
+     ],
+     [
+      "Pathology - Anatomic Pathology & Clinical Patholog",
+      3
+     ],
+     [
+      "Radiology - Vascular & Interventional Radiology",
+      2
+     ],
+     [
+      "Dermatology",
+      2
+     ],
+     [
+      "Orthopaedic Surgery",
+      2
+     ],
+     [
+      "Counselor - Professional",
+      2
+     ],
+     [
+      "Marriage & Family Therapist",
+      2
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapist",
+     "Counselor - Mental Health",
+     "Psychiatry & Neurology - Neurology",
+     "Social Worker - Clinical",
+     "Counselor - Professional",
+     "Marriage & Family Therapist",
+     "Psychiatry & Neurology - Vascular Neurology",
+     "MS - LPC-NH",
+     "Behavior Analyst",
+     "Social Worker",
+     "Occupational Therapist",
+     "Psychiatry",
+     "Psychologist"
+    ],
+    "accepting_values": {
+     "None": 760,
+     "accepting": 105
+    },
+    "last_updated_min": "2026-01-23",
+    "last_updated_max": "2026-01-23",
+    "last_updated_years": {
+     "2026": 865
+    },
+    "max_addresses_per_provider": 17,
+    "top_dup_phones": [
+     [
+      "7125464624",
+      18
+     ],
+     [
+      "6512922000",
+      8
+     ],
+     [
+      "6512922013",
+      7
+     ],
+     [
+      "6052566551",
+      4
+     ],
+     [
+      "6056659638",
+      4
+     ],
+     [
+      "9526532525",
+      3
+     ],
+     [
+      "6055823908",
+      3
+     ],
+     [
+      "6053225285",
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.ahsecure.net/CMS/providers-4.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 865,
+    "analyzed": 865,
+    "field_presence": {
+     "npi": 865,
+     "type": 865,
+     "plans": 865,
+     "last_updated_on": 865,
+     "addresses": 865,
+     "facility_name": 751,
+     "facility_type": 751,
+     "name": 114,
+     "prefix": 114,
+     "first": 114,
+     "middle": 114,
+     "last": 114,
+     "suffix": 114,
+     "specialty": 114,
+     "accepting": 114,
+     "gender": 114,
+     "languages": 114
+    },
+    "type_dist": {
+     "FACILITY": 751,
+     "INDIVIDUAL": 114
+    },
+    "npi_present": 865,
+    "npi_luhn_valid": 865,
+    "bh_matches": 35,
+    "unique_specialties": 50,
+    "top_specialties": [
+     [
+      "Family Medicine",
+      8
+     ],
+     [
+      "Optometrist",
+      8
+     ],
+     [
+      "Nurse Practitioner - Family",
+      7
+     ],
+     [
+      "Physical Therapist",
+      7
+     ],
+     [
+      "Internal Medicine",
+      7
+     ],
+     [
+      "Nurse Practitioner - Psychiatric/Mental Health",
+      6
+     ],
+     [
+      "Social Worker - Clinical",
+      6
+     ],
+     [
+      "Counselor - Mental Health",
+      6
+     ],
+     [
+      "Chiropractor",
+      6
+     ],
+     [
+      "Physician Assistant",
+      5
+     ],
+     [
+      "Nurse Practitioner",
+      4
+     ],
+     [
+      "Nurse Anesthetist - Certified Registered",
+      3
+     ],
+     [
+      "Obstetrics & Gynecology",
+      3
+     ],
+     [
+      "Orthopaedic Surgery",
+      3
+     ],
+     [
+      "Radiology - Diagnostic Radiology",
+      3
+     ],
+     [
+      "No Specialty Listed",
+      2
+     ],
+     [
+      "Social Worker",
+      2
+     ],
+     [
+      "Speech-Language Pathologist",
+      2
+     ],
+     [
+      "Pediatrics",
+      2
+     ],
+     [
+      "Anesthesiology",
+      2
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapist",
+     "Nurse Practitioner - Psychiatric/Mental Health",
+     "Social Worker - Clinical",
+     "Counselor - Mental Health",
+     "Social Worker",
+     "Occupational Therapist",
+     "Psychologist",
+     "Psychiatry",
+     "Counselor",
+     "Physical Therapist - Hand",
+     "Psychiatry & Neurology - Neurology",
+     "Marriage & Family Therapist",
+     "Licensed Certified Social Worker",
+     "Licensed Independent Clinical Social Worker (LC)",
+     "License - Licensed Graduate Social Worker (LGSW)"
+    ],
+    "accepting_values": {
+     "None": 751,
+     "accepting": 114
+    },
+    "last_updated_min": "2026-01-23",
+    "last_updated_max": "2026-01-23",
+    "last_updated_years": {
+     "2026": 865
+    },
+    "max_addresses_per_provider": 22,
+    "top_dup_phones": [
+     [
+      "7125464624",
+      12
+     ],
+     [
+      "9526532525",
+      6
+     ],
+     [
+      "6052172667",
+      5
+     ],
+     [
+      "6512922000",
+      5
+     ],
+     [
+      "6052250378",
+      4
+     ],
+     [
+      "6053315890",
+      4
+     ],
+     [
+      "6052172737",
+      4
+     ],
+     [
+      "6512922013",
+      4
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,138 @@
+{
+ "index_url": "https://tools.sanfordhealthplan.com/json/index.json",
+ "states": [
+  "ND",
+  "SD"
+ ],
+ "issuer_ids": [
+  "89364",
+  "31195"
+ ],
+ "provider_urls_count": 2,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://tools.sanfordhealthplan.com/json/JSON_Providers_SANHP_HIX.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 259,
+    "analyzed": 259,
+    "field_presence": {
+     "npi": 259,
+     "type": 259,
+     "facility_name": 259,
+     "facility_type": 259,
+     "addresses": 259,
+     "plans": 259,
+     "last_updated_on": 259
+    },
+    "type_dist": {
+     "FACILITY": 259
+    },
+    "npi_present": 259,
+    "npi_luhn_valid": 259,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 259
+    },
+    "last_updated_min": "2026-07-16",
+    "last_updated_max": "2026-07-16",
+    "last_updated_years": {
+     "2026": 259
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "9526532525",
+      2
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://tools.sanfordhealthplan.com/json/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388603,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2200,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "facility_name": 1000,
+     "facility_type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "FACILITY": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 1000
+    },
+    "last_updated_min": "2017-09-22",
+    "last_updated_max": "2026-08-04",
+    "last_updated_years": {
+     "2022": 53,
+     "2019": 168,
+     "2020": 29,
+     "2025": 161,
+     "2026": 284,
+     "2024": 93,
+     "2021": 26,
+     "2018": 68,
+     "2023": 116,
+     "2017": 2
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "3206326647",
+      12
+     ],
+     [
+      "6057641500",
+      6
+     ],
+     [
+      "8555011200",
+      6
+     ],
+     [
+      "6053289700",
+      5
+     ],
+     [
+      "8667765907",
+      4
+     ],
+     [
+      "6053225700",
+      4
+     ],
+     [
+      "6056249111",
+      4
+     ],
+     [
+      "6053331000",
+      4
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,188 @@
+{
+ "index_url": "https://public-cdn.wellmark.com/json/WSD/index.json",
+ "states": [
+  "SD"
+ ],
+ "issuer_ids": [
+  "50305"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://public-cdn.wellmark.com/json/WSD/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3912,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "name": 542,
+     "specialty": 542,
+     "accepting": 542,
+     "languages": 542,
+     "facility_name": 458,
+     "facility_type": 458
+    },
+    "type_dist": {
+     "FACILITY": 458,
+     "INDIVIDUAL": 542
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 106,
+    "unique_specialties": 81,
+    "top_specialties": [
+     [
+      "Nurse Practitioner",
+      61
+     ],
+     [
+      "Physician Assistant",
+      44
+     ],
+     [
+      "Hospitalist",
+      32
+     ],
+     [
+      "Certified Registered Nurse Anesthetist",
+      30
+     ],
+     [
+      "Family Practice",
+      27
+     ],
+     [
+      "Physical Therapist",
+      25
+     ],
+     [
+      "Radiology",
+      24
+     ],
+     [
+      "Social Worker",
+      19
+     ],
+     [
+      "Chiropractor",
+      19
+     ],
+     [
+      "Mental Health Counselor",
+      18
+     ],
+     [
+      "Qualified Mental Health Professional",
+      14
+     ],
+     [
+      "Surgery: Orthopaedic (Bone & Joint)",
+      12
+     ],
+     [
+      "Neurology (Nervous System)",
+      12
+     ],
+     [
+      "Obstetrics/Gyn (Child Birth & Female Reproduction)",
+      12
+     ],
+     [
+      "Emergency Medicine",
+      11
+     ],
+     [
+      "Gastroenterology (Digestion-Liver)",
+      11
+     ],
+     [
+      "Optometrist",
+      11
+     ],
+     [
+      "Family Practice (Non PCP)",
+      9
+     ],
+     [
+      "Surgery: General",
+      8
+     ],
+     [
+      "Internal Medicine",
+      8
+     ]
+    ],
+    "bh_specialty_values": [
+     "Physical Therapist",
+     "Social Worker",
+     "Mental Health Counselor",
+     "Qualified Mental Health Professional",
+     "Psychiatry",
+     "Marriage and Family Therapist",
+     "Psychologist",
+     "Occupational Therapist",
+     "Nurse Practitioner (Mental Health)",
+     "Board Certified Behavior Analyst",
+     "Occupational Therapist - Hand",
+     "Physical Therapist - Hand",
+     "Neuropsychology",
+     "Physician Assistant (Mental Health)"
+    ],
+    "accepting_values": {
+     "None": 458,
+     "accepting": 468,
+     "accepting in some locations": 41,
+     "not accepting": 33
+    },
+    "last_updated_min": "2025-09-15",
+    "last_updated_max": "2025-09-15",
+    "last_updated_years": {
+     "2025": 1000
+    },
+    "max_addresses_per_provider": 16,
+    "top_dup_phones": [
+     [
+      "6053322883",
+      43
+     ],
+     [
+      "6057551000",
+      27
+     ],
+     [
+      "6052265500",
+      27
+     ],
+     [
+      "6053228000",
+      24
+     ],
+     [
+      "6058827000",
+      21
+     ],
+     [
+      "6053121000",
+      16
+     ],
+     [
+      "6053331000",
+      15
+     ],
+     [
+      "6053536200",
+      15
+     ]
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,157 @@
+{
+ "index_url": "https://connect.wellsense.org:8443/NHACA_MRF/data/cms-data-index.json",
+ "states": [
+  "NH"
+ ],
+ "issuer_ids": [
+  "13219"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://connect.wellsense.org:8443/NHACA_MRF/data/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388606,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 4775,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "accepting": 1000,
+     "specialty": 1000,
+     "languages": 1000,
+     "gender": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 272,
+    "unique_specialties": 118,
+    "top_specialties": [
+     [
+      "Internal Medicine",
+      75
+     ],
+     [
+      "Physician Assistant",
+      75
+     ],
+     [
+      "Emergency Medicine",
+      70
+     ],
+     [
+      "Lic. Indpen. Clin. SW",
+      69
+     ],
+     [
+      "Family Nurse Practitioner",
+      65
+     ],
+     [
+      "Applied Behavioral Analysis",
+      57
+     ],
+     [
+      "Nurse Practitioner",
+      55
+     ],
+     [
+      "Psychiatrist - Adult",
+      47
+     ],
+     [
+      "Psychologist (PhD",
+      42
+     ],
+     [
+      "PsyD",
+      42
+     ],
+     [
+      "EdD)",
+      42
+     ],
+     [
+      "Diagnostic Radiology",
+      41
+     ],
+     [
+      "Anesthesiology",
+      33
+     ],
+     [
+      "Nurse Anesthetist",
+      33
+     ],
+     [
+      "LCMHC",
+      32
+     ],
+     [
+      "Clinical MH Counselor",
+      32
+     ],
+     [
+      "Neurology",
+      30
+     ],
+     [
+      "Family Medicine",
+      27
+     ],
+     [
+      "Physical Therapy",
+      25
+     ],
+     [
+      "LMHC",
+      24
+     ]
+    ],
+    "bh_specialty_values": [
+     "Applied Behavioral Analysis",
+     "Psychiatrist - Adult",
+     "Psychologist (PhD",
+     "Clinical MH Counselor",
+     "Physical Therapy",
+     "Lic. MH Counselor",
+     "Lic Appl Behavior Analys",
+     "Psychiatric Mental Health NP",
+     "Occupational Therapist",
+     "LCSW",
+     "Psychiatrist Child & Adolescen",
+     "Lic. Marital & Fam.Therapist",
+     "Behavioral Health - DO NOT USE",
+     "Lic Al/Drug Counselor I",
+     "LPC",
+     "Lic. Professional Counsel",
+     "Lic Al/Drug Counselor II",
+     "Developmental-Behavioral Pedi",
+     "Behavioral Hlt"
+    ],
+    "accepting_values": {
+     "not accepting": 606,
+     "accepting": 391,
+     "accepting in some locations": 3
+    },
+    "last_updated_min": "2026-07-28",
+    "last_updated_max": "2026-07-28",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 34,
+    "top_dup_phones": []
+   }
+  }
+ ]
+}

@@ -1,0 +1,155 @@
+{
+ "index_url": "https://www.instilhealth.com/web/data/sc/instil-index.json",
+ "states": [
+  "SC"
+ ],
+ "issuer_ids": [
+  "33863"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.instilhealth.com/web/data/sc/instil-providers.json",
+   "http_code": 200,
+   "fetched_chars": 10405689,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 11206,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "facility_type": 982,
+     "group_name": 892,
+     "facility_name": 90,
+     "name": 18,
+     "specialty": 18,
+     "accepting": 18,
+     "sex": 18,
+     "languages": 1
+    },
+    "type_dist": {
+     "GROUP": 892,
+     "FACILITY": 90,
+     "INDIVIDUAL": 18
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 11,
+    "unique_specialties": 13,
+    "top_specialties": [
+     [
+      "MENTAL HEALTH COUNSELOR",
+      4
+     ],
+     [
+      "SOCIAL WORKER",
+      2
+     ],
+     [
+      "ANESTHESIOLOGY",
+      2
+     ],
+     [
+      "SPEECH PATHOLOGIST/SPEECH THERAPIST",
+      2
+     ],
+     [
+      "MARRIAGE AND FAMILY COUNSELOR",
+      2
+     ],
+     [
+      "INTERNAL MEDICINE",
+      1
+     ],
+     [
+      "RADIOLOGY",
+      1
+     ],
+     [
+      "HOSPITALIST",
+      1
+     ],
+     [
+      "CERTIFIED REGISTERED NURSE ANESTHETIST (CRNA)",
+      1
+     ],
+     [
+      "PEDIATRICS",
+      1
+     ],
+     [
+      "PHYSICAL MEDICINE & REHABILITATION",
+      1
+     ],
+     [
+      "PSYCHIATRY (ALL AGES)",
+      1
+     ],
+     [
+      "PSYCHOLOGIST",
+      1
+     ]
+    ],
+    "bh_specialty_values": [
+     "MENTAL HEALTH COUNSELOR",
+     "SOCIAL WORKER",
+     "SPEECH PATHOLOGIST/SPEECH THERAPIST",
+     "MARRIAGE AND FAMILY COUNSELOR",
+     "PSYCHIATRY (ALL AGES)",
+     "PSYCHOLOGIST"
+    ],
+    "accepting_values": {
+     "None": 982,
+     "accepting": 18
+    },
+    "last_updated_min": "2024-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2024": 240,
+     "2025": 320,
+     "2026": 440
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "8008680404",
+      11
+     ],
+     [
+      "8645822411",
+      10
+     ],
+     [
+      "7048634878",
+      6
+     ],
+     [
+      "9102917000",
+      5
+     ],
+     [
+      "8436679414",
+      5
+     ],
+     [
+      "8645826858",
+      4
+     ],
+     [
+      "9102779164",
+      4
+     ],
+     [
+      "7044032660",
+      4
+     ]
+    ]
+   }
+  }
+ ]
+}

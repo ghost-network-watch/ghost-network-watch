@@ -1,0 +1,194 @@
+{
+ "index_url": "https://providerdirectory.communityhealthchoice.org/him/index.json",
+ "states": [
+  "TX"
+ ],
+ "issuer_ids": [
+  "11718",
+  "27248"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://providerdirectory.communityhealthchoice.org/him/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1860,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "plans": 1000,
+     "addresses": 1000,
+     "last_updated_on": 1000,
+     "name": 893,
+     "specialty": 893,
+     "accepting": 893,
+     "languages": 893,
+     "sex": 893,
+     "facility_name": 107,
+     "facility_type": 107
+    },
+    "type_dist": {
+     "INDIVIDUAL": 893,
+     "FACILITY": 107
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 186,
+    "unique_specialties": 109,
+    "top_specialties": [
+     [
+      "Clinical Nurse Specialist",
+      127
+     ],
+     [
+      "Internal Medicine",
+      81
+     ],
+     [
+      "Family Medicine",
+      73
+     ],
+     [
+      "Licensed Professional Counselor",
+      63
+     ],
+     [
+      "Physicians Assistant",
+      57
+     ],
+     [
+      "Pediatrics",
+      43
+     ],
+     [
+      "Licensed Behavioral Analyst",
+      38
+     ],
+     [
+      "Obstetrics and Gynecology",
+      37
+     ],
+     [
+      "Other",
+      35
+     ],
+     [
+      "Specialist-Psychiatry (Mental Illness)",
+      26
+     ],
+     [
+      "Anesthesiology",
+      24
+     ],
+     [
+      "General Surgery",
+      24
+     ],
+     [
+      "Diagnostic Radiology",
+      23
+     ],
+     [
+      "Specialist-Pathology",
+      21
+     ],
+     [
+      "Specialist-Radiology (X-Rays)",
+      20
+     ],
+     [
+      "Certified Registered Nurse Anesthetist",
+      18
+     ],
+     [
+      "Emergency Medicine",
+      18
+     ],
+     [
+      "Psychiatric Mental Health Nurse Practitioner",
+      18
+     ],
+     [
+      "Cardiovascular Disease",
+      17
+     ],
+     [
+      "Gastroenterology",
+      16
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Professional Counselor",
+     "Licensed Behavioral Analyst",
+     "Specialist-Psychiatry (Mental Illness)",
+     "Psychiatric Mental Health Nurse Practitioner",
+     "Physical Therapy",
+     "Licensed Clinical Social Work",
+     "Psychology",
+     "Speech Therapy",
+     "Behavior Analyst",
+     "Occupational Therapy",
+     "Child and Adolescent Psychiatry",
+     "Licensed Master Social Worker",
+     "Genetic Counselor",
+     "Psychiatry & Neurology, Child & Adolescent Psychiatry",
+     "Psychiatry & Neurology, Psychiatry",
+     "Neuropsychology",
+     "Licensed Chemical Dependency Counselor",
+     "Psychiatry &amp; Neurology, Child &amp; Adolescent Psychiatr",
+     "Licensed Marriage and Family Therapist",
+     "Neuropsychiatry"
+    ],
+    "accepting_values": {
+     "accepting": 893,
+     "None": 107
+    },
+    "last_updated_min": "2026-01-28",
+    "last_updated_max": "2026-01-28",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 40,
+    "top_dup_phones": [
+     [
+      "9413601566",
+      58
+     ],
+     [
+      "7138732860",
+      50
+     ],
+     [
+      "8325485000",
+      31
+     ],
+     [
+      "4097721011",
+      29
+     ],
+     [
+      "7134135000",
+      26
+     ],
+     [
+      "7138672066",
+      25
+     ],
+     [
+      "8555509427",
+      24
+     ],
+     [
+      "7133386565",
+      23
+     ]
+    ]
+   }
+  }
+ ]
+}

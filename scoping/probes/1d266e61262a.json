@@ -1,0 +1,237 @@
+{
+ "index_url": "https://cmsdata.providers4you.com/cms-data-index.json",
+ "states": [
+  "AL",
+  "FL",
+  "KS",
+  "LA",
+  "MO",
+  "MS",
+  "NH",
+  "OK",
+  "SC",
+  "TX",
+  "UT",
+  "WI",
+  "WY"
+ ],
+ "issuer_ids": [
+  "28725",
+  "48129",
+  "95038",
+  "28419",
+  "35853",
+  "84254",
+  "72953",
+  "13711",
+  "97325",
+  "40540",
+  "87169",
+  "34210",
+  "80132"
+ ],
+ "provider_urls_count": 15,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://cmsdata.providers4you.com/providers1.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1167,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 6,
+    "top_specialties": [
+     [
+      "General Practitioner",
+      787
+     ],
+     [
+      "Orthodontist",
+      67
+     ],
+     [
+      "Oral Surgeon",
+      65
+     ],
+     [
+      "Pediatric",
+      34
+     ],
+     [
+      "Periodontist",
+      27
+     ],
+     [
+      "Endodontist",
+      23
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 1000
+    },
+    "last_updated_min": "2026-08-21",
+    "last_updated_max": "2026-08-21",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "5206703909",
+      18
+     ],
+     [
+      "9073336666",
+      7
+     ],
+     [
+      "6022697797",
+      7
+     ],
+     [
+      "4806369970",
+      7
+     ],
+     [
+      "6028631913",
+      7
+     ],
+     [
+      "6028453333",
+      6
+     ],
+     [
+      "2053797020",
+      5
+     ],
+     [
+      "4808823119",
+      5
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://cmsdata.providers4you.com/providers8.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 1167,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "General Practitioner",
+      847
+     ],
+     [
+      "Pediatric",
+      72
+     ],
+     [
+      "Endodontist",
+      23
+     ],
+     [
+      "Orthodontist",
+      20
+     ],
+     [
+      "Oral Surgeon",
+      18
+     ],
+     [
+      "Prosthodontist",
+      10
+     ],
+     [
+      "Periodontist",
+      10
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 1000
+    },
+    "last_updated_min": "2026-08-21",
+    "last_updated_max": "2026-08-21",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "2512885571",
+      17
+     ],
+     [
+      "5206703909",
+      16
+     ],
+     [
+      "6028631913",
+      14
+     ],
+     [
+      "2567123500",
+      11
+     ],
+     [
+      "2566762055",
+      10
+     ],
+     [
+      "3343523777",
+      10
+     ],
+     [
+      "6022721170",
+      10
+     ],
+     [
+      "6022697797",
+      10
+     ]
+    ]
+   }
+  }
+ ]
+}

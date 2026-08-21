@@ -1,0 +1,368 @@
+{
+ "index_url": "https://www.modahealth.com/cms-data-index.json",
+ "states": [
+  "AK",
+  "OR",
+  "TX"
+ ],
+ "issuer_ids": [
+  "73836",
+  "39424",
+  "17933"
+ ],
+ "provider_urls_count": 3,
+ "plan_urls_count": 3,
+ "files": [
+  {
+   "url": "https://www.modahealth.com/cms-data/providers-AK.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 4063,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 452,
+    "unique_specialties": 112,
+    "top_specialties": [
+     [
+      "Licensed Prof. Counselor",
+      133
+     ],
+     [
+      "Lic Clinical Social Worker",
+      107
+     ],
+     [
+      "Nurse Practitioner",
+      68
+     ],
+     [
+      "Physician's Assistant",
+      59
+     ],
+     [
+      "Spec.",
+      59
+     ],
+     [
+      "Specialist",
+      55
+     ],
+     [
+      "Family Practice",
+      43
+     ],
+     [
+      "",
+      39
+     ],
+     [
+      "Mental Nurse Practitioner",
+      37
+     ],
+     [
+      "Pediatrics",
+      35
+     ],
+     [
+      "Mental Health Psychology",
+      27
+     ],
+     [
+      "Licensed Marriage/Family Ther.",
+      21
+     ],
+     [
+      "Obstetrics/Gynecology",
+      20
+     ],
+     [
+      "Physical Therapy",
+      20
+     ],
+     [
+      "Professional Counselor Assoc",
+      20
+     ],
+     [
+      "Qualified Mental Health Prof",
+      19
+     ],
+     [
+      "Family Nursing",
+      17
+     ],
+     [
+      "Physicians Assistant",
+      17
+     ],
+     [
+      "ABA Therapist",
+      15
+     ],
+     [
+      "Mental Health Psychiatry",
+      15
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Prof. Counselor",
+     "Lic Clinical Social Worker",
+     "Mental Nurse Practitioner",
+     "Mental Health Psychology",
+     "Licensed Marriage/Family Ther.",
+     "Physical Therapy",
+     "Professional Counselor Assoc",
+     "Qualified Mental Health Prof",
+     "ABA Therapist",
+     "Mental Health Psychiatry",
+     "Occupational Therapy",
+     "Massage Therapist",
+     "Licensed Mental Hlth Counselor",
+     "Clinical Social Work Associate",
+     "Mental Health Nursing",
+     "Mental Health Counselor",
+     "Qualified Mental Health Assoc",
+     "Marriage/Family Therapy Assoc",
+     "Pediatric Developmental Behav",
+     "Speech Therapy",
+     "Child/Adolescent Psychiatry"
+    ],
+    "accepting_values": {
+     "accepting": 962,
+     "not accepting": 38
+    },
+    "last_updated_min": "2026-08-15",
+    "last_updated_max": "2026-08-15",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 42,
+    "top_dup_phones": [
+     [
+      "5036848252",
+      149
+     ],
+     [
+      "5413736424",
+      42
+     ],
+     [
+      "6469417645",
+      23
+     ],
+     [
+      "8448437279",
+      20
+     ],
+     [
+      "8328241000",
+      20
+     ],
+     [
+      "5123242720",
+      13
+     ],
+     [
+      "5416407625",
+      12
+     ],
+     [
+      "5122444272",
+      12
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.modahealth.com/cms-data/providers-OR.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 2684,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "name": 1000,
+     "addresses": 1000,
+     "specialty": 1000,
+     "accepting": 1000,
+     "plans": 1000,
+     "languages": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 462,
+    "unique_specialties": 97,
+    "top_specialties": [
+     [
+      "Licensed Prof. Counselor",
+      119
+     ],
+     [
+      "Lic Clinical Social Worker",
+      99
+     ],
+     [
+      "Physician's Assistant",
+      59
+     ],
+     [
+      "Spec.",
+      59
+     ],
+     [
+      "Physical Therapy",
+      49
+     ],
+     [
+      "Nurse Practitioner",
+      48
+     ],
+     [
+      "Family Practice",
+      44
+     ],
+     [
+      "Specialist",
+      36
+     ],
+     [
+      "Mental Nurse Practitioner",
+      35
+     ],
+     [
+      "Physicians Assistant",
+      35
+     ],
+     [
+      "Mental Health Psychology",
+      31
+     ],
+     [
+      "Qualified Mental Health Prof",
+      28
+     ],
+     [
+      "Family Nursing",
+      25
+     ],
+     [
+      "Internal Medicine",
+      25
+     ],
+     [
+      "Chiropractic",
+      22
+     ],
+     [
+      "Licensed Marriage/Family Ther.",
+      21
+     ],
+     [
+      "Professional Counselor Assoc",
+      20
+     ],
+     [
+      "Acupuncturist",
+      19
+     ],
+     [
+      "Pediatrics",
+      19
+     ],
+     [
+      "Mental Health Psychiatry",
+      18
+     ]
+    ],
+    "bh_specialty_values": [
+     "Licensed Prof. Counselor",
+     "Lic Clinical Social Worker",
+     "Physical Therapy",
+     "Mental Nurse Practitioner",
+     "Mental Health Psychology",
+     "Qualified Mental Health Prof",
+     "Licensed Marriage/Family Ther.",
+     "Professional Counselor Assoc",
+     "Mental Health Psychiatry",
+     "ABA Therapist",
+     "Occupational Therapy",
+     "Massage Therapist",
+     "Licensed Mental Hlth Counselor",
+     "Clinical Social Work Associate",
+     "Qualified Mental Health Assoc",
+     "Marriage/Family Therapy Assoc",
+     "Mental Health Nursing",
+     "Mental Health Counselor"
+    ],
+    "accepting_values": {
+     "accepting": 933,
+     "not accepting": 67
+    },
+    "last_updated_min": "2026-08-15",
+    "last_updated_max": "2026-08-15",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 42,
+    "top_dup_phones": [
+     [
+      "5036848252",
+      149
+     ],
+     [
+      "5413736424",
+      42
+     ],
+     [
+      "6469417645",
+      22
+     ],
+     [
+      "8448437279",
+      20
+     ],
+     [
+      "5413824900",
+      15
+     ],
+     [
+      "9999999999",
+      15
+     ],
+     [
+      "5416407625",
+      12
+     ],
+     [
+      "3608822778",
+      12
+     ]
+    ]
+   }
+  }
+ ]
+}

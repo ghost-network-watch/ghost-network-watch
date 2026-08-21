@@ -1,0 +1,187 @@
+{
+ "index_url": "https://data.networkhealth.com/hix/index.json",
+ "states": [
+  "WI"
+ ],
+ "issuer_ids": [
+  "81413"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://data.networkhealth.com/hix/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 3829,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "last_updated_on": 1000,
+     "plans": 1000,
+     "name": 860,
+     "accepting": 860,
+     "gender": 860,
+     "languages": 860,
+     "specialty": 860,
+     "title": 860,
+     "facility_name": 140,
+     "facility_type": 140
+    },
+    "type_dist": {
+     "FACILITY": 140,
+     "INDIVIDUAL": 860
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 172,
+    "unique_specialties": 70,
+    "top_specialties": [
+     [
+      "Personal Doctor",
+      156
+     ],
+     [
+      "Primary Care",
+      144
+     ],
+     [
+      "Behavioral Health",
+      102
+     ],
+     [
+      "General Practice",
+      68
+     ],
+     [
+      "Nephrology",
+      64
+     ],
+     [
+      "Psychiatry-General",
+      54
+     ],
+     [
+      "Gynecologist",
+      52
+     ],
+     [
+      "Gynecology",
+      52
+     ],
+     [
+      "OB-GYN",
+      52
+     ],
+     [
+      "Obstetrics and Gynecology",
+      52
+     ],
+     [
+      "Neurology",
+      50
+     ],
+     [
+      "Behavioral Health - Child & Adolescent",
+      50
+     ],
+     [
+      "Family Practice",
+      48
+     ],
+     [
+      "Pediatrician",
+      40
+     ],
+     [
+      "Pediatrics",
+      40
+     ],
+     [
+      "Pain Management",
+      38
+     ],
+     [
+      "Ophthalmology",
+      38
+     ],
+     [
+      "Pulmonary Medicine",
+      38
+     ],
+     [
+      "Cardiology/Cardiovascular Disease",
+      34
+     ],
+     [
+      "Hematology",
+      30
+     ]
+    ],
+    "bh_specialty_values": [
+     "Behavioral Health",
+     "Psychiatry-General",
+     "Behavioral Health - Child & Adolescent",
+     "Marriage Counseling",
+     "Substance Abuse",
+     "Addiction Medicine",
+     "Psychology",
+     "Neuropsychology-Clinical",
+     "Geriatric Psychiatry",
+     "Psychology-Child and Adolescent",
+     "Psychiatry-Child and Adolescent",
+     "Genetic Counselor"
+    ],
+    "accepting_values": {
+     "None": 140,
+     "accepting": 856,
+     "not accepting": 4
+    },
+    "last_updated_min": "2026-01-12",
+    "last_updated_max": "2026-08-17",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "9204964700",
+      52
+     ],
+     [
+      "9209912561",
+      22
+     ],
+     [
+      "2622511112",
+      16
+     ],
+     [
+      "4143846700",
+      16
+     ],
+     [
+      "9209396017",
+      16
+     ],
+     [
+      "2622977246",
+      14
+     ],
+     [
+      "2627987200",
+      12
+     ],
+     [
+      "9208579041",
+      12
+     ]
+    ]
+   }
+  }
+ ]
+}

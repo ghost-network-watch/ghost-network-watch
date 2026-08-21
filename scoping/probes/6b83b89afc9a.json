@@ -1,0 +1,226 @@
+{
+ "index_url": "https://www.bcbst.com/cms-data-index.json",
+ "states": [
+  "TN"
+ ],
+ "issuer_ids": [
+  "14002"
+ ],
+ "provider_urls_count": 16,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.bcbst.com/CMS2/providers1.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 526,
+    "analyzed": 526,
+    "field_presence": {
+     "npi": 526,
+     "type": 526,
+     "addresses": 526,
+     "plans": 526,
+     "last_updated_on": 526,
+     "name": 278,
+     "specialty": 278,
+     "accepting": 278,
+     "languages": 278,
+     "group_name": 127,
+     "facility_name": 121,
+     "facility_type": 121
+    },
+    "type_dist": {
+     "GROUP": 127,
+     "FACILITY": 121,
+     "INDIVIDUAL": 278
+    },
+    "npi_present": 526,
+    "npi_luhn_valid": 526,
+    "bh_matches": 35,
+    "unique_specialties": 36,
+    "top_specialties": [
+     [
+      "Dentist, General Practice",
+      77
+     ],
+     [
+      "Chiropractor",
+      36
+     ],
+     [
+      "Optometrist",
+      27
+     ],
+     [
+      "Psychologist, Clinical",
+      18
+     ],
+     [
+      "Pediatrics",
+      12
+     ],
+     [
+      "Ophthalmology",
+      12
+     ],
+     [
+      "Internal Medicine",
+      10
+     ],
+     [
+      "Family Medicine",
+      9
+     ],
+     [
+      "Psychiatry & Neurology, Psychiatry",
+      7
+     ],
+     [
+      "Social Worker, Clinical",
+      7
+     ],
+     [
+      "Otolaryngology",
+      6
+     ],
+     [
+      "Surgery",
+      5
+     ],
+     [
+      "Internal Medicine, Rheumatology",
+      4
+     ],
+     [
+      "Urology",
+      4
+     ],
+     [
+      "Dentist, Oral and Maxillofacial Surgery",
+      4
+     ],
+     [
+      "Internal Medicine, Medical Oncology",
+      3
+     ],
+     [
+      "General Practice",
+      3
+     ],
+     [
+      "Obstetrics & Gynecology",
+      3
+     ],
+     [
+      "Dentist, Pediatric Dentistry",
+      3
+     ],
+     [
+      "Dentist, Orthodontics and Dentofacial Orthopedics",
+      3
+     ]
+    ],
+    "bh_specialty_values": [
+     "Psychologist, Clinical",
+     "Psychiatry & Neurology, Psychiatry",
+     "Social Worker, Clinical",
+     "Physical Therapist",
+     "Psychiatry & Neurology, Neurology"
+    ],
+    "accepting_values": {
+     "None": 248,
+     "accepting": 278
+    },
+    "last_updated_min": "2026-07-29",
+    "last_updated_max": "2026-07-29",
+    "last_updated_years": {
+     "2026": 526
+    },
+    "max_addresses_per_provider": 9,
+    "top_dup_phones": [
+     [
+      "8655218050",
+      18
+     ],
+     [
+      "6158228403",
+      8
+     ],
+     [
+      "8654258800",
+      6
+     ],
+     [
+      "9015227700",
+      6
+     ],
+     [
+      "9318799936",
+      6
+     ],
+     [
+      "7316619825",
+      4
+     ],
+     [
+      "9016821100",
+      4
+     ],
+     [
+      "9312893463",
+      3
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://www.bcbst.com/CMS2/providers9.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 228,
+    "analyzed": 228,
+    "field_presence": {
+     "npi": 228,
+     "type": 228,
+     "facility_name": 228,
+     "facility_type": 228,
+     "addresses": 228,
+     "plans": 228,
+     "last_updated_on": 228
+    },
+    "type_dist": {
+     "FACILITY": 228
+    },
+    "npi_present": 228,
+    "npi_luhn_valid": 228,
+    "bh_matches": 0,
+    "unique_specialties": 0,
+    "top_specialties": [],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "None": 228
+    },
+    "last_updated_min": "2026-07-29",
+    "last_updated_max": "2026-07-29",
+    "last_updated_years": {
+     "2026": 228
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "6607830700",
+      2
+     ],
+     [
+      "9088528818",
+      2
+     ]
+    ]
+   }
+  }
+ ]
+}

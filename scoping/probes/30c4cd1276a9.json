@@ -1,0 +1,110 @@
+{
+ "index_url": "https://www.bcbsks.com/qhp-data/index.BCBSKS.json",
+ "states": [
+  "KS"
+ ],
+ "issuer_ids": [
+  "18558"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://www.bcbsks.com/qhp-data/ProvidersBCBSKS.JSON",
+   "http_code": 200,
+   "fetched_chars": 91894175,
+   "truncated_sample": false,
+   "stats": {
+    "n_records": 31801,
+    "analyzed": 1000,
+    "field_presence": {
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000,
+     "facility_name": 630,
+     "facility_type": 630,
+     "specialty": 370,
+     "name": 356,
+     "accepting": 356,
+     "languages": 356,
+     "group_name": 14
+    },
+    "type_dist": {
+     "FACILITY": 630,
+     "INDIVIDUAL": 356,
+     "GROUP": 14
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 370,
+    "unique_specialties": 3,
+    "top_specialties": [
+     [
+      "Behavioral Health & Social Service Providers : Counselor : M",
+      270
+     ],
+     [
+      "Behavioral Health & Social Service Providers : Counselor",
+      56
+     ],
+     [
+      "Behavioral Health & Social Service Providers : Counselor : A",
+      44
+     ]
+    ],
+    "bh_specialty_values": [
+     "Behavioral Health & Social Service Providers : Counselor : M",
+     "Behavioral Health & Social Service Providers : Counselor",
+     "Behavioral Health & Social Service Providers : Counselor : A"
+    ],
+    "accepting_values": {
+     "None": 644,
+     "accepting": 352,
+     "not accepting": 4
+    },
+    "last_updated_min": "2026-07-21",
+    "last_updated_max": "2026-07-29",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 37,
+    "top_dup_phones": [
+     [
+      "8447333627",
+      251
+     ],
+     [
+      "7854527366",
+      15
+     ],
+     [
+      "3166366100",
+      15
+     ],
+     [
+      "6175179155",
+      12
+     ],
+     [
+      "3162016047",
+      7
+     ],
+     [
+      "7858231032",
+      6
+     ],
+     [
+      "7852158888",
+      6
+     ],
+     [
+      "6207233112",
+      4
+     ]
+    ]
+   }
+  }
+ ]
+}

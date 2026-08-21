@@ -1,0 +1,128 @@
+{
+ "index_url": "https://api.solsticebenefits.com/v1/Providers/Cms/GetIndex.json",
+ "states": [
+  "AZ",
+  "FL",
+  "MI",
+  "OH",
+  "TX",
+  "UT"
+ ],
+ "issuer_ids": [
+  "34095",
+  "82011",
+  "43274",
+  "63631",
+  "56726",
+  "33626",
+  "98809",
+  "97462"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://api.solsticebenefits.com/v1/Providers/Cms/GetProviders.json",
+   "http_code": 200,
+   "fetched_chars": 209715200,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 163085,
+    "analyzed": 1000,
+    "field_presence": {
+     "accepting": 1000,
+     "gender": 1000,
+     "languages": 1000,
+     "name": 1000,
+     "specialty": 1000,
+     "npi": 1000,
+     "type": 1000,
+     "addresses": 1000,
+     "plans": 1000,
+     "last_updated_on": 1000
+    },
+    "type_dist": {
+     "INDIVIDUAL": 1000
+    },
+    "npi_present": 1000,
+    "npi_luhn_valid": 1000,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "General Dentist",
+      718
+     ],
+     [
+      "Orthodontist",
+      80
+     ],
+     [
+      "Oral Surgeon",
+      53
+     ],
+     [
+      "Endodontist",
+      51
+     ],
+     [
+      "Pediatric Dentist",
+      48
+     ],
+     [
+      "Periodontist",
+      47
+     ],
+     [
+      "Prosthodontist",
+      3
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 1000
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 1000
+    },
+    "max_addresses_per_provider": 94,
+    "top_dup_phones": [
+     [
+      "8132881999",
+      136
+     ],
+     [
+      "2482031100",
+      32
+     ],
+     [
+      "8662348534",
+      17
+     ],
+     [
+      "9723610600",
+      14
+     ],
+     [
+      "3058562300",
+      13
+     ],
+     [
+      "9547764720",
+      12
+     ],
+     [
+      "5617103018",
+      12
+     ],
+     [
+      "3154546000",
+      11
+     ]
+    ]
+   }
+  }
+ ]
+}

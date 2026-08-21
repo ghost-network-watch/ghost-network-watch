@@ -1,0 +1,267 @@
+{
+ "index_url": "https://json.bestlife.com/cms/cms-data-index.json",
+ "states": [
+  "AK",
+  "AL",
+  "AR",
+  "AZ",
+  "FL",
+  "HI",
+  "IA",
+  "IN",
+  "KS",
+  "LA",
+  "MI",
+  "MO",
+  "MS",
+  "MT",
+  "NC",
+  "ND",
+  "NE",
+  "OH",
+  "OK",
+  "SC",
+  "SD",
+  "TN",
+  "TX",
+  "UT",
+  "WY"
+ ],
+ "issuer_ids": [
+  "74819",
+  "12538",
+  "26904",
+  "77352",
+  "17121",
+  "10046",
+  "71051",
+  "83557",
+  "63790",
+  "78461",
+  "35700",
+  "29416",
+  "11324",
+  "93895",
+  "94482",
+  "75329",
+  "50022",
+  "47509",
+  "40254",
+  "89281",
+  "61214",
+  "24601",
+  "47665",
+  "42757",
+  "47731"
+ ],
+ "provider_urls_count": 2,
+ "plan_urls_count": 2,
+ "files": [
+  {
+   "url": "https://json.bestlife.com/cms/2025/providers_wNPI.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 550,
+    "analyzed": 550,
+    "field_presence": {
+     "npi": 550,
+     "type": 550,
+     "name": 550,
+     "addresses": 550,
+     "specialty": 550,
+     "accepting": 550,
+     "plans": 550,
+     "last_updated_on": 550
+    },
+    "type_dist": {
+     "INDIVIDUAL": 550
+    },
+    "npi_present": 550,
+    "npi_luhn_valid": 550,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "General Dentistry",
+      463
+     ],
+     [
+      "Orthodontics",
+      29
+     ],
+     [
+      "Pediatric Dentistry",
+      24
+     ],
+     [
+      "Oral Maxillofacial Surgery",
+      23
+     ],
+     [
+      "Endodontics",
+      11
+     ],
+     [
+      "Periodontics",
+      10
+     ],
+     [
+      "Prosthodontics",
+      1
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 519,
+     "not accepting": 8,
+     "accepting in some locations": 23
+    },
+    "last_updated_min": "2025-12-10",
+    "last_updated_max": "2025-12-10",
+    "last_updated_years": {
+     "2025": 550
+    },
+    "max_addresses_per_provider": 52,
+    "top_dup_phones": [
+     [
+      "7704173546",
+      20
+     ],
+     [
+      "3128466752",
+      13
+     ],
+     [
+      "5623520397",
+      9
+     ],
+     [
+      "6022437277",
+      9
+     ],
+     [
+      "7733387799",
+      9
+     ],
+     [
+      "8889884066",
+      8
+     ],
+     [
+      "6516336500",
+      8
+     ],
+     [
+      "8153997777",
+      8
+     ]
+    ]
+   }
+  },
+  {
+   "url": "https://json.bestlife.com/cms/2026/providers_wNPI.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 537,
+    "analyzed": 537,
+    "field_presence": {
+     "npi": 537,
+     "type": 537,
+     "name": 537,
+     "addresses": 537,
+     "specialty": 537,
+     "accepting": 537,
+     "plans": 537,
+     "last_updated_on": 537
+    },
+    "type_dist": {
+     "INDIVIDUAL": 537
+    },
+    "npi_present": 537,
+    "npi_luhn_valid": 537,
+    "bh_matches": 0,
+    "unique_specialties": 7,
+    "top_specialties": [
+     [
+      "General Dentistry",
+      448
+     ],
+     [
+      "Orthodontics",
+      25
+     ],
+     [
+      "Oral Maxillofacial Surgery",
+      23
+     ],
+     [
+      "Pediatric Dentistry",
+      22
+     ],
+     [
+      "Periodontics",
+      11
+     ],
+     [
+      "Endodontics",
+      10
+     ],
+     [
+      "Prosthodontics",
+      1
+     ]
+    ],
+    "bh_specialty_values": [],
+    "accepting_values": {
+     "accepting": 512,
+     "not accepting": 5,
+     "accepting in some locations": 20
+    },
+    "last_updated_min": "2026-08-10",
+    "last_updated_max": "2026-08-10",
+    "last_updated_years": {
+     "2026": 537
+    },
+    "max_addresses_per_provider": 55,
+    "top_dup_phones": [
+     [
+      "6516336500",
+      59
+     ],
+     [
+      "7704173546",
+      20
+     ],
+     [
+      "7023222170",
+      16
+     ],
+     [
+      "5623520397",
+      13
+     ],
+     [
+      "3128466752",
+      12
+     ],
+     [
+      "6022437277",
+      9
+     ],
+     [
+      "7733387799",
+      9
+     ],
+     [
+      "2033235439",
+      7
+     ]
+    ]
+   }
+  }
+ ]
+}

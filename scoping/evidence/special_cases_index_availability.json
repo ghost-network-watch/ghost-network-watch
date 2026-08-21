@@ -1,0 +1,217 @@
+{
+  "title": "Ghost Network Watch - index availability special cases: hard-dead and User-Agent-gated CMS machine-readable index URLs",
+  "generated_at": "2026-08-21T01:09:42-04:00",
+  "method": "Each URL fetched twice on 2026-08-21 with a 512-byte Range GET: once with curl's default User-Agent, once with a browser User-Agent (Chrome 126 on macOS). Follow-ups (full index fetch, redirect trace) noted per case.",
+  "framing_note": "Statements describe observed HTTP behavior of the URL each issuer submitted to CMS in the PY2026 Machine-Readable URL PUF.",
+  "cases": [
+    {
+      "index_url": "https://www.bcbsnc.com/cms-data-index.json",
+      "status_2026_08_21": "STILL DEAD - HTTP 404 with browser UA (406 with default UA)",
+      "affected_issuers": [
+        {
+          "state": "NC",
+          "issuer_id": "11512"
+        }
+      ],
+      "default_ua_result": {
+        "http_code": 406,
+        "bytes": 293,
+        "content_type": ""
+      },
+      "browser_ua_result": {
+        "http_code": 404,
+        "bytes": 60585,
+        "content_type": "text/html;charset=utf-8"
+      },
+      "detail": "The URL submitted to CMS returns a 404 HTML error page (60,585 bytes) to a browser UA and 406 to curl's default UA. No machine-readable index is retrievable at the issuer's submitted URL. Matches the original probe finding.",
+      "checked_at": "2026-08-21T01:03:36-0400"
+    },
+    {
+      "index_url": "https://files.myplancentral.com/ACA/cms-data-index.json",
+      "status_2026_08_21": "RECOVERED - now serves valid CMS index JSON (was DNS-dead at original probe)",
+      "affected_issuers": [
+        {
+          "state": "OH",
+          "issuer_id": "52664",
+          "poc_domain": "summacare.com"
+        }
+      ],
+      "default_ua_result": {
+        "http_code": 206,
+        "bytes": 512,
+        "content_type": "application/json"
+      },
+      "browser_ua_result": {
+        "http_code": 206,
+        "bytes": 512,
+        "content_type": "application/json"
+      },
+      "detail": "DNS now resolves and the URL returns HTTP 200/206 application/json with both UAs. Full fetch on 2026-08-21 parsed as valid JSON conforming to the CMS index schema, listing PROVIDERS-2026.json plus 27 provpharmacy-*-2026.json files. Status change since the original probe; the deep-probe stats for this index need to be redone.",
+      "checked_at": "2026-08-21T01:03:42-0400"
+    },
+    {
+      "index_url": "https://www.uhc.com/content/dam/uhcdotcom/en/general/cms-data-index.json",
+      "status_2026_08_21": "UA-GATED - 403 to default UA, 206 application/json to browser UA (confirmed)",
+      "affected_issuers": [
+        {
+          "state": "AL",
+          "issuer_id": "69461"
+        },
+        {
+          "state": "AZ",
+          "issuer_id": "40702"
+        },
+        {
+          "state": "FL",
+          "issuer_id": "68398"
+        },
+        {
+          "state": "IA",
+          "issuer_id": "56610"
+        },
+        {
+          "state": "IN",
+          "issuer_id": "72850"
+        },
+        {
+          "state": "KS",
+          "issuer_id": "94968"
+        },
+        {
+          "state": "LA",
+          "issuer_id": "69842"
+        },
+        {
+          "state": "MI",
+          "issuer_id": "71667"
+        },
+        {
+          "state": "MO",
+          "issuer_id": "95426"
+        },
+        {
+          "state": "MS",
+          "issuer_id": "97560"
+        },
+        {
+          "state": "NC",
+          "issuer_id": "54332"
+        },
+        {
+          "state": "NE",
+          "issuer_id": "73102"
+        },
+        {
+          "state": "OH",
+          "issuer_id": "33931"
+        },
+        {
+          "state": "OK",
+          "issuer_id": "45480"
+        },
+        {
+          "state": "SC",
+          "issuer_id": "33764"
+        },
+        {
+          "state": "TN",
+          "issuer_id": "69443"
+        },
+        {
+          "state": "TX",
+          "issuer_id": "40220"
+        },
+        {
+          "state": "TX",
+          "issuer_id": "70754"
+        },
+        {
+          "state": "WI",
+          "issuer_id": "80180"
+        },
+        {
+          "state": "WY",
+          "issuer_id": "49714"
+        }
+      ],
+      "default_ua_result": {
+        "http_code": 403,
+        "bytes": 919,
+        "content_type": "text/html"
+      },
+      "browser_ua_result": {
+        "http_code": 206,
+        "bytes": 512,
+        "content_type": "application/json"
+      },
+      "detail": "One shared index URL covering 20 UnitedHealthcare issuer rows across 19 states (TX has two issuer IDs). 403 (919-byte HTML block page) for curl default UA; 206 application/json with browser UA. Programmatic/aggregator access without browser headers is blocked.",
+      "checked_at": "2026-08-21T01:03:47-0400"
+    },
+    {
+      "index_url": "https://public-cdn.wellmark.com/json/WHPI/index.json",
+      "status_2026_08_21": "UA-GATED - 403 to default UA, 206 application/json to browser UA (confirmed)",
+      "affected_issuers": [
+        {
+          "state": "IA",
+          "issuer_id": "25896"
+        }
+      ],
+      "default_ua_result": {
+        "http_code": 403,
+        "bytes": 111,
+        "content_type": "application/xml"
+      },
+      "browser_ua_result": {
+        "http_code": 206,
+        "bytes": 390,
+        "content_type": "application/json"
+      },
+      "detail": "CloudFront/S3 origin returns 403 application/xml to curl default UA; 206 application/json with browser UA.",
+      "checked_at": "2026-08-21T01:03:52-0400"
+    },
+    {
+      "index_url": "https://public-cdn.wellmark.com/json/WSD/index.json",
+      "status_2026_08_21": "UA-GATED - 403 to default UA, 206 application/json to browser UA (confirmed); also appears in staleness exhibit",
+      "affected_issuers": [
+        {
+          "state": "SD",
+          "issuer_id": "50305"
+        }
+      ],
+      "default_ua_result": {
+        "http_code": 403,
+        "bytes": 111,
+        "content_type": "application/xml"
+      },
+      "browser_ua_result": {
+        "http_code": 206,
+        "bytes": 388,
+        "content_type": "application/json"
+      },
+      "detail": "Same gating as WHPI. Note: this index is also stale exhibit rank 4 - provider file records last attested 2025-09-15; file Last-Modified 2026-06-12.",
+      "checked_at": "2026-08-21T01:03:57-0400"
+    },
+    {
+      "index_url": "https://www.mercycarehealthplans.com/wp-content/uploads/JSON/cms-data-index.json",
+      "status_2026_08_21": "UA-GATED + REDIRECT - 403 to default UA; browser UA gets 301 to lowercase path then 200 application/json",
+      "affected_issuers": [
+        {
+          "state": "WI",
+          "issuer_id": "58326"
+        }
+      ],
+      "default_ua_result": {
+        "http_code": 403,
+        "bytes": 118,
+        "content_type": "text/html"
+      },
+      "browser_ua_result": {
+        "http_code": 301,
+        "bytes": 134,
+        "content_type": "text/html"
+      },
+      "detail": "Default UA: 403. Browser UA: 301 to https://www.mercycarehealthplans.com/wp-content/uploads/json/cms-data-index/ (lowercase 'json', trailing slash), which returns 200 application/json. Crawlers must follow redirects and use a browser UA.",
+      "checked_at": "2026-08-21T01:04:02-0400"
+    }
+  ]
+}

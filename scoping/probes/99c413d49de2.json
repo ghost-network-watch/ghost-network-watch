@@ -1,0 +1,177 @@
+{
+ "index_url": "https://shp-web-public.s3.amazonaws.com/PRD/exchange/cms-data-index.json",
+ "states": [
+  "WI"
+ ],
+ "issuer_ids": [
+  "38166"
+ ],
+ "provider_urls_count": 1,
+ "plan_urls_count": 1,
+ "files": [
+  {
+   "url": "https://shp-web-public.s3.amazonaws.com/PRD/exchange/providers.json",
+   "http_code": 206,
+   "fetched_chars": 8388608,
+   "truncated_sample": true,
+   "stats": {
+    "n_records": 778,
+    "analyzed": 778,
+    "field_presence": {
+     "npi": 778,
+     "type": 778,
+     "name": 778,
+     "addresses": 778,
+     "plans": 778,
+     "specialty": 778,
+     "accepting": 778,
+     "sex": 778,
+     "languages": 778,
+     "last_updated_on": 778
+    },
+    "type_dist": {
+     "INDIVIDUAL": 778
+    },
+    "npi_present": 778,
+    "npi_luhn_valid": 778,
+    "bh_matches": 215,
+    "unique_specialties": 73,
+    "top_specialties": [
+     [
+      "Primary Care",
+      181
+     ],
+     [
+      "Family Medicine",
+      135
+     ],
+     [
+      "Counseling/AODA/Behavioral Health",
+      107
+     ],
+     [
+      "Physical Therapy",
+      50
+     ],
+     [
+      "Surgery - General",
+      40
+     ],
+     [
+      "",
+      36
+     ],
+     [
+      "Orthopaedic Surgery",
+      32
+     ],
+     [
+      "Psychiatry",
+      30
+     ],
+     [
+      "Cardiology",
+      26
+     ],
+     [
+      "Internal Medicine",
+      25
+     ],
+     [
+      "Optometry",
+      23
+     ],
+     [
+      "Obstetrics and Gynecology",
+      22
+     ],
+     [
+      "Womens Health",
+      22
+     ],
+     [
+      "Pediatrics",
+      20
+     ],
+     [
+      "Psychology",
+      18
+     ],
+     [
+      "Neurology",
+      15
+     ],
+     [
+      "Dermatology",
+      14
+     ],
+     [
+      "Urology",
+      13
+     ],
+     [
+      "Oncology",
+      13
+     ],
+     [
+      "Otolaryngology (ENT)",
+      13
+     ]
+    ],
+    "bh_specialty_values": [
+     "Counseling/AODA/Behavioral Health",
+     "Physical Therapy",
+     "Psychiatry",
+     "Psychology",
+     "Occupational Therapy",
+     "Psychiatry - Child and Adolescent",
+     "Neuropsychology"
+    ],
+    "accepting_values": {
+     "accepting": 771,
+     "not accepting": 7
+    },
+    "last_updated_min": "2026-08-19",
+    "last_updated_max": "2026-08-19",
+    "last_updated_years": {
+     "2026": 778
+    },
+    "max_addresses_per_provider": 1,
+    "top_dup_phones": [
+     [
+      "7012342000",
+      30
+     ],
+     [
+      "9204964700",
+      29
+     ],
+     [
+      "2183335000",
+      22
+     ],
+     [
+      "6053322883",
+      17
+     ],
+     [
+      "7014172575",
+      16
+     ],
+     [
+      "6082631530",
+      13
+     ],
+     [
+      "7158385222",
+      12
+     ],
+     [
+      "9208579041",
+      9
+     ]
+    ]
+   }
+  }
+ ]
+}
