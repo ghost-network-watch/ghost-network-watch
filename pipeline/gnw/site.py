@@ -742,12 +742,36 @@ def build_site(
             issuer=u, depth="../../",
         )
     for p in plans.values():
-        # Complaint-ready numbers for the plan page. Rendered on every page:
-        # graded plans cite grades, thin plans cite the roster counts.
+        # Complaint-ready sentences, assembled here so grammar and pluralization
+        # are right and the source is an absolute URL that survives copy-paste.
         graded = [c for c in p["counties"] if c["bh_grade"] and not c["bh_thin"]]
         df = sum(1 for c in graded if c["bh_grade"] in ("D", "F"))
+
+        def _counties(n: int) -> str:
+            return "1 county" if n == 1 else f"{n} counties"
+
+        sentences = []
+        if df:
+            sentences.append(
+                f"The mental health directory for plan {p['name']} ({p['scid']}) was "
+                f"graded D or F in {df} of its {_counties(len(graded))}."
+            )
+        if p["thin"]:
+            subject = "It" if sentences else (
+                f"The mental health directory for plan {p['name']} ({p['scid']})"
+            )
+            sentences.append(
+                f"{subject} lists fewer than 10 mental health providers in "
+                f"{_counties(p['thin'])}."
+            )
+        if p["ooa_pct"] and p["ooa_pct"] > 10:
+            sentences.append(
+                f"{p['ooa_pct']}% of the providers listed for this plan have no office "
+                "in or near any county the plan covers."
+            )
         p["complaint"] = {
-            "graded": len(graded), "df": df,
+            "sentences": sentences,
+            "url": f"https://ghostnetworkwatch.org/plans/{p['scid']}/",
             "evidence_mb": evidence_sizes.get(p["issuer_id"]),
         }
         render(

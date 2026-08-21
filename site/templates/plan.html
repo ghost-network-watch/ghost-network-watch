@@ -55,20 +55,14 @@
 
 <section>
   <h2>Using this page in a complaint</h2>
+  {% if plan.complaint.sentences %}
   <p>If you cannot reach an in-network mental health provider on this plan, you can cite
   this audit to your plan or your state insurance department. Copy and adapt:</p>
   <blockquote class="note" style="margin: var(--wa-space-m) 0">
     According to Ghost Network Watch's {{ snapshot_label }} audit of the machine-readable
-    provider directory that {{ plan.issuer }} publishes under 45 CFR 156.230(b), the
-    mental health directory for plan {{ plan.name }} ({{ plan.scid }})
-    {%- if plan.complaint.df %} graded {{ plan.complaint.df }} of
-    {{ plan.complaint.graded }} counties D or F{% elif plan.complaint.graded %} was graded
-    in {{ plan.complaint.graded }} counties{% endif %}
-    {%- if plan.thin %}{% if plan.complaint.graded %},{% endif %} lists fewer than 10
-    mental health providers in {{ plan.thin }} counties{% endif %}
-    {%- if plan.ooa_pct and plan.ooa_pct > 10 %}, and {{ plan.ooa_pct }}% of its listed
-    providers have no office in or near any county the plan covers{% endif %}.
-    Source: this page. The insurer's itemized evidence file is attached.
+    provider directory that {{ plan.issuer }} publishes under 45 CFR 156.230(b):
+    {% for s in plan.complaint.sentences %}{{ s }} {% endfor %}Source:
+    {{ plan.complaint.url }}. The insurer's itemized evidence file is attached.
   </blockquote>
   <p>Attach two things: a printout or PDF of this page, and
   {% if plan.complaint.evidence_mb is not none %}
@@ -80,5 +74,15 @@
   {% endif %}
   The <a href="{{ depth }}patients/index.html">guide for patients</a> walks through the
   full complaint process.</p>
+  {% else %}
+  <p>This plan's directory graded well in the {{ snapshot_label }} audit, so our data will
+  not strengthen a complaint about it. If you still cannot reach an in-network provider,
+  your documented call attempts are the evidence that matters. The
+  <a href="{{ depth }}patients/index.html">guide for patients</a> shows how to use them.
+  {% if plan.complaint.evidence_mb is not none %}
+  The insurer's <a href="{{ depth }}data/files/issuers/{{ plan.issuer_id }}_evidence.csv.gz">full
+  evidence file</a> is still available if you want the underlying data.
+  {% endif %}</p>
+  {% endif %}
 </section>
 {% endblock %}
