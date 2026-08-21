@@ -80,6 +80,18 @@ def cmd_refs(args) -> None:
         BUILDERS[name](store)
 
 
+def cmd_compact(args) -> None:
+    from .compact import build_compact
+
+    build_compact(DATA_ROOT, snapshot=args.snapshot)
+
+
+def cmd_score(args) -> None:
+    from .scoring import build_scores
+
+    build_scores(DATA_ROOT, snapshot=args.snapshot)
+
+
 def cmd_flags(args) -> None:
     from .flags import FlagEngine
 
@@ -133,6 +145,14 @@ def main() -> None:
         choices=["all", "nppes", "pufs", "landscape", "nucc", "zcta", "adjacency"],
     )
     p.set_defaults(func=cmd_refs)
+
+    p = sub.add_parser("compact", help="build integer-encoded join tables")
+    p.add_argument("--snapshot", required=True)
+    p.set_defaults(func=cmd_compact)
+
+    p = sub.add_parser("score", help="aggregate evidence rows into plan-county scores")
+    p.add_argument("--snapshot", required=True)
+    p.set_defaults(func=cmd_score)
 
     p = sub.add_parser("flags", help="run rubric metrics -> evidence rows")
     p.add_argument("--snapshot", required=True)

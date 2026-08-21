@@ -67,7 +67,11 @@ class FlagEngine:
         self.out.mkdir(parents=True, exist_ok=True)
         self.con = duckdb.connect()
         self.con.execute("SET memory_limit='10GB'")
-        self.con.execute(f"SET temp_directory='{data_root / 'tmp' / 'duckdb'}'")
+        self.con.execute("SET preserve_insertion_order=false")
+        tmp = data_root / "tmp" / "duckdb"
+        tmp.mkdir(parents=True, exist_ok=True)
+        self.con.execute(f"SET temp_directory='{tmp}'")
+        self.con.execute("SET max_temp_directory_size='60GB'")
         pq = data_root / "parquet" / snapshot
         ref = data_root / "reference" / "parquet"
         views = {
@@ -81,6 +85,10 @@ class FlagEngine:
             "plan_county": ref / "plan_county.parquet",
             "zip_county": ref / "zip_county.parquet",
             "adjacency": ref / "county_adjacency.parquet",
+            "file_dim": pq / "compact" / "file_dim.parquet",
+            "scid_dim": pq / "compact" / "scid_dim.parquet",
+            "attach_c": pq / "compact" / "attach.parquet",
+            "rec_county_c": pq / "compact" / "rec_county.parquet",
         }
         for name, path in views.items():
             self.con.execute(
@@ -287,83 +295,90 @@ class FlagEngine:
     # -- M7 OUT_OF_AREA_LISTING (E2) -----------------------------------------
 
     def m7_out_of_area(self) -> int:
+        # Integer-encoded throughout (see compact.py) — the string version of
+        # this query spilled 93GB of temp and OOM'd.
+        self.con.execute("""
+            CREATE TEMP TABLE allowed_adj AS
+            WITH scid_sa AS (
+              SELECT DISTINCT standardcomponentid AS scid, serviceareaid, statecode
+              FROM plan_attributes
+            ),
+            sa_counties AS (
+              SELECT serviceareaid, statecode,
+                     CASE WHEN upper(coalesce(coverentirestate,'')) = 'YES' THEN NULL
+                          ELSE regexp_replace(county, '[^0-9]', '', 'g')::INTEGER
+                     END AS county
+              FROM service_area
+            ),
+            state_counties AS (
+              SELECT sf.state, a.county_fips::INTEGER AS county
+              FROM state_fips sf
+              JOIN (SELECT DISTINCT county_fips FROM adjacency) a
+                ON substr(a.county_fips, 1, 2) = sf.fips2
+            ),
+            allowed AS (
+              SELECT d.scid_id, coalesce(sc.county, stc.county) AS county
+              FROM scid_sa s
+              JOIN scid_dim d ON d.scid = s.scid
+              JOIN sa_counties sc USING (serviceareaid)
+              LEFT JOIN state_counties stc
+                ON sc.county IS NULL AND stc.state = s.statecode
+              WHERE coalesce(sc.county, stc.county) IS NOT NULL
+            )
+            SELECT scid_id, county FROM allowed
+            UNION
+            SELECT al.scid_id, ad.adjacent_fips::INTEGER AS county
+            FROM allowed al
+            JOIN adjacency ad ON ad.county_fips::INTEGER = al.county
+        """)
+        self.con.execute("""
+            CREATE TEMP TABLE m7_flagged AS
+            WITH in_area AS (
+              SELECT DISTINCT t.fid, t.record_idx, t.scid_id
+              FROM attach_c t
+              JOIN rec_county_c rc USING (fid, record_idx)
+              JOIN allowed_adj aa
+                ON aa.scid_id = t.scid_id AND aa.county = rc.county
+            )
+            SELECT t.fid, t.record_idx, t.scid_id
+            FROM attach_c t
+            JOIN (SELECT DISTINCT fid, record_idx FROM rec_county_c) m
+              USING (fid, record_idx)
+            JOIN (SELECT DISTINCT scid_id FROM allowed_adj) k USING (scid_id)
+            ANTI JOIN in_area i
+              ON i.fid = t.fid AND i.record_idx = t.record_idx
+             AND i.scid_id = t.scid_id
+        """)
+        self.con.execute("""
+            CREATE TEMP TABLE m7_rec_states AS
+            SELECT fd.fid, a.record_idx::INTEGER AS record_idx,
+                   string_agg(DISTINCT a.state, '|') AS record_states
+            FROM addresses a
+            JOIN file_dim fd USING (source_sha256)
+            JOIN (SELECT DISTINCT fid, record_idx FROM m7_flagged) f
+              ON f.fid = fd.fid AND f.record_idx = a.record_idx::INTEGER
+            GROUP BY 1, 2
+        """)
         sql = f"""
-        WITH attach AS (
-          SELECT DISTINCT source_sha256, record_idx, substr(plan_id, 1, 14) AS scid
-          FROM pplans
-          WHERE upper(coalesce(plan_id_type,'')) LIKE 'HIOS%'
-            AND length(plan_id) >= 14
-            AND regexp_matches(substr(plan_id, 1, 14), '^\\d{{5}}[A-Z]{{2}}\\d{{7}}$')
-            AND (years IS NULL OR years LIKE '%2026%')
-        ),
-        scid_sa AS (
-          SELECT DISTINCT standardcomponentid AS scid, serviceareaid, statecode
-          FROM plan_attributes
-        ),
-        sa_counties AS (
-          SELECT sa.serviceareaid, sa.statecode,
-                 CASE WHEN upper(coalesce(sa.coverentirestate,'')) = 'YES' THEN NULL
-                      ELSE lpad(regexp_replace(sa.county, '[^0-9]', '', 'g'), 5, '0') END AS county
-          FROM service_area sa
-        ),
-        state_counties AS (
-          SELECT sf.state, a.county_fips
-          FROM state_fips sf
-          JOIN (SELECT DISTINCT county_fips FROM adjacency) a
-            ON substr(a.county_fips, 1, 2) = sf.fips2
-        ),
-        allowed AS (
-          SELECT s.scid, coalesce(sc.county, stc.county_fips) AS county
-          FROM scid_sa s
-          JOIN sa_counties sc USING (serviceareaid)
-          LEFT JOIN state_counties stc
-            ON sc.county IS NULL AND stc.state = s.statecode
-          WHERE coalesce(sc.county, stc.county_fips) IS NOT NULL
-        ),
-        allowed_adj AS (
-          SELECT scid, county FROM allowed
-          UNION
-          SELECT al.scid, ad.adjacent_fips AS county
-          FROM allowed al JOIN adjacency ad ON ad.county_fips = al.county
-        ),
-        rec_county AS (
-          SELECT DISTINCT a.source_sha256, a.record_idx, z.county_fips
-          FROM addresses a
-          JOIN zip_county z
-            ON z.zip = substr(regexp_replace(coalesce(a.zip,''), '[^0-9]', '', 'g'), 1, 5)
-        ),
-        mappable AS (
-          SELECT DISTINCT source_sha256, record_idx FROM rec_county
-        ),
-        in_area AS (
-          SELECT DISTINCT t.source_sha256, t.record_idx, t.scid
-          FROM attach t
-          JOIN rec_county rc USING (source_sha256, record_idx)
-          JOIN allowed_adj aa ON aa.scid = t.scid AND aa.county = rc.county_fips
-        ),
-        flagged AS (
-          SELECT t.* FROM attach t
-          JOIN mappable m USING (source_sha256, record_idx)
-          JOIN (SELECT DISTINCT scid FROM allowed) k ON k.scid = t.scid
-          ANTI JOIN in_area i
-            ON i.source_sha256 = t.source_sha256 AND i.record_idx = t.record_idx
-           AND i.scid = t.scid
-        )
         SELECT '{self.snapshot}' AS snapshot, 'M7_OUT_OF_AREA_LISTING' AS metric,
                'OUT_OF_AREA' AS subcode, 'E2' AS evidence_strength, 0.8 AS weight,
-               f.source_sha256, f.record_idx, p.npi, f.scid AS plan_id,
-               to_json(struct_pack(
-                 record_states := (SELECT string_agg(DISTINCT a2.state, '|')
-                                   FROM addresses a2
-                                   WHERE a2.source_sha256 = f.source_sha256
-                                     AND a2.record_idx = f.record_idx),
-                 plan_state := substr(f.scid, 6, 2)
-               )) AS observed,
+               fd.source_sha256, f.record_idx::BIGINT AS record_idx, p.npi,
+               sd.scid AS plan_id,
+               to_json(struct_pack(record_states := rs.record_states,
+                                   plan_state := substr(sd.scid, 6, 2))) AS observed,
                '{RULES_VERSION}' AS rule_version
-        FROM flagged f
-        LEFT JOIN providers p USING (source_sha256, record_idx)
+        FROM m7_flagged f
+        JOIN file_dim fd USING (fid)
+        JOIN scid_dim sd USING (scid_id)
+        LEFT JOIN m7_rec_states rs ON rs.fid = f.fid AND rs.record_idx = f.record_idx
+        LEFT JOIN providers p ON p.source_sha256 = fd.source_sha256
+                             AND p.record_idx = f.record_idx
         """
-        return self._write("M7_OUT_OF_AREA_LISTING", sql)
+        n = self._write("M7_OUT_OF_AREA_LISTING", sql)
+        self.con.execute("DROP TABLE m7_flagged")
+        self.con.execute("DROP TABLE m7_rec_states")
+        self.con.execute("DROP TABLE allowed_adj")
+        return n
 
     # -- M8 ACCEPTING_UNKNOWN (E1) -------------------------------------------
 
