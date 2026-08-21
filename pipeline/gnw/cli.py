@@ -54,6 +54,22 @@ def cmd_crawl(args) -> None:
     print(f"done: {stats}")
 
 
+def cmd_parse(args) -> None:
+    from .parse import parse_snapshot
+
+    store = EvidenceStore(DATA_ROOT)
+    stats = parse_snapshot(
+        store,
+        snapshot=args.snapshot,
+        parquet_root=DATA_ROOT / "parquet",
+        limit=args.limit,
+    )
+    print(
+        f"parsed {stats.blobs} blobs ({stats.skipped} already done, {stats.failed} failed): "
+        f"{stats.provider_records} provider records, {stats.plan_records} plan records"
+    )
+
+
 def cmd_status(args) -> None:
     store = EvidenceStore(DATA_ROOT)
     rows = store.load_manifest(args.snapshot)
@@ -85,6 +101,11 @@ def main() -> None:
     p.add_argument("--workers", type=int, default=8)
     p.add_argument("--all-scopes", action="store_true", help="include dental issuers")
     p.set_defaults(func=cmd_crawl)
+
+    p = sub.add_parser("parse", help="parse fetched blobs into Parquet tables")
+    p.add_argument("--snapshot", required=True)
+    p.add_argument("--limit", type=int, help="max blobs to parse this run")
+    p.set_defaults(func=cmd_parse)
 
     p = sub.add_parser("status", help="summarize a snapshot manifest")
     p.add_argument("--snapshot", required=True)

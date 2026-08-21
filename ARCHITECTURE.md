@@ -79,6 +79,11 @@ EventBridge Scheduler (monthly / weekly)
 [6] PUBLISH
     · static site: S3 + CloudFront (same stack as soorena.io) — per-plan/county pages,
       per-issuer pages, methodology, correction channel
+    · UI: Web Awesome components (wa-*), token-only styling per the wa-design-taste
+      discipline; pages generated from Parquet by a build script (fragments + assemble,
+      the beauty-nova-wa pattern) — no SPA framework
+    · Domains owned: ghostnetworkwatch.org (primary) + .com + ghostnetwork.watch (redirects);
+      contact@ghostnetworkwatch.org forwards to the operator
     · open data: Parquet/CSV + evidence-row JSONL downloads, versioned; "last refreshed
       per source" manifest published machine-readable
     · issuer pre-notification: SES to the PUF's own Tech POC emails ≥2 weeks before

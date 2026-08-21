@@ -85,3 +85,85 @@ def test_manifest_append_and_resume(tmp_path: Path):
     rows = store.load_manifest("2026-08")
     assert len(rows) == 2
     assert store.fetched_ok_urls("2026-08") == {"https://x/idx.json"}
+
+
+def _put_blob(store: EvidenceStore, obj) -> str:
+    payload = json.dumps(obj).encode()
+    sha = hashlib.sha256(payload).hexdigest()
+    src = store.root / f"tmp-{sha[:8]}"
+    src.write_bytes(payload)
+    store.add_blob(sha, src)
+    return sha
+
+
+def test_parse_provider_and_plan_blobs(tmp_path: Path):
+    import pyarrow.parquet as pq
+    from gnw.parse import parse_snapshot
+
+    store = EvidenceStore(tmp_path / "data")
+    provider_records = [
+        {
+            "npi": "1255010732",
+            "type": "INDIVIDUAL",
+            "name": {"first": "HADA", "last": "TILLERO"},
+            "gender": "Female",
+            "accepting": "accepting",
+            "last_updated_on": "2026-08-01",
+            "specialty": ["Psychiatry", "Addiction Medicine"],
+            "languages": ["English", "Spanish"],
+            "addresses": [
+                {"address": "1 Main St", "city": "Muncie", "state": "IN",
+                 "zip": "47304", "phone": "7652133939"}
+            ],
+            "plans": [
+                {"plan_id_type": "HIOS-PLAN-ID", "plan_id": "28856IN0220001",
+                 "network_tier": "PPO", "years": [2026]}
+            ],
+        },
+        {
+            "npi": "1932171634",
+            "type": "FACILITY",
+            "facility_name": "Clinic X",
+            "facility_type": ["Hospital"],
+            # no addresses/plans keys at all — must not crash
+        },
+    ]
+    sha_p = _put_blob(store, provider_records)
+    # dict-wrapped variant must also parse
+    sha_w = _put_blob(store, {"providers": provider_records[:1]})
+    sha_plan = _put_blob(
+        store,
+        [{"plan_id_type": "HIOS-PLAN-ID", "plan_id": "28856IN0220001",
+          "marketing_name": "Test Plan", "network": [{"network_tier": "PPO"}],
+          "last_updated_on": "2026-08-01"}],
+    )
+    for sha, role in [(sha_p, "provider"), (sha_w, "provider"), (sha_plan, "plan")]:
+        store.append(ManifestRow(
+            snapshot="t", role=role, url=f"https://x/{sha[:6]}.json", index_url="https://x/i.json",
+            issuer_ids=["28856"], states=["IN"], fetched_at="2026-08-21T00:00:00Z",
+            status=200, sha256=sha,
+        ))
+
+    stats = parse_snapshot(store, "t", tmp_path / "pq")
+    assert stats.failed == 0
+    assert stats.provider_records == 3  # 2 + 1 wrapped
+    assert stats.plan_records == 1
+
+    prov = pq.read_table(tmp_path / "pq" / "t" / "providers").to_pylist()
+    assert len(prov) == 3
+    ind = next(r for r in prov if r["type"] == "INDIVIDUAL" and r["source_sha256"] == sha_p)
+    assert ind["specialties"] == "Psychiatry|Addiction Medicine"
+    assert ind["specialty_count"] == 2
+    assert ind["gender"] == "Female"
+    fac = next(r for r in prov if r["type"] == "FACILITY")
+    assert fac["facility_name"] == "Clinic X"
+    assert fac["addresses_count"] == 0
+
+    addrs = pq.read_table(tmp_path / "pq" / "t" / "provider_addresses").to_pylist()
+    assert {a["zip"] for a in addrs} == {"47304"}
+    plans = pq.read_table(tmp_path / "pq" / "t" / "provider_plans").to_pylist()
+    assert plans[0]["plan_id"] == "28856IN0220001" and plans[0]["years"] == "2026"
+
+    # resumability: second run parses nothing new
+    stats2 = parse_snapshot(store, "t", tmp_path / "pq")
+    assert stats2.blobs == 0 and stats2.skipped == 3
