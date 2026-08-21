@@ -167,13 +167,22 @@ class ParseStats:
 
 
 def _iter_records(fh, top_key: str):
-    """Stream records from a JSON array, tolerating an object wrapper."""
+    """Stream records from a JSON array, tolerating an object wrapper.
+
+    Decodes with errors='replace': several issuers publish mandated JSON
+    containing raw Latin-1 bytes (e.g. "Blue Cross\\xae"), which is an
+    encoding violation worth flagging but not worth losing the file over.
+    The crawler-side blob keeps the original bytes as evidence.
+    """
     first = fh.read(1)
     while first.isspace():
         first = fh.read(1)
     fh.seek(0)
     prefix = "item" if first == b"[" else f"{top_key}.item"
-    yield from ijson.items(fh, prefix)
+    import io
+
+    text = io.TextIOWrapper(fh, encoding="utf-8", errors="replace")
+    yield from ijson.items(text, prefix)
 
 
 def _parse_provider_blob(
