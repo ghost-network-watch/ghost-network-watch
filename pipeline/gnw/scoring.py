@@ -189,13 +189,13 @@ def build_scores(data_root: Path, snapshot: str) -> Path:
                  avg(pen) AS mean_pen, avg(pen_a) AS mean_pen_a, avg(pen_u) AS mean_pen_u,
                  avg(flagged) AS flag_rate
           FROM (
-            SELECT r.*, s.scope,
+            SELECT r.scid_id, r.county, r.state, r.fid, r.record_idx, s.scope,
                    coalesce(p.pen, 0) AS pen, coalesce(p.pen_a, 0) AS pen_a,
                    coalesce(p.pen_u, 0) AS pen_u,
                    (p.pen IS NOT NULL)::INT AS flagged
             FROM roster r
             CROSS JOIN (SELECT 'all' AS scope UNION ALL SELECT 'bh') s
-            LEFT JOIN penalties p USING (fid, record_idx)
+            LEFT JOIN penalties p ON p.fid = r.fid AND p.record_idx = r.record_idx
             WHERE s.scope = 'all' OR r.is_bh
           )
           GROUP BY 1, 2, 3, 4

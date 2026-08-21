@@ -300,11 +300,13 @@ class FlagEngine:
         self.con.execute("""
             CREATE TEMP TABLE allowed_adj AS
             WITH scid_sa AS (
-              SELECT DISTINCT standardcomponentid AS scid, serviceareaid, statecode
+              -- ServiceAreaIds are NOT globally unique: 78 of 264 are reused
+              -- by multiple issuers. Always join issuer-scoped.
+              SELECT DISTINCT standardcomponentid AS scid, issuerid, serviceareaid, statecode
               FROM plan_attributes
             ),
             sa_counties AS (
-              SELECT serviceareaid, statecode,
+              SELECT issuerid, serviceareaid, statecode,
                      CASE WHEN upper(coalesce(coverentirestate,'')) = 'YES' THEN NULL
                           ELSE regexp_replace(county, '[^0-9]', '', 'g')::INTEGER
                      END AS county
@@ -320,7 +322,7 @@ class FlagEngine:
               SELECT d.scid_id, coalesce(sc.county, stc.county) AS county
               FROM scid_sa s
               JOIN scid_dim d ON d.scid = s.scid
-              JOIN sa_counties sc USING (serviceareaid)
+              JOIN sa_counties sc USING (issuerid, serviceareaid)
               LEFT JOIN state_counties stc
                 ON sc.county IS NULL AND stc.state = s.statecode
               WHERE coalesce(sc.county, stc.county) IS NOT NULL
