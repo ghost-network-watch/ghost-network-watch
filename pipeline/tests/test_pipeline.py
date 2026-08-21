@@ -167,3 +167,27 @@ def test_parse_provider_and_plan_blobs(tmp_path: Path):
     # resumability: second run parses nothing new
     stats2 = parse_snapshot(store, "t", tmp_path / "pq")
     assert stats2.blobs == 0 and stats2.skipped == 3
+
+
+def test_bh_classifier():
+    from gnw.bh import classify_specialty, classify_record, is_bh_taxonomy
+
+    assert classify_specialty("Psychiatry") == "bh"
+    assert classify_specialty("PSYCHIATRY") == "bh"
+    assert classify_specialty("Physical Therapy") == "not_bh"
+    assert classify_specialty("Psychologist|Psychology") == "bh"  # multi-value split
+    assert classify_specialty("Psychiatry &amp; Neurology, Psychiatry") in ("bh", "ambiguous")
+    assert classify_specialty(None) == "unknown"
+    # unseen string with BH-ish token must be ambiguous, never auto-included
+    assert classify_specialty("Zebra Mental Wellness Consultant") == "ambiguous"
+    # developMENTAL false positive guard
+    assert classify_specialty("Developmental Disabilities Aide") != "bh"
+
+    assert is_bh_taxonomy("2084P0800X")       # psychiatry
+    assert not is_bh_taxonomy("2084N0400X")   # neurology, 2084-family exclude
+    assert is_bh_taxonomy("101YM0800X")       # mental health counselor
+    assert not is_bh_taxonomy("225100000X")   # physical therapist
+
+    assert classify_record("Psychiatry", "2084P0800X") == "bh_taxonomy"
+    assert classify_record("Psychiatry", "225100000X") == "bh_string"
+    assert classify_record("Physical Therapy", None) == "not_bh"
