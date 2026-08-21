@@ -40,6 +40,7 @@ _HOST_OVERRIDES: dict[str, dict] = {
     "providersearch.medmutual.com": {"max_bytes": 4_000_000_000, "read_timeout": 600.0},
     "www.mclaren.org": {"max_bytes": 4_000_000_000, "read_timeout": 600.0},
     "tools.sanfordhealthplan.com": {"max_bytes": 4_000_000_000, "read_timeout": 600.0},
+    "legacy.providerlookuponline.com": {"max_bytes": 4_000_000_000, "read_timeout": 600.0},
     # ESB gateway answers 202 (async generation) on first request; a later
     # request returns 200. Crawler retries via resume on re-run.
     "esbgatewaypub.medica.com:443": {"rate_limit_seconds": 2.0},
