@@ -38,11 +38,12 @@ class FetchResult:
     was_gzip_payload: bool = False
     elapsed_s: float = 0.0
     error: str | None = None
+    accepted: bool = False  # body read fully under an accepted status
     tmp_path: Path | None = field(default=None, repr=False)
 
     @property
     def ok(self) -> bool:
-        return self.error is None and self.status == 200
+        return self.error is None and self.accepted
 
 
 class _HostGate:
@@ -119,7 +120,7 @@ class PoliteFetcher:
             result.content_type = resp.headers.get("Content-Type")
             result.last_modified = resp.headers.get("Last-Modified")
             result.etag = resp.headers.get("ETag")
-            if resp.status_code != 200:
+            if resp.status_code not in (200, *q.extra_ok_statuses):
                 return result
 
             hasher = hashlib.sha256()
@@ -162,6 +163,7 @@ class PoliteFetcher:
             result.sha256 = hasher.hexdigest()
             result.bytes_content = total
             result.tmp_path = tmp_path
+            result.accepted = True
             return result
 
 

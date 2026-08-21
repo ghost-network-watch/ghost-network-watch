@@ -97,8 +97,8 @@ class EvidenceStore:
             return [json.loads(l) for l in fh if l.strip()]
 
     def fetched_ok_urls(self, snapshot: str) -> set[str]:
+        # sha256 is only set when the body was fully read under an accepted
+        # status (200, or a quirk-listed one like Medica's 202-with-body).
         return {
-            r["url"]
-            for r in self.load_manifest(snapshot)
-            if r.get("sha256") and r.get("status") == 200
+            r["url"] for r in self.load_manifest(snapshot) if r.get("sha256")
         }

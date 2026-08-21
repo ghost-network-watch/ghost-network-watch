@@ -30,6 +30,9 @@ class HostQuirks:
     # Range-capped; Moda's providers-OR.json exceeds 300MB decompressed. Blobs
     # are stored re-gzipped, so a 1GB JSON costs ~100MB on disk.
     max_bytes: int = 1_000_000_000
+    # Statuses besides 200 whose bodies are accepted as content (Medica's
+    # gateway serves complete valid JSON with a 202).
+    extra_ok_statuses: tuple = ()
 
 
 _HOST_OVERRIDES: dict[str, dict] = {
@@ -41,9 +44,10 @@ _HOST_OVERRIDES: dict[str, dict] = {
     "www.mclaren.org": {"max_bytes": 4_000_000_000, "read_timeout": 600.0},
     "tools.sanfordhealthplan.com": {"max_bytes": 4_000_000_000, "read_timeout": 600.0},
     "legacy.providerlookuponline.com": {"max_bytes": 4_000_000_000, "read_timeout": 600.0},
-    # ESB gateway answers 202 (async generation) on first request; a later
-    # request returns 200. Crawler retries via resume on re-run.
-    "esbgatewaypub.medica.com:443": {"rate_limit_seconds": 2.0},
+    # ESB gateway serves complete, valid JSON bodies with HTTP 202 —
+    # persistently (3 attempts, 20s apart, identical 26KB body). Accept the
+    # body; the manifest keeps the true status as evidence.
+    "esbgatewaypub.medica.com:443": {"rate_limit_seconds": 2.0, "extra_ok_statuses": (202,)},
     # 302-redirects, ignores Range, exposes no freshness headers — nothing to
     # tune, listed so the behavior is documented where an operator will look.
     "fm.formularynavigator.com": {},

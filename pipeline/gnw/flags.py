@@ -121,7 +121,8 @@ class FlagEngine:
                  to_json(struct_pack(example_phone := any_value(phone),
                                      addr_rows := count(*))) AS observed
           FROM a
-          WHERE pd = '' OR length(pd) < 10 OR regexp_matches(pd, '^(.)\\1*$')
+          WHERE pd = '' OR length(pd) < 10
+             OR pd = repeat(substr(pd, 1, 1), length(pd))
           GROUP BY 1, 2
         ),
         zip_f AS (
@@ -489,7 +490,7 @@ class FlagEngine:
         )
         sql = f"""
         WITH ok_urls AS (
-          SELECT DISTINCT url FROM manifest WHERE sha256 IS NOT NULL AND status = 200
+          SELECT DISTINCT url FROM manifest WHERE sha256 IS NOT NULL
         ),
         idx AS (
           SELECT DISTINCT url, issuer_ids, states FROM manifest WHERE role = 'index'
