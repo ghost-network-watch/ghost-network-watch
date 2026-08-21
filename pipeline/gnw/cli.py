@@ -70,6 +70,16 @@ def cmd_parse(args) -> None:
     )
 
 
+def cmd_refs(args) -> None:
+    from .reference import BUILDERS, ReferenceStore
+
+    store = ReferenceStore(DATA_ROOT / "reference")
+    names = list(BUILDERS) if args.source == "all" else [args.source]
+    for name in names:
+        print(f"building reference: {name}")
+        BUILDERS[name](store)
+
+
 def cmd_status(args) -> None:
     store = EvidenceStore(DATA_ROOT)
     rows = store.load_manifest(args.snapshot)
@@ -106,6 +116,14 @@ def main() -> None:
     p.add_argument("--snapshot", required=True)
     p.add_argument("--limit", type=int, help="max blobs to parse this run")
     p.set_defaults(func=cmd_parse)
+
+    p = sub.add_parser("refs", help="download + convert reference datasets")
+    p.add_argument(
+        "--source",
+        default="all",
+        choices=["all", "nppes", "pufs", "landscape", "nucc", "zcta"],
+    )
+    p.set_defaults(func=cmd_refs)
 
     p = sub.add_parser("status", help="summarize a snapshot manifest")
     p.add_argument("--snapshot", required=True)
