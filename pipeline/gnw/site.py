@@ -570,12 +570,81 @@ def _write_exports(con, out_data: Path, snapshot: str) -> list[dict]:
     return exports
 
 
+def _base_ctx(snapshot: str, css_file: str) -> dict:
+    year, month = int(snapshot[:4]), int(snapshot[5:7])
+    ny, nm = (year + 1, 1) if month == 12 else (year, month + 1)
+    names = ["", "January", "February", "March", "April", "May", "June", "July",
+             "August", "September", "October", "November", "December"]
+    return {
+        "snapshot": snapshot,
+        "site_name": "Ghost Network Watch",
+        "contact": "contact@ghostnetworkwatch.org",
+        "css_file": css_file,
+        "snapshot_label": f"{names[month]} {year}",
+        "next_update": f"early {names[nm]} {ny}",
+        "repo_url": "https://github.com/ghost-network-watch/ghost-network-watch",
+    }
+
+
+def _hash_css(repo_root: Path, out_dir: Path) -> str:
+    import hashlib
+
+    css_src = (repo_root / "site" / "assets" / "brand.css").read_bytes()
+    css_file = f"brand.{hashlib.sha256(css_src).hexdigest()[:10]}.css"
+    (out_dir / css_file).write_bytes(css_src)
+    for old in out_dir.glob("brand.*.css"):
+        if old.name != css_file:
+            old.unlink()
+    return css_file
+
+
+def _build_prelaunch(con, snapshot, repo_root, out_dir, wa_kit, env) -> Path:
+    """Pre-launch site: only pages that name no insurer. Publishing the
+    methodology before any finding is deliberate; findings wait for the
+    issuer notification window."""
+    css_file = _hash_css(repo_root, out_dir)
+    base = _base_ctx(snapshot, css_file)
+    thresholds = _threshold_sensitivity(con)
+
+    def render(template: str, dest: Path, **ctx) -> None:
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(env.get_template(template).render(**base, **ctx))
+
+    render("index_prelaunch.html", out_dir / "index.html", depth="")
+    render("methodology.html", out_dir / "methodology" / "index.html",
+           depth="../", nav="methodology", thresholds=thresholds)
+    render("patients.html", out_dir / "patients" / "index.html", depth="../", nav="patients")
+    render("about.html", out_dir / "about" / "index.html", depth="../", nav="about")
+    render("404.html", out_dir / "404.html", depth="/")
+
+    base_url = "https://ghostnetworkwatch.org"
+    urls = ["", "patients/", "methodology/", "about/"]
+    (out_dir / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(f"<url><loc>{base_url}/{u}</loc></url>" for u in urls)
+        + "\n</urlset>\n"
+    )
+    (out_dir / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\nSitemap: {base_url}/sitemap.xml\n"
+    )
+    shutil.copytree(
+        repo_root / "site" / "assets" / "fonts", out_dir / "fonts", dirs_exist_ok=True
+    )
+    shutil.copy(repo_root / "site" / "assets" / "sort.js", out_dir / "sort.js")
+    if not (out_dir / "webawesome").exists():
+        shutil.copytree(wa_kit, out_dir / "webawesome")
+    log.info("prelaunch site: 4 pages -> %s", out_dir)
+    return out_dir
+
+
 def build_site(
     data_root: Path,
     snapshot: str,
     repo_root: Path,
     out_dir: Path,
     wa_kit: Path,
+    prelaunch: bool = False,
 ) -> Path:
     con = _con(data_root, snapshot)
     env = Environment(
@@ -585,6 +654,9 @@ def build_site(
         lstrip_blocks=True,
     )
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    if prelaunch:
+        return _build_prelaunch(con, snapshot, repo_root, out_dir, wa_kit, env)
 
     national = _national(con)
     issuer_names = _issuer_names(con)
@@ -679,28 +751,10 @@ def build_site(
     """).fetchall()
 
     # Content-hashed stylesheet name: rebuilds bust browser and CDN caches.
-    import hashlib
-
-    css_src = (repo_root / "site" / "assets" / "brand.css").read_bytes()
-    css_file = f"brand.{hashlib.sha256(css_src).hexdigest()[:10]}.css"
-    (out_dir / css_file).write_bytes(css_src)
-    for old in out_dir.glob("brand.*.css"):
-        if old.name != css_file:
-            old.unlink()
-
-    year, month = int(snapshot[:4]), int(snapshot[5:7])
-    ny, nm = (year + 1, 1) if month == 12 else (year, month + 1)
+    css_file = _hash_css(repo_root, out_dir)
+    base_ctx = _base_ctx(snapshot, css_file)
     month_names = ["", "January", "February", "March", "April", "May", "June", "July",
                    "August", "September", "October", "November", "December"]
-    base_ctx = {
-        "snapshot": snapshot,
-        "site_name": "Ghost Network Watch",
-        "contact": "contact@ghostnetworkwatch.org",
-        "css_file": css_file,
-        "snapshot_label": f"{month_names[month]} {year}",
-        "next_update": f"early {month_names[nm]} {ny}",
-        "repo_url": "https://github.com/ghost-network-watch/ghost-network-watch",
-    }
 
     def render(template: str, dest: Path, **ctx) -> None:
         dest.parent.mkdir(parents=True, exist_ok=True)

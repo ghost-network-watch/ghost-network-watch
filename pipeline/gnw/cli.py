@@ -102,6 +102,7 @@ def cmd_site(args) -> None:
         repo_root=REPO_ROOT,
         out_dir=Path(args.out) if args.out else REPO_ROOT / "site" / "dist",
         wa_kit=Path(args.wa_kit).expanduser(),
+        prelaunch=args.prelaunch,
     )
 
 
@@ -197,6 +198,8 @@ def main() -> None:
     p.add_argument("--out", help="output dir (default site/dist)")
     p.add_argument("--wa-kit", default="~/soorena.io/webawesome",
                    help="path to a Web Awesome kit to copy (not committed)")
+    p.add_argument("--prelaunch", action="store_true",
+                   help="build only pages that name no insurer")
     p.set_defaults(func=cmd_site)
 
     p = sub.add_parser("notify", help="generate issuer pre-notification bundles (no sending)")

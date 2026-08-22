@@ -44,7 +44,7 @@ $PY -m gnw.cli score --snapshot "$SNAPSHOT"
 echo "--- diff vs previous snapshot"
 $PY -m gnw.cli diff --snapshot "$SNAPSHOT"
 echo "--- site"
-$PY -m gnw.cli site --snapshot "$SNAPSHOT" ${GNW_WA_KIT:+--wa-kit "$GNW_WA_KIT"}
+$PY -m gnw.cli site --snapshot "$SNAPSHOT" ${GNW_WA_KIT:+--wa-kit "$GNW_WA_KIT"} ${GNW_PRELAUNCH:+--prelaunch}
 echo "--- notification bundles (generated, not sent)"
 $PY -m gnw.cli notify --snapshot "$SNAPSHOT" --publish-date "$PUBLISH_DATE"
 

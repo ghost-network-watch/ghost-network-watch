@@ -135,6 +135,9 @@ class GnwPipelineStack(Stack):
 
         alert_email = self.node.try_get_context("alertEmail") or "contact@ghostnetworkwatch.org"
         schedule_enabled = (self.node.try_get_context("scheduleEnabled") or "true") == "true"
+        # Until launch day the scheduled run builds only the prelaunch site,
+        # so findings cannot publish before insurer notification completes.
+        prelaunch = (self.node.try_get_context("prelaunch") or "true") == "true"
 
         data_bucket = s3.Bucket(
             self, "DataBucket",
@@ -198,6 +201,7 @@ class GnwPipelineStack(Stack):
                 "GNW_SITE_BUCKET": site_bucket.bucket_name,
                 "GNW_DISTRIBUTION_ID": distribution.distribution_id,
                 "GNW_PYTHON": "python3",
+                **({"GNW_PRELAUNCH": "1"} if prelaunch else {}),
             },
         )
         data_bucket.grant_read_write(task_def.task_role)
