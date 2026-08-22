@@ -72,7 +72,7 @@ aws cloudfront create-invalidation --distribution-id DISTRIBUTION_ID --paths "/*
 
 ```bash
 cd ~/ghost-network-watch/infra
-npx cdk deploy GnwPipelineStack -c alertEmail=soorena@pm.me
+npx cdk deploy GnwPipelineStack -c alertEmail=contact@ghostnetworkwatch.org
 ```
 
 1. Docker builds the image on first deploy; takes a few minutes.

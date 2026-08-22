@@ -831,6 +831,28 @@ def build_site(
     exports = _write_exports(con, out_dir / "data" / "files", snapshot)
     render("data.html", out_dir / "data" / "index.html", exports=exports, depth="../", nav="data")
 
+    # Sitemap + robots: 6,200 pages that should rank for plan-name searches.
+    base_url = "https://ghostnetworkwatch.org"
+    lastmod = f"{snapshot}-15"
+    urls = ["", "changes/", "patients/", "methodology/", "data/", "about/"]
+    urls += [f"states/{code}/" for code in states]
+    urls += [f"counties/{fips}/" for fips in counties]
+    urls += [f"plans/{scid}/" for scid in plans]
+    urls += [f"issuers/{iid}/" for iid in issuers]
+    urls += [f"issuers/{iid}/" for iid in unauditable if iid not in issuers]
+    (out_dir / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(
+            f"<url><loc>{base_url}/{u}</loc><lastmod>{lastmod}</lastmod></url>"
+            for u in urls
+        )
+        + "\n</urlset>\n"
+    )
+    (out_dir / "robots.txt").write_text(
+        f"User-agent: *\nAllow: /\nSitemap: {base_url}/sitemap.xml\n"
+    )
+
     shutil.copytree(
         repo_root / "site" / "assets" / "fonts", out_dir / "fonts", dirs_exist_ok=True
     )

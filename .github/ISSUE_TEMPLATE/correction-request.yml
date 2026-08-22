@@ -1,0 +1,46 @@
+name: Correction request
+description: Dispute a finding or report a fix. Responses are published verbatim alongside the findings they dispute.
+title: "[Correction] "
+labels: [correction]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to dispute a specific finding or to report that the underlying
+        data has been fixed. Insurers, providers, and members of the public may all
+        file corrections. Filed corrections and our responses are public.
+  - type: input
+    id: issuer
+    attributes:
+      label: Insurer (HIOS issuer ID or name)
+      placeholder: "29698 or Priority Health"
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: What finding are you disputing?
+      description: A plan ID, a page URL, or a row from an evidence file (metric plus NPI is ideal).
+      placeholder: "M3_PLACEHOLDER_VALUE, NPI 1234567890, plan 29698MI0541200"
+    validations:
+      required: true
+  - type: textarea
+    id: dispute
+    attributes:
+      label: What is wrong, or what was fixed?
+      description: State what the correct information is and how you know.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Links or documents. If the published file was corrected, the next monthly crawl will also verify it.
+  - type: checkboxes
+    id: role
+    attributes:
+      label: You are
+      options:
+        - label: The insurer or acting for it
+        - label: The listed provider or their office
+        - label: A member of the public

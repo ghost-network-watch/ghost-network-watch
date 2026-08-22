@@ -1,55 +1,90 @@
 # Ghost Network Watch
 
-A continuous public integrity audit of health insurers' federally mandated machine-readable
-provider directories, focused on behavioral / mental health — per-plan, per-county integrity
-scores with raw evidence attached to every flag.
+**[ghostnetworkwatch.org](https://ghostnetworkwatch.org)** — a continuous public
+integrity audit of the provider directories that US health insurers are legally
+required to publish, with mental health first.
 
-**The problem.** People choose insurance plans based on provider directories that are often
-fiction: unreachable numbers, retired or relocated providers, "accepting patients" flags nobody
-verified. Secret-shopper studies (Senate Finance 2023; NY AG) found the large majority of
-listed mental-health providers can't actually be seen. CMS's own reviews of these files
-(PY2017–2021) found 29–47% fully accurate — then named no one, fined no one, and stopped.
+Every insurer selling plans on HealthCare.gov must publish its full provider
+directory as machine-readable JSON and update it at least monthly
+(45 CFR 156.230(b)). This project downloads every one of those files each
+month, archives them with cryptographic fingerprints, checks every entry for
+problems a patient would hit, and publishes a Directory Integrity Score for
+every plan in every county, with downloadable evidence behind every claim.
 
-**The wedge.** Every marketplace insurer must publish its entire provider directory as
-machine-readable JSON at a public URL (45 CFR 156.230(b), updated "no less than monthly"), and
-CMS publishes the index of those URLs. The proof of directory fiction sits in the insurers' own
-mandated files — and the only companies equipped to audit them at scale are paid by insurers to
-clean the data privately, so no one publishes the audit. This project does.
+From the August 2026 snapshot: 15.6 million provider records audited across
+30 states; 31% of plan-county pairs list fewer than 10 mental health
+providers; 8,159 listed providers carry federally retired identifiers; one
+insurer's file has placeholder phone numbers on half its entries while
+marking 90% of records as accepting new patients.
 
-**Positioning in one line:** CMS will publish directory-accuracy scores for Medicare Advantage
-starting 2029 (REAL Health Providers Act, Feb 2026). Marketplace enrollees shopping this
-November get nothing — so we built it.
-
-**What we never claim:** that a provider "doesn't exist" or an insurer is "lying." Every flag
-states what the payer's own published file shows, or where it disagrees with another public
-record (NPPES), with the snapshot hash, fetch headers, and verbatim record attached. Issuers
-receive the evidence by email (the contact CMS's own PUF lists for them) before publication,
-with a standing correction channel.
-
-## Status
-
-- **2026-08-21 — Scoping complete.** All 108 index URLs in the PY2026 PUF probed; 162 provider
-  files (~146k records) sampled; anomalies adversarially verified; scoring rubric v0, BH filter
-  v0, NPPES join, and plan/county attribution designed and verified on live data.
-  See `scoping/FINDINGS.md`. First exhibits already in hand (a directory where 85% of records
-  have placeholder phone `999999999`; telehealth-platform records listed at 352 addresses;
-  files abandoned for 2+ years).
-- **Next:** MVP build per `ARCHITECTURE.md`, targeting publication before ACA open enrollment
-  (2026-11-01).
-
-## Layout
+## What this repository contains
 
 ```
-ARCHITECTURE.md        MVP design + timeline
-scoping/
-  FINDINGS.md          what the data actually looks like (start here)
-  data/                PUF, probe results, deep-dive findings JSON
-  probes/              per-index probe reports (108)
-  evidence/            verified exhibits, rubric, filters, citations
-  *.py                 probe/sampler scripts (seeds of the real crawler)
+pipeline/       The whole engine, one Python package (gnw)
+  gnw/crawl     polite fetcher + content-addressed evidence store
+  gnw/parse     streaming JSON -> Parquet (files reach 1GB+)
+  gnw/reference NPPES registry, NUCC taxonomy, CMS plan/service-area files
+  gnw/flags     the ten integrity checks -> evidence rows
+  gnw/scoring   evidence rows -> plan-county scores and grades
+  gnw/diff      month-over-month resolutions and grade movement
+  gnw/site      static site generator (the public website)
+  gnw/notify    per-insurer pre-publication notification bundles
+site/           Templates and assets for ghostnetworkwatch.org
+scoping/        The August 2026 feasibility study: findings, evidence,
+                the scoring rubric, verification artifacts
+infra/          AWS CDK stacks for the hosted monthly run (optional)
+ops/            run_monthly.sh: the whole month in one command
 ```
 
-## Non-goals (MVP)
+## Reproduce everything
 
-Dental plans, state-based marketplaces, Medicare Advantage (2027 candidate), license-board
-scraping, and any consumer plan-recommendation feature.
+Every input is public. One command per stage:
+
+```bash
+python -m venv .venv && .venv/bin/pip install -e pipeline/ \
+    requests ijson pyarrow duckdb jinja2 openpyxl
+
+SNAP=$(date -u +%Y-%m)
+python -m gnw.cli crawl    --snapshot $SNAP   # fetch every mandated file (~90GB content)
+python -m gnw.cli parse    --snapshot $SNAP   # -> Parquet tables
+python -m gnw.cli refs                        # NPPES, NUCC, CMS PUFs, crosswalks
+python -m gnw.cli compact  --snapshot $SNAP   # integer join tables
+python -m gnw.cli flags    --snapshot $SNAP   # the ten checks -> evidence rows
+python -m gnw.cli score    --snapshot $SNAP   # plan-county scores
+python -m gnw.cli diff     --snapshot $SNAP   # resolutions vs previous month
+python -m gnw.cli site     --snapshot $SNAP   # build the website
+```
+
+Or all of it: `ops/run_monthly.sh`. Expect a few hours, ~100GB of transfer,
+and ~150GB of scratch disk. Details in ARCHITECTURE.md; every scoring rule
+in the site's methodology page and `scoping/evidence/scoring_rubric_v0.md`.
+
+## Method in one paragraph
+
+Flags never assert why data is wrong, only what a dated file shows. Every
+flag carries the SHA-256 of the archived source file, the record's position
+in it, and the observed values, so every published claim is independently
+checkable. Internal-consistency checks carry the scores; disagreements with
+the federal registry are capped, because the registry lags too. Insurers
+receive their complete flag export at least 14 days before publication, and
+disputes are published verbatim.
+
+## Corrections
+
+Open a [correction request](../../issues/new?template=correction-request.yml)
+or email contact@ghostnetworkwatch.org. Findings that stop reproducing in a
+later monthly crawl are marked resolved with the date; history is retained.
+
+## Citing and licensing
+
+Cite as: Ghost Network Watch, Directory Integrity Scores, [month] snapshot,
+ghostnetworkwatch.org.
+
+- Code: Apache License 2.0 (see LICENSE)
+- Scores and evidence exports: CC0 1.0 (public domain dedication)
+- Site text and charts: CC BY 4.0, credit "Ghost Network Watch"
+- Source text quoted inside evidence rows remains the insurers' published
+  data, reproduced for accountability purposes with provenance
+
+Built and operated by Soorena Sasani as an independent public-interest
+project. Not affiliated with CMS, any insurer, or any vendor.

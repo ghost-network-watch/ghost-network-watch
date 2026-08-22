@@ -422,6 +422,24 @@ a.tile:focus-visible { outline: var(--wa-focus-ring); outline-offset: 2px; }
   a.tile, a.tile:hover { transition: none; transform: none; }
 }
 
+/* Print: the complaint workflow tells people to save pages as PDFs.
+   Keep grades and evidence colors; drop navigation and interactive parts. */
+@media print {
+  .site-nav, .zipsearch, .cta-row, .skip { display: none; }
+  body { background: #ffffff; }
+  main { padding-block: var(--wa-space-m); }
+  .site-header { border-bottom: 2px solid #000000; }
+  a { color: inherit; text-decoration: none; }
+  .grade, .dist > div, .scorebar .fill, .tile, .receipt .hot, .stale-banner {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  table { font-size: 9pt; }
+  tr { break-inside: avoid; }
+  blockquote.note { border: 1px solid #000000; }
+  .site-footer { font-size: 8pt; }
+}
+
 @media (max-width: 768px) {
   .stats { grid-template-columns: repeat(2, 1fr); }
   .site-nav { margin-left: 0; }
