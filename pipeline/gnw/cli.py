@@ -9,6 +9,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 from collections import Counter
 from pathlib import Path
@@ -122,6 +123,13 @@ def cmd_callsheet(args) -> None:
     )
 
 
+def cmd_diff(args) -> None:
+    from .diff import build_diff
+
+    summary = build_diff(DATA_ROOT, snapshot=args.snapshot, previous=args.previous)
+    print(json.dumps(summary, indent=1))
+
+
 def cmd_flags(args) -> None:
     from .flags import FlagEngine
 
@@ -202,6 +210,11 @@ def main() -> None:
     p.add_argument("--cells", type=int, default=5, help="cells per grade (A and F)")
     p.add_argument("--per-cell", type=int, default=10, help="listings sampled per cell")
     p.set_defaults(func=cmd_callsheet)
+
+    p = sub.add_parser("diff", help="diff flags and grades against the previous snapshot")
+    p.add_argument("--snapshot", required=True)
+    p.add_argument("--previous", help="default: latest earlier snapshot with flags")
+    p.set_defaults(func=cmd_diff)
 
     p = sub.add_parser("flags", help="run rubric metrics -> evidence rows")
     p.add_argument("--snapshot", required=True)

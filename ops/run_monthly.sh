@@ -41,6 +41,8 @@ echo "--- flags"
 $PY -m gnw.cli flags --snapshot "$SNAPSHOT" --fetch-date "$FETCH_DATE"
 echo "--- scores"
 $PY -m gnw.cli score --snapshot "$SNAPSHOT"
+echo "--- diff vs previous snapshot"
+$PY -m gnw.cli diff --snapshot "$SNAPSHOT"
 echo "--- site"
 $PY -m gnw.cli site --snapshot "$SNAPSHOT" ${GNW_WA_KIT:+--wa-kit "$GNW_WA_KIT"}
 echo "--- notification bundles (generated, not sent)"
@@ -50,7 +52,7 @@ if [ -n "${GNW_DATA_BUCKET:-}" ]; then
   echo "--- sync results up to s3://$GNW_DATA_BUCKET"
   aws s3 sync data/blobs "s3://$GNW_DATA_BUCKET/blobs" --only-show-errors
   aws s3 sync data/reference "s3://$GNW_DATA_BUCKET/reference" --only-show-errors
-  for prefix in snapshots scores flags notify; do
+  for prefix in snapshots scores flags notify diff; do
     aws s3 sync "data/$prefix/$SNAPSHOT" "s3://$GNW_DATA_BUCKET/$prefix/$SNAPSHOT" --only-show-errors || true
   done
   aws s3 sync "data/snapshots/$SNAPSHOT" "s3://$GNW_DATA_BUCKET/snapshots/$SNAPSHOT" --only-show-errors

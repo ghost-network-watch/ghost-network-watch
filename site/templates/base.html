@@ -24,6 +24,7 @@
       <a class="wordmark" href="{{ depth }}index.html">Ghost Network Watch</a>
       <span class="asof">data as of {{ snapshot }}</span>
       <nav class="site-nav">
+        <a href="{{ depth }}changes/index.html"{% if nav == 'changes' %} aria-current="page"{% endif %}>Changes</a>
         <a href="{{ depth }}patients/index.html"{% if nav == 'patients' %} aria-current="page"{% endif %}>For patients</a>
         <a href="{{ depth }}methodology/index.html"{% if nav == 'methodology' %} aria-current="page"{% endif %}>Methodology</a>
         <a href="{{ depth }}data/index.html"{% if nav == 'data' %} aria-current="page"{% endif %}>Data</a>

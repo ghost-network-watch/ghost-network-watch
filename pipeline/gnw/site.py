@@ -778,6 +778,50 @@ def build_site(
             "plan.html", out_dir / "plans" / p["scid"] / "index.html",
             plan=p, depth="../../",
         )
+    # Month-over-month changes page + RSS feed from the diff outputs.
+    diff_dir = data_root / "diff" / snapshot
+    diff_summary = {"first_snapshot": True}
+    if (diff_dir / "summary.json").exists():
+        diff_summary = json.loads((diff_dir / "summary.json").read_text())
+    resolvers = [
+        {**r, "name": issuer_names.get(r["issuer_id"], {}).get("name", f"Issuer {r['issuer_id']}")}
+        for r in diff_summary.get("top_resolvers", [])
+    ]
+    if (diff_dir / "resolved_flags.csv.gz").exists():
+        (out_dir / "data" / "files").mkdir(parents=True, exist_ok=True)
+        shutil.copy(diff_dir / "resolved_flags.csv.gz",
+                    out_dir / "data" / "files" / "resolved_flags.csv.gz")
+    render("changes.html", out_dir / "changes" / "index.html", depth="../",
+           nav="changes", diff=diff_summary, resolvers=resolvers)
+
+    items = []
+    for d in sorted((data_root / "diff").glob("*/summary.json"), reverse=True):
+        s = json.loads(d.read_text())
+        snap = s["snapshot"]
+        label = f"{month_names[int(snap[5:7])]} {snap[:4]}"
+        if s.get("first_snapshot"):
+            desc = f"First snapshot: baseline published for {label}."
+        else:
+            desc = (f"{s['resolved']:,} findings resolved, {s['new']:,} new, "
+                    f"{s['grades_improved']:,} grades improved and "
+                    f"{s['grades_declined']:,} declined vs {s['previous']}.")
+        items.append(
+            f"<item><title>Ghost Network Watch: {label} snapshot</title>"
+            f"<link>https://ghostnetworkwatch.org/changes/</link>"
+            f"<guid isPermaLink=\"false\">gnw-{snap}</guid>"
+            f"<pubDate>15 {month_names[int(snap[5:7])][:3]} {snap[:4]} 12:00:00 GMT</pubDate>"
+            f"<description>{desc}</description></item>"
+        )
+    (out_dir / "changes").mkdir(parents=True, exist_ok=True)
+    (out_dir / "changes" / "feed.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0"><channel>'
+        "<title>Ghost Network Watch updates</title>"
+        "<link>https://ghostnetworkwatch.org/changes/</link>"
+        "<description>Monthly directory integrity updates for federal marketplace plans"
+        "</description>" + "".join(items) + "</channel></rss>"
+    )
+
     render("methodology.html", out_dir / "methodology" / "index.html", depth="../",
            nav="methodology", thresholds=thresholds)
     render("patients.html", out_dir / "patients" / "index.html", depth="../", nav="patients")

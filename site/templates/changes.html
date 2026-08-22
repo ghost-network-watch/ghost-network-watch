@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}What changed · {{ site_name }}{% endblock %}
+{% block description %}Month over month: which directory problems were fixed, which appeared, and which plans' grades moved.{% endblock %}
+{% block content %}
+<section>
+  <h1>What changed</h1>
+  {% if diff.first_snapshot %}
+  <p class="lede">{{ snapshot_label }} is the first snapshot. Change tracking starts with
+  the second monthly crawl.</p>
+  <p>From next month on, this page will report which findings stopped reproducing (marked
+  resolved, with the date), which appeared for the first time, and which plans' grades
+  moved. Findings are tracked by insurer, finding type, and provider identifier, so a
+  fix counts as a fix even after the insurer regenerates its file.</p>
+  <p>Subscribe to the <a href="feed.xml">update feed</a> to get each month's summary.</p>
+  {% else %}
+  <p class="lede">{{ snapshot_label }} compared with {{ diff.previous }}. A resolved
+  finding is one the insurer's newly published file no longer reproduces.</p>
+
+  <div class="stats">
+    <div class="stat"><div class="num">{{ "{:,}".format(diff.resolved) }}</div>
+      <div class="lbl">findings resolved since {{ diff.previous }}</div></div>
+    <div class="stat"><div class="num">{{ "{:,}".format(diff.new) }}</div>
+      <div class="lbl">new findings this month</div></div>
+    <div class="stat"><div class="num">{{ "{:,}".format(diff.persisting) }}</div>
+      <div class="lbl">findings persisting</div></div>
+    <div class="stat"><div class="num">{{ "{:,}".format(diff.grades_improved) }} up,
+      {{ "{:,}".format(diff.grades_declined) }} down</div>
+      <div class="lbl">mental health grades that moved</div></div>
+  </div>
+
+  {% if resolvers %}
+  <h2 style="margin-top: var(--wa-space-2xl)">Most findings resolved</h2>
+  <p>Insurers whose newly published files stopped reproducing the most findings.
+  Resolution means the problem no longer appears in the file. It does not by itself
+  say why.</p>
+  <table>
+    <thead><tr><th>Insurer</th><th class="num">Findings resolved</th></tr></thead>
+    <tbody>
+    {% for r in resolvers %}
+      <tr><td><a href="../issuers/{{ r.issuer_id }}/index.html">{{ r.name }}</a></td>
+      <td class="num">{{ "{:,}".format(r.resolved) }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+
+  <p class="note" style="margin-top: var(--wa-space-l)">The full resolved list, one row
+  per finding with insurer, finding type, provider identifier, and resolution date, is in
+  <a href="../data/files/resolved_flags.csv.gz">resolved_flags.csv.gz</a>. Subscribe to
+  the <a href="feed.xml">update feed</a> for monthly summaries.</p>
+  {% endif %}
+</section>
+{% endblock %}
