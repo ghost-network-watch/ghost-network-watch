@@ -1,0 +1,12 @@
+# Docker build context: only the pipeline code and static inputs belong.
+data/
+site/dist/
+.venv/
+infra/
+.git/
+.github/
+scoping/probes/
+scoping/evidence/address-inflation/
+**/__pycache__/
+*.png
+*.log
