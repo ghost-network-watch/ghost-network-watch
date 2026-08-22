@@ -31,6 +31,19 @@
       </nav>
     </div>
   </header>
+  <div id="stale-banner" class="stale-banner" hidden>
+    <div class="wrap">This page shows the {{ snapshot_label }} snapshot, which is now more
+    than 60 days old. A newer snapshot should exist; if this notice persists, the monthly
+    update is late and <a href="mailto:{{ contact }}">we want to know</a>.</div>
+  </div>
+  <script>
+    (function () {
+      var snap = new Date("{{ snapshot }}-01T00:00:00Z");
+      if ((Date.now() - snap.getTime()) / 86400000 > 60) {
+        document.getElementById("stale-banner").hidden = false;
+      }
+    })();
+  </script>
   <main id="main">
     <div class="wrap">
       {% block content %}{% endblock %}
@@ -48,7 +61,7 @@
       your browser and are never sent to any server.</p>
       <p>Corrections and questions: <a href="mailto:{{ contact }}">{{ contact }}</a> or the
       <a href="{{ repo_url }}/issues">public correction tracker</a>. Insurers receive their
-      complete flag exports before publication and responses are published verbatim.</p>
+      complete flag exports before publication, and responses will be published verbatim.</p>
     </div>
   </footer>
   <script src="{{ depth }}sort.js" defer></script>

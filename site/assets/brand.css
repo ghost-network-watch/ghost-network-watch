@@ -109,6 +109,16 @@ body {
   padding: 0 var(--wa-space-s);
 }
 
+/* Stale-snapshot banner (shown by script when data is over 60 days old) */
+.stale-banner {
+  background: var(--wa-color-warning-fill-quiet);
+  color: var(--wa-color-warning-on-quiet);
+  border-bottom: 1px solid var(--wa-color-surface-border);
+  padding-block: var(--wa-space-s);
+  font-size: var(--wa-font-size-s);
+}
+.stale-banner a { color: inherit; }
+
 /* Sections and headings */
 main { padding-block: var(--wa-space-2xl); }
 section + section { margin-top: var(--wa-space-2xl); }
@@ -165,10 +175,10 @@ p { max-width: 65ch; }
 }
 .stat { border-top: 1px solid var(--wa-color-surface-border); padding-top: var(--wa-space-s); }
 .stat .num {
+  font-family: var(--wa-font-family-code);
   font-size: var(--wa-font-size-2xl);
   font-weight: var(--wa-font-weight-bold);
   letter-spacing: -0.02em;
-  font-variant-numeric: tabular-nums;
 }
 .stat .lbl { color: var(--wa-color-text-quiet); font-size: var(--wa-font-size-s); max-width: 22ch; }
 
@@ -227,7 +237,11 @@ td {
   padding: var(--wa-space-xs) var(--wa-space-s) var(--wa-space-xs) 0;
   vertical-align: top;
 }
-td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+td.num, th.num { text-align: right; }
+td.num {
+  font-family: var(--wa-font-family-code);
+  font-size: var(--wa-font-size-xs);
+}
 tr:hover td { background: var(--wa-color-surface-raised); }
 a { color: var(--wa-color-brand-on-quiet); }
 
