@@ -39,12 +39,16 @@ OUTCOMES = [
 INSTRUCTIONS = [
     ("Ghost Network Watch phone study, the short version", True),
     ("", False),
-    ("One row is one call. Rows that share a phone number sit together;", False),
-    ("make one call and ask about each provider on it.", False),
+    ("One row is one call, and no phone number appears twice.", False),
     ("", False),
-    ("Say: \"I'm looking for a mental health appointment with [Ask for].", False),
-    ("Do they practice here, are they in network with [Say this plan],", False),
-    ("and are they taking new patients?\"", False),
+    ("Say: \"I'm shopping for a marketplace plan and I'd like to see", False),
+    ("[Ask for]. Which insurers are they in network with, and are they", False),
+    ("taking new patients?\"", False),
+    ("", False),
+    ("Let the office name its own carriers instead of reading plan names at", False),
+    ("them. Put what they say in 'Carriers they named', then check whether", False),
+    ("'Carrier to check' is in that list. Plan variants inside one carrier", False),
+    ("share a network, so the carrier-level answer is the answer.", False),
     ("", False),
     ("Then fill three cells: Called on, Outcome (pick from the dropdown,", False),
     ("the furthest you got down this ladder), and Notes if anything was odd.", False),
@@ -97,9 +101,12 @@ def main() -> None:
             ws.cell(row=ws.max_row, column=1).font = Font(bold=True)
 
     calls = wb.create_sheet("Calls")
-    header = ["#", "Ask for", "Say this plan", "City, ST", "Phone",
-              "Called on", "Outcome", "Appt in days", "Notes"]
-    widths = [5, 26, 34, 20, 16, 11, 24, 12, 46]
+    # "Carrier to check" is the insurer, not the plan variant: plan variants
+    # inside one carrier share a network, and a front desk answers at the
+    # carrier level anyway.
+    header = ["#", "Ask for", "Carrier to check", "City, ST", "Phone",
+              "Called on", "Outcome", "Carriers they named", "Appt in days", "Notes"]
+    widths = [5, 26, 30, 20, 16, 11, 24, 26, 12, 40]
     calls.append(header)
     for i, w in enumerate(widths, 1):
         calls.column_dimensions[get_column_letter(i)].width = w
@@ -119,11 +126,12 @@ def main() -> None:
         calls.append([
             int(r["study_id"]),
             r["provider_name"].title(),
-            r["plan"],
+            r["issuer_name"],
             f'{r["city"].title()}, {r["addr_state"]}',
             fmt_phone(r["phone"]),
             None,
             OUTCOMES[0] if dead else None,
+            None,
             None,
             "nothing to dial" if dead else None,
         ])
@@ -132,7 +140,7 @@ def main() -> None:
         if not dead:
             for col in (6, 7):
                 calls.cell(row=n, column=col).fill = fill_todo
-        calls.cell(row=n, column=9).alignment = Alignment(wrap_text=True)
+        calls.cell(row=n, column=10).alignment = Alignment(wrap_text=True)
 
     ref = wb.create_sheet("Reference (analysis only)")
     with src.open() as f:
