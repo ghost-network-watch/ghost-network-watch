@@ -5,8 +5,9 @@ integrity audit of the provider directories that US health insurers are legally
 required to publish, with mental health first.
 
 Every insurer selling plans on HealthCare.gov must publish its full provider
-directory as machine-readable JSON and update it at least monthly
-(45 CFR 156.230(b)). This project downloads every one of those files each
+directory as machine-readable JSON (45 CFR 156.230(c), which incorporates the
+directory contents required by 156.230(b)) and update it at least monthly (CMS
+Letter to Issuers). This project downloads every one of those files each
 month, archives them with cryptographic fingerprints, checks every entry for
 problems a patient would hit, and publishes a Directory Integrity Score for
 every plan in every county, with downloadable evidence behind every claim.

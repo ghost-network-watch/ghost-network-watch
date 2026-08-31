@@ -41,8 +41,8 @@ Hello,
 
 You are listed in CMS's Machine-Readable URL PUF as the technical contact for
 HIOS issuer {issuer_id}. Ghost Network Watch is an independent public-interest
-project that audits the machine-readable provider directory files marketplace
-issuers publish under 45 CFR 156.230(b).
+project that audits the machine-readable provider directory files that issuers
+in the Federally-facilitated Exchange publish under 45 CFR 156.230(c).
 
 We fetched your issuer's published directory file(s) during the {snapshot}
 crawl and computed the findings attached to this message. We plan to publish
