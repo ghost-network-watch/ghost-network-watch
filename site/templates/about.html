@@ -10,34 +10,35 @@
 
   <h2>Why</h2>
   <p>Secret-shopper studies have repeatedly found that most listed mental-health providers
-  in insurance directories cannot actually be seen: numbers do not answer, clinicians left
-  the network years ago, panels are closed. Federal law already requires every marketplace
+  in insurance directories can't actually be seen. Phones go unanswered, clinicians turn
+  out to have left the network years ago, panels are closed. Federal law already requires every marketplace
   insurer to publish its full directory as machine-readable data and update it monthly, and
   CMS's own file reviews from 2017 to 2021 found 29 to 47 percent of files fully accurate.
   Those reviews named no issuers, imposed no penalties, and were not continued.</p>
   <p>Beginning in plan year 2029, CMS will publish directory accuracy scores for Medicare
   Advantage plans under the REAL Health Providers Act. Marketplace enrollees get nothing
-  equivalent. This project fills that gap now: a continuous, public, evidence-backed audit
-  of every federal marketplace issuer's mandated directory file, with mental health first.</p>
+  equivalent. This project fills that gap now. It audits every federal marketplace
+  issuer's mandated directory file each month, in public, with the evidence attached,
+  starting with mental health.</p>
 
   <h2>Who</h2>
   <p>Ghost Network Watch is built and operated by Soorena Sasani, a cloud solutions
-  architect, as an independent public-interest project. It is not affiliated with CMS, any
-  insurer, or any vendor, and takes no money from payers. The pipeline is open source and
+  architect, as an independent public-interest project. It is independent of CMS and of
+  the insurers and vendors it audits, and takes no money from payers. The pipeline is open source and
   every published number is reproducible from public data.</p>
 
   <h2>For journalists and researchers</h2>
   {% if prelaunch %}
   <p>Scores publish {{ launch_date }}. Every number will be reproducible from public data
-  with the open-source pipeline, and every claim will decompose to archived evidence. Data
-  will update monthly, aligned to the federal registry's release. To arrange advance access,
-  interviews, or custom data cuts before launch: <a href="mailto:{{ contact }}">{{ contact }}</a>.</p>
+  with the open-source pipeline, and every claim will trace back to an archived source
+  file. Data will update monthly, aligned to the federal registry's release. For advance
+  access or interviews before launch, email <a href="mailto:{{ contact }}">{{ contact }}</a>.</p>
   {% else %}
   <p>Cite this work as: Ghost Network Watch, Directory Integrity Scores,
   {{ snapshot_label }} snapshot, ghostnetworkwatch.org. Every number is reproducible from
-  public data with the open-source pipeline, and every claim decomposes to archived
-  evidence. Data updates monthly, aligned to the federal registry's release; the next
-  snapshot is expected {{ next_update }}. Questions, interviews, and custom data cuts:
+  public data with the open-source pipeline, and every claim traces back to an archived
+  source file. Data updates monthly, aligned to the federal registry's release; the next
+  snapshot is expected {{ next_update }}. For interviews or custom data cuts, email
   <a href="mailto:{{ contact }}">{{ contact }}</a>.</p>
   {% endif %}
 
@@ -50,7 +51,7 @@
   flag, it will be marked resolved with the date. History is retained, not deleted.</p>
 
   <h2>What this is not</h2>
-  <p>This site does not recommend plans. It does not measure care quality. It makes no claim
+  <p>This site doesn't recommend plans or measure care quality, and it makes no claim
   about any individual clinician. The phrase "ghost networks" names a documented research
   topic. This site asserts what dated files show, and nothing beyond that.</p>
 </section>

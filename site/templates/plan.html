@@ -47,16 +47,16 @@
     </tbody>
   </table>
   <p class="note" style="margin-top: var(--wa-space-l)">Grades describe the plan's published
-  directory file in each county: whether its listings have real phone numbers and addresses,
-  recent update dates, and provider IDs the federal registry recognizes. A good grade means
-  the file is internally consistent. It does not promise that an office will answer the phone.
-  New to these terms? Read the <a href="{{ depth }}patients/index.html">guide for patients</a>.</p>
+  directory file in each county. The checks ask whether its listings have real phone numbers
+  and addresses, recent update dates, and provider IDs the federal registry recognizes. A good
+  grade means the file is internally consistent. It doesn't promise that an office will answer
+  the phone. New to these terms? Read the <a href="{{ depth }}patients/index.html">guide for patients</a>.</p>
 </section>
 
 <section>
   <h2>Using this page in a complaint</h2>
   {% if plan.complaint.sentences %}
-  <p>If you cannot reach an in-network mental health provider on this plan, you can cite
+  <p>If you can't reach an in-network mental health provider on this plan, you can cite
   this audit to your plan or your state insurance department. Copy and adapt:</p>
   <blockquote class="note" style="margin: var(--wa-space-m) 0">
     According to Ghost Network Watch's {{ snapshot_label }} audit of the machine-readable
@@ -75,8 +75,8 @@
   The <a href="{{ depth }}patients/index.html">guide for patients</a> walks through the
   full complaint process.</p>
   {% else %}
-  <p>This plan's directory graded well in the {{ snapshot_label }} audit, so our data will
-  not strengthen a complaint about it. If you still cannot reach an in-network provider,
+  <p>This plan's directory graded well in the {{ snapshot_label }} audit, so our data
+  won't strengthen a complaint about it. If you still can't reach an in-network provider,
   your documented call attempts are the evidence that matters. The
   <a href="{{ depth }}patients/index.html">guide for patients</a> shows how to use them.
   {% if plan.complaint.evidence_mb is not none %}

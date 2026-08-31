@@ -55,17 +55,17 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>The Directory Integrity Score measures whether an insurer's federally mandated
-      directory file (a public data file, not a web page) is internally consistent, current,
-      and usable as published. It is computed entirely from the insurer's own published file
-      and dated federal registry snapshots. It is not a measure of care quality, of network
-      adequacy, or of any individual provider.</p>
+      directory file (a public data file, not a web page) holds up as published. It is
+      computed entirely from the insurer's own published file and dated federal registry
+      snapshots. It is not a measure of care quality or network adequacy, and it makes no
+      claim about any individual provider.</p>
       {% if prelaunch %}
       <p>Directory Integrity Scores publish {{ launch_date }}, before open enrollment. No
-      accounts, no trackers: ZIP lookups will run entirely in your browser and are never
+      accounts, no trackers. ZIP lookups will run entirely in your browser and are never
       sent to any server.</p>
       {% else %}
       <p>Data as of {{ snapshot_label }}. Scores update monthly; the next update is
-      expected {{ next_update }}. No accounts, no trackers: ZIP lookups run entirely in
+      expected {{ next_update }}. No accounts, no trackers. ZIP lookups run entirely in
       your browser and are never sent to any server.</p>
       {% endif %}
       <p>Corrections and questions: <a href="mailto:{{ contact }}">{{ contact }}</a> or the

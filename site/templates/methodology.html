@@ -27,7 +27,7 @@
 
   <h3>Problems with the whole file</h3>
   <p><strong>Dead file.</strong> The web address the insurer gave CMS returns nothing, or
-  most of the files it points to cannot be read. We cannot audit a file we cannot fetch,
+  most of the files it points to can't be read. We can't audit a file we can't fetch,
   so every plan from that insurer is marked X for unauditable instead of scored. An F
   means the published content is bad. An X means there was nothing to check.</p>
   <p><strong>Browser-only access.</strong> Some insurers' files load in a web browser but
@@ -40,8 +40,8 @@
   street addresses that literally say "null", and update dates before 2014. An entry like
   that is unusable exactly as published. This is the heaviest penalty.</p>
   <p><strong>Old update dates.</strong> Each entry carries a date saying when it was last
-  updated. We flag entries older than 180 days, and more heavily past 365. One caveat is
-  mandatory. Most files stamp one shared date on every entry, so the date behaves like a
+  updated. We flag entries older than 180 days, and more heavily past 365. One caveat
+  matters here. Most files stamp one shared date on every entry, so the date behaves like a
   file-generation timestamp. An old date is a real warning sign. A fresh date proves
   nothing about any single entry, and we never present a fresh file as verified.</p>
   <p><strong>One shared phone number and nothing else.</strong> Every phone number on the
@@ -70,7 +70,7 @@
   <p><strong>Registry status.</strong> We flag entries whose NPI is missing, fails its
   checksum, or appears on the federal retired-identifier list while absent from the
   active registry. Identifiers are retired for many reasons, including retirement, death,
-  and practice changes. The flag says one thing only: the insurer's current directory
+  and practice changes. The flag says one thing only. The insurer's current directory
   carries an identifier the federal registry retired, as of a dated report.</p>
   <p><strong>Specialty disagreement.</strong> The file lists a provider under a mental
   health specialty while the registry records only unrelated fields, such as physical
@@ -81,7 +81,7 @@
   <p>Every grade attaches to one plan in one county. We grade the mental health list
   separately from the all-provider list, and both appear side by side.</p>
   <p>Each listed provider starts clean. Each problem adds a penalty, but penalties on one
-  entry do not simply add up: a badly broken entry counts once, at the weight of its
+  entry don't simply add up. A badly broken entry counts once, at the weight of its
   worst problem plus a fraction of the rest. One broken record is never counted four
   times.</p>
   <p>The in-county entries carry 80% of the grade. The plan's out-of-area rate carries

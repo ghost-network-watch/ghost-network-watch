@@ -13,7 +13,7 @@
   <h2>Start here</h2>
   <p>These two files answer most questions.</p>
   <table>
-    <thead><tr><th>File</th><th>What is in it</th><th class="num">Size</th></tr></thead>
+    <thead><tr><th>File</th><th>What's in it</th><th class="num">Size</th></tr></thead>
     <tbody>
     {% for e in exports if e.group == 'start' %}
       <tr>
@@ -34,7 +34,7 @@
   directory. No claim is made about the provider. Listed clinicians are often unaware of
   how they appear in payer directories.</p>
   <table style="margin-top: var(--wa-space-m)">
-    <thead><tr><th>File</th><th>What is in it</th><th class="num">Size</th></tr></thead>
+    <thead><tr><th>File</th><th>What's in it</th><th class="num">Size</th></tr></thead>
     <tbody>
     {% for e in exports if e.group == 'evidence' %}
       <tr>
@@ -51,8 +51,8 @@
   are reproducible; see below.</p>
   <p>Prefer to explore without downloading? Open the scores file in
   <a href="https://lite.datasette.io/?csv=https://ghostnetworkwatch.org/data/files/plan_county_scores.csv.gz">Datasette
-  Lite</a>, a free tool that runs entirely in your browser: sort, filter, and query
-  without installing anything.</p>
+  Lite</a>, a free tool that runs in your browser, so you can poke at the data without
+  installing anything.</p>
 
   <h2>What the columns mean</h2>
   <p>In <span style="font-family: var(--wa-font-family-code)">plan_county_scores</span>, one
@@ -65,7 +65,7 @@
       <tr><td><strong>n</strong></td><td>How many providers the plan lists in that county.</td></tr>
       <tr><td><strong>thin_roster</strong></td><td>Marks lists under 10 providers, which get no grade.</td></tr>
       <tr><td><strong>out_of_area_rate</strong></td><td>The share of the plan's listings with no listed address in or near its counties.</td></tr>
-      <tr><td><strong>score_uniform</strong></td><td>The score re-run with every check weighted equally: a check that our chosen weights are not driving the grade.</td></tr>
+      <tr><td><strong>score_uniform</strong></td><td>The score re-run with every check weighted equally, a check that our chosen weights aren't driving the grade.</td></tr>
     </tbody>
   </table>
   <p style="margin-top: var(--wa-space-m)">In the evidence files, one row is one problem in

@@ -11,9 +11,9 @@
   <div class="note caution" style="margin-top: var(--wa-space-l)">
     <p>The machine-readable directory file this insurer is required to publish
     ({{ issuer.url }}) could not be retrieved or could not be read during the
-    {{ snapshot_label }} crawl. We cannot audit a file we cannot fetch.</p>
+    {{ snapshot_label }} crawl. We can't audit a file we can't fetch.</p>
     <p>An X is not an F. An F says the published content is bad. An X says there was
-    nothing to check. Both facts belong in public: this insurer's directory data could not
+    nothing to check. Both facts belong in public. This insurer's directory data could not
     be retrieved or read by automated tools during the snapshot, though the federal rule
     requires a machine-readable file.</p>
   </div>
@@ -34,15 +34,15 @@
     </tbody>
   </table>
   <p class="note" style="margin-top: var(--wa-space-l)">If you are a member of one of
-  these plans and cannot reach an in-network provider, the
+  these plans and can't reach an in-network provider, the
   <a href="{{ depth }}patients/index.html">guide for patients</a> still applies. The
-  unavailability of this insurer's mandated directory file is a fact you can cite.</p>
+  missing file is itself a fact you can cite.</p>
 </section>
 
 <section>
   <h2>Corrections</h2>
   <p>If this insurer restores its file, the next monthly crawl will pick it up and this
-  page will be replaced with graded results. Questions and corrections:
+  page will be replaced with graded results. Questions and corrections go to
   <a href="mailto:{{ contact }}">{{ contact }}</a>.</p>
 </section>
 {% endblock %}
