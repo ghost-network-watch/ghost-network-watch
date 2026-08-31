@@ -9,7 +9,7 @@
       <label for="zip">Enter your ZIP code to see the plans where you live.</label>
       <div class="zipsearch-row">
         <input id="zip" name="zip" inputmode="numeric" pattern="[0-9]{5}" maxlength="5"
-               placeholder="75023" required autocomplete="postal-code" aria-label="ZIP code">
+               placeholder="75023" required autocomplete="postal-code">
         <button class="btn btn-primary" type="submit">Look up</button>
       </div>
       <p id="zipresult" class="zipresult" role="status"></p>
@@ -32,8 +32,8 @@
     "phone":   <span class="hot">"{{ receipt.phone }}"</span>
   }]
 }</pre>
-    <p class="receipt-note">A psychiatric provider a patient cannot contact: no address,
-    no working phone, last updated in the year 1900, listed as accepting new patients. Name and NPI
+    <p class="receipt-note">One psychiatric record as published: no address, a placeholder
+    phone number, a last-updated date of 1900, and marked as accepting new patients. Name and NPI
     withheld here; the full record is in the evidence files.</p>
   </figure>
   {% endif %}
@@ -116,14 +116,15 @@
     and report the small number itself.</p>
     <ul class="findings">
       <li>On average, <strong>{{ national.avg_ooa_pct }}%</strong> of the providers
-      listed for a plan have no office in or near any county that plan covers.</li>
-      <li>One insurer's current file carries placeholder phone 999999999 on
-      <strong>85%</strong> of records while marking 90% of all its records as accepting new patients.</li>
+      listed for a plan have no listed address in or near any county that plan covers.</li>
+      <li>One insurer's current file carries placeholder phone number 999999999 on
+      <strong>{{ national.worst_phone_pct }}%</strong> of its records. The same file marks
+      {{ national.worst_phone_accepting_pct }}% of them as accepting new patients.</li>
       <li><strong>{{ "{:,}".format(national.deactivated) }}</strong> listed identifiers appear
-      on the federal registry's deactivated list. Half were deactivated more than 20 months
-      before the file was fetched.</li>
-      <li>Several insurers' files have gone <strong>over a year</strong> without an
-      update, against a monthly-update requirement.</li>
+      on the federal registry's deactivated list. Half were deactivated at least
+      {{ national.deact_median_months }} months before the file was fetched.</li>
+      <li><strong>{{ national.stale_files }}</strong> directory files show a newest update
+      date more than a year before we fetched them, against a monthly-update requirement.</li>
     </ul>
   </div>
   <p class="note">Every number on this site traces back to specific entries in the insurer's own

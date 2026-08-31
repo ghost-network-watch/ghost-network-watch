@@ -20,11 +20,14 @@ Kill switch: disable the EventBridge rule (GnwPipelineStack/MonthlySchedule)
 or set -c scheduleEnabled=false and redeploy.
 """
 
+import os
+
 import aws_cdk as cdk
 from aws_cdk import (
     Duration,
     RemovalPolicy,
     Stack,
+    aws_budgets as budgets,
     aws_certificatemanager as acm,
     aws_cloudfront as cloudfront,
     aws_cloudfront_origins as origins,
@@ -139,37 +142,44 @@ class GnwPipelineStack(Stack):
         # so findings cannot publish before insurer notification completes.
         prelaunch = (self.node.try_get_context("prelaunch") or "true") == "true"
 
+        # Blobs and the per-snapshot archives (flags, parsed snapshots) are
+        # write-once evidence: the pipeline regenerates them from scratch each
+        # month and never re-reads a prior month on a later run. Age them to
+        # Glacier Instant Retrieval after 90 days so storage stays roughly flat
+        # as history accumulates. Instant Retrieval keeps any archived month
+        # millisecond-accessible if we ever need to pull one. The small
+        # prefixes (diff, scores, notify) are left in Standard on purpose: with
+        # many sub-128 KB objects, Glacier's minimum-billable size and
+        # per-object transition fees would cost more than they save.
+        archive_prefixes = ("blobs/", "flags/", "snapshots/")
+        lifecycle_rules = [
+            s3.LifecycleRule(
+                id=f"{p.rstrip('/')}-to-glacier",
+                prefix=p,
+                transitions=[
+                    s3.Transition(
+                        storage_class=s3.StorageClass.GLACIER_INSTANT_RETRIEVAL,
+                        transition_after=Duration.days(90),
+                    )
+                ],
+            )
+            for p in archive_prefixes
+        ]
+
         data_bucket = s3.Bucket(
             self, "DataBucket",
             bucket_name=f"gnw-data-{self.account}",
             block_public_access=s3.BlockPublicAccess.BLOCK_ALL,
             encryption=s3.BucketEncryption.S3_MANAGED,
             removal_policy=RemovalPolicy.RETAIN,
-            lifecycle_rules=[
-                s3.LifecycleRule(
-                    id="blobs-to-glacier",
-                    prefix="blobs/",
-                    transitions=[
-                        s3.Transition(
-                            storage_class=s3.StorageClass.GLACIER_INSTANT_RETRIEVAL,
-                            transition_after=Duration.days(90),
-                        )
-                    ],
-                )
-            ],
+            lifecycle_rules=lifecycle_rules,
         )
 
-        # Public subnets with public IPs for crawler egress; no NAT gateway
-        # (the task holds no inbound ports and no secrets beyond its role).
-        vpc = ec2.Vpc(
-            self, "PipelineVpc",
-            max_azs=2, nat_gateways=0,
-            subnet_configuration=[
-                ec2.SubnetConfiguration(
-                    name="public", subnet_type=ec2.SubnetType.PUBLIC, cidr_mask=24
-                )
-            ],
-        )
+        # Reuse the account's default VPC rather than creating a new one: the
+        # region is at its VPC quota, and this monthly batch task only needs a
+        # public subnet with egress, which the default VPC's internet gateway
+        # already provides. No inbound ports, no NAT, no secrets in the VPC.
+        vpc = ec2.Vpc.from_lookup(self, "PipelineVpc", is_default=True)
         cluster = ecs.Cluster(self, "PipelineCluster", vpc=vpc)
 
         image = ecr_assets.DockerImageAsset(
@@ -251,6 +261,51 @@ class GnwPipelineStack(Stack):
             targets=[targets.SnsTopic(alerts)],
         )
 
+        # Cost guardrail scoped to this project through the Project cost-allocation
+        # tag applied app-wide (see the bottom of this file). Emails the same
+        # address as the failure alerts at 80% actual spend and when forecast
+        # to exceed the limit. One-time setup: activate the "Project" tag under
+        # Billing > Cost allocation tags. Until it activates (about 24 hours),
+        # the filtered budget reports zero rather than real spend.
+        budgets.CfnBudget(
+            self, "MonthlyBudget",
+            budget=budgets.CfnBudget.BudgetDataProperty(
+                budget_name="ghost-network-watch-monthly",
+                budget_type="COST",
+                time_unit="MONTHLY",
+                budget_limit=budgets.CfnBudget.SpendProperty(amount=10, unit="USD"),
+                cost_filters={"TagKeyValue": ["user:Project$ghost-network-watch"]},
+            ),
+            notifications_with_subscribers=[
+                budgets.CfnBudget.NotificationWithSubscribersProperty(
+                    notification=budgets.CfnBudget.NotificationProperty(
+                        notification_type="ACTUAL",
+                        comparison_operator="GREATER_THAN",
+                        threshold=80,
+                        threshold_type="PERCENTAGE",
+                    ),
+                    subscribers=[
+                        budgets.CfnBudget.SubscriberProperty(
+                            subscription_type="EMAIL", address=alert_email,
+                        )
+                    ],
+                ),
+                budgets.CfnBudget.NotificationWithSubscribersProperty(
+                    notification=budgets.CfnBudget.NotificationProperty(
+                        notification_type="FORECASTED",
+                        comparison_operator="GREATER_THAN",
+                        threshold=100,
+                        threshold_type="PERCENTAGE",
+                    ),
+                    subscribers=[
+                        budgets.CfnBudget.SubscriberProperty(
+                            subscription_type="EMAIL", address=alert_email,
+                        )
+                    ],
+                ),
+            ],
+        )
+
         cdk.CfnOutput(self, "DataBucketName", value=data_bucket.bucket_name)
         cdk.CfnOutput(
             self, "ManualRunCommand",
@@ -265,7 +320,16 @@ class GnwPipelineStack(Stack):
 
 
 app = cdk.App()
-env = cdk.Environment(region="us-east-1")  # ACM for CloudFront requires us-east-1
+# Tag every resource in both stacks so this project's spend is attributable
+# and the MonthlyBudget's cost filter (user:Project$ghost-network-watch) works.
+# Activate the "Project" tag once under Billing > Cost allocation tags.
+cdk.Tags.of(app).add("Project", "ghost-network-watch")
+# Account is explicit so Vpc.from_lookup can resolve the default VPC at synth.
+# CDK sets CDK_DEFAULT_ACCOUNT from the active credentials during deploy.
+env = cdk.Environment(
+    account=os.environ.get("CDK_DEFAULT_ACCOUNT"),
+    region="us-east-1",  # ACM for CloudFront requires us-east-1
+)
 site = GnwSiteStack(app, "GnwSiteStack", env=env)
 GnwPipelineStack(
     app, "GnwPipelineStack",

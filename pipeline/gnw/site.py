@@ -32,13 +32,13 @@ log = logging.getLogger("gnw.site")
 GRADE_ORDER = {"A": 0, "B": 1, "C": 2, "D": 3, "F": 4, None: 5}
 METRIC_LABELS = {
     "M3_PLACEHOLDER_VALUE": "Placeholder contact values",
-    "M4_STALE_ATTESTATION": "Stale attestation dates",
+    "M4_STALE_ATTESTATION": "Old update dates",
     "M5_CALL_CENTER_ONLY": "Single shared phone number only",
-    "M6_ADDRESS_INFLATION": "Address inflation",
+    "M6_ADDRESS_INFLATION": "Provider listed at many addresses",
     "M7_OUT_OF_AREA_LISTING": "Listings outside the plan's service area",
     "M8_ACCEPTING_UNKNOWN": "Accepting-patients field missing",
     "M9_NPI_REGISTRY_STATUS": "NPI registry disagreements",
-    "M10_TAXONOMY_MISMATCH": "Specialty vs registry taxonomy disagreements",
+    "M10_TAXONOMY_MISMATCH": "Specialty disagrees with the federal registry",
 }
 
 
@@ -238,7 +238,10 @@ def _threshold_sensitivity(con) -> dict:
     return {"stale": stale, "addr": addr}
 
 
-def _national(con) -> dict:
+def _national(con, snapshot: str) -> dict:
+    # Deactivation and update ages are measured against the first of the
+    # snapshot month, close enough to the fetch date for a "months ago" line.
+    ref = f"{snapshot}-01"
     g = {}
     for scope, grade, cells in con.execute(
         "SELECT scope, coalesce(grade, 'thin'), count(*) FROM scores GROUP BY 1, 2"
@@ -265,6 +268,53 @@ def _national(con) -> dict:
           GROUP BY scid
         )
     """).fetchone()[0]
+    # Single worst placeholder-phone file (>= 500 records, to skip tiny files):
+    # its placeholder-phone rate, paired with the share of the SAME file that
+    # marks its records as accepting new patients.
+    # Restrict to predominantly individual-provider directories (>= 90% of
+    # records), where a placeholder phone shared across every listed clinician
+    # is unambiguous. Facility files legitimately share a switchboard line.
+    worst = con.execute("""
+        WITH tot AS (
+          SELECT source_sha256, count(*) AS recs,
+                 count(*) FILTER (accepting = 'accepting') AS acc,
+                 count(*) FILTER (type = 'INDIVIDUAL') AS ind
+          FROM providers GROUP BY 1
+        ),
+        ph AS (
+          SELECT source_sha256, count(DISTINCT record_idx) AS phr
+          FROM m3_placeholder_value WHERE subcode = 'PHONE' GROUP BY 1
+        )
+        SELECT round(100.0 * ph.phr / tot.recs), round(100.0 * tot.acc / tot.recs)
+        FROM tot JOIN ph USING (source_sha256)
+        WHERE tot.recs >= 500 AND tot.ind >= 0.9 * tot.recs
+        -- worst placeholder-phone rate first, then the largest such file, then
+        -- hash, so the pick is deterministic across monthly rebuilds.
+        ORDER BY 1.0 * ph.phr / tot.recs DESC, tot.recs DESC, tot.source_sha256
+        LIMIT 1
+    """).fetchone()
+    # Median age in months between an identifier's federal deactivation date and
+    # the snapshot month, over the same distinct deactivated NPIs counted above.
+    deact_med = con.execute(f"""
+        SELECT round(median(date_diff('month',
+                 TRY_STRPTIME(observed ->> 'deactivation_date', '%m/%d/%Y'),
+                 DATE '{ref}')))
+        FROM (
+          SELECT npi, any_value(observed) AS observed
+          FROM m9_npi_registry_status WHERE subcode = 'DEACTIVATED' GROUP BY npi
+        )
+        WHERE TRY_STRPTIME(observed ->> 'deactivation_date', '%m/%d/%Y') IS NOT NULL
+    """).fetchone()[0]
+    # Directory files whose newest usable update date is more than a year before
+    # the snapshot month, against the monthly-update requirement.
+    stale_files = con.execute(f"""
+        WITH f AS (
+          SELECT source_sha256, max(TRY_CAST(last_updated_on AS DATE)) AS newest
+          FROM providers GROUP BY 1
+        )
+        SELECT count(*) FROM f
+        WHERE newest IS NOT NULL AND newest < DATE '{ref}' - INTERVAL 365 DAY
+    """).fetchone()[0]
     return {
         "grades": g,
         "plans": stats[0], "counties": stats[1], "states": stats[2],
@@ -272,6 +322,8 @@ def _national(con) -> dict:
         "thin_bh_pct": round(100 * stats[3] / max(stats[4], 1), 1),
         "records": recs[0], "npis": recs[1],
         "deactivated": deact, "avg_ooa_pct": ooa,
+        "worst_phone_pct": int(worst[0]), "worst_phone_accepting_pct": int(worst[1]),
+        "deact_median_months": int(deact_med), "stale_files": stale_files,
     }
 
 
@@ -582,6 +634,8 @@ def _base_ctx(snapshot: str, css_file: str) -> dict:
         "css_file": css_file,
         "snapshot_label": f"{names[month]} {year}",
         "next_update": f"early {names[nm]} {ny}",
+        "launch_date": "October 26, 2026",
+        "prelaunch": False,
         "repo_url": "https://github.com/ghost-network-watch/ghost-network-watch",
     }
 
@@ -604,6 +658,7 @@ def _build_prelaunch(con, snapshot, repo_root, out_dir, wa_kit, env) -> Path:
     issuer notification window."""
     css_file = _hash_css(repo_root, out_dir)
     base = _base_ctx(snapshot, css_file)
+    base["prelaunch"] = True
     thresholds = _threshold_sensitivity(con)
 
     def render(template: str, dest: Path, **ctx) -> None:
@@ -658,7 +713,7 @@ def build_site(
     if prelaunch:
         return _build_prelaunch(con, snapshot, repo_root, out_dir, wa_kit, env)
 
-    national = _national(con)
+    national = _national(con, snapshot)
     issuer_names = _issuer_names(con)
     counties, plans = _cells(con)
     issuers = _issuer_pages(con, issuer_names)
@@ -820,8 +875,8 @@ def build_site(
             )
         if p["ooa_pct"] and p["ooa_pct"] > 10:
             sentences.append(
-                f"{p['ooa_pct']}% of the providers listed for this plan have no office "
-                "in or near any county the plan covers."
+                f"{p['ooa_pct']}% of the providers listed for this plan have no listed "
+                "address in or near any county the plan covers."
             )
         p["complaint"] = {
             "sentences": sentences,

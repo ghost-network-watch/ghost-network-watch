@@ -12,13 +12,13 @@
   <div class="stats">
     <div class="stat"><div class="num">
       {% if plan.avg_bh is not none %}<span class="grade grade-{{ plan.band }}">{{ plan.band }}</span> {{ plan.avg_bh }}{% else %}n/a{% endif %}</div>
-      <div class="lbl">average mental health directory score across graded counties{% if plan.band_uniform and plan.band_uniform != plan.band %}. Equal-weight check lands at <span class="grade grade-{{ plan.band_uniform }}">{{ plan.band_uniform }}</span> {{ plan.avg_uniform }} (<a href="{{ depth }}methodology/index.html">why we show both</a>){% endif %}</div></div>
+      <div class="lbl">average mental health directory score across graded counties{% if plan.band_uniform and plan.band_uniform != plan.band %}. With every check weighted equally, this plan lands at <span class="grade grade-{{ plan.band_uniform }}">{{ plan.band_uniform }}</span> {{ plan.avg_uniform }} (<a href="{{ depth }}methodology/index.html">why we show both</a>){% endif %}</div></div>
     <div class="stat"><div class="num">{{ plan.counties | length }}</div>
       <div class="lbl">counties where this plan's file lists providers</div></div>
     <div class="stat"><div class="num">{{ plan.thin }}</div>
       <div class="lbl">counties where the plan lists fewer than 10 mental health providers</div></div>
     <div class="stat"><div class="num">{{ plan.ooa_pct }}%</div>
-      <div class="lbl">of this plan's listed providers have no office in or near the counties the plan covers</div></div>
+      <div class="lbl">of this plan's listed providers have no listed address in or near the counties the plan covers</div></div>
   </div>
 </section>
 

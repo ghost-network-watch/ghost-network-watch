@@ -10,7 +10,7 @@
   <meta property="og:title" content="{{ self.title() }}">
   <meta property="og:description" content="{{ self.description() }}">
   <meta name="twitter:card" content="summary">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231e50a2'/%3E%3Cpath d='M11.5 5.5h-5v5h3v-2h2v4h-7v-9h7z' fill='white'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%231f3d5c'/%3E%3Cpath d='M11.5 5.5h-5v5h3v-2h2v4h-7v-9h7z' fill='white'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="{{ depth }}webawesome/styles/native.css">
   <link rel="stylesheet" href="{{ depth }}webawesome/styles/utilities.css">
   <link rel="stylesheet" href="{{ depth }}webawesome/styles/themes/default.css">
@@ -22,16 +22,17 @@
   <header class="site-header">
     <div class="wrap">
       <a class="wordmark" href="{{ depth }}index.html">Ghost Network Watch</a>
-      <span class="asof">data as of {{ snapshot }}</span>
+      {% if not prelaunch %}<span class="asof">data as of {{ snapshot }}</span>{% endif %}
       <nav class="site-nav">
-        <a href="{{ depth }}changes/index.html"{% if nav == 'changes' %} aria-current="page"{% endif %}>Changes</a>
+        {% if not prelaunch %}<a href="{{ depth }}changes/index.html"{% if nav == 'changes' %} aria-current="page"{% endif %}>Changes</a>{% endif %}
         <a href="{{ depth }}patients/index.html"{% if nav == 'patients' %} aria-current="page"{% endif %}>For patients</a>
         <a href="{{ depth }}methodology/index.html"{% if nav == 'methodology' %} aria-current="page"{% endif %}>Methodology</a>
-        <a href="{{ depth }}data/index.html"{% if nav == 'data' %} aria-current="page"{% endif %}>Data</a>
+        {% if not prelaunch %}<a href="{{ depth }}data/index.html"{% if nav == 'data' %} aria-current="page"{% endif %}>Data</a>{% endif %}
         <a href="{{ depth }}about/index.html"{% if nav == 'about' %} aria-current="page"{% endif %}>About</a>
       </nav>
     </div>
   </header>
+  {% if not prelaunch %}
   <div id="stale-banner" class="stale-banner" hidden>
     <div class="wrap">This page shows the {{ snapshot_label }} snapshot, which is now more
     than 60 days old. A newer snapshot should exist; if this notice persists, the monthly
@@ -45,6 +46,7 @@
       }
     })();
   </script>
+  {% endif %}
   <main id="main">
     <div class="wrap">
       {% block content %}{% endblock %}
@@ -53,13 +55,19 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>The Directory Integrity Score measures whether an insurer's federally mandated
-      machine-readable directory file is internally consistent, current, and usable as
-      published. It is computed entirely from the insurer's own published file and dated
-      federal registry snapshots. It is not a measure of care quality, of network adequacy,
-      or of any individual provider.</p>
+      directory file (a public data file, not a web page) is internally consistent, current,
+      and usable as published. It is computed entirely from the insurer's own published file
+      and dated federal registry snapshots. It is not a measure of care quality, of network
+      adequacy, or of any individual provider.</p>
+      {% if prelaunch %}
+      <p>Directory Integrity Scores publish {{ launch_date }}, before open enrollment. No
+      accounts, no trackers: ZIP lookups will run entirely in your browser and are never
+      sent to any server.</p>
+      {% else %}
       <p>Data as of {{ snapshot_label }}. Scores update monthly; the next update is
       expected {{ next_update }}. No accounts, no trackers: ZIP lookups run entirely in
       your browser and are never sent to any server.</p>
+      {% endif %}
       <p>Corrections and questions: <a href="mailto:{{ contact }}">{{ contact }}</a> or the
       <a href="{{ repo_url }}/issues">public correction tracker</a>. Insurers receive their
       complete flag exports before publication, and responses will be published verbatim.</p>

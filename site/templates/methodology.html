@@ -4,7 +4,7 @@
 {% block content %}
 <section>
   <h1>How the grades work</h1>
-  <p class="lede">Rubric v0, scoring rules v0.1, {{ snapshot_label }} snapshot.
+  <p class="lede">Rubric v0, scoring rules v0.1{% if not prelaunch %}, {{ snapshot_label }} snapshot{% endif %}.
   The full rule definitions and change history live in the
   <a href="{{ repo_url }}">public code repository</a>.</p>
 
@@ -18,10 +18,10 @@
   plan's counties, and provider ID numbers the federal government has retired. Every
   problem we find becomes one row of evidence, tied to an archived copy of the insurer's
   file. The rows add up to a grade for each plan in each county.</p>
-  <p>Two limits, stated plainly. The grades are computed from files, not phone calls. A
-  good grade means the published list is consistent and current, not that an office will
-  answer. And the score never judges care quality or any individual clinician. It judges
-  the insurer's published data.</p>
+  <p>Two limits. The grades are computed from files, not phone calls. A good grade means
+  the published list is consistent and current, not that an office will answer. And the
+  score never judges care quality or any individual clinician. It judges the insurer's
+  published data.</p>
 
   <h2>The ten checks</h2>
 
@@ -50,14 +50,14 @@
   group's own booking line is a smaller problem than a number that reaches nobody. We
   also check whether the federal registry lists a different direct phone for that
   provider.</p>
-  <p><strong>Address inflation.</strong> One individual provider listed at more than 10
-  street addresses at once, or an organization at more than 25. We skip specialties that
-  legitimately cover many sites, like radiologists. The worst entries we found list one
-  clinician at over 300 addresses.</p>
+  <p><strong>Many addresses on one provider.</strong> One individual provider listed at more
+  than 10 street addresses at once, or an organization at more than 25. We skip specialties
+  that legitimately cover many sites, like radiologists.{% if not prelaunch %} The highest
+  count we found lists one clinician at over 300 addresses.{% endif %}</p>
   <p><strong>Out-of-area listings.</strong> A provider attached to a plan even though none
   of the provider's addresses fall inside any county the plan covers, or any neighboring
-  county. These entries make a network look bigger without adding anyone a member can
-  reach. They are excluded from county counts and scored at the plan level.</p>
+  county. These entries add to the provider count without adding anyone a member can reach.
+  They are excluded from county counts and scored at the plan level.</p>
   <p><strong>Missing accepting-patients answer.</strong> Individual providers are required
   to say whether they accept new patients. We flag entries that leave it blank or say
   unknown. Facilities and groups are allowed to omit this field, and we never count that
@@ -87,17 +87,17 @@
   <p>The in-county entries carry 80% of the grade. The plan's out-of-area rate carries
   the other 20%, because those entries never appear in any county count and would
   otherwise be invisible.</p>
-  <p>Registry disagreements can lower a score by at most 20 points. The registry is
-  itself self-reported and lags reality, so we cap how much it can hurt an insurer until
-  our correction process has run a full monthly cycle.</p>
+  <p>A registry disagreement can lower a score by at most 20 points. The registry is itself
+  self-reported and lags reality, so we hold that cap until insurers have had one monthly
+  notification and correction round to respond.</p>
   <p>We also recompute every score with all penalty weights set equal, as a check that
   our chosen weights are not driving the story. Where the two versions land in different
   letter grades, the plan's page shows both. The full data download carries both scores
   for every plan and county.</p>
   <p>Grade bands: A is 90 to 100, B is 80 to 89, C is 70 to 79, D is 55 to 69, F is below
-  55, and X means unauditable. The bands are transparency tiers. They are calibrated to
-  nothing external in this version, and we will recalibrate them against the observed
-  score distribution and publish the change.</p>
+  55, and X means unauditable. These cutoffs are our own. They are not yet tied to any
+  official standard or benchmark. Once we see how scores are distributed across all plans,
+  we will adjust the cutoffs and publish exactly what changed.</p>
   <p>Small lists get special handling. A county list with 10 to 29 providers is graded
   with a low-sample badge. A list with fewer than 10 is not graded at all; the small
   count itself is published as the finding.</p>
@@ -115,6 +115,10 @@
   note that identifiers are retired for many innocent reasons.</p>
 
   <h3>The cutoffs at other settings</h3>
+  {% if prelaunch %}
+  <p>When findings publish on {{ launch_date }}, this section will show how each count moves
+  at looser and stricter cutoffs.</p>
+  {% else %}
   <p>Share of all {{ snapshot_label }} provider records flagged at each alternate
   cutoff:</p>
   <table style="max-width: 40rem">
@@ -124,14 +128,15 @@
         <td class="num">{{ thresholds.stale[365] }}% at 365 days</td>
         <td class="num">{{ thresholds.stale[180] }}% at 180 days</td>
         <td class="num">{{ thresholds.stale[90] }}% at 90 days</td></tr>
-      <tr><td>Address inflation (individuals)</td>
+      <tr><td>Addresses per provider (individuals)</td>
         <td class="num">{{ thresholds.addr[25] }}% at 25 addresses</td>
         <td class="num">{{ thresholds.addr[10] }}% at 10 addresses</td>
         <td class="num">{{ thresholds.addr[5] }}% at 5 addresses</td></tr>
     </tbody>
   </table>
+  {% endif %}
 
-  <h2>Known biases, stated up front</h2>
+  <h2>Known biases</h2>
   <p>Most files stamp one shared date on every entry. A fresh date therefore proves
   nothing, and freshness never earns credit.</p>
   <p>The file format lets facilities and groups omit some fields. We never count those

@@ -55,15 +55,30 @@
   without installing anything.</p>
 
   <h2>What the columns mean</h2>
-  <p>The two files above share a small vocabulary. In plan_county_scores: one row is one
-  plan in one county in one scope (mental health or all providers). "score" is the final
-  0 to 100 number and "grade" its letter. "n" is how many providers the plan lists in
-  that county. "thin_roster" marks lists under 10 providers, which get no grade.
-  "out_of_area_rate" is the share of the plan's listings with no office in or near its
-  counties. "score_uniform" recomputes the score with all penalty weights equal, as a
-  sensitivity check. In the evidence files: "metric" names the check, "source_sha256" is
-  the fingerprint of the archived insurer file, "record_idx" is the entry's position in
-  it, and "observed" holds the values exactly as published.</p>
+  <p>In <span style="font-family: var(--wa-font-family-code)">plan_county_scores</span>, one
+  row is one plan in one county in one scope (mental health or all providers).</p>
+  <table style="max-width: 52rem">
+    <thead><tr><th>Column</th><th>What it means</th></tr></thead>
+    <tbody>
+      <tr><td><strong>score</strong></td><td>The final 0 to 100 number for that row.</td></tr>
+      <tr><td><strong>grade</strong></td><td>The letter grade for that score.</td></tr>
+      <tr><td><strong>n</strong></td><td>How many providers the plan lists in that county.</td></tr>
+      <tr><td><strong>thin_roster</strong></td><td>Marks lists under 10 providers, which get no grade.</td></tr>
+      <tr><td><strong>out_of_area_rate</strong></td><td>The share of the plan's listings with no listed address in or near its counties.</td></tr>
+      <tr><td><strong>score_uniform</strong></td><td>The score re-run with every check weighted equally: a check that our chosen weights are not driving the grade.</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top: var(--wa-space-m)">In the evidence files, one row is one problem in
+  one listing.</p>
+  <table style="max-width: 52rem">
+    <thead><tr><th>Column</th><th>What it means</th></tr></thead>
+    <tbody>
+      <tr><td><strong>metric</strong></td><td>Which check produced the row.</td></tr>
+      <tr><td><strong>source_sha256</strong></td><td>The fingerprint of the archived insurer file the row came from.</td></tr>
+      <tr><td><strong>record_idx</strong></td><td>The entry's position inside that file.</td></tr>
+      <tr><td><strong>observed</strong></td><td>The values exactly as published.</td></tr>
+    </tbody>
+  </table>
 
   <h2>Cite this data</h2>
   <p>Suggested citation: Ghost Network Watch, Directory Integrity Scores,

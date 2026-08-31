@@ -25,7 +25,7 @@
             <span class="grade grade-thin" title="Fewer than 10 mental health providers listed; the small count is the finding, not a grade.">n={{ p.bh_n }}</span>
           {% elif p.bh_grade %}
             <span class="grade grade-{{ p.bh_grade }}">{{ p.bh_grade }}</span>
-            {% if p.bh_low %}<span class="meta" title="10 to 29 roster records">low sample</span>{% endif %}
+            {% if p.bh_low %}<span class="meta" title="10 to 29 mental health providers listed">low sample</span>{% endif %}
           {% endif %}
         </td>
         <td class="num">{{ "{:,}".format(p.bh_n) if p.bh_n is not none else '' }}</td>
@@ -39,9 +39,12 @@
   <p class="note" style="margin-top: var(--wa-space-l)">A cell marked <span class="grade grade-thin">n=…</span>
   means the plan lists fewer than 10 mental health providers with an address
   in this county. The small count is the finding. Out-of-area is the share of the plan's listed providers
-  with no office in or near any county the plan covers. Those listings are left out of the
+  with no listed address in or near any county the plan covers. Those listings are left out of the
   county counts on this page. A grade of <span class="grade grade-X">X</span> means the
   insurer's mandated file could not be retrieved or read, so there was nothing to grade.
   <a href="{{ depth }}methodology/index.html">How these grades are computed.</a></p>
+  <p class="note" style="margin-top: var(--wa-space-m)">If a plan here grades poorly and you
+  cannot reach an in-network therapist, the <a href="{{ depth }}patients/index.html">guide
+  for patients</a> shows the exact steps to demand care.</p>
 </section>
 {% endblock %}

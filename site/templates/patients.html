@@ -5,7 +5,12 @@
 <section>
   <h1>A patient's guide to this site</h1>
   <p class="lede">Insurance companies publish lists of the doctors and therapists in each
-  plan. Those lists are often wrong. This site checks the lists and grades them.</p>
+  plan. Independent studies have repeatedly found those lists carry entries patients cannot
+  use. This site checks the lists and grades them.</p>
+  {% if prelaunch %}
+  <p class="note caution">The ZIP lookup and the plan grades go live on {{ launch_date }}.
+  The steps below for demanding care work today, whatever plan you have.</p>
+  {% endif %}
 
   <h2>What the grades mean</h2>
   <p>Every plan gets a grade in every county it covers, based only on the plan's own
@@ -23,10 +28,9 @@
     providers in that county. We do not grade a list that small. The small number is the
     finding.</li>
   </ul>
-  <p>One honest limit, stated plainly: the grades are computed from the insurers' files,
-  not from phone calls. A good grade means the plan's published list is consistent and
-  current. It does not promise that an office will answer the phone or have appointments
-  open.</p>
+  <p>One limit: the grades are computed from the insurers' files, not from phone calls. A
+  good grade means the plan's published list is consistent and current. It does not promise
+  that an office will answer the phone or have appointments open.</p>
 
   <h2>If you are choosing a plan</h2>
   <ol>
@@ -87,16 +91,17 @@
   <table>
     <tbody>
     <tr><td><strong>Plan-county pair</strong></td><td>One plan in one county. The unit every
-      grade attaches to. The methodology page calls it a cell.</td></tr>
-    <tr><td><strong>Attestation date</strong></td><td>The date a plan's file claims a
+      grade attaches to. <a href="{{ depth }}methodology/index.html">How grades are computed.</a></td></tr>
+    <tr><td><strong>Update date</strong></td><td>The date a plan's file claims a
       provider entry was last updated. Federal rules require monthly updates.</td></tr>
     <tr><td><strong>NPI</strong></td><td>A provider's federal ID number. The registry
       retires NPIs for many reasons: retirement, death, or practice and entity changes. When
       a plan still lists a retired NPI, its directory carries an identifier the federal
       registry no longer recognizes. The retirement alone does not tell us why.</td></tr>
     <tr><td><strong>Out-of-area listing</strong></td><td>A provider attached to a plan even
-      though none of the provider's offices fall inside any county the plan covers. It
-      inflates the count of providers without adding anyone you can reach.</td></tr>
+      though none of the provider's listed addresses fall inside any county the plan covers,
+      or any neighboring county. These listings raise the provider count without adding
+      anyone a member can reach.</td></tr>
     <tr><td><strong>Plan ID</strong></td><td>The 14-character code (like 12345TX0010001)
       that identifies a plan in federal filings. Your plan documents carry it.</td></tr>
     </tbody>

@@ -11,7 +11,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /gnw
 
 COPY pipeline/ pipeline/
-RUN pip install --no-cache-dir ./pipeline requests ijson pyarrow duckdb jinja2 openpyxl
+# Editable install on purpose: gnw resolves its repo-relative inputs
+# (scoping/, data/, site/) via Path(__file__).resolve().parents[2]. A normal
+# install puts the package under site-packages, so that resolves to the Python
+# lib dir, not /gnw. Editable keeps __file__ at /gnw/pipeline/gnw so parents[2]
+# is /gnw, matching the local dev layout and where the COPYs below land.
+RUN pip install --no-cache-dir -e ./pipeline requests ijson pyarrow duckdb jinja2 openpyxl
 
 # Static inputs the pipeline reads from the repo (seed list, platform map,
 # taxonomy archive, site templates and assets).
