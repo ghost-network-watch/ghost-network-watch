@@ -45,7 +45,7 @@
     <div class="stat"><div class="num">{{ national.thin_bh_pct }}%</div>
       <div class="lbl">of plan-county pairs list fewer than 10 mental health providers</div></div>
     <div class="stat"><div class="num">{{ "{:,}".format(national.deactivated) }}</div>
-      <div class="lbl">listed providers carry IDs the federal registry has retired</div></div>
+      <div class="lbl">listed providers carry IDs the federal registry has deactivated</div></div>
   </div>
 </section>
 
@@ -124,7 +124,8 @@
       on the federal registry's deactivated list. Half were deactivated at least
       {{ national.deact_median_months }} months before the file was fetched.</li>
       <li><strong>{{ national.stale_files }}</strong> directory files show a newest update
-      date more than a year before we fetched them, against a monthly-update requirement.</li>
+      date more than a year before we fetched them, against CMS guidance requiring at least
+      monthly updates.</li>
     </ul>
   </div>
   <p class="note">Every number on this site traces back to specific entries in the insurer's own

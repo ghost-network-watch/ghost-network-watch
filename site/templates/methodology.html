@@ -12,15 +12,18 @@
   <p>Every insurer selling plans on HealthCare.gov must publish its full list of doctors
   and therapists as a public data file and keep it current. Two federal rules stack up
   here, both enforced by the Centers for Medicare and Medicaid Services (CMS).
-  45 CFR 156.230(b) requires an up-to-date, accurate and complete provider directory.
-  45 CFR 156.230(c) is the machine-readable half, requiring issuers in the
-  Federally-facilitated Exchange to publish that same information in a format HHS
-  specifies. The monthly update cadence for these files comes from CMS's annual Letter
-  to Issuers rather than from the regulation itself. We download every one of those
-  files each month and archive them.</p>
+  <a href="https://www.ecfr.gov/current/title-45/section-156.230">45 CFR 156.230(b)</a>
+  requires an up-to-date, accurate and complete provider directory. 45 CFR 156.230(c) is
+  the machine-readable half, requiring issuers in the Federally-facilitated Exchange to
+  publish that same information in a format HHS specifies. The monthly update cadence for
+  these files comes from CMS's
+  <a href="https://www.cms.gov/CCIIO/Resources/Regulations-and-Guidance/Downloads/Final-2017-Letter-to-Issuers_022916.pdf">2017
+  Letter to Issuers</a> (pages 52 and 53), still operative by reference in later years,
+  rather than from the regulation itself. We download every one of those files each month
+  and archive them.</p>
   <p>Then we check every entry for problems a patient would hit: phone numbers like
   999999999, update dates from the year 1900, providers listed hundreds of miles from the
-  plan's counties, and provider ID numbers the federal government has retired. Every
+  plan's counties, and provider ID numbers the federal government has deactivated. Every
   problem we find becomes one row of evidence, tied to an archived copy of the insurer's
   file. The rows add up to a grade for each plan in each county.</p>
   <p>Two limits. The grades are computed from files, not phone calls. A good grade means
@@ -69,14 +72,17 @@
   against them.</p>
 
   <h3>Entries that disagree with the federal provider registry</h3>
-  <p>Every US provider has a National Provider Identifier (NPI), a 10-digit number issued
-  by the federal government and tracked in a public registry called NPPES. The registry
-  publishes a monthly list of retired identifiers.</p>
+  <p>Nearly every provider who bills insurance has a National Provider Identifier (NPI), a
+  10-digit number issued by the federal government and tracked in a public registry called
+  NPPES. Providers who bill no insurance are not required to have one. CMS publishes a
+  monthly file of deactivated NPIs, listing every NPI deactivated since 2005 and its
+  deactivation date.</p>
   <p><strong>Registry status.</strong> We flag entries whose NPI is missing, fails its
-  checksum, or appears on the federal retired-identifier list while absent from the
-  active registry. Identifiers are retired for many reasons, including retirement, death,
-  and practice changes. The flag says one thing only. The insurer's current directory
-  carries an identifier the federal registry retired, as of a dated report.</p>
+  checksum, or appears on CMS's deactivation report while carrying no active record in the
+  monthly registry file. NPIs are deactivated for many reasons, and CMS's own published
+  reasons are death, disbandment, fraud, and other. The flag says one thing only. The
+  insurer's current directory carries an identifier CMS deactivated, as of a dated
+  report.</p>
   <p><strong>Specialty disagreement.</strong> The file lists a provider under a mental
   health specialty while the registry records only unrelated fields, such as physical
   therapy. One of the two databases is wrong about this provider. We do not know which
@@ -117,7 +123,7 @@
   below shows how the counts move at other cutoffs.</p>
   <p><strong>E3: the file disagrees with a federal registry snapshot.</strong> Either
   database could be the stale one. These flags always carry the registry date and the
-  note that identifiers are retired for many innocent reasons.</p>
+  note that identifiers are deactivated for many innocent reasons.</p>
 
   <h3>The cutoffs at other settings</h3>
   {% if prelaunch %}
