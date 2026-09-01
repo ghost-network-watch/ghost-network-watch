@@ -35,39 +35,57 @@
 
   <h3>Problems with the whole file</h3>
   <p><strong>Dead file.</strong> The web address the insurer gave CMS returns nothing, or
-  most of the files it points to can't be read. We can't audit a file we can't fetch,
-  so every plan from that insurer is marked X for unauditable instead of scored. An F
-  means the published content is bad. An X means there was nothing to check.</p>
+  most of the files it points to can't be read. In practice the X grade is assigned by
+  outcome rather than by cause. Any insurer that CMS lists as selling plans, but that
+  produced no scorable provider records this month, is marked X for unauditable instead of
+  scored, whether the fetch failed or the file came back unreadable. An F means the
+  published content is bad. An X means there was nothing to check.</p>
   <p><strong>Browser-only access.</strong> Some insurers' files load in a web browser but
   refuse automated tools, which defeats the purpose of a machine-readable file. We note
   this on the insurer's page. It does not lower the score, because the content, once
   fetched, is complete.</p>
 
   <h3>Problems with individual entries, read straight from the file</h3>
-  <p><strong>Placeholder values.</strong> Phone numbers like 999999999, ZIP code 99999,
-  street addresses that literally say "null", and update dates before 2014. An entry like
-  that is unusable exactly as published. This is the heaviest penalty.</p>
+  <p><strong>Placeholder values.</strong> A contact field that carries filler instead of
+  contact information. Four kinds count, and the full list matters because it is the
+  heaviest-weighted check on the site:</p>
+  <ul>
+    <li><strong>Phone.</strong> Blank, fewer than 10 digits, or the same digit repeated
+    (999999999, 0000000000).</li>
+    <li><strong>ZIP.</strong> 99999 or 00000, or any value that is not 5 or 9 digits
+    long.</li>
+    <li><strong>Address.</strong> Blank, or literally "null", "n/a", "na", or
+    "unknown".</li>
+    <li><strong>Update date.</strong> Before 2014, or dated later than the day we fetched
+    the file.</li>
+  </ul>
+  <p>An entry like that is unusable exactly as published. Placeholder phones, ZIPs and
+  addresses carry the heaviest penalty weight on the site, tied with a missing or malformed
+  NPI. Placeholder dates carry somewhat less.</p>
   <p><strong>Old update dates.</strong> Each entry carries a date saying when it was last
   updated. We flag entries older than 180 days, and more heavily past 365. One caveat
   matters here. Most files stamp one shared date on every entry, so the date behaves like a
   file-generation timestamp. An old date is a real warning sign. A fresh date proves
   nothing about any single entry, and we never present a fresh file as verified.</p>
   <p><strong>One shared phone number and nothing else.</strong> Every phone number on the
-  entry is a number that appears on at least 1% of the file's entries or 50 entries,
-  whichever is larger. We identify whose number it is where we can, because a provider
+  entry is a number that appears on at least 1% of the file's entries that carry a usable
+  phone number, or 50 such entries, whichever is larger. We identify whose number it is where we can, because a provider
   group's own booking line is a smaller problem than a number that reaches nobody. We
   also check whether the federal registry lists a different direct phone for that
   provider.</p>
   <p><strong>Many addresses on one provider.</strong> One individual provider listed at more
-  than 10 street addresses at once, or an organization at more than 25. We skip specialties
-  that legitimately cover many sites, like radiologists.{% if not prelaunch %} The highest
-  count we found lists one clinician at over 300 addresses.{% endif %}</p>
+  than 10 street addresses at once, or an organization at more than 25. For individuals we
+  skip specialties that legitimately cover many sites, including radiology, pathology,
+  anesthesiology, emergency medicine, and hospitalists. That exclusion applies to
+  individuals only, because an organization at 25 addresses is a different claim.{% if not
+  prelaunch %} The highest count this month lists one clinician at
+  {{ "{:,}".format(thresholds.addr_max_individual) }} addresses.{% endif %}</p>
   <p><strong>Out-of-area listings.</strong> A provider attached to a plan even though none
   of the provider's addresses fall inside any county the plan covers, or any neighboring
   county. These entries add to the provider count without adding anyone a member can reach.
   They are excluded from county counts and scored at the plan level.</p>
-  <p><strong>Missing accepting-patients answer.</strong> Individual providers are required
-  to say whether they accept new patients. We flag entries that leave it blank or say
+  <p><strong>Missing accepting-patients answer.</strong> Insurers are required to say, for
+  each individual provider they list, whether that provider accepts new patients. We flag entries that leave it blank or say
   unknown. Facilities and groups are allowed to omit this field, and we never count that
   against them.</p>
 
@@ -97,10 +115,16 @@
   times.</p>
   <p>The in-county entries carry 80% of the grade. The plan's out-of-area rate carries
   the other 20%, because those entries never appear in any county count and would
-  otherwise be invisible.</p>
-  <p>A registry disagreement can lower a score by at most 20 points. The registry is itself
-  self-reported and lags reality, so we hold that cap until insurers have had one monthly
-  notification and correction round to respond.</p>
+  otherwise be invisible. Inside that second block the rate is multiplied by 0.8 before it
+  scores, so a plan whose every listing is out of area loses 16 points rather than the full
+  20. We would rather disclose the constant than let a reader derive it and find it
+  undocumented.</p>
+  <p>A registry disagreement can lower a score by at most 20 points. That cap covers the
+  two checks that rest on comparing the file against a federal registry snapshot, meaning
+  deactivated NPIs and specialty disagreements. It does not cover a missing or malformed
+  NPI, because those are read straight off the insurer's own file and need no registry to
+  establish. The registry is itself self-reported and lags reality, so we hold the cap until
+  insurers have had one monthly notification and correction round to respond.</p>
   <p>We also recompute every score with all penalty weights set equal, as a check that
   our chosen weights are not driving the story. Where the two versions land in different
   letter grades, the plan's page shows both. The full data download carries both scores
@@ -130,8 +154,10 @@
   <p>When findings publish on {{ launch_date }}, this section will show how each count moves
   at looser and stricter cutoffs.</p>
   {% else %}
-  <p>Share of all {{ snapshot_label }} provider records flagged at each alternate
-  cutoff:</p>
+  <p>Share of all {{ snapshot_label }} provider records flagged at each alternate cutoff.
+  Both rows are computed exactly as their check is computed, so the address row counts
+  individual providers with the specialty exclusions applied, and the staleness row measures
+  against {{ thresholds.ref_date }}, the day we fetched the files.</p>
   <table style="max-width: 40rem">
     <thead><tr><th>Check</th><th class="num">Looser</th><th class="num">Published cutoff</th><th class="num">Stricter</th></tr></thead>
     <tbody>
@@ -166,8 +192,11 @@
     <li>Every downloaded file is archived with its web address, download time, response
     headers, and a cryptographic fingerprint (SHA-256). Claims cite the archived copy, so
     anyone can re-check them.</li>
-    <li>At least 14 days before publication, each insurer's technical contact on file
-    with CMS receives its complete flag export.</li>
+    <li>At least 14 days before publication, each insurer's technical contact on file with
+    CMS receives its flag export. Every record-level finding ships in full. The one
+    exception is out-of-area listings, which run to hundreds of millions of rows across all
+    issuers, so those ship as per-plan totals plus a 50,000-row sample. An insurer wanting
+    its complete out-of-area rows can ask, and we will send them.</li>
     <li>Disputes sent to <a href="mailto:{{ contact }}">{{ contact }}</a> or filed through
     the <a href="{{ repo_url }}/issues">public correction tracker</a> are published
     verbatim alongside the flags they dispute.</li>

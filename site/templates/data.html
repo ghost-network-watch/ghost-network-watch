@@ -27,9 +27,11 @@
 
   <h2>The evidence behind the grades</h2>
   <p>Every grade on this site is built from individual findings. Each row in these files is
-  one problem in one insurer's published listing, exactly as published. Every row carries
-  the fingerprint (SHA-256 hash) of the archived file it came from and the position of the
-  record inside it, so anyone can check our work against the archived original.</p>
+  one problem in one insurer's published listing, exactly as published. Every record-level
+  row carries the fingerprint (SHA-256 hash) of the archived file it came from and the
+  position of the record inside it, so a finding can be traced to one entry in one dated
+  file. The out-of-area files are the exception, because they are published as per-plan
+  totals rather than record rows, so they carry a plan ID instead.</p>
   <p class="note">Provider details in these files are quoted from the insurer's published
   directory. No claim is made about the provider. Listed clinicians are often unaware of
   how they appear in payer directories.</p>
@@ -45,10 +47,12 @@
     {% endfor %}
     </tbody>
   </table>
-  <p>One finding type, out-of-area listings, produces hundreds of millions of rows; for it
-  we publish per-plan totals plus a 250,000-row random sample. Two other finding types
-  exceed 250,000 rows and are also published as random samples of that size. Complete sets
-  are reproducible; see below.</p>
+  <p>One finding type, out-of-area listings, produces hundreds of millions of rows, so for
+  it we publish per-plan totals plus a 250,000-row random sample. Two more finding types,
+  old update dates and shared phone numbers, also exceed 250,000 rows and ship as random
+  samples of that size. Every other finding type ships complete, including placeholder
+  values, which exceeds 250,000 rows but is small enough to publish whole. Complete sets are
+  reproducible; see below.</p>
   <p>Prefer to explore without downloading? Open the scores file in
   <a href="https://lite.datasette.io/?csv=https://ghostnetworkwatch.org/data/files/plan_county_scores.csv.gz">Datasette
   Lite</a>, a free tool that runs in your browser, so you can poke at the data without

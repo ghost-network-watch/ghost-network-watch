@@ -212,30 +212,58 @@ def _unauditable(con, data_root: Path) -> dict[str, dict]:
 
 
 def _threshold_sensitivity(con) -> dict:
-    """E2 metrics at alternate cutoffs (rubric §4.1 requires publishing these)."""
+    """E2 metrics at alternate cutoffs (rubric §4.1 requires publishing these).
+
+    These numbers are a published invitation to re-run the checks at other
+    cutoffs, so each row has to be computed the way its check is computed.
+    Two bugs used to break that: the staleness reference date was hardcoded,
+    which would have published August's ages forever, and the address row
+    counted every record instead of applying M6's INDIVIDUAL filter and
+    specialty exclusion, so the number under "10 addresses" did not match the
+    rule the same page describes.
+    """
     total = con.execute("SELECT count(*) FROM providers").fetchone()[0]
+    ref = con.execute("SELECT max(fetched_at)::DATE FROM manifest").fetchone()[0]
     stale = {}
     for days in (90, 180, 365):
         n = con.execute(f"""
             SELECT count(*) FROM providers
             WHERE last_updated_on >= '2014-01-01'
-              AND last_updated_on < (DATE '2026-08-21' - INTERVAL {days} DAY)::VARCHAR
+              AND last_updated_on < (DATE '{ref}' - INTERVAL {days} DAY)::VARCHAR
         """).fetchone()[0]
         stale[days] = round(100 * n / total, 1)
     addr = {}
-    counts = con.execute("""
+    for thr in (5, 10, 25):
+        n = con.execute(f"""
+            WITH u AS (
+              SELECT source_sha256, record_idx,
+                     count(DISTINCT coalesce(address,'') || '|' || coalesce(city,'') || '|' ||
+                           coalesce(state,'')) AS n_addr
+              FROM addresses GROUP BY 1, 2
+            )
+            SELECT count(*)
+            FROM u JOIN providers p USING (source_sha256, record_idx)
+            WHERE p.type = 'INDIVIDUAL' AND u.n_addr > {thr}
+              AND NOT regexp_matches(lower(coalesce(p.specialties, '')),
+                  'radiolog|patholog|anesthesiolog|emergency medicine|hospitalist')
+        """).fetchone()[0]
+        addr[thr] = round(100 * (n or 0) / total, 2)
+    # Templated rather than written into the prose, which had gone stale.
+    addr_max = con.execute("""
         WITH u AS (
           SELECT source_sha256, record_idx,
                  count(DISTINCT coalesce(address,'') || '|' || coalesce(city,'') || '|' ||
                        coalesce(state,'')) AS n_addr
           FROM addresses GROUP BY 1, 2
         )
-        SELECT sum((n_addr > 5)::INT), sum((n_addr > 10)::INT), sum((n_addr > 25)::INT)
-        FROM u
-    """).fetchone()
-    for thr, n in zip((5, 10, 25), counts):
-        addr[thr] = round(100 * (n or 0) / total, 2)
-    return {"stale": stale, "addr": addr}
+        SELECT max(u.n_addr)
+        FROM u JOIN providers p USING (source_sha256, record_idx)
+        WHERE p.type = 'INDIVIDUAL'
+          AND NOT regexp_matches(lower(coalesce(p.specialties, '')),
+              'radiolog|patholog|anesthesiolog|emergency medicine|hospitalist')
+    """).fetchone()[0]
+    return {"stale": stale, "addr": addr, "ref_date": str(ref),
+            "addr_max_individual": addr_max}
 
 
 def _national(con, snapshot: str) -> dict:
@@ -575,7 +603,7 @@ def _write_exports(con, out_data: Path, snapshot: str) -> list[dict]:
         "M8_ACCEPTING_UNKNOWN": "Every individual-provider listing that leaves the required "
         "accepting-new-patients field blank or unknown.",
         "M9_NPI_REGISTRY_STATUS": "Every listing whose provider identifier is malformed or "
-        "retired in the federal registry.",
+        "deactivated in the federal registry.",
         "M10_TAXONOMY_MISMATCH": "Every listing labeled mental health whose federal registry "
         "record shows only unrelated specialties.",
     }
@@ -597,9 +625,13 @@ def _write_exports(con, out_data: Path, snapshot: str) -> list[dict]:
                 f"{note} The complete set is {total:,} rows; this file is a random "
                 f"sample of {cap:,}. See below for how to rebuild the complete set."
             )
+        # Name the file for what it holds. These three metrics are usually over
+        # the cap, but not always, and a complete set shipped under a ".sample"
+        # filename invites a reader to think rows were withheld.
         copy_query(
-            f"{m}.sample.csv.gz",
-            f"SELECT * FROM {m.lower()} USING SAMPLE {cap} ROWS",
+            f"{m}.csv.gz" if cap >= total else f"{m}.sample.csv.gz",
+            f"SELECT * FROM {m.lower()}" if cap >= total
+            else f"SELECT * FROM {m.lower()} USING SAMPLE {cap} ROWS",
             sample_note,
             "evidence",
         )
