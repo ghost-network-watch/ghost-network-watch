@@ -1,0 +1,40 @@
+Ghost Network Watch: licensing of outputs
+=========================================
+
+The code in this repository is licensed under Apache-2.0. See LICENSE.
+The project's published outputs are licensed separately, as follows.
+
+Data: CC0 1.0 Universal (public domain dedication)
+-------------------------------------------------
+The Directory Integrity Scores, the plan-county score tables, and the
+evidence-row exports published at ghostnetworkwatch.org/data are released
+under CC0 1.0. To the extent possible under law, Ghost Network Watch waives
+all copyright and related rights in those files. You may copy, modify and
+redistribute them, commercially or not, without permission or attribution.
+
+Full text: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Attribution is not required, but "Ghost Network Watch, Directory Integrity
+Scores, <snapshot> snapshot, ghostnetworkwatch.org" helps readers trace a
+number back to the snapshot that produced it.
+
+Site text and charts: CC BY 4.0
+-------------------------------
+The prose, methodology write-up, and charts on ghostnetworkwatch.org are
+licensed under Creative Commons Attribution 4.0 International. Reuse them
+with credit to "Ghost Network Watch".
+
+Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Underlying source material: not ours to license
+-----------------------------------------------
+The evidence exports quote values from insurers' own machine-readable
+provider directory files, published under 45 CFR 156.230(c), and compare them
+against federal registry snapshots (NPPES) and CMS public use files. Those
+upstream sources are US government works or issuer publications and carry
+their own terms. The CC0 dedication above covers this project's compilation,
+scoring and evidence selection, not the upstream files themselves.
+
+Provider information appearing in evidence rows is quoted from what an
+insurer published. It is not a claim about any individual provider, and
+listed clinicians are often unaware of how they appear in payer directories.
