@@ -20,10 +20,15 @@ Design notes, all of them learned from how this can go wrong:
 * Attachments are the evidence files as generated. No zipping, so a recipient
   can open one file without unpacking everything.
 
+* --account is required and checked against STS. Sending must leave from the
+  account that owns the verified domain, and the ambient AWS_PROFILE is not
+  trustworthy: this project was once deployed wholesale into the wrong account
+  because nothing ever asked.
+
 Usage:
-    python ops/send_notifications.py --snapshot 2026-09 --publish-date 2026-10-26
-    python ops/send_notifications.py --snapshot 2026-09 --publish-date 2026-10-26 --send
-    python ops/send_notifications.py --snapshot 2026-09 --only 10091 --send
+    python ops/send_notifications.py --account <id> --snapshot 2026-09
+    python ops/send_notifications.py --account <id> --snapshot 2026-09 --send
+    python ops/send_notifications.py --account <id> --snapshot 2026-09 --only 10091 --send
 """
 
 from __future__ import annotations
@@ -105,7 +110,20 @@ def main() -> int:
     ap.add_argument("--only", help="one issuer id, for a single test send")
     ap.add_argument("--from", dest="sender", default=FROM_DEFAULT)
     ap.add_argument("--reply-to", default="")
+    ap.add_argument("--account", required=True,
+                    help="expected AWS account id; refuses to run if the active "
+                         "credentials point somewhere else")
     args = ap.parse_args()
+
+    # Mail to 185 named companies is the least reversible thing this repo does,
+    # and it must leave from the account that owns the verified domain. Check
+    # before building anything: the ambient profile has been wrong before.
+    who = boto3.client("sts", region_name=REGION).get_caller_identity()
+    if who["Account"] != args.account:
+        print(f"refusing: --account {args.account} but credentials are for "
+              f"{who['Account']} ({who['Arn']})")
+        print(f"  set the profile explicitly: AWS_PROFILE=gnw {' '.join(sys.argv)}")
+        return 1
 
     root = REPO / "data" / "notify" / args.snapshot
     if not root.is_dir():

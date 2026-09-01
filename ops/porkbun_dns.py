@@ -37,11 +37,15 @@ from pathlib import Path
 API = "https://api.porkbun.com/api/json/v3"
 DOMAIN = "ghostnetworkwatch.org"
 
-# SES DKIM tokens for this domain, from the identity created in us-east-1.
+# SES DKIM tokens for this domain, from the identity in us-east-1. Tokens are
+# minted per identity per account, so moving the project to a different AWS
+# account invalidated the previous set; those CNAMEs were deleted from the zone
+# on 2026-09-01. If the account ever changes again, replace these and remove the
+# stale records with --delete.
 SES_DKIM = (
-    "jo7io6p5j3u5qdm6lfiwnoivzsmmel3h",
-    "gz6x6zzkeieithbshcqyfqgt26bvy56n",
-    "z2pe5avk34k2l2m6qdltkgoql7gcxx47",
+    "5nsfuvdwegcq7qqjhlytwlxhjrlqdnhe",
+    "ahnkjvkqgsnpqqo2mcoeduph6m2ja2tx",
+    "zua4pciepmyu5znnnsopmaqoiunkhqts",
 )
 
 
@@ -180,6 +184,21 @@ def main() -> int:
     ap.add_argument("--apply", action="store_true", help="write the records")
     ap.add_argument("--proton-dkim", nargs=3, metavar="TARGET", default=(),
                     help="the three CNAME targets Proton shows for this domain")
+    ap.add_argument("--add", nargs=3, action="append", default=[],
+                    metavar=("TYPE", "HOST", "CONTENT"),
+                    help="add an arbitrary record, repeatable. HOST may be given "
+                         "fully qualified with a trailing dot, as ACM and other "
+                         "AWS services print it; the domain suffix is stripped "
+                         "for you. Use @ or '' for the apex.")
+    ap.add_argument("--list", action="store_true", help="print the zone and exit")
+    ap.add_argument("--delete", nargs=2, action="append", default=[],
+                    metavar=("TYPE", "HOST"),
+                    help="delete every record matching TYPE and HOST, repeatable. "
+                         "Refuses to touch anything Proton depends on unless "
+                         "--force-proton is given.")
+    ap.add_argument("--force-proton", action="store_true",
+                    help="permit deleting a Proton record. Almost never right: the "
+                         "verification TXT has to stay in place permanently.")
     args = ap.parse_args()
 
     key, secret = creds()
@@ -194,8 +213,58 @@ def main() -> int:
     }
     print(f"{len(existing)} record(s) already in the zone")
 
-    want = records(tuple(args.proton_dkim))
-    if not args.proton_dkim:
+    def short(r):
+        h = r["name"].removesuffix(f".{DOMAIN}").removesuffix(DOMAIN).rstrip(".")
+        return f"  {r['type']:6} {h or '@':44} {r['content'][:60]}"
+
+    if args.list:
+        for r in sorted(existing, key=lambda r: (r["type"], r["name"])):
+            print(short(r))
+        return 0
+
+    if args.delete:
+        # Proton's records are load-bearing and one of them (the verification
+        # TXT) has to persist forever, so they are excluded by default.
+        doomed = []
+        for rtype, host in args.delete:
+            host = host.rstrip(".")
+            if host.endswith(DOMAIN):
+                host = host[: -len(DOMAIN)].rstrip(".")
+            host = "" if host in ("@", "") else host
+            for r in existing:
+                rhost = r["name"].removesuffix(f".{DOMAIN}").removesuffix(DOMAIN).rstrip(".")
+                if r["type"] != rtype.upper() or rhost != host:
+                    continue
+                if "proton" in r["content"].lower() and not args.force_proton:
+                    print(f"  SKIP, Proton record{short(r)}")
+                    continue
+                doomed.append(r)
+        if not doomed:
+            print("\nnothing matched")
+            return 0
+        for r in doomed:
+            print(f"  to delete{short(r)}")
+        if not args.apply:
+            print(f"\nDRY RUN: {len(doomed)} record(s) would be deleted. Re-run with --apply.")
+            return 0
+        for r in doomed:
+            call(f"dns/delete/{DOMAIN}/{r['id']}", key, secret)
+            print(f"  deleted {r['type']} {r['name']}")
+        print(f"\ndeleted {len(doomed)} record(s)")
+        return 0
+
+    want = records(tuple(args.proton_dkim)) if not args.add else []
+    for rtype, host, content in args.add:
+        host = host.rstrip(".")
+        if host.endswith(DOMAIN):
+            host = host[: -len(DOMAIN)].rstrip(".")
+        want.append({
+            "type": rtype.upper(),
+            "name": "" if host in ("@", "") else host,
+            "content": content.rstrip("."),
+            "why": "ad-hoc, from --add",
+        })
+    if not args.add and not args.proton_dkim:
         print("\nNote: Proton's three DKIM targets are unique to your domain and only "
               "visible in Proton's setup screen. Re-run with --proton-dkim T1 T2 T3 to "
               "add them; everything else is included now.")
