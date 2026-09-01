@@ -84,23 +84,79 @@ def records(proton_dkim: tuple[str, ...]) -> list[dict]:
     return out
 
 
+#: Checked in order. Both a JSON file and a KEY=value file work, and the JSON
+#: key names are matched loosely, because Porkbun's own docs use apikey and
+#: secretapikey while everyone's notes-to-self use something else.
+CRED_PATHS = ("~/.porkbun-creds.json", "~/.porkbun.env", "~/.config/porkbun.json")
+
+
+def _from_json(text: str) -> tuple[str, str]:
+    data = json.loads(text)
+    flat: dict[str, str] = {}
+    for k, v in data.items():
+        if isinstance(v, dict):
+            for k2, v2 in v.items():
+                if isinstance(v2, str):
+                    flat[f"{k}.{k2}".lower()] = v2
+        elif isinstance(v, str):
+            flat[k.lower()] = v
+    secret = next((v for k, v in flat.items() if "secret" in k), "")
+    key = next(
+        (v for k, v in flat.items()
+         if "secret" not in k and ("api" in k or "key" in k)),
+        "",
+    )
+    return key, secret
+
+
+def _from_env_file(text: str) -> tuple[str, str]:
+    key = secret = ""
+    for line in text.splitlines():
+        line = line.strip()
+        if "=" not in line or line.startswith("#"):
+            continue
+        name, _, value = line.partition("=")
+        name, value = name.strip().lower(), value.strip().strip("'\"")
+        if "secret" in name:
+            secret = value
+        elif "api" in name or "key" in name:
+            key = value
+    return key, secret
+
+
 def creds() -> tuple[str, str]:
     key = os.environ.get("PORKBUN_API_KEY", "")
     secret = os.environ.get("PORKBUN_SECRET_KEY", "")
+    source = "environment"
     if not (key and secret):
-        path = Path(os.environ.get("PORKBUN_CREDS", "~/.porkbun.env")).expanduser()
-        if path.exists():
-            for line in path.read_text().splitlines():
-                line = line.strip()
-                if line.startswith("PORKBUN_API_KEY="):
-                    key = line.split("=", 1)[1].strip().strip("'\"")
-                elif line.startswith("PORKBUN_SECRET_KEY="):
-                    secret = line.split("=", 1)[1].strip().strip("'\"")
+        candidates = []
+        if os.environ.get("PORKBUN_CREDS"):
+            candidates.append(os.environ["PORKBUN_CREDS"])
+        candidates.extend(CRED_PATHS)
+        for raw in candidates:
+            path = Path(raw).expanduser()
+            if not path.exists():
+                continue
+            text = path.read_text()
+            try:
+                key, secret = (
+                    _from_json(text) if text.lstrip().startswith("{")
+                    else _from_env_file(text)
+                )
+            except (json.JSONDecodeError, ValueError):
+                continue
+            if key and secret:
+                source = str(path)
+                break
     if not (key and secret):
         sys.exit(
-            "No credentials. Put them in ~/.porkbun.env as PORKBUN_API_KEY= and "
-            "PORKBUN_SECRET_KEY=, then chmod 600 that file."
+            "No credentials found. Looked at $PORKBUN_API_KEY/$PORKBUN_SECRET_KEY and "
+            + ", ".join(CRED_PATHS)
+            + ".\nEither point PORKBUN_CREDS at your file or create ~/.porkbun.env with "
+            "PORKBUN_API_KEY= and PORKBUN_SECRET_KEY=, then chmod 600 it."
         )
+    # Say where they came from, never what they are.
+    print(f"credentials loaded from {source}")
     return key, secret
 
 
