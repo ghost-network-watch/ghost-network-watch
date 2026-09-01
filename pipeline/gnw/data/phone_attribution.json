@@ -1,0 +1,6 @@
+{
+  "_comment": "Concentration-number ownership attribution for M5. Severity: plan line > unattributable > provider-org central line. Seeded from scoping verification 2026-08-21.",
+  "8663892727": {"owner": "CVS MinuteClinic national booking line (1-866-389-ASAP)", "class": "provider-org-central-line", "evidence": "scoping/evidence/caresource-8663892727-minuteclinic-exhibit.json"},
+  "8008132000": {"owner": "Kaiser Permanente member services line", "class": "plan-line", "evidence": "scoping probe healthy.kaiserpermanente.org (HI file)"},
+  "8084320000": {"owner": "Kaiser Permanente Hawaii appointment line", "class": "plan-line", "evidence": "scoping probe healthy.kaiserpermanente.org (HI file)"}
+}

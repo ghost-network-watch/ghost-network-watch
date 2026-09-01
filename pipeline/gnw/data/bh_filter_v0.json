@@ -1,0 +1,3311 @@
+{
+ "name": "Ghost Network Watch - behavioral health specialty filter",
+ "version": "v0",
+ "generated": "2026-08-21",
+ "provenance": {
+  "source": "108 CMS PY2026 machine-readable index probes, 163 sampled provider files (~146k records), scoping/probes/*.json",
+  "probe_regex": "psych|mental|behavior|counsel|social work|therap|addiction|substance|marriage|lcsw|lmft|lpc  (case-insensitive; sample_providers.py line 12)",
+  "caveats": [
+   "Probe truncated specialty strings to 60 chars (sample_providers.py line 95); several list values are cut mid-word - re-extract untruncated in pipeline",
+   "bh_specialty_values capped at 25/file from top-500; top_specialties top-20/file - vocabulary is a SAMPLE, not exhaustive; expect new strings at full crawl",
+   "sampled_count = occurrences within sampled/truncated file portions, not population counts",
+   "20 additional BH-relevant values found in top_specialties that the probe regex MISSED (flagged missed_by_probe_regex)"
+  ],
+  "known_regex_false_negative_classes": [
+   "credential abbreviations: LMHC, LCMHC, 'Lic. Indpen. Clin. SW', PsyD, 'EdD)'",
+   "misspellings/truncations: 'LICENSED PROFESSIONAL COUNSLR'",
+   "condition/issue tags: Anxiety Issues/Disorders, Depression Issues, Depressive Disorders, Grief/Loss, Grief and Bereavement, Eap, Attention Deficit Disorders (ADHD), Child Adolescent Issues, Gender Sexuality Issues, Eating Disorders Inpatient Hospital, Abuse, Autism",
+   "false-positive class: 'mental' substring matches inside 'developMENTAL' (Developmental Disabilities, Developmental Pediatrics, Developmental Therapist)"
+  ]
+ },
+ "normalization": {
+  "steps": [
+   "1. html.unescape (observed: 'Psychiatry &amp; Neurology, Child &amp; Adolescent Psychiatry')",
+   "2. Unicode NFKC; normalize apostrophes/quotes (observed bad title-casing: \"Master'S Level Counselor\")",
+   "3. collapse whitespace (observed double spaces: 'Behavioral Health  and  Social Service Providers', 'LICENSED CLINICAL  (LCSW)..')",
+   "4. strip trailing punctuation ;.,: (observed: 'MARRIAGE/FAMILY(THERAPY);', 'LICENSED CLINICAL  (LCSW)..')",
+   "5. SPLIT multi-value strings on '|' and ';' BEFORE matching (observed: 'Psychologist|Psychology', 'Pediatrics;Psych/Mental Health', 'Case Manager/Care Coordinator|Licensed Clinical Social Worker', 'CRN Practitioner Mental Health|Nurse Practitioner - Psychiat')",
+   "6. casefold",
+   "7. exact-match against include/exclude lists first; regex tiers only for unseen strings",
+   "8. regex fix for v1: replace bare 'mental' with '(?<!develop)mental' and add missing tokens: lmhc, lcmhc, licsw, lmsw, lgsw, counslr, psyd, anxiety, depress, grief, bereave, eap\\b, adhd, attention deficit, eating disorder, autism"
+  ],
+  "payer_artifacts_observed": [
+   "comma-split values: 'Psychologist (PhD' / 'PsyD' / 'EdD)' appear as 3 separate array elements (WellSense NH) - rejoin heuristic or match fragments",
+   "NUCC display names as vocabulary (Centene 'Counselor: Mental Health', Elevance 'Addiction (Substance Use Disorder), Counselor', Moda 'Genetic Counselor, MS') - these map 1:1 to taxonomy codes",
+   "full NUCC paths: 'Allopathic & Osteopathic Physicians/Psychiatry & Neurology/...', 'Behavioral Health & Social Service Providers : Counselor : ...'",
+   "junk fragments in some files: 'Spec.', 'LICENSED', 'OR', 'PD', 'PE', 'OS' (likely upstream split bugs - integrity findings themselves)"
+  ],
+  "nppes_crosscheck_strategy": "NPI is 100% present and Luhn-valid across all sampled files. String filter is only a candidate screen; authoritative BH classification = NPI join to NPPES (weekly Full Replacement Monthly NPI File or NPPES API) taxonomy codes. Score BOTH: (a) BH per payer string but no BH NUCC code in NPPES => 'specialty disagrees with public record'; (b) BH per NPPES but absent/mislabeled in directory => potential ghost/undercount."
+ },
+ "nucc_taxonomy_crosscheck": {
+  "source": "nucc_taxonomy_261.csv (v26.1, current), downloaded 2026-08-21 from nucc.org/images/stories/CSV/nucc_taxonomy_261.csv; 883 active codes",
+  "include_code_prefixes": {
+   "101Y": "Counselor (101Y00000X; A0400X Addiction, M0800X Mental Health, P1600X Pastoral, P2500X Professional; S0200X School = ambiguous tier)",
+   "102L": "Psychoanalyst (102L00000X)",
+   "102X": "Poetry Therapist (102X00000X) - BH grouping, low priority",
+   "1012": "Drama Therapist (101200000X) - BH grouping, low priority",
+   "103G": "Clinical Neuropsychologist (103G00000X; legacy 103GC0700X)",
+   "103K": "Behavior Analyst (103K00000X)",
+   "103T": "Psychologist (103T00000X + 20 specializations incl 103TC0700X Clinical, 103TC2200X Clinical Child & Adolescent, 103TA0400X Addiction, 103TF0200X Forensic, 103TP0016X Prescribing)",
+   "1041": "Social Worker (104100000X; 1041C0700X Clinical, 1041S0200X School = ambiguous tier)",
+   "106E": "Assistant Behavior Analyst (106E00000X)",
+   "106H": "Marriage & Family Therapist (106H00000X)",
+   "106S": "Behavior Technician (106S00000X)",
+   "2084_psychiatry_subset_only": [
+    "2084P0800X Psychiatry",
+    "2084P0804X Child & Adolescent Psychiatry",
+    "2084P0805X Geriatric Psychiatry",
+    "2084P0802X Addiction Psychiatry",
+    "2084A0401X Addiction Medicine",
+    "2084F0202X Forensic Psychiatry",
+    "2084P0015X Psychosomatic Medicine",
+    "2084B0040X Behavioral Neurology & Neuropsychiatry"
+   ],
+   "addiction_medicine_other_families": [
+    "207QA0401X Family Medicine/Addiction Medicine",
+    "207RA0401X Internal Medicine/Addiction Medicine",
+    "207LA0401X Anesthesiology/Addiction Medicine",
+    "2083A0300X Preventive Medicine/Addiction Medicine"
+   ],
+   "363LP0808X": "Nurse Practitioner, Psychiatric/Mental Health",
+   "364SP08xx": [
+    "364SP0808X Psych/MH CNS",
+    "364SP0807X Child & Adolescent",
+    "364SP0809X Adult",
+    "364SP0810X Child & Family",
+    "364SP0811X Chronically Ill",
+    "364SP0812X Community",
+    "364SP0813X Geropsychiatric"
+   ],
+   "163W_bh_subset": [
+    "163WP0808X RN Psych/MH",
+    "163WP0809X RN Psych/MH Adult",
+    "163WP0807X RN Psych/MH Child & Adolescent",
+    "163WA0400X RN Addiction"
+   ],
+   "facilities": [
+    "261QM0801X Clinic/Center Mental Health (incl CMHC)",
+    "261QM0850X Adult MH Clinic",
+    "261QM0855X Adolescent & Children MH Clinic",
+    "261QR0405X Clinic Rehab Substance Use Disorder",
+    "261QM2800X Methadone Clinic",
+    "273R00000X Psychiatric Unit",
+    "276400000X Rehab Substance Use Disorder Unit",
+    "283Q00000X Psychiatric Hospital",
+    "323P00000X Psychiatric Residential Treatment Facility",
+    "322D00000X Residential Treatment, Emotionally Disturbed Children",
+    "320800000X Community Based Residential Treatment, Mental Illness",
+    "324500000X Substance Abuse Rehabilitation Facility",
+    "3245S0500X SA Rehab, Children",
+    "310500000X Intermediate Care Facility, Mental Illness",
+    "251S00000X Community/Behavioral Health"
+   ]
+  },
+  "critical_gotchas": [
+   "2084 prefix ALONE over-captures: 13 of 23 codes in the 2084 family are neurology/other (Neurology 2084N0400X, Sleep 2084S0012X, Sports 2084S0010X, Pain 2084P2900X, Epilepsy, Vascular, Neurocritical, Neuromuscular, Brain Injury, Obesity, Hospice, Clinical Neurophysiology, Diagnostic Neuroimaging). Enumerate the 8 psychiatry subcodes explicitly.",
+   "Verified against CSV: 2084S0010X = SPORTS Medicine, 2084S0012X = SLEEP Medicine (easy to flip)",
+   "Grouping-level '10' prefix is NOT a code prefix: BH & Social Service grouping codes start 101/102/103/104/106 but 1041 (Social Worker) vs 104100000X - match on the listed classification prefixes, not '10'",
+   "Genetic Counselor 170300000X is in 'Other Service Providers' grouping - the display name 'Genetic Counselor, MS' explains bare-'Counselor' collisions",
+   "PA psychiatry has NO dedicated NUCC code (only 363A Medical/Surgical) - psych-PA strings cannot be NPPES-verified at specialization level",
+   "225XM0800X (Occupational Therapist, Mental Health) is a BH-flavored code inside the excluded OT family"
+  ],
+  "2084_exclude_codes": [
+   "2084N0400X",
+   "2084N0402X",
+   "2084N0600X",
+   "2084N0008X",
+   "2084V0102X",
+   "2084S0012X",
+   "2084S0010X",
+   "2084E0001X",
+   "2084A2900X",
+   "2084P2900X",
+   "2084P0301X",
+   "2084B0002X",
+   "2084H0002X",
+   "2084D0003X"
+  ]
+ },
+ "include": [
+  {
+   "value": "Anxiety Issues",
+   "sampled_count": 305,
+   "category": "condition_modality_tag",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Depression Issues",
+   "sampled_count": 298,
+   "category": "condition_modality_tag",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Child Adolescent Issues",
+   "sampled_count": 196,
+   "category": "condition_modality_tag",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "LICENSED PROFESSIONAL COUNSLR",
+   "sampled_count": 180,
+   "category": "counselor_licensed",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Grief/Loss",
+   "sampled_count": 152,
+   "category": "condition_modality_tag",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Eap",
+   "sampled_count": 150,
+   "category": "condition_modality_tag",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Anxiety Disorders",
+   "sampled_count": 123,
+   "category": "condition_modality_tag",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Depressive Disorders",
+   "sampled_count": 115,
+   "category": "condition_modality_tag",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Grief and Bereavement",
+   "sampled_count": 91,
+   "category": "condition_modality_tag",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Eating Disorders Inpatient Hospital",
+   "sampled_count": 73,
+   "category": "facility_bh",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Gender Sexuality Issues",
+   "sampled_count": 73,
+   "category": "condition_modality_tag",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Lic. Indpen. Clin. SW",
+   "sampled_count": 69,
+   "category": "social_work",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Psychiatry",
+   "sampled_count": 48,
+   "category": "psychiatry"
+  },
+  {
+   "value": "EdD)",
+   "sampled_count": 42,
+   "category": "psychology",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "PsyD",
+   "sampled_count": 42,
+   "category": "psychology",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Attention Deficit Disorders (ADHD)",
+   "sampled_count": 38,
+   "category": "condition_modality_tag",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "LCMHC",
+   "sampled_count": 32,
+   "category": "counselor_licensed",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Psychology",
+   "sampled_count": 29,
+   "category": "psychology"
+  },
+  {
+   "value": "Social Worker",
+   "sampled_count": 28,
+   "category": "social_work"
+  },
+  {
+   "value": "LMHC",
+   "sampled_count": 24,
+   "category": "counselor_licensed",
+   "missed_by_probe_regex": true
+  },
+  {
+   "value": "Psychologist",
+   "sampled_count": 20,
+   "category": "psychology"
+  },
+  {
+   "value": "PSYCHIATRY",
+   "sampled_count": 16,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Addiction Medicine",
+   "sampled_count": 15,
+   "category": "addiction"
+  },
+  {
+   "value": "Behavioral Analyst",
+   "sampled_count": 14,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "Licensed Professional Counselor",
+   "sampled_count": 14,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Clinical Social Worker",
+   "sampled_count": 13,
+   "category": "social_work"
+  },
+  {
+   "value": "Marriage & Family Therapist",
+   "sampled_count": 13,
+   "category": "marriage_family"
+  },
+  {
+   "value": "SOCIAL WORKER",
+   "sampled_count": 11,
+   "category": "social_work"
+  },
+  {
+   "value": "Behavior Analyst",
+   "sampled_count": 10,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "PSYCHOLOGY",
+   "sampled_count": 9,
+   "category": "psychology"
+  },
+  {
+   "value": "Social Work",
+   "sampled_count": 9,
+   "category": "social_work"
+  },
+  {
+   "value": "Child & Adolescent Psychiatry",
+   "sampled_count": 8,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Mental Health Counselor",
+   "sampled_count": 8,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Neuropsychology",
+   "sampled_count": 8,
+   "category": "psychology"
+  },
+  {
+   "value": "Professional Counselor",
+   "sampled_count": 8,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Social Worker, Clinical",
+   "sampled_count": 8,
+   "category": "social_work"
+  },
+  {
+   "value": "ADDICTION MEDICINE",
+   "sampled_count": 7,
+   "category": "addiction"
+  },
+  {
+   "value": "PSYCHOLOGIST",
+   "sampled_count": 7,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychiatric Nurse Practitioner",
+   "sampled_count": 7,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry & Neurology, Psychiatry",
+   "sampled_count": 7,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Counselor, Professional",
+   "sampled_count": 6,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Mental Health",
+   "sampled_count": 6,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Counselor, Mental Health",
+   "sampled_count": 5,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "LICENSED PROFESSIONAL COUNSELOR",
+   "sampled_count": 5,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Marriage & Family Therapy",
+   "sampled_count": 5,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Marriage and Family Therapist",
+   "sampled_count": 5,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Psychiatry & Neurology, Child & Adolescent Psychiatry",
+   "sampled_count": 5,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychologist, Clinical",
+   "sampled_count": 5,
+   "category": "psychology"
+  },
+  {
+   "value": "BEHAVIORAL ANALYST",
+   "sampled_count": 4,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "Behavioral Health",
+   "sampled_count": 4,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Board Certified Behavior Analyst",
+   "sampled_count": 4,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "CHILD & ADOLESCENT PSYCHIATRY",
+   "sampled_count": 4,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Child and Adolescent Psychiatry",
+   "sampled_count": 4,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Clinical Neuropsychologist",
+   "sampled_count": 4,
+   "category": "psychology"
+  },
+  {
+   "value": "Geriatric Psychiatry",
+   "sampled_count": 4,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Licensed Clinical Professional Counselor",
+   "sampled_count": 4,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Master Social Worker",
+   "sampled_count": 4,
+   "category": "social_work"
+  },
+  {
+   "value": "Mental Health Counseling",
+   "sampled_count": 4,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Nurse Practitioner, Psychiatric/Mental Health",
+   "sampled_count": 4,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatrist",
+   "sampled_count": 4,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry, Child & Adolescent",
+   "sampled_count": 4,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Behavior Technician",
+   "sampled_count": 3,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "Board Cert Behavioral Analyst",
+   "sampled_count": 3,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "Board Certified Behavioral Analyst",
+   "sampled_count": 3,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "CRN Practitioner Mental Health|Nurse Practitioner - Psychiat",
+   "sampled_count": 3,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Certified Social Worker",
+   "sampled_count": 3,
+   "category": "social_work"
+  },
+  {
+   "value": "Clinical Psychology",
+   "sampled_count": 3,
+   "category": "psychology"
+  },
+  {
+   "value": "GERIATRIC PSYCHIATRY",
+   "sampled_count": 3,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Licensed Alcohol and Drug Counselor",
+   "sampled_count": 3,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Chemical Dependency Counselor",
+   "sampled_count": 3,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Mental Health Counselor",
+   "sampled_count": 3,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Professional Clinical Counselor",
+   "sampled_count": 3,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "MARRIAGE/FAMILY COUNSELOR",
+   "sampled_count": 3,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Marriage and Family Therapy",
+   "sampled_count": 3,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Marriage/Family",
+   "sampled_count": 3,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Master'S Level Counselor",
+   "sampled_count": 3,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Mental Health Nurse Practitioner",
+   "sampled_count": 3,
+   "category": "psych_nursing"
+  },
+  {
+   "value": "Nurse Practitioner, Psych/Mental Health",
+   "sampled_count": 3,
+   "category": "psych_nursing"
+  },
+  {
+   "value": "Physician Psychiatry",
+   "sampled_count": 3,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatric Mental Health Nurse Practitioner",
+   "sampled_count": 3,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry, Adult",
+   "sampled_count": 3,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychological Examiner",
+   "sampled_count": 3,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist|Psychology",
+   "sampled_count": 3,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology (Clinical)",
+   "sampled_count": 3,
+   "category": "psychology"
+  },
+  {
+   "value": "ABA Therapist",
+   "sampled_count": 2,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "ADDICTION PSYCHIATRY",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "ALCOHOL/DRG/CHEM COUNSELOR",
+   "sampled_count": 2,
+   "category": "addiction"
+  },
+  {
+   "value": "Addiction Counselor",
+   "sampled_count": 2,
+   "category": "addiction"
+  },
+  {
+   "value": "Addiction Psychiatry",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Adult Psychiatric & Mental Health Nurse Practitioner",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Alcohol and Drug Counselor",
+   "sampled_count": 2,
+   "category": "addiction"
+  },
+  {
+   "value": "Alcohol/Drug/Chem Counselor",
+   "sampled_count": 2,
+   "category": "addiction"
+  },
+  {
+   "value": "Applied Behavior Analysis",
+   "sampled_count": 2,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "BEHAVIOR ANALYST",
+   "sampled_count": 2,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "BEHAVIORAL HEALTH",
+   "sampled_count": 2,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "BEHAVIORAL HEALTH NURSE PRACTITIONER",
+   "sampled_count": 2,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "BEHAVIORAL HEALTH PSYCHIATRY",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "BEHAVIORAL HEALTH PSYCHOLOGY",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "BEHAVIORAL HEALTH SUBSTANCE ABUSE",
+   "sampled_count": 2,
+   "category": "addiction"
+  },
+  {
+   "value": "BEHAVIORAL HEALTH THERAPIST",
+   "sampled_count": 2,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "COUNSELOR - PROFESSIONAL",
+   "sampled_count": 2,
+   "category": "counseling_service"
+  },
+  {
+   "value": "CRN Clinical Nurse Spec - Mental Health|Psychiatric Nurse",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Certified Clinical Social Worker",
+   "sampled_count": 2,
+   "category": "social_work"
+  },
+  {
+   "value": "Child/Adolescent Psychiatry",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Clinic/Center - Mental Health (Including Community Mental Ce",
+   "sampled_count": 2,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Clinical Social Work",
+   "sampled_count": 2,
+   "category": "social_work"
+  },
+  {
+   "value": "Clinical Social Work Associate",
+   "sampled_count": 2,
+   "category": "social_work"
+  },
+  {
+   "value": "Clinical Social Work|Licensed Clinical Social Worker",
+   "sampled_count": 2,
+   "category": "social_work"
+  },
+  {
+   "value": "Community Mental Health Center",
+   "sampled_count": 2,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Counseling - Adults",
+   "sampled_count": 2,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Counseling - Children",
+   "sampled_count": 2,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Counseling - Children and Adolescents",
+   "sampled_count": 2,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Counseling - Geriatric",
+   "sampled_count": 2,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Counseling / Therapy",
+   "sampled_count": 2,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Counselor - Mental Health",
+   "sampled_count": 2,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Counselor Therapy",
+   "sampled_count": 2,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Dialectical Behavioral Therapy",
+   "sampled_count": 2,
+   "category": "condition_modality_tag"
+  },
+  {
+   "value": "LICENSED CLINCAL SOCIAL WORKER",
+   "sampled_count": 2,
+   "category": "social_work"
+  },
+  {
+   "value": "LICENSED MARRIAGE AND FAMILY THERAPIST",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Lic Clinical Social Worker",
+   "sampled_count": 2,
+   "category": "social_work"
+  },
+  {
+   "value": "Licensed Addiction Counselor",
+   "sampled_count": 2,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Independent Addiction Counselor",
+   "sampled_count": 2,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Independent Clinical Social Worker",
+   "sampled_count": 2,
+   "category": "social_work"
+  },
+  {
+   "value": "Licensed Marriage Family Therapist",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Licensed Marriage and Family Therapy",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Licensed Marriage/Family Ther.",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Licensed Marriage/Family Therapy",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Licensed Mental Hlth Counselor",
+   "sampled_count": 2,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Prof. Counselor",
+   "sampled_count": 2,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Social Worker",
+   "sampled_count": 2,
+   "category": "social_work"
+  },
+  {
+   "value": "MARRIAGE & FAMILY THERAPIST",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "MARRIAGE & FAMILY THERAPY",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "MARRIAGE AND FAMILY COUNSELOR",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "MARRIAGE THERAPY",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "MARRIAGE/FAMILY(THERAPY);",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "MASTERS LEVEL COUNSELOR",
+   "sampled_count": 2,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "MENTAL HEALTH COUNSELOR",
+   "sampled_count": 2,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Marriage and Family",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Marriage/Family Therapy Assoc",
+   "sampled_count": 2,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Mental Health Nursing",
+   "sampled_count": 2,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Mental Health Psychiatry",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Mental Health Psychology",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "Mental Nurse Practitioner",
+   "sampled_count": 2,
+   "category": "psych_nursing"
+  },
+  {
+   "value": "NURSE PRACTITIONER - PSYCHIATRIC/MENTAL HEALTH",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Neuropsychiatry",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Neuropsychological Testing",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "Nurse Practitioner (Mental Health)",
+   "sampled_count": 2,
+   "category": "psych_nursing"
+  },
+  {
+   "value": "PSYCHIATRIC NURSE PRACTITIONER",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Pediatric Psychiatry",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Pediatric Psychology",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "Professional Counseling",
+   "sampled_count": 2,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Professional Counselor Assoc",
+   "sampled_count": 2,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Psychiatric Nurse",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatric/Mental Health Nurse Practitioner",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatrist specializing in Pediatrics",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry - Children and Adolescents",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry, Adult, Adolescent, & Child",
+   "sampled_count": 2,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychological Testing",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist, Counseling",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist|Psychology|Psychologist|Psychology",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology - Pediatric",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology, Adult",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology, Adult and Adolescent",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology, Adult, Adolescent and Child",
+   "sampled_count": 2,
+   "category": "psychology"
+  },
+  {
+   "value": "Qualified Mental Health Assoc",
+   "sampled_count": 2,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Qualified Mental Health Prof",
+   "sampled_count": 2,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "SUBSTANCE ABUSE COUNSELING",
+   "sampled_count": 2,
+   "category": "addiction"
+  },
+  {
+   "value": "Social Work Therapy",
+   "sampled_count": 2,
+   "category": "social_work"
+  },
+  {
+   "value": "Social Worker - Clinical",
+   "sampled_count": 2,
+   "category": "social_work"
+  },
+  {
+   "value": "Substance Abuse",
+   "sampled_count": 2,
+   "category": "addiction"
+  },
+  {
+   "value": "Substance Use",
+   "sampled_count": 2,
+   "category": "addiction"
+  },
+  {
+   "value": "Substance Use Disorder",
+   "sampled_count": 2,
+   "category": "addiction"
+  },
+  {
+   "value": "Substance Use Disorder Rehabilitation Clinic/Center",
+   "sampled_count": 2,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Trauma Therapy",
+   "sampled_count": 2,
+   "category": "condition_modality_tag"
+  },
+  {
+   "value": "ADOLESCENT & CHILDREN MENTAL HEALTH CLINIC",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "ADULT PSYCHIATRIC MENTAL HEALTH NURSING",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "ADULT PSYCHIATRY",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "AUTISM THERAPY",
+   "sampled_count": 1,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "Addiction (Substance Use Disorder) Counseling",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Addiction (Substance Use Disorder), Counselor",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Addiction Medicine (Family Medicine)",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Addiction Medicine (Internal Medicine)",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Addiction Medicine Doctor",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Addiction Psychiatry|Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Adult Mental Health Clinic/Center",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Adult Psychiatric & MH Cns/Np",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Adult Psychiatric/Mental Health Clinical Nurse Specialist",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Adult Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Alcohol & Drug-Substance Abuse Specialist",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Alcohol and Drug Addiction OHMHAS",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Alcohol/Substance Abuse",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Applied Behavioral Analysis",
+   "sampled_count": 1,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "BEHAVIOR TECHNICIAN",
+   "sampled_count": 1,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "BEHAVIORAL - ADDICTION MEDICINE",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "BEHAVIORAL - COUNSELING",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "BEHAVIORAL - MARRIAGE AND FAMILY THERAPY",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "BEHAVIORAL - MENTAL HEALTH SERVICES",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "BEHAVIORAL - SOCIAL WORK SERVICES",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "BEHAVIORAL HEALTH COUNSELOR",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "BEHAVIORAL HEALTH PHYSICIAN ASSISTANT",
+   "sampled_count": 1,
+   "category": "psych_pa"
+  },
+  {
+   "value": "BOARD CERTIFIED BEHAVIOR ANALYST",
+   "sampled_count": 1,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "Behavior Analysis",
+   "sampled_count": 1,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "Behavioral Analysis-Autism Specialist",
+   "sampled_count": 1,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "Behavioral Health  and  Social Service Providers",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health & Social Service Providers : Counselor",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health & Social Service Providers : Counselor : A",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health & Social Service Providers : Counselor : M",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health - Child & Adolescent",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health - Counselor (Mental Health and Professiona",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health - Marriage and Family Therapist",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Behavioral Health - Psychology",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Behavioral Health - Social Worker",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Behavioral Health Advanced Practice Nurse CNP",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health Counseling",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health Nurse-RN",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health Specialist",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health and Social Services",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health-Autism Specialist",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health-Marriage & Family Therapy",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Behavioral Health-Mental Health Counselor",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Behavioral Health-Nurse Practitioner",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Health-Psychologist",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Behavioral Health-Social Worker",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Behavioral Hlt",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Behavioral Neurology & Neuropsychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Behavioral Nurse",
+   "sampled_count": 1,
+   "category": "psych_nursing"
+  },
+  {
+   "value": "Behavioral health",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Board Certified Assistant Behavior Analyst",
+   "sampled_count": 1,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "CHEMICAL DEPENDENCY COUNSELOR ASSISTANT",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "CHILD AND ADOLESCENT PSYCHIATRY",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "CHILD PSYCHIATRY",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "CHILD/ADOLESCENT PSYCHIATRIC MENTAL HEALTH NURSING",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "CHILD/ADOLESCENT PSYCHIATRY",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "CLINICAL LICENSED MASTERS SOCIAL WORKER",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "COMMUNITY MENTAL HEALTH CENTER",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "COUNSELOR - MENTAL HEALTH",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "CRN Clinical Nurse Spec - Mental Health|Nurse Practitioner -",
+   "sampled_count": 1,
+   "category": "psych_nursing"
+  },
+  {
+   "value": "CRN Practitioner Mental Health|Certified Registered Nurse Pr",
+   "sampled_count": 1,
+   "category": "psych_nursing"
+  },
+  {
+   "value": "Case Manager/Care Coordinator|Licensed Clinical Social Worke",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Case Manager/Care Coordinator|Licensed Master Social Worker",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Case Manager/Care Coordinator|Licensed Professional Counselo",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Chemical Dependency Counselor",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Chemical Dependency Counselor Assistant",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Chemical Dependency Counselor-Independent",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Child & Adolescent Mental Health Clinic/Center",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Child & Adolescent Psychiatrist",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Child & Adolescent Psychiatry|Child Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Child & Adolescents Psychology",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Child Adolescent Psychology MH Cns",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Child And Adolescent Psychiatrist",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Child Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Clinical MH Counselor",
+   "sampled_count": 1,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Clinical Psychologist",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Clinical Social Worker",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Clinical Social Work|Licensed Clinical Social Worker|Clinica",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Clinical, Psychologist",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Clinical, Social Work",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Community Mental Health Center OHMHAS",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Community Substance Abuse Treatment Center",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Community/Behavioral Health",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Community/Behavioral Health Agency",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Counseling - Marriage and Family",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Counseling, Psychologist",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Counseling/AODA/Behavioral Health",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Counselor - Professional",
+   "sampled_count": 1,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Counselor Trainee",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Counselor, Addiction (Substance Use Disorder)",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Counselor: Addiction (Substance Use Disorder)",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Counselor: Mental Health",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Counselor: Professional",
+   "sampled_count": 1,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Electroconvulsive Therapy (Ect) Inpatient Hospital",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Faith Based Counseling",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Family Counseling",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Family Medicine, Addiction Medicine",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Family Psychology And MH Np",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Forensic Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Geriatric Psychiatrist",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "INTEGRATED BEHAVIORAL HEALTH",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "LCSW",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "LICENSED ALCOHOL AND DRUG COUNSELOR",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "LICENSED CHEMICAL DEPENDENCY COUNSELORS (II AND III)",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "LICENSED CLINICAL  (LCSW)..",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "LICENSED INDEPENDENT CHEMICAL DEPENDENCY COUNSELORS",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "LICENSED INDEPENDENT MARRIAGE AND FAMILY THERAPY",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "LICENSED PROFESSIONAL CLINICAL COUNSELOR",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "LICENSED SOCIAL WORKER",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "LIMITED LICENSED PSYCHOLOGIST",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "LPC",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Lic Al/Drug Counselor I",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Lic Al/Drug Counselor II",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Lic Appl Behavior Analys",
+   "sampled_count": 1,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "Lic Marriage Family Therapy",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Lic Pro Clinical Cnslr LPCC",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Lic. MH Counselor",
+   "sampled_count": 1,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Lic. Marital & Fam.Therapist",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Lic. Professional Counsel",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "License - Licensed Graduate Social Worker (LGSW)",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Licensed Alcohol and Drug Counselor|Licensed Professional Co",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Associate Professional Counselor",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Behavioral Analyst",
+   "sampled_count": 1,
+   "category": "behavior_analysis"
+  },
+  {
+   "value": "Licensed Certified Social Worker",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Licensed Clinical Social Work",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Licensed Clinical Social Worker|Certified Registered Nurse P",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Licensed Clinical Social Worker|Licensed Professional Counse",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Licensed Independent Clinical Social Worker (LC)",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Licensed Independent Social Worker",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Licensed Marriage and Family Therapist",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Licensed Mental Health Counslr",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Prof Counselor",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Professional Counselor CCP",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Licensed Professional Counselor|Psychologist",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Licensed Psychological Associate",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "MENTAL HEALTH",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "MS - LPC-NH",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Marital/Couples Therapy",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Marriage And Family Therapy",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Marriage Counseling",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Marriage and Family Therapy-Independent",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Marriage/Family Therapist",
+   "sampled_count": 1,
+   "category": "marriage_family"
+  },
+  {
+   "value": "Mental Health & Substance Use Inpatient Hospital",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Mental Health & Substance Use Intensive Outpatient Program (",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Mental Health Clinic/Center",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Mental Health Counselor (LPC, LCDC, LMFT, LCSW)",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Mental Health Day Treatment Facility",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Mental Health Inpatient Hospital",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Mental Health Intensive Outpatient Program (Iop)",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Mental Health Services",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Mental Health Targeted Case Management",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Mental Health, Counselor",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "NEUROPSYCHOLOGY",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Neuropsychologist",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Neuropsychology-Clinical",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Nurse Practitioner - Psychiatric/Mental Health",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Nurse Practitioner, Psychiatric-Mental Health",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Nurse Practitioner, Psychiatry & Neurology, Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Nurse Practitioner-Psych/Mental Health",
+   "sampled_count": 1,
+   "category": "psych_nursing"
+  },
+  {
+   "value": "Nurse Practitioner: Psych/Mental Health",
+   "sampled_count": 1,
+   "category": "psych_nursing"
+  },
+  {
+   "value": "OHIO DEPARTMENT OF MENTAL HEALTH & ADDICTION SERVICES",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Other Behavioral Health",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "PEDIATRIC BEHAVIORAL HEALTH",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "PEDIATRIC PSYCHIATRY",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "PHYSICIAN ASSISTANT BEHAVIORAL",
+   "sampled_count": 1,
+   "category": "psych_pa"
+  },
+  {
+   "value": "PSYC/MENTAL HEALTH NURSE PRACTITIONER",
+   "sampled_count": 1,
+   "category": "psych_nursing"
+  },
+  {
+   "value": "PSYCHIATRIC PHYSICIAN ASSISTANT",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "PSYCHIATRY (ADULT)",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "PSYCHIATRY (ALL AGES)",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "PSYCHOLOGIST - CLINICAL",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Pastoral Counselor",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Pediatric Behavioral Health",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Pediatrics;Psych/Mental Health",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Physician Addictionology",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Physician Assistant (Mental Health)",
+   "sampled_count": 1,
+   "category": "psych_pa"
+  },
+  {
+   "value": "Physician Assistant Behavioral",
+   "sampled_count": 1,
+   "category": "psych_pa"
+  },
+  {
+   "value": "Physician Assistant, Psychiatry & Neurology, Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Primary Care Behavioral Health",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Professional Clinical Counselor",
+   "sampled_count": 1,
+   "category": "counselor_licensed"
+  },
+  {
+   "value": "Professional, Counselor",
+   "sampled_count": 1,
+   "category": "counseling_service"
+  },
+  {
+   "value": "Psych/Mental Health",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Psychiatric - Mental Health",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatric Hospital",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Psychiatric Mental Health NP",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatric Physician Assistant",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatric-Mental Health Nurse Practitioner",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatric/Mental Health, Nurse Prac",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatric/Mental Health, RN",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatrist - Adult",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatrist Child & Adolescen",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatrist specializing in geriatrics",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry & Neurology, Addiction Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry & Neurology, Child & Adolescent Psychia",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry & Neurology-Child & Adolescent Psychiat",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry & Neurology-Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry & Neurology: Addiction Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry & Neurology: Psychiatry",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry &amp; Neurology, Child &amp; Adolescent Psychiatr",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry - Child & Adolescent",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry - Child and Adolescent",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry - Pediatric",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry DO",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry and Psychology",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry, Adolescent & Child",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry, Adult & Adolescent",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry, Child",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry, Child and Adolescent",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry, Children & Adult",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry, Geriatric",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry-Child and Adolescent",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry-General",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry/Behavioral Health",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychiatry/Behavioral Health-Child & Adolescent",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Psychologist (PhD",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist, Clinical Child & Adolescent",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist, Forensic",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist, Health Service",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist-Autism",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist-Clinical",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist-Clinical Child & Adolescent",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist: Clinical",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychologist: Clinical Child & Adolescent",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology (PhD)",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology - Child & Adolescent",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology, Child",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology, Doctoral",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology, HSPP",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology, Masters Llp",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology, Neurological",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology, School",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "Psychology-Child and Adolescent",
+   "sampled_count": 1,
+   "category": "psychology"
+  },
+  {
+   "value": "QUALIFIED MENTAL HEALTH SPECIALIST (ASSOCIATES DEGREE)",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "QUALIFIED MENTAL HEALTH SPECIALIST (BACHELORS DEGREE)",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "QUALIFIED MENTAL HEALTH SPECIALIST (HIGH SCHOOL)",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "QUALIFIED MENTAL HEALTH SPECIALIST (MASTERS DEGREE)",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "QUALIFIED MENTAL HEALTH SPECIALIST (PLUS 3 YEARS)",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Qualified Mental Health Professional",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Qualified Mental Health Specialist - 3 Years Experience",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Qualified Mental Health Specialist - Bachelors",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "Qualified Mental Health Specialist - Masters",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  },
+  {
+   "value": "SOCIAL WORKER - CLINICAL",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "SOCIAL WORKER - INDEPENDENT",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "SOCIAL WORKER TRAINEE",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "SUBSTANCE ABUSE COUNSELOR",
+   "sampled_count": 1,
+   "category": "addiction"
+  },
+  {
+   "value": "Social Worker Trainee",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Social Worker-Independent",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Social Worker: Clinical",
+   "sampled_count": 1,
+   "category": "social_work"
+  },
+  {
+   "value": "Specialist-Psychiatry (Mental Illness)",
+   "sampled_count": 1,
+   "category": "psychiatry"
+  },
+  {
+   "value": "Substance Abuse Disorder Rehabilitation Facility",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Substance Use Assessment Program",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Substance Use Day Treatment Program",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Substance Use Detoxification Inpatient Hospital",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Substance Use Detoxification Outpatient Program",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Substance Use Inpatient Hospital Rehab",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "Substance Use Intensive Outpatient Program (Iop)",
+   "sampled_count": 1,
+   "category": "facility_bh"
+  },
+  {
+   "value": "mental health",
+   "sampled_count": 1,
+   "category": "mental_health_general"
+  }
+ ],
+ "exclude": [
+  {
+   "value": "Physical Therapy",
+   "sampled_count": 36,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Occupational Therapy",
+   "sampled_count": 33,
+   "category": "occupational_therapy",
+   "nucc_ref": [
+    "225X00000X (Occupational Therapist)",
+    "224Z00000X (OT Assistant)",
+    "EXCEPTION: 225XM0800X (OT, Mental Health) exists - case-by-case"
+   ]
+  },
+  {
+   "value": "Physical Therapist",
+   "sampled_count": 20,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Occupational Therapist",
+   "sampled_count": 17,
+   "category": "occupational_therapy",
+   "nucc_ref": [
+    "225X00000X (Occupational Therapist)",
+    "224Z00000X (OT Assistant)",
+    "EXCEPTION: 225XM0800X (OT, Mental Health) exists - case-by-case"
+   ]
+  },
+  {
+   "value": "Speech Therapy",
+   "sampled_count": 11,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  },
+  {
+   "value": "OCCUPATIONAL THERAPY",
+   "sampled_count": 10,
+   "category": "occupational_therapy",
+   "nucc_ref": [
+    "225X00000X (Occupational Therapist)",
+    "224Z00000X (OT Assistant)",
+    "EXCEPTION: 225XM0800X (OT, Mental Health) exists - case-by-case"
+   ]
+  },
+  {
+   "value": "PHYSICAL THERAPY",
+   "sampled_count": 10,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Genetic Counselor",
+   "sampled_count": 7,
+   "category": "genetic_counseling",
+   "nucc_ref": [
+    "170300000X (Genetic Counselor, MS - display name matches 'Counselor' searches)"
+   ]
+  },
+  {
+   "value": "OCCUPATIONAL THERAPIST",
+   "sampled_count": 5,
+   "category": "occupational_therapy",
+   "nucc_ref": [
+    "225X00000X (Occupational Therapist)",
+    "224Z00000X (OT Assistant)",
+    "EXCEPTION: 225XM0800X (OT, Mental Health) exists - case-by-case"
+   ]
+  },
+  {
+   "value": "Speech Therapist",
+   "sampled_count": 5,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  },
+  {
+   "value": "Massage Therapist",
+   "sampled_count": 4,
+   "category": "massage_therapy",
+   "nucc_ref": [
+    "225700000X (Massage Therapist)"
+   ]
+  },
+  {
+   "value": "PHYSICAL THERAPIST",
+   "sampled_count": 4,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Physical Therapy & Rehabilitation Service",
+   "sampled_count": 4,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology, Neurology",
+   "sampled_count": 4,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Physical Therapist - Hand",
+   "sampled_count": 3,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Physical Therapy Center",
+   "sampled_count": 3,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Physical Therapy Center - Occupational Therapy",
+   "sampled_count": 3,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Genetic Counseling",
+   "sampled_count": 2,
+   "category": "genetic_counseling",
+   "nucc_ref": [
+    "170300000X (Genetic Counselor, MS - display name matches 'Counselor' searches)"
+   ]
+  },
+  {
+   "value": "Genetic Counselor, MS",
+   "sampled_count": 2,
+   "category": "genetic_counseling",
+   "nucc_ref": [
+    "170300000X (Genetic Counselor, MS - display name matches 'Counselor' searches)"
+   ]
+  },
+  {
+   "value": "Licensed Massage Therapy",
+   "sampled_count": 2,
+   "category": "massage_therapy",
+   "nucc_ref": [
+    "225700000X (Massage Therapist)"
+   ]
+  },
+  {
+   "value": "Nutrition Counseling",
+   "sampled_count": 2,
+   "category": "nutrition_dietetics",
+   "nucc_ref": [
+    "133V00000X (Dietitian, Registered)"
+   ]
+  },
+  {
+   "value": "Occupational Therapy (ASD)",
+   "sampled_count": 2,
+   "category": "occupational_therapy",
+   "nucc_ref": [
+    "225X00000X (Occupational Therapist)",
+    "224Z00000X (OT Assistant)",
+    "EXCEPTION: 225XM0800X (OT, Mental Health) exists - case-by-case"
+   ]
+  },
+  {
+   "value": "Pediatric Physical Therapy",
+   "sampled_count": 2,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Pediatric Speech Therapy",
+   "sampled_count": 2,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology - Neurology",
+   "sampled_count": 2,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology, Sleep Medicine",
+   "sampled_count": 2,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "SPEECH PATHOLOGIST/SPEECH THERAPIST",
+   "sampled_count": 2,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  },
+  {
+   "value": "SPEECH THERAPIST",
+   "sampled_count": 2,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  },
+  {
+   "value": "SPEECH THERAPY",
+   "sampled_count": 2,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  },
+  {
+   "value": "Speech and Language Therapy (ASD)",
+   "sampled_count": 2,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  },
+  {
+   "value": "Therapy - Occupational",
+   "sampled_count": 2,
+   "category": "occupational_therapy",
+   "nucc_ref": [
+    "225X00000X (Occupational Therapist)",
+    "224Z00000X (OT Assistant)",
+    "EXCEPTION: 225XM0800X (OT, Mental Health) exists - case-by-case"
+   ]
+  },
+  {
+   "value": "Therapy - Physical",
+   "sampled_count": 2,
+   "category": "other_somatic_therapy",
+   "nucc_ref": [
+    "misc rehab/somatic modalities"
+   ]
+  },
+  {
+   "value": "Audiologist - Speech Therapist",
+   "sampled_count": 1,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  },
+  {
+   "value": "Clinical Nurse Specialist, Psychiatry & Neurology, Neurology",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "DEVELOPMENTAL THERAPIST",
+   "sampled_count": 1,
+   "category": "developmental_therapist_rehab",
+   "nucc_ref": [
+    "222Q00000X (Developmental Therapist - NUCC rehab section, not BH grouping)"
+   ]
+  },
+  {
+   "value": "Diagnostic Neuroimaging (Psychiatry & Neurology)|Radiology",
+   "sampled_count": 1,
+   "category": "radiation_or_radiology",
+   "nucc_ref": [
+    "2084D0003X (Diagnostic Neuroimaging)",
+    "2085R... radiology family"
+   ]
+  },
+  {
+   "value": "GENETIC COUNSELOR",
+   "sampled_count": 1,
+   "category": "genetic_counseling",
+   "nucc_ref": [
+    "170300000X (Genetic Counselor, MS - display name matches 'Counselor' searches)"
+   ]
+  },
+  {
+   "value": "HAND THERAPY",
+   "sampled_count": 1,
+   "category": "other_somatic_therapy",
+   "nucc_ref": [
+    "misc rehab/somatic modalities"
+   ]
+  },
+  {
+   "value": "INDEPENDENT PHYSICAL THERAPIST",
+   "sampled_count": 1,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Individual Physical Therapist",
+   "sampled_count": 1,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Infusion Therapy",
+   "sampled_count": 1,
+   "category": "other_somatic_therapy",
+   "nucc_ref": [
+    "misc rehab/somatic modalities"
+   ]
+  },
+  {
+   "value": "Massage Therapy",
+   "sampled_count": 1,
+   "category": "massage_therapy",
+   "nucc_ref": [
+    "225700000X (Massage Therapist)"
+   ]
+  },
+  {
+   "value": "Medical Nutritional Counseling",
+   "sampled_count": 1,
+   "category": "nutrition_dietetics",
+   "nucc_ref": [
+    "133V00000X (Dietitian, Registered)"
+   ]
+  },
+  {
+   "value": "Neurology, Psych/Neuro",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Neuromuscular Therapy",
+   "sampled_count": 1,
+   "category": "other_somatic_therapy",
+   "nucc_ref": [
+    "misc rehab/somatic modalities"
+   ]
+  },
+  {
+   "value": "OCCUPATIONAL THERAPIST - PEDIATRICS",
+   "sampled_count": 1,
+   "category": "occupational_therapy",
+   "nucc_ref": [
+    "225X00000X (Occupational Therapist)",
+    "224Z00000X (OT Assistant)",
+    "EXCEPTION: 225XM0800X (OT, Mental Health) exists - case-by-case"
+   ]
+  },
+  {
+   "value": "OCCUPATIONAL THERAPY ASSISTANT",
+   "sampled_count": 1,
+   "category": "occupational_therapy",
+   "nucc_ref": [
+    "225X00000X (Occupational Therapist)",
+    "224Z00000X (OT Assistant)",
+    "EXCEPTION: 225XM0800X (OT, Mental Health) exists - case-by-case"
+   ]
+  },
+  {
+   "value": "Occupational Therapist - Hand",
+   "sampled_count": 1,
+   "category": "occupational_therapy",
+   "nucc_ref": [
+    "225X00000X (Occupational Therapist)",
+    "224Z00000X (OT Assistant)",
+    "EXCEPTION: 225XM0800X (OT, Mental Health) exists - case-by-case"
+   ]
+  },
+  {
+   "value": "Occupational Therapist, Pediatrics",
+   "sampled_count": 1,
+   "category": "occupational_therapy",
+   "nucc_ref": [
+    "225X00000X (Occupational Therapist)",
+    "224Z00000X (OT Assistant)",
+    "EXCEPTION: 225XM0800X (OT, Mental Health) exists - case-by-case"
+   ]
+  },
+  {
+   "value": "Optometry - Therapeutic",
+   "sampled_count": 1,
+   "category": "optometry_therapeutic",
+   "nucc_ref": [
+    "152W... optometrist family"
+   ]
+  },
+  {
+   "value": "Osteopathic Manipulative Therapy",
+   "sampled_count": 1,
+   "category": "other_somatic_therapy",
+   "nucc_ref": [
+    "misc rehab/somatic modalities"
+   ]
+  },
+  {
+   "value": "PEDIATRIC SPEECH THERAPIST",
+   "sampled_count": 1,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  },
+  {
+   "value": "PHYSICAL THERAPY ASSISTANT",
+   "sampled_count": 1,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Physical Therapist: Geriatrics",
+   "sampled_count": 1,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Physical Therapist: Orthopedic",
+   "sampled_count": 1,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Physical Therapist: Pediatrics",
+   "sampled_count": 1,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Physical Therapy Rehabilitation Services",
+   "sampled_count": 1,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Physiotherapist",
+   "sampled_count": 1,
+   "category": "physical_therapy",
+   "nucc_ref": [
+    "225100000X (Physical Therapist)",
+    "225200000X (Physical Therapy Assistant)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology - Vascular Neurology",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology, Clinical Neurophysiology",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology, Neurology with Special Qualification",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology-Clinical Neurophysiology",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology-Neurology",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology-Neurology with Special Qual",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology-Vascular Neurology",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology: Clinical Neurophysiology",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology: Neurology",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "Psychiatry & Neurology: Vascular Neurology",
+   "sampled_count": 1,
+   "category": "neurology_2084_family",
+   "nucc_ref": [
+    "2084N0400X (Neurology)",
+    "2084N0402X (Child Neurology)",
+    "2084N0600X (Clinical Neurophysiology)",
+    "2084V0102X (Vascular Neurology)",
+    "2084S0012X (Sleep Medicine)",
+    "2084E0001X (Epilepsy)",
+    "2084A2900X (Neurocritical Care)",
+    "2084N0008X (Neuromuscular Medicine)",
+    "2084P2900X (Pain Medicine)",
+    "2084P0301X (Brain Injury Medicine)",
+    "2084B0002X (Obesity Medicine)",
+    "2084H0002X (Hospice and Palliative)",
+    "2084S0010X (Sports Medicine)"
+   ]
+  },
+  {
+   "value": "RADIATION THERAPY",
+   "sampled_count": 1,
+   "category": "radiation_or_radiology",
+   "nucc_ref": [
+    "2084D0003X (Diagnostic Neuroimaging)",
+    "2085R... radiology family"
+   ]
+  },
+  {
+   "value": "Radiation Therapy",
+   "sampled_count": 1,
+   "category": "radiation_or_radiology",
+   "nucc_ref": [
+    "2084D0003X (Diagnostic Neuroimaging)",
+    "2085R... radiology family"
+   ]
+  },
+  {
+   "value": "Radiology, Therapeutic",
+   "sampled_count": 1,
+   "category": "radiation_or_radiology",
+   "nucc_ref": [
+    "2084D0003X (Diagnostic Neuroimaging)",
+    "2085R... radiology family"
+   ]
+  },
+  {
+   "value": "Speech Language Therapy",
+   "sampled_count": 1,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  },
+  {
+   "value": "Speech Therapy CCP",
+   "sampled_count": 1,
+   "category": "speech_language",
+   "nucc_ref": [
+    "235Z00000X (Speech-Language Pathologist)"
+   ]
+  }
+ ],
+ "ambiguous": [
+  {
+   "value": "Medication Management",
+   "sampled_count": 80,
+   "category": "condition_tag_context",
+   "missed_by_probe_regex": true,
+   "rule": "'Medication Management' (80x, Cigna BH file), 'Autism' (10x, GHC-SCW), 'Abuse' (40x, Providence OR) are condition/service tags whose meaning depends on file vocabulary. In observed files all sit in BH-tag vocabularies (siblings: Anxiety Disorders, Depressive Disorders, Grief and Bereavement, ECT Inpatient). Rule: include only when file-level vocabulary is detected as BH-condition-tag style; resolve provider via NPPES."
+  },
+  {
+   "value": "Abuse",
+   "sampled_count": 40,
+   "category": "condition_tag_context",
+   "missed_by_probe_regex": true,
+   "rule": "'Medication Management' (80x, Cigna BH file), 'Autism' (10x, GHC-SCW), 'Abuse' (40x, Providence OR) are condition/service tags whose meaning depends on file vocabulary. In observed files all sit in BH-tag vocabularies (siblings: Anxiety Disorders, Depressive Disorders, Grief and Bereavement, ECT Inpatient). Rule: include only when file-level vocabulary is detected as BH-condition-tag style; resolve provider via NPPES."
+  },
+  {
+   "value": "Autism",
+   "sampled_count": 10,
+   "category": "condition_tag_context",
+   "missed_by_probe_regex": true,
+   "rule": "'Medication Management' (80x, Cigna BH file), 'Autism' (10x, GHC-SCW), 'Abuse' (40x, Providence OR) are condition/service tags whose meaning depends on file vocabulary. In observed files all sit in BH-tag vocabularies (siblings: Anxiety Disorders, Depressive Disorders, Grief and Bereavement, ECT Inpatient). Rule: include only when file-level vocabulary is detected as BH-condition-tag style; resolve provider via NPPES."
+  },
+  {
+   "value": "Counseling",
+   "sampled_count": 9,
+   "category": "bare_counselor",
+   "rule": "Bare 'Counselor'/'Counseling' is BH (NUCC 101Y00000X) in NUCC-display-name-derived vocabularies: in every observed file carrying it (Christus, Centene, Moda-AK, Antidote, Intermountain, Mending, Sendero, Elevance), genetic counselors appear as a SEPARATE value ('Genetic Counselor, MS' = NUCC display name for 170300000X). Rule: include when the same file also carries a distinct genetic-counselor value or other NUCC display names; always resolve via NPI->NPPES taxonomy."
+  },
+  {
+   "value": "Counselor",
+   "sampled_count": 9,
+   "category": "bare_counselor",
+   "rule": "Bare 'Counselor'/'Counseling' is BH (NUCC 101Y00000X) in NUCC-display-name-derived vocabularies: in every observed file carrying it (Christus, Centene, Moda-AK, Antidote, Intermountain, Mending, Sendero, Elevance), genetic counselors appear as a SEPARATE value ('Genetic Counselor, MS' = NUCC display name for 170300000X). Rule: include when the same file also carries a distinct genetic-counselor value or other NUCC display names; always resolve via NPI->NPPES taxonomy."
+  },
+  {
+   "value": "Psychiatry & Neurology",
+   "sampled_count": 4,
+   "category": "bare_psych_neuro_pair",
+   "rule": "Bare 'Psychiatry & Neurology' family name (NUCC 2084 classification) cannot distinguish psychiatrists from neurologists. Rule: resolve via NPPES primary taxonomy; if unresolvable, exclude from BH counts and track as 'unresolved 2084'."
+  },
+  {
+   "value": "Neurology & Psychiatry",
+   "sampled_count": 2,
+   "category": "bare_psych_neuro_pair",
+   "rule": "Bare 'Psychiatry & Neurology' family name (NUCC 2084 classification) cannot distinguish psychiatrists from neurologists. Rule: resolve via NPPES primary taxonomy; if unresolvable, exclude from BH counts and track as 'unresolved 2084'."
+  },
+  {
+   "value": "Pediatric Developmental-Behavioral",
+   "sampled_count": 2,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "Psychiatry, Neurology",
+   "sampled_count": 2,
+   "category": "bare_psych_neuro_pair",
+   "rule": "Bare 'Psychiatry & Neurology' family name (NUCC 2084 classification) cannot distinguish psychiatrists from neurologists. Rule: resolve via NPPES primary taxonomy; if unresolvable, exclude from BH counts and track as 'unresolved 2084'."
+  },
+  {
+   "value": "Allopathic & Osteopathic Physicians/Psychiatry & Neurology/N",
+   "sampled_count": 1,
+   "category": "truncated_2084_path",
+   "rule": "Probe truncated at 60 chars ('.../Psychiatry & Neurology/N...') - could be Neurology or Neuromuscular. Artifact of OUR sampling, not the source; re-extract untruncated in pipeline."
+  },
+  {
+   "value": "Behavioral Health - DO NOT USE",
+   "sampled_count": 1,
+   "category": "payer_junk_flag",
+   "rule": "'Behavioral Health - DO NOT USE' is an insurer-internal placeholder published in a public file (data-quality finding in its own right). Rule: treat record as BH for filtering but flag file in integrity scoring."
+  },
+  {
+   "value": "COUNSELOR",
+   "sampled_count": 1,
+   "category": "bare_counselor",
+   "rule": "Bare 'Counselor'/'Counseling' is BH (NUCC 101Y00000X) in NUCC-display-name-derived vocabularies: in every observed file carrying it (Christus, Centene, Moda-AK, Antidote, Intermountain, Mending, Sendero, Elevance), genetic counselors appear as a SEPARATE value ('Genetic Counselor, MS' = NUCC display name for 170300000X). Rule: include when the same file also carries a distinct genetic-counselor value or other NUCC display names; always resolve via NPI->NPPES taxonomy."
+  },
+  {
+   "value": "Counselor, School",
+   "sampled_count": 1,
+   "category": "school_counselor",
+   "rule": "NUCC 101YS0200X sits in the BH grouping, but school counselors rarely deliver plan-covered MH services. Rule: count separately; do not count toward BH network adequacy headline metrics."
+  },
+  {
+   "value": "DEVELOPMENTAL  BEHAVIORAL PEDS",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "DEVELOPMENTAL DISABILITIES",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "DEVELOPMENTAL PEDIATRICS",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "Developmental Behavioral Pediatrics",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "Developmental-Behavioral Pedi",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "Developmental-Behavioral Pediatrics",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "NEUROLOGY AND PSYCHIATRY",
+   "sampled_count": 1,
+   "category": "bare_psych_neuro_pair",
+   "rule": "Bare 'Psychiatry & Neurology' family name (NUCC 2084 classification) cannot distinguish psychiatrists from neurologists. Rule: resolve via NPPES primary taxonomy; if unresolvable, exclude from BH counts and track as 'unresolved 2084'."
+  },
+  {
+   "value": "Neurodevelopmental Disabilities, Peds",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "Neurology Psychiatry",
+   "sampled_count": 1,
+   "category": "bare_psych_neuro_pair",
+   "rule": "Bare 'Psychiatry & Neurology' family name (NUCC 2084 classification) cannot distinguish psychiatrists from neurologists. Rule: resolve via NPPES primary taxonomy; if unresolvable, exclude from BH counts and track as 'unresolved 2084'."
+  },
+  {
+   "value": "PEDIATRIC NEURODEVELOPMENTAL DISABILITIES",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "PEDIATRICS - DEVELOPMENTAL/BEHAVIORAL",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "Pediatric Developmental Behav",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "Pediatric Developmental and Behavioral Medicine",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "Pediatrician specializing in Developmental and Behavioral He",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "Pediatrics: Developmental - Behavioral Pediatrics",
+   "sampled_count": 1,
+   "category": "developmental_behavioral_peds",
+   "rule": "Developmental-Behavioral Pediatrics (2080P0006X) and Neurodevelopmental Disabilities (2080P0008X/2084P0005X) physicians treat ADHD/autism/behavioral issues but are not core MH clinicians. NOTE: several of these matched the probe regex only via 'mental' inside 'developMENTAL'. Rule: track as adjacent-BH tier, excluded from headline counts; fix regex with negative lookbehind (?<!develop)mental."
+  },
+  {
+   "value": "Psychiatry and Neurology",
+   "sampled_count": 1,
+   "category": "bare_psych_neuro_pair",
+   "rule": "Bare 'Psychiatry & Neurology' family name (NUCC 2084 classification) cannot distinguish psychiatrists from neurologists. Rule: resolve via NPPES primary taxonomy; if unresolvable, exclude from BH counts and track as 'unresolved 2084'."
+  },
+  {
+   "value": "Therapist - Multi-Specialty Group",
+   "sampled_count": 1,
+   "category": "unqualified_therapist",
+   "rule": "'Therapist - Multi-Specialty Group' does not specify modality. Rule: resolve via NPPES taxonomy; otherwise exclude."
+  }
+ ],
+ "counts": {
+  "include": 433,
+  "exclude": 73,
+  "ambiguous": 30,
+  "universe": 536
+ }
+}

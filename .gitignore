@@ -1,4 +1,14 @@
-data/
+# The 11 GB working store: archived blobs, parquet, scores, notify bundles,
+# call sheets. Anchored to the repo root on purpose. An unanchored "data/"
+# matches at any depth, which silently excluded the pipeline's own config and
+# the seed PUF, so a fresh clone could not run the tests or build the image.
+/data/
+
+# Scoping working files stay out, except the seed. caresource_phone_audit.json
+# in here carries provider names, so this is an allowlist, not a blocklist.
+scoping/data/*
+!scoping/data/mr-puf-2026.csv
+
 .venv/
 __pycache__/
 *.pyc

@@ -1,0 +1,5 @@
+{
+  "_comment": "M2 ACCESS_RESTRICTED: hosts whose mandated machine-readable files return 403 to non-browser User-Agents but 200 to a browser UA, verified same-day dual-UA fetches.",
+  "verified": "2026-08-21",
+  "hosts": ["www.uhc.com", "public-cdn.wellmark.com", "www.mercycarehealthplans.com"]
+}
