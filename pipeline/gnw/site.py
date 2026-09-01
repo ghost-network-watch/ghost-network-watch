@@ -20,8 +20,11 @@ from __future__ import annotations
 import gzip
 import json
 import logging
+import posixpath
+import re
 import shutil
 from collections import defaultdict
+from datetime import datetime, timezone
 from pathlib import Path
 
 import duckdb
@@ -704,6 +707,78 @@ def _hash_css(repo_root: Path, out_dir: Path) -> str:
     return css_file
 
 
+#: Only these four are referenced by base.html; everything else in the kit is
+#: unused. Copying the whole 10 MB distribution published the vendor's docs and
+#: nine unused themes that each @import fonts from a third-party CDN, which
+#: would have quietly falsified the site's "no trackers" claim the moment a
+#: theme was swapped in.
+WA_ENTRY_CSS = (
+    "styles/native.css",
+    "styles/utilities.css",
+    "styles/themes/default.css",
+    "styles/color/palettes/default.css",
+)
+_CSS_IMPORT = re.compile(r"""@import\s+(?:url\(\s*)?['"]([^'"]+)['"]""")
+
+
+def _copy_wa_kit(wa_kit: Path, dest: Path) -> int:
+    """Copy the four entry stylesheets plus everything they @import, and nothing
+    else. Returns the file count, so a caller can log what shipped."""
+    wanted: set[str] = set()
+    queue = list(WA_ENTRY_CSS)
+    while queue:
+        # normpath collapses "themes/../layers.css" to "layers.css". Without it
+        # the same file is reached under several spellings, which inflates the
+        # count and writes through parent-relative paths.
+        rel = posixpath.normpath(queue.pop())
+        if rel.startswith("..") or rel.startswith("/"):
+            raise ValueError(f"stylesheet path escapes the kit: {rel}")
+        if rel in wanted:
+            continue
+        src = wa_kit / rel
+        if not src.exists():
+            raise FileNotFoundError(f"web awesome kit is missing {rel}")
+        wanted.add(rel)
+        text = src.read_text(encoding="utf-8", errors="replace")
+        for target in _CSS_IMPORT.findall(text):
+            if target.startswith(("http://", "https://", "//", "data:")):
+                # An external @import would make the page fetch from a third
+                # party, which the privacy claim rules out. Fail loudly.
+                raise ValueError(f"{rel} imports external stylesheet {target}")
+            queue.append(posixpath.join(posixpath.dirname(rel), target))
+    for rel in sorted(wanted):
+        out = dest / rel
+        out.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy(wa_kit / rel, out)
+    return len(wanted)
+
+
+FEED_PATH = "changes/feed.xml"
+FEED_SELF = f"https://ghostnetworkwatch.org/{FEED_PATH}"
+
+
+def _write_feed(out_dir: Path, items: list[str]) -> None:
+    """One feed, written the same way pre- and post-launch.
+
+    The atom:link self reference and lastBuildDate are what feed readers use to
+    dedupe and to decide whether to re-fetch; without them the feed technically
+    parses but behaves badly in readers.
+    """
+    dest = out_dir / FEED_PATH
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    now = datetime.now(timezone.utc).strftime("%a, %d %b %Y %H:%M:%S +0000")
+    dest.write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>'
+        "<title>Ghost Network Watch updates</title>"
+        "<link>https://ghostnetworkwatch.org/changes/</link>"
+        f'<atom:link href="{FEED_SELF}" rel="self" type="application/rss+xml"/>'
+        f"<lastBuildDate>{now}</lastBuildDate>"
+        "<description>Monthly directory integrity updates for federal marketplace plans"
+        "</description>" + "".join(items) + "</channel></rss>"
+    )
+
+
 def _build_prelaunch(con, snapshot, repo_root, out_dir, wa_kit, env) -> Path:
     """Pre-launch site: only pages that name no insurer. Publishing the
     methodology before any finding is deliberate; findings wait for the
@@ -728,6 +803,19 @@ def _build_prelaunch(con, snapshot, repo_root, out_dir, wa_kit, env) -> Path:
            depth="../", nav="corrections", corrections=load_corrections(repo_root))
     render("404.html", out_dir / "404.html", depth="/")
 
+    # A prelaunch feed, so a reader who sees "scores publish October 26" has a
+    # way to hear about it that does not depend on remembering to come back.
+    _write_feed(out_dir, [
+        "<item><title>Directory Integrity Scores publish October 26, 2026</title>"
+        "<link>https://ghostnetworkwatch.org/</link>"
+        f"<guid isPermaLink=\"false\">gnw-prelaunch-{snapshot}</guid>"
+        "<description>The methodology is published now. Scores for every federal "
+        "marketplace plan, county by county, publish on October 26, 2026, before open "
+        "enrollment begins. Every insurer receives its findings at least 14 days "
+        "beforehand. This feed carries each monthly update after that.</description>"
+        "</item>"
+    ])
+
     base_url = "https://ghostnetworkwatch.org"
     urls = ["", "patients/", "methodology/", "about/", "corrections/"]
     (out_dir / "sitemap.xml").write_text(
@@ -744,7 +832,8 @@ def _build_prelaunch(con, snapshot, repo_root, out_dir, wa_kit, env) -> Path:
     )
     shutil.copy(repo_root / "site" / "assets" / "sort.js", out_dir / "sort.js")
     if not (out_dir / "webawesome").exists():
-        shutil.copytree(wa_kit, out_dir / "webawesome")
+        n = _copy_wa_kit(wa_kit, out_dir / "webawesome")
+        log.info("web awesome: %d stylesheet(s) copied", n)
     log.info("prelaunch site: 5 pages -> %s", out_dir)
     return out_dir
 
@@ -981,14 +1070,7 @@ def build_site(
             f"<description>{desc}</description></item>"
         )
     (out_dir / "changes").mkdir(parents=True, exist_ok=True)
-    (out_dir / "changes" / "feed.xml").write_text(
-        '<?xml version="1.0" encoding="UTF-8"?>\n'
-        '<rss version="2.0"><channel>'
-        "<title>Ghost Network Watch updates</title>"
-        "<link>https://ghostnetworkwatch.org/changes/</link>"
-        "<description>Monthly directory integrity updates for federal marketplace plans"
-        "</description>" + "".join(items) + "</channel></rss>"
-    )
+    _write_feed(out_dir, items)
 
     render("corrections.html", out_dir / "corrections" / "index.html", depth="../",
            nav="corrections", corrections=corrections)
@@ -1028,7 +1110,8 @@ def build_site(
     )
     shutil.copy(repo_root / "site" / "assets" / "sort.js", out_dir / "sort.js")
     if not (out_dir / "webawesome").exists():
-        shutil.copytree(wa_kit, out_dir / "webawesome")
+        n = _copy_wa_kit(wa_kit, out_dir / "webawesome")
+        log.info("web awesome: %d stylesheet(s) copied", n)
     log.info(
         "site: %d county, %d plan, %d issuer, %d state pages -> %s",
         len(counties), len(plans), len(issuers), len(states), out_dir,

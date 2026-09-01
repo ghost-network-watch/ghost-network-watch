@@ -83,12 +83,44 @@ class GnwSiteStack(Stack):
             ),
         )
 
+        # The open data is meant to be loaded by other people's tools. The data
+        # page points readers at Datasette Lite, which fetches the CSV from the
+        # browser, and that request is cross-origin: without an
+        # Access-Control-Allow-Origin header it is blocked and the link looks
+        # broken. Only the data prefix needs this; pages do not.
+        data_cors = cloudfront.ResponseHeadersPolicy(
+            self, "DataCorsPolicy",
+            response_headers_policy_name="gnw-open-data-cors",
+            comment="CC0 downloads, readable from any origin",
+            cors_behavior=cloudfront.ResponseHeadersCorsBehavior(
+                access_control_allow_origins=["*"],
+                access_control_allow_headers=["*"],
+                access_control_allow_methods=["GET", "HEAD"],
+                access_control_allow_credentials=False,
+                access_control_expose_headers=["Content-Length", "Content-Type"],
+                access_control_max_age=Duration.days(1),
+                origin_override=True,
+            ),
+        )
+
         self.distribution = cloudfront.Distribution(
             self, "SiteDistribution",
             comment="ghostnetworkwatch.org static site",
             default_root_object="index.html",
             domain_names=[DOMAIN, f"www.{DOMAIN}"],
             certificate=cert,
+            additional_behaviors={
+                "/data/files/*": cloudfront.BehaviorOptions(
+                    origin=origins.S3BucketOrigin.with_origin_access_control(
+                        self.site_bucket
+                    ),
+                    viewer_protocol_policy=cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
+                    cache_policy=cloudfront.CachePolicy.CACHING_OPTIMIZED,
+                    response_headers_policy=data_cors,
+                    # No compress: the exports are already gzip, and no index
+                    # rewrite, because these are files rather than directories.
+                ),
+            },
             default_behavior=cloudfront.BehaviorOptions(
                 origin=origins.S3BucketOrigin.with_origin_access_control(self.site_bucket),
                 viewer_protocol_policy=cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
