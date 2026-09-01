@@ -5,8 +5,12 @@ classifies every parsed record by phone content, breaks out by state / record ty
 plan-network / behavioral-health specialty, and dumps a small evidence exhibit.
 """
 import json, ssl, zlib, re, sys, time
+from pathlib import Path
 from urllib.request import Request, urlopen
 from collections import Counter, defaultdict
+
+OUT = Path(__file__).resolve().parent / "data"
+OUT.mkdir(parents=True, exist_ok=True)
 
 CTX = ssl.create_default_context()
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
@@ -166,6 +170,6 @@ for state, url in FILES.items():
     time.sleep(2)
 
 out["wi_examples"] = examples
-with open("/Users/soorena/ghost-network-watch/scoping/data/caresource_phone_audit.json", "w") as f:
+with open(OUT / "caresource_phone_audit.json", "w") as f:
     json.dump(out, f, indent=1)
 print("saved data/caresource_phone_audit.json")

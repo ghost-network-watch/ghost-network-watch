@@ -7,8 +7,12 @@
 - builds the final evidence exhibit
 """
 import json, ssl, zlib, re, time
+from pathlib import Path
 from urllib.request import Request, urlopen
 from collections import Counter
+
+OUT = Path(__file__).resolve().parent / "data"
+OUT.mkdir(parents=True, exist_ok=True)
 
 CTX = ssl.create_default_context()
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36"
@@ -127,5 +131,5 @@ json.dump({
     "whole_file_addr_states_top": all_addr_states.most_common(15),
     "whole_file_distinct_npis": len(npi_counter),
     "nppes_spot_checks": checks,
-}, open("/Users/soorena/ghost-network-watch/scoping/data/caresource_wi_cohort.json", "w"), indent=1)
+}, open(OUT / "caresource_wi_cohort.json", "w"), indent=1)
 print("saved data/caresource_wi_cohort.json")

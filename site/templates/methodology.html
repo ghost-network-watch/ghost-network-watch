@@ -136,6 +136,14 @@
   <p>Small lists get special handling. A county list with 10 to 29 providers is graded
   with a low-sample badge. A list with fewer than 10 is not graded at all; the small
   count itself is published as the finding.</p>
+  <p>On the smallest graded lists the flag rate carries a wide confidence interval, so the
+  letter grade is informative while the exact number is not. Where that interval spans more
+  than 25 points, the data download marks the row
+  <span style="font-family: var(--wa-font-family-code)">numeric_suppressed</span> and the
+  score should not be quoted. We show the letter grade on those cells and never a per-cell
+  number anywhere on this site. Be aware that plan-level and insurer-level averages do
+  include those cells, because dropping them would bias an average toward the largest
+  counties.</p>
 
   <h2>Three evidence labels</h2>
   <p>Every flag carries one of three labels, so a reader always knows how strong the

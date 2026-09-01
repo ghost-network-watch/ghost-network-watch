@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Corrections · {{ site_name }}{% endblock %}
+{% block description %}Every dispute filed against a finding on this site, published with the filer's own words and our response.{% endblock %}
+{% block content %}
+<section>
+  <h1>Corrections</h1>
+  <p class="lede">Every dispute filed against a finding here, in the filer's own words,
+  with our response and what happened next.</p>
+
+  <p>Insurers get their findings at least 14 days before publication, and anyone can
+  dispute a finding at any time. Disputes are published whether we agree with them or not.
+  When we are wrong, the record says so.</p>
+
+  {% if corrections %}
+  <div class="stats">
+    <div class="stat"><div class="num">{{ corrections | length }}</div>
+      <div class="lbl">disputes filed</div></div>
+    <div class="stat"><div class="num">{{ corrections | selectattr("status", "equalto", "accepted") | list | length }}</div>
+      <div class="lbl">where we agreed and withdrew or amended the finding</div></div>
+    <div class="stat"><div class="num">{{ corrections | selectattr("status", "equalto", "declined") | list | length }}</div>
+      <div class="lbl">where we disagreed, both sides published</div></div>
+    <div class="stat"><div class="num">{{ corrections | selectattr("status", "equalto", "open") | list | length }}</div>
+      <div class="lbl">awaiting our response</div></div>
+  </div>
+
+  {% for c in corrections %}
+  <article id="{{ c.id }}" class="correction">
+    <h2>{{ c.disputes }}</h2>
+    <p class="meta">Received {{ c.received }} via {{ c.source }}.
+      {% if c.issuer_id %}Concerns issuer
+      <a href="{{ depth }}issuers/{{ c.issuer_id }}/index.html">{{ c.issuer_id }}</a>.{% endif %}
+      Filed by someone identifying as {{ c.role_claimed }}{% if c.role_claimed == 'insurer' %}{% if c.issuer_verified %},
+      confirmed from the technical contact address CMS lists for that issuer{% else %},
+      not confirmed from the issuer's CMS technical contact address, so this is an
+      unverified claim of authority{% endif %}{% endif %}.
+      Status: {{ c.status_label }}.</p>
+
+    <blockquote class="note">
+      <p><strong>What they said</strong></p>
+      <p>{{ c.statement }}</p>
+      {% if c.redacted %}
+      <p class="meta">Redacted before publication: {{ c.redacted }}</p>
+      {% endif %}
+    </blockquote>
+
+    {% if c.response %}
+    <p><strong>Our response.</strong> {{ c.response }}</p>
+    {% else %}
+    <p class="note caution">We have not responded yet. This dispute is published as filed
+    while we work through it.</p>
+    {% endif %}
+
+    {% if c.resolved_snapshot %}
+    <p class="meta">The finding no longer reproduced in the {{ c.resolved_snapshot }} crawl.
+    That records a change in the published file. It is not an admission by either side.</p>
+    {% endif %}
+  </article>
+  {% endfor %}
+
+  {% else %}
+  <p class="note">No disputes have been filed yet. This page is published empty on purpose,
+  so that the channel exists before the first finding does, and so a reader can tell the
+  difference between "nobody disputed this" and "disputes go unpublished".</p>
+  {% endif %}
+
+  <h2>How to file one</h2>
+  <p>Email <a href="mailto:{{ contact }}">{{ contact }}</a> or open a request on the
+  <a href="{{ repo_url }}/issues/new/choose">public correction tracker</a>. Say which
+  finding you mean, and what is wrong about it. A metric name plus an NPI is the most
+  precise way to point at one.</p>
+  <p>Please do not put anyone's personal or health information in a tracker request, since
+  those are public and permanently indexed. If a correction needs that kind of detail, send
+  it by email instead.</p>
+  <p>We publish disputes as filed. The one exception is material we will not host, meaning
+  personal or health information, credentials, or abuse. We remove that, and this page says
+  what was removed rather than editing quietly. Every change to a published statement is
+  visible in <a href="{{ repo_url }}/commits/main/corrections/corrections.json">the file's
+  git history</a>, so "published verbatim" is something you can check rather than something
+  you have to take on faith.</p>
+  <p>Separately, when a later monthly crawl no longer reproduces a finding, it is marked
+  resolved with a date on the
+  {% if prelaunch %}changes page{% else %}<a href="{{ depth }}changes/index.html">changes
+  page</a>{% endif %}, whether or not anyone disputed it.</p>
+</section>
+{% endblock %}

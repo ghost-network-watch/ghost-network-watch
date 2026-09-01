@@ -266,6 +266,15 @@ a { color: var(--wa-color-brand-on-quiet); }
 }
 .note.caution { border-left-color: var(--wa-color-warning-fill-loud); }
 
+/* One filed dispute, on the corrections page */
+.correction {
+  border-top: 1px solid var(--wa-color-neutral-border-normal);
+  padding-top: var(--wa-space-l);
+  margin-top: var(--wa-space-2xl);
+  max-width: 70ch;
+}
+.correction h2 { margin-bottom: var(--wa-space-2xs); }
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--wa-color-surface-border);

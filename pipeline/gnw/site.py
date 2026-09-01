@@ -27,6 +27,8 @@ from pathlib import Path
 import duckdb
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+from .corrections import by_issuer, load_corrections
+
 log = logging.getLogger("gnw.site")
 
 GRADE_ORDER = {"A": 0, "B": 1, "C": 2, "D": 3, "F": 4, None: 5}
@@ -720,10 +722,14 @@ def _build_prelaunch(con, snapshot, repo_root, out_dir, wa_kit, env) -> Path:
            depth="../", nav="methodology", thresholds=thresholds)
     render("patients.html", out_dir / "patients" / "index.html", depth="../", nav="patients")
     render("about.html", out_dir / "about" / "index.html", depth="../", nav="about")
+    # Published before the first finding, and empty if nothing is disputed, so a
+    # reader can distinguish "nobody disputed this" from "disputes go unpublished".
+    render("corrections.html", out_dir / "corrections" / "index.html",
+           depth="../", nav="corrections", corrections=load_corrections(repo_root))
     render("404.html", out_dir / "404.html", depth="/")
 
     base_url = "https://ghostnetworkwatch.org"
-    urls = ["", "patients/", "methodology/", "about/"]
+    urls = ["", "patients/", "methodology/", "about/", "corrections/"]
     (out_dir / "sitemap.xml").write_text(
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -739,7 +745,7 @@ def _build_prelaunch(con, snapshot, repo_root, out_dir, wa_kit, env) -> Path:
     shutil.copy(repo_root / "site" / "assets" / "sort.js", out_dir / "sort.js")
     if not (out_dir / "webawesome").exists():
         shutil.copytree(wa_kit, out_dir / "webawesome")
-    log.info("prelaunch site: 4 pages -> %s", out_dir)
+    log.info("prelaunch site: 5 pages -> %s", out_dir)
     return out_dir
 
 
@@ -769,6 +775,8 @@ def build_site(
     issuers = _issuer_pages(con, issuer_names)
     unauditable = _unauditable(con, data_root)
     thresholds = _threshold_sensitivity(con)
+    corrections = load_corrections(repo_root)
+    corrections_by_issuer = by_issuer(corrections)
 
     # Unauditable insurers' plans appear on county pages as grade X rows.
     fips_names = {c["fips"]: (c["name"], c["state"]) for c in counties.values()}
@@ -894,6 +902,7 @@ def build_site(
             "issuer.html", out_dir / "issuers" / i["id"] / "index.html",
             issuer=i, evidence_mb=evidence_sizes.get(i["id"]),
             issuer_plans=plans_by_issuer.get(i["id"], []), depth="../../",
+            issuer_corrections=corrections_by_issuer.get(i["id"], []),
         )
     for u in unauditable.values():
         render(
@@ -981,6 +990,8 @@ def build_site(
         "</description>" + "".join(items) + "</channel></rss>"
     )
 
+    render("corrections.html", out_dir / "corrections" / "index.html", depth="../",
+           nav="corrections", corrections=corrections)
     render("methodology.html", out_dir / "methodology" / "index.html", depth="../",
            nav="methodology", thresholds=thresholds)
     render("patients.html", out_dir / "patients" / "index.html", depth="../", nav="patients")

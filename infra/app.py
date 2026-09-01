@@ -247,6 +247,19 @@ class GnwPipelineStack(Stack):
 
         alerts = sns.Topic(self, "PipelineAlerts", display_name="GNW pipeline alerts")
         alerts.add_subscription(subs.EmailSubscription(alert_email))
+        # SES publishes bounce and complaint events for the issuer notification
+        # send here. Those 185 addresses come from a CMS public use file, so some
+        # are stale, and a bounce means an issuer was never actually notified,
+        # which is the one failure that undermines the pre-publication promise.
+        # Scoped to this account so the topic cannot be used as a relay.
+        alerts.add_to_resource_policy(
+            iam.PolicyStatement(
+                actions=["sns:Publish"],
+                principals=[iam.ServicePrincipal("ses.amazonaws.com")],
+                resources=[alerts.topic_arn],
+                conditions={"StringEquals": {"AWS:SourceAccount": self.account}},
+            )
+        )
         events.Rule(
             self, "TaskFailureAlert",
             description="Alert when the monthly pipeline task exits nonzero",

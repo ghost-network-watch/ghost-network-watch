@@ -116,11 +116,31 @@
 
 <section>
   <h2>Corrections</h2>
+  {% if issuer_corrections %}
+  <p>{{ issuer_corrections | length }} dispute{{ '' if issuer_corrections | length == 1 else 's' }}
+  filed about the findings on this page, published as filed:</p>
+  {% for c in issuer_corrections %}
+  <div class="note" style="margin: var(--wa-space-m) 0">
+    <p class="meta">{{ c.received }} via {{ c.source }} · {{ c.status_label }}
+      {%- if c.role_claimed == 'insurer' %} · {% if c.issuer_verified %}confirmed from this
+      issuer's CMS technical contact{% else %}claims to act for this issuer, not confirmed
+      from its CMS technical contact{% endif %}{% endif %}</p>
+    <p><strong>Disputes:</strong> {{ c.disputes }}</p>
+    <p><strong>They said:</strong> {{ c.statement }}</p>
+    {% if c.redacted %}<p class="meta">Redacted before publication: {{ c.redacted }}</p>{% endif %}
+    {% if c.response %}<p><strong>We said:</strong> {{ c.response }}</p>
+    {% else %}<p class="meta">Our response is still pending.</p>{% endif %}
+    <p class="meta"><a href="{{ depth }}corrections/index.html#{{ c.id }}">Permanent link</a></p>
+  </div>
+  {% endfor %}
+  {% endif %}
   <p>This insurer's technical contact on file with CMS received its flag export
   before publication. To dispute a finding or report a fix, email
   <a href="mailto:{{ contact }}">{{ contact }}</a> or open a public correction request on
-  <a href="{{ repo_url }}/issues">the correction tracker</a>. Responses will be published
-  verbatim. When a later crawl no longer reproduces a flag, it will be marked resolved
-  with the date. History is retained.</p>
+  <a href="{{ repo_url }}/issues/new/choose">the correction tracker</a>. Responses are
+  published on this page and on the
+  <a href="{{ depth }}corrections/index.html">corrections page</a>, as filed, whether or not
+  we agree. When a later crawl no longer reproduces a flag, it is marked resolved with the
+  date. History is retained.</p>
 </section>
 {% endblock %}

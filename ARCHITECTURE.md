@@ -41,7 +41,8 @@ EventBridge Scheduler (monthly / weekly)
           date-stamped dirs); retry/backoff (Elevance drops); port 8443 (wellsense);
           raw S3 hosts (AmeriHealth Caritas Next)
         - gzip + Range; prefer full census when gzipped file fits budget; ~1 req/s per host
-    · write-through: s3://gnw-raw/<sha256>/ (content-addressed) + fetch manifest
+    · write-through: s3://gnw-data-<account>/blobs/<sha256> (content-addressed,
+      bucket name derived from the deploying account) + fetch manifest
       (URL, headers, timing, snapshot id) — the evidence backbone
         │
         ▼

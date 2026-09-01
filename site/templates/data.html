@@ -81,6 +81,8 @@
       <tr><td><strong>thin_roster</strong></td><td>Marks lists under 10 providers, which get no grade.</td></tr>
       <tr><td><strong>out_of_area_rate</strong></td><td>The share of the plan's listings with no listed address in or near its counties.</td></tr>
       <tr><td><strong>score_uniform</strong></td><td>The score re-run with every check weighted equally, a check that our chosen weights aren't driving the grade.</td></tr>
+      <tr><td><strong>low_sample</strong></td><td>True for a county list of 10 to 29 providers. Graded, but on thin evidence.</td></tr>
+      <tr><td><strong>numeric_suppressed</strong></td><td>True when the list is small enough that the flag-rate confidence interval spans more than 25 points. <strong>Do not quote the score for these rows.</strong> The letter grade is still meaningful; the exact number is not. If you build anything on this data, filter on this column.</td></tr>
     </tbody>
   </table>
   <p style="margin-top: var(--wa-space-m)">In the evidence files, one row is one problem in
