@@ -1,14 +1,40 @@
 name: Correction request
-description: Dispute a finding or report a fix. Responses are published verbatim alongside the findings they dispute.
+description: Dispute a finding or report a fix. Corrections are published alongside the findings they dispute.
 title: "[Correction] "
 labels: [correction]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form to dispute a specific finding or to report that the underlying
-        data has been fixed. Insurers, providers, and members of the public may all
-        file corrections. Filed corrections and our responses are public.
+        ## ⚠️ This form is public. Do not post personal information.
+
+        Anything you type here is published immediately, indexed by search
+        engines, and served through GitHub's API. Editing or deleting a comment
+        later does **not** remove it from that API or from third-party archives,
+        so deletion is not a remedy after the fact.
+
+        **Do not include:** a patient's or member's name, contact details, or any
+        health information; a provider's home address or personal phone; login
+        credentials; anything else you would not publish yourself.
+
+        You do not need any of that to file a correction. Identify the finding by
+        its **NPI and metric**, which are already public in our evidence files,
+        and describe what is wrong in general terms. If correcting a record
+        requires sending personal details, email
+        <contact@ghostnetworkwatch.org> instead and we will handle it off the
+        public tracker.
+
+        ---
+
+        Use this form to dispute a specific finding or to report that the
+        underlying data has been fixed. Insurers, providers, and members of the
+        public may all file corrections. Filed corrections and our responses are
+        public.
+
+        We publish corrections as written. The one exception is material we are
+        not willing to host: personal or health information, credentials, or
+        abuse. We redact that and say in the thread that we did, rather than
+        quietly editing it.
   - type: input
     id: issuer
     attributes:
@@ -28,7 +54,10 @@ body:
     id: dispute
     attributes:
       label: What is wrong, or what was fixed?
-      description: State what the correct information is and how you know.
+      description: >
+        Describe the error and how you know. Keep it non-identifying: "the phone
+        number in the file is a working office line, not a placeholder" is enough,
+        and is better than pasting the number. No patient or member details.
     validations:
       required: true
   - type: textarea
@@ -44,3 +73,13 @@ body:
         - label: The insurer or acting for it
         - label: The listed provider or their office
         - label: A member of the public
+  - type: markdown
+    attributes:
+      value: |
+        Roles here are self-asserted and we treat them that way. If you are
+        filing **on behalf of an insurer** and want the response recorded as the
+        issuer's official position, send it from the technical contact address
+        CMS lists for that issuer in the Machine-Readable URL PUF, which is the
+        same address we send pre-publication notices to. That address is the
+        only credential we can actually verify, so a claim made here without it
+        is published as an unverified claim.
