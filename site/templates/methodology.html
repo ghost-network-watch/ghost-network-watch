@@ -140,8 +140,9 @@
   <h2>Three evidence labels</h2>
   <p>Every flag carries one of three labels, so a reader always knows how strong the
   evidence is.</p>
-  <p><strong>E1: read straight off the insurer's file.</strong> Anyone with the archived
-  file gets the same answer. Example: a phone number of 999999999.</p>
+  <p><strong>E1: read straight off the insurer's file.</strong> Anyone holding the same file
+  gets the same answer, with no judgment call in between. Example, a phone number of
+  999999999.</p>
   <p><strong>E2: read off the insurer's file, through a cutoff we chose.</strong> Example:
   we call an update date stale after 180 days. Every cutoff is published, and the table
   below shows how the counts move at other cutoffs.</p>
@@ -189,9 +190,15 @@
   <ul style="max-width: 70ch">
     <li>Every rule has a version number, and every published flag records which version
     produced it.</li>
-    <li>Every downloaded file is archived with its web address, download time, response
-    headers, and a cryptographic fingerprint (SHA-256). Claims cite the archived copy, so
-    anyone can re-check them.</li>
+    <li>Every downloaded file is archived with its web address, download time, HTTP status,
+    content type, the server's own ETag and Last-Modified, and a cryptographic fingerprint
+    (SHA-256). That index is published as
+    <span style="font-family: var(--wa-font-family-code)">source_manifest.csv.gz</span> on
+    the <a href="{{ depth }}data/index.html">data page</a>, so every fingerprint cited in an
+    evidence row resolves to a specific address at a specific moment. We keep the archived
+    bytes and send any file on request. We do not republish the archive in bulk, because
+    those files carry named providers' contact details and this project identifies providers
+    by federal ID instead.</li>
     <li>At least 14 days before publication, each insurer's technical contact on file with
     CMS receives its flag export. Every record-level finding ships in full. The one
     exception is out-of-area listings, which run to hundreds of millions of rows across all

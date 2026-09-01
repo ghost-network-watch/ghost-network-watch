@@ -597,6 +597,24 @@ def _write_exports(con, out_data: Path, snapshot: str) -> list[dict]:
         "web browser and blocked automated tools.",
         "start",
     )
+    # Provenance. Every evidence row cites a source_sha256, and this is the table
+    # that says what that hash refers to: which URL, fetched when, what the
+    # server said it was. Without it the hashes are unresolvable to a reader, and
+    # the site's "check our work" claim has nothing behind it.
+    copy_query(
+        "source_manifest.csv.gz",
+        "SELECT role, url, final_url, "
+        "array_to_string(issuer_ids, ' ') AS issuer_ids, "
+        "array_to_string(states, ' ') AS states, "
+        "fetched_at, status, sha256, bytes_content, content_type, "
+        "last_modified, etag, elapsed_s, error "
+        "FROM manifest ORDER BY url",
+        "Every file we fetched this month: its web address, the moment we fetched it, "
+        "the HTTP status, the SHA-256 of the bytes we stored, and the ETag and "
+        "Last-Modified the server itself reported. This is what the source_sha256 in "
+        "every evidence row refers to.",
+        "start",
+    )
     full = {
         "M3_PLACEHOLDER_VALUE": "Every listing with placeholder contact data: phones like "
         "999999999, ZIP 99999, addresses reading 'null', dates before 2014.",

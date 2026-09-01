@@ -32,6 +32,17 @@
   position of the record inside it, so a finding can be traced to one entry in one dated
   file. The out-of-area files are the exception, because they are published as per-plan
   totals rather than record rows, so they carry a plan ID instead.</p>
+  <p><strong>How to resolve a fingerprint.</strong> Look the hash up in
+  <span style="font-family: var(--wa-font-family-code)">source_manifest.csv.gz</span> above.
+  That gives you the exact web address we fetched, the timestamp, and the ETag and
+  Last-Modified the insurer's own server reported. If the insurer has not regenerated the
+  file since, fetching that address and hashing it yourself reproduces the same SHA-256. If
+  it has been regenerated, which is expected because these files update monthly, the ETag
+  and timestamp still pin what was served on the day we read it. We keep the archived bytes
+  and will send the file for any hash on request, at
+  <a href="mailto:{{ contact }}">{{ contact }}</a>. We do not republish the archive in bulk,
+  because those files carry named providers' addresses and phone numbers, and this project
+  identifies providers by their federal ID rather than by name.</p>
   <p class="note">Provider details in these files are quoted from the insurer's published
   directory. No claim is made about the provider. Listed clinicians are often unaware of
   how they appear in payer directories.</p>
@@ -78,7 +89,7 @@
     <thead><tr><th>Column</th><th>What it means</th></tr></thead>
     <tbody>
       <tr><td><strong>metric</strong></td><td>Which check produced the row.</td></tr>
-      <tr><td><strong>source_sha256</strong></td><td>The fingerprint of the archived insurer file the row came from.</td></tr>
+      <tr><td><strong>source_sha256</strong></td><td>The fingerprint of the insurer file the row came from. Look it up in source_manifest.csv.gz to see which address it was fetched from and when.</td></tr>
       <tr><td><strong>record_idx</strong></td><td>The entry's position inside that file.</td></tr>
       <tr><td><strong>observed</strong></td><td>The values exactly as published.</td></tr>
     </tbody>
