@@ -20,6 +20,7 @@ Kill switch: disable the EventBridge rule (GnwPipelineStack/MonthlySchedule)
 or set -c scheduleEnabled=false and redeploy.
 """
 
+import hashlib
 import os
 
 import aws_cdk as cdk
@@ -267,10 +268,16 @@ class GnwPipelineStack(Stack):
         # to exceed the limit. One-time setup: activate the "Project" tag under
         # Billing > Cost allocation tags. Until it activates (about 24 hours),
         # the filtered budget reports zero rather than real spend.
+        # The name carries a hash of the alert address on purpose. Changing a
+        # budget's subscribers forces CloudFormation to replace the budget, and
+        # replacement creates the new one before deleting the old, so a fixed
+        # name deadlocks against itself ("a budget with the same name but a
+        # different internalId already exists") and rolls the whole stack back.
         budgets.CfnBudget(
             self, "MonthlyBudget",
             budget=budgets.CfnBudget.BudgetDataProperty(
-                budget_name="ghost-network-watch-monthly",
+                budget_name="ghost-network-watch-monthly-"
+                            + hashlib.sha256(alert_email.encode()).hexdigest()[:8],
                 budget_type="COST",
                 time_unit="MONTHLY",
                 budget_limit=budgets.CfnBudget.SpendProperty(amount=10, unit="USD"),
