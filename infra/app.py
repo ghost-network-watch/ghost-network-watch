@@ -10,11 +10,14 @@ Two stacks, deployable independently:
                     alerts by email. Notifications to insurers are generated
                     as files, never sent automatically.
 
-Deploy (from infra/):
+Deploy (from infra/). Every command names the target account explicitly; synth
+refuses to run without it, so a stale AWS_PROFILE cannot pick the account for
+you:
   pip install -r requirements.txt
-  cdk bootstrap                       # once per account and region
-  cdk deploy GnwSiteStack             # then add the DNS records it outputs
-  cdk deploy GnwPipelineStack -c alertEmail=you@example.com
+  export AWS_PROFILE=<personal-profile>
+  cdk bootstrap                                    # once per account and region
+  cdk deploy GnwSiteStack -c account=<id>          # then add the DNS records it outputs
+  cdk deploy GnwPipelineStack -c account=<id> -c alertEmail=you@example.com
 
 Kill switch: disable the EventBridge rule (GnwPipelineStack/MonthlySchedule)
 or set -c scheduleEnabled=false and redeploy.
@@ -62,6 +65,18 @@ class GnwSiteStack(Stack):
             removal_policy=RemovalPolicy.RETAIN,
         )
 
+        # An alternate domain name can only be attached to one distribution at a
+        # time, and cross-account it cannot be handed over directly. Migrating
+        # accounts therefore means standing the new distribution up bare
+        # (-c aliases=false), releasing the domain from the old one, then
+        # redeploying with aliases on. See ops/migrate_account.md.
+        with_aliases = (self.node.try_get_context("aliases") or "true") != "false"
+
+        # The certificate is created either way, on purpose. It has to clear DNS
+        # validation before it can be attached, and that wait belongs in the
+        # aliases=false deploy while the old distribution is still serving the
+        # domain. Gating the cert on with_aliases instead would push the wait
+        # into the cutover, with the site already dark.
         cert = acm.Certificate(
             self, "SiteCert",
             domain_name=DOMAIN,
@@ -107,8 +122,8 @@ class GnwSiteStack(Stack):
             self, "SiteDistribution",
             comment="ghostnetworkwatch.org static site",
             default_root_object="index.html",
-            domain_names=[DOMAIN, f"www.{DOMAIN}"],
-            certificate=cert,
+            domain_names=[DOMAIN, f"www.{DOMAIN}"] if with_aliases else None,
+            certificate=cert if with_aliases else None,
             additional_behaviors={
                 "/data/files/*": cloudfront.BehaviorOptions(
                     origin=origins.S3BucketOrigin.with_origin_access_control(
@@ -208,11 +223,29 @@ class GnwPipelineStack(Stack):
             lifecycle_rules=lifecycle_rules,
         )
 
-        # Reuse the account's default VPC rather than creating a new one: the
-        # region is at its VPC quota, and this monthly batch task only needs a
-        # public subnet with egress, which the default VPC's internet gateway
-        # already provides. No inbound ports, no NAT, no secrets in the VPC.
-        vpc = ec2.Vpc.from_lookup(self, "PipelineVpc", is_default=True)
+        # Own the network rather than borrowing one. This used to look up the
+        # account's default VPC, which worked only by accident of that account
+        # having one: the Control Tower account this project actually lives in
+        # has no default VPC, and its single VPC has no internet gateway and no
+        # NAT, just an S3 endpoint. A crawl stage cannot reach insurers' servers
+        # from there, and the failure would have surfaced as a mysteriously empty
+        # monthly run.
+        #
+        # Public subnets with nat_gateways=0 is deliberate. A Fargate task in a
+        # public subnet with assign_public_ip gets egress straight through the
+        # internet gateway, which is free; a NAT gateway would add about $33 a
+        # month to a job that runs once. Nothing listens on any port, no inbound
+        # rule is opened, and no secrets live in the VPC.
+        vpc = ec2.Vpc(
+            self, "PipelineVpc",
+            max_azs=2,
+            nat_gateways=0,
+            subnet_configuration=[
+                ec2.SubnetConfiguration(
+                    name="public", subnet_type=ec2.SubnetType.PUBLIC, cidr_mask=24,
+                )
+            ],
+        )
         cluster = ecs.Cluster(self, "PipelineCluster", vpc=vpc)
 
         image = ecr_assets.DockerImageAsset(
@@ -307,12 +340,24 @@ class GnwPipelineStack(Stack):
             targets=[targets.SnsTopic(alerts)],
         )
 
-        # Cost guardrail scoped to this project through the Project cost-allocation
-        # tag applied app-wide (see the bottom of this file). Emails the same
-        # address as the failure alerts at 80% actual spend and when forecast
-        # to exceed the limit. One-time setup: activate the "Project" tag under
-        # Billing > Cost allocation tags. Until it activates (about 24 hours),
-        # the filtered budget reports zero rather than real spend.
+        # Cost guardrail over the whole account. Emails the same address as the
+        # failure alerts at 80% actual spend and when forecast to exceed the
+        # limit.
+        #
+        # This deliberately does NOT filter on the Project cost-allocation tag,
+        # which it used to. The project now has an account to itself, so every
+        # dollar here is already the project, and a tag filter only subtracts:
+        # AWS Config and CloudTrail from the Control Tower baseline, the CDK
+        # assets bucket, and the CDK ECR repository all bill into this account
+        # and none of them carry the tag, because CDKToolkit and Control Tower
+        # create them rather than this app. A filtered budget silently ignores
+        # that spend, and also reports zero for anything incurred before the tag
+        # was activated, since activation is not retroactive. Unfiltered is both
+        # simpler and strictly safer.
+        #
+        # The Project tag is still applied app-wide (see the bottom of this file)
+        # and is active, so Cost Explorer can still group by it.
+        #
         # The name carries a hash of the alert address on purpose. Changing a
         # budget's subscribers forces CloudFormation to replace the budget, and
         # replacement creates the new one before deleting the old, so a fixed
@@ -326,7 +371,6 @@ class GnwPipelineStack(Stack):
                 budget_type="COST",
                 time_unit="MONTHLY",
                 budget_limit=budgets.CfnBudget.SpendProperty(amount=10, unit="USD"),
-                cost_filters={"TagKeyValue": ["user:Project$ghost-network-watch"]},
             ),
             notifications_with_subscribers=[
                 budgets.CfnBudget.NotificationWithSubscribersProperty(
@@ -378,8 +422,31 @@ app = cdk.App()
 cdk.Tags.of(app).add("Project", "ghost-network-watch")
 # Account is explicit so Vpc.from_lookup can resolve the default VPC at synth.
 # CDK sets CDK_DEFAULT_ACCOUNT from the active credentials during deploy.
+account = os.environ.get("CDK_DEFAULT_ACCOUNT")
+# Deploying into whatever account the ambient AWS_PROFILE happens to point at is
+# how this project once ended up in the wrong account entirely: verified SES
+# DKIM, a CloudFront distribution and 8.6 GB of evidence, all somewhere it had no
+# business being, and nothing in the deploy path so much as mentioned it. Naming
+# the target is now mandatory, so a stale profile fails at synth instead of
+# succeeding quietly.
+#   cdk deploy -c account=123456789012 ...
+expected = app.node.try_get_context("account")
+if not expected:
+    raise SystemExit(
+        "Refusing to synth without an explicit target account.\n"
+        f"  Active credentials resolve to: {account or '<none>'}\n"
+        "  Re-run with: cdk deploy -c account=<account-id> ...\n"
+        "The ambient AWS_PROFILE does not get to choose where this deploys."
+    )
+if account and account != str(expected):
+    raise SystemExit(
+        "Account mismatch, refusing to deploy.\n"
+        f"  -c account= says:            {expected}\n"
+        f"  Active credentials point at: {account}\n"
+        "Check AWS_PROFILE, or run: aws sso login --profile <profile>"
+    )
 env = cdk.Environment(
-    account=os.environ.get("CDK_DEFAULT_ACCOUNT"),
+    account=account or str(expected),
     region="us-east-1",  # ACM for CloudFront requires us-east-1
 )
 site = GnwSiteStack(app, "GnwSiteStack", env=env)
