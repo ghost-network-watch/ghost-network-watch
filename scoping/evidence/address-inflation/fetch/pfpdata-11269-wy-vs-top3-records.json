@@ -205,12 +205,6 @@
      ]
     }
    ],
-   "name": {
-    "prefix": "Dr.",
-    "first": "Makayla",
-    "last": "Porter"
-   },
-   "sex": "Female",
    "languages": [
     "Russian",
     "Chinese",
@@ -3160,13 +3154,6 @@
      ]
     }
    ],
-   "name": {
-    "prefix": "Dr.",
-    "first": "Ashley",
-    "middle": "M",
-    "last": "Tang"
-   },
-   "sex": "Female",
    "languages": [
     "English",
     "Spanish"
@@ -5886,12 +5873,6 @@
      ]
     }
    ],
-   "name": {
-    "prefix": "Dr.",
-    "first": "Tiffany",
-    "last": "Marcoe"
-   },
-   "sex": "Female",
    "languages": [
     "English",
     "Sign",
@@ -8153,5 +8134,6 @@
    ],
    "last_updated_on": "2026-08-04"
   }
- ]
+ ],
+ "redaction_note": "Provider name, prefix and sex fields were removed from these records before publication. The finding is that a single NPI is listed at many distinct addresses, which the NPI and address list establish on their own; the name adds no evidence. This matches the published evidence exports, which identify providers by NPI only."
 }

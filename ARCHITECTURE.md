@@ -28,7 +28,13 @@ EventBridge Scheduler (monthly / weekly)
 [1] CRAWL — Fargate Spot task (files up to 200MB; not Lambda-shaped work)
     · seed: PY2026 MR-URL PUF (346 rows → 108 indexes → ~1,295 medical provider files)
     · 7 platform adapters (Centene, UHC, Oscar, Medica, Elevance, Cigna, Molina/HCSC)
-      + generic CMS-schema adapter + per-host quirks registry:
+      + generic CMS-schema adapter + per-host quirks registry. Crawling is polite
+      (~1 req/s per host, identifying UA) and every quirk below is a documented
+      observation about how a mandated public file is served, not an attempt to
+      reach anything non-public. CMS guidance is explicit that these files "must
+      be publicly accessible" and that access "should not depend on any specific
+      user-agent or source ip address", so a host that refuses standard clients
+      is itself a finding, published on that issuer's page:
         - browser UA always (UHC/Wellmark/MercyCare 403 otherwise)
         - never send Accept: application/json to IIS hosts (CHRISTUS 406)
         - follow redirects; re-resolve provider URLs from index every run (CareSource
@@ -87,7 +93,7 @@ EventBridge Scheduler (monthly / weekly)
     · open data: Parquet/CSV + evidence-row JSONL downloads, versioned; "last refreshed
       per source" manifest published machine-readable
     · issuer pre-notification: SES to the PUF's own Tech POC emails ≥2 weeks before
-      publication (strongest defamation shield; ship WITH the MVP, not after)
+      publication (right of reply; ship WITH the MVP, not after)
 ```
 
 ## Cost envelope
